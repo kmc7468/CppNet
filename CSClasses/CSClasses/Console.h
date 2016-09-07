@@ -46,27 +46,37 @@ namespace System
 
 		inline void Write(Int32 integer) const
 		{
-			std::cout << integer;
+			std::wcout << integer;
 		}
 
 		inline void Write(Int64 integer) const
 		{
-			std::cout << integer;
+			std::wcout << integer;
+		}
+
+		inline void Write(Single single) const
+		{
+			std::wcout << single;
+		}
+
+		inline void Write(String string) const
+		{
+			std::wcout << string;
 		}
 
 		inline void Write(UInt32 integer) const
 		{
-			std::cout << integer;
+			std::wcout << integer;
 		}
 
 		inline void Write(UInt64 integer) const
 		{
-			std::cout << integer;
+			std::wcout << integer;
 		}
 
 		inline void WriteLine() const
 		{
-			std::cout << std::endl;
+			std::wcout << std::endl;
 		}
 
 		inline void WriteLine(Boolean boolean) const
@@ -81,7 +91,7 @@ namespace System
 
 		inline void WriteLine(String string) const
 		{
-			std::wcout << string << std::endl ;
+			std::wcout << string << std::endl;
 		}
 
 		inline void WriteLine(String string, Int32 index, Int32 count)
@@ -96,22 +106,42 @@ namespace System
 
 		inline void WriteLine(Int32 integer) const
 		{
-			std::cout << integer << std::endl;
+			std::wcout << integer << std::endl;
 		}
 
 		inline void WriteLine(Int64 integer) const
 		{
-			std::cout << integer << std::endl;
+			std::wcout << integer << std::endl;
+		}
+
+		inline void WriteLine(Single single) const
+		{
+			std::wcout << single << std::endl;
+		}
+
+		inline void WriteLine(String string) const
+		{
+			std::wcout << string << std::endl;
 		}
 
 		inline void WriteLine(UInt32 integer) const
 		{
-			std::cout << integer << std::endl;
+			std::wcout << integer << std::endl;
 		}
 
 		inline void WriteLine(UInt64 integer) const
 		{
-			std::cout << integer << std::endl;
+			std::wcout << integer << std::endl;
+		}
+
+		inline void WriteLine(UInt32 integer) const
+		{
+			std::wcout << integer << std::endl;
+		}
+
+		inline void WriteLine(UInt64 integer) const
+		{
+			std::wcout << integer << std::endl;
 		}
 	};
 }
