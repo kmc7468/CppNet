@@ -24,7 +24,7 @@ C# Classes for C++14
     - [x] Write 함수
     - [x] WriteLine 함수
     - [ ] Read 함수
-    - [ ] ReadLine 함수
+    - [x] ReadLine 함수
     
   - [x] Math 클래스
   - [x] Random 클래스
