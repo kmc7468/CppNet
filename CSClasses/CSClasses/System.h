@@ -8,7 +8,7 @@ typedef unsigned int UInt32;
 typedef unsigned long long UInt64;
 typedef short Int16;
 typedef int Int32;
-typedef int Int64;
+typedef long long Int64;
 typedef double Double;
 typedef float Single;
 
@@ -16,5 +16,6 @@ typedef float Single;
 #include "Math.h"
 
 System::Console Console;
+System::Math Math;
 
 #endif
