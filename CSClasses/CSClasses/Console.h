@@ -11,6 +11,10 @@
 #include "System.h"
 
 #include <iostream>
+<<<<<<< HEAD
+=======
+#include <string>
+>>>>>>> 5bc4e91b262187aedcb580a5cce96bb776f1aabe
 
 namespace System
 {
@@ -44,7 +48,11 @@ namespace System
 
 		static inline void Write(String string, Int32 index, Int32 count)
 		{
+<<<<<<< HEAD
 			std::wcout.write(string.c_str() + index, count);
+=======
+			std::wcout << string.substr(index, count);
+>>>>>>> 5bc4e91b262187aedcb580a5cce96bb776f1aabe
 		}
 
 		static inline void Write(Double doubled)
@@ -99,7 +107,11 @@ namespace System
 
 		static inline void WriteLine(String string, Int32 index, Int32 count)
 		{
+<<<<<<< HEAD
 			std::wcout.write(string.c_str() + index, count) << std::endl;
+=======
+			std::wcout << string.substr(index, count) << std::endl;
+>>>>>>> 5bc4e91b262187aedcb580a5cce96bb776f1aabe
 		}
 
 		static inline void WriteLine(Double doubled)
@@ -131,6 +143,18 @@ namespace System
 		{
 			std::wcout << integer << std::endl;
 		}
+<<<<<<< HEAD
+=======
+
+		static inline String ReadLine()
+		{
+			String str;
+			std::getline(std::wcin, str);
+			return str;
+		}
+
+		// TODO Read
+>>>>>>> 5bc4e91b262187aedcb580a5cce96bb776f1aabe
 	};
 }
 

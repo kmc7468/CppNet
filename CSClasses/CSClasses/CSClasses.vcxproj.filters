@@ -16,6 +16,12 @@
     <Filter Include="헤더 파일\System">
       <UniqueIdentifier>{a2f0b789-52fe-4aa9-906d-9442778262a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\Collections">
+      <UniqueIdentifier>{39ee6381-dcf7-4bd0-9895-16dfb57b5746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Collections\Generic">
+      <UniqueIdentifier>{4fce894b-3e0d-4074-ab66-e25a2f798f4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="System.h">
@@ -32,6 +38,15 @@
     </ClInclude>
     <ClInclude Include="Random.h">
       <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System.Collections.Generic.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="CSClasses.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
