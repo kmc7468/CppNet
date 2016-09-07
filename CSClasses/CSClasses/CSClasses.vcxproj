@@ -143,9 +143,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Console.h" />
+    <ClInclude Include="CSClasses.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Random.h" />
+    <ClInclude Include="System.Collections.Generic.h" />
     <ClInclude Include="System.h" />
   </ItemGroup>
   <ItemGroup>

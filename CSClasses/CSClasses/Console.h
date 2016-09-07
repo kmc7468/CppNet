@@ -139,6 +139,8 @@ namespace System
 			std::getline(std::wcin, str);
 			return str;
 		}
+
+		// TODO Read
 	};
 }
 
