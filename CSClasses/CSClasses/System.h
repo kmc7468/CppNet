@@ -1,6 +1,4 @@
-
 #ifndef SYSTEM_H
-
 #define SYSTEM_H
 
 using Boolean = bool;
@@ -19,6 +17,8 @@ using UInt64 = unsigned long long;
 
 using Single = float;
 using Double = double;
+
+using String = const Char*;
 
 #include "Object.h"
 #include "Console.h"

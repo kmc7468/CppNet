@@ -29,12 +29,12 @@ namespace System
 			std::wcout << character;
 		}
 
-		inline void Write(const Char *string) const
+		inline void Write(String string) const
 		{
 			std::wcout << string;
 		}
 
-		inline void Write(const Char *string, Int32 index, Int32 count)
+		inline void Write(String string, Int32 index, Int32 count)
 		{
 			std::wcout.write(string + index, count);
 		}
@@ -71,15 +71,45 @@ namespace System
 
 		inline void WriteLine(Boolean boolean) const
 		{
-			std::cout << std::endl;
+			std::wcout << boolean << std::endl;
 		}
 
-		inline void WriteLine(const char* string) const
+		inline void WriteLine(Char character) const
 		{
-			std::cout << string << std::endl;
+			std::wcout << character << std::endl;
 		}
 
-		inline void WriteLine(int integer) const
+		inline void WriteLine(String string) const
+		{
+			std::wcout << string << std::endl ;
+		}
+
+		inline void WriteLine(String string, Int32 index, Int32 count)
+		{
+			std::wcout.write(string + index, count) << std::endl;
+		}
+
+		inline void WriteLine(Double doubled) const
+		{
+			std::wcout << doubled << std::endl;
+		}
+
+		inline void WriteLine(Int32 integer) const
+		{
+			std::cout << integer << std::endl;
+		}
+
+		inline void WriteLine(Int64 integer) const
+		{
+			std::cout << integer << std::endl;
+		}
+
+		inline void WriteLine(UInt32 integer) const
+		{
+			std::cout << integer << std::endl;
+		}
+
+		inline void WriteLine(UInt64 integer) const
 		{
 			std::cout << integer << std::endl;
 		}
