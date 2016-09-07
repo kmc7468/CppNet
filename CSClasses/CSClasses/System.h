@@ -11,9 +11,10 @@ typedef int Int32;
 typedef long long Int64;
 typedef double Double;
 typedef float Single;
-typedef bool Boolean
+typedef bool Boolean;
 
 #include "Object.h"
+
 #include "Console.h"
 #include "Math.h"
 
