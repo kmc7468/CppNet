@@ -44,7 +44,7 @@ namespace System
 
 		static inline void Write(String string, Int32 index, Int32 count)
 		{
-			std::wcout.write(string + index, count);
+			std::wcout.write(string.c_str() + index, count);
 		}
 
 		static inline void Write(Double doubled)
@@ -99,7 +99,7 @@ namespace System
 
 		static inline void WriteLine(String string, Int32 index, Int32 count)
 		{
-			std::wcout.write(string + index, count) << std::endl;
+			std::wcout.write(string.c_str() + index, count) << std::endl;
 		}
 
 		static inline void WriteLine(Double doubled)

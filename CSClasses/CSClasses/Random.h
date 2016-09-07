@@ -10,7 +10,6 @@ namespace System
 	{
 		MT19937,
 		MT19937_64,
-		WELL512,
 		RANDOM_DEVICE,
 	};
 
@@ -56,76 +55,73 @@ namespace System
 	public:
 		inline Int32 Next() const
 		{
-			if (type == RandomType::MT19937)
+			switch(this->type)
+			{
+			case RandomType::MT19937:
 			{
 				std::mt19937 mt(seed);
 				return mt();
 			}
-			else if (type == RandomType::MT19937_64)
+			case RandomType::MT19937_64:
 			{
 				std::mt19937_64 mt(seed);
 				return mt();
 			}
-			else if (type == RandomType::WELL512)
-			{
-
-			}
-			else if (type == RandomType::RANDOM_DEVICE)
+			default:
 			{
 				std::random_device rd;
 				return rd();
+			}
 			}
 		}
 
 		inline Int32 Next(Int32 max) const
 		{
-			if (type == RandomType::MT19937)
+			switch(this->type)
+			{
+			case RandomType::MT19937:
 			{
 				std::mt19937 mt(seed);
 				std::uniform_int_distribution<Int32> u(max);
 				return u(mt);
 			}
-			else if (type == RandomType::MT19937_64)
+			case RandomType::MT19937_64:
 			{
 				std::mt19937_64 mt(seed);
 				std::uniform_int_distribution<Int32> u(max);
 				return u(mt);
 			}
-			else if (type == RandomType::WELL512)
-			{
-
-			}
-			else if (type == RandomType::RANDOM_DEVICE)
+			default:
 			{
 				std::random_device rd;
 				std::uniform_int_distribution<Int32> u(max);
 				return u(rd);
+			}
 			}
 		}
 
 		inline Int32 Next(Int32 min, Int32 max) const
 		{
-			if (type == RandomType::MT19937)
+			switch(this->type)
+			{
+			case RandomType::MT19937:
 			{
 				std::mt19937 mt(seed);
 				std::uniform_int_distribution<Int32> u(min, max);
 				return u(mt);
 			}
-			else if (type == RandomType::MT19937_64)
+			case RandomType::MT19937_64:
 			{
 				std::mt19937_64 mt(seed);
 				std::uniform_int_distribution<Int32> u(min, max);
 				return u(mt);
 			}
-			else if (type == RandomType::WELL512)
-			{
-
-			}
-			else if (type == RandomType::RANDOM_DEVICE)
+			default:
 			{
 				std::random_device rd;
 				std::uniform_int_distribution<Int32> u(min, max);
 				return u(rd);
+			}
 			}
 		}
 
@@ -133,53 +129,51 @@ namespace System
 
 		inline Double NextDouble() const
 		{
-			if (type == RandomType::MT19937)
+			switch(this->type)
+			{
+			case RandomType::MT19937:
 			{
 				std::mt19937 mt(seed);
 				std::uniform_real_distribution<Double> u(0.0, 1.0);
 				return u(mt);
 			}
-			else if (type == RandomType::MT19937_64)
+			case RandomType::MT19937_64:
 			{
 				std::mt19937_64 mt(seed);
 				std::uniform_real_distribution<Double> u(0.0, 1.0);
 				return u(mt);
 			}
-			else if (type == RandomType::WELL512)
-			{
-
-			}
-			else if (type == RandomType::RANDOM_DEVICE)
+			default:
 			{
 				std::random_device rd;
 				std::uniform_real_distribution<Double> u(0.0, 1.0);
 				return u(rd);
+			}
 			}
 		}
 
 		inline Double Sample() const
 		{
-			if (type == RandomType::MT19937)
+			switch(this->type)
+			{
+			case RandomType::MT19937:
 			{
 				std::mt19937 mt(seed);
 				std::uniform_real_distribution<Double> u(0.0, 1.0);
 				return u(mt);
 			}
-			else if (type == RandomType::MT19937_64)
+			case RandomType::MT19937_64:
 			{
 				std::mt19937_64 mt(seed);
 				std::uniform_real_distribution<Double> u(0.0, 1.0);
 				return u(mt);
 			}
-			else if (type == RandomType::WELL512)
-			{
-
-			}
-			else if (type == RandomType::RANDOM_DEVICE)
+			default:
 			{
 				std::random_device rd;
 				std::uniform_real_distribution<Double> u(0.0, 1.0);
 				return u(rd);
+			}
 			}
 		}
 	};
