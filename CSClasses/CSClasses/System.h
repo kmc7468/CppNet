@@ -3,4 +3,6 @@
 
 #include "Console.h"
 
+System::Console Console;
+
 #endif
