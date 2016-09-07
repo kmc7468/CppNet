@@ -11,6 +11,7 @@
 #include "System.h"
 
 #include <iostream>
+#include <string>
 
 namespace System
 {
@@ -130,6 +131,13 @@ namespace System
 		static inline void WriteLine(UInt64 integer)
 		{
 			std::wcout << integer << std::endl;
+		}
+
+		static inline String ReadLine()
+		{
+			String str;
+			std::getline(std::wcin, str);
+			return str;
 		}
 	};
 }
