@@ -1,11 +1,12 @@
 #ifndef SYSTEM_CONSOLE_H
 #define SYSTEM_CONSOLE_H
 
+#include "System.h"
 #include <iostream>
 
 namespace System
 {
-	class Console final
+	class Console final : public Object
 	{
 	public:
 		Console() = default;
