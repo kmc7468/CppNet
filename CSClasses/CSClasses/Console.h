@@ -8,22 +8,22 @@ namespace System
 	class Console final
 	{
 	public:
-		void WriteLine(const char* string)
+		inline void WriteLine(const char* string) const
 		{
 			std::cout << string << std::endl;
 		}
 
-		void WriteLine(int integer)
+		inline void WriteLine(int integer) const
 		{
 			std::cout << integer << std::endl;
 		}
 
-		void Write(const char* string)
+		inline void Write(const char* string) const
 		{
 			std::cout << string;
 		}
 
-		void Write(int integer)
+		inline void Write(int integer) const
 		{
 			std::cout << integer << std::endl;
 		}
