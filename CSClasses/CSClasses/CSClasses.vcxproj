@@ -145,6 +145,7 @@
     <ClInclude Include="Console.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="Random.h" />
     <ClInclude Include="System.h" />
   </ItemGroup>
   <ItemGroup>

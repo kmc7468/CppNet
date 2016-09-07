@@ -30,6 +30,9 @@
     <ClInclude Include="Object.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

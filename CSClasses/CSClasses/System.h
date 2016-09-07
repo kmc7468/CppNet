@@ -7,6 +7,8 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 
+#include <string>
+
 namespace System
 {
 	using Boolean = bool;
@@ -32,5 +34,6 @@ namespace System
 #include "Object.h"
 #include "Console.h"
 #include "Math.h"
+#include "Random.h"
 
 #endif
