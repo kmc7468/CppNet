@@ -20,10 +20,13 @@ C# Classes for C++14
 
 ## 제공하는 기능들
 - System 네임스페이스
-  - [ ] Console 클래스
-  - [ ] Math 클래스
-  - [ ] String 클래스
-  - [ ] Char 클래스
+  - Console 클래스
+    - [x] Write 함수
+    - [x] WriteLine 함수
+    - [ ] Read 함수
+    - [ ] ReadLine 함수
+    
+  - [x] Math 클래스
 
 ## 라이센스
 ```
