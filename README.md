@@ -2,7 +2,7 @@
 C# Classes for C++14
 
 ## 설명
-.Net framework에 있는 기능들을 C++14에 있는 기능들을 이용해 구현했습니다.
+.Net framework에 있는 기능들을 C++14에 있는 기능들을 이용해 구현했습니다. 최대한 비슷하게 구현하게 노력하고 있으나 일부 기능이 누락되거나 .Net framework 와 100% 똑같게 작동하지 않을 수 있습니다.
 
 ## VC++에서의 적용 방법
 (1) include 폴더에 추가
@@ -27,6 +27,7 @@ C# Classes for C++14
     - [ ] ReadLine 함수
     
   - [x] Math 클래스
+  - [x] Random 클래스
 
 ## 라이센스
 ```
