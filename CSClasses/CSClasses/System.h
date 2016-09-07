@@ -26,7 +26,7 @@ namespace System
 	using Single = float;
 	using Double = double;
 
-	using String = const Char*;
+	using String = std::wstring;
 }
 
 #include "Object.h"
