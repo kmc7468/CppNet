@@ -1,7 +1,15 @@
+
+/*
+	2016.09.07
+	Created by kmc7468
+*/
+
 #ifndef SYSTEM_CONSOLE_H
+
 #define SYSTEM_CONSOLE_H
 
 #include "System.h"
+
 #include <iostream>
 
 namespace System
@@ -29,10 +37,11 @@ namespace System
 			std::wcout << character;
 		}
 
-		inline void Write(String string) const
-		{
-			std::wcout << string;
-		}
+//		TODO : Replace String with Char *
+//		inline void Write(String string) const
+//		{
+//			std::wcout << string;
+//		}
 
 		inline void Write(String string, Int32 index, Int32 count)
 		{
@@ -119,20 +128,11 @@ namespace System
 			std::wcout << single << std::endl;
 		}
 
-		inline void WriteLine(String string) const
-		{
-			std::wcout << string << std::endl;
-		}
-
-		inline void WriteLine(UInt32 integer) const
-		{
-			std::wcout << integer << std::endl;
-		}
-
-		inline void WriteLine(UInt64 integer) const
-		{
-			std::wcout << integer << std::endl;
-		}
+//		TODO : Replace String with Char *
+//		inline void WriteLine(String string) const
+//		{
+//			std::wcout << string << std::endl;
+//		}
 
 		inline void WriteLine(UInt32 integer) const
 		{

@@ -1,7 +1,15 @@
+
+/*
+	2016.09.07
+	Created by kmc7468
+*/
+
 #ifndef SYSTEM_MATH_H
+
 #define SYSTEM_MATH_H
 
 #include "System.h"
+
 #include <cmath>
 
 namespace System

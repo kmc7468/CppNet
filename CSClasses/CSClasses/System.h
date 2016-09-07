@@ -1,3 +1,9 @@
+
+/*
+	2016.09.07
+	Created by kmc7468
+*/
+
 #ifndef SYSTEM_H
 
 #define SYSTEM_H
