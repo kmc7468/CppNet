@@ -31,8 +31,7 @@ typedef int Int32;
 typedef long long Int64;
 typedef double Double;
 typedef float Single;
-typedef bool Boolean
->>>>>>> 595f7395d9ae1a3c0e333e15d245d0e2731fcd13
+typedef bool Boolean;
 
 #include "Object.h"
 #include "Console.h"

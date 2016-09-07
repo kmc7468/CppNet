@@ -9,6 +9,9 @@ namespace System
 	class Math final : public Object
 	{
 	public:
+		const Double PI = 3.14159265358979323846;
+		const Double E = 2.7182818284590452354;
+
 		inline Double Abs(Double d) const
 		{
 			return abs(d);
