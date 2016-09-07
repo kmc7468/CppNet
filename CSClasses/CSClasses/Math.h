@@ -6,7 +6,7 @@
 
 namespace System
 {
-	class Math final
+	class Math final : public Object
 	{
 	public:
 		inline Double Abs(Double d) const
