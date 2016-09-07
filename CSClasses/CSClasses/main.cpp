@@ -6,10 +6,11 @@
 */
 
 #include "System.h"
+using namespace System;
 
 int main(int argc, char** argv)
 {
-	Console.WriteLine(Math.PI);
+	Console::WriteLine(Math::PI);
 
 	system("pause");
 

@@ -6,7 +6,6 @@
 */
 
 #ifndef SYSTEM_OBJECT_H
-
 #define SYSTEM_OBJECT_H
 
 #include "System.h"

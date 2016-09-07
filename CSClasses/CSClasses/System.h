@@ -5,7 +5,6 @@
 */
 
 #ifndef SYSTEM_H
-
 #define SYSTEM_H
 
 namespace System
@@ -33,8 +32,5 @@ namespace System
 #include "Object.h"
 #include "Console.h"
 #include "Math.h"
-
-System::Console Console;
-System::Math Math;
 
 #endif

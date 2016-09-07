@@ -27,119 +27,107 @@ namespace System
 		Console &operator=(const Console &sNewConsole) = delete;
 
 	public:
-		inline void Write(Boolean boolean)
+		static inline void Write(Boolean boolean)
 		{
 			std::wcout << boolean;
 		}
 
-		inline void Write(Char character) const
+		static inline void Write(Char character)
 		{
 			std::wcout << character;
 		}
 
-//		TODO : Replace String with Char *
-//		inline void Write(String string) const
-//		{
-//			std::wcout << string;
-//		}
-
-		inline void Write(String string, Int32 index, Int32 count)
-		{
-			std::wcout.write(string + index, count);
-		}
-
-		inline void Write(Double doubled) const
-		{
-			std::wcout << doubled;
-		}
-
-		inline void Write(Int32 integer) const
-		{
-			std::wcout << integer;
-		}
-
-		inline void Write(Int64 integer) const
-		{
-			std::wcout << integer;
-		}
-
-		inline void Write(Single single) const
-		{
-			std::wcout << single;
-		}
-
-		inline void Write(String string) const
+		static inline void Write(String string)
 		{
 			std::wcout << string;
 		}
 
-		inline void Write(UInt32 integer) const
+		static inline void Write(String string, Int32 index, Int32 count)
+		{
+			std::wcout.write(string + index, count);
+		}
+
+		static inline void Write(Double doubled)
+		{
+			std::wcout << doubled;
+		}
+
+		static inline void Write(Int32 integer)
 		{
 			std::wcout << integer;
 		}
 
-		inline void Write(UInt64 integer) const
+		static inline void Write(Int64 integer)
 		{
 			std::wcout << integer;
 		}
 
-		inline void WriteLine() const
+		static inline void Write(Single single)
+		{
+			std::wcout << single;
+		}
+
+		static inline void Write(UInt32 integer)
+		{
+			std::wcout << integer;
+		}
+
+		static inline void Write(UInt64 integer)
+		{
+			std::wcout << integer;
+		}
+
+		static inline void WriteLine()
 		{
 			std::wcout << std::endl;
 		}
 
-		inline void WriteLine(Boolean boolean) const
+		static inline void WriteLine(Boolean boolean)
 		{
 			std::wcout << boolean << std::endl;
 		}
 
-		inline void WriteLine(Char character) const
+		static inline void WriteLine(Char character)
 		{
 			std::wcout << character << std::endl;
 		}
 
-		inline void WriteLine(String string) const
+		static inline void WriteLine(String string)
 		{
 			std::wcout << string << std::endl;
 		}
 
-		inline void WriteLine(String string, Int32 index, Int32 count)
+		static inline void WriteLine(String string, Int32 index, Int32 count)
 		{
 			std::wcout.write(string + index, count) << std::endl;
 		}
 
-		inline void WriteLine(Double doubled) const
+		static inline void WriteLine(Double doubled)
 		{
 			std::wcout << doubled << std::endl;
 		}
 
-		inline void WriteLine(Int32 integer) const
+		static inline void WriteLine(Int32 integer)
 		{
 			std::wcout << integer << std::endl;
 		}
 
-		inline void WriteLine(Int64 integer) const
+		static inline void WriteLine(Int64 integer)
 		{
 			std::wcout << integer << std::endl;
 		}
 
-		inline void WriteLine(Single single) const
+		static inline void WriteLine(Single single)
 		{
 			std::wcout << single << std::endl;
 		}
 
-//		TODO : Replace String with Char *
-//		inline void WriteLine(String string) const
-//		{
-//			std::wcout << string << std::endl;
-//		}
-
-		inline void WriteLine(UInt32 integer) const
+		static inline void WriteLine(UInt32 integer)
 		{
 			std::wcout << integer << std::endl;
 		}
 
-		inline void WriteLine(UInt64 integer) const
+		static inline void WriteLine(UInt64 integer)
 		{
 			std::wcout << integer << std::endl;
 		}
