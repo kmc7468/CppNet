@@ -18,6 +18,7 @@ C# Classes for C++14
 
 ## 사용 방법 (VC++, GCC등 공통)
 - 사용하고자 하는 헤더파일이나 소스파일 상단에 사용하고자 하는 네임스페이스를 include합니다.<br>```#include <System.h>```이런식으로요.
+- 네임스페이스 헤더파일은 그 네임스페이스에 있는 모든 클래스 헤더파일을 include하고 있습니다.
 
 ## 헤더파일 목록
 일반 종합 헤더파일: CSClasses.h<br>특수 종합 헤더파일: CSClassesCS.h
@@ -33,12 +34,19 @@ C# Classes for C++14
   - [ ] Console.h
   - [x] Math.h
   - [ ] Convert.h
-  - [ ] Exception.h
+  - [x] Exception.h
+    - [x] InvalidException.h
+  
   - [x] Object.h
   - [x] Random.h
+  - [ ] DateTime.h
+  - [ ] TimeSpan.h
   
 - System.Collections.Generic 네임스페이스
   - [ ] List.h
+
+### 특수 헤더파일
+- Language.h
 
 ## 특징
 - 닷넷 프레임워크와 맞물려 작동하지 않고 100% Native 코드로 이루어져 있음으로 닷넷 프레임워크의 기능과 유사하게 사용하고 싶을 때 사용 가능합니다.
@@ -47,6 +55,7 @@ C# Classes for C++14
 - 현재까지의 최신 표준인 C++14를 사용하였고 C++14 문법을 적극 사용하였습니다.
 - 클래스별로 헤더파일이 분리되어 있어(일부 클래스는 서로 맞물려 작동합니다.) 필요한 클래스 헤더파일만 가져다가 사용할 수 있습니다.
 - 클래스만 제공하는 것이 아니라 C# 문법대로 작성할 수 있도록 특수 네임스페이스 헤더파일 및 특수 종합 헤더파일을 제공합니다.
+- 닷넷 프레임워크에서 제공하는 클래스뿐만이 아니라 직접 고안한 기능도 추가하여 더욱 강력하게 사용할 수 있습니다.
 
 ## 개발진
 총 담당/기획자: static
@@ -56,7 +65,8 @@ C# Classes for C++14
 
 ## 저작권
 코드 저작권: static 및 아크릴새우<br>
-기능 저작권: Microsoft 및 개발진
+.Net framework에 있는 기능 저작권: Microsoft<br>
+직접 고안한 기능 저작권: 고안한 기능 계획자 및 구현자
 
 ## 라이센스
 ```
