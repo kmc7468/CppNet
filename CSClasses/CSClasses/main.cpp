@@ -5,17 +5,14 @@
 	Created by kmc7468
 */
 
-#include "CSClasses.h"
-using namespace System;
-using namespace System::Collections::Generic;
+#include <string>
+using namespace std;
+#include "CSClassesCS.h"
 
 int main(int argc, char** argv)
 {
-	Console::WriteLine(Math::PI);
-	Random rd(RandomType::MT19937,40000);
-	Console::WriteLine(rd.Next(5, 100));
-	auto str = Console::ReadLine();
-	Console::WriteLine(str);
+	Console.WriteLine(L"Hello!"s);
+	Console.WriteLine(Math.Abs(-20));
 
 	system("pause");
 

@@ -14,7 +14,7 @@
 
 namespace System
 {
-	static class Console final : public Object
+	class Console final : public Object
 	{
 	public:
 		Console() = default;
@@ -37,12 +37,12 @@ namespace System
 			std::wcout << character;
 		}
 
-		static inline void Write(String string)
+		static inline void Write(const String& string)
 		{
 			std::wcout << string;
 		}
 
-		static inline void Write(String string, Int32 index, Int32 count)
+		static inline void Write(const String& string, Int32 index, Int32 count)
 		{
 			std::wcout.write(string.c_str() + index, count);
 		}
@@ -92,12 +92,12 @@ namespace System
 			std::wcout << character << std::endl;
 		}
 
-		static inline void WriteLine(String string)
+		static inline void WriteLine(const String& string)
 		{
 			std::wcout << string << std::endl;
 		}
 
-		static inline void WriteLine(String string, Int32 index, Int32 count)
+		static inline void WriteLine(const String& string, Int32 index, Int32 count)
 		{
 			std::wcout.write(string.c_str() + index, count) << std::endl;
 		}

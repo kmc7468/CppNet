@@ -145,12 +145,15 @@
     <ClInclude Include="Console.h" />
     <ClInclude Include="Convert.h" />
     <ClInclude Include="CSClasses.h" />
+    <ClInclude Include="CSClassesCS.h" />
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="System.Collections.Generic.h" />
     <ClInclude Include="System.h" />
+    <ClInclude Include="SystemCS.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

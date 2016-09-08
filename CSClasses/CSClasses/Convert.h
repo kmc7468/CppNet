@@ -7,8 +7,12 @@
 
 namespace System
 {
-	static class Convert final
+	class Convert final
 	{
+	public:
+
+
+	public:
 		static inline Boolean ToBoolean(Boolean b)
 		{
 			return b;
@@ -82,15 +86,16 @@ namespace System
 			else return true;
 		}
 
-		static inline Boolean ToBoolean(String str)
+		static inline Boolean ToBoolean(const String& str)
 		{
-			std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+			String s = str;
+			std::transform(s.begin(), s.end(), s.begin(), ::tolower);
 
-			if (str == L"true")
+			if (s == L"true")
 			{
 				return true;
 			}
-			else if (str == L"false")
+			else if (s == L"false")
 			{
 				return false;
 			}

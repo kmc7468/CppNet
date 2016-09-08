@@ -51,6 +51,15 @@
     <ClInclude Include="Convert.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemCS.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CSClassesCS.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
