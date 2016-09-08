@@ -13,7 +13,7 @@ namespace System
 		{
 			this->message = message;
 		}
-		explicit InvalidCastException(const String& message, Exception* innerEx)
+		InvalidCastException(const String& message, Exception* innerEx)
 		{
 			this->message = message;
 			innerException = innerEx;
