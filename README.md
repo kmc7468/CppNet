@@ -56,9 +56,9 @@ C# Classes for C++14
 - 닷넷 프레임워크에서 제공하는 클래스뿐만이 아니라 직접 고안한 기능도 추가하여 더욱 강력하게 사용할 수 있습니다.
 
 ## 지원 언어
-- 한국어
-- English (영어)
-- Esperanto (에스페란토어)
+- 한국어 ```#define LANG_KOR```
+- English (영어) ```#define LANG_ENG```
+- Esperanto (에스페란토어) ``` #define LANG_ESP```
 
 ## 개발진
 총 담당/기획자: static
