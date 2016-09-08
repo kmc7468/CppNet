@@ -17,15 +17,6 @@ int main(int argc, char** argv)
 	auto str = Console::ReadLine();
 	Console::WriteLine(str);
 
-	auto l = new List<int>;
-	auto l2 = new List<int>;
-
-	l2->Add(0);
-	l2->Add(1);
-	l2->Add(2);
-
-	l->Add(3);
-
 	system("pause");
 
 	return 0;

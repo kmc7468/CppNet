@@ -14,7 +14,7 @@
 
 namespace System
 {
-	class Console final : public Object
+	static class Console final : public Object
 	{
 	public:
 		Console() = default;

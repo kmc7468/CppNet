@@ -15,7 +15,7 @@
 namespace System
 {
 
-	class Math final : public Object
+	static class Math final : public Object
 	{
 	public:
 		Math() = default;

@@ -35,5 +35,6 @@ namespace System
 #include "Console.h"
 #include "Math.h"
 #include "Random.h"
+#include "Convert.h"
 
 #endif
