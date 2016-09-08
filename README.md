@@ -59,7 +59,12 @@ C# Classes for C++14
 총 담당/기획자: static
 ### 프로그래밍
 - static
-- 아크릴새우(초급개발자)
+- 아크릴새우
+- kiwiyou
+- NeuroWhAI
+
+### 도움
+- .Net framework 자문: 맛난호빵
 
 ## 저작권
 코드 저작권: static 및 아크릴새우<br>
