@@ -11,7 +11,7 @@ namespace System
 		class ExceptionData
 		{
 		public:
-			explicit ExceptionData(const String& message, const String& source, const String& link, void* target, Exception* inner)
+			explicit ExceptionData(const String& message = L"", const String& source = L"", const String& link = L"", void* target = nullptr, Exception* inner = nullptr)
 			{
 				this->message = message;
 				this->source = source;
