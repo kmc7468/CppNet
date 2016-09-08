@@ -42,7 +42,10 @@ namespace System
 			return obj == obj2;
 		}
 
-		// TODO ToString
+		virtual inline String ToString() const
+		{
+			return L"";
+		}
 	};
 }
 
