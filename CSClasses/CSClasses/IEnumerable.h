@@ -1,3 +1,4 @@
+﻿#ifndef SYSTEM_COLLECTIONS_GENERIC_IENUMERABLE_H
 #define SYSTEM_COLLECTIONS_GENERIC_IENUMERABLE_H
 
 #include "System.h"
@@ -10,6 +11,7 @@ namespace System
 	{
 		namespace Generic
 		{
+			//FIXME: 실제 구현 시 불필요한 복사 등이 많이 일어남.
 			template <typename T = Object>
 			interface IEnumerable
 			{
@@ -49,6 +51,7 @@ namespace System
 
 				virtual Single Average(Func<Single, T> selector) = 0;
 
+				//NOTE: 원래 IEnumerable -> IEnumerable<T> 인데 C++ 템플릿은 저런 걸 지원을 안함.
 				template <typename TCast>
 				virtual IEnumerable<TCast> Cast() = 0;
 
