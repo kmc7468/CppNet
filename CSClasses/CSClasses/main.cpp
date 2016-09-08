@@ -10,25 +10,24 @@
 
 #include <string>
 using namespace std;
-#include "CSClassesCS.h"
+
+#include "CSClasses.h"
+using namespace System;
+using namespace System::Collections::Generic;
 
 int main(int argc, char** argv)
 {
 	std::wcout.imbue(std::locale(""));
 
-	Console.WriteLine(L"Hello!"s);
-	Console.WriteLine(Math.Abs(-20));
+	List<int> i;
+	i.push_back(5);
+	i.push_back(10);
 
-	try 
+	for (auto integer : i)
 	{
-		System::Convert::ToBoolean((wchar_t)5);
-		Console.WriteLine(L"ぞし"s);
+		Console::WriteLine(integer);
 	}
-	catch (System::Exception& e)
-	{
-		Console.WriteLine(e.Message());
-		Console.WriteLine(L"ぞし2"s);
-	}
+	
 
 	system("pause");
 

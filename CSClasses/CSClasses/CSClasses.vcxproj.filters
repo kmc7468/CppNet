@@ -45,9 +45,6 @@
     <ClInclude Include="CSClasses.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="List.h">
-      <Filter>헤더 파일\System\Collections\Generic</Filter>
-    </ClInclude>
     <ClInclude Include="Convert.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>

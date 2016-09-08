@@ -3,6 +3,22 @@
 
 #include "System.h"
 
-#include "List.h"
+#include <vector>
+#include <map>
+
+namespace System
+{
+	namespace Collections
+	{
+		namespace Generic
+		{
+			template<class T>
+			using List = std::vector<T>;
+
+			template<class TKey, class TValue>
+			using Dictionary = std::map<TKey, TValue>;
+		}
+	}
+}
 
 #endif

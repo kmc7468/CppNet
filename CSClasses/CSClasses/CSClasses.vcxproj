@@ -150,7 +150,6 @@
     <ClInclude Include="Exception.h" />
     <ClInclude Include="InvalidCastException.h" />
     <ClInclude Include="Language.h" />
-    <ClInclude Include="List.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Random.h" />
