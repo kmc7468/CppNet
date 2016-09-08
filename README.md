@@ -28,6 +28,35 @@ C# Classes for C++14
     
   - [x] Math 클래스
   - [x] Random 클래스
+  - [ ] Exception 클래스
+    - [ ] InvaidCastException
+    - [ ] FormatException
+  
+  - Convert 클래스
+    - [x] ToBoolean 함수
+    - [ ] ToByte 함수
+    - [ ] ToChar 함수
+    - [ ] ToDateTime 함수
+    - [ ] ToDouble 함수
+    - [ ] ToSingle 함수
+    - [ ] ToInt16 함수
+    - [ ] ToInt32 함수
+    - [ ] ToInt64 함수
+    - [ ] ToUInt16 함수
+    - [ ] ToUInt32 함수
+    - [ ] ToUInt64 함수
+    - [ ] ToSByte 함수
+    - [ ] ToString 함수
+
+## 개발진
+총 담당/기획자: static<br>
+### 프로그래밍
+- static
+- 아크릴새우(초급개발자)
+
+## 저작권
+코드 저작권: static 및 아크릴새우<br>
+기능 저작권: Microsoft 및 개발진
 
 ## 라이센스
 ```
