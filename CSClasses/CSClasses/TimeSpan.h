@@ -68,7 +68,7 @@ namespace System
 				return -1;
 			else if (t1.day > t2.day)
 				return 1;
-			
+
 			if (t1.hour < t2.hour)
 				return -1;
 			else if (t1.hour > t2.hour)
@@ -128,19 +128,19 @@ namespace System
 		}
 
 		//TODO: static TimeSpan Parse(const String& s);
-        //TODO: static TimeSpan Parse(String input, IFormatProvider formatProvider);
-        //TODO: static TimeSpan ParseExact(String input, String[] formats, IFormatProvider formatProvider);
-        //TODO: static TimeSpan ParseExact(String input, String format, IFormatProvider formatProvider);
-        //TODO: static TimeSpan ParseExact(String input, String format, IFormatProvider formatProvider, TimeSpanStyles styles);
-        //TODO: static TimeSpan ParseExact(String input, String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles);
+		//TODO: static TimeSpan Parse(String input, IFormatProvider formatProvider);
+		//TODO: static TimeSpan ParseExact(String input, String[] formats, IFormatProvider formatProvider);
+		//TODO: static TimeSpan ParseExact(String input, String format, IFormatProvider formatProvider);
+		//TODO: static TimeSpan ParseExact(String input, String format, IFormatProvider formatProvider, TimeSpanStyles styles);
+		//TODO: static TimeSpan ParseExact(String input, String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles);
 		//TODO: static Boolean TryParse(const String& s, TimeSpan& result);
-        //TODO: static Bool TryParse(String input, IFormatProvider formatProvider, out TimeSpan result);
-        //TODO: static Bool TryParseExact(String input, String format, IFormatProvider formatProvider, out TimeSpan result);
-        //TODO: static Bool TryParseExact(String input, String[] formats, IFormatProvider formatProvider, out TimeSpan result);
-        //TODO: static Bool TryParseExact(String input, String format, IFormatProvider formatProvider, TimeSpanStyles styles, out TimeSpan result);
-        //TODO: static Bool TryParseExact(String input, String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles, out TimeSpan result);
+		//TODO: static Bool TryParse(String input, IFormatProvider formatProvider, out TimeSpan result);
+		//TODO: static Bool TryParseExact(String input, String format, IFormatProvider formatProvider, out TimeSpan result);
+		//TODO: static Bool TryParseExact(String input, String[] formats, IFormatProvider formatProvider, out TimeSpan result);
+		//TODO: static Bool TryParseExact(String input, String format, IFormatProvider formatProvider, TimeSpanStyles styles, out TimeSpan result);
+		//TODO: static Bool TryParseExact(String input, String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles, out TimeSpan result);
 		//TODO: TimeSpan Add(const TimeSpan& ts);
-        //TODO: Int32 CompareTo(Object value);
+		//TODO: Int32 CompareTo(Object value);
 
 		Int32 CompareTo(const TimeSpan& value)
 		{
@@ -153,9 +153,9 @@ namespace System
 			return TimeSpan(std::abs(day), std::abs(hour), std::abs(min), std::abs(sec), std::abs(mill_sec));
 		}
 
-        //TODO: override bool Equals(object value);
-        //TODO: bool Equals(const TimeSpan& obj);
-        //TODO: override int GetHashCode();
+		//TODO: override bool Equals(object value);
+		//TODO: bool Equals(const TimeSpan& obj);
+		//TODO: override int GetHashCode();
 
 		TimeSpan Negate()
 		{
