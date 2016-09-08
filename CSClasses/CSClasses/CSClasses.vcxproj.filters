@@ -60,6 +60,12 @@
     <ClInclude Include="CSClassesCS.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="DateTime.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeSpan.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

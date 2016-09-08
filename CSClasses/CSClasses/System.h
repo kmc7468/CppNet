@@ -37,5 +37,7 @@ namespace System
 #include "Random.h"
 #include "Convert.h"
 #include "Exception.h"
+#include "DateTime.h"
+#include "TimeSpan.h"
 
 #endif
