@@ -8,6 +8,82 @@ namespace System
 	class Exception : public Object
 	{
 	public:
+		class ExceptionData
+		{
+		public:
+			explicit ExceptionData(const String& message, const String& source, const String& link, void* target, Exception* inner)
+			{
+				this->message = message;
+				this->source = source;
+				this->link = link;
+				this->target = target;
+				this->inner = inner;
+			}
+			ExceptionData(ExceptionData &&sNewExceptionData)
+			{
+				message = sNewExceptionData.message;
+				source = sNewExceptionData.source;
+				link = sNewExceptionData.link;
+				target = sNewExceptionData.target;
+				inner = sNewExceptionData.inner;
+				// FIXME target, inner ¾èÀºº¹»ç
+			}
+			ExceptionData(const ExceptionData& sNewExceptionData)
+			{
+				message = sNewExceptionData.message;
+				source = sNewExceptionData.source;
+				link = sNewExceptionData.link;
+				target = sNewExceptionData.target;
+				inner = sNewExceptionData.inner;
+				// FIXME target, inner ¾èÀºº¹»ç
+			}
+			virtual ~ExceptionData() = default;
+
+		public:
+			ExceptionData& operator=(const ExceptionData& ex)
+			{
+				return ExceptionData(ex);
+			}
+			ExceptionData& operator=(ExceptionData&& ex)
+			{
+				return ExceptionData(ex);
+			}
+
+		private:
+			String message;
+			String link;
+			String source;
+			void* target;
+			Exception* inner;
+
+		public:
+			String Message() const
+			{
+				return message;
+			}
+			 
+			String HelpLink() const
+			{
+				return link;
+			}
+
+			String Source() const
+			{
+				return source;
+			}
+
+			void* TargetSite() const
+			{
+				return target;
+			}
+
+			Exception* InnerException() const
+			{
+				return inner;
+			}
+		};
+
+	public:
 		explicit Exception() = default;
 		explicit Exception(const String& message)
 		{
@@ -17,6 +93,14 @@ namespace System
 		{
 			this->message = message;
 			innerException = innerEx;
+		}
+		explicit Exception(const ExceptionData& data)
+		{
+			this->message = data.Message();
+			this->source = data.Source();
+			this->targetsite = data.TargetSite();
+			this->link = data.HelpLink();
+			this->innerException = data.InnerException();
 		}
 		Exception(Exception &&sNewException)
 		{

@@ -20,12 +20,14 @@ namespace System
 
 		static inline Boolean ToBoolean(Char c)
 		{
-			throw InvalidCastException(TXT_INVAILD_CAST_CHAR2BOOL);
+			Boolean(*p)(DateTime) = ToBoolean;
+			throw InvalidCastException(Exception::ExceptionData(TXT_INVAILD_CAST_CHAR2BOOL, L"", L"", p, nullptr));
 		}
 
 		static inline Boolean ToBoolean(DateTime d)
 		{
-			throw InvalidCastException(TXT_INVALID_CAST_DATETIME2BOOL);
+			Boolean(*p)(DateTime) = ToBoolean;
+			throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BOOL, L"", L"", p, nullptr));
 		}
 
 		static inline Boolean ToBoolean(Byte b)

@@ -18,6 +18,14 @@ namespace System
 			this->message = message;
 			innerException = innerEx;
 		}
+		explicit InvalidCastException(const ExceptionData& data)
+		{
+			this->message = data.Message();
+			this->source = data.Source();
+			this->targetsite = data.TargetSite();
+			this->link = data.HelpLink();
+			this->innerException = data.InnerException();
+		}
 		InvalidCastException(InvalidCastException &&sNewException)
 		{
 			message = sNewException.message;
