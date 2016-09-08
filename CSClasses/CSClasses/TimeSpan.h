@@ -5,7 +5,7 @@
 
 namespace System
 {
-	class TimeSpan
+	class TimeSpan : public Object
 	{
 	public:
 		explicit TimeSpan(Int32 hour, Int32 min, Int32 sec)

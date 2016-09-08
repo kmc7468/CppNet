@@ -5,7 +5,7 @@
 
 namespace System
 {
-	class Exception
+	class Exception : public Object
 	{
 	public:
 		explicit Exception() = default;

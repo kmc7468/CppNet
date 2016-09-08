@@ -7,6 +7,8 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 
+#include "Language.h"
+
 #include <string>
 
 namespace System
@@ -32,12 +34,15 @@ namespace System
 }
 
 #include "Object.h"
+
+#include "Exception.h"
+#include "InvalidCastException.h"
+
 #include "Console.h"
 #include "Math.h"
 #include "Random.h"
-#include "Convert.h"
-#include "Exception.h"
 #include "DateTime.h"
 #include "TimeSpan.h"
+#include "Convert.h"
 
 #endif

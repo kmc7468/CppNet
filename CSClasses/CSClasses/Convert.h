@@ -7,7 +7,7 @@
 
 namespace System
 {
-	class Convert final
+	class Convert final : public Object
 	{
 	public:
 
@@ -20,11 +20,13 @@ namespace System
 
 		static inline Boolean ToBoolean(Char c)
 		{
-			return false;
-			// TODO throw InvalidCastException
+			throw InvalidCastException(TXT_INVAILD_CAST_CHAR2BOOL);
 		}
 
-		// TODO ToBoolean(DateTime)
+		static inline Boolean ToBoolean(DateTime d)
+		{
+			throw InvalidCastException(TXT_INVALID_CAST_DATETIME2BOOL);
+		}
 
 		static inline Boolean ToBoolean(Byte b)
 		{

@@ -5,7 +5,7 @@
 
 namespace System
 {
-	class DateTime
+	class DateTime : public Object
 	{
 
 	};

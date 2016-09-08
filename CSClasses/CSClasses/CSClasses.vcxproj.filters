@@ -66,6 +66,12 @@
     <ClInclude Include="TimeSpan.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="InvalidCastException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Language.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
