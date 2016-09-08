@@ -1,24 +1,24 @@
-#ifndef SYSTEM_INVALIDCASTEXCEPTION_H
-#define SYSTEM_INVALIDCASTEXCEPTION_H
+#ifndef SYSTEM_FORMATEXCEPTION_H
+#define SYSTEM_FORMATEXCEPTION_H
 
 #include "System.h"
 
 namespace System
 {
-	class InvalidCastException : public Exception
+	class FormatException : public Exception
 	{
 	public:
-		explicit InvalidCastException() = default;
-		explicit InvalidCastException(const String& message)
+		explicit FormatException() = default;
+		explicit FormatException(const String& message)
 		{
 			this->message = message;
 		}
-		explicit InvalidCastException(const String& message, Exception* innerEx)
+		explicit FormatException(const String& message, Exception* innerEx)
 		{
 			this->message = message;
 			innerException = innerEx;
 		}
-		explicit InvalidCastException(const ExceptionData& data)
+		explicit FormatException(const ExceptionData& data)
 		{
 			this->message = data.Message();
 			this->source = data.Source();
@@ -26,7 +26,7 @@ namespace System
 			this->link = data.HelpLink();
 			this->innerException = data.InnerException();
 		}
-		InvalidCastException(InvalidCastException &&sNewException)
+		FormatException(FormatException &&sNewException)
 		{
 			message = sNewException.message;
 			source = sNewException.source;
@@ -35,7 +35,7 @@ namespace System
 			innerException = sNewException.innerException;
 			// FIXME targetsite, innerException ¾èÀºº¹»ç
 		}
-		InvalidCastException(const InvalidCastException& sNewException)
+		FormatException(const FormatException& sNewException)
 		{
 			message = sNewException.message;
 			source = sNewException.source;
@@ -44,23 +44,23 @@ namespace System
 			innerException = sNewException.innerException;
 			// FIXME targetsite, innerException ¾èÀºº¹»ç
 		}
-		~InvalidCastException() = default;
+		~FormatException() = default;
 
 	public:
-		InvalidCastException& operator=(InvalidCastException&& ex)
+		FormatException& operator=(FormatException&& ex)
 		{
-			return InvalidCastException(ex);
+			return FormatException(ex);
 		}
 
-		InvalidCastException& operator=(const InvalidCastException& ex)
+		FormatException& operator=(const FormatException& ex)
 		{
-			return InvalidCastException(ex);
+			return FormatException(ex);
 		}
 
 	public:
 		String Message() const override
 		{
-			String msg = TXT_INVALID_CAST_DEFMSG;
+			String msg = TXT_FORMAT_DEFMSG;
 			msg.append(message);
 
 			return msg;

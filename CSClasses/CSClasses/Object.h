@@ -32,12 +32,12 @@ namespace System
 			}
 		}
 
-		virtual inline Boolean Equlas(Object& obj) const
+		virtual inline Boolean Equals(Object& obj) const
 		{
 			return obj == *const_cast<Object*>(this);
 		}
 
-		virtual inline Boolean Equlas(Object& obj, Object& obj2) const
+		virtual inline Boolean Equals(Object& obj, Object& obj2) const
 		{
 			return obj == obj2;
 		}

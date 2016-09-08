@@ -105,8 +105,7 @@ namespace System
 			}
 			else
 			{
-				// TODO throw FormatException
-				return false;
+				throw FormatException(TXT_FORMAT_STRING2BOOL_NOTSTR);
 			}
 		}
 	};

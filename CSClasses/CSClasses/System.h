@@ -37,6 +37,7 @@ namespace System
 
 #include "Exception.h"
 #include "InvalidCastException.h"
+#include "FormatException.h"
 
 #include "Console.h"
 #include "Math.h"

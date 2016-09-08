@@ -148,6 +148,7 @@
     <ClInclude Include="CSClassesCS.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Exception.h" />
+    <ClInclude Include="FormatException.h" />
     <ClInclude Include="InvalidCastException.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="Math.h" />

@@ -27,7 +27,24 @@ int main(int argc, char** argv)
 	{
 		Console::WriteLine(integer);
 	}
-	
+
+	try
+	{
+		Convert::ToBoolean((Char)5);
+	}
+	catch (Exception& e)
+	{
+		Console::WriteLine(e.Message());
+	}
+
+	try
+	{
+		Convert::ToBoolean(L"s"s);
+	}
+	catch (Exception& e)
+	{
+		Console::WriteLine(e.Message());
+	}
 
 	system("pause");
 
