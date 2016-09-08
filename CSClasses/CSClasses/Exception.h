@@ -21,10 +21,20 @@ namespace System
 		Exception(Exception &&sNewException)
 		{
 			message = sNewException.message;
+			source = sNewException.source;
+			link = sNewException.link;
+			targetsite = sNewException.targetsite;
+			innerException = sNewException.innerException;
+			// FIXME targetsite, innerException ¾èÀºº¹»ç
 		}
 		Exception(const Exception& sNewException)
 		{
 			message = sNewException.message;
+			source = sNewException.source;
+			link = sNewException.link;
+			targetsite = sNewException.targetsite;
+			innerException = sNewException.innerException;
+			// FIXME targetsite, innerException ¾èÀºº¹»ç
 		}
 		virtual ~Exception() = default;
 
@@ -36,7 +46,14 @@ namespace System
 		String link;
 
 	public:
-		// Operators
+		Exception& operator=(const Exception& ex)
+		{
+			return Exception(ex);
+		}
+		Exception& operator=(Exception&& ex)
+		{
+			return Exception(ex);
+		}
 
 	public:
 		virtual String Message() const
