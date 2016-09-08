@@ -13,7 +13,7 @@ namespace System
 		{
 			this->message = message;
 		}
-		explicit FormatException(const String& message, Exception* innerEx)
+		FormatException(const String& message, Exception* innerEx)
 		{
 			this->message = message;
 			innerException = innerEx;

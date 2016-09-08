@@ -8,22 +8,22 @@ namespace System
 	class TimeSpan : public Object
 	{
 	public:
-		explicit TimeSpan(Int32 hour, Int32 min, Int32 sec)
-		{
-			this->hour = hour;
-			this->min = min;
-			this->sec = sec;
-		}
+		static const Int64 TicksPerDay = 864000000000;
+		static const Int64 TicksPerHour = 36000000000;
+		static const Int64 TicksPerMillisecond = 10000;
+		static const Int64 TicksPerMinute = 600000000;
+		static const Int64 TicksPerSecond = 10000000;
 
-		explicit TimeSpan(Int32 day, Int32 hour, Int32 min, Int32 sec)
-		{
-			this->day = day;
-			this->hour = hour;
-			this->min = min;
-			this->sec = sec;
-		}
+	public:
+		TimeSpan(Int32 hour, Int32 min, Int32 sec)
+			: TimeSpan(0, hour, min, sec, 0)
+		{ }
 
-		explicit TimeSpan(Int32 day, Int32 hour, Int32 min, Int32 sec, Int32 mill_sec)
+		TimeSpan(Int32 day, Int32 hour, Int32 min, Int32 sec)
+			: TimeSpan(day, hour, min, sec, 0)
+		{ }
+
+		TimeSpan(Int32 day, Int32 hour, Int32 min, Int32 sec, Int32 mill_sec)
 		{
 			this->day = day;
 			this->hour = hour;
