@@ -46,4 +46,6 @@ namespace System
 #include "TimeSpan.h"
 #include "Convert.h"
 
+#define interface struct
+
 #endif
