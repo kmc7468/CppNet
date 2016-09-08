@@ -29,7 +29,10 @@ namespace System
 	public:
 		static inline void Write(Boolean boolean)
 		{
-			std::wcout << boolean;
+			if (boolean)
+				std::wcout << "True";
+			else
+				std::wcout << "False";
 		}
 
 		static inline void Write(Char character)
@@ -84,7 +87,10 @@ namespace System
 
 		static inline void WriteLine(Boolean boolean)
 		{
-			std::wcout << boolean << std::endl;
+			if (boolean)
+				std::wcout << "True" << std::endl;
+			else
+				std::wcout << "False" << std::endl;;
 		}
 
 		static inline void WriteLine(Char character)

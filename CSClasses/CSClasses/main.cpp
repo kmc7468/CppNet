@@ -39,7 +39,9 @@ int main(int argc, char** argv)
 
 	try
 	{
-		Convert::ToBoolean(L"s"s);
+		auto b = Convert::ToBoolean(L"TrUe"s);
+	
+		Console::WriteLine(b);
 	}
 	catch (Exception& e)
 	{
