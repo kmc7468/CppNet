@@ -36,14 +36,12 @@ C# Classes for C++14
   - [ ] Convert.h
   - [x] Exception.h
     - [x] InvalidException.h
+    - [x] FormatException.h
   
   - [x] Object.h
   - [x] Random.h
   - [ ] DateTime.h
   - [ ] TimeSpan.h
-  
-- System.Collections.Generic 네임스페이스
-  - [ ] List.h
 
 ### 특수 헤더파일
 - Language.h
