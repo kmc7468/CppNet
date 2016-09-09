@@ -22,6 +22,15 @@
     <Filter Include="헤더 파일\System\Collections\Generic">
       <UniqueIdentifier>{4fce894b-3e0d-4074-ab66-e25a2f798f4b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\Windows">
+      <UniqueIdentifier>{bf30fd36-dada-44da-bef1-63eae1cb33ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Windows\Forms">
+      <UniqueIdentifier>{76998ea2-3e38-4849-9ef1-2d9556b23614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Drawing">
+      <UniqueIdentifier>{0cdedd49-feba-4157-b436-f8fc82de5ee0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="System.h">
@@ -65,6 +74,18 @@
     </ClInclude>
     <ClInclude Include="FormatException.h">
       <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System.Windows.Forms.h">
+      <Filter>헤더 파일\System\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>헤더 파일\System\Windows\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="System.Drawing.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>헤더 파일\System\Drawing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

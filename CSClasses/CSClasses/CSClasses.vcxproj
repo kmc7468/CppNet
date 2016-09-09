@@ -145,6 +145,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Console.h" />
+    <ClInclude Include="Control.h" />
     <ClInclude Include="Convert.h" />
     <ClInclude Include="CSClasses.h" />
     <ClInclude Include="DateTime.h" />
@@ -154,9 +155,12 @@
     <ClInclude Include="Language.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="Point.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="System.Collections.Generic.h" />
+    <ClInclude Include="System.Drawing.h" />
     <ClInclude Include="System.h" />
+    <ClInclude Include="System.Windows.Forms.h" />
     <ClInclude Include="TimeSpan.h" />
   </ItemGroup>
   <ItemGroup>
