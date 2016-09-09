@@ -48,6 +48,8 @@ int main(int argc, char** argv)
 		Console::WriteLine(e.Message());
 	}
 
+	Console::WriteLine(sizeof(Int16));
+
 	system("pause");
 
 	return 0;
