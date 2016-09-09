@@ -20,7 +20,7 @@ namespace System
 
 		}
 		
-		virtual Boolean operator==(Object& obj)
+		virtual Boolean operator==(const Object& obj)
 		{
 			if (&obj == this)
 			{

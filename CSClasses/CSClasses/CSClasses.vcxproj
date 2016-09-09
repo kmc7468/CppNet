@@ -156,6 +156,7 @@
     <ClInclude Include="Math.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="PointF.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="System.Collections.Generic.h" />
     <ClInclude Include="System.Drawing.h" />

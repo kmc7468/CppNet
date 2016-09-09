@@ -48,4 +48,10 @@ namespace System
 
 #define interface struct
 
+template<typename T, typename U>
+Boolean is(U u)
+{
+	return dynamic_cast<T>(u) != nullptr;
+}
+
 #endif
