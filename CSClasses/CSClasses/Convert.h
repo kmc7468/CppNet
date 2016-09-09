@@ -10,7 +10,14 @@ namespace System
 	class Convert final : public Object
 	{
 	public:
+		Convert() = default;
+		Convert(Convert &&sNewConvert) = delete;
+		Convert(const Convert &sNewConvert) = delete;
+		~Convert() = default;
 
+	public:
+		Convert &operator=(Convert &&sNewConvert) = delete;
+		Convert &operator=(const Convert &sNewConvert) = delete;
 
 	public:
 		static inline Boolean ToBoolean(Boolean b)
