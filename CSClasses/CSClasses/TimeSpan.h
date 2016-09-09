@@ -31,7 +31,7 @@ namespace System
 			this->sec = sec;
 			this->mill_sec = mill_sec;
 
-			// TODO: https://msdn.microsoft.com/ko-kr/library/system.timespan.duration(v=vs.110).aspx
+			// FIXME: https://msdn.microsoft.com/ko-kr/library/system.timespan.duration(v=vs.110).aspx
 			//       의 예제를 참고하면 음수값인 경우 양수로 들어온 시간에 그 만큼 빼줘야 합니다.
 		}
 
@@ -149,7 +149,7 @@ namespace System
 
 		TimeSpan Duration()
 		{
-			// TODO: 음수 시간을 어떻게 표현할지 불분명하므로 아래 코드는 임시 조치임.
+			// FIXME: 음수 시간을 어떻게 표현할지 불분명하므로 아래 코드는 임시 조치임.
 			return TimeSpan(std::abs(day), std::abs(hour), std::abs(min), std::abs(sec), std::abs(mill_sec));
 		}
 
@@ -159,7 +159,7 @@ namespace System
 
 		TimeSpan Negate()
 		{
-			// TODO: 음수 시간을 어떻게 표현할지 불분명하므로 아래 코드는 임시 조치임.
+			// FIXME: 음수 시간을 어떻게 표현할지 불분명하므로 아래 코드는 임시 조치임.
 			return TimeSpan(-day, hour, min, sec, mill_sec);
 		}
 
