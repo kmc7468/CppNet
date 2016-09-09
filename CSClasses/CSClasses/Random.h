@@ -21,7 +21,7 @@ namespace System
 			this->type = type;
 			seed = std::random_device()();
 		}
-		Random(RandomType type, int seed)
+		Random(RandomType type, Int64 seed)
 		{
 			this->type = type;
 			this->seed = seed;
@@ -49,13 +49,13 @@ namespace System
 		}
 
 	private:
-		Int32 seed;
+		Int64 seed;
 		RandomType type;
 
 	public:
-		inline Int32 Next() const
+		inline Int64 Next() const
 		{
-			switch(this->type)
+			switch (this->type)
 			{
 			case RandomType::MT19937:
 			{
@@ -75,9 +75,34 @@ namespace System
 			}
 		}
 
-		inline Int32 Next(Int32 max) const
+		inline Int64 Next(const Int64& max) const
 		{
-			switch(this->type)
+			switch (this->type)
+			{
+			case RandomType::MT19937:
+			{
+				std::mt19937 mt(seed);
+				std::uniform_int_distribution<Int64> u(max);
+				return u(mt);
+			}
+			case RandomType::MT19937_64:
+			{
+				std::mt19937_64 mt(seed);
+				std::uniform_int_distribution<Int64> u(max);
+				return u(mt);
+			}
+			default:
+			{
+				std::random_device rd;
+				std::uniform_int_distribution<Int64> u(max);
+				return u(rd);
+			}
+			}
+		}
+
+		inline Int32 Next(const Int32& max) const
+		{
+			switch (this->type)
 			{
 			case RandomType::MT19937:
 			{
@@ -100,9 +125,34 @@ namespace System
 			}
 		}
 
-		inline Int32 Next(Int32 min, Int32 max) const
+		inline Int64 Next(const Int64& min, const Int64& max) const
 		{
-			switch(this->type)
+			switch (this->type)
+			{
+			case RandomType::MT19937:
+			{
+				std::mt19937 mt(seed);
+				std::uniform_int_distribution<Int64> u(min, max);
+				return u(mt);
+			}
+			case RandomType::MT19937_64:
+			{
+				std::mt19937_64 mt(seed);
+				std::uniform_int_distribution<Int64> u(min, max);
+				return u(mt);
+			}
+			default:
+			{
+				std::random_device rd;
+				std::uniform_int_distribution<Int64> u(min, max);
+				return u(rd);
+			}
+			}
+		}
+
+		inline Int32 Next(const Int32& min, const Int32& max) const
+		{
+			switch (this->type)
 			{
 			case RandomType::MT19937:
 			{
@@ -129,7 +179,7 @@ namespace System
 
 		inline Double NextDouble() const
 		{
-			switch(this->type)
+			switch (this->type)
 			{
 			case RandomType::MT19937:
 			{
@@ -154,7 +204,7 @@ namespace System
 
 		inline Double Sample() const
 		{
-			switch(this->type)
+			switch (this->type)
 			{
 			case RandomType::MT19937:
 			{

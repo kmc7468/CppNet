@@ -12,7 +12,7 @@
 
 namespace System
 {
-	class Object
+	class alignas(1) Object
 	{
 	public:
 		virtual ~Object()
