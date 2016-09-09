@@ -9,11 +9,13 @@ namespace System
 {
 	namespace Collections
 	{
+		class IEnumerable;
+
 		namespace Generic
 		{
-			//FIXME: 실제 구현 시 불필요한 복사 등이 많이 일어남.
-			template <typename T = Object>
-			interface IEnumerable
+			//FIXME: 실제 구현 시 불필요한 복사 등이 많이 일어날 가능성이 있음.
+			template <typename T>
+			interface IEnumerable : public System::Collections::IEnumerable
 			{
 				//TODO: GetEnumerator
 
@@ -60,6 +62,14 @@ namespace System
 				virtual Boolean Contains(T value) = 0;
 
 				//TODO: Contains(T, IEqualityComparer<T>)
+
+				//TODO: CopyToDataTable
+
+				virtual Int32 Count() = 0;
+
+				virtual Int32 Count(Func<T, Boolean> predicate) = 0;
+
+				//TODO: DefaultIfEmpty ~ Zip
 
 			};
 		}

@@ -69,6 +69,30 @@
     <ClInclude Include="IEnumerable.h">
       <Filter>헤더 파일\System\Collections\Generic</Filter>
     </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="System.Drawing.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="System.Windows.Forms.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ICollection.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="_ICollection.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="_IEnumerable.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
