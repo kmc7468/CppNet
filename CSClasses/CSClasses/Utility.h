@@ -6,11 +6,10 @@
 #define interface struct
 #define var auto
 
-template<typename T, typename U>
-System::Boolean& is(U u)
+template <typename T, typename U>
+constexpr System::Boolean is(U u)
 {
-	// FIXME: ERROR
-	return (bool) (dynamic_cast<T*>(u) != nullptr);
+	return is_base_of<T, U>::value;
 }
 
 #endif
