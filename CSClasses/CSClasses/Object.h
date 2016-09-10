@@ -15,7 +15,7 @@ namespace System
 	class Object
 	{
 	public:
-		virtual ~Object();
+		virtual ~Object() = default;
 
 	public:
 		virtual Boolean operator==(const Object& obj);
@@ -30,5 +30,7 @@ namespace System
 		virtual inline String ToString() const;
 	};
 }
+
+#include "Object.inl"
 
 #endif

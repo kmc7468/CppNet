@@ -193,6 +193,10 @@
     <ClCompile Include="TimeSpan.cpp" />
     <ClCompile Include="Utility.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Console.inl" />
+    <None Include="Object.inl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

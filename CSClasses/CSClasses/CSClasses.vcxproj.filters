@@ -37,6 +37,12 @@
     <Filter Include="소스 파일\System\Drawing">
       <UniqueIdentifier>{434df7cb-2657-414c-bed1-d92866c0fc85}</UniqueIdentifier>
     </Filter>
+    <Filter Include="인라인 구현 파일">
+      <UniqueIdentifier>{c775729c-b390-4581-8101-17688de22b6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\System">
+      <UniqueIdentifier>{3f51ef8c-3466-473e-ba38-94d27d780084}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -134,9 +140,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClInclude Include="Random.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
@@ -184,5 +187,13 @@
     <ClCompile Include="PointF.cpp">
       <Filter>소스 파일\System\Drawing</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Console.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="Object.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
   </ItemGroup>
 </Project>
