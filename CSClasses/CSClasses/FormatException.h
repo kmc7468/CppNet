@@ -61,6 +61,7 @@ namespace System
 		String Message() const override
 		{
 			String msg = TXT_FORMAT_DEFMSG;
+			msg.append(L" ");
 			msg.append(message);
 
 			return msg;
