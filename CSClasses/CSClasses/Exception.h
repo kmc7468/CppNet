@@ -84,17 +84,17 @@ namespace System
 		};
 
 	public:
-		explicit Exception() = default;
-		explicit Exception(const String& message)
+		Exception() = default;
+		Exception(const String& message)
 		{
 			this->message = message;
 		}
-		explicit Exception(const String& message, Exception* innerEx)
+		Exception(const String& message, Exception* innerEx)
 		{
 			this->message = message;
 			innerException = innerEx;
 		}
-		explicit Exception(const ExceptionData& data)
+		Exception(const ExceptionData& data)
 		{
 			this->message = data.Message();
 			this->source = data.Source();
