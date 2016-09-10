@@ -19,20 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E6CAD7AD-2172-471B-AC48-34D726DFDF62}</ProjectGuid>
+    <ProjectGuid>{7EF653EF-3090-4835-B400-D6596759E523}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CSClasses</RootNamespace>
+    <RootNamespace>Test</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -88,7 +88,6 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StructMemberAlignment>1Byte</StructMemberAlignment>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -117,7 +116,6 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StructMemberAlignment>1Byte</StructMemberAlignment>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -144,44 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Console.h" />
-    <ClInclude Include="Control.h" />
-    <ClInclude Include="Convert.h" />
-    <ClInclude Include="CSClasses.h" />
-    <ClInclude Include="DateTime.h" />
-    <ClInclude Include="Exception.h" />
-    <ClInclude Include="FormatException.h" />
-    <ClInclude Include="ICloneable.h" />
-    <ClInclude Include="ICollection.h" />
-    <ClInclude Include="IConvertible.h" />
-    <ClInclude Include="IEnumerable.h" />
-    <ClInclude Include="IFormatProvider.h" />
-    <ClInclude Include="IList.h" />
-    <ClInclude Include="InvalidCastException.h" />
-    <ClInclude Include="Language.h" />
-    <ClInclude Include="Math.h" />
-    <ClInclude Include="NotImplementedException.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="Point.h" />
-    <ClInclude Include="PointF.h" />
-    <ClInclude Include="Random.h" />
-    <ClInclude Include="Stack.h" />
-    <ClInclude Include="System.Collections.Generic.h" />
-    <ClInclude Include="System.Collections.h" />
-    <ClInclude Include="System.Drawing.h" />
-    <ClInclude Include="System.h" />
-    <ClInclude Include="System.Windows.Forms.h" />
-    <ClInclude Include="TimeSpan.h" />
-    <ClInclude Include="Utility.h" />
-    <ClInclude Include="_ICollection.h" />
-    <ClInclude Include="_IEnumerable.h" />
-    <ClInclude Include="_IList.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Console.cpp" />
-    <ClCompile Include="Convert.cpp" />
-    <ClCompile Include="DateTime.cpp" />
-    <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

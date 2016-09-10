@@ -27,117 +27,33 @@ namespace System
 		Console &operator=(const Console &sNewConsole) = delete;
 
 	public:
-		static inline void Write(Boolean boolean)
-		{
-			std::wcout << (boolean ? L"True" : L"False");
-		}
+		static inline void Write(Boolean boolean);
+		static inline void Write(Char character);
+		static inline void Write(const String& string);
+		static inline void Write(const String& string, Int32 index, Int32 count);
+		static inline void Write(Double doubled);
+		static inline void Write(Int16 integer);
+		static inline void Write(Int32 integer);
+		static inline void Write(Int64 integer);
+		static inline void Write(UInt16 integer);
+		static inline void Write(UInt32 integer);
+		static inline void Write(UInt64 integer);
+		static inline void Write(Single single);
 
-		static inline void Write(Char character)
-		{
-			std::wcout << character;
-		}
+		static inline void WriteLine();
+		static inline void WriteLine(Boolean boolean);
+		static inline void WriteLine(Char character);
+		static inline void WriteLine(const String& string);
+		static inline void WriteLine(const String& string, Int32 index, Int32 count);
+		static inline void WriteLine(Double doubled);
+		static inline void WriteLine(Int16 integer);
+		static inline void WriteLine(Int32 integer);
+		static inline void WriteLine(Int64 integer);
+		static inline void WriteLine(UInt16 integer);
+		static inline void WriteLine(UInt32 integer);
+		static inline void WriteLine(UInt64 integer);
 
-		static inline void Write(const String& string)
-		{
-			std::wcout << string;
-		}
-
-		static inline void Write(const String& string, Int32 index, Int32 count)
-		{
-			std::wcout.write(string.c_str() + index, count);
-		}
-
-		static inline void Write(Double doubled)
-		{
-			std::wcout << doubled;
-		}
-
-		static inline void Write(Int32 integer)
-		{
-			std::wcout << integer;
-		}
-
-		static inline void Write(Int64 integer)
-		{
-			std::wcout << integer;
-		}
-
-		static inline void Write(Single single)
-		{
-			std::wcout << single;
-		}
-
-		static inline void Write(UInt32 integer)
-		{
-			std::wcout << integer;
-		}
-
-		static inline void Write(UInt64 integer)
-		{
-			std::wcout << integer;
-		}
-
-		static inline void WriteLine()
-		{
-			std::wcout << std::endl;
-		}
-
-		static inline void WriteLine(Boolean boolean)
-		{
-			std::wcout << (boolean ? L"True" : L"False") << std::endl;
-		}
-
-		static inline void WriteLine(Char character)
-		{
-			std::wcout << character << std::endl;
-		}
-
-		static inline void WriteLine(const String& string)
-		{
-			std::wcout << string << std::endl;
-		}
-
-		static inline void WriteLine(const String& string, Int32 index, Int32 count)
-		{
-			std::wcout.write(string.c_str() + index, count) << std::endl;
-		}
-
-		static inline void WriteLine(Double doubled)
-		{
-			std::wcout << doubled << std::endl;
-		}
-
-		static inline void WriteLine(Int32 integer)
-		{
-			std::wcout << integer << std::endl;
-		}
-
-		static inline void WriteLine(Int64 integer)
-		{
-			std::wcout << integer << std::endl;
-		}
-
-		static inline void WriteLine(Single single)
-		{
-			std::wcout << single << std::endl;
-		}
-
-		static inline void WriteLine(UInt32 integer)
-		{
-			std::wcout << integer << std::endl;
-		}
-
-		static inline void WriteLine(UInt64 integer)
-		{
-			std::wcout << integer << std::endl;
-		}
-
-		static inline String ReadLine()
-		{
-			String str;
-			std::getline(std::wcin, str);
-			return str;
-		}
+		static inline String ReadLine();
 
 		// TODO Read
 	};
