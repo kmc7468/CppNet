@@ -1,5 +1,5 @@
 # CSClasses
-C# Classes for C++14
+.Net framework Classes for C++14
 
 ## 설명
 .Net framework에 있는 기능들을 C++14에 있는 기능들을 이용해 구현했습니다. 최대한 비슷하게 구현하게 노력하고 있으나 일부 기능이 누락되거나 .Net framework 와 100% 똑같게 작동하지 않을 수 있습니다.<br>
@@ -27,8 +27,10 @@ C# Classes for C++14
 - System.Collections.Generic.h
 - System.Drawing.h
 - System.Windows.Forms.h
+- System.Collections.h
 
 ### 클래스 헤더파일
+어느정도 작업되어 사용에 큰 지장이 없으면 체크 표시가 되어 있고, 아직 개발이 진행중이면 체크 표시가 없습니다.
 - System 네임스페이스
   - [ ] Console.h
   - [x] Math.h
@@ -48,6 +50,15 @@ C# Classes for C++14
 
 - System.Windows.Forms 네임스페이스
   - [ ] Control.h
+
+- System.Collections 네임스페이스
+  - [x] _ICollection.h
+  - [x] _IEnumerable.h
+
+- System.Collections.Generic 네임스페이스
+  - [ ] ICollection.h
+  - [x] IEnumerable.h
+  - [x] IList.h
 
 ### 특별 헤더파일
 - Language.h
@@ -73,6 +84,7 @@ C# Classes for C++14
 - 아크릴새우
 - kiwiyou
 - NeuroWhAI
+- BasixKOR
 
 ### 도움
 - .Net framework 자문: 맛난호빵
