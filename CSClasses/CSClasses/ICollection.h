@@ -23,8 +23,8 @@ namespace System
 				virtual void Clear() = 0;
 
 
-				template <size_t _Size>
-				virtual void CopyTo(std::array<T, _Size> array, Int32 arrayIndex) = 0;
+				//template <size_t _Size>
+				//virtual void CopyTo(std::array<T, _Size> array, Int32 arrayIndex) = 0;
 
 				virtual Boolean Remove(const T& item) = 0;
 
