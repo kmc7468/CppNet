@@ -3,9 +3,9 @@
 
 using namespace std;
 using namespace System;
+using namespace System::Collections::Generic;
 
 int main(void)
 {
-	Console::WriteLine(L"Hello, World!"s);
-	
+	Queue<int> queue;
 }

@@ -13,12 +13,17 @@ namespace System
 		namespace Generic
 		{
 			template <typename T>
-			interface ICollection : public IEnumerable<T>
+			interface IReadOnlyCollection : public IEnumerable<T>
 			{
+				virtual Int32 Count() const = 0;
+			};
 
-				virtual Boolean IsReadOnly() = 0;
+			template <typename T>
+			interface ICollection : public IReadOnlyCollection<T>
+			{
+				virtual Boolean IsReadOnly() const = 0;
 
-				virtual void Add(const T& item)  = 0;
+				virtual void Add(T& item) = 0;
 
 				virtual void Clear() = 0;
 
@@ -28,11 +33,7 @@ namespace System
 
 				virtual Boolean Remove(const T& item) = 0;
 
-			};
-
-			template <typename T>
-			interface IReadOnlyCollection : public IEnumerable<T>
-			{
+				virtual Boolean Contains(const T& item) const = 0;
 			};
 		}
 	}

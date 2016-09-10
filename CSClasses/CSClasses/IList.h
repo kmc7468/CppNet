@@ -15,7 +15,7 @@ namespace System
 			{
 				virtual T& operator[](Int32 index) = 0;
 
-				virtual Int32 IndexOf(const T& item) = 0;
+				virtual Int32 IndexOf(const T& item) const = 0;
 
 				virtual void Insert(Int32 index, T& item) = 0;
 
