@@ -44,12 +44,14 @@ C# Classes for C++14
    
 - System.Drawing 네임스페이스
   - [ ] Point.h
+  - [ ] PointF.h
 
 - System.Windows.Forms 네임스페이스
   - [ ] Control.h
 
 ### 특별 헤더파일
 - Language.h
+- Utility.h
 
 ## 특징
 - 닷넷 프레임워크와 맞물려 작동하지 않고 100% Native 코드로 이루어져 있음으로 닷넷 프레임워크의 기능과 유사하게 사용하고 싶을 때 사용 가능합니다.
