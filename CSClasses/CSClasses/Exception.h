@@ -26,7 +26,7 @@ namespace System
 				link = sNewExceptionData.link;
 				target = sNewExceptionData.target;
 				inner = sNewExceptionData.inner;
-				// FIXME target, inner ¾èÀºº¹»ç
+				// FIXME inner ¾èÀºº¹»ç
 			}
 			ExceptionData(const ExceptionData& sNewExceptionData)
 			{
@@ -35,7 +35,7 @@ namespace System
 				link = sNewExceptionData.link;
 				target = sNewExceptionData.target;
 				inner = sNewExceptionData.inner;
-				// FIXME target, inner ¾èÀºº¹»ç
+				// FIXME inner ¾èÀºº¹»ç
 			}
 			virtual ~ExceptionData() = default;
 

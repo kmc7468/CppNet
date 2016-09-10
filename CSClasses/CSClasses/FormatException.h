@@ -33,7 +33,7 @@ namespace System
 			link = sNewException.link;
 			targetsite = sNewException.targetsite;
 			innerException = sNewException.innerException;
-			// FIXME targetsite, innerException ¾èÀºº¹»ç
+			// FIXME innerException ¾èÀºº¹»ç
 		}
 		FormatException(const FormatException& sNewException)
 		{
@@ -42,7 +42,7 @@ namespace System
 			link = sNewException.link;
 			targetsite = sNewException.targetsite;
 			innerException = sNewException.innerException;
-			// FIXME targetsite, innerException ¾èÀºº¹»ç
+			// FIXME innerException ¾èÀºº¹»ç
 		}
 		~FormatException() = default;
 
