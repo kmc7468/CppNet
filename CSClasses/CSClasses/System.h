@@ -10,6 +10,7 @@
 #include "Language.h"
 
 #include <string>
+#include <functional>
 
 namespace System
 {
@@ -31,6 +32,9 @@ namespace System
 	using Double = double;
 
 	using String = std::wstring;
+
+	template <typename TResult, typename... Args>
+	using Func = std::function<TResult(Args)>;
 }
 
 #include "Utility.h"

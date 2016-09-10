@@ -151,6 +151,10 @@
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="FormatException.h" />
+    <ClInclude Include="ICloneable.h" />
+    <ClInclude Include="ICollection.h" />
+    <ClInclude Include="IEnumerable.h" />
+    <ClInclude Include="IList.h" />
     <ClInclude Include="InvalidCastException.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="Math.h" />
@@ -160,11 +164,14 @@
     <ClInclude Include="PointF.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="System.Collections.Generic.h" />
+    <ClInclude Include="System.Collections.h" />
     <ClInclude Include="System.Drawing.h" />
     <ClInclude Include="System.h" />
     <ClInclude Include="System.Windows.Forms.h" />
     <ClInclude Include="TimeSpan.h" />
     <ClInclude Include="Utility.h" />
+    <ClInclude Include="_ICollection.h" />
+    <ClInclude Include="_IEnumerable.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
