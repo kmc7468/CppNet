@@ -5,71 +5,89 @@
 .Net framework에 있는 기능들을 C++14에 있는 기능들을 이용해 구현했습니다. 최대한 비슷하게 구현하게 노력하고 있으나 일부 기능이 누락되거나 .Net framework 와 100% 똑같게 작동하지 않을 수 있습니다.<br>
 타겟 버전: .Net framework 4.6
 
-## VC++에서의 적용 방법
-(1) include 폴더에 추가
-- 첫번째. Visual Studio가 설치된 경로로 이동합니다.
-- 두번째. /VC/include/ 폴더로 들어갑니다.
-- 세번째. 헤더파일들을 붙여넣습니다.
+## 적용 방법
+- 준비중입니다.
 
-(2) 프로젝트에 추가
-- 첫번째. 프로젝트를 열거나 생성합니다.
-- 두번째. 추가를 하고자 하는 필터를 우클릭합니다.
-- 세번째. 기존 파일 추가를 누르고 헤더파일들을 선택하고 확인을 누릅니다.
+## 사용 방법
+- 준비중입니다.
 
-## 사용 방법 (VC++, GCC등 공통)
-- 사용하고자 하는 헤더파일이나 소스파일 상단에 사용하고자 하는 네임스페이스를 include합니다.<br>```#include <System.h>```이런식으로요.
-- 네임스페이스 헤더파일은 그 네임스페이스에 있는 모든 클래스 헤더파일을 include하고 있습니다.
+## 파일 목록
+모두 작업 되었거나 사용에 지장이 없을 수준으로 개발 되었을 경우 체크, 개발 중이라서 문법이 바뀌거나 기능이 바뀌거나 할 수 있거나 사용이 불가능 할 수준으로 많이 개발되지 않았을 경우 체크 해제입니다.
+### 헤더 파일
+- 종합 헤더 파일
+  - CSClasses.h
 
-## 헤더파일 목록
-일반 종합 헤더파일: CSClasses.h
-### 일반 네임스페이스 헤더파일
-- System.h
-- System.Collections.Generic.h
-- System.Drawing.h
-- System.Windows.Forms.h
-- System.Collections.h
+- 네임스페이스 종합 헤더 파일
+  - System.h
+  - System.Drawing.h
+  - System.Collections.h
+  - System.Collections.Generic.h
+  - System.Windows.Forms.h
 
-### 클래스 헤더파일
-어느정도 작업되어 사용에 큰 지장이 없으면 체크 표시가 되어 있고, 아직 개발이 진행중이면 체크 표시가 없습니다.
-- System 네임스페이스
-  - [ ] Console.h
-  - [x] Math.h
-  - [ ] Convert.h
-  - [x] Exception.h
-    - [x] InvalidException.h
-    - [x] FormatException.h
+- 특수 용도 헤더 파일
+  - Language.h
+  - Utility.h
   
+- System 네임스페이스
   - [x] Object.h
-  - [x] Random.h
+  - [x] Console.h
+  - [ ] Convert.h
   - [ ] DateTime.h
   - [ ] TimeSpan.h
-   
+  - [x] Exception.h
+    - [x] InvalidCastException.h
+    - [x] FormatException.h
+    - [x] NotImplementedException.h
+  
+  - [x] Math.h
+  - [x] Random.h
+  - [x] ICloneable.h
+  - [x] IConvertible.h
+  - [ ] IFormatProvider.h
+  
 - System.Drawing 네임스페이스
   - [ ] Point.h
   - [ ] PointF.h
-
-- System.Windows.Forms 네임스페이스
-  - [ ] Control.h
 
 - System.Collections 네임스페이스
   - [x] _ICollection.h
   - [x] _IEnumerable.h
 
 - System.Collections.Generic 네임스페이스
-  - [ ] ICollection.h
+  - [x] ICollection.h
   - [x] IEnumerable.h
   - [x] IList.h
 
-### 특별 헤더파일
-- Language.h
-- Utility.h
+- System.Windows.Forms 네임스페이스
+  - [ ] Control.h
+
+### 소스 파일
+- 특수 용도 헤더파일
+  - [ ] Utility.h
+
+- System 네임스페이스
+  - [x] Object.cpp
+  - [x] Console.cpp
+  - [ ] Convert.cpp
+  - [ ] DateTime.cpp
+  - [ ] TimeSpan.cpp
+  - [x] Exception.cpp
+    - [x] FormatException.cpp
+    - [x] InvalidCastException.cpp
+    - [x] NotImplementedException.cpp
+  
+  - [x] Random.cpp
+  - [x] Math.cpp
+
+- System.Drawing 네임스페이스
+  - [ ] Point.cpp
+  - [ ] PointF.cpp
 
 ## 특징
 - 닷넷 프레임워크와 맞물려 작동하지 않고 100% Native 코드로 이루어져 있음으로 닷넷 프레임워크의 기능과 유사하게 사용하고 싶을 때 사용 가능합니다.
 - 각 컴파일러의 비표준 확장을 사용하지 않고 100% 표준 코드만 사용하였기 때문에 크로스 플랫폼이 가능합니다.
 - 라이브러리를 사용하지 않고 100% 저희가 직접 타이핑한 코드만 사용하기 때문에 추가 라이브러리 설치가 필요하지 않습니다.
 - 현재까지의 최신 표준인 C++14를 사용하였고 C++14 문법을 적극 사용하였습니다.
-- 클래스별로 헤더파일이 분리되어 있어(일부 클래스는 서로 맞물려 작동합니다.) 필요한 클래스 헤더파일만 가져다가 사용할 수 있습니다.
 - 닷넷 프레임워크에서 제공하는 클래스뿐만이 아니라 직접 고안한 기능도 추가하여 더욱 강력하게 사용할 수 있습니다.
 
 ## 지원 언어
