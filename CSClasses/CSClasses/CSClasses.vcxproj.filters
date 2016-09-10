@@ -108,6 +108,12 @@
     <ClInclude Include="System.Collections.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="_IList.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

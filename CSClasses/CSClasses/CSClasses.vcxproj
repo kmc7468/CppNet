@@ -163,6 +163,7 @@
     <ClInclude Include="Point.h" />
     <ClInclude Include="PointF.h" />
     <ClInclude Include="Random.h" />
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="System.Collections.Generic.h" />
     <ClInclude Include="System.Collections.h" />
     <ClInclude Include="System.Drawing.h" />
@@ -172,6 +173,7 @@
     <ClInclude Include="Utility.h" />
     <ClInclude Include="_ICollection.h" />
     <ClInclude Include="_IEnumerable.h" />
+    <ClInclude Include="_IList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

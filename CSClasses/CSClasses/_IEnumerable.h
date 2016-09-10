@@ -10,7 +10,7 @@ namespace System
 	{
 		interface IEnumerable
 		{
-			//TODO: GetEnumerator, AsParallel, AsQueryable
+			//TODO: GetEnumerator
 
 			template <typename TResult>
 			virtual Generic::IEnumerable<TResult> Cast() = 0;
