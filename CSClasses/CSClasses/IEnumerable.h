@@ -3,20 +3,18 @@
 
 #include "System.h"
 
-#include <functional>
-
 namespace System
 {
 	namespace Collections
 	{
+		interface IEnumerable;
+
 		namespace Generic
 		{
 			//FIXME: 실제 구현 시 불필요한 복사 등이 많이 일어남.
-			template <typename T = Object>
-			interface IEnumerable
+			template <typename T>
+			interface IEnumerable : Collections::IEnumerable
 			{
-				//TODO: GetEnumerator
-
 				virtual T Aggregate(Func<T, T, T> func) = 0;
 
 				template <typename TAccumulate>
@@ -35,10 +33,6 @@ namespace System
 
 				virtual IEnumerable<T> AsEnumerable() = 0;
 
-				//TODO: AsParallel
-
-				//TODO: AsQueryable
-
 				//TODO: Decimal Average(Func<Decimal, T> selector)
 
 				virtual Double Average(Func<Double, T> selector) = 0;
@@ -50,10 +44,6 @@ namespace System
 				//TODO: Nullable Average
 
 				virtual Single Average(Func<Single, T> selector) = 0;
-
-				//NOTE: 원래 IEnumerable -> IEnumerable<T> 인데 C++ 템플릿은 저런 걸 지원을 안함.
-				template <typename TCast>
-				virtual IEnumerable<TCast> Cast() = 0;
 
 				virtual IEnumerable<T> Concat(IEnumerable<T> second) = 0;
 

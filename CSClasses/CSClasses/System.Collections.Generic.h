@@ -2,6 +2,9 @@
 #define SYSTEM_COLLECTIONS_GENERIC_H
 
 #include "System.h"
+#include "ICollection.h"
+#include "IEnumerable.h"
+#include "IList.h"
 
 #include <vector>
 #include <map>

@@ -1,3 +1,4 @@
+#ifndef SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_H
 #define SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_H
 
 #include "System.h"
@@ -11,6 +12,7 @@ namespace System
 	{
 		namespace Generic
 		{
+			template <typename T>
 			interface ICollection : public IEnumerable<T>
 			{
 
@@ -28,6 +30,7 @@ namespace System
 
 			};
 
+			template <typename T>
 			interface IReadOnlyCollection : public IEnumerable<T>
 			{
 			};

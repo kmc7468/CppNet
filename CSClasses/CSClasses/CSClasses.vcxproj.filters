@@ -81,11 +81,14 @@
     <ClInclude Include="System.Windows.Forms.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ICollection.h">
-      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    <ClInclude Include="Utility.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Queue.h">
-      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    <ClInclude Include="NotImplementedException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="PointF.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="_ICollection.h">
       <Filter>헤더 파일\System\Collections</Filter>
@@ -93,13 +96,16 @@
     <ClInclude Include="_IEnumerable.h">
       <Filter>헤더 파일\System\Collections</Filter>
     </ClInclude>
-    <ClInclude Include="PointF.h">
-      <Filter>헤더 파일\System\Drawing</Filter>
+    <ClInclude Include="ICloneable.h">
+      <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="Utility.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="ICollection.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
     </ClInclude>
-    <ClInclude Include="NotImplementedException.h">
+    <ClInclude Include="IList.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="System.Collections.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
   </ItemGroup>

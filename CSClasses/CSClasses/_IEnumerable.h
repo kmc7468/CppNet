@@ -17,6 +17,7 @@ namespace System
 
 			template <typename TResult>
 			virtual Generic::IEnumerable<TResult> OfType() = 0;
+
 		};
 	}
 }
