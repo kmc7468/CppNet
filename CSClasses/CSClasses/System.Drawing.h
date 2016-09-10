@@ -4,5 +4,6 @@
 #include "System.h"
 
 #include "Point.h"
+#include "PointF.h"
 
 #endif

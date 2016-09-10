@@ -1,4 +1,4 @@
-#ifndef SYSTEM_COLLECTIONS_ICOLLECTION_H
+﻿#ifndef SYSTEM_COLLECTIONS_ICOLLECTION_H
 #define SYSTEM_COLLECTIONS_ICOLLECTION_H
 
 #include "System.h"
@@ -10,6 +10,8 @@ namespace System
 	{
 		interface ICollection : public IEnumerable
 		{
+			virtual Int32 Count() = 0;
+
 
 		};
 	}

@@ -93,6 +93,9 @@
     <ClInclude Include="_IEnumerable.h">
       <Filter>헤더 파일\System\Collections</Filter>
     </ClInclude>
+    <ClInclude Include="PointF.h">
+      <Filter>헤더 파일\System\Drawing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
