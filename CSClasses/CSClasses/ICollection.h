@@ -1,4 +1,3 @@
-﻿#ifndef SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_H
 #define SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_H
 
 #include "System.h"
@@ -12,10 +11,8 @@ namespace System
 	{
 		namespace Generic
 		{
-			template <typename T>
 			interface ICollection : public IEnumerable<T>
 			{
-				//NOTE: Count 프로퍼티와 확장 Count()가 충돌하므로 제외.
 
 				virtual Boolean IsReadOnly() = 0;
 
@@ -23,7 +20,6 @@ namespace System
 
 				virtual void Clear() = 0;
 
-				//NOTE: Contains 중복
 
 				template <size_t _Size>
 				virtual void CopyTo(std::array<T, _Size> array, Int32 arrayIndex) = 0;
@@ -32,7 +28,6 @@ namespace System
 
 			};
 
-			template <typename T>
 			interface IReadOnlyCollection : public IEnumerable<T>
 			{
 			};
