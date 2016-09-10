@@ -46,11 +46,16 @@ namespace System
 #include "FormatException.h"
 #include "NotImplementedException.h"
 
+#include "TimeSpan.h"
+#include "DateTime.h"
+
+#include "ICloneable.h"
+#include "IFormatProvider.h"
+#include "IConvertible.h"
+
 #include "Console.h"
 #include "Math.h"
 #include "Random.h"
-#include "DateTime.h"
-#include "TimeSpan.h"
 #include "Convert.h"
 
 #endif

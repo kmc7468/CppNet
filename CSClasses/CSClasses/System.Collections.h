@@ -4,6 +4,4 @@
 #include "_IEnumerable.h"
 #include "_ICollection.h"
 
-#include "System.Collections.Generic.h"
-
 #endif

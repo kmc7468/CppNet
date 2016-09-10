@@ -12,7 +12,7 @@ namespace System
 		namespace Generic
 		{
 			template <typename T>
-			interface IEnumerable : Collections::IEnumerable
+			interface IEnumerable : public Collections::IEnumerable
 			{
 			};
 		}
