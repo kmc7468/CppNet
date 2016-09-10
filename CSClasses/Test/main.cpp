@@ -7,4 +7,5 @@ using namespace System;
 int main(void)
 {
 	Console::WriteLine(L"Hello, World!"s);
+	
 }

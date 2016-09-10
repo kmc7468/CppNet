@@ -189,5 +189,11 @@
     <None Include="Object.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
+    <None Include="Math.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="Convert.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
   </ItemGroup>
 </Project>

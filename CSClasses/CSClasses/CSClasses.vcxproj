@@ -193,6 +193,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Console.inl" />
+    <None Include="Convert.inl" />
+    <None Include="Math.inl" />
     <None Include="Object.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
