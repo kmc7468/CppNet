@@ -182,6 +182,13 @@
     <ClCompile Include="Convert.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="FormatException.cpp" />
+    <ClCompile Include="InvalidCastException.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="NotImplementedException.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="TimeSpan.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

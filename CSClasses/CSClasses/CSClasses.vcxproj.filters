@@ -117,9 +117,6 @@
     <ClInclude Include="System.Windows.Forms.h">
       <Filter>헤더 파일\System\Windows\Forms</Filter>
     </ClInclude>
-    <ClInclude Include="Random.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="IConvertible.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
@@ -137,6 +134,10 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClInclude Include="Random.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+>>>>>>> refs/remotes/origin/master
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Console.cpp">
@@ -149,6 +150,27 @@
       <Filter>소스 파일\System</Filter>
     </ClCompile>
     <ClCompile Include="Exception.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="FormatException.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="InvalidCastException.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="NotImplementedException.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeSpan.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
   </ItemGroup>

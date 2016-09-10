@@ -9,7 +9,7 @@
 #define var auto
 
 template <typename T, typename U>
-constexpr System::Boolean is(U&& u)
+constexpr inline System::Boolean is(U&& u)
 {
 	return std::is_base_of_v<T, U>;
 }
