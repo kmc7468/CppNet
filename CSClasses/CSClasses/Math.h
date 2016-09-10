@@ -90,4 +90,6 @@ namespace System
 	};
 }
 
+#include "Math.inl"
+
 #endif

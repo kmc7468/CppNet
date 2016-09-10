@@ -165,7 +165,6 @@
     <ClInclude Include="Point.h" />
     <ClInclude Include="PointF.h" />
     <ClInclude Include="Random.h" />
-    <ClInclude Include="Stack.h" />
     <ClInclude Include="System.Collections.Generic.h" />
     <ClInclude Include="System.Collections.h" />
     <ClInclude Include="System.Drawing.h" />
@@ -175,7 +174,6 @@
     <ClInclude Include="Utility.h" />
     <ClInclude Include="_ICollection.h" />
     <ClInclude Include="_IEnumerable.h" />
-    <ClInclude Include="_IList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Console.cpp" />
@@ -192,6 +190,12 @@
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="TimeSpan.cpp" />
     <ClCompile Include="Utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Console.inl" />
+    <None Include="Convert.inl" />
+    <None Include="Math.inl" />
+    <None Include="Object.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

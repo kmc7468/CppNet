@@ -59,4 +59,6 @@ namespace System
 	};
 }
 
+#include "Console.inl"
+
 #endif

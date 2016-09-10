@@ -23,8 +23,6 @@ namespace System
 			Int32 Y = 0;
 			Boolean IsEmpty() const;
 		};
-
-		const Point& Point::Empty = Point(0, 0);
 	}
 }
 
