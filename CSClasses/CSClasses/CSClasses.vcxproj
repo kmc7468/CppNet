@@ -158,14 +158,8 @@
     <ClInclude Include="NotImplementedException.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Point.h" />
-<<<<<<< HEAD
-<<<<<<< HEAD
     <ClInclude Include="Queue.h" />
-=======
     <ClInclude Include="PointF.h" />
->>>>>>> refs/remotes/origin/master
-=======
->>>>>>> parent of b2fce37... Added Collections
     <ClInclude Include="Random.h" />
     <ClInclude Include="System.Collections.Generic.h" />
     <ClInclude Include="System.Drawing.h" />
