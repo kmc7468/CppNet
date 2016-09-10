@@ -7,8 +7,6 @@ namespace System
 {
 	namespace Collections
 	{
-		interface IEnumerable;
-
 		namespace Generic
 		{
 			template <typename T>

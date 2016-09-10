@@ -2,12 +2,17 @@
 #define SYSTEM_COLLECTIONS_IENUMERABLE_H
 
 #include "System.h"
-#include "IEnumerable.h"
 
 namespace System
 {
 	namespace Collections
 	{
+		namespace Generic
+		{
+			template <typename T>
+			interface IEnumerable;
+		}
+
 		interface IEnumerable : public Object
 		{
 			//TODO: GetEnumerator
