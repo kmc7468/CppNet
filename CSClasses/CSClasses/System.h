@@ -40,6 +40,7 @@ namespace System
 #include "Exception.h"
 #include "InvalidCastException.h"
 #include "FormatException.h"
+#include "NotImplementedException.h"
 
 #include "Console.h"
 #include "Math.h"

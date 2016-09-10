@@ -50,6 +50,15 @@ int main(int argc, char** argv)
 		Console::WriteLine(e.Message());
 	}
 
+	try 
+	{
+		throw NotImplementedException(L"¤±¤¤¤·¤©");
+	}
+	catch (Exception& e)
+	{
+		Console::WriteLine(e.Message());
+	}
+
 	system("pause");
 
 	return 0;

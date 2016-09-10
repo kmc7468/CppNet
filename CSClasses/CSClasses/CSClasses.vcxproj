@@ -154,6 +154,7 @@
     <ClInclude Include="InvalidCastException.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="Math.h" />
+    <ClInclude Include="NotImplementedException.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="PointF.h" />
