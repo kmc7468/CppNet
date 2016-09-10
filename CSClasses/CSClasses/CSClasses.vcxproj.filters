@@ -34,6 +34,9 @@
     <Filter Include="소스 파일\System">
       <UniqueIdentifier>{9b59105a-64d6-4ba3-90ce-1cc33840be53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\System\Drawing">
+      <UniqueIdentifier>{434df7cb-2657-414c-bed1-d92866c0fc85}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -171,6 +174,15 @@
     </ClCompile>
     <ClCompile Include="Random.cpp">
       <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>소스 파일\System\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="PointF.cpp">
+      <Filter>소스 파일\System\Drawing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

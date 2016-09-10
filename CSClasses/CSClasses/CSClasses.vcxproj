@@ -187,8 +187,11 @@
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="NotImplementedException.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="PointF.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="TimeSpan.cpp" />
+    <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

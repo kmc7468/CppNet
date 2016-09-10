@@ -11,11 +11,7 @@ namespace System
 		{
 		public:
 			Point() = default;
-			Point(Int32 x, Int32 y)
-			{
-				X = x;
-				Y = y;
-			}
+			Point(Int32 x, Int32 y);
 			// TODO: Point(Size)
 			virtual ~Point() = default;
 
@@ -25,13 +21,7 @@ namespace System
 		public:
 			Int32 X = 0;
 			Int32 Y = 0;
-			Boolean IsEmpty() const
-			{
-				if (X == 0 && Y == 0)
-					return true;
-				else
-					return false;
-			}
+			Boolean IsEmpty() const;
 		};
 
 		const Point& Point::Empty = Point(0, 0);
