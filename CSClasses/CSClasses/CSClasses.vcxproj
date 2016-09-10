@@ -175,6 +175,12 @@
     <ClInclude Include="_ICollection.h" />
     <ClInclude Include="_IEnumerable.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="Convert.cpp" />
+    <ClCompile Include="DateTime.cpp" />
+    <ClCompile Include="Exception.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
