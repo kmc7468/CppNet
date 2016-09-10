@@ -8,7 +8,7 @@ namespace System
 {
 	namespace Collections
 	{
-		interface IEnumerable
+		interface IEnumerable : public Object
 		{
 			//TODO: GetEnumerator, AsParallel, AsQueryable
 

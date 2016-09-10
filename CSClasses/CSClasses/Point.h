@@ -7,7 +7,7 @@ namespace System
 {
 	namespace Drawing
 	{
-		class Point
+		class Point : public Object
 		{
 		public:
 			Point() = default;
