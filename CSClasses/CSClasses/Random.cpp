@@ -2,13 +2,6 @@
 
 namespace System
 {
-	enum class RandomType
-	{
-		MT19937,
-		MT19937_64,
-		RANDOM_DEVICE,
-	};
-
 	Random::Random(RandomType type = RandomType::MT19937)
 	{
 		this->type = type;

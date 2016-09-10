@@ -34,7 +34,7 @@ namespace System
 	using String = std::wstring;
 
 	template <typename TResult, typename... Args>
-	using Func = std::function<TResult(Args)>;
+	using Func = std::function<TResult(Args...)>;
 }
 
 #include "Utility.h"

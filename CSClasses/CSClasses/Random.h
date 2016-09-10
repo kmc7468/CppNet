@@ -6,7 +6,12 @@
 
 namespace System
 {
-	enum class RandomType;
+	enum class RandomType
+	{
+		MT19937,
+		MT19937_64,
+		RANDOM_DEVICE,
+	};
 
 	class Random : public Object
 	{
