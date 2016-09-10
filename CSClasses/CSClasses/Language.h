@@ -5,6 +5,7 @@
 #define TXT_INVALID_CAST_DEFMSG L"잘못된 변환 오류가 발생하였습니다."
 #define TXT_INVAILD_CAST_CHAR2BOOL L"Char를 Boolean으로 변환할 수 없습니다."
 #define TXT_INVALID_CAST_DATETIME2BOOL L"DateTime을 Boolean으로 변환할 수 없습니다."
+#define TXT_INVALID_CAST_DATETIME2BYTE L"DateTime을 Byte로 변환할 수 없습니다."
 
 #define TXT_FORMAT_DEFMSG L"포맷 또는 구성이 잘못되어 오류가 발생하였습니다."
 #define TXT_FORMAT_STRING2BOOL_NOTSTR L"잘못된 문자열입니다."
@@ -18,6 +19,7 @@
 #define TXT_INVALID_CAST_DEFMSG L"Nevalida rolantaro escepto."
 #define TXT_INVAILD_CAST_CHAR2BOOL L"Vi ne povas konverti Char al Boolean."
 #define TXT_INVALID_CAST_DATETIME2BOOL L"Vi ne povas konverti DateTime al Boolean."
+#define TXT_INVALID_CAST_DATETIME2BYTE L"Vi ne povas konverti DateTime al Byte."
 
 #define TXT_FORMAT_DEFMSG L"Nevalida formato escepto."
 #define TXT_FORMAT_STRING2BOOL_NOTSTR L"Nevalida kordoj."
@@ -30,6 +32,7 @@
 #define TXT_INVALID_CAST_DEFMSG L"Invalid cast exception."
 #define TXT_INVAILD_CAST_CHAR2BOOL L"Can't cast a from Char to Boolean."
 #define TXT_INVALID_CAST_DATETIME2BOOL L"Can't cast a from DateTime to Boolean."
+#define TXT_INVALID_CAST_DATETIME2BYTE L"Can't cast a from DateTime to Byte."
 
 #define TXT_FORMAT_DEFMSG L"Invalid format exception."
 #define TXT_FORMAT_STRING2BOOL_NOTSTR L"Invalid string."

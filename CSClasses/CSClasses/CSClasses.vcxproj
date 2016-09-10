@@ -153,7 +153,9 @@
     <ClInclude Include="FormatException.h" />
     <ClInclude Include="ICloneable.h" />
     <ClInclude Include="ICollection.h" />
+    <ClInclude Include="IConvertible.h" />
     <ClInclude Include="IEnumerable.h" />
+    <ClInclude Include="IFormatProvider.h" />
     <ClInclude Include="IList.h" />
     <ClInclude Include="InvalidCastException.h" />
     <ClInclude Include="Language.h" />

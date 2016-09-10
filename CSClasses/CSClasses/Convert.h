@@ -115,6 +115,101 @@ namespace System
 				throw FormatException(TXT_FORMAT_STRING2BOOL_NOTSTR);
 			}
 		}
+
+		static inline Byte ToByte(Boolean b)
+		{
+			return b ? 1 : 0;
+		}
+		
+		static inline Byte ToByte(Byte b)
+		{
+			return b;
+		}
+
+		static inline Byte ToByte(Char c)
+		{
+			if (c > 255)
+			{
+				throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			}
+
+			return (Byte)c;
+		}
+
+		static inline Byte ToByte(DateTime d)
+		{
+			Byte(*p)(DateTime) = ToByte;
+			throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BYTE, L"", L"", p, nullptr));
+		}
+
+		static inline Byte ToByte(Double d)
+		{
+			d = Math::Round(d);
+
+			if (d > 255 || d < 0)
+			{
+				throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			}
+
+			return (Byte)d;
+		}
+
+		static inline Byte ToByte(Int16 i)
+		{
+			if (i > 255 || i < 0)
+			{
+				throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			}
+
+			return (Byte)i;
+		}
+
+		static inline Byte ToByte(Int32 i)
+		{
+			if (i > 255 || i < 0)
+			{
+				throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			}
+
+			return (Byte)i;
+		}
+
+		static inline Byte ToByte(Int64 i)
+		{
+			if (i > 255 || i < 0)
+			{
+				throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			}
+
+			return (Byte)i;
+		}
+
+		static inline Byte ToByte(Single d)
+		{
+			d = (Single)Math::Round(d);
+
+			if (d > 255 || d < 0)
+			{
+				throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			}
+
+			return (Byte)d;
+		}
+
+		static inline Byte ToByte(const String& str)
+		{
+			String s = str;
+			std::replace(s.begin(), s.end(), L',', L' ');
+		
+			Int32 i = std::stoi(str);
+
+			if (i > 255 || i < 0)
+			{
+				throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			}
+
+			return (Byte)i;
+		}
 	};
 }
 
