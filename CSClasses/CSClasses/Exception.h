@@ -26,7 +26,7 @@ namespace System
 				link = sNewExceptionData.link;
 				target = sNewExceptionData.target;
 				inner = sNewExceptionData.inner;
-				// FIXME target, inner ¾èÀºº¹»ç
+				// FIXME inner ¾èÀºº¹»ç
 			}
 			ExceptionData(const ExceptionData& sNewExceptionData)
 			{
@@ -35,7 +35,7 @@ namespace System
 				link = sNewExceptionData.link;
 				target = sNewExceptionData.target;
 				inner = sNewExceptionData.inner;
-				// FIXME target, inner ¾èÀºº¹»ç
+				// FIXME inner ¾èÀºº¹»ç
 			}
 			virtual ~ExceptionData() = default;
 
@@ -109,7 +109,7 @@ namespace System
 			link = sNewException.link;
 			targetsite = sNewException.targetsite;
 			innerException = sNewException.innerException;
-			// FIXME targetsite, innerException ¾èÀºº¹»ç
+			// FIXME innerException ¾èÀºº¹»ç
 		}
 		Exception(const Exception& sNewException)
 		{
@@ -118,7 +118,7 @@ namespace System
 			link = sNewException.link;
 			targetsite = sNewException.targetsite;
 			innerException = sNewException.innerException;
-			// FIXME targetsite, innerException ¾èÀºº¹»ç
+			// FIXME innerException ¾èÀºº¹»ç
 		}
 		virtual ~Exception() = default;
 
