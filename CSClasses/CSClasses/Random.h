@@ -21,7 +21,7 @@ namespace System
 			this->type = type;
 			seed = std::random_device()();
 		}
-		Random(RandomType type, Int64 seed)
+		Random(RandomType type, UInt32 seed)
 		{
 			this->type = type;
 			this->seed = seed;
@@ -49,7 +49,7 @@ namespace System
 		}
 
 	private:
-		Int64 seed;
+		UInt32 seed;
 		RandomType type;
 
 	public:

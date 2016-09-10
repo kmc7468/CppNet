@@ -22,11 +22,11 @@ namespace System
 			// TODO Add(s)
 
 		public:
-			Boolean Equals(Object& obj) const override
+			Boolean operator==(const Object& obj) override
 			{
-				if (is<Point&>(obj))
+				if (is<const PointF&>(obj))
 				{
-					Point& p = dynamic_cast<Point&>(obj);
+					const PointF& p = dynamic_cast<const PointF&>(obj);
 
 					// FIXME: 저장 방식에 의한 오차 반영 필요
 					if (p.X == X && p.Y == Y) return true;
@@ -34,6 +34,20 @@ namespace System
 				}
 				else
 					return false;
+			}
+
+			Boolean operator!=(const Object& obj) override
+			{
+				if (is<const PointF&>(obj))
+				{
+					const PointF& p = dynamic_cast<const PointF&>(obj);
+
+					// FIXME: 저장 방식에 의한 오차 반영 필요
+					if (p.X == X && p.Y == Y) return false;
+					else return true;
+				}
+				else
+					return true;
 			}
 
 		public:

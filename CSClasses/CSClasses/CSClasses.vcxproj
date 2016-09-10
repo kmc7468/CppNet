@@ -155,6 +155,7 @@
     <ClInclude Include="InvalidCastException.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="Math.h" />
+    <ClInclude Include="NotImplementedException.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Point.h" />
 <<<<<<< HEAD
@@ -171,6 +172,7 @@
     <ClInclude Include="System.h" />
     <ClInclude Include="System.Windows.Forms.h" />
     <ClInclude Include="TimeSpan.h" />
+    <ClInclude Include="Utility.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

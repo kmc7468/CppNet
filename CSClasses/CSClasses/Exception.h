@@ -142,7 +142,11 @@ namespace System
 	public:
 		virtual String Message() const
 		{
-			return message;
+			String msg = TXT_EXCEPTION_DEFMSG;
+			msg.append(L" ");
+			msg.append(message);
+
+			return msg;
 		}
 
 		virtual const void* const TargetSite() const

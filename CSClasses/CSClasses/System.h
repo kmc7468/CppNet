@@ -37,11 +37,14 @@ namespace System
 	using Func = std::function<TResult(Args)>;
 }
 
+#include "Utility.h"
+
 #include "Object.h"
 
 #include "Exception.h"
 #include "InvalidCastException.h"
 #include "FormatException.h"
+#include "NotImplementedException.h"
 
 #include "Console.h"
 #include "Math.h"
@@ -49,13 +52,5 @@ namespace System
 #include "DateTime.h"
 #include "TimeSpan.h"
 #include "Convert.h"
-
-#define interface struct
-
-template<typename T, typename U>
-Boolean is(U u)
-{
-	return dynamic_cast<T>(u) != nullptr;
-}
 
 #endif

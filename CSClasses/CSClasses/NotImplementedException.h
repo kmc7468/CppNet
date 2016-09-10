@@ -1,24 +1,24 @@
-#ifndef SYSTEM_FORMATEXCEPTION_H
-#define SYSTEM_FORMATEXCEPTION_H
+#ifndef SYSTEM_NOTIMPLEMENTEDEXCEPTION_H
+#define SYSTEM_NOTIMPLEMENTEDEXCEPTION_H
 
 #include "System.h"
 
 namespace System
 {
-	class FormatException : public Exception
+	class NotImplementedException : public Exception
 	{
 	public:
-		FormatException() = default;
-		FormatException(const String& message)
+		NotImplementedException() = default;
+		NotImplementedException(const String& message)
 		{
 			this->message = message;
 		}
-		FormatException(const String& message, Exception* innerEx)
+		NotImplementedException(const String& message, Exception* innerEx)
 		{
 			this->message = message;
 			innerException = innerEx;
 		}
-		FormatException(const ExceptionData& data)
+		NotImplementedException(const ExceptionData& data)
 		{
 			this->message = data.Message();
 			this->source = data.Source();
@@ -26,7 +26,7 @@ namespace System
 			this->link = data.HelpLink();
 			this->innerException = data.InnerException();
 		}
-		FormatException(FormatException &&sNewException)
+		NotImplementedException(NotImplementedException &&sNewException)
 		{
 			message = sNewException.message;
 			source = sNewException.source;
@@ -35,7 +35,7 @@ namespace System
 			innerException = sNewException.innerException;
 			// FIXME targetsite, innerException ¾èÀºº¹»ç
 		}
-		FormatException(const FormatException& sNewException)
+		NotImplementedException(const NotImplementedException& sNewException)
 		{
 			message = sNewException.message;
 			source = sNewException.source;
@@ -44,23 +44,23 @@ namespace System
 			innerException = sNewException.innerException;
 			// FIXME targetsite, innerException ¾èÀºº¹»ç
 		}
-		~FormatException() = default;
+		~NotImplementedException() = default;
 
 	public:
-		FormatException& operator=(FormatException&& ex)
+		NotImplementedException& operator=(NotImplementedException&& ex)
 		{
-			return FormatException(ex);
+			return NotImplementedException(ex);
 		}
 
-		FormatException& operator=(const FormatException& ex)
+		NotImplementedException& operator=(const NotImplementedException& ex)
 		{
-			return FormatException(ex);
+			return NotImplementedException(ex);
 		}
 
 	public:
 		String Message() const override
 		{
-			String msg = TXT_FORMAT_DEFMSG;
+			String msg = TXT_NOTIMPL_DEFMSG;
 			msg.append(L" ");
 			msg.append(message);
 

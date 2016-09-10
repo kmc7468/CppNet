@@ -14,6 +14,8 @@ using namespace std;
 #include "CSClasses.h"
 using namespace System;
 using namespace System::Collections::Generic;
+using namespace System::Drawing;
+using namespace System::Windows::Forms;
 
 int main(int argc, char** argv)
 {
@@ -48,7 +50,14 @@ int main(int argc, char** argv)
 		Console::WriteLine(e.Message());
 	}
 
-	Console::WriteLine(sizeof(Int16));
+	try 
+	{
+		throw NotImplementedException(L"¤±¤¤¤·¤©");
+	}
+	catch (Exception& e)
+	{
+		Console::WriteLine(e.Message());
+	}
 
 	system("pause");
 

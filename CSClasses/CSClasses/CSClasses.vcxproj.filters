@@ -97,8 +97,17 @@
     <ClInclude Include="PointF.h">
       <Filter>헤더 파일\System\Drawing</Filter>
     </ClInclude>
+<<<<<<< HEAD
 =======
 >>>>>>> parent of b2fce37... Added Collections
+=======
+    <ClInclude Include="Utility.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="NotImplementedException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+>>>>>>> refs/remotes/origin/master
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
