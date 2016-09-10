@@ -8,8 +8,8 @@ namespace System
 	class NotImplementedException : public Exception
 	{
 	public:
-		explicit NotImplementedException() = default;
-		explicit NotImplementedException(const String& message)
+		NotImplementedException() = default;
+		NotImplementedException(const String& message)
 		{
 			this->message = message;
 		}
@@ -18,7 +18,7 @@ namespace System
 			this->message = message;
 			innerException = innerEx;
 		}
-		explicit NotImplementedException(const ExceptionData& data)
+		NotImplementedException(const ExceptionData& data)
 		{
 			this->message = data.Message();
 			this->source = data.Source();

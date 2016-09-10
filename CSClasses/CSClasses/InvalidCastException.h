@@ -8,8 +8,8 @@ namespace System
 	class InvalidCastException : public Exception
 	{
 	public:
-		explicit InvalidCastException() = default;
-		explicit InvalidCastException(const String& message)
+		InvalidCastException() = default;
+		InvalidCastException(const String& message)
 		{
 			this->message = message;
 		}
@@ -18,7 +18,7 @@ namespace System
 			this->message = message;
 			innerException = innerEx;
 		}
-		explicit InvalidCastException(const ExceptionData& data)
+		InvalidCastException(const ExceptionData& data)
 		{
 			this->message = data.Message();
 			this->source = data.Source();

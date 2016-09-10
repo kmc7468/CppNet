@@ -8,8 +8,8 @@ namespace System
 	class FormatException : public Exception
 	{
 	public:
-		explicit FormatException() = default;
-		explicit FormatException(const String& message)
+		FormatException() = default;
+		FormatException(const String& message)
 		{
 			this->message = message;
 		}
@@ -18,7 +18,7 @@ namespace System
 			this->message = message;
 			innerException = innerEx;
 		}
-		explicit FormatException(const ExceptionData& data)
+		FormatException(const ExceptionData& data)
 		{
 			this->message = data.Message();
 			this->source = data.Source();
