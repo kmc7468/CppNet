@@ -17,6 +17,7 @@ namespace System
 		{
 			//TODO: GetEnumerator
 
+			//FIXME: 이걸 어찌 해야 할까요...
 			template <typename TResult>
 			virtual Generic::IEnumerable<TResult> Cast() = 0;
 
