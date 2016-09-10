@@ -22,14 +22,14 @@ namespace System
 		
 		virtual Boolean operator==(const Object& obj)
 		{
-			if (&obj == this)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			if (&obj == this) return true;
+			else return false;
+		}
+
+		virtual Boolean operator!=(const Object& obj)
+		{
+			if (&obj == this) return false;
+			else return true;
 		}
 
 		virtual inline Boolean Equals(Object& obj) const
@@ -37,9 +37,15 @@ namespace System
 			return obj == *const_cast<Object*>(this);
 		}
 
-		virtual inline Boolean Equals(Object& obj, Object& obj2) const
+		static inline Boolean Equals(Object& obj, Object& obj2)
 		{
 			return obj == obj2;
+		}
+
+		static inline Boolean ReferenceEquals(Object& obj, Object& obj2)
+		{
+			if (&obj == &obj2) return true;
+			else return false;
 		}
 
 		virtual inline String ToString() const
