@@ -109,7 +109,7 @@ namespace System
 			link = sNewException.link;
 			targetsite = sNewException.targetsite;
 			innerException = sNewException.innerException;
-			// FIXME targetsite, innerException ¾èÀºº¹»ç
+			// FIXME innerException ¾èÀºº¹»ç
 		}
 		Exception(const Exception& sNewException)
 		{
@@ -118,7 +118,7 @@ namespace System
 			link = sNewException.link;
 			targetsite = sNewException.targetsite;
 			innerException = sNewException.innerException;
-			// FIXME targetsite, innerException ¾èÀºº¹»ç
+			// FIXME innerException ¾èÀºº¹»ç
 		}
 		virtual ~Exception() = default;
 
