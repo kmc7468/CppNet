@@ -3,5 +3,5 @@ using namespace System;
 
 int main(void)
 {
-	Console::WriteLine("Hello, World!");
+	Console::WriteLine(L"Hello, World!");
 }
