@@ -15,43 +15,19 @@ namespace System
 	class Object
 	{
 	public:
-		virtual ~Object()
-		{
+		virtual ~Object();
 
-		}
-		
-		virtual Boolean operator==(const Object& obj)
-		{
-			if (&obj == this) return true;
-			else return false;
-		}
+	public:
+		virtual Boolean operator==(const Object& obj);
+		virtual Boolean operator!=(const Object& obj);
 
-		virtual Boolean operator!=(const Object& obj)
-		{
-			if (&obj == this) return false;
-			else return true;
-		}
+	public:
+		virtual inline Boolean Equals(Object& obj) const;
+		static inline Boolean Equals(Object& obj, Object& obj2);
 
-		virtual inline Boolean Equals(Object& obj) const
-		{
-			return obj == *const_cast<Object*>(this);
-		}
+		static inline Boolean ReferenceEquals(Object& obj, Object& obj2);
 
-		static inline Boolean Equals(Object& obj, Object& obj2)
-		{
-			return obj == obj2;
-		}
-
-		static inline Boolean ReferenceEquals(Object& obj, Object& obj2)
-		{
-			if (&obj == &obj2) return true;
-			else return false;
-		}
-
-		virtual inline String ToString() const
-		{
-			return L"";
-		}
+		virtual inline String ToString() const;
 	};
 }
 
