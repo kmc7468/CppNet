@@ -2,12 +2,13 @@
 #define SYSTEM_COLLECTIONS_GENERIC_IENUMERABLE_H
 
 #include "System.h"
-#include "_IEnumerable.h"
 
 namespace System
 {
 	namespace Collections
 	{
+		interface IEnumerable;
+
 		namespace Generic
 		{
 			//FIXME: 실제 구현 시 불필요한 복사 등이 많이 일어남.
