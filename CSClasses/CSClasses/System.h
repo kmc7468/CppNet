@@ -33,6 +33,8 @@ namespace System
 	using String = std::wstring;
 }
 
+#include "Utility.h"
+
 #include "Object.h"
 
 #include "Exception.h"
@@ -45,13 +47,5 @@ namespace System
 #include "DateTime.h"
 #include "TimeSpan.h"
 #include "Convert.h"
-
-#define interface struct
-
-template<typename T, typename U>
-Boolean is(U u)
-{
-	return dynamic_cast<T>(u) != nullptr;
-}
 
 #endif

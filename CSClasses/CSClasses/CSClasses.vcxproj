@@ -163,6 +163,7 @@
     <ClInclude Include="System.h" />
     <ClInclude Include="System.Windows.Forms.h" />
     <ClInclude Include="TimeSpan.h" />
+    <ClInclude Include="Utility.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
