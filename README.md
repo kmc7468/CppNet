@@ -89,10 +89,10 @@
 ### 도움
 - .Net framework 자문: 맛난호빵
 
-## 저작권
-코드 저작권: static 및 아크릴새우<br>
-.Net framework에 있는 기능 저작권: Microsoft<br>
-직접 고안한 기능 저작권: 고안한 기능 계획자 및 구현자
+## 저작권자
+코드 저작권자: 작성자<br>
+.Net framework에 있는 기능 저작권자: Microsoft<br>
+직접 고안한 기능 저작권자: 고안한 기능 계획자 및 구현자
 
 ## 라이센스
 ```
