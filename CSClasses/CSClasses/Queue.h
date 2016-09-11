@@ -26,15 +26,15 @@ namespace System
 			public:
 				virtual void Clear() override;
 				virtual T& Dequeue();
-				virtual void Enqueue(T& item);
+				virtual void Enqueue(const T& item);
 				virtual std::unique_ptr<IEnumerator<T>> GetEnumerator() override;
 				virtual T& Peek();
 				//TODO: ToString();
 				virtual void TrimExcess();
 
 			public:
-				//virtual Boolean operator==(const Object& obj) override;
-				//virtual Boolean operator!=(const Object& obj) override;
+				virtual Boolean operator==(const Object& obj) override;
+				virtual Boolean operator!=(const Object& obj) override;
 
 			private:
 				std::queue<T> queue;

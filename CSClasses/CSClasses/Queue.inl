@@ -21,7 +21,7 @@ namespace System
 
 			template<typename T>
 			Queue<T>::Queue(Int32 capacity)
-				: queue(capacity)
+				: queue()
 			{
 			}
 
@@ -50,7 +50,7 @@ namespace System
 				return data;
 			}
 			template<typename T>
-			void Queue<T>::Enqueue(T& item)
+			void Queue<T>::Enqueue(const T& item)
 			{
 				queue.push(item);
 			}
@@ -69,7 +69,7 @@ namespace System
 			{
 				throw NotImplementedException();
 			}
-			/*
+			
 			template<typename T>
 			Boolean Queue<T>::operator==(const Object & obj)
 			{
@@ -80,7 +80,7 @@ namespace System
 			{
 				return !this->operator==(obj);
 			}
-			*/
+			
 			template<typename T>
 			void Queue<T>::Add(T& item)
 			{
