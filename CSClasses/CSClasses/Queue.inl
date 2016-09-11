@@ -20,12 +20,6 @@ namespace System
 			}
 
 			template<typename T>
-			Queue<T>::Queue(Int32 capacity)
-				: queue()
-			{
-			}
-
-			template<typename T>
 			Int32 Queue<T>::Count() const
 			{
 				return static_cast<Int32>(queue.size());
@@ -45,7 +39,7 @@ namespace System
 			template<typename T>
 			T& Queue<T>::Dequeue()
 			{
-				T& data = queue.back();
+				T& data = queue.front();
 				queue.pop();
 				return data;
 			}

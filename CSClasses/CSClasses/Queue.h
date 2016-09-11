@@ -17,7 +17,7 @@ namespace System
 			public:
 				Queue();
 				Queue(const IEnumerable<T>& collection);
-				Queue(Int32 capacity);
+				//TODO: Queue(Int32 capacity);
 
 			public:
 				virtual Int32 Count() const override;
