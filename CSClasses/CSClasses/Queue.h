@@ -1,8 +1,9 @@
 #ifndef SYSTEM_COLLECTIONS_GENERIC_QUEUE_H
 #define SYSTEM_COLLECTIONS_GENERIC_QUEUE_H
 
-#include <queue>
+#include <deque>
 #include "SystemTypes.h"
+#include "IEnumerator.h"
 #include "ICollection.h"
 
 namespace System
@@ -37,13 +38,30 @@ namespace System
 				virtual Boolean operator!=(const Object& obj) override;
 
 			private:
-				std::queue<T> queue;
+				std::deque<T> queue;
 
 			private:
 				virtual void Add(T& item) override;
 				virtual Boolean Remove(const T& item) override;
 				virtual Boolean IsReadOnly() const override;
 
+
+			private:
+				struct Enumerator : public IEnumerator<T>
+				{
+				public:
+					virtual T& Current() override;
+					virtual Boolean MoveNext() override;
+					virtual void Reset() override;
+				
+				public:
+					Enumerator(Queue<T>& original);
+					
+				private:
+					Queue<T>& original;
+					typename std::deque<T>::iterator iter;
+					bool first;
+				};
 			};
 		}
 	}

@@ -13,6 +13,9 @@ int main(void)
 	Queue<int> queue;
 	queue.Enqueue(3);
 	queue.Enqueue(4);
-	Console::WriteLine(queue.Dequeue());
-	Console::WriteLine(queue.Dequeue());
+	var enumerator = queue.GetEnumerator();
+	while (enumerator->MoveNext())
+	{
+		Console::WriteLine(enumerator->Current());
+	}
 }

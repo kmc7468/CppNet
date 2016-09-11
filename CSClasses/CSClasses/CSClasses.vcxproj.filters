@@ -146,7 +146,7 @@
     </ClInclude>
     <ClInclude Include="Queue.h">
       <Filter>헤더 파일\System\Collections\Generic</Filter>
-	</ClInclude>
+    </ClInclude>
     <ClInclude Include="Boolean.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
