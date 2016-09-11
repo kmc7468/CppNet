@@ -14,6 +14,8 @@
 
 #define TXT_EXCEPTION_DEFMSG L"오류가 발생하였습니다."
 
+#define TXT_INVALID_OPER_DEFMSG L"메서드 호출이 유효하지 않습니다."
+
 
 #elif defined(LANG_ESP)
 #define TXT_INVALID_CAST_DEFMSG L"Nevalida rolantaro escepto."
@@ -28,6 +30,8 @@
 
 #define TXT_EXCEPTION_DEFMSG L"Eraro okazis."
 
+#define TXT_INVALID_OPER_DEFMSG L"La metodo alvoko estas nevalida."
+
 #else
 #define TXT_INVALID_CAST_DEFMSG L"Invalid cast exception."
 #define TXT_INVAILD_CAST_CHAR2BOOL L"Can't cast a from Char to Boolean."
@@ -40,6 +44,8 @@
 #define TXT_NOTIMPL_DEFMSG L"Requested method or operation is not implemented."
 
 #define TXT_EXCEPTION_DEFMSG L"An error has occurred."
+
+#define TXT_INVALID_OPER_DEFMSG L"The method call is invalid."
 
 
 #endif
