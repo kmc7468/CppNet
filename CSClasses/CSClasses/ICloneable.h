@@ -1,7 +1,7 @@
 #ifndef SYSTEM_ICLONEABLE_H
 #define SYSTEM_ICLONEABLE_H
 
-#include "System.h"
+#include "SystemType.h"
 
 namespace System
 {

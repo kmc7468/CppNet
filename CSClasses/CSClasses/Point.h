@@ -1,7 +1,7 @@
 #ifndef SYSTEM_DRAWING_POINT_H
 #define SYSTEM_DRAWING_POINT_H
 
-#include "System.h"
+#include "SystemType.h"
 
 namespace System
 {

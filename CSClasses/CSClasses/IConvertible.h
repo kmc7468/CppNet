@@ -1,7 +1,7 @@
 #ifndef SYSTEM_ICONVERTIBLE_H
 #define SYSTEM_ICONVERTIBLE_H
 
-#include "System.h"
+#include "SystemType.h"
 
 namespace System
 {

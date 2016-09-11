@@ -1,7 +1,7 @@
 #ifndef SYSTEM_TIMESPAN_H
 #define SYSTEM_TIMESPAN_H
 
-#include "System.h"
+#include "SystemType.h"
 
 namespace System
 {

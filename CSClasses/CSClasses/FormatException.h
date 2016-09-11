@@ -1,7 +1,8 @@
 #ifndef SYSTEM_FORMATEXCEPTION_H
 #define SYSTEM_FORMATEXCEPTION_H
 
-#include "System.h"
+#include "Exception.h"
+#include "SystemType.h"
 
 namespace System
 {

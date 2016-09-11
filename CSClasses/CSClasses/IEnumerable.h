@@ -1,7 +1,7 @@
 ﻿#ifndef SYSTEM_COLLECTIONS_GENERIC_IENUMERABLE_H
 #define SYSTEM_COLLECTIONS_GENERIC_IENUMERABLE_H
 
-#include "System.h"
+#include "_IEnumerable.h"
 
 namespace System
 {

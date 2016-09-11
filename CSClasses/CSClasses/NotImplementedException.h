@@ -1,7 +1,8 @@
 #ifndef SYSTEM_NOTIMPLEMENTEDEXCEPTION_H
 #define SYSTEM_NOTIMPLEMENTEDEXCEPTION_H
 
-#include "System.h"
+#include "Exception.h"
+#include "SystemType.h"
 
 namespace System
 {

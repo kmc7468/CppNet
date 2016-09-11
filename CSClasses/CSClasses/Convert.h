@@ -1,7 +1,7 @@
 #ifndef SYSTEM_CONVERT_H
 #define SYSTEM_CONVERT_H
 
-#include "System.h"
+#include "SystemType.h"
 
 #include <algorithm>
 

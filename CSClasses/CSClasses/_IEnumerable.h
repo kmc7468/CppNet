@@ -1,7 +1,7 @@
 ﻿#ifndef SYSTEM_COLLECTIONS_IENUMERABLE_H
 #define SYSTEM_COLLECTIONS_IENUMERABLE_H
 
-#include "System.h"
+#include "SystemType.h"
 
 namespace System
 {

@@ -1,7 +1,7 @@
 #ifndef SYSTEM_RANDOM_H
 #define SYSTEM_RANDOM_H
 
-#include "System.h"
+#include "SystemType.h"
 #include <random>
 
 namespace System

@@ -8,7 +8,7 @@
 
 #define SYSTEM_CONSOLE_H
 
-#include "System.h"
+#include "SystemType.h"
 
 #include <iostream>
 
