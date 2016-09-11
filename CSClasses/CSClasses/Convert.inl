@@ -1,5 +1,12 @@
 #include "Convert.h"
 
+#include "Math.h"
+#include "Exception.h"
+#include "InvalidCastException.h"
+#include "FormatException.h"
+
+#include "Language.h"
+
 namespace System
 {
 	Boolean Convert::ToBoolean(Boolean b)
