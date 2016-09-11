@@ -170,6 +170,7 @@
     <ClInclude Include="System.Drawing.h" />
     <ClInclude Include="System.h" />
     <ClInclude Include="System.Windows.Forms.h" />
+    <ClInclude Include="SystemType.h" />
     <ClInclude Include="TimeSpan.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="_ICollection.h" />
@@ -189,6 +190,7 @@
     <ClCompile Include="PointF.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="TimeSpan.cpp" />
+    <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Console.inl" />
