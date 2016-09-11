@@ -223,6 +223,12 @@
     <ClCompile Include="PointF.cpp">
       <Filter>소스 파일\System\Drawing</Filter>
     </ClCompile>
+    <ClCompile Include="ICloneable.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="IConvertible.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Console.inl">

@@ -198,6 +198,8 @@
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="FormatException.cpp" />
+    <ClCompile Include="ICloneable.cpp" />
+    <ClCompile Include="IConvertible.cpp" />
     <ClCompile Include="InvalidCastException.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="NotImplementedException.cpp" />
