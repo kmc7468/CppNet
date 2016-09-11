@@ -133,7 +133,7 @@
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
     <ClInclude Include="SystemType.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
