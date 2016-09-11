@@ -2,6 +2,8 @@
 
 namespace System
 {
+	/*
+	NOTE: 구현할때까지 빌드를 위해 주석처리 해놓겠습니다
 	Boolean IConvertible::ToBoolean(IFormatProvider i)
 	{
 
@@ -71,4 +73,5 @@ namespace System
 	{
 
 	}
+	*/
 }

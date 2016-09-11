@@ -15,11 +15,11 @@ namespace System
 	{
 		interface ICollection : public IEnumerable
 		{
-			virtual Int32 Count() = 0;
+			virtual Int32 Count() const = 0;
 
-			virtual Boolean IsSynchronized() = 0;
+			virtual Boolean IsSynchronized() const = 0;
 
-			virtual Object SyncRoot() = 0;
+			virtual Object SyncRoot() const = 0;
 
 			//template <typename T, size_t _Size>
 			//virtual void CopyTo(std::array<T, _Size> array, Int32 index) = 0;

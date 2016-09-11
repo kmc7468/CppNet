@@ -101,6 +101,8 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PreprocessorDefinitions>
       </PreprocessorDefinitions>
     </ClCompile>
@@ -162,6 +164,7 @@
     <ClInclude Include="ICollection.h" />
     <ClInclude Include="IConvertible.h" />
     <ClInclude Include="IEnumerable.h" />
+    <ClInclude Include="IEnumerator.h" />
     <ClInclude Include="IFormatProvider.h" />
     <ClInclude Include="IList.h" />
     <ClInclude Include="Int16.h" />
@@ -175,6 +178,7 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="PointF.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="SByte.h" />
     <ClInclude Include="Single.h" />
@@ -192,6 +196,7 @@
     <ClInclude Include="Utility.h" />
     <ClInclude Include="_ICollection.h" />
     <ClInclude Include="_IEnumerable.h" />
+    <ClInclude Include="_IEnumerator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Console.cpp" />
@@ -216,6 +221,7 @@
     <None Include="Convert.inl" />
     <None Include="Math.inl" />
     <None Include="Object.inl" />
+    <None Include="Queue.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

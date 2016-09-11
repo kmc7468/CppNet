@@ -6,6 +6,7 @@
 #include "ICollection.h"
 #include "IEnumerable.h"
 #include "IList.h"
+#include "Queue.h"
 
 #include <vector>
 #include <map>

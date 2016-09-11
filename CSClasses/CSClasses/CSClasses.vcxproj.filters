@@ -43,6 +43,12 @@
     <Filter Include="인라인 구현 파일\System">
       <UniqueIdentifier>{3f51ef8c-3466-473e-ba38-94d27d780084}</UniqueIdentifier>
     </Filter>
+    <Filter Include="인라인 구현 파일\System\Collections">
+      <UniqueIdentifier>{cef4aed6-9cf6-4097-af3c-c27022b2f48e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\System\Collections\Generic">
+      <UniqueIdentifier>{affce4a8-24b9-45eb-8620-536c9df0f106}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -131,6 +137,15 @@
     </ClInclude>
     <ClInclude Include="IFormatProvider.h">
       <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="_IEnumerator.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="IEnumerator.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
     </ClInclude>
     <ClInclude Include="Boolean.h">
       <Filter>헤더 파일\System</Filter>
@@ -248,6 +263,9 @@
     </None>
     <None Include="Convert.inl">
       <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="Queue.inl">
+      <Filter>인라인 구현 파일\System\Collections\Generic</Filter>
     </None>
   </ItemGroup>
 </Project>
