@@ -1,3 +1,6 @@
+#define LANG_KOR
+#define WIN32
+
 #include <string>
 #include <CSClasses\CSClasses.h>
 
