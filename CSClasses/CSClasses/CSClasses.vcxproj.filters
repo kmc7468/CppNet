@@ -172,9 +172,6 @@
     <ClCompile Include="Random.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
-    <ClCompile Include="Utility.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Point.cpp">
       <Filter>소스 파일\System\Drawing</Filter>
     </ClCompile>

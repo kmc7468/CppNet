@@ -10,11 +10,7 @@ namespace System
 		class PointF : public Object
 		{
 		public:
-			PointF(Single x, Single y)
-			{
-				X = x;
-				Y = y;
-			}
+			PointF(Single x, Single y);
 
 		public:
 			static const PointF& Empty;
