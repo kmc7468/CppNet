@@ -53,4 +53,6 @@ namespace System
 	};
 }
 
+#include "Convert.inl"
+
 #endif
