@@ -1,5 +1,7 @@
 #include "InvalidCastException.h"
 
+#include "Language.h"
+
 namespace System
 {
 	InvalidCastException::InvalidCastException(const String& message)

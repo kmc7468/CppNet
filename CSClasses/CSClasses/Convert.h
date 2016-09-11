@@ -2,6 +2,7 @@
 #define SYSTEM_CONVERT_H
 
 #include "SystemTypes.h"
+#include "DateTime.h"
 
 #include <algorithm>
 

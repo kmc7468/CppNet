@@ -1,5 +1,7 @@
 #include "NotImplementedException.h"
 
+#include "Language.h"
+
 namespace System
 {
 	NotImplementedException::NotImplementedException(const String& message)

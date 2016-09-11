@@ -1,5 +1,7 @@
 #include "Exception.h"
 
+#include "Language.h"
+
 namespace System
 {
 	Exception::ExceptionData::ExceptionData(const String& message, const String& source, const String& link, void* target, Exception* inner)

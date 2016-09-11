@@ -1,5 +1,7 @@
 #include "FormatException.h"
 
+#include "Language.h"
+
 namespace System
 {
 	FormatException::FormatException(const String& message)
