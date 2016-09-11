@@ -192,6 +192,9 @@
     <ClInclude Include="SystemTypes.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="InvalidOperationException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">
@@ -242,6 +245,9 @@
       <Filter>소스 파일\System</Filter>
     </ClCompile>
     <ClCompile Include="IConvertible.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="InvalidOperationException.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
   </ItemGroup>

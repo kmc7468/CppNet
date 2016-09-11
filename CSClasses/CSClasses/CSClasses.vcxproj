@@ -171,6 +171,7 @@
     <ClInclude Include="Int32.h" />
     <ClInclude Include="Int64.h" />
     <ClInclude Include="InvalidCastException.h" />
+    <ClInclude Include="InvalidOperationException.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="NotImplementedException.h" />
@@ -206,6 +207,7 @@
     <ClCompile Include="ICloneable.cpp" />
     <ClCompile Include="IConvertible.cpp" />
     <ClCompile Include="InvalidCastException.cpp" />
+    <ClCompile Include="InvalidOperationException.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="NotImplementedException.cpp" />
     <ClCompile Include="Object.cpp" />
