@@ -28,7 +28,7 @@ namespace System
 			template<typename T>
 			Int32 Queue<T>::Count() const
 			{
-				return queue.size();
+				return static_cast<Int32>(queue.size());
 			}
 			template<typename T>
 			Boolean Queue<T>::Contains(const T& item) const
@@ -73,7 +73,7 @@ namespace System
 			Boolean Queue<T>::operator==(const Object & obj)
 			{
 				//FIXME: const Object -> const Queue<T> ºÒ°¡´É
-				return (typeid(Queue<T>) == typeid(obj)) && (queue.size() == ((const Queue<T>)(obj)).queue.size()) && std::equal(queue._Get_container().cbegin(), queue._Get_container.cend, ((const Queue<T>)(obj)).queue._Get_container.cbegin());
+				return (typeid(Queue<T>) == typeid(obj)) && (queue.size() == dynamic_cast<const Queue<T>&>(obj).queue.size()) && std::equal(queue._Get_container().cbegin(), queue._Get_container().cend(), dynamic_cast<const Queue<T>&>(obj).queue._Get_container().cbegin());
 			}
 			template<typename T>
 			inline Boolean Queue<T>::operator!=(const Object & obj)
