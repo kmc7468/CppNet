@@ -190,7 +190,6 @@
     <ClCompile Include="PointF.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="TimeSpan.cpp" />
-    <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Console.inl" />
