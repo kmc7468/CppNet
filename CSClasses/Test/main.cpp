@@ -23,7 +23,7 @@ int main(void)
 
 	Byte b = Convert::ToByte(s);
 
-	Console::WriteLine(b * b*Math::PI);
+	Console::WriteLine(b * b*Math::PI, 30);
 
 	system("pause");
 

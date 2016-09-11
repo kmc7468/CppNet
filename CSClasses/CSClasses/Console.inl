@@ -1,5 +1,7 @@
 #include "Console.h"
 
+#include <iomanip>
+
 namespace System
 {
 	void Console::Write(Boolean boolean)
@@ -24,7 +26,12 @@ namespace System
 
 	void Console::Write(Double doubled)
 	{
-		std::wcout << doubled;
+		std::wcout << std::setprecision(4) << doubled;
+	}
+
+	void Console::Write(Double doubled, Int32 real_size)
+	{
+		std::wcout << std::setprecision(real_size) << doubled;
 	}
 
 	void Console::Write(Int16 integer)
@@ -59,7 +66,12 @@ namespace System
 
 	void Console::Write(Single single)
 	{
-		std::wcout << single;
+		std::wcout << std::setprecision(4) << single;
+	}
+
+	void Console::Write(Single single, Int32 real_size)
+	{
+		std::wcout << std::setprecision(real_size) << single;
 	}
 
 	void Console::WriteLine()
@@ -89,7 +101,13 @@ namespace System
 
 	void Console::WriteLine(Double doubled)
 	{
-		std::wcout << doubled << std::endl;
+		std::wcout << std::setprecision(4) << doubled << std::endl;
+	}
+
+	void Console::WriteLine(Double doubled, Int32 real_size)
+	{
+
+		std::wcout << std::setprecision(real_size) << doubled << std::endl;
 	}
 
 	void Console::WriteLine(Int16 integer)
@@ -120,6 +138,16 @@ namespace System
 	void Console::WriteLine(UInt64 integer)
 	{
 		std::wcout << integer << std::endl;
+	}
+
+	void Console::WriteLine(Single single)
+	{
+		std::wcout << std::setprecision(4) << single << std::endl;
+	}
+
+	void Console::WriteLine(Single single, Int32 real_size)
+	{
+		std::wcout << std::setprecision(real_size) << single << std::endl;
 	}
 
 	String Console::ReadLine()
