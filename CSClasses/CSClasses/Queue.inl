@@ -1,4 +1,5 @@
 #include <algorithm>
+#include "InvalidOperationException.h"
 #include "Queue.h"
 
 namespace System
@@ -97,11 +98,8 @@ namespace System
 			template <typename T>
 			T& Queue<T>::Enumerator::Current()
 			{
-				/*
-				TODO:
-				if (first || iterator == original.queue.end())
+				if (first || iter == original.queue.end())
 					throw InvalidOperationException();
-				*/
 				return *iter;
 			}
 
