@@ -13,7 +13,7 @@ namespace System
 		ICloneable(const ICloneable& i) = delete;
 		virtual ~ICloneable() = default;
 
-		virtual Object Clone();
+		virtual inline Object Clone();
 	};
 }
 

@@ -6,7 +6,7 @@
 
 namespace System
 {
-	class Exception : public Object
+	class Exception : public Object, private std::exception
 	{
 	public:
 		class ExceptionData

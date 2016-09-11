@@ -1,12 +1,14 @@
 #include "ICloneable.h"
 
+#include "NotImplementedException.h"
+
+#include <string>
+using namespace std;
+
 namespace System
 {
-	/*
-	NOTE: 구현할때까지 빌드를 위해 주석처리하겠습니다
 	Object ICloneable::Clone()
 	{
-
+		throw NotImplementedException(Exception::ExceptionData(L""s, L""s, L""s));
 	}
-	*/
 }
