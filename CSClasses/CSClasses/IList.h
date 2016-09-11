@@ -1,7 +1,8 @@
 #ifndef SYSTEM_COLLECTIONS_GENERIC_ILIST_H
 #define SYSTEM_COLLECTIONS_GENERIC_ILIST_H
 
-#include "System.h"
+#include "Int32.h"
+
 #include "ICollection.h"
 
 namespace System

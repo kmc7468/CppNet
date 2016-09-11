@@ -1,7 +1,7 @@
 #ifndef SYSTEM_COLLECTIONS_GENERIC_H
 #define SYSTEM_COLLECTIONS_GENERIC_H
 
-#include "System.h"
+//#include "System.h"
 
 #include "ICollection.h"
 #include "IEnumerable.h"

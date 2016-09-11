@@ -2,7 +2,7 @@
 
 namespace System
 {
-	Random::Random(RandomType type = RandomType::MT19937)
+	Random::Random(RandomType type)
 	{
 		this->type = type;
 		seed = std::random_device()();

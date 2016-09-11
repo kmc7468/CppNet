@@ -1,7 +1,8 @@
 #ifndef SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_H
 #define SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_H
 
-#include "System.h"
+#include "Boolean.h"
+
 #include "IEnumerable.h"
 
 #include <array>

@@ -30,71 +30,65 @@
   - System.Collections.Generic.h
   - System.Windows.Forms.h
 
+- 기타 종합 헤더 파일
+  - SystemTypes.h
+
 - 특수 용도 헤더 파일
   - Language.h
   - Utility.h
   
 - System 네임스페이스
-  - [x] Object.h
+  - [x] Boolean.h
+  - [x] Byte.h
+  - [x] Char.h
   - [x] Console.h
-  - [ ] Convert.h
+  - [x] Convert.h
   - [ ] DateTime.h
-  - [ ] TimeSpan.h
+  - [x] Double.h
   - [x] Exception.h
-    - [x] InvalidCastException.h
     - [x] FormatException.h
+    - [x] InvalidCastException.h
     - [x] NotImplementedException.h
   
-  - [x] Math.h
-  - [x] Random.h
+  - [x] Func.h
   - [x] ICloneable.h
   - [x] IConvertible.h
   - [ ] IFormatProvider.h
+  - [x] Int16.h
+  - [x] Int32.h
+  - [x] Int64.h
+  - [x] Math.h
+  - [x] Object.h
+  - [x] Random.h
+  - [x] SByte.h
+  - [x] Single.h
+  - [x] String.h
+  - [ ] TimeSpan.h
+  - [x] UInt16.h
+  - [x] UInt32.h
+  - [x] UInt64.h
+  
+- System.Collections 네임스페이스
+  - [x] _ICollection.h
+  - [ ] _IEnumerable.h
+
+- System.Collections.Generic 네임스페이스
+  - [x] ICollection.h
+  - [ ] IEnumerable.h
+  - [x] IList.h
   
 - System.Drawing 네임스페이스
   - [ ] Point.h
   - [ ] PointF.h
 
-- System.Collections 네임스페이스
-  - [x] _ICollection.h
-  - [x] _IEnumerable.h
-
-- System.Collections.Generic 네임스페이스
-  - [x] ICollection.h
-  - [x] IEnumerable.h
-  - [x] IList.h
-
 - System.Windows.Forms 네임스페이스
   - [ ] Control.h
 
-### 소스 파일
-- 특수 용도 헤더파일
-  - [ ] Utility.h
-
-- System 네임스페이스
-  - [x] Object.cpp
-  - [x] Console.cpp
-  - [ ] Convert.cpp
-  - [ ] DateTime.cpp
-  - [ ] TimeSpan.cpp
-  - [x] Exception.cpp
-    - [x] FormatException.cpp
-    - [x] InvalidCastException.cpp
-    - [x] NotImplementedException.cpp
-  
-  - [x] Random.cpp
-  - [x] Math.cpp
-
-- System.Drawing 네임스페이스
-  - [ ] Point.cpp
-  - [ ] PointF.cpp
-
 ## 특징
-- 닷넷 프레임워크와 맞물려 작동하지 않고 100% Native 코드로 이루어져 있음으로 닷넷 프레임워크의 기능과 유사하게 사용하고 싶을 때 사용 가능합니다.
-- 각 컴파일러의 비표준 확장을 사용하지 않고 100% 표준 코드만 사용하였기 때문에 크로스 플랫폼이 가능합니다.
-- 라이브러리를 사용하지 않고 100% 저희가 직접 타이핑한 코드만 사용하기 때문에 추가 라이브러리 설치가 필요하지 않습니다.
-- 현재까지의 최신 표준인 C++14를 사용하였고 C++14 문법을 적극 사용하였습니다.
-- 닷넷 프레임워크에서 제공하는 클래스뿐만이 아니라 직접 고안한 기능도 추가하여 더욱 강력하게 사용할 수 있습니다.
+- 100% 표준 코드만 사용하였기 때문에 크로스 플랫폼에 용이합니다.
+- 닷넷 프레임워크에서 제공하는 기능과 매우 유사하게 구현 하였습니다.
+- 닷넷 프레임워크에서 제공하는 기능 위에 직접 고안해 낸 기능을 얹은 기능의 경우 닷넷 프레임워크의 기능보다 더욱 강력하게 사용할 수 있습니다.
+- 정적 라이브러리 프로젝트이기 때문에 이식이 용이합니다.
 
 ## 지원 언어
 - 한국어 ```#define LANG_KOR```
@@ -113,12 +107,21 @@
 ### 도움
 - .Net framework 자문: 맛난호빵
 
-## 저작권자
-코드 저작권자: 작성자<br>
-.Net framework에 있는 기능 저작권자: Microsoft<br>
-직접 고안한 기능 저작권자: 고안한 기능 계획자 및 구현자
+## 코드 및 기능 저작권자
+코드 및 기능의 저작권자를 나타내지 프로젝트의 저작권(라이센스)를 이르는게 아닙니다.<br>
+총 책임자: static
+### 프로그래밍
+- static
+- 아크릴새우
+- 뭐지What
+- kiwiyou
+- Basix
+
+### 자문
+- 맛난호빵
 
 ## 라이센스
+정리: 출처만 남기면 뭔짓을 하던 뭐라 안할게요.
 ```
 MIT License
 

@@ -39,13 +39,13 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -103,6 +103,8 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,7 +137,8 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,13 +148,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Boolean.h" />
+    <ClInclude Include="Byte.h" />
+    <ClInclude Include="Char.h" />
     <ClInclude Include="Console.h" />
     <ClInclude Include="Control.h" />
     <ClInclude Include="Convert.h" />
     <ClInclude Include="CSClasses.h" />
     <ClInclude Include="DateTime.h" />
+    <ClInclude Include="Double.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="FormatException.h" />
+    <ClInclude Include="Func.h" />
     <ClInclude Include="ICloneable.h" />
     <ClInclude Include="ICollection.h" />
     <ClInclude Include="IConvertible.h" />
@@ -159,6 +167,9 @@
     <ClInclude Include="IEnumerator.h" />
     <ClInclude Include="IFormatProvider.h" />
     <ClInclude Include="IList.h" />
+    <ClInclude Include="Int16.h" />
+    <ClInclude Include="Int32.h" />
+    <ClInclude Include="Int64.h" />
     <ClInclude Include="InvalidCastException.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="Math.h" />
@@ -168,12 +179,19 @@
     <ClInclude Include="PointF.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Random.h" />
+    <ClInclude Include="SByte.h" />
+    <ClInclude Include="Single.h" />
+    <ClInclude Include="String.h" />
     <ClInclude Include="System.Collections.Generic.h" />
     <ClInclude Include="System.Collections.h" />
     <ClInclude Include="System.Drawing.h" />
     <ClInclude Include="System.h" />
     <ClInclude Include="System.Windows.Forms.h" />
+    <ClInclude Include="SystemTypes.h" />
     <ClInclude Include="TimeSpan.h" />
+    <ClInclude Include="UInt16.h" />
+    <ClInclude Include="UInt32.h" />
+    <ClInclude Include="UInt64.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="_ICollection.h" />
     <ClInclude Include="_IEnumerable.h" />
@@ -193,7 +211,6 @@
     <ClCompile Include="PointF.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="TimeSpan.cpp" />
-    <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Console.inl" />

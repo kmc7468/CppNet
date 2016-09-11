@@ -1,7 +1,8 @@
 #ifndef SYSTEM_CONVERT_H
 #define SYSTEM_CONVERT_H
 
-#include "System.h"
+#include "SystemTypes.h"
+#include "DateTime.h"
 
 #include <algorithm>
 
@@ -51,5 +52,7 @@ namespace System
 		static inline Byte ToByte(const String& str);
 	};
 }
+
+#include "Convert.inl"
 
 #endif

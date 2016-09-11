@@ -1,7 +1,13 @@
 #ifndef SYSTEM_RANDOM_H
 #define SYSTEM_RANDOM_H
 
-#include "System.h"
+#include "Int64.h"
+#include "Int32.h"
+#include "UInt32.h"
+#include "Double.h"
+
+#include "Object.h"
+
 #include <random>
 
 namespace System

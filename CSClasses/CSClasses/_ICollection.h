@@ -1,7 +1,10 @@
 ﻿#ifndef SYSTEM_COLLECTIONS_ICOLLECTION_H
 #define SYSTEM_COLLECTIONS_ICOLLECTION_H
 
-#include "System.h"
+#include "Int32.h"
+#include "Boolean.h"
+#include "Object.h"
+
 #include "_IEnumerable.h"
 
 #include <array>

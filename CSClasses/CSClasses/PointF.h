@@ -1,7 +1,9 @@
 #ifndef SYSTEM_DRAWING_POINTF_H
 #define SYSTEM_DRAWING_POINTF_H
 
-#include "System.h"
+#include "Single.h"
+#include "Boolean.h"
+#include "Object.h"
 
 namespace System
 {
@@ -10,11 +12,7 @@ namespace System
 		class PointF : public Object
 		{
 		public:
-			PointF(Single x, Single y)
-			{
-				X = x;
-				Y = y;
-			}
+			PointF(Single x, Single y);
 
 		public:
 			static const PointF& Empty;

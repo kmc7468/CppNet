@@ -1,7 +1,7 @@
 #ifndef UTILITY_H
 #define UTILITY_H
 
-#include "System.h"
+#include "Boolean.h"
 
 #include <type_traits>
 
@@ -9,9 +9,11 @@
 #define var auto
 
 template <typename T, typename U>
-constexpr inline System::Boolean is(U&& u)
+inline System::Boolean is(U&& u)
 {
-	return std::is_base_of_v<T, U>;
+	std::is_base_of<T, U> r;
+
+	return r();
 }
 
 #endif

@@ -1,5 +1,7 @@
 #include "PointF.h"
 
+#include "Utility.h"
+
 namespace System
 {
 	namespace Drawing

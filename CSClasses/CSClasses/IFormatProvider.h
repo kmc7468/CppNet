@@ -1,7 +1,7 @@
 #ifndef SYSTEM_IFORMATPROVIDER_H
 #define SYSTEM_IFORMATPROVIDER_H
 
-#include "System.h"
+#include "Object.h"
 
 namespace System
 {
