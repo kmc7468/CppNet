@@ -69,10 +69,10 @@ namespace System
 			{
 				throw NotImplementedException();
 			}
+			/*
 			template<typename T>
 			Boolean Queue<T>::operator==(const Object & obj)
 			{
-				//FIXME: const Object -> const Queue<T> ºÒ°¡´É
 				return (typeid(Queue<T>) == typeid(obj)) && (queue.size() == dynamic_cast<const Queue<T>&>(obj).queue.size()) && std::equal(queue._Get_container().cbegin(), queue._Get_container().cend(), dynamic_cast<const Queue<T>&>(obj).queue._Get_container().cbegin());
 			}
 			template<typename T>
@@ -80,6 +80,7 @@ namespace System
 			{
 				return !this->operator==(obj);
 			}
+			*/
 			template<typename T>
 			void Queue<T>::Add(T& item)
 			{

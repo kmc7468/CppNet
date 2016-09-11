@@ -2,7 +2,7 @@
 #define SYSTEM_COLLECTIONS_GENERIC_QUEUE_H
 
 #include <queue>
-#include "System.h"
+#include "SystemTypes.h"
 #include "ICollection.h"
 
 namespace System
@@ -33,8 +33,8 @@ namespace System
 				virtual void TrimExcess();
 
 			public:
-				virtual Boolean operator==(const Object& obj) override;
-				virtual Boolean operator!=(const Object& obj) override;
+				//virtual Boolean operator==(const Object& obj) override;
+				//virtual Boolean operator!=(const Object& obj) override;
 
 			private:
 				std::queue<T> queue;
