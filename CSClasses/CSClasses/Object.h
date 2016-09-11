@@ -8,7 +8,8 @@
 #ifndef SYSTEM_OBJECT_H
 #define SYSTEM_OBJECT_H
 
-#include "SystemType.h"
+#include "Boolean.h"
+#include "String.h"
 
 namespace System
 {

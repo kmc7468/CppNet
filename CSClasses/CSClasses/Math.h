@@ -8,7 +8,7 @@
 
 #define SYSTEM_MATH_H
 
-#include "SystemType.h"
+#include "SystemTypes.h"
 
 #include <cmath>
 

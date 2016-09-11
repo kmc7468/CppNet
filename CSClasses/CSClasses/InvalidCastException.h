@@ -2,7 +2,7 @@
 #define SYSTEM_INVALIDCASTEXCEPTION_H
 
 #include "Exception.h"
-#include "SystemType.h"
+#include "String.h"
 
 namespace System
 {

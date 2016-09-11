@@ -1,7 +1,7 @@
 #ifndef UTILITY_H
 #define UTILITY_H
 
-#include "SystemType.h"
+#include "Boolean.h"
 
 #include <type_traits>
 

@@ -5,10 +5,10 @@
 */
 
 #ifndef SYSTEM_CONSOLE_H
-
 #define SYSTEM_CONSOLE_H
 
-#include "SystemType.h"
+#include "SystemTypes.h"
+#include "Object.h"
 
 #include <iostream>
 
