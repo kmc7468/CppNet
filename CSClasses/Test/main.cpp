@@ -10,6 +10,8 @@ using namespace System::Collections::Generic;
 
 int main(void)
 {
+	locale::global(locale("korean"));
+
 	Queue<int> queue;
 	queue.Enqueue(3);
 	queue.Enqueue(4);
@@ -18,4 +20,11 @@ int main(void)
 	{
 		Console::WriteLine(enumerator->Current());
 	}
+
+	var i = Console::Read();
+
+	Console::WriteLine(i);
+	Console::WriteLine(50000);
+
+	MAIN_END
 }

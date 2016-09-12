@@ -1,6 +1,10 @@
 #ifndef CSCLASSES_H
 #define CSCLASSES_H
 
+#include "Utility.h"
+#include "Language.h"
+#include "SystemTypes.h"
+
 #include "System.h"
 #include "System.Collections.h"
 #include "System.Collections.Generic.h"

@@ -8,6 +8,8 @@
 #define interface struct
 #define var auto
 
+#define MAIN_END system("pause");return 0;
+
 template <typename T, typename U>
 inline System::Boolean is(U&& u)
 {

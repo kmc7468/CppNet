@@ -60,7 +60,7 @@ namespace System
 
 		static inline String ReadLine();
 
-		// TODO Read
+		static inline Int32 Read();
 	};
 }
 

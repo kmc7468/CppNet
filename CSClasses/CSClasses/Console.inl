@@ -156,4 +156,11 @@ namespace System
 		std::getline(std::wcin, str);
 		return str;
 	}
+	
+	Int32 Console::Read()
+	{
+		Int32 i = std::wcin.get();
+
+		return i;
+	}
 }
