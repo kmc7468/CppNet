@@ -44,7 +44,7 @@ namespace System
 
 	Int64 Math::BigMul(Int32 integer, Int32 integer2)
 	{
-		return integer * integer2;
+		return ((Int64)integer) * integer2;
 	}
 
 	Double Math::Ceiling(Double d)
@@ -60,6 +60,18 @@ namespace System
 	Double Math::Cosh(Double d)
 	{
 		return cosh(d);
+	}
+
+	Int64 Math::DivRem(Int64 a, Int64 b, Int64& result)
+	{
+		result = a%b;
+		return a / b;
+	}
+
+	Int32 Math::DivRem(Int32 a, Int32 b, Int32& result)
+	{
+		result = a%b;
+		return a / b;
 	}
 
 	Double Math::Exp(Double d)

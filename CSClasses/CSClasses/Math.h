@@ -43,7 +43,8 @@ namespace System
 		static inline Double Cos(Double d);
 		static inline Double Cosh(Double d);
 
-		// TODO DivRem
+		static inline Int64 DivRem(Int64 a, Int64 b, Int64& result);
+		static inline Int32 DivRem(Int32 a, Int32 b, Int32& result);
 
 		static inline Double Exp(Double d);
 
@@ -74,7 +75,7 @@ namespace System
 		static inline Single Min(Single d, Single d2);
 		static inline Double Pow(Double d, Double d2);
 		static inline Double Round(Double d);
-
+		
 		// TODO Round(Double, Int32)
 
 		static inline Double Sign(Double d);
