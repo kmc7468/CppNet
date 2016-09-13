@@ -267,14 +267,5 @@
     <None Include="DoubleT.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
-    <None Include="IComparable.inl">
-      <Filter>인라인 구현 파일\System</Filter>
-    </None>
-    <None Include="ICloneable.inl">
-      <Filter>인라인 구현 파일\System</Filter>
-    </None>
-    <None Include="IConvertible.inl">
-      <Filter>인라인 구현 파일\System</Filter>
-    </None>
   </ItemGroup>
 </Project>

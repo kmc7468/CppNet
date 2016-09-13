@@ -6,13 +6,8 @@
 
 namespace System
 {
-	interface IFormatProvider : public Object
+	interface IFormatProvider
 	{
-		IFormatProvider() = delete;
-		IFormatProvider(IFormatProvider&& i) = delete;
-		IFormatProvider(const IFormatProvider& i) = delete;
-		virtual ~IFormatProvider() = default;
-
 		// TODO
 	};
 }

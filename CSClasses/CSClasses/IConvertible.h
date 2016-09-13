@@ -9,30 +9,23 @@
 
 namespace System
 {
-	interface IConvertible : public Object
+	interface IConvertible
 	{
-		IConvertible() = delete;
-		IConvertible(IConvertible&& i) = delete;
-		IConvertible(const IConvertible& i) = delete;
-		virtual ~IConvertible() = default;
-
-		virtual Boolean ToBoolean(IFormatProvider i);
-		virtual Byte ToByte(IFormatProvider i);
-		virtual Char ToChar(IFormatProvider i);
-		virtual DateTime ToDateTime(IFormatProvider i);
-		virtual Double ToDouble(IFormatProvider i);
-		virtual Int16 ToInt16(IFormatProvider i);
-		virtual Int32 ToInt32(IFormatProvider i);
-		virtual Int64 ToInt64(IFormatProvider i);
-		virtual UInt16 ToUInt16(IFormatProvider i);
-		virtual UInt32 ToUInt32(IFormatProvider i);
-		virtual UInt64 ToUInt64(IFormatProvider i);
-		virtual SByte ToSByte(IFormatProvider i);
-		virtual Single ToSingle(IFormatProvider i);
-		virtual String ToString(IFormatProvider i);
+		virtual Boolean ToBoolean(IFormatProvider i) = 0;
+		virtual Byte ToByte(IFormatProvider i) = 0;
+		virtual Char ToChar(IFormatProvider i) = 0;
+		virtual DateTime ToDateTime(IFormatProvider i) = 0;
+		virtual Double ToDouble(IFormatProvider i) = 0;
+		virtual Int16 ToInt16(IFormatProvider i) = 0;
+		virtual Int32 ToInt32(IFormatProvider i) = 0;
+		virtual Int64 ToInt64(IFormatProvider i) = 0;
+		virtual UInt16 ToUInt16(IFormatProvider i) = 0;
+		virtual UInt32 ToUInt32(IFormatProvider i) = 0;
+		virtual UInt64 ToUInt64(IFormatProvider i) = 0;
+		virtual SByte ToSByte(IFormatProvider i) = 0;
+		virtual Single ToSingle(IFormatProvider i) = 0;
+		virtual String ToString(IFormatProvider i) = 0;
 	};
 }
-
-#include "IConvertible.inl"
 
 #endif

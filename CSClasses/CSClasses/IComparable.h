@@ -9,15 +9,14 @@ namespace System
 {
 	interface IComparable
 	{
-		IComparable() = delete;
-		IComparable(IComparable&& i) = delete;
-		IComparable(const IComparable& i) = delete;
-		virtual ~IComparable() = default;
-
-		virtual inline Int32 CompareTo(const Object& obj);
+		virtual inline Int32 CompareTo(const Object& obj) = 0;
+	};
+	
+	template<typename T>
+	interface IComparable<T> 
+	{
+		virtual inline Int32 CompareTo(const T& obj) = 0;
 	};
 }
-
-#include "IComparable.inl"
 
 #endif
