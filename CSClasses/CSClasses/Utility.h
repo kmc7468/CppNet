@@ -18,4 +18,10 @@ inline System::Boolean is(U&& u)
 	return r();
 }
 
+template <typename T, typename U>
+inline T as(U&& u)
+{
+	return dynamic_cast<T>(u);
+}
+
 #endif

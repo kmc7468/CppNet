@@ -33,4 +33,6 @@ namespace System
 	};
 }
 
+#include "IConvertible.inl"
+
 #endif

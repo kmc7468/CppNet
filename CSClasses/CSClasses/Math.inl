@@ -84,6 +84,11 @@ namespace System
 		return log(d);
 	}
 
+	Double Math::Log(Double d, Double newBase)
+	{
+
+	}
+
 	Double Math::Log10(Double d)
 	{
 		return log10(d);
@@ -220,6 +225,11 @@ namespace System
 	Double Math::Sin(Double d)
 	{
 		return sin(d);
+	}
+
+	Double Math::Sinh(Double d)
+	{
+		return sinh(d);
 	}
 
 	Double Math::Sqrt(Double d)

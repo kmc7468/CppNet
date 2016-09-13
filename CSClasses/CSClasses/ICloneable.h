@@ -17,4 +17,6 @@ namespace System
 	};
 }
 
+#include "ICloneable.inl"
+
 #endif

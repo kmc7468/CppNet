@@ -195,6 +195,12 @@
     <ClInclude Include="InvalidOperationException.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="DoubleT.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="IComparable.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">
@@ -202,12 +208,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Console.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="Convert.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
     <ClCompile Include="DateTime.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
@@ -241,13 +241,10 @@
     <ClCompile Include="PointF.cpp">
       <Filter>소스 파일\System\Drawing</Filter>
     </ClCompile>
-    <ClCompile Include="ICloneable.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="IConvertible.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
     <ClCompile Include="InvalidOperationException.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleT.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
   </ItemGroup>
@@ -266,6 +263,18 @@
     </None>
     <None Include="Queue.inl">
       <Filter>인라인 구현 파일\System\Collections\Generic</Filter>
+    </None>
+    <None Include="DoubleT.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="IComparable.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="ICloneable.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="IConvertible.inl">
+      <Filter>인라인 구현 파일\System</Filter>
     </None>
   </ItemGroup>
 </Project>

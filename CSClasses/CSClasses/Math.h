@@ -42,17 +42,14 @@ namespace System
 		static inline Double Ceiling(Double d);
 		static inline Double Cos(Double d);
 		static inline Double Cosh(Double d);
-
 		static inline Int64 DivRem(Int64 a, Int64 b, Int64& result);
 		static inline Int32 DivRem(Int32 a, Int32 b, Int32& result);
-
 		static inline Double Exp(Double d);
 
 		// TODO IEEERemainder
 
 		static inline Double Log(Double d);
-
-		// TODO Log(Double, Double)
+		static inline Double Log(Double d, Double newBase);
 
 		static inline Double Log10(Double d);
 		static inline Byte Max(Byte b, Byte b2);
@@ -81,9 +78,7 @@ namespace System
 		static inline Double Sign(Double d);
 		static inline Single Sign(Single d);
 		static inline Double Sin(Double d);
-
-		// TODO Sinh
-
+		static inline Double Sinh(Double d);
 		static inline Double Sqrt(Double d);
 		static inline Double Tan(Double d);
 		static inline Double Tanh(Double d);

@@ -157,11 +157,13 @@
     <ClInclude Include="CSClasses.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Double.h" />
+    <ClInclude Include="DoubleT.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="FormatException.h" />
     <ClInclude Include="Func.h" />
     <ClInclude Include="ICloneable.h" />
     <ClInclude Include="ICollection.h" />
+    <ClInclude Include="IComparable.h" />
     <ClInclude Include="IConvertible.h" />
     <ClInclude Include="IEnumerable.h" />
     <ClInclude Include="IEnumerator.h" />
@@ -199,13 +201,10 @@
     <ClInclude Include="_IEnumerator.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Console.cpp" />
-    <ClCompile Include="Convert.cpp" />
     <ClCompile Include="DateTime.cpp" />
+    <ClCompile Include="DoubleT.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="FormatException.cpp" />
-    <ClCompile Include="ICloneable.cpp" />
-    <ClCompile Include="IConvertible.cpp" />
     <ClCompile Include="InvalidCastException.cpp" />
     <ClCompile Include="InvalidOperationException.cpp" />
     <ClCompile Include="Math.cpp" />
@@ -219,6 +218,10 @@
   <ItemGroup>
     <None Include="Console.inl" />
     <None Include="Convert.inl" />
+    <None Include="DoubleT.inl" />
+    <None Include="ICloneable.inl" />
+    <None Include="IComparable.inl" />
+    <None Include="IConvertible.inl" />
     <None Include="Math.inl" />
     <None Include="Object.inl" />
     <None Include="Queue.inl" />
