@@ -8,7 +8,8 @@ namespace System
 {
 	interface IFormatProvider
 	{
-		// TODO
+		template<typename T>
+		virtual inline Object GetFormat(const T& formatType) = 0;
 	};
 }
 

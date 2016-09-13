@@ -25,6 +25,8 @@
 #include "IFormatProvider.h"
 #include "IConvertible.h"
 #include "IComparable.h"
+#include "IEquatable.h"
+#include "IFormattable.h"
 
 #include "Console.h"
 #include "Math.h"

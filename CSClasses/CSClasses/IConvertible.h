@@ -7,24 +7,26 @@
 #include "IFormatProvider.h"
 #include "Utility.h"
 
+#include <memory>
+
 namespace System
 {
 	interface IConvertible
 	{
-		virtual Boolean ToBoolean(IFormatProvider i) = 0;
-		virtual Byte ToByte(IFormatProvider i) = 0;
-		virtual Char ToChar(IFormatProvider i) = 0;
-		virtual DateTime ToDateTime(IFormatProvider i) = 0;
-		virtual Double ToDouble(IFormatProvider i) = 0;
-		virtual Int16 ToInt16(IFormatProvider i) = 0;
-		virtual Int32 ToInt32(IFormatProvider i) = 0;
-		virtual Int64 ToInt64(IFormatProvider i) = 0;
-		virtual UInt16 ToUInt16(IFormatProvider i) = 0;
-		virtual UInt32 ToUInt32(IFormatProvider i) = 0;
-		virtual UInt64 ToUInt64(IFormatProvider i) = 0;
-		virtual SByte ToSByte(IFormatProvider i) = 0;
-		virtual Single ToSingle(IFormatProvider i) = 0;
-		virtual String ToString(IFormatProvider i) = 0;
+		virtual Boolean ToBoolean(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual Byte ToByte(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual Char ToChar(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual DateTime ToDateTime(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual Double ToDouble(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual Int16 ToInt16(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual Int32 ToInt32(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual Int64 ToInt64(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual UInt16 ToUInt16(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual UInt32 ToUInt32(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual UInt64 ToUInt64(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual SByte ToSByte(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual Single ToSingle(std::unique_ptr<IFormatProvider> i) = 0;
+		virtual String ToString(std::unique_ptr<IFormatProvider> i) = 0;
 	};
 }
 

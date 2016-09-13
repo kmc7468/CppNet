@@ -5,6 +5,7 @@
 #include "DateTime.h"
 
 #include <algorithm>
+#include <memory>
 
 namespace System
 {
@@ -35,6 +36,7 @@ namespace System
 		static inline Boolean ToBoolean(UInt32 integer);
 		static inline Boolean ToBoolean(UInt64 integer);
 		static inline Boolean ToBoolean(const String& str);
+		static inline Boolean ToBoolean(const Object& obj, std::unique_ptr<IFormatProvider> format);
 
 		static inline Byte ToByte(Boolean b);
 		static inline Byte ToByte(Char c);
@@ -50,6 +52,7 @@ namespace System
 		static inline Byte ToByte(UInt32 i);
 		static inline Byte ToByte(UInt64 i);
 		static inline Byte ToByte(const String& str);
+		static inline Byte ToByte(const Object& obj, std::unique_ptr<IFormatProvider> format);
 	};
 }
 

@@ -201,6 +201,12 @@
     <ClInclude Include="IComparable.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="IEquatable.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="IFormattable.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">

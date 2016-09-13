@@ -12,6 +12,39 @@ namespace System
 		return dat;
 	}
 
+	Int32 DoubleT::CompareTo(const Object& obj)
+	{
+		if (is<const DoubleT&>(obj))
+		{
+			var d = as<const DoubleT&>(obj);
+
+			if (dat < d) return -1;
+			if (dat > d) return 1;
+			if (dat == d) return 0;
+
+			if (IsNaN(dat))
+				return (IsNaN(d) ? 0 : -1);
+			else
+				return 1;
+		}
+
+		throw Exception(L"파라미터 오류"); // FIXME ArgumentException
+	}
+
+	Int32 DoubleT::CompareTo(const DoubleT& obj)
+	{
+		var d = as<const DoubleT&>(obj);
+
+		if (dat < d) return -1;
+		if (dat > d) return 1;
+		if (dat == d) return 0;
+
+		if (IsNaN(dat))
+			return (IsNaN(d) ? 0 : -1);
+		else
+			return 1;
+	}
+
 	Boolean DoubleT::IsNaN(Double d)
 	{
 		return (*(UInt64*)(&d) & (Int64)0x7FFFFFFFFFFFFFFF) > (Int64)0x7FF0000000000000;

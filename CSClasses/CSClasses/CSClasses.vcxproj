@@ -167,7 +167,9 @@
     <ClInclude Include="IConvertible.h" />
     <ClInclude Include="IEnumerable.h" />
     <ClInclude Include="IEnumerator.h" />
+    <ClInclude Include="IEquatable.h" />
     <ClInclude Include="IFormatProvider.h" />
+    <ClInclude Include="IFormattable.h" />
     <ClInclude Include="IList.h" />
     <ClInclude Include="Int16.h" />
     <ClInclude Include="Int32.h" />

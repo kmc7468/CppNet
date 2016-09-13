@@ -111,6 +111,20 @@ namespace System
 		}
 	}
 
+	Boolean Convert::ToBoolean(const Object& obj, std::unique_ptr<IFormatProvider> format)
+	{
+		if (is<const IConvertible&>(obj))
+		{
+			// TODO
+			throw NotImplementedException();
+		}
+		else
+		{
+			// FIXME
+			throw InvalidCastException();
+		}
+	}
+
 	Byte Convert::ToByte(Boolean b)
 	{
 		return b ? 1 : 0;
@@ -244,5 +258,19 @@ namespace System
 		}
 
 		return (Byte)i;
+	}
+
+	Byte Convert::ToByte(const Object& obj, std::unique_ptr<IFormatProvider> format)
+	{
+		if (is<const IConvertible&>(obj))
+		{
+			// TODO
+			throw NotImplementedException();
+		}
+		else
+		{
+			// FIXME
+			throw InvalidCastException();
+		}
 	}
 }
