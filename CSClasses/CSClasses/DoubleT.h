@@ -22,8 +22,8 @@ namespace System
 		inline DoubleT& operator=(DoubleT&& d) const;
 		inline DoubleT& operator=(const DoubleT& d) const;
 		
-		inline Boolean operator==(const Object& obj) const override;
-		inline Boolean operator!=(const Object& obj) const override;
+		inline Boolean operator==(const Object& obj) override;
+		inline Boolean operator!=(const Object& obj) override;
 
 		inline operator Double();
 

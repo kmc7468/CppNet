@@ -5,6 +5,7 @@
 
 #include "ICollection.h"
 #include "IEnumerable.h"
+#include "IEnumerator.h"
 #include "IList.h"
 #include "Queue.h"
 
