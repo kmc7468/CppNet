@@ -4,6 +4,11 @@
 #include "Object.h"
 #include "Double.h"
 
+#include "IComparable.h"
+#include "IFormattable.h"
+#include "IConvertible.h"
+#include "IEquatable.h"
+
 namespace System
 {
 	class DoubleT : public Object, public IComparable<Object>, public IComparable<DoubleT>, public IFormattable, public IConvertible, public IEquatable<DoubleT>
@@ -17,6 +22,15 @@ namespace System
 		DoubleT(DoubleT&& sNewDoubleT);
 		DoubleT(const DoubleT& sNewDoubleT);
 		~DoubleT() = default;
+
+	public:
+		static const DoubleT MinValue;
+		static const DoubleT MaxValue;
+
+		static const DoubleT Epsilon;
+		static const DoubleT NegativeInfinity;
+		static const DoubleT PositiveInfinity;
+		static const DoubleT NaN;
 
 	public:
 		inline DoubleT& operator=(DoubleT&& d) const;
@@ -46,9 +60,13 @@ namespace System
 		inline Single ToSingle(std::unique_ptr<IFormatProvider> i) override;
 		inline String ToString(std::unique_ptr<IFormatProvider> i) override;
 		inline Boolean Equals(const DoubleT& obj) override;
+		inline String ToString() const override;
 
 	public:
-		static inline Boolean IsNaN(Double d);
+		static inline Boolean IsInfinity(const DoubleT& d);
+		static inline Boolean IsPositiveInfinity(const DoubleT& d);
+		static inline Boolean IsNegativeInfinity(const DoubleT& d);
+		static inline Boolean IsNaN(const DoubleT& d);
 	
 	public:
 		inline Double Data() const;

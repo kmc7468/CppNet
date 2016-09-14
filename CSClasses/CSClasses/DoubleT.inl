@@ -2,6 +2,8 @@
 
 #include "UInt64.h"
 #include "Int64.h"
+#include "Exception.h"
+#include "Int32.h"
 
 #include "Utility.h"
 
@@ -45,9 +47,51 @@ namespace System
 			return 1;
 	}
 
-	Boolean DoubleT::IsNaN(Double d)
+	String DoubleT::ToString(String format, std::unique_ptr<IFormatProvider> formatProvider)
 	{
-		return (*(UInt64*)(&d) & (Int64)0x7FFFFFFFFFFFFFFF) > (Int64)0x7FF0000000000000;
+		// TODO
+		return String();
+	}
+
+	Boolean DoubleT::ToBoolean(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+
+	}
+
+	Boolean DoubleT::IsInfinity(const DoubleT& d)
+	{
+		var a = d.dat;
+		return (*(long*)(&a) & 0x7FFFFFFFFFFFFFFF) == 0x7FF0000000000000;
+	}
+
+	Boolean DoubleT::IsPositiveInfinity(const DoubleT& d)
+	{
+		if (d.dat == DoubleT::PositiveInfinity.dat)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	Boolean DoubleT::IsNegativeInfinity(const DoubleT& d)
+	{
+		if (d.dat == DoubleT::NegativeInfinity.dat)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	Boolean DoubleT::IsNaN(const DoubleT& d)
+	{
+		var a = d.dat;
+		return (*(UInt64*)(&a) & (Int64)0x7FFFFFFFFFFFFFFF) > (Int64)0x7FF0000000000000;
 	}
 
 	Double DoubleT::Data() const

@@ -8,8 +8,7 @@ namespace System
 {
 	interface IFormatProvider
 	{
-		template<typename T>
-		virtual inline Object GetFormat(const T& formatType) = 0;
+		virtual inline Object GetFormat(Int32 type_id) = 0;
 	};
 }
 
