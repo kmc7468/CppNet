@@ -2,7 +2,6 @@
 
 namespace System
 {
-
 	Boolean Object::operator==(const Object& obj)
 	{
 		if (&obj == this) return true;

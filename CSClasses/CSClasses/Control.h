@@ -1,6 +1,8 @@
 #ifndef SYSTEM_WINDOWS_FORMS_CONTROL_H
 #define SYSTEM_WINDOWS_FORMS_CONTROL_H
 
+#include "Object.h"
+
 #ifdef WIN32
 
 namespace System
@@ -9,7 +11,7 @@ namespace System
 	{
 		namespace Forms
 		{
-			class Control
+			class Control : public Object
 			{
 			public:
 				Control() = default;

@@ -18,11 +18,15 @@ namespace System
 			static const PointF& Empty;
 
 			// TODO Add(s)
+			// TODO Subtract(s)
 
 		public:
 			Boolean operator==(const Object& obj) override;
 
 			Boolean operator!=(const Object& obj) override;
+
+		public:
+			String ToString() const override;
 
 		public:
 			Single X = 0.0;

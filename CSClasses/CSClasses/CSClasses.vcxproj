@@ -186,6 +186,7 @@
     <ClInclude Include="Random.h" />
     <ClInclude Include="SByte.h" />
     <ClInclude Include="Single.h" />
+    <ClInclude Include="SizeF.h" />
     <ClInclude Include="String.h" />
     <ClInclude Include="System.Collections.Generic.h" />
     <ClInclude Include="System.Collections.h" />
@@ -215,6 +216,7 @@
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="PointF.cpp" />
     <ClCompile Include="Random.cpp" />
+    <ClCompile Include="SizeF.cpp" />
     <ClCompile Include="TimeSpan.cpp" />
   </ItemGroup>
   <ItemGroup>

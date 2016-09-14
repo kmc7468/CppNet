@@ -47,5 +47,10 @@ namespace System
 			if (X == 0.0 && Y == 0.0) return true;
 			else return false;
 		}
+
+		String PointF::ToString() const
+		{
+			return L"X=" + std::to_wstring(X) + L", Y=" + std::to_wstring(Y);
+		}
 	}
 }
