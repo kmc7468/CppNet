@@ -156,7 +156,7 @@ namespace System
 	Boolean DoubleT::IsInfinity(const DoubleT& d)
 	{
 		var a = d.dat;
-		return (*(long*)(&a) & 0x7FFFFFFFFFFFFFFF) == 0x7FF0000000000000;
+		return (*(Int64*)(&a) & (Int64)0x7FFFFFFFFFFFFFFF) == (Int64)0x7FF0000000000000;
 	}
 
 	Boolean DoubleT::IsPositiveInfinity(const DoubleT& d)
