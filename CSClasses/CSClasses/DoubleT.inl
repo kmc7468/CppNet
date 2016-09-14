@@ -55,7 +55,102 @@ namespace System
 
 	Boolean DoubleT::ToBoolean(std::unique_ptr<IFormatProvider> formatProvider)
 	{
+		// TODO
+		return true;
+	}
 
+	Byte DoubleT::ToByte(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return 0;
+	}
+
+	Char DoubleT::ToChar(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return L' ';
+	}
+
+	DateTime DoubleT::ToDateTime(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return DateTime();
+	}
+
+	Double DoubleT::ToDouble(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		return dat;
+	}
+
+	Int16 DoubleT::ToInt16(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return 0;
+	}
+
+	Int32 DoubleT::ToInt32(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return 0;
+	}
+
+	Int64 DoubleT::ToInt64(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return 0;
+	}
+
+	UInt16 DoubleT::ToUInt16(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return 0;
+	}
+
+	UInt32 DoubleT::ToUInt32(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return 0;
+	}
+
+	UInt64 DoubleT::ToUInt64(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return 0;
+	}
+
+	SByte DoubleT::ToSByte(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return 0;
+	}
+
+	Single DoubleT::ToSingle(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return 0;
+	}
+
+	String DoubleT::ToString(std::unique_ptr<IFormatProvider> formatProvider)
+	{
+		// TODO
+		return L"";
+	}
+
+	Boolean DoubleT::Equals(const DoubleT& obj)
+	{
+		if (const_cast<DoubleT&>(obj) == *const_cast<DoubleT*>(this))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	String DoubleT::ToString() const
+	{
+		return std::to_wstring(dat);
 	}
 
 	Boolean DoubleT::IsInfinity(const DoubleT& d)
