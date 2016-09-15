@@ -32,6 +32,8 @@ namespace System
 		static const DoubleT PositiveInfinity;
 		static const DoubleT NaN;
 
+		static const DoubleT Zero;
+
 	public:
 		inline DoubleT& operator=(DoubleT&& d) const;
 		inline DoubleT& operator=(const DoubleT& d) const;

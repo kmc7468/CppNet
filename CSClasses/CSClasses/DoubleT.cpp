@@ -1,14 +1,18 @@
 #include "DoubleT.h"
 
+#include <limits>
+
 namespace System
 {
-	const DoubleT DoubleT::MinValue = DoubleT(-1.7976931348623157E+308);
-	const DoubleT DoubleT::MaxValue = DoubleT(1.7976931348623157E+308);
+	const DoubleT DoubleT::MinValue = DoubleT(std::numeric_limits<Double>::min());
+	const DoubleT DoubleT::MaxValue = DoubleT(std::numeric_limits<Double>::max());
 
-	const DoubleT DoubleT::Epsilon = DoubleT(4.9406564584124654E-324);
-	const DoubleT DoubleT::NegativeInfinity = DoubleT(/*(Double)-1.0 / (Double)0.0*/0.0); // FIXME: 0으로 나눌 수 없어서 임시 조치.
-	const DoubleT DoubleT::PositiveInfinity = DoubleT(/*(Double)1.0 / (Double)0.0*/0.0); // FIXME: 0으로 나눌 수 없어서 임시 조치.
-	const DoubleT DoubleT::NaN = DoubleT(/*(Double)0.0 / (Double)0.0*/0.0); // FIXME: 0으로 나눌 수 없어서 임시 조치.
+	const DoubleT DoubleT::Zero = DoubleT(0.0);
+
+	const DoubleT DoubleT::Epsilon = DoubleT(std::numeric_limits<Double>::epsilon());
+	const DoubleT DoubleT::NegativeInfinity = DoubleT(-std::numeric_limits<Double>::infinity()); // FIXME: 0으로 나눌 수 없어서 임시 조치.
+	const DoubleT DoubleT::PositiveInfinity = DoubleT(std::numeric_limits<Double>::infinity()); // FIXME: 0으로 나눌 수 없어서 임시 조치.
+	const DoubleT DoubleT::NaN = DoubleT(std::numeric_limits<Double>::quiet_NaN()); // FIXME: 0으로 나눌 수 없어서 임시 조치.
 
 	DoubleT::DoubleT(Double dat)
 	{

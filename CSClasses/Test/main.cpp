@@ -28,5 +28,17 @@ int main(void)
 
 	Console::WriteLine(chr);
 
+	Console::WriteLine(DoubleT::Zero.Data());
+	Console::WriteLine(DoubleT::NaN.Data());
+
+	Console::WriteLine(DoubleT::IsNaN(DoubleT::NaN));
+
+	Console::WriteLine(DoubleT::PositiveInfinity.Data());
+	Console::WriteLine(DoubleT::NegativeInfinity.Data());
+	Console::WriteLine(DoubleT::MaxValue.Data());
+	Console::WriteLine(DoubleT::MinValue.Data());
+	Console::WriteLine(DoubleT::Epsilon.Data());
+
+
 	MAIN_END
 }
