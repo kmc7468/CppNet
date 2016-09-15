@@ -3,7 +3,7 @@
 
 namespace System
 {
-	using Char = char32_t;
+	using Char = wchar_t;
 }
 
 #endif
