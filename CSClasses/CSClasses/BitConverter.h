@@ -23,11 +23,27 @@ namespace System
 		static const Boolean IsLittleEndian;
 
 	public:
-		// TODO DoubleToInt64Bits
+		static inline Int64 DoubleToInt64Bits(Double d, Boolean igroneEndian = true);
 
 		static inline std::array<Byte, 1> GetBytes(Boolean boolean, Boolean igroneEndian = false);
 		static inline std::array<Byte, 2> GetBytes(Char c, Boolean igroneEndian = false);
 		static inline std::array<Byte, 2> GetBytes(Int16 i, Boolean igroneEndian = false);
+		static inline std::array<Byte, 8> GetBytes(Double d, Boolean igroneEndian = false);
+		static inline std::array<Byte, 4> GetBytes(Int32 i, Boolean igroneEndian = false);
+		static inline std::array<Byte, 8> GetBytes(Int64 i, Boolean igroneEndian = false);
+		static inline std::array<Byte, 4> GetBytes(Single d, Boolean igroneEndian = false);
+		static inline std::array<Byte, 2> GetBytes(UInt16 i, Boolean igroneEndian = false);
+		static inline std::array<Byte, 4> GetBytes(UInt32 i, Boolean igroneEndian = false);
+		static inline std::array<Byte, 8> GetBytes(UInt64 i, Boolean igroneEndian = false);
+
+	private:
+		template<Int32 size, typename T>
+		static inline std::array<Byte, size> GetBytesLitile(T t);
+
+		template<Int32 size, typename T>
+		static inline std::array<Byte, size> GetBytesBig(T t);
+
+		static inline Int64 DTI64L(Double d);
 	};
 }
 

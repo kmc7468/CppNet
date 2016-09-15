@@ -30,7 +30,14 @@ int main(void)
 
 	std::cout << &integer << std::endl;
 	
-	var a = BitConverter::GetBytes((Int16)integer);
+	var a = BitConverter::GetBytes(5.0);
 
-	MAIN_END
+	Double d = 5.0;
+
+	std::cout << &d << std::endl;
+
+	var r = BitConverter::DoubleToInt64Bits(d);
+
+
+MAIN_END
 }
