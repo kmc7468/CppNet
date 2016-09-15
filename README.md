@@ -38,6 +38,7 @@
   - Utility.h
   
 - System 네임스페이스
+  - [x] BitConverter.h
   - [x] Boolean.h
   - [x] Byte.h
   - [x] Char.h
