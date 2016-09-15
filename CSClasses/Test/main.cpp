@@ -10,7 +10,8 @@ using namespace System::Collections::Generic;
 
 int main(void)
 {
-	locale::global(locale("korean"));
+	wcout.imbue(locale(""));
+	wcin.imbue(locale(""));
 
 	Queue<int> queue;
 	queue.Enqueue(3);
@@ -21,23 +22,11 @@ int main(void)
 		Console::WriteLine(enumerator->Current());
 	}
 
-	var i = Console::Read();
-
-	Console::WriteLine(i);
-	Console::WriteLine(50000);
-
-	Int16 integer = 20000;
-
-	std::cout << &integer << std::endl;
+	var arr = BitConverter::GetBytes(50000000000);
 	
-	var a = BitConverter::GetBytes(5.0);
+	var chr = BitConverter::ToInt64(arr);
 
-	Double d = 5.0;
+	Console::WriteLine(chr);
 
-	std::cout << &d << std::endl;
-
-	var r = BitConverter::DoubleToInt64Bits(d);
-
-
-MAIN_END
+	MAIN_END
 }

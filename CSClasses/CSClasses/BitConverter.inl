@@ -1,5 +1,7 @@
 #include "BitConverter.h"
 
+#include <algorithm>
+
 namespace System
 {
 	template<Int32 size, typename T>
@@ -94,13 +96,113 @@ namespace System
 		return igroneEndian || !IsLittleEndian ? GetBytesBig<8>(i) : GetBytesLitile<8>(i);
 	}
 
-	Int64 BitConverter::DoubleToInt64Bits(Double d, Boolean igroneEndian)
+	Int64 BitConverter::DoubleToInt64Bits(Double d)
 	{
-		return igroneEndian ? *((Int64*)&d) : (IsLittleEndian ? DTI64L(d) : *((Int64*)&d));
+		return *((Int64*)&d);
 	}
 
-	Int64 BitConverter::DTI64L(Double d)
+	Double BitConverter::Int64BitsToDouble(Int64 i)
 	{
-		return 0;
+		return *((Double*)&i);
+	}
+
+	Int32 BitConverter::SingleToInt32Bits(Single d)
+	{
+		return *((Int32*)&d);
+	}
+
+	Single BitConverter::Int32BitsToSingle(Int32 i)
+	{
+		return *((Single*)&i);
+	}
+
+	Char BitConverter::ToChar(std::array<Byte, 2> arr, Boolean igroneEndian)
+	{
+		if (IsLittleEndian && !igroneEndian)
+			std::reverse(arr.begin(), arr.end());
+
+		Byte *p = arr.data();
+
+		return *((Char*)p);
+	}
+
+	Int16 BitConverter::ToInt16(std::array<Byte, 2> arr, Boolean igroneEndian)
+	{
+		if (IsLittleEndian && !igroneEndian)
+			std::reverse(arr.begin(), arr.end());
+
+		Byte *p = arr.data();
+
+		return *((Int16*)p);
+	}
+
+	Int32 BitConverter::ToInt32(std::array<Byte, 4> arr, Boolean igroneEndian)
+	{
+		if (IsLittleEndian && !igroneEndian)
+			std::reverse(arr.begin(), arr.end());
+
+		Byte *p = arr.data();
+
+		return *((Int32*)p);
+	}
+
+	Int64 BitConverter::ToInt64(std::array<Byte, 8> arr, Boolean igroneEndian)
+	{
+		if (IsLittleEndian && !igroneEndian)
+			std::reverse(arr.begin(), arr.end());
+
+		Byte *p = arr.data();
+
+		return *((Int64*)p);
+	}
+
+	UInt16 BitConverter::ToUInt16(std::array<Byte, 2> arr, Boolean igroneEndian)
+	{
+		if (IsLittleEndian && !igroneEndian)
+			std::reverse(arr.begin(), arr.end());
+
+		Byte *p = arr.data();
+
+		return *((UInt16*)p);
+	}
+
+	UInt32 BitConverter::ToUInt32(std::array<Byte, 4> arr, Boolean igroneEndian)
+	{
+		if (IsLittleEndian && !igroneEndian)
+			std::reverse(arr.begin(), arr.end());
+
+		Byte *p = arr.data();
+
+		return *((UInt32*)p);
+	}
+
+	UInt64 BitConverter::ToUInt64(std::array<Byte, 8> arr, Boolean igroneEndian)
+	{
+		if (IsLittleEndian && !igroneEndian)
+			std::reverse(arr.begin(), arr.end());
+
+		Byte *p = arr.data();
+
+		return *((UInt64*)p);
+	}
+
+	Single BitConverter::ToSingle(std::array<Byte, 4> arr, Boolean igroneEndian)
+	{
+		if (IsLittleEndian && !igroneEndian)
+			std::reverse(arr.begin(), arr.end());
+
+		Byte *p = arr.data();
+
+		return *((Single*)p);
+	}
+
+	Double BitConverter::ToDouble(std::array<Byte, 8> arr, Boolean igroneEndian)
+	{
+		if (IsLittleEndian && !igroneEndian)
+			std::reverse(arr.begin(), arr.end());
+
+		Byte *p = arr.data();
+
+		return *((Double*)p);
 	}
 }
