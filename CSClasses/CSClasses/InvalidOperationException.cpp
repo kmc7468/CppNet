@@ -44,12 +44,12 @@ namespace System
 		// FIXME innerException ¾èÀºº¹»ç
 	}
 
-	InvalidOperationException& InvalidOperationException::operator=(InvalidOperationException&& ex)
+	InvalidOperationException InvalidOperationException::operator=(InvalidOperationException&& ex)
 	{
 		return InvalidOperationException(ex);
 	}
 
-	InvalidOperationException& InvalidOperationException::operator=(const InvalidOperationException& ex)
+	InvalidOperationException InvalidOperationException::operator=(const InvalidOperationException& ex)
 	{
 		return InvalidOperationException(ex);
 	}

@@ -29,8 +29,8 @@ namespace System
 		~Random() = default;
 
 	public:
-		Random &operator=(Random &&sNewRandom);
-		Random &operator=(const Random &sNewRandom);
+		Random operator=(Random &&sNewRandom);
+		Random operator=(const Random &sNewRandom);
 
 	private:
 		UInt32 seed;

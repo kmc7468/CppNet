@@ -148,6 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BitConverter.h" />
     <ClInclude Include="Boolean.h" />
     <ClInclude Include="Byte.h" />
     <ClInclude Include="Char.h" />
@@ -204,6 +205,7 @@
     <ClInclude Include="_IEnumerator.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BitConverter.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="DoubleT.cpp" />
     <ClCompile Include="Exception.cpp" />
@@ -220,6 +222,7 @@
     <ClCompile Include="TimeSpan.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="BitConverter.inl" />
     <None Include="Console.inl" />
     <None Include="Convert.inl" />
     <None Include="DoubleT.inl" />

@@ -18,8 +18,8 @@ namespace System
 		~InvalidCastException() = default;
 
 	public:
-		InvalidCastException& operator=(InvalidCastException&& ex);
-		InvalidCastException& operator=(const InvalidCastException& ex);
+		InvalidCastException operator=(InvalidCastException&& ex);
+		InvalidCastException operator=(const InvalidCastException& ex);
 
 	public:
 		String Message() const override;

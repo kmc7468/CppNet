@@ -210,6 +210,9 @@
     <ClInclude Include="SizeF.h">
       <Filter>헤더 파일\System\Drawing</Filter>
     </ClInclude>
+    <ClInclude Include="BitConverter.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">
@@ -259,6 +262,9 @@
     <ClCompile Include="SizeF.cpp">
       <Filter>소스 파일\System\Drawing</Filter>
     </ClCompile>
+    <ClCompile Include="BitConverter.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Console.inl">
@@ -277,6 +283,9 @@
       <Filter>인라인 구현 파일\System\Collections\Generic</Filter>
     </None>
     <None Include="DoubleT.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="BitConverter.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
   </ItemGroup>

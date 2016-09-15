@@ -44,12 +44,12 @@ namespace System
 		// FIXME innerException ¾èÀºº¹»ç
 	}
 
-	FormatException& FormatException::operator=(FormatException&& ex)
+	FormatException FormatException::operator=(FormatException&& ex)
 	{
 		return FormatException(ex);
 	}
 
-	FormatException& FormatException::operator=(const FormatException& ex)
+	FormatException FormatException::operator=(const FormatException& ex)
 	{
 		return FormatException(ex);
 	}

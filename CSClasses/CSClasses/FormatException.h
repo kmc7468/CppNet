@@ -18,8 +18,8 @@ namespace System
 		~FormatException() = default;
 
 	public:
-		FormatException& operator=(FormatException&& ex);
-		FormatException& operator=(const FormatException& ex);
+		FormatException operator=(FormatException&& ex);
+		FormatException operator=(const FormatException& ex);
 
 	public:
 		String Message() const override;

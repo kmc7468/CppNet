@@ -35,4 +35,6 @@
 
 #include "DoubleT.h"
 
+#include "BitConverter.h"
+
 #endif

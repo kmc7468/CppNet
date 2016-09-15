@@ -18,8 +18,8 @@ namespace System
 		~InvalidOperationException() = default;
 
 	public:
-		InvalidOperationException& operator=(InvalidOperationException&& ex);
-		InvalidOperationException& operator=(const InvalidOperationException& ex);
+		InvalidOperationException operator=(InvalidOperationException&& ex);
+		InvalidOperationException operator=(const InvalidOperationException& ex);
 
 	public:
 		String Message() const override;

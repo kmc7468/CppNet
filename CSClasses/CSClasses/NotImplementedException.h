@@ -19,8 +19,8 @@ namespace System
 		~NotImplementedException() = default;
 
 	public:
-		NotImplementedException& operator=(NotImplementedException&& ex);
-		NotImplementedException& operator=(const NotImplementedException& ex);
+		NotImplementedException operator=(NotImplementedException&& ex);
+		NotImplementedException operator=(const NotImplementedException& ex);
 
 	public:
 		String Message() const override;

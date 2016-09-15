@@ -44,12 +44,12 @@ namespace System
 		// FIXME innerException ¾èÀºº¹»ç
 	}
 
-	InvalidCastException& InvalidCastException::operator=(InvalidCastException&& ex)
+	InvalidCastException InvalidCastException::operator=(InvalidCastException&& ex)
 	{
 		return InvalidCastException(ex);
 	}
 
-	InvalidCastException& InvalidCastException::operator=(const InvalidCastException& ex)
+	InvalidCastException InvalidCastException::operator=(const InvalidCastException& ex)
 	{
 		return InvalidCastException(ex);
 	}

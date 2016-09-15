@@ -6,9 +6,9 @@ namespace System
 	const DoubleT DoubleT::MaxValue = DoubleT(1.7976931348623157E+308);
 
 	const DoubleT DoubleT::Epsilon = DoubleT(4.9406564584124654E-324);
-	const DoubleT DoubleT::NegativeInfinity = DoubleT((Double)-1.0 / (Double)0.0);
-	const DoubleT DoubleT::PositiveInfinity = DoubleT((Double)1.0 / (Double)0.0);
-	const DoubleT DoubleT::NaN = DoubleT((Double)0.0 / (Double)0.0);
+	const DoubleT DoubleT::NegativeInfinity = DoubleT(/*(Double)-1.0 / (Double)0.0*/0.0); // FIXME: 0으로 나눌 수 없어서 임시 조치.
+	const DoubleT DoubleT::PositiveInfinity = DoubleT(/*(Double)1.0 / (Double)0.0*/0.0); // FIXME: 0으로 나눌 수 없어서 임시 조치.
+	const DoubleT DoubleT::NaN = DoubleT(/*(Double)0.0 / (Double)0.0*/0.0); // FIXME: 0으로 나눌 수 없어서 임시 조치.
 
 	DoubleT::DoubleT(Double dat)
 	{

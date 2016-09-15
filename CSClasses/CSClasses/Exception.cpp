@@ -33,12 +33,12 @@ namespace System
 		// FIXME inner ¾èÀºº¹»ç
 	}
 
-	Exception::ExceptionData& Exception::ExceptionData::operator=(const Exception::ExceptionData& ex)
+	Exception::ExceptionData Exception::ExceptionData::operator=(const Exception::ExceptionData& ex)
 	{
 		return Exception::ExceptionData(ex);
 	}
 
-	Exception::ExceptionData& Exception::ExceptionData::operator=(Exception::ExceptionData&& ex)
+	Exception::ExceptionData Exception::ExceptionData::operator=(Exception::ExceptionData&& ex)
 	{
 		return Exception::ExceptionData(ex);
 	}
@@ -108,11 +108,11 @@ namespace System
 		// FIXME innerException ¾èÀºº¹»ç
 	}
 
-	Exception& Exception::operator=(const Exception& ex)
+	Exception Exception::operator=(const Exception& ex)
 	{
 		return Exception(ex);
 	}
-	Exception& Exception::operator=(Exception&& ex)
+	Exception Exception::operator=(Exception&& ex)
 	{
 		return Exception(ex);
 	}

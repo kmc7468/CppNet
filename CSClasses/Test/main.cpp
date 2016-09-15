@@ -26,5 +26,11 @@ int main(void)
 	Console::WriteLine(i);
 	Console::WriteLine(50000);
 
+	Int16 integer = 20000;
+
+	std::cout << &integer << std::endl;
+	
+	var a = BitConverter::GetBytes((Int16)integer);
+
 	MAIN_END
 }

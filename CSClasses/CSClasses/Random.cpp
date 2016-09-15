@@ -26,12 +26,12 @@ namespace System
 		seed = sNewRandom.seed;
 	}
 
-	Random &Random::operator=(Random &&sNewRandom)
+	Random Random::operator=(Random &&sNewRandom)
 	{
 		return Random(*this);
 	}
 
-	Random &Random::operator=(const Random &sNewRandom)
+	Random Random::operator=(const Random &sNewRandom)
 	{
 		return Random(*this);
 	}

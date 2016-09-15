@@ -44,12 +44,12 @@ namespace System
 		// FIXME innerException ¾èÀºº¹»ç
 	}
 
-	NotImplementedException& NotImplementedException::operator=(NotImplementedException&& ex)
+	NotImplementedException NotImplementedException::operator=(NotImplementedException&& ex)
 	{
 		return NotImplementedException(ex);
 	}
 
-	NotImplementedException& NotImplementedException::operator=(const NotImplementedException& ex)
+	NotImplementedException NotImplementedException::operator=(const NotImplementedException& ex)
 	{
 		return NotImplementedException(ex);
 	}
