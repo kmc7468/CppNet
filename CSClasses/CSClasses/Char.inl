@@ -6,4 +6,9 @@ namespace System
 	{
 		return dat;
 	}
+
+	char32_t Char::Data() const
+	{
+		return dat;
+	}
 }

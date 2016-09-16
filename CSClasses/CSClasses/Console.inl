@@ -11,8 +11,7 @@ namespace System
 
 	void Console::Write(Char character)
 	{
-		// FIXME 임시조치. 나중에 유니코드 문자가 나오게 수정바람.
-		std::cout << character.Unicode();
+		std::cout << character.Data();
 	}
 
 	void Console::Write(const String& string)
@@ -87,8 +86,7 @@ namespace System
 
 	void Console::WriteLine(Char character)
 	{
-		// FIXME 나중에 유니코드 문자가 나오도록
-		std::cout << character.Unicode() << std::endl;
+		std::cout << character.Data() << std::endl;
 	}
 
 	void Console::WriteLine(const String& str)
