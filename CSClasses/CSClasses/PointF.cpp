@@ -50,7 +50,7 @@ namespace System
 
 		String PointF::ToString() const
 		{
-			return L"X=" + std::to_wstring(X) + L", Y=" + std::to_wstring(Y);
+			return "X=" + std::to_string(X) + ", Y=" + std::to_string(Y);
 		}
 	}
 }

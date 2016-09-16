@@ -57,7 +57,7 @@ namespace System
 	String FormatException::Message() const
 	{
 		String msg = TXT_FORMAT_DEFMSG;
-		msg.append(L" ");
+		msg.append(" ");
 		msg.append(message);
 
 		return msg;

@@ -57,7 +57,7 @@ namespace System
 	String InvalidCastException::Message() const
 	{
 		String msg = TXT_INVALID_CAST_DEFMSG;
-		msg.append(L" ");
+		msg.append(" ");
 		msg.append(message);
 
 		return msg;

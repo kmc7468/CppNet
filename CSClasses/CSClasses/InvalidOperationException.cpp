@@ -57,7 +57,7 @@ namespace System
 	String InvalidOperationException::Message() const
 	{
 		String msg = TXT_INVALID_OPER_DEFMSG;
-		msg.append(L" ");
+		msg.append(" ");
 		msg.append(message);
 
 		return msg;

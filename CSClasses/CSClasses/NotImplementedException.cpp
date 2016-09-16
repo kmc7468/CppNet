@@ -57,7 +57,7 @@ namespace System
 	String NotImplementedException::Message() const
 	{
 		String msg = TXT_NOTIMPL_DEFMSG;
-		msg.append(L" ");
+		msg.append(" ");
 		msg.append(message);
 
 		return msg;
