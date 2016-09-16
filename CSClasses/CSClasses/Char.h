@@ -25,7 +25,7 @@ namespace System
 		Char(std::array<char, 3> chars);
 		Char(std::array<char, 2> chars);
 		Char(char data);
-		Char(const char* chars, Byte size);
+		Char(const char* chars, Byte size, Byte index = 0);
 		Char(std::string chars);
 		virtual ~Char() = default;
 

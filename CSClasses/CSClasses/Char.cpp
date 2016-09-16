@@ -2,6 +2,8 @@
 
 #include "Exception.h"
 
+#include "BitConverter.h"
+
 namespace System
 {
 	Char::Char(Int32 unicode)
@@ -36,7 +38,7 @@ namespace System
 		dat = data;
 	}
 
-	Char::Char(const char* chars, Byte size)
+	Char::Char(const char* chars, Byte size, Byte index)
 	{
 		if (size <= 0 || size > 4)
 		{
@@ -47,6 +49,20 @@ namespace System
 
 		if (size == 4)
 		{
+			std::array<Byte, 4> arr;
+			arr[0] = chars[0];
+			arr[1] = chars[1];
+			arr[2] = chars[2];
+			arr[3] = chars[3];
+			String bin = BitConverter::ToBinString<4>(arr);
+			if (bin.length() != 32)
+			{
+				int more = 32 - bin.length();
+
+				for (int i = 0; i < more; i++)
+					bin = '0' + bin;
+			}
+
 
 		}
 		else if (size == 3)
