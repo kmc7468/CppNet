@@ -30,7 +30,7 @@ namespace System
 				return 1;
 		}
 
-		throw Exception(L"파라미터 오류"); // FIXME ArgumentException
+		throw Exception("파라미터 오류"); // FIXME ArgumentException
 	}
 
 	Int32 DoubleT::CompareTo(const DoubleT& obj)
@@ -68,7 +68,7 @@ namespace System
 	Char DoubleT::ToChar(std::unique_ptr<IFormatProvider> formatProvider)
 	{
 		// TODO
-		return L' ';
+		return Char();
 	}
 
 	DateTime DoubleT::ToDateTime(std::unique_ptr<IFormatProvider> formatProvider)
@@ -133,7 +133,7 @@ namespace System
 	String DoubleT::ToString(std::unique_ptr<IFormatProvider> formatProvider)
 	{
 		// TODO
-		return L"";
+		return "";
 	}
 
 	Boolean DoubleT::Equals(const DoubleT& obj)
@@ -150,7 +150,7 @@ namespace System
 
 	String DoubleT::ToString() const
 	{
-		return std::to_wstring(dat);
+		return std::to_string(dat);
 	}
 
 	Boolean DoubleT::IsInfinity(const DoubleT& d)

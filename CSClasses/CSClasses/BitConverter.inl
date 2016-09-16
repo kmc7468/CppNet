@@ -51,9 +51,9 @@ namespace System
 		return r;
 	}
 
-	std::array<Byte, 2> BitConverter::GetBytes(Char c, Boolean igroneEndian)
+	std::array<Byte, 4> BitConverter::GetBytes(Char c, Boolean igroneEndian)
 	{
-		return GetBytes((Int16)c, igroneEndian);
+		return GetBytes(c.Data(), igroneEndian);
 	}
 
 	std::array<Byte, 2> BitConverter::GetBytes(Int16 i, Boolean igroneEndian)
@@ -116,7 +116,7 @@ namespace System
 		return *((Single*)&i);
 	}
 
-	Char BitConverter::ToChar(std::array<Byte, 2> arr, Boolean igroneEndian)
+	Char BitConverter::ToChar(std::array<Byte, 4> arr, Boolean igroneEndian)
 	{
 		if (IsLittleEndian && !igroneEndian)
 			std::reverse(arr.begin(), arr.end());

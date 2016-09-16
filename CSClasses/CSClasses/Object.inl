@@ -20,6 +20,6 @@ namespace System
 
 	String Object::ToString() const
 	{
-		return L"";
+		return "";
 	}
 }

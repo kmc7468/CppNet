@@ -1,9 +1,19 @@
 #ifndef SYSTEM_CHAR_H
 #define SYSTEM_CHAR_H
 
+#include "Object.h"
+#include "Int32.h"
+
 namespace System
 {
-	using Char = wchar_t;
+	class Char : public Object
+	{
+	private:
+		Int32 dat;
+
+	public:
+		inline Int32 Data() const;
+	};
 }
 
 #endif

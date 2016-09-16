@@ -223,6 +223,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BitConverter.inl" />
+    <None Include="Char.inl" />
     <None Include="Console.inl" />
     <None Include="Convert.inl" />
     <None Include="DoubleT.inl" />

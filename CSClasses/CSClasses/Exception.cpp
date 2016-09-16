@@ -120,7 +120,7 @@ namespace System
 	String Exception::Message() const
 	{
 		String msg = TXT_EXCEPTION_DEFMSG;
-		msg.append(L" ");
+		msg.append(" ");
 		msg.append(message);
 
 		return msg;

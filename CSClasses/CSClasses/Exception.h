@@ -12,7 +12,7 @@ namespace System
 		class ExceptionData
 		{
 		public:
-			ExceptionData(const String& message = L"", const String& source = L"", const String& link = L"", void* target = nullptr, Exception* inner = nullptr);
+			ExceptionData(const String& message = "", const String& source = "", const String& link = "", void* target = nullptr, Exception* inner = nullptr);
 			ExceptionData(ExceptionData &&sNewExceptionData);
 			ExceptionData(const ExceptionData& sNewExceptionData);
 			virtual ~ExceptionData() = default;

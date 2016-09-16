@@ -5,7 +5,7 @@
 
 namespace System
 {
-	using String = std::wstring;
+	using String = std::string;
 }
 
 #endif

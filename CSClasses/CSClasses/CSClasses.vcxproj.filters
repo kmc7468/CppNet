@@ -288,5 +288,8 @@
     <None Include="BitConverter.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
+    <None Include="Char.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
   </ItemGroup>
 </Project>

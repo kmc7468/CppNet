@@ -22,13 +22,13 @@ namespace System
 	Boolean Convert::ToBoolean(Char c)
 	{
 		Boolean(*p)(Char) = ToBoolean;
-		throw InvalidCastException(Exception::ExceptionData(TXT_INVAILD_CAST_CHAR2BOOL, L"", L"", p, nullptr));
+		throw InvalidCastException(Exception::ExceptionData(TXT_INVAILD_CAST_CHAR2BOOL, "", "", p, nullptr));
 	}
 
 	Boolean Convert::ToBoolean(DateTime d)
 	{
 		Boolean(*p)(DateTime) = ToBoolean;
-		throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BOOL, L"", L"", p, nullptr));
+		throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BOOL, "", "", p, nullptr));
 	}
 
 	Boolean Convert::ToBoolean(Byte b)
@@ -96,18 +96,18 @@ namespace System
 		String s = str;
 		std::transform(s.begin(), s.end(), s.begin(), ::tolower);
 
-		if (s == L"true")
+		if (s == "true")
 		{
 			return true;
 		}
-		else if (s == L"false")
+		else if (s == "false")
 		{
 			return false;
 		}
 		else
 		{
 			Boolean(*p)(const String&) = ToBoolean;
-			throw FormatException(Exception::ExceptionData(TXT_FORMAT_STRING2BOOL_NOTSTR, L"", L"", p, nullptr));
+			throw FormatException(Exception::ExceptionData(TXT_FORMAT_STRING2BOOL_NOTSTR, "", "", p, nullptr));
 		}
 	}
 
@@ -132,18 +132,18 @@ namespace System
 
 	Byte Convert::ToByte(Char c)
 	{
-		if (c > 255)
+		if (c.Data() > 255)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
-		return (Byte)c;
+		return (Byte)c.Data();
 	}
 
 	Byte Convert::ToByte(DateTime d)
 	{
 		Byte(*p)(DateTime) = ToByte;
-		throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BYTE, L"", L"", p, nullptr));
+		throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BYTE, "", "", p, nullptr));
 	}
 
 	Byte Convert::ToByte(Byte b)
@@ -155,7 +155,7 @@ namespace System
 	{
 		if (b < 0)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)b;
@@ -167,7 +167,7 @@ namespace System
 
 		if (d > 255 || d < 0)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)d;
@@ -179,7 +179,7 @@ namespace System
 
 		if (d > 255 || d < 0)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)d;
@@ -189,7 +189,7 @@ namespace System
 	{
 		if (i > 255 || i < 0)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)i;
@@ -199,7 +199,7 @@ namespace System
 	{
 		if (i > 255 || i < 0)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)i;
@@ -209,7 +209,7 @@ namespace System
 	{
 		if (i > 255 || i < 0)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)i;
@@ -219,7 +219,7 @@ namespace System
 	{
 		if (i > 255)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)i;
@@ -229,7 +229,7 @@ namespace System
 	{
 		if (i > 255)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)i;
@@ -239,7 +239,7 @@ namespace System
 	{
 		if (i > 255)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)i;
@@ -254,7 +254,7 @@ namespace System
 
 		if (i > 255 || i < 0)
 		{
-			throw Exception(L"오버플로"); // FIXME: Overflow Exception
+			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
 		return (Byte)i;

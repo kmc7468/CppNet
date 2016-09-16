@@ -30,7 +30,7 @@ namespace System
 		static inline Single Int32BitsToSingle(Int32 i);
 
 		static inline std::array<Byte, 1> GetBytes(Boolean boolean, Boolean igroneEndian = false);
-		static inline std::array<Byte, 2> GetBytes(Char c, Boolean igroneEndian = false);
+		static inline std::array<Byte, 4> GetBytes(Char c, Boolean igroneEndian = false);
 		static inline std::array<Byte, 2> GetBytes(Int16 i, Boolean igroneEndian = false);
 		static inline std::array<Byte, 8> GetBytes(Double d, Boolean igroneEndian = false);
 		static inline std::array<Byte, 4> GetBytes(Int32 i, Boolean igroneEndian = false);
@@ -40,7 +40,7 @@ namespace System
 		static inline std::array<Byte, 4> GetBytes(UInt32 i, Boolean igroneEndian = false);
 		static inline std::array<Byte, 8> GetBytes(UInt64 i, Boolean igroneEndian = false);
 
-		static inline Char ToChar(std::array<Byte, 2> arr, Boolean igroneEndian = false);
+		static inline Char ToChar(std::array<Byte, 4> arr, Boolean igroneEndian = false);
 		static inline Int16 ToInt16(std::array<Byte, 2> arr, Boolean igroneEndian = false);
 		static inline Int32 ToInt32(std::array<Byte, 4> arr, Boolean igroneEndian = false);
 		static inline Int64 ToInt64(std::array<Byte, 8> arr, Boolean igroneEndian = false);
