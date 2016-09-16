@@ -39,6 +39,13 @@ int main(void)
 	Console::WriteLine(DoubleT::MinValue.Data());
 	Console::WriteLine(DoubleT::Epsilon.Data());
 
+	var a = BitConverter::GetBytes((Int16)30000);
+
+	var c = BitConverter::ToBinString(a);
+
+	Console::WriteLine(c);
+
+	var a2 = BitConverter::FromBinString<2>(c);
 
 	MAIN_END
 }

@@ -6,7 +6,6 @@
 #include "Byte.h"
 #include "SByte.h"
 
-#include "Char.h"
 #include "String.h"
 
 #include "Int16.h"
@@ -23,5 +22,7 @@
 #include "Func.h"
 
 #include "Object.h"
+
+#include "Char.h"
 
 #endif

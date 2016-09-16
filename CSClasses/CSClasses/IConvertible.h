@@ -9,6 +9,8 @@
 
 #include <memory>
 
+#include "Char.h"
+
 namespace System
 {
 	interface IConvertible

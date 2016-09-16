@@ -205,4 +205,73 @@ namespace System
 
 		return *((Double*)p);
 	}
+
+	template<size_t size>
+	String BitConverter::ToBinString(std::array<Byte, size> arr)
+	{
+		String r;
+
+		String temp;
+
+		for (var b : arr)
+		{
+			Byte value = b;
+
+			while (true)
+			{
+				Byte mod = value % 2;
+				Byte div = (value - mod) / 2;
+
+				temp = std::to_string(mod) + temp;
+
+				value = div;
+
+				if (value == 0)
+					break;
+			}
+
+			r.append(temp);
+		}
+
+		return r;
+	}
+
+	template<size_t size>
+	std::array<Byte, size> BitConverter::FromBinString(const String& binstr)
+	{
+		std::array<Byte, size> r;
+
+		Byte temp01 = binstr.length() % 8;
+		Byte temp02 = 8 - temp01;
+
+		String s(binstr);
+
+		for (int i = 0; i < temp02; i++)
+			s = '0' + s;
+
+		if (s.length() / 8 != size)
+		{
+			// FIXME Arg 뭐시기 Exception
+			throw Exception("응 인자 오류~");
+		}
+
+		for (int i = 0; i < s.length() / 8; i++)
+		{
+			String bin = s.substr(i * 8, 8);
+
+			Byte b = 0;
+
+			int n = 0;
+			for (int j = 7; j >= 0; j--)
+			{
+				b += (Byte)std::stoi(bin[n]) * (Byte)Math::Pow(2, j);
+
+				n++;
+			}
+
+			r[i] = b;
+		}
+
+		return r;
+	}
 }

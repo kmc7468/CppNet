@@ -52,6 +52,11 @@ namespace System
 
 		// TODO ToString
 
+		template<size_t size>
+		static inline String ToBinString(std::array<Byte, size> arr);
+		template<size_t size>
+		static inline std::array<Byte, size> FromBinString(const String& binstr);
+
 	private:
 		template<Int32 size, typename T>
 		static inline std::array<Byte, size> GetBytesLitile(T t);

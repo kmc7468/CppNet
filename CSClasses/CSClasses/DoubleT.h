@@ -3,8 +3,8 @@
 
 #include "Object.h"
 #include "Double.h"
+#include "Char.h"
 
-#include "IComparable.h"
 #include "IFormattable.h"
 #include "IConvertible.h"
 #include "IEquatable.h"
