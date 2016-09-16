@@ -63,6 +63,8 @@ namespace System
 
 		template<Int32 size, typename T>
 		static inline std::array<Byte, size> GetBytesBig(T t);
+
+		static inline String ToBinString(Byte b, String str);
 	};
 }
 

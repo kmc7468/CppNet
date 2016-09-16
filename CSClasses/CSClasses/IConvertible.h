@@ -13,6 +13,8 @@
 
 namespace System
 {
+	class Char;
+
 	interface IConvertible
 	{
 		virtual Boolean ToBoolean(std::unique_ptr<IFormatProvider> i) = 0;
