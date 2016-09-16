@@ -12,7 +12,7 @@ namespace System
 		Int32 dat;
 
 	public:
-		inline Int32 Data() const;
+		inline Int32 Unicode() const;
 	};
 }
 

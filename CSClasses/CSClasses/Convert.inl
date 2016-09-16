@@ -132,12 +132,12 @@ namespace System
 
 	Byte Convert::ToByte(Char c)
 	{
-		if (c.Data() > 255)
+		if (c.Unicode() > 255 || c.Unicode() < 0)
 		{
 			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
-		return (Byte)c.Data();
+		return (Byte)c.Unicode();
 	}
 
 	Byte Convert::ToByte(DateTime d)

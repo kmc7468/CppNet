@@ -2,7 +2,7 @@
 
 namespace System
 {
-	Int32 Char::Data() const
+	Int32 Char::Unicode() const
 	{
 		return dat;
 	}
