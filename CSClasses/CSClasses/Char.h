@@ -35,8 +35,7 @@ namespace System
 		Int32 dat;
 
 	public:
-		inline Int32 Unicode() const;
-		inline char32_t Data() const;
+		
 	};
 }
 
