@@ -21,6 +21,8 @@ namespace System
 		Char(Int32 unicode);
 		Char(char32_t data);
 		Char(char16_t data);
+		Char(std::array<char, 6> chars);
+		Char(std::array<char, 5> chars);
 		Char(std::array<char, 4> chars);
 		Char(std::array<char, 3> chars);
 		Char(std::array<char, 2> chars);

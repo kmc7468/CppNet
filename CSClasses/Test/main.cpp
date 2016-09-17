@@ -47,7 +47,7 @@ int main(void)
 
 	var a2 = BitConverter::HexStringToBytes<8>(c);
 
-	Console::WriteLine(BitConverter::ToUInt64(a2));
+	Console::WriteLine(BitConverter::ToInt64(a2));
 
 	MAIN_END
 }
