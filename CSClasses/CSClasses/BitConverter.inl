@@ -411,7 +411,7 @@ namespace System
 				else if (tempstr == "F")
 					tempstr = "15";
 
-				b += std::stoi(tempstr) * Math::Pow(16, j);
+				b += (Byte)std::stoi(tempstr) * (Byte)Math::Pow(16, j);
 				n++;
 			}
 
@@ -421,94 +421,4 @@ namespace System
 		return r;
 	}
 
-	template<size_t size>
-	String BitConverter::BytesToOctString(std::array<Byte, size> arr)
-	{
-		String b = "";
-
-		for (var d : arr)
-		{
-			b += BytesToOctString(d);
-		}
-
-		while (b[0] == '0')
-			b = b.substr(1);
-
-		return b;
-	}
-
-	String BitConverter::BytesToOctString(Byte b)
-	{
-		String s = "";
-
-		Byte value = b;
-
-		while ((value - (value % 8)) / 8 != 0)
-		{
-			s = std::to_string(value % 8) + s;
-
-			value = (value - (value % 8)) / 8;
-		}
-
-		s = std::to_string(value % 8) + s;
-
-		if (s.length() != 8)
-		{
-			int more = 8 - s.length();
-
-			for (int i = 0; i < more; i++)
-			{
-				s = '0' + s;
-			}
-		}
-
-		return s;
-	}
-
-	template<size_t size>
-	std::array<Byte, size> BitConverter::OctStringToBytes(const String& octstr)
-	{
-		std::array<Byte, size> r;
-
-		String bin(binstr);
-
-		if (bin.length() % 8 != 0)
-		{
-			int add = 8 - (bin.length() % 8);
-
-			for (int i = 0; i < add; i++)
-			{
-				bin = '0' + bin;
-			}
-		}
-
-		int start = 0;
-
-		if (bin.length() / 8 < r.size())
-		{
-			start = r.size() - (bin.length() / 8);
-		}
-
-		for (int i = 0; i < start; i++)
-		{
-			r[i] = 0;
-		}
-
-		for (int i = 0; i < bin.length() / 8; i++)
-		{
-			String str = bin.substr(i * 8, 8);
-			Byte b = 0;
-
-			int n = 0;
-			for (int j = 7; j >= 0; j--)
-			{
-				b += (Byte)std::stoi(str.substr(n, 1)) * (Byte)Math::Pow(8, j);
-				n++;
-			}
-
-			r[start + i] = b;
-		}
-
-		return r;
-	}
 }

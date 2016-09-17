@@ -62,11 +62,6 @@ namespace System
 		template<size_t size>
 		static inline std::array<Byte, size> HexStringToBytes(const String& hexstr);
 
-		template<size_t size>
-		static inline String BytesToOctString(std::array<Byte, size> arr);
-		template<size_t size>
-		static inline std::array<Byte, size> OctStringToBytes(const String& octstr);
-
 	private:
 		template<Int32 size, typename T>
 		static inline std::array<Byte, size> GetBytesLitile(T t);
@@ -76,7 +71,6 @@ namespace System
 
 		static inline String BytesToBinString(Byte b);
 		static inline String BytesToHexString(Byte b);
-		static inline String BytesToOctString(Byte b);
 	};
 }
 

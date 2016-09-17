@@ -39,15 +39,15 @@ int main(void)
 	Console::WriteLine(DoubleT::MinValue.Data());
 	Console::WriteLine(DoubleT::Epsilon.Data());
 
-	var a = BitConverter::GetBytes(std::numeric_limits<Int32>::max());
+	var a = BitConverter::GetBytes(std::numeric_limits<UInt64>::max());
 
-	var c = BitConverter::BytesToOctString(a);
+	var c = BitConverter::BytesToHexString(a);
 
 	Console::WriteLine(c);
 
-	var a2 = BitConverter::HexStringToBytes<4>(c);
+	var a2 = BitConverter::HexStringToBytes<8>(c);
 
-	Console::WriteLine(BitConverter::ToInt32(a2));
+	Console::WriteLine(BitConverter::ToUInt64(a2));
 
 	MAIN_END
 }
