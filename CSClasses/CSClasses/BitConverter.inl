@@ -55,7 +55,7 @@ namespace System
 
 	std::array<Byte, 4> BitConverter::GetBytes(Char c, Boolean igroneEndian)
 	{
-		return GetBytes(c.Unicode(), igroneEndian);
+		return GetBytes((UInt32)c, igroneEndian);
 	}
 
 	std::array<Byte, 2> BitConverter::GetBytes(Int16 i, Boolean igroneEndian)

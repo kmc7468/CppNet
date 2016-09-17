@@ -9,6 +9,9 @@ using namespace std;
 
 namespace System
 {
+	const Char Char::MaxValue = Char(std::numeric_limits<Int32>::max());
+	const Char Char::MinValue = Char(std::numeric_limits<Int32>::min());
+
 	Char::Char(Int32 unicode)
 	{
 		dat = unicode;
@@ -77,7 +80,7 @@ namespace System
 
 			var a = BitConverter::BinStringToBytes<4>(undo);
 
-			dat = BitConverter::ToInt32(a);
+			dat = BitConverter::ToUInt32(a);
 		}
 		else if (size == 5)
 		{
@@ -106,7 +109,7 @@ namespace System
 
 			var a = BitConverter::BinStringToBytes<4>(undo);
 
-			dat = BitConverter::ToInt32(a);
+			dat = BitConverter::ToUInt32(a);
 		}
 		else if (size == 4)
 		{
@@ -133,7 +136,7 @@ namespace System
 
 			var a = BitConverter::BinStringToBytes<4>(undo);
 
-			dat = BitConverter::ToInt32(a);
+			dat = BitConverter::ToUInt32(a);
 		}
 		else if (size == 3)
 		{
@@ -158,7 +161,7 @@ namespace System
 
 			var a = BitConverter::BinStringToBytes<4>(undo);
 
-			dat = BitConverter::ToInt32(a);
+			dat = BitConverter::ToUInt32(a);
 		}
 		else if (size == 2)
 		{
@@ -181,7 +184,7 @@ namespace System
 
 			var a = BitConverter::BinStringToBytes<4>(undo);
 
-			dat = BitConverter::ToInt32(a);
+			dat = BitConverter::ToUInt32(a);
 		}
 		else if (size == 1)
 		{
@@ -202,7 +205,7 @@ namespace System
 
 			var a = BitConverter::BinStringToBytes<4>(undo);
 
-			dat = BitConverter::ToInt32(a);
+			dat = BitConverter::ToUInt32(a);
 		}
 	}
 
@@ -218,5 +221,40 @@ namespace System
 	Char::Char(const Char& c)
 	{
 		dat = c.dat;
+	}
+
+	Char::operator UInt32()
+	{
+		return dat;
+	}
+
+	Char::operator std::string()
+	{
+		String bin = BitConverter::BytesToBinString(BitConverter::GetBytes(dat));
+
+		if (bin.length() <= 7) // 0~7비트
+		{
+
+		}
+		else if (bin.length() >= 8 && bin.length() <= 11) // 8~11비트
+		{
+
+		}
+		else if (bin.length() >= 12 && bin.length() <= 16) // 12~16비트
+		{
+
+		}
+		else if (bin.length() >= 17 && bin.length() <= 21) // 17~21비트
+		{
+
+		}
+		else if (bin.length() >= 22 && bin.length() <= 26) // 22~26비트
+		{
+
+		}
+		else if (bin.length() >= 27 && bin.length() <= 31) // 27~31비트
+		{
+
+		}
 	}
 }

@@ -2,7 +2,8 @@
 #define SYSTEM_CHAR_H
 
 #include "Object.h"
-#include "Int32.h" 
+#include "Int32.h"
+#include "UInt32.h"
 #include "Byte.h"
 
 #include "IComparable.h"
@@ -14,7 +15,7 @@
 
 namespace System
 {
-	class Char : public Object/*, public IComparable<Object>, public IComparable<Char>, public IConvertible, public IEquatable<Char>*/
+	class Char : public Object, public IComparable<Object>, public IComparable<Char>/*, public IConvertible, public IEquatable<Char>*/																  
 	{
 	public:
 		Char() = default;
@@ -31,8 +32,20 @@ namespace System
 		Char(const Char& c);
 		~Char() = default;
 
+	public:
+		static const Char MaxValue;
+		static const Char MinValue;
+
+	public:
+		operator UInt32();
+		operator std::string();
+
 	private:
-		Int32 dat;
+		UInt32 dat;
+
+	public:
+		inline Int32 CompareTo(const Char& obj) override;
+		inline Int32 CompareTo(const Object& obj) override;
 
 	public:
 		
