@@ -54,7 +54,7 @@ namespace System
 			arr[1] = chars[1];
 			arr[2] = chars[2];
 			arr[3] = chars[3];
-			String bin = BitConverter::ToBinString<4>(arr);
+			String bin = BitConverter::BytesToBinString<4>(arr);
 			if (bin.length() != 32)
 			{
 				int more = 32 - bin.length();

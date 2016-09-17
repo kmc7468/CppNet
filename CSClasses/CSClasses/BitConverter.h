@@ -53,9 +53,14 @@ namespace System
 		// TODO ToString
 
 		template<size_t size>
-		static inline String ToBinString(std::array<Byte, size> arr);
+		static inline String BytesToBinString(std::array<Byte, size> arr);
 		template<size_t size>
-		static inline std::array<Byte, size> FromBinString(const String& binstr);
+		static inline std::array<Byte, size> BinStringToBytes(const String& binstr);
+
+		template<size_t size>
+		static inline String BytesToHexString(std::array<Byte, size> arr);
+		template<size_t size>
+		static inline std::array<Byte, size> HexStringToBytes(const String& hexstr);
 
 	private:
 		template<Int32 size, typename T>
@@ -64,7 +69,8 @@ namespace System
 		template<Int32 size, typename T>
 		static inline std::array<Byte, size> GetBytesBig(T t);
 
-		static inline String ToBinString(Byte b, String str);
+		static inline String BytesToBinString(Byte b);
+		static inline String BytesToHexString(Byte b);
 	};
 }
 

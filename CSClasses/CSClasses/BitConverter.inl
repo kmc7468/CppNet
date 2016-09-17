@@ -208,19 +208,19 @@ namespace System
 	}
 
 	template<size_t size>
-	String BitConverter::ToBinString(std::array<Byte, size> arr)
+	String BitConverter::BytesToBinString(std::array<Byte, size> arr)
 	{
 		String b = "";
 
 		for (var d : arr)
 		{
-			b += ToBinString(d, "");
+			b += BytesToBinString(d);
 		}
 
 		return b.substr(b.find('1'));
 	}
 
-	String BitConverter::ToBinString(Byte b, String str)
+	String BitConverter::BytesToBinString(Byte b)
 	{
 		String s = "";
 
@@ -249,7 +249,7 @@ namespace System
 	}
 
 	template<size_t size>
-	std::array<Byte, size> BitConverter::FromBinString(const String& binstr)
+	std::array<Byte, size> BitConverter::BinStringToBytes(const String& binstr)
 	{
 		std::array<Byte, size> r;
 
@@ -286,6 +286,132 @@ namespace System
 			for (int j = 7; j >= 0; j--)
 			{
 				b += (Byte)std::stoi(str.substr(n, 1)) * (Byte)Math::Pow(2, j);
+				n++;
+			}
+
+			r[start + i] = b;
+		}
+
+		return r;
+	}
+
+	template<size_t size>
+	String BitConverter::BytesToHexString(std::array<Byte, size> arr)
+	{
+		String b = "";
+
+		for (var d : arr)
+		{
+			b += BytesToHexString(d);
+		}
+
+		while (b[0] == '0')
+			b = b.substr(1);
+
+		return b;
+	}
+
+	String BitConverter::BytesToHexString(Byte b)
+	{
+		String str = "";
+
+		Byte value = b;
+
+		while ((value - (value % 16)) / 16 != 0)
+		{
+			String tempstr = std::to_string(value % 16);
+
+			if (tempstr == "10")
+				tempstr = "A";
+			else if (tempstr == "11")
+				tempstr = "B";
+			else if (tempstr == "12")
+				tempstr = "C";
+			else if (tempstr == "13")
+				tempstr = "D";
+			else if (tempstr == "14")
+				tempstr = "E";
+			else if (tempstr == "15")
+				tempstr = "F";
+
+			str = tempstr + str;
+
+			value = (value - (value % 16)) / 16;
+		}
+
+		String ts = std::to_string(value % 16);
+
+		if (ts == "10")
+			ts = "A";
+		else if (ts == "11")
+			ts = "B";
+		else if (ts == "12")
+			ts = "C";
+		else if (ts == "13")
+			ts = "D";
+		else if (ts == "14")
+			ts = "E";
+		else if (ts == "15")
+			ts = "F";
+
+		str = ts + str;
+
+		return str;
+	}
+
+	template<size_t size>
+	std::array<Byte, size> BitConverter::HexStringToBytes(const String& hexstr)
+	{
+		std::array<Byte, size> r;
+
+		String bin(hexstr);
+
+		if (bin.length() % 2 != 0)
+		{
+			int add = 2 - (bin.length() % 2);
+
+			for (int i = 0; i < add; i++)
+			{
+				bin = '0' + bin;
+			}
+		}
+
+		int start = 0;
+
+		if (bin.length() / 2 < r.size())
+		{
+			start = r.size() - (bin.length() / 2);
+		}
+
+		for (int i = 0; i < start; i++)
+		{
+			r[i] = 0;
+		}
+
+		for (int i = 0; i < bin.length() / 2; i++)
+		{
+			String str = bin.substr(i * 2, 2);
+			Byte b = 0;
+
+			int n = 0;
+			for (int j = 1; j >= 0; j--)
+			{
+				String tempstr = str.substr(n, 1);
+
+				if (tempstr == "A")
+					tempstr = "10";
+				else if (tempstr == "B")
+					tempstr = "11";
+				else if (tempstr == "C")
+					tempstr = "12";
+				else if (tempstr == "D")
+					tempstr = "13";
+				else if (tempstr == "E")
+					tempstr = "14";
+				else if (tempstr == "F")
+					tempstr = "15";
+
+				b += std::stoi(tempstr) * Math::Pow(16, j);
 				n++;
 			}
 
