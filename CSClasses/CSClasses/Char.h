@@ -19,8 +19,6 @@ namespace System
 	public:
 		Char() = default;
 		Char(Int32 unicode);
-		Char(char32_t data);
-		Char(char16_t data);
 		Char(std::array<char, 6> utf8chars);
 		Char(std::array<char, 5> utf8chars);
 		Char(std::array<char, 4> utf8chars);
@@ -31,7 +29,7 @@ namespace System
 		Char(std::string utf8chars);
 		Char(Char&& c);
 		Char(const Char& c);
-		virtual ~Char() = default;
+		~Char() = default;
 
 	private:
 		Int32 dat;

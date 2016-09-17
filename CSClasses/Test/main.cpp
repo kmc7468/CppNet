@@ -53,5 +53,7 @@ int main(void)
 	
 	Console::WriteLine(Âm.Unicode());
 
+	Console::WriteLine(Âm);
+
 	MAIN_END
 }

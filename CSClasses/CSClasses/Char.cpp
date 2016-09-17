@@ -14,16 +14,6 @@ namespace System
 		dat = unicode;
 	}
 
-	Char::Char(char32_t data)
-	{
-		dat = data;
-	}
-
-	Char::Char(char16_t data)
-	{
-		dat = data;
-	}
-
 	Char::Char(std::array<char, 6> utf8chars)
 		: Char(utf8chars.data(), 6)
 	{ }
