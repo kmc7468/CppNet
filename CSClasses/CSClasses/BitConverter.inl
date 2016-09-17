@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <bitset>
+#include "Math.h"
 
 namespace System
 {

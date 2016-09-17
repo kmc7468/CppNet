@@ -21,14 +21,16 @@ namespace System
 		Char(Int32 unicode);
 		Char(char32_t data);
 		Char(char16_t data);
-		Char(std::array<char, 6> chars);
-		Char(std::array<char, 5> chars);
-		Char(std::array<char, 4> chars);
-		Char(std::array<char, 3> chars);
-		Char(std::array<char, 2> chars);
+		Char(std::array<char, 6> utf8chars);
+		Char(std::array<char, 5> utf8chars);
+		Char(std::array<char, 4> utf8chars);
+		Char(std::array<char, 3> utf8chars);
+		Char(std::array<char, 2> utf8chars);
 		Char(char data);
-		Char(const char* chars, Byte size, Byte index = 0);
-		Char(std::string chars);
+		Char(const char* utf8chars, Byte size, Byte index = 0);
+		Char(std::string utf8chars);
+		Char(Char&& c);
+		Char(const Char& c);
 		virtual ~Char() = default;
 
 	private:

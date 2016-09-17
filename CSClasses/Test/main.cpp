@@ -49,5 +49,9 @@ int main(void)
 
 	Console::WriteLine(BitConverter::ToInt64(a2));
 
+	Char Âm(u8"À§", 3);
+	
+	Console::WriteLine(Âm.Unicode());
+
 	MAIN_END
 }
