@@ -89,7 +89,10 @@ namespace System
 
 	void Console::WriteLine(Char character)
 	{
+		var temp = std::cout.getloc();
+		std::cout.imbue(std::locale(""));
 		std::cout << (String)character << std::endl;
+		std::cout.imbue(temp);
 	}
 
 	void Console::WriteLine(const String& str)

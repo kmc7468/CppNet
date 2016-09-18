@@ -49,6 +49,12 @@
     <Filter Include="인라인 구현 파일\System\Collections\Generic">
       <UniqueIdentifier>{affce4a8-24b9-45eb-8620-536c9df0f106}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\System\Globalization">
+      <UniqueIdentifier>{0a626f51-e0c9-495b-878b-368b7e220fc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Globalization">
+      <UniqueIdentifier>{22d87b8d-98fa-4382-ac58-c2576f1bb0cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -212,6 +218,12 @@
     </ClInclude>
     <ClInclude Include="BitConverter.h">
       <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="UnicodeCategory.h">
+      <Filter>헤더 파일\System\Globalization</Filter>
+    </ClInclude>
+    <ClInclude Include="CharUnicodeInfo.h">
+      <Filter>헤더 파일\System\Globalization</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

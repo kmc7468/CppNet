@@ -152,6 +152,7 @@
     <ClInclude Include="Boolean.h" />
     <ClInclude Include="Byte.h" />
     <ClInclude Include="Char.h" />
+    <ClInclude Include="CharUnicodeInfo.h" />
     <ClInclude Include="Console.h" />
     <ClInclude Include="Control.h" />
     <ClInclude Include="Convert.h" />
@@ -199,6 +200,7 @@
     <ClInclude Include="UInt16.h" />
     <ClInclude Include="UInt32.h" />
     <ClInclude Include="UInt64.h" />
+    <ClInclude Include="UnicodeCategory.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="_ICollection.h" />
     <ClInclude Include="_IEnumerable.h" />

@@ -10,12 +10,8 @@ using namespace System::Collections::Generic;
 
 int main(void)
 {
-	cout.imbue(locale(""));
-	cin.imbue(locale(""));
-
-	const char* temp = u8"¤¾";
-
-	cout << temp << endl;
+	cout.imbue(locale("korean"));
+	cin.imbue(locale("korean"));
 
 	Queue<int> queue;
 	queue.Enqueue(3);
