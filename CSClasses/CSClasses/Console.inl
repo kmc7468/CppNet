@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <locale>
 #include <cstdio>
+#include <string>
 
 namespace System
 {
