@@ -1,14 +1,10 @@
 #include "Exception.h"
-#include "Language.h"
-#include "InvalidCastException.h"
-#include "FormatException.h"
 #include "Math.h"
 #include "Convert.h"
-
-#include "Math.h"
 #include "Exception.h"
 #include "InvalidCastException.h"
 #include "FormatException.h"
+#include "NotImplementedException.h"
 
 #include "Language.h"
 
@@ -132,12 +128,12 @@ namespace System
 
 	Byte Convert::ToByte(Char c)
 	{
-		if (c.Unicode() > 255 || c.Unicode() < 0)
+		if (c > 255 || c < 0)
 		{
 			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}
 
-		return (Byte)c.Unicode();
+		return (Byte)c;
 	}
 
 	Byte Convert::ToByte(DateTime d)

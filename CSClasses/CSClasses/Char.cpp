@@ -5,6 +5,7 @@
 #include "BitConverter.h"
 
 #include <string>
+#include <algorithm>
 using namespace std;
 
 namespace System
@@ -63,9 +64,9 @@ namespace System
 			String bin = BitConverter::BytesToBinString<6>(arr);
 			if (bin.length() != 48)
 			{
-				int more = 48 - bin.length();
+				size_t more = 48 - bin.length();
 
-				for (int i = 0; i < more; i++)
+				for (size_t i = 0; i < more; i++)
 					bin = '0' + bin;
 			}
 
@@ -93,9 +94,9 @@ namespace System
 			String bin = BitConverter::BytesToBinString<5>(arr);
 			if (bin.length() != 35)
 			{
-				int more = 35 - bin.length();
+				size_t more = 35 - bin.length();
 
-				for (int i = 0; i < more; i++)
+				for (size_t i = 0; i < more; i++)
 					bin = '0' + bin;
 			}
 
@@ -121,9 +122,9 @@ namespace System
 			String bin = BitConverter::BytesToBinString<4>(arr);
 			if (bin.length() != 32)
 			{
-				int more = 32 - bin.length();
+				size_t more = 32 - bin.length();
 
-				for (int i = 0; i < more; i++)
+				for (size_t i = 0; i < more; i++)
 					bin = '0' + bin;
 			}
 
@@ -147,9 +148,9 @@ namespace System
 			String bin = BitConverter::BytesToBinString<3>(arr);
 			if (bin.length() != 24)
 			{
-				int more = 24 - bin.length();
+				size_t more = 24 - bin.length();
 
-				for (int i = 0; i < more; i++)
+				for (size_t i = 0; i < more; i++)
 					bin = '0' + bin;
 			}
 
@@ -171,9 +172,9 @@ namespace System
 			String bin = BitConverter::BytesToBinString<2>(arr);
 			if (bin.length() != 16)
 			{
-				int more = 16 - bin.length();
+				size_t more = 16 - bin.length();
 
-				for (int i = 0; i < more; i++)
+				for (size_t i = 0; i < more; i++)
 					bin = '0' + bin;
 			}
 
@@ -193,9 +194,9 @@ namespace System
 			String bin = BitConverter::BytesToBinString<1>(arr);
 			if (bin.length() != 8)
 			{
-				int more = 8 - bin.length();
+				size_t more = 8 - bin.length();
 
-				for (int i = 0; i < more; i++)
+				for (size_t i = 0; i < more; i++)
 					bin = '0' + bin;
 			}
 
@@ -228,33 +229,120 @@ namespace System
 		return dat;
 	}
 
-	Char::operator std::string()
+	Char::operator String()
 	{
 		String bin = BitConverter::BytesToBinString(BitConverter::GetBytes(dat));
 
 		if (bin.length() <= 7) // 0~7비트
 		{
+			bin.insert(bin.begin(), 7 - bin.length(), '0');
 
+			String a = '0' + bin;
+
+			var arr = BitConverter::BinStringToBytes<1>(a);
+
+			String str = "";
+			str += arr[0];
+
+			return str;
 		}
 		else if (bin.length() >= 8 && bin.length() <= 11) // 8~11비트
 		{
+			bin.insert(bin.begin(), 11 - bin.length(), '0');
 
+			String one = "110" + bin.substr(0, 5);
+			String two = "10" + bin.substr(5, 6);
+
+			var arr = BitConverter::BinStringToBytes<2>(one + two);
+
+			String str = "";
+			str += arr[0];
+			str += arr[1];
+
+			return str;
 		}
 		else if (bin.length() >= 12 && bin.length() <= 16) // 12~16비트
 		{
+			bin.insert(bin.begin(), 16 - bin.length(), '0');
 
+			String one = "1110" + bin.substr(0, 4);
+			String two = "10" + bin.substr(4, 6);
+			String three = "10" + bin.substr(10, 6);
+
+			var arr = BitConverter::BinStringToBytes<3>(one + two + three);
+
+			String str = "";
+			str += arr[0];
+			str += arr[1];
+			str += arr[2];
+
+			return str;
 		}
 		else if (bin.length() >= 17 && bin.length() <= 21) // 17~21비트
 		{
+			bin.insert(bin.begin(), 21 - bin.length(), '0');
 
+			String one = "11110" + bin.substr(0, 3);
+			String two = "10" + bin.substr(3, 6);
+			String three = "10" + bin.substr(9, 6);
+			String four = "10" + bin.substr(15, 6);
+
+			var arr = BitConverter::BinStringToBytes<4>(one + two + three + four);
+
+			String str = "";
+			str += arr[0];
+			str += arr[1];
+			str += arr[2];
+			str += arr[3];
+
+			return str;
 		}
 		else if (bin.length() >= 22 && bin.length() <= 26) // 22~26비트
 		{
+			bin.insert(bin.begin(), 26 - bin.length(), '0');
 
+			String one = "111110" + bin.substr(0, 2);
+			String two = "10" + bin.substr(2, 6);
+			String three = "10" + bin.substr(8, 6);
+			String four = "10" + bin.substr(14, 6);
+			String five = "10" + bin.substr(20, 6);
+
+			var arr = BitConverter::BinStringToBytes<5>(one + two + three + four + five);
+
+			String str = "";
+			str += arr[0];
+			str += arr[1];
+			str += arr[2];
+			str += arr[3];
+			str += arr[4];
+
+			return str;
 		}
 		else if (bin.length() >= 27 && bin.length() <= 31) // 27~31비트
 		{
+			bin.insert(bin.begin(), 31 - bin.length(), '0');
 
+			String one = "1111110" + bin.substr(0, 1);
+			String two = "10" + bin.substr(1, 6);
+			String three = "10" + bin.substr(7, 6);
+			String four = "10" + bin.substr(13, 6);
+			String five = "10" + bin.substr(19, 6);
+			String six = "10" + bin.substr(25, 6);
+
+			var arr = BitConverter::BinStringToBytes<6>(one + two + three + four + five + six);
+
+			String str = "";
+			str += arr[0];
+			str += arr[1];
+			str += arr[2];
+			str += arr[3];
+			str += arr[4];
+			str += arr[5];
+
+			return str;
 		}
+
+		throw Exception("응 인자오류~");
+		// FIXME Argmeunt 뭐시기
 	}
 }

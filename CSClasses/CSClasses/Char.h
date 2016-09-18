@@ -38,7 +38,7 @@ namespace System
 
 	public:
 		operator UInt32();
-		operator std::string();
+		operator String();
 
 	private:
 		UInt32 dat;

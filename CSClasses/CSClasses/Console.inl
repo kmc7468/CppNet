@@ -1,6 +1,8 @@
 #include "Console.h"
 
 #include <iomanip>
+#include <locale>
+#include <cstdio>
 
 namespace System
 {
@@ -11,7 +13,7 @@ namespace System
 
 	void Console::Write(Char character)
 	{
-		std::cout << character.Data();
+		std::cout << (String)character;
 	}
 
 	void Console::Write(const String& string)
@@ -86,7 +88,7 @@ namespace System
 
 	void Console::WriteLine(Char character)
 	{
-		std::cout << character.Data() << std::endl;
+		std::cout << (String)character << std::endl;
 	}
 
 	void Console::WriteLine(const String& str)
@@ -106,7 +108,6 @@ namespace System
 
 	void Console::WriteLine(Double doubled, Int32 real_size)
 	{
-
 		std::cout << std::setprecision(real_size) << doubled << std::endl;
 	}
 

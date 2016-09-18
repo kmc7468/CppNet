@@ -238,9 +238,9 @@ namespace System
 
 		if (s.length() != 8)
 		{
-			int more = 8 - s.length();
+			size_t more = 8 - s.length();
 
-			for (int i = 0; i < more; i++)
+			for (size_t i = 0; i < more; i++)
 			{
 				s = '0' + s;
 			}
@@ -266,7 +266,7 @@ namespace System
 			}
 		}
 
-		int start = 0;
+		size_t start = 0;
 
 		if (bin.length() / 8 < r.size())
 		{

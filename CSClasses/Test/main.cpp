@@ -10,8 +10,12 @@ using namespace System::Collections::Generic;
 
 int main(void)
 {
-	wcout.imbue(locale(""));
-	wcin.imbue(locale(""));
+	cout.imbue(locale(""));
+	cin.imbue(locale(""));
+
+	const char* temp = u8"¤¾";
+
+	cout << temp << endl;
 
 	Queue<int> queue;
 	queue.Enqueue(3);
@@ -51,8 +55,6 @@ int main(void)
 
 	Char Âm(u8"À§", 3);
 	
-	Console::WriteLine(Âm.Unicode());
-
 	Console::WriteLine(Âm);
 
 	MAIN_END
