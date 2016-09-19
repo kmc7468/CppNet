@@ -9,6 +9,16 @@ namespace System
 	{
 		class CharUnicodeInfo final : public Object
 		{
+		public:
+			CharUnicodeInfo() = default;
+			CharUnicodeInfo(CharUnicodeInfo&& c) = delete;
+			CharUnicodeInfo(const CharUnicodeInfo& c) = delete;
+			~CharUnicodeInfo() = default;
+
+			CharUnicodeInfo& operator=(CharUnicodeInfo&& c) = delete;
+			CharUnicodeInfo& operator=(const CharUnicodeInfo& c) = delete;
+
+		public:
 
 		};
 	}

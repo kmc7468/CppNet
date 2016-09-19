@@ -5,38 +5,51 @@ namespace System
 {
 	namespace Globalization
 	{
+		// UNICODE 9.0
+		// http://www.unicode.org/reports/tr44/
+		// 5.7.1 General Category Values
+		// Tabel 12. General_Category Values
+
 		enum class UnicodeCategory
 		{
 			UppercaseLetter,
 			LowercaseLetter,
 			TitlecaseLetter,
+			CasedLetter,
 			ModifierLetter,
 			OtherLetter,
-			NonSpacingMark,
-			SpacingCombiningMark,
+			Letter,
+			NonspacingMark,
+			SpacingMark,
 			EnclosingMark,
-			DecimalDigitNumber,
+			Mark,
+			DecimalNumber,
 			LetterNumber,
 			OtherNumber,
-			SpaceSeparator,
-			LineSeparator,
-			ParagraphSeparator,
-			Control,
-			Format,
-			Surrogate,
-			PrivateUse,
+			Number,
 			ConnectorPunctuation,
 			DashPunctuation,
 			OpenPunctuation,
 			ClosePunctuation,
-			InitialQuotePunctuation,
-			FinalQuotePunctuation,
+			InitialPunctuation,
+			FinalPunctuation,
 			OtherPunctuation,
+			Punctuation,
 			MathSymbol,
 			CurrencySymbol,
 			ModifierSymbol,
 			OtherSymbol,
-			OtherNotAssigned
+			Symbol,
+			SpaceSeparator,
+			LineSeparator,
+			ParagraphSeparator,
+			Separator,
+			Control,
+			Format,
+			Surrogate,
+			PrivateUse,
+			Unassigned,
+			Other
 		};
 	}
 }
