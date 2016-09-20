@@ -37,11 +37,11 @@ namespace System
 		static const Char MinValue;
 
 	public:
-		operator UInt32();
+		operator Int32();
 		operator String();
 
 	private:
-		UInt32 dat;
+		Int32 dat;
 
 	public:
 		inline Int32 CompareTo(const Char& obj) override;

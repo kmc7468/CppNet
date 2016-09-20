@@ -3,6 +3,9 @@
 
 #include "Object.h"
 
+#include "Int32.h"
+#include "Char.h"
+
 namespace System
 {
 	namespace Globalization
@@ -19,7 +22,10 @@ namespace System
 			CharUnicodeInfo& operator=(const CharUnicodeInfo& c) = delete;
 
 		public:
+			static Int32 GetDecimalDightValue(const Char& c);
+			/*static Int32 GetDecimalDightValue(const String& str, Int32 index); TODO*/
 
+			
 		};
 	}
 }

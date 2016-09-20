@@ -224,7 +224,7 @@ namespace System
 		dat = c.dat;
 	}
 
-	Char::operator UInt32()
+	Char::operator Int32()
 	{
 		return dat;
 	}

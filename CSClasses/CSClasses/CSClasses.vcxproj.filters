@@ -277,6 +277,9 @@
     <ClCompile Include="Char.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
+    <ClCompile Include="CharUnicodeInfo.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Console.inl">

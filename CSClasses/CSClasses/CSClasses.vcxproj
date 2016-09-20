@@ -209,6 +209,7 @@
   <ItemGroup>
     <ClCompile Include="BitConverter.cpp" />
     <ClCompile Include="Char.cpp" />
+    <ClCompile Include="CharUnicodeInfo.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="DoubleT.cpp" />
     <ClCompile Include="Exception.cpp" />
