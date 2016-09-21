@@ -15,7 +15,7 @@
 
 namespace System
 {
-	class Char : public Object, public IComparable<Object>, public IComparable<Char>/*, public IConvertible, public IEquatable<Char>*/																  
+	class Char : public Object, public IComparable<Object>, public IComparable<Char>/*, public IConvertible*/, public IEquatable<Char>																  
 	{
 	public:
 		Char() = default;
@@ -37,8 +37,28 @@ namespace System
 		static const Char MinValue;
 
 	public:
-		operator Int32();
+		inline Boolean Equals(const Char& obj) const override;
+		inline Boolean Equals(Object& obj) const;
+
+	public:
+		inline operator Int32();
 		operator String();
+
+		inline Char operator=(Char&& c);
+		inline Char operator=(const Char& c);
+
+		inline Boolean operator==(const Object& obj) override;
+		inline Boolean operator!=(const Object& obj) override;
+
+		inline Boolean operator>(const Char& c);
+		inline Boolean operator<(const Char& c);
+		inline Boolean operator>=(const Char& c);
+		inline Boolean operator<=(const Char& c);
+
+		inline Boolean operator>(char32_t c);
+		inline Boolean operator<(char32_t c);
+		inline Boolean operator>=(char32_t c);
+		inline Boolean operator<=(char32_t c);
 
 	private:
 		Int32 dat;

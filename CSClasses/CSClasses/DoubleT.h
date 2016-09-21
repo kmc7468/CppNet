@@ -61,7 +61,7 @@ namespace System
 		inline SByte ToSByte(std::unique_ptr<IFormatProvider> i) override;
 		inline Single ToSingle(std::unique_ptr<IFormatProvider> i) override;
 		inline String ToString(std::unique_ptr<IFormatProvider> i) override;
-		inline Boolean Equals(const DoubleT& obj) override;
+		inline Boolean Equals(const DoubleT& obj) const override;
 		inline String ToString() const override;
 
 	public:

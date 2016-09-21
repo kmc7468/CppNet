@@ -224,11 +224,6 @@ namespace System
 		dat = c.dat;
 	}
 
-	Char::operator Int32()
-	{
-		return dat;
-	}
-
 	Char::operator String()
 	{
 		String bin = BitConverter::BytesToBinString(BitConverter::GetBytes(dat));

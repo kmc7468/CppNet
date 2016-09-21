@@ -3,7 +3,7 @@
 
 namespace System
 {
-	using SByte = signed char;
+	using SByte = std::int8_t;
 }
 
 #endif

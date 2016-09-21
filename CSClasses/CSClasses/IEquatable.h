@@ -8,7 +8,7 @@ namespace System
 	template<typename T>
 	interface IEquatable
 	{
-		virtual inline Boolean Equals(const T& obj) = 0;
+		virtual inline Boolean Equals(const T& obj) const = 0;
 	};
 }
 

@@ -52,6 +52,9 @@
     <Filter Include="헤더 파일\System\Globalization">
       <UniqueIdentifier>{22d87b8d-98fa-4382-ac58-c2576f1bb0cb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\System\Globalization">
+      <UniqueIdentifier>{44a8959c-1036-415b-b801-865865d29ebb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -278,7 +281,7 @@
       <Filter>소스 파일\System</Filter>
     </ClCompile>
     <ClCompile Include="CharUnicodeInfo.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\System\Globalization</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

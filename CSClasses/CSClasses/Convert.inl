@@ -128,7 +128,7 @@ namespace System
 
 	Byte Convert::ToByte(Char c)
 	{
-		if (c > 255 || c < 0)
+		if ((Int32)c > 255 || (Int32)c < 0)
 		{
 			throw Exception("오버플로"); // FIXME: Overflow Exception
 		}

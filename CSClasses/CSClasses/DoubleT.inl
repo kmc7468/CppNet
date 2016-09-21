@@ -136,7 +136,7 @@ namespace System
 		return "";
 	}
 
-	Boolean DoubleT::Equals(const DoubleT& obj)
+	Boolean DoubleT::Equals(const DoubleT& obj) const
 	{
 		if (const_cast<DoubleT&>(obj) == *const_cast<DoubleT*>(this))
 		{
