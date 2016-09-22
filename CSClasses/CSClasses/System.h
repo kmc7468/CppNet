@@ -4,8 +4,8 @@
 	Created by kmc7468
 */
 
-#ifndef SYSTEM_H
-#define SYSTEM_H
+#ifndef N_SYSTEM_H
+#define N_SYSTEM_H
 
 #include "Language.h"
 #include "Utility.h"

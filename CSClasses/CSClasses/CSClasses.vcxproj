@@ -157,6 +157,7 @@
     <ClInclude Include="Control.h" />
     <ClInclude Include="Convert.h" />
     <ClInclude Include="CSClasses.h" />
+    <ClInclude Include="CSClasses\CSClasses.h" />
     <ClInclude Include="CSClasses\Unicode.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Double.h" />
