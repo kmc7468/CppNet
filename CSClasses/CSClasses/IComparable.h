@@ -8,7 +8,7 @@
 namespace System
 {
 	template<typename T = Object>
-	interface IComparable
+	interface IComparable : private Object
 	{
 		virtual inline Int32 CompareTo(const T& obj) = 0;
 	};

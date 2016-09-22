@@ -6,7 +6,7 @@
 
 namespace System
 {
-	interface ICloneable
+	interface ICloneable : private Object
 	{
 		virtual inline Object Clone() = 0;
 	};

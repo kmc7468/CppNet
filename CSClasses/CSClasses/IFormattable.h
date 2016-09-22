@@ -10,7 +10,7 @@
 
 namespace System
 {
-	interface IFormattable
+	interface IFormattable : private Object
 	{
 		virtual inline String ToString(String format, std::unique_ptr<IFormatProvider> formatProvider) = 0;
 	};
