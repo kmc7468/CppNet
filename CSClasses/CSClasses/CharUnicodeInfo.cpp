@@ -53,6 +53,26 @@ Int32 CharUnicodeInfo::GetDecimalDightValue(const Char& c)
 	{
 		return cc - U'\u0CE6';
 	}
+	else if (cc >= U'\u0D66' && cc <= U'\u0D6F')
+	{
+		return cc - U'\u0D66';
+	}
+	else if (cc >= U'\u0DE6' && cc <= U'\u0DEF')
+	{
+		return cc - U'\u0DE6';
+	}
+	else if (cc >= U'\u0E50' && cc <= U'\u0E59')
+	{
+		return cc - U'\u0E59';
+	}
+	else if (cc >= U'\u0ED0' && cc <= U'\u0ED0')
+	{
+		return cc - U'\u0ED0';
+	}
+	else if (cc >= U'\u0F20' && cc <= U'\u0F29')
+	{
+		return cc - U'\u0F20';
+	}
 	// TODO
 	return -1;
 }

@@ -55,6 +55,9 @@
     <Filter Include="소스 파일\System\Globalization">
       <UniqueIdentifier>{44a8959c-1036-415b-b801-865865d29ebb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\CSClasses">
+      <UniqueIdentifier>{b43d1b23-5baa-4bd7-bab7-bda23db00e0b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -189,9 +192,6 @@
     <ClInclude Include="Double.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="String.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
     <ClInclude Include="Func.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
@@ -224,6 +224,12 @@
     </ClInclude>
     <ClInclude Include="CharUnicodeInfo.h">
       <Filter>헤더 파일\System\Globalization</Filter>
+    </ClInclude>
+    <ClInclude Include="CSClasses\Unicode.h">
+      <Filter>헤더 파일\CSClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="System\String.h">
+      <Filter>헤더 파일\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -157,6 +157,7 @@
     <ClInclude Include="Control.h" />
     <ClInclude Include="Convert.h" />
     <ClInclude Include="CSClasses.h" />
+    <ClInclude Include="CSClasses\Unicode.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Double.h" />
     <ClInclude Include="DoubleT.h" />
@@ -189,13 +190,13 @@
     <ClInclude Include="SByte.h" />
     <ClInclude Include="Single.h" />
     <ClInclude Include="SizeF.h" />
-    <ClInclude Include="String.h" />
     <ClInclude Include="System.Collections.Generic.h" />
     <ClInclude Include="System.Collections.h" />
     <ClInclude Include="System.Drawing.h" />
     <ClInclude Include="System.h" />
     <ClInclude Include="System.Windows.Forms.h" />
     <ClInclude Include="SystemTypes.h" />
+    <ClInclude Include="System\String.h" />
     <ClInclude Include="TimeSpan.h" />
     <ClInclude Include="UInt16.h" />
     <ClInclude Include="UInt32.h" />
