@@ -1,7 +1,8 @@
 #include "Version.h"
 using namespace System;
 
-#include <regex>
+#include <string>
+#include <vector>
 
 Version::Version(Int32 major)
 {
@@ -37,7 +38,12 @@ Version::Version(Int32 major, Int32 minor, Int32 build, Int32 revision)
 
 Version::Version(const String& version)
 {
-	
+	var a = Parse(version);
+
+	major = a.major;
+	minor = a.minor;
+	build = a.build;
+	revision = a.revision;
 }
 
 Version::Version(Version&& ver)
@@ -68,11 +74,19 @@ Boolean Version::operator!=(const Object& obj)
 
 Version Version::Parse(const String& input)
 {
-	std::regex re(".");
-	std::sregex_token_iterator first{ input.begin(), input.end(), re, -1 },
-		last;
-	
-	std::vector<std::string> a{ first, last };
+	std::vector<String> a;
+
+	var i = 0;
+	var pos = input.find('.');
+	while (pos != String::npos)
+	{
+		a.push_back(input.substr(i, pos - i));
+		i = ++pos;
+		pos = input.find('.', pos);
+
+		if (pos == String::npos)
+			a.push_back(input.substr(i, input.length()));
+	}
 
 	Version v;
 	v.major = std::stoi(a[0]);

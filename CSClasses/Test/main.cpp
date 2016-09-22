@@ -53,5 +53,7 @@ int main(void)
 	
 	Console::WriteLine(Âm);
 
+	Version v("1.0.0.0");
+
 	MAIN_END
 }

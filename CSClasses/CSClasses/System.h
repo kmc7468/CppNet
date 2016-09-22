@@ -37,4 +37,6 @@
 
 #include "BitConverter.h"
 
+#include "System/Version.h"
+
 #endif
