@@ -9,7 +9,7 @@
 #define SYSTEM_OBJECT_H
 
 #include "Boolean.h"
-#include "String.h"
+#include "System/String.h"
 
 namespace System
 {
