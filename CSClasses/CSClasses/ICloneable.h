@@ -8,12 +8,7 @@ namespace System
 {
 	interface ICloneable
 	{
-		ICloneable() = delete;
-		ICloneable(ICloneable&& i) = delete;
-		ICloneable(const ICloneable& i) = delete;
-		virtual ~ICloneable() = default;
-
-		virtual inline Object Clone();
+		virtual inline Object Clone() = 0;
 	};
 }
 

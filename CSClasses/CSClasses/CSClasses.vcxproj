@@ -198,6 +198,7 @@
     <ClInclude Include="System.Windows.Forms.h" />
     <ClInclude Include="SystemTypes.h" />
     <ClInclude Include="System\String.h" />
+    <ClInclude Include="System\Version.h" />
     <ClInclude Include="TimeSpan.h" />
     <ClInclude Include="UInt16.h" />
     <ClInclude Include="UInt32.h" />
@@ -225,6 +226,7 @@
     <ClCompile Include="PointF.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="SizeF.cpp" />
+    <ClCompile Include="System\Version.cpp" />
     <ClCompile Include="TimeSpan.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +238,7 @@
     <None Include="Math.inl" />
     <None Include="Object.inl" />
     <None Include="Queue.inl" />
+    <None Include="System\Version.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

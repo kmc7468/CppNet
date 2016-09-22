@@ -234,6 +234,9 @@
     <ClInclude Include="CSClasses\CSClasses.h">
       <Filter>헤더 파일\CSClasses</Filter>
     </ClInclude>
+    <ClInclude Include="System\Version.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">
@@ -292,6 +295,9 @@
     <ClCompile Include="CharUnicodeInfo.cpp">
       <Filter>소스 파일\System\Globalization</Filter>
     </ClCompile>
+    <ClCompile Include="System\Version.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Console.inl">
@@ -316,6 +322,9 @@
       <Filter>인라인 구현 파일\System</Filter>
     </None>
     <None Include="Char.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="System\Version.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
   </ItemGroup>
