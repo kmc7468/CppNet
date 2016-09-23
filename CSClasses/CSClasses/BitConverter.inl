@@ -42,7 +42,7 @@ namespace System
 		return r;
 	}
 
-	std::array<Byte, 1> BitConverter::GetBytes(Boolean boolean, Boolean igroneEndian)
+	std::array<Byte, 1> BitConverter::GetBytes(Boolean boolean)
 	{
 		std::array<Byte, 1> r;
 
@@ -116,6 +116,11 @@ namespace System
 	Single BitConverter::Int32BitsToSingle(Int32 i)
 	{
 		return *((Single*)&i);
+	}
+
+	Boolean BitConverter::ToBoolean(std::array<Byte, 1> arr)
+	{
+		return (Boolean)arr[0];
 	}
 
 	Char BitConverter::ToChar(std::array<Byte, 4> arr, Boolean igroneEndian)
@@ -215,38 +220,14 @@ namespace System
 
 		for (var d : arr)
 		{
-			b += BytesToBinString(d);
+			char c[9];
+			String temp = itoa(d, c, 2);
+			temp.insert(0, 8 - temp.length(), '0');
+
+			b += temp;
 		}
 
 		return b.substr(b.find('1'));
-	}
-
-	String BitConverter::BytesToBinString(Byte b)
-	{
-		String s = "";
-
-		Byte value = b;
-
-		while ((value - (value % 2)) / 2 != 0)
-		{
-			s = std::to_string(value % 2) + s;
-
-			value = (value - (value % 2)) / 2;
-		}
-
-		s = std::to_string(value % 2) + s;
-
-		if (s.length() != 8)
-		{
-			size_t more = 8 - s.length();
-
-			for (size_t i = 0; i < more; i++)
-			{
-				s = '0' + s;
-			}
-		}
-
-		return s;
 	}
 
 	template<size_t size>
@@ -255,42 +236,19 @@ namespace System
 		std::array<Byte, size> r;
 
 		String bin(binstr);
+		bin.insert(0, binstr.length() % 8 == 0 ? 0 : 8 - (binstr.length() % 8), '0');
 
-		if (bin.length() % 8 != 0)
+		size_t start = bin.length() / 8 < r.size() ? r.size() - (bin.length() / 8) : 0;
+
+		for (size_t i = 0; i < size; i++)
 		{
-			int add = 8 - (bin.length() % 8);
+			i < start ? r[i] = 0 : 0;
 
-			for (int i = 0; i < add; i++)
-			{
-				bin = '0' + bin;
-			}
-		}
-
-		size_t start = 0;
-
-		if (bin.length() / 8 < r.size())
-		{
-			start = r.size() - (bin.length() / 8);
-		}
-
-		for (int i = 0; i < start; i++)
-		{
-			r[i] = 0;
-		}
-
-		for (int i = 0; i < bin.length() / 8; i++)
-		{
-			String str = bin.substr(i * 8, 8);
 			Byte b = 0;
 
-			int n = 0;
-			for (int j = 7; j >= 0; j--)
-			{
-				b += (Byte)std::stoi(str.substr(n, 1)) * (Byte)Math::Pow(2, j);
-				n++;
-			}
+			b = (Byte)strtol(bin.substr(i * 8, 8).c_str(), NULL, 2);
 
-			r[start + i] = b;
+			r[i] = b;
 		}
 
 		return r;
@@ -303,7 +261,11 @@ namespace System
 
 		for (var d : arr)
 		{
-			b += BytesToHexString(d);
+			char c[3];
+			String temp = itoa(d, c, 16);
+			temp.insert(0, 2 - temp.length(), '0');
+
+			b += temp;
 		}
 
 		while (b[0] == '0')
@@ -312,114 +274,31 @@ namespace System
 		return b;
 	}
 
-	String BitConverter::BytesToHexString(Byte b)
-	{
-		String str = "";
-
-		Byte value = b;
-
-		while ((value - (value % 16)) / 16 != 0)
-		{
-			String tempstr = std::to_string(value % 16);
-
-			if (tempstr == "10")
-				tempstr = "A";
-			else if (tempstr == "11")
-				tempstr = "B";
-			else if (tempstr == "12")
-				tempstr = "C";
-			else if (tempstr == "13")
-				tempstr = "D";
-			else if (tempstr == "14")
-				tempstr = "E";
-			else if (tempstr == "15")
-				tempstr = "F";
-
-			str = tempstr + str;
-
-			value = (value - (value % 16)) / 16;
-		}
-
-		String ts = std::to_string(value % 16);
-
-		if (ts == "10")
-			ts = "A";
-		else if (ts == "11")
-			ts = "B";
-		else if (ts == "12")
-			ts = "C";
-		else if (ts == "13")
-			ts = "D";
-		else if (ts == "14")
-			ts = "E";
-		else if (ts == "15")
-			ts = "F";
-
-		str = ts + str;
-
-		return str;
-	}
-
 	template<size_t size>
 	std::array<Byte, size> BitConverter::HexStringToBytes(const String& hexstr)
 	{
 		std::array<Byte, size> r;
 
-		String bin(hexstr);
+		String hex(hexstr);
+		hex.insert(0, hexstr.length() % 2 == 0 ? 0 : 2 - (hexstr.length() % 2), '0');
 
-		if (bin.length() % 2 != 0)
+		size_t start = hex.length() / 2 < r.size() ? r.size() - (hex.length() / 2) : 0;
+
+		for (size_t i = 0; i < size; i++)
 		{
-			int add = 2 - (bin.length() % 2);
-
-			for (int i = 0; i < add; i++)
+			if (i < start)
 			{
-				bin = '0' + bin;
+				r[i] = 0;
+				continue;
 			}
-		}
 
-		size_t start = 0;
-
-		if (bin.length() / 2 < r.size())
-		{
-			start = r.size() - (bin.length() / 2);
-		}
-
-		for (size_t i = 0; i < start; i++)
-		{
-			r[i] = 0;
-		}
-
-		for (size_t i = 0; i < bin.length() / 2; i++)
-		{
-			String str = bin.substr(i * 2, 2);
 			Byte b = 0;
 
-			int n = 0;
-			for (int j = 1; j >= 0; j--)
-			{
-				String tempstr = str.substr(n, 1);
+			b = (Byte)strtol(hex.substr(i * 2, 2).c_str(), NULL, 16);
 
-				if (tempstr == "A")
-					tempstr = "10";
-				else if (tempstr == "B")
-					tempstr = "11";
-				else if (tempstr == "C")
-					tempstr = "12";
-				else if (tempstr == "D")
-					tempstr = "13";
-				else if (tempstr == "E")
-					tempstr = "14";
-				else if (tempstr == "F")
-					tempstr = "15";
-
-				b += (Byte)std::stoi(tempstr) * (Byte)Math::Pow(16, j);
-				n++;
-			}
-
-			r[start + i] = b;
+			r[i] = b;
 		}
 
 		return r;
 	}
-
 }

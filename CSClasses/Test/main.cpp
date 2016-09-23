@@ -13,47 +13,12 @@ int main(void)
 	cout.imbue(locale("korean"));
 	cin.imbue(locale("korean"));
 
-	Queue<int> queue;
-	queue.Enqueue(3);
-	queue.Enqueue(4);
-	var enumerator = queue.GetEnumerator();
-	while (enumerator->MoveNext())
-	{
-		Console::WriteLine(enumerator->Current());
-	}
-
-	var arr = BitConverter::GetBytes(50000000000);
+	var arr = BitConverter::GetBytes((Int16)30000);
+	Console::WriteLine(BitConverter::BytesToHexString(arr));
 	
-	var chr = BitConverter::ToInt64(arr);
+	arr = BitConverter::HexStringToBytes<2>(BitConverter::BytesToHexString(arr));
 
-	Console::WriteLine(chr);
-
-	Console::WriteLine(DoubleT::Zero.Data());
-	Console::WriteLine(DoubleT::NaN.Data());
-
-	Console::WriteLine(DoubleT::IsNaN(DoubleT::NaN));
-
-	Console::WriteLine(DoubleT::PositiveInfinity.Data());
-	Console::WriteLine(DoubleT::NegativeInfinity.Data());
-	Console::WriteLine(DoubleT::MaxValue.Data());
-	Console::WriteLine(DoubleT::MinValue.Data());
-	Console::WriteLine(DoubleT::Epsilon.Data());
-
-	var a = BitConverter::GetBytes(std::numeric_limits<UInt64>::max());
-
-	var c = BitConverter::BytesToHexString(a);
-
-	Console::WriteLine(c);
-
-	var a2 = BitConverter::HexStringToBytes<8>(c);
-
-	Console::WriteLine(BitConverter::ToInt64(a2));
-
-	Char Âm(u8"À§", 3);
-	
-	Console::WriteLine(Âm);
-
-	Version v("1.0.0.0");
+	Console::WriteLine(BitConverter::ToInt16(arr));
 
 	MAIN_END
 }
