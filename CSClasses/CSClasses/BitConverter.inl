@@ -120,7 +120,12 @@ namespace System
 
 	Boolean BitConverter::ToBoolean(std::array<Byte, 1> arr)
 	{
-		return (Boolean)arr[0];
+		if (arr[0] == 0)
+			return false;
+		else if (arr[0] == 1)
+			return true;
+		else
+			throw Exception("응 인자오류~"); // FIXME Arg 뭐시기 Exception
 	}
 
 	Char BitConverter::ToChar(std::array<Byte, 4> arr, Boolean igroneEndian)
@@ -221,7 +226,7 @@ namespace System
 		for (var d : arr)
 		{
 			char c[9];
-			String temp = itoa(d, c, 2);
+			String temp = _itoa(d, c, 2);
 			temp.insert(0, 8 - temp.length(), '0');
 
 			b += temp;
@@ -262,7 +267,7 @@ namespace System
 		for (var d : arr)
 		{
 			char c[3];
-			String temp = itoa(d, c, 16);
+			String temp = _itoa(d, c, 16);
 			temp.insert(0, 2 - temp.length(), '0');
 
 			b += temp;

@@ -6,7 +6,7 @@
 
 namespace System
 {
-	interface IFormatProvider : private Object
+	interface IFormatProvider : private virtual Object
 	{
 		virtual inline Object GetFormat(Int32 type_id) = 0;
 	};

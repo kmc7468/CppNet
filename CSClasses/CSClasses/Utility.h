@@ -10,9 +10,6 @@
 
 #define MAIN_END system("pause");return 0;
 
-#define ref(type) type &
-#define out(type) std::unique_ptr<type>
-
 template <typename T, typename U>
 inline System::Boolean is(U&& u)
 {

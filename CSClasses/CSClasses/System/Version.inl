@@ -5,7 +5,7 @@ using namespace System;
 
 Object Version::Clone()
 {
-	return Version(*this);
+	return Version(major, minor, build, revision);
 }
 
 Int32 Version::CompareTo(const Object& obj)

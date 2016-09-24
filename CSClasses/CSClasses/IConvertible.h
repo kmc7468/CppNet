@@ -15,7 +15,7 @@ namespace System
 {
 	class Char;
 
-	interface IConvertible : private Object
+	interface IConvertible : private virtual Object
 	{
 		virtual Boolean ToBoolean(std::unique_ptr<IFormatProvider> i) = 0;
 		virtual Byte ToByte(std::unique_ptr<IFormatProvider> i) = 0;

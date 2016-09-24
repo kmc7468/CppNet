@@ -8,7 +8,7 @@
 
 namespace System
 {
-	class Version final : public Object, public ICloneable, public IComparable<>, public IComparable<Version>, public IEquatable<Version>
+	class Version final : public virtual Object, public ICloneable, public IComparable<>, public IComparable<Version>, public IEquatable<Version>
 	{
 	public:
 		Version() = default;

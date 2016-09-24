@@ -11,7 +11,7 @@
 
 namespace System
 {
-	class DoubleT : public Object, public IComparable<Object>, public IComparable<DoubleT>, public IFormattable, public IConvertible, public IEquatable<DoubleT>
+	class DoubleT : public virtual Object, public IComparable<Object>, public IComparable<DoubleT>, public IFormattable, public IConvertible, public IEquatable<DoubleT>
 	{	
 	private:
 		Double dat;

@@ -15,7 +15,7 @@
 
 namespace System
 {
-	class Char : public Object, public IComparable<Object>, public IComparable<Char>/*, public IConvertible*/, public IEquatable<Char>																  
+	class Char : public virtual Object, public IComparable<Object>, public IComparable<Char>/*, public IConvertible*/, public IEquatable<Char>																  
 	{
 	public:
 		Char() = default;
