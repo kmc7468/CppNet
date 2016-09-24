@@ -21,5 +21,8 @@ int main(void)
 	Console::WriteLine(d.ToString());
 	Console::WriteLine(d2.ToString());
 
+	Console::WriteLine(CSClasses::KMC::Decimal64::MaxValue.ToString());
+	Console::WriteLine(CSClasses::KMC::Decimal64::MinValue.ToString());
+
 	MAIN_END
 }
