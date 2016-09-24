@@ -58,6 +58,15 @@
     <Filter Include="헤더 파일\CSClasses">
       <UniqueIdentifier>{b43d1b23-5baa-4bd7-bab7-bda23db00e0b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\CSClasses\KMC">
+      <UniqueIdentifier>{e8953710-73c3-445f-9c5d-8fbdb6b99c70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CSClasses">
+      <UniqueIdentifier>{afef3e5e-dc9c-499e-81c4-34a9802fe0e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CSClasses\KMC">
+      <UniqueIdentifier>{aecb40c9-ebc1-4fdf-a3d1-e5d3985d3090}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -237,6 +246,9 @@
     <ClInclude Include="System\Version.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="CSClasses\KMC\Decimal.h">
+      <Filter>헤더 파일\CSClasses\KMC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">
@@ -297,6 +309,9 @@
     </ClCompile>
     <ClCompile Include="System\Version.cpp">
       <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="CSClasses\KMC\Decimal.cpp">
+      <Filter>소스 파일\CSClasses\KMC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

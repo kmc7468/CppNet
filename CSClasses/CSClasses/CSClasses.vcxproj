@@ -158,6 +158,7 @@
     <ClInclude Include="Convert.h" />
     <ClInclude Include="CSClasses.h" />
     <ClInclude Include="CSClasses\CSClasses.h" />
+    <ClInclude Include="CSClasses\KMC\Decimal.h" />
     <ClInclude Include="CSClasses\Unicode.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Double.h" />
@@ -213,6 +214,7 @@
     <ClCompile Include="BitConverter.cpp" />
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="CharUnicodeInfo.cpp" />
+    <ClCompile Include="CSClasses\KMC\Decimal.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="DoubleT.cpp" />
     <ClCompile Include="Exception.cpp" />
