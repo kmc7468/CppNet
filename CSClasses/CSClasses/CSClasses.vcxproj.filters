@@ -246,7 +246,7 @@
     <ClInclude Include="System\Version.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="CSClasses\KMC\Decimal.h">
+    <ClInclude Include="CSClasses\KMC\Decimal64.h">
       <Filter>헤더 파일\CSClasses\KMC</Filter>
     </ClInclude>
   </ItemGroup>
@@ -310,7 +310,7 @@
     <ClCompile Include="System\Version.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
-    <ClCompile Include="CSClasses\KMC\Decimal.cpp">
+    <ClCompile Include="CSClasses\KMC\Decimal64.cpp">
       <Filter>소스 파일\CSClasses\KMC</Filter>
     </ClCompile>
   </ItemGroup>
