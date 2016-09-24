@@ -24,6 +24,10 @@ namespace CSClasses
 		private:
 			Decimal64(Int64 integer, Int64 real);
 
+		public:
+			static const Decimal64 MaxValue;
+			static const Decimal64 MinValue;
+
 		private:
 			Int64 integer = 0;
 			Int64 real = 0;

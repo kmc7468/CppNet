@@ -2,6 +2,9 @@
 using namespace System;
 using namespace CSClasses::KMC;
 
+const Decimal64 Decimal64::MaxValue = Decimal64(std::numeric_limits<Int64>::max(), std::numeric_limits<Int64>::max());
+const Decimal64 Decimal64::MinValue = Decimal64(std::numeric_limits<Int64>::min() + 1, 0);
+
 Decimal64::Decimal64(const String& str)
 {
 	size_t dot = str.find('.');
