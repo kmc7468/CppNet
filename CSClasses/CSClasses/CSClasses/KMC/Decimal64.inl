@@ -12,8 +12,8 @@ String Decimal64::ToString() const
 	else
 	{
 		String temp = std::to_string((Int64)(real));
-		String add = real < 0 ? "-" : "";
-		return add + std::to_string(integer) + "." + String(temp.rbegin(), temp.rend());
+		String add = integer == -1 ? "-" : "";
+		return add + std::to_string(integer < 0 ? integer + 1 : integer) + "." + String(temp.rbegin(), temp.rend());
 	}
 }
 
@@ -28,7 +28,8 @@ String Decimal64::ToString(size_t realsize) const
 		String temp = std::to_string((Int64)(real));
 		String temp2 = String(temp.rbegin(), temp.rend()).substr(0, realsize);
 		temp2.insert(0, realsize - temp2.length(), '0');
-		return std::to_string(integer) + "." + temp2;
+		String add = integer == -1 < 0 ? "-" : "";
+		return add + std::to_string(integer < 0 ? integer + 1 : integer) + "." + temp2;
 	}
 }
 

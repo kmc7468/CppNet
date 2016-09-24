@@ -14,7 +14,7 @@ int main(void)
 	cin.imbue(locale("korean"));
 
 	CSClasses::KMC::Decimal64 d = 2.0;
-	CSClasses::KMC::Decimal64 d2 = 2.6;
+	CSClasses::KMC::Decimal64 d2 = 3.6;
 
 	d -= d2;
 
