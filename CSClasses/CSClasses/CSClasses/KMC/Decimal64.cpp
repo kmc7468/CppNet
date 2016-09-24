@@ -8,7 +8,6 @@ Decimal64::Decimal64(const String& str)
 	if (dot == String::npos)
 	{
 		integer = std::stoll(str);
-		real = 0;
 	}
 	else
 	{
@@ -22,7 +21,6 @@ Decimal64::Decimal64(const String& str)
 Decimal64::Decimal64(Int64 integer)
 {
 	this->integer = integer;
-	real = 0;
 }
 
 Decimal64::Decimal64(Double real)
@@ -49,6 +47,7 @@ Decimal64::Decimal64(const Decimal64& d)
 }
 
 Decimal64::Decimal64(Int64 integer, Int64 real)
+
 {
 	this->integer = integer;
 	this->real = real;

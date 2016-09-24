@@ -25,8 +25,8 @@ namespace CSClasses
 			Decimal64(Int64 integer, Int64 real);
 
 		private:
-			Int64 integer;
-			Int64 real;
+			Int64 integer = 0;
+			Int64 real = 0;
 
 		public:
 			inline String ToString() const;
@@ -36,6 +36,9 @@ namespace CSClasses
 			inline Int64 ToInt64() const;
 
 		public:
+			inline Decimal64 operator=(const Decimal64& d) const;
+			inline Decimal64 operator=(Decimal64&& d) const;
+
 			inline Decimal64 operator+(const Decimal64& d) const;
 			inline Decimal64 operator+(Decimal64&& d) const;
 
@@ -44,6 +47,15 @@ namespace CSClasses
 
 			inline Decimal64 operator++();
 			inline Decimal64 operator++(int);
+
+			inline Decimal64 operator-(const Decimal64& d) const;
+			inline Decimal64 operator-(Decimal64&& d) const;
+
+			inline Decimal64 operator-=(const Decimal64& d);
+			inline Decimal64 operator-=(Decimal64&& d);
+
+			inline Decimal64 operator--();
+			inline Decimal64 operator--(int);
 		};
 	}
 }

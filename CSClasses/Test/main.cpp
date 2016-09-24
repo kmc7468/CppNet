@@ -13,15 +13,13 @@ int main(void)
 	cout.imbue(locale("korean"));
 	cin.imbue(locale("korean"));
 
-	CSClasses::KMC::Decimal64 d = 0.0;
-	CSClasses::KMC::Decimal64 d2 = 0.2;
+	CSClasses::KMC::Decimal64 d = 2.0;
+	CSClasses::KMC::Decimal64 d2 = 2.6;
 
-	for (int i = 0; i < 100; i++)
-	{
-		d += d2;
-	}
+	d -= d2;
 
 	Console::WriteLine(d.ToString());
+	Console::WriteLine(d2.ToString());
 
 	MAIN_END
 }
