@@ -13,4 +13,6 @@
 #include "System.Drawing.h"
 #include "System.Windows.Forms.h"
 
+#include "CSClasses/KMC/KMC.h"
+
 #endif

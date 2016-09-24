@@ -67,6 +67,12 @@
     <Filter Include="소스 파일\CSClasses\KMC">
       <UniqueIdentifier>{aecb40c9-ebc1-4fdf-a3d1-e5d3985d3090}</UniqueIdentifier>
     </Filter>
+    <Filter Include="인라인 구현 파일\CSClasses">
+      <UniqueIdentifier>{b4a4636b-d437-425a-ac29-83101d5e1af2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\CSClasses\KMC">
+      <UniqueIdentifier>{174915e5-975b-4382-ab4f-f7024af57c3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -249,6 +255,9 @@
     <ClInclude Include="CSClasses\KMC\Decimal64.h">
       <Filter>헤더 파일\CSClasses\KMC</Filter>
     </ClInclude>
+    <ClInclude Include="CSClasses\KMC\KMC.h">
+      <Filter>헤더 파일\CSClasses\KMC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">
@@ -341,6 +350,9 @@
     </None>
     <None Include="System\Version.inl">
       <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="CSClasses\KMC\Decimal64.inl">
+      <Filter>인라인 구현 파일\CSClasses\KMC</Filter>
     </None>
   </ItemGroup>
 </Project>

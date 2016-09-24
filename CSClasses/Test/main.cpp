@@ -13,12 +13,15 @@ int main(void)
 	cout.imbue(locale("korean"));
 	cin.imbue(locale("korean"));
 
-	var arr = BitConverter::GetBytes((Int16)30000);
-	Console::WriteLine(BitConverter::BytesToHexString(arr));
-	
-	arr = BitConverter::HexStringToBytes<2>(BitConverter::BytesToHexString(arr));
+	CSClasses::KMC::Decimal64 d = 0.0;
+	CSClasses::KMC::Decimal64 d2 = 0.2;
 
-	Console::WriteLine(BitConverter::ToInt16(arr));
+	for (int i = 0; i < 100; i++)
+	{
+		d += d2;
+	}
+
+	Console::WriteLine(d.ToString());
 
 	MAIN_END
 }

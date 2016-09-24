@@ -22,10 +22,32 @@ namespace CSClasses
 			~Decimal64() = default;
 
 		private:
+			Decimal64(Int64 integer, Int64 real);
+
+		private:
 			Int64 integer;
 			Int64 real;
+
+		public:
+			inline String ToString() const;
+			inline String ToString(size_t realsize) const;
+			inline Double ToReal64() const;
+			inline Double ToReal64(size_t realsize) const;
+			inline Int64 ToInt64() const;
+
+		public:
+			inline Decimal64 operator+(const Decimal64& d) const;
+			inline Decimal64 operator+(Decimal64&& d) const;
+
+			inline Decimal64 operator+=(const Decimal64& d);
+			inline Decimal64 operator+=(Decimal64&& d);
+
+			inline Decimal64 operator++();
+			inline Decimal64 operator++(int);
 		};
 	}
 }
+
+#include "Decimal64.inl"
 
 #endif
