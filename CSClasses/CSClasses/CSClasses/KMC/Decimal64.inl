@@ -66,10 +66,11 @@ Decimal64 Decimal64::operator+(const Decimal64& d) const
 	var max = Math::Max(std::to_string(d.real).length(), std::to_string(this->real).length());
 
 	String t = std::to_string(real);
-	t.insert(0, max - t.length() + 1, '0');
+	t.insert(0, max - t.length(), '0');
 
-	integer += std::stoll(t.substr(0, max));
-	real = std::stoll(t.substr(max));
+	if(t.length() != max)
+		integer += std::stoll(t.substr(max));
+	real = std::stoll(t.substr(0, max));
 
 	Decimal64 r(integer, real);
 
@@ -106,8 +107,10 @@ Decimal64 Decimal64::operator+=(const Decimal64& d)
 
 Decimal64 Decimal64::operator+=(Decimal64&& d)
 {
-	integer += d.integer;
-	real += d.real;
+	var a = *this + d;
+
+	integer = a.integer;
+	real = a.real;
 
 	return *this;
 }
@@ -159,7 +162,29 @@ Decimal64 Decimal64::operator-(const Decimal64& d) const
 
 Decimal64 Decimal64::operator-(Decimal64&& d) const
 {
-	Decimal64 r(integer - d.integer, real - d.real);
+	Int64 integer = this->integer - d.integer;
+	Int64 real = 0;
+
+	if (this->real >= d.real)
+	{
+		real = this->real - d.real;
+	}
+	else
+	{
+		Int64 down = 0;
+		integer = this->integer;
+
+		do
+		{
+			integer -= 1;
+			down += 10;
+			real = this->real - d.real + down;
+		} while (real < 0);
+
+		integer -= d.integer;
+	}
+
+	Decimal64 r(integer, real);
 
 	return r;
 }
@@ -198,4 +223,126 @@ Decimal64 Decimal64::operator--(int)
 	integer -= 1;
 
 	return r;
+}
+
+Decimal64 Decimal64::operator*(const Decimal64& d) const
+{
+	Int64 integer = 0;
+	Decimal64 real = 0LL;
+
+	integer = this->integer * d.integer;
+	Decimal64 tmp = this->integer * d.real;
+	if (d.real != 0)
+	{
+		for (size_t i = 0; i < std::to_string(d.real).length(); i++)
+		{
+			if (tmp.integer == 0)
+			{
+				tmp.real = std::stoll(std::to_string(tmp.real) + "0");
+				continue;
+			}
+
+			String temp = std::to_string(tmp.real);
+			String temp2 = std::to_string(tmp.integer);
+			temp += temp2[temp2.length() - 1];
+			temp2 = temp2.substr(0, temp2.length() - 1);
+
+			tmp.integer = std::stoll(temp2);
+			tmp.real = std::stoll(temp);
+		}
+	}
+	integer += tmp.integer;
+	real += Decimal64(0, tmp.real);
+
+	Decimal64 tmp2 = this->real * d.integer;
+	if (this->real != 0)
+	{
+		size_t c = std::to_string(this->real).length();
+		for (size_t i = 0; i < c; i++)
+		{
+			if (tmp2.integer == 0)
+			{
+				tmp2.real = std::stoll(std::to_string(tmp2.real) + "0");
+				continue;
+			}
+
+			String temp = std::to_string(tmp2.real);
+			String temp2 = std::to_string(tmp2.integer);
+			temp += temp2[temp2.length() - 1];
+			temp2 = temp2.substr(0, temp2.length() - 1);
+			if (temp2 == "")
+				temp2 = "0";
+
+			tmp2.integer = std::stoll(temp2);
+			tmp2.real = std::stoll(temp);
+		}
+	}
+	integer += tmp2.integer;
+	real += Decimal64(0, tmp2.real);
+
+	Decimal64 tmp3 = Decimal64(this->real * d.real);
+	tmp3.real = 0;
+	if (this->real != 0 || d.real != 0)
+	{
+		size_t c = std::to_string(this->real).length() + std::to_string(d.real).length();
+		for (size_t i = 0; i < c; i++)
+		{
+			if (tmp3.integer == 0)
+			{
+				tmp3.real = std::stoll(std::to_string(tmp3.real) + "0");
+				continue;
+			}
+
+			String temp = std::to_string(tmp3.real);
+			String temp2 = std::to_string(tmp3.integer);
+			temp += temp2[temp2.length() - 1];
+			temp2 = temp2.substr(0, temp2.length() - 1);
+			if (temp2 == "")
+				temp2 = "0";
+
+			tmp3.integer = std::stoll(temp2);
+			tmp3.real = std::stoll(temp);
+		}
+	}
+	integer += tmp3.integer;
+	real += Decimal64(0, tmp3.real);
+
+	Decimal64 r(integer, real.real);
+
+	return r;
+}
+
+Decimal64 Decimal64::operator*(Decimal64&& d) const
+{
+	Int64 integer = 0, real = 0;
+
+	integer = this->integer * d.integer;
+	integer *= d.real;
+
+	real = this->real * d.real;
+	real *= d.integer;
+
+	Decimal64 r(integer, real);
+
+	return r;
+}
+
+Decimal64 Decimal64::operator*=(const Decimal64& d)
+{
+	var r = *this * d;
+
+	integer = r.integer;
+	real = r.real;
+
+	return *this;
+}
+
+Decimal64 Decimal64::operator*=(Decimal64&& d)
+{
+	var r = *this * d;
+
+	integer = r.integer;
+	real = r.real;
+
+	return *this;
 }

@@ -60,6 +60,12 @@ namespace CSClasses
 
 			inline Decimal64 operator--();
 			inline Decimal64 operator--(int);
+
+			inline Decimal64 operator*(const Decimal64& d) const;
+			inline Decimal64 operator*(Decimal64&& d) const;
+
+			inline Decimal64 operator*=(const Decimal64& d);
+			inline Decimal64 operator*=(Decimal64&& d);
 		};
 	}
 }

@@ -50,7 +50,6 @@ Decimal64::Decimal64(const Decimal64& d)
 }
 
 Decimal64::Decimal64(Int64 integer, Int64 real)
-
 {
 	this->integer = integer;
 	this->real = real;
