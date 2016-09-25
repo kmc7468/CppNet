@@ -48,14 +48,20 @@ Int64 Decimal64::ToInt64() const
 	return integer;
 }
 
-Decimal64 Decimal64::operator=(const Decimal64& d) const
+Decimal64 Decimal64::operator=(const Decimal64& d)
 {
-	return Decimal64(d);
+	integer = d.integer;
+	real = d.real;
+
+	return *this;
 }
 
-Decimal64 Decimal64::operator=(Decimal64&& d) const
+Decimal64 Decimal64::operator=(Decimal64&& d)
 {
-	return Decimal64(d);
+	integer = d.integer;
+	real = d.real;
+
+	return *this;
 }
 
 Decimal64 Decimal64::operator+(const Decimal64& d) const
@@ -227,10 +233,14 @@ Decimal64 Decimal64::operator--(int)
 
 Decimal64 Decimal64::operator*(const Decimal64& d) const
 {
-	Int64 integer = 0;
-	Decimal64 real = 0LL;
+	if (real == 0 && d.real == 0 || real != 0 && d.real == 0 || real == 0 && d.real != 0)
+	{
+		Decimal64 r(integer * d.integer, 0);
 
-	integer = this->integer * d.integer;
+		return r;
+	}
+
+	/*integer = this->integer * d.integer;
 	Decimal64 tmp = this->integer * d.real;
 	if (d.real != 0)
 	{
@@ -309,7 +319,7 @@ Decimal64 Decimal64::operator*(const Decimal64& d) const
 
 	Decimal64 r(integer, real.real);
 
-	return r;
+	return r;*/
 }
 
 Decimal64 Decimal64::operator*(Decimal64&& d) const

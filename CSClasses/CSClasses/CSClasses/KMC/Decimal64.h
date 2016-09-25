@@ -40,8 +40,8 @@ namespace CSClasses
 			inline Int64 ToInt64() const;
 
 		public:
-			inline Decimal64 operator=(const Decimal64& d) const;
-			inline Decimal64 operator=(Decimal64&& d) const;
+			inline Decimal64 operator=(const Decimal64& d);
+			inline Decimal64 operator=(Decimal64&& d);
 
 			inline Decimal64 operator+(const Decimal64& d) const;
 			inline Decimal64 operator+(Decimal64&& d) const;
