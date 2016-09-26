@@ -20,7 +20,7 @@ Byte Decimal::ByteTool::IntsToByte(Byte a, Byte b)
 
 std::tuple<Byte, Byte> Decimal::ByteTool::ByteToInts(Byte b)
 {
-	if (b == 0) return std::make_tuple(0, 0);
+	if (b == 0) return std::make_tuple<Byte, Byte>(0, 0);
 
 	String bin = BitConverter::BytesToBinString(std::array<Byte, 1>{b});
 	bin.insert(0, 8 - bin.length(), '0');
@@ -60,4 +60,13 @@ String Decimal::ToString(size_t realsize) const
 	a = a.substr(0, find) + a.substr(find, realsize + 1);
 
 	return a;
+}
+
+void Decimal::Clean()
+{
+	while (mReal.size() > 0 && mReal[mReal.size() - 1] == 0)
+		mReal.erase(mReal.begin() + (mReal.size() - 1));
+
+	while (mInteger.size() > 0 && mInteger[0] == 0)
+		mInteger.erase(mInteger.begin());
 }

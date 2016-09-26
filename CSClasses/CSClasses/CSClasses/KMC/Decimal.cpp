@@ -2,6 +2,12 @@
 using namespace CSClasses::KMC;
 using namespace System;
 
+Decimal::Decimal()
+{
+	mInteger.push_back(0);
+	mReal.push_back(0);
+}
+
 Decimal::Decimal(const String& str)
 {
 	String s(str);
@@ -40,6 +46,8 @@ Decimal::Decimal(const String& str)
 			mReal.push_back(c);
 		}
 	}
+
+	Clean();
 }
 
 Decimal::Decimal(Int64 integer)
@@ -58,14 +66,57 @@ Decimal::Decimal(Decimal&& d)
 {
 	mInteger = d.mInteger;
 	mReal = d.mReal;
+
+	Clean();
 }
 
 Decimal::Decimal(const Decimal& d)
 {
 	mInteger = d.mInteger;
 	mReal = d.mReal;
+
+	Clean();
 }
 
+Boolean Decimal::operator==(const Object& obj)
+{
+	if (is<const Decimal&>(obj))
+	{
+		var a = as<const Decimal&>(obj);
+
+		if (a.ToString() == (*this).ToString())
+			return true;
+		else
+			return false;
+	}
+	else
+		return false;
+}
+
+Boolean Decimal::operator!=(const Object& obj)
+{
+	return !Decimal::operator==(obj);
+}
+
+Decimal Decimal::operator=(const Decimal& d)
+{
+	mInteger = d.mInteger;
+	mReal = d.mReal;
+
+	Clean();
+
+	return *this;
+}
+
+Decimal Decimal::operator=(Decimal&& d)
+{
+	mInteger = d.mInteger;
+	mReal = d.mReal;
+
+	Clean();
+
+	return *this;
+}
 
 String Decimal::ToString() const
 {
@@ -82,7 +133,7 @@ String Decimal::ToString() const
 		integer += ByteTool::FromByte(two);
 	}
 
-	while (integer[0] == '0')
+	while (integer[0] == '0' && integer.length() > 1)
 		integer = integer.substr(1);
 
 	String real = "";
@@ -97,9 +148,12 @@ String Decimal::ToString() const
 		real += ByteTool::FromByte(one);
 		real += ByteTool::FromByte(two);
 	}
-	
-	while (real[real.length() - 1] == '0')
+
+	while (real[real.length() - 1] == '0' && real.length() > 1)
 		real = real.substr(0, real.length() - 1);
+
+	if (real == "0")
+		return integer;
 
 	if (real != "")
 		return integer + "." + real;
@@ -107,3 +161,63 @@ String Decimal::ToString() const
 	return integer;
 }
 
+Decimal Decimal::operator+(const Decimal& d) const
+{
+	Decimal a = *this;
+	Decimal b = Decimal(d);
+	Decimal c = 0.0;
+
+	// TODO
+
+	return c;
+}
+
+Decimal Decimal::operator+(Decimal&& d) const
+{
+	Decimal a = *this;
+	Decimal b = Decimal(d);
+	Decimal c = 0.0;
+
+	// TODO
+
+	return c;
+}
+
+Decimal Decimal::operator+=(const Decimal& d)
+{
+	Decimal a = *this + d;
+
+	mInteger = a.mInteger;
+	mReal = a.mReal;
+
+	return *this;
+}
+
+Decimal Decimal::operator+=(Decimal&& d)
+{
+	Decimal a = *this + d;
+
+	mInteger = a.mInteger;
+	mReal = a.mReal;
+
+	return *this;
+}
+
+Decimal Decimal::operator++()
+{
+	Decimal a = *this + 1.0;
+
+	mInteger = a.mInteger;
+
+	return *this;
+}
+
+Decimal Decimal::operator++(int)
+{
+	Decimal a = *this + 1.0;
+	Decimal b = *this;
+
+	mInteger = a.mInteger;
+
+	return b;
+}

@@ -159,7 +159,6 @@
     <ClInclude Include="CSClasses.h" />
     <ClInclude Include="CSClasses\CSClasses.h" />
     <ClInclude Include="CSClasses\KMC\Decimal.h" />
-    <ClInclude Include="CSClasses\KMC\Decimal64.h" />
     <ClInclude Include="CSClasses\KMC\KMC.h" />
     <ClInclude Include="CSClasses\Unicode.h" />
     <ClInclude Include="DateTime.h" />
@@ -217,7 +216,6 @@
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="CharUnicodeInfo.cpp" />
     <ClCompile Include="CSClasses\KMC\Decimal.cpp" />
-    <ClCompile Include="CSClasses\KMC\Decimal64.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="DoubleT.cpp" />
     <ClCompile Include="Exception.cpp" />
@@ -240,7 +238,6 @@
     <None Include="Console.inl" />
     <None Include="Convert.inl" />
     <None Include="CSClasses\KMC\Decimal.inl" />
-    <None Include="CSClasses\KMC\Decimal64.inl" />
     <None Include="DoubleT.inl" />
     <None Include="Math.inl" />
     <None Include="Object.inl" />

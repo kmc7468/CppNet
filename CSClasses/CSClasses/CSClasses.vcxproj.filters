@@ -252,9 +252,6 @@
     <ClInclude Include="System\Version.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="CSClasses\KMC\Decimal64.h">
-      <Filter>헤더 파일\CSClasses\KMC</Filter>
-    </ClInclude>
     <ClInclude Include="CSClasses\KMC\KMC.h">
       <Filter>헤더 파일\CSClasses\KMC</Filter>
     </ClInclude>
@@ -322,9 +319,6 @@
     <ClCompile Include="System\Version.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
-    <ClCompile Include="CSClasses\KMC\Decimal64.cpp">
-      <Filter>소스 파일\CSClasses\KMC</Filter>
-    </ClCompile>
     <ClCompile Include="CSClasses\KMC\Decimal.cpp">
       <Filter>소스 파일\CSClasses\KMC</Filter>
     </ClCompile>
@@ -356,9 +350,6 @@
     </None>
     <None Include="System\Version.inl">
       <Filter>인라인 구현 파일\System</Filter>
-    </None>
-    <None Include="CSClasses\KMC\Decimal64.inl">
-      <Filter>인라인 구현 파일\CSClasses\KMC</Filter>
     </None>
     <None Include="CSClasses\KMC\Decimal.inl">
       <Filter>인라인 구현 파일\CSClasses\KMC</Filter>

@@ -28,7 +28,7 @@ namespace CSClasses
 			std::vector<Byte> mReal;
 
 		public:
-			Decimal() = default;
+			Decimal();
 			Decimal(const String& str);
 			Decimal(Int64 integer);
 			Decimal(Int64 integer, const String& real);
@@ -40,6 +40,26 @@ namespace CSClasses
 		public:
 			String ToString() const;
 			inline String ToString(size_t realsize) const;
+
+		public:
+			Boolean operator==(const Object& obj) override;
+			Boolean operator!=(const Object& obj) override;
+
+		public:
+			Decimal operator=(const Decimal& d);
+			Decimal operator=(Decimal&& d);
+
+			Decimal operator+(const Decimal& d) const;
+			Decimal operator+(Decimal&& d) const;
+
+			Decimal operator+=(const Decimal& d);
+			Decimal operator+=(Decimal&& d);
+
+			Decimal operator++();
+			Decimal operator++(int);
+
+		private:
+			inline void Clean();
 		};
 
 		//using Decimal64 = Decimal<8, 8, Int64, Double>;
