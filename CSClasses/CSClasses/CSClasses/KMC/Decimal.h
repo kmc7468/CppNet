@@ -2,8 +2,10 @@
 #define CSCLASSES_KMC_DECIMAL_H
 
 #include "../../SystemTypes.h"
+#include "../../Queue.h"
 #include <vector>
 using namespace::System;
+using namespace::System::Collections::Generic;
 
 namespace CSClasses
 {
@@ -22,17 +24,18 @@ namespace CSClasses
 			};
 
 		private:
-			std::vector<Byte>* data;
+			std::vector<Byte> mInteger;
+			std::vector<Byte> mReal;
 
 		public:
-			Decimal();
+			Decimal() = default;
 			Decimal(const String& str);
 			Decimal(Int64 integer);
 			Decimal(Int64 integer, const String& real);
 			Decimal(Double real);
 			Decimal(Decimal&& d);
 			Decimal(const Decimal& d);
-			~Decimal();
+			~Decimal() = default;
 
 		public:
 			String ToString() const;

@@ -20,9 +20,9 @@ int main(void)
 
 	Console::WriteLine(d.ToString());
 
-	CSClasses::KMC::Decimal d3 = 5.3;
+	CSClasses::KMC::Decimal d3("3.1415926535");
 
-	Console::WriteLine(d.ToString());
+	Console::WriteLine(d3.ToString(15));
 
 	MAIN_END
 }

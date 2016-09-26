@@ -6,13 +6,22 @@ using namespace CSClasses::KMC;
 
 Byte Decimal::ByteTool::IntsToByte(Byte a, Byte b)
 {
-	String bin = BitConverter::BytesToBinString(std::array<Byte, 2>{a, b});
+	if (a == 0 && b == 0) return 0;
 
-	return BitConverter::BinStringToBytes<1>(bin)[0];
+	String bin1 = a != 0 ? BitConverter::BytesToBinString(std::array<Byte, 1>{a}) : "";
+	String bin2 = b != 0 ? BitConverter::BytesToBinString(std::array<Byte, 1>{b}) : "";
+	bin1.insert(0, 4 - bin1.length(), '0');
+	bin2.insert(0, 4 - bin2.length(), '0');
+
+	var temp = BitConverter::BinStringToBytes<1>(bin1 + bin2);
+
+	return temp[0];
 }
 
 std::tuple<Byte, Byte> Decimal::ByteTool::ByteToInts(Byte b)
 {
+	if (b == 0) return std::make_tuple(0, 0);
+
 	String bin = BitConverter::BytesToBinString(std::array<Byte, 1>{b});
 	bin.insert(0, 8 - bin.length(), '0');
 
@@ -44,7 +53,7 @@ String Decimal::ToString(size_t realsize) const
 
 	if (r_size <= realsize)
 	{
-		a.insert(a.length() - 1, realsize - r_size, '0');
+		a.insert(a.length(), realsize - r_size + 1, '0');
 		return a;
 	}
 

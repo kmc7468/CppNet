@@ -2,15 +2,8 @@
 using namespace CSClasses::KMC;
 using namespace System;
 
-Decimal::Decimal()
-{
-	data = new std::vector<Byte>[2];
-}
-
 Decimal::Decimal(const String& str)
 {
-	data = new std::vector<Byte>[2];
-
 	String s(str);
 	s.insert(0, s.length() % 2, '0');
 
@@ -18,7 +11,7 @@ Decimal::Decimal(const String& str)
 	{
 		for (size_t i = 0; i < s.length() / 2; i++)
 		{
-			data[0].push_back(ByteTool::IntsToByte(ByteTool::ToByte(s[i * 2]), ByteTool::ToByte(s[i * 2 + 1])));
+			mInteger.push_back(ByteTool::IntsToByte(ByteTool::ToByte(s[i * 2]), ByteTool::ToByte(s[i * 2 + 1])));
 		}
 	}
 	else
@@ -29,16 +22,22 @@ Decimal::Decimal(const String& str)
 		String real = s.substr(dot + 1);
 
 		integer.insert(0, integer.length() % 2, '0');
-		real.insert(0, real.length() % 2, '0');
+		real.insert(real.length(), real.length() % 2, '0');
 
 		for (size_t i = 0; i < integer.length() / 2; i++)
 		{
-			data[0].push_back(ByteTool::IntsToByte(ByteTool::ToByte(integer[i * 2]), ByteTool::ToByte(integer[i * 2 + 1])));
+			Byte first = ByteTool::ToByte(integer[i * 2]);
+			Byte second = ByteTool::ToByte(integer[i * 2 + 1]);
+			Byte c = ByteTool::IntsToByte(first, second);
+			mInteger.push_back(c);
 		}
 
 		for (size_t i = 0; i < real.length() / 2; i++)
 		{
-			data[1].push_back(ByteTool::IntsToByte(ByteTool::ToByte(real[i * 2]), ByteTool::ToByte(real[i * 2 + 1])));
+			Byte first = ByteTool::ToByte(real[i * 2]);
+			Byte second = ByteTool::ToByte(real[i * 2 + 1]);
+			Byte c = ByteTool::IntsToByte(first, second);
+			mReal.push_back(c);
 		}
 	}
 }
@@ -57,30 +56,22 @@ Decimal::Decimal(Double real)
 
 Decimal::Decimal(Decimal&& d)
 {
-	data = new std::vector<Byte>[2];
-
-	data[0] = d.data[0];
-	data[1] = d.data[1];
+	mInteger = d.mInteger;
+	mReal = d.mReal;
 }
 
 Decimal::Decimal(const Decimal& d)
 {
-	data = new std::vector<Byte>[2];
-
-	data[0] = d.data[0];
-	data[1] = d.data[1];
+	mInteger = d.mInteger;
+	mReal = d.mReal;
 }
 
-Decimal::~Decimal()
-{
-	delete[] data;
-}
 
 String Decimal::ToString() const
 {
 	String integer = "";
 
-	for (var b : data[0])
+	for (var b : mInteger)
 	{
 		var a = ByteTool::ByteToInts(b);
 
@@ -96,7 +87,7 @@ String Decimal::ToString() const
 
 	String real = "";
 
-	for (var b : data[1])
+	for (var b : mReal)
 	{
 		var a = ByteTool::ByteToInts(b);
 
