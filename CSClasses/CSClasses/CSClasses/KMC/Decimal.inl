@@ -64,9 +64,9 @@ String Decimal::ToString(size_t realsize) const
 
 void Decimal::Clean()
 {
-	while (mReal.size() > 0 && mReal[mReal.size() - 1] == 0)
+	while (mReal.size() > 1 && mReal[mReal.size() - 1] == 0)
 		mReal.erase(mReal.begin() + (mReal.size() - 1));
 
-	while (mInteger.size() > 0 && mInteger[0] == 0)
+	while (mInteger.size() > 1 && mInteger[0] == 0)
 		mInteger.erase(mInteger.begin());
 }

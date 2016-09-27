@@ -16,9 +16,7 @@ Decimal::Decimal(const String& str)
 	if (s.find('.') == String::npos)
 	{
 		for (size_t i = 0; i < s.length() / 2; i++)
-		{
-			mInteger.push_back(ByteTool::IntsToByte(ByteTool::ToByte(s[i * 2]), ByteTool::ToByte(s[i * 2 + 1])));
-		}
+			mInteger += ByteTool::IntsToByte(ByteTool::ToByte(s[i * 2]), ByteTool::ToByte(s[i * 2 + 1]));
 	}
 	else
 	{
@@ -35,7 +33,7 @@ Decimal::Decimal(const String& str)
 			Byte first = ByteTool::ToByte(integer[i * 2]);
 			Byte second = ByteTool::ToByte(integer[i * 2 + 1]);
 			Byte c = ByteTool::IntsToByte(first, second);
-			mInteger.push_back(c);
+			mInteger += c;
 		}
 
 		for (size_t i = 0; i < real.length() / 2; i++)
@@ -43,7 +41,7 @@ Decimal::Decimal(const String& str)
 			Byte first = ByteTool::ToByte(real[i * 2]);
 			Byte second = ByteTool::ToByte(real[i * 2 + 1]);
 			Byte c = ByteTool::IntsToByte(first, second);
-			mReal.push_back(c);
+			mReal += c;
 		}
 	}
 

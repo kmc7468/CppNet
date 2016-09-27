@@ -24,8 +24,11 @@ namespace CSClasses
 			};
 
 		private:
-			std::vector<Byte> mInteger;
-			std::vector<Byte> mReal;
+			typedef std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>> t;
+
+		private:
+			t mInteger;
+			t mReal;
 
 		public:
 			Decimal();
