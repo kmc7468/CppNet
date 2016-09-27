@@ -62,6 +62,8 @@ namespace CSClasses
 			Decimal operator++();
 			Decimal operator++(int);
 
+			Decimal operator-(const Decimal& d) const;
+
 		private:
 			inline void Clean();
 		};

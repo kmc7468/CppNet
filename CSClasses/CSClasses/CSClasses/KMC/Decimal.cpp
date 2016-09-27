@@ -17,6 +17,8 @@ Decimal::Decimal(const String& str)
 	{
 		for (size_t i = 0; i < s.length() / 2; i++)
 			mInteger += ByteTool::IntsToByte(ByteTool::ToByte(s[i * 2]), ByteTool::ToByte(s[i * 2 + 1]));
+
+		mReal += (Byte)0;
 	}
 	else
 	{
@@ -188,10 +190,12 @@ Decimal Decimal::operator+(const Decimal& d) const
 			var two_b = std::get<1>(temp02);
 
 			Byte temp04 = two_a + two_b + up;
-			up = temp04 > 9 ? temp04 - 9 : 0;
+			up = temp04 > 9 ? 1 : 0;
+			if (up != 0) temp04 -= 10;
 
 			Byte temp03 = one_a + one_b + up;
-			up = temp03 > 9 ? temp03 - 9 : 0;
+			up = temp03 > 9 ? 1 : 0;
+			if (up != 0) temp03 -= 10;
 
 			c.mReal.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
 		
@@ -218,10 +222,12 @@ Decimal Decimal::operator+(const Decimal& d) const
 			var two_b = std::get<1>(temp02);
 
 			Byte temp04 = two_a + two_b + up;
-			up = temp04 > 9 ? temp04 - 9 : 0;
+			up = temp04 > 9 ? 1 : 0;
+			if (up != 0) temp04 -= 10;
 
 			Byte temp03 = one_a + one_b + up;
-			up = temp03 > 9 ? temp03 - 9 : 0;
+			up = temp03 > 9 ? 1 : 0;
+			if (up != 0) temp03 -= 10;
 
 			c.mInteger.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
 
@@ -350,4 +356,73 @@ Decimal Decimal::operator++(int)
 	mInteger = a.mInteger;
 
 	return b;
+}
+
+Decimal Decimal::operator-(const Decimal& d) const
+{
+	Decimal a = *this;
+	Decimal b = d;
+	Decimal c = 0.0;
+	c.mInteger = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
+	c.mReal = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	{ // Real
+		for (size_t i = a.mReal.length() - 1; i >= 0; i--)
+		{
+			var temp01 = ByteTool::ByteToInts(a.mReal[i]);
+
+			var one_a = std::get<0>(temp01);
+			var two_a = std::get<1>(temp01);
+
+			var temp02 = ByteTool::ByteToInts(b.mReal[i]);
+
+			var one_b = std::get<0>(temp02);
+			var two_b = std::get<1>(temp02);
+
+			Byte temp04 = two_a - two_b;
+
+			Byte temp03 = one_a - one_b;
+
+			c.mReal.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+
+			if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+		}
+	}
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	{ // Integer
+		for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
+		{
+			var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
+
+			var one_a = std::get<0>(temp01);
+			var two_a = std::get<1>(temp01);
+
+			var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
+
+			var one_b = std::get<0>(temp02);
+			var two_b = std::get<1>(temp02);
+
+			Byte temp04 = two_a - two_b;
+
+			Byte temp03 = one_a - one_b;
+
+			c.mInteger.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+
+			if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+		}
+	}
+
+	c.Clean();
+
+	return c;
 }

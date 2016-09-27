@@ -39,8 +39,8 @@ int main(void)
 	}
 
 	{
-		Decimal d1 = 2.0;
-		Decimal d2 = "3.141592"s;
+		Decimal d1 = 5.3;
+		Decimal d2 = "15.9"s;
 		Decimal d3;
 		
 		var time_a = std::chrono::system_clock::now();
@@ -55,6 +55,16 @@ int main(void)
 		Console::WriteLine(d3.ToString());
 	}
 
+	{
+		String a = Console::ReadLine();
+		String b = Console::ReadLine();
+
+		Decimal d1 = a;
+		Decimal d2 = b;
+		Decimal d3 = d1 + d2;
+
+		Console::WriteLine(d3.ToString());
+	}
 
 	MAIN_END
 }
