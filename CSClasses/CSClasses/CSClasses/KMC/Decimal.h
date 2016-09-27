@@ -29,6 +29,7 @@ namespace CSClasses
 		private:
 			t mInteger;
 			t mReal;
+			Boolean isN = false;
 
 		public:
 			Decimal();
@@ -64,8 +65,6 @@ namespace CSClasses
 		private:
 			inline void Clean();
 		};
-
-		//using Decimal64 = Decimal<8, 8, Int64, Double>;
 	}
 }
 
