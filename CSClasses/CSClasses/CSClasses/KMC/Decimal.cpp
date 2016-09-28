@@ -28,6 +28,7 @@ Decimal::Decimal(Decimal&& d)
 {
 	mInteger = d.mInteger;
 	mReal = d.mReal;
+	isN = d.isN;
 
 	Clean();
 }
@@ -36,6 +37,7 @@ Decimal::Decimal(const Decimal& d)
 {
 	mInteger = d.mInteger;
 	mReal = d.mReal;
+	isN = d.isN;
 
 	Clean();
 }
@@ -45,6 +47,13 @@ Decimal Decimal::Parse(const String& str)
 	Decimal r;
 
 	String s(str);
+
+	if (s.find('-') != String::npos)
+	{
+		r.isN = true;
+		s = s.substr(1);
+	}
+
 	s.insert(0, s.length() % 2, '0');
 
 	if (s.find('.') == String::npos)
@@ -160,6 +169,9 @@ String Decimal::ToString() const
 	while (real[real.length() - 1] == '0' && real.length() > 1)
 		real = real.substr(0, real.length() - 1);
 
+	if (isN)
+		integer = "-" + integer;
+
 	if (real == "0")
 		return integer;
 
@@ -184,65 +196,85 @@ Decimal Decimal::operator+(const Decimal& d) const
 
 	Byte up = 0;
 
-	{ // Real
-		for (size_t i = a.mReal.length() - 1; i >= 0; i--)
-		{
-			var temp01 = ByteTool::ByteToInts(a.mReal[i]);
+	// 둘다 음수이거나 들다 양수일 때
+	if (!a.isN && !b.isN || a.isN && b.isN)
+	{
+		c.isN = a.isN;
 
-			var one_a = std::get<0>(temp01);
-			var two_a = std::get<1>(temp01);
+		{ // Real
+			for (size_t i = a.mReal.length() - 1; i >= 0; i--)
+			{
+				var temp01 = ByteTool::ByteToInts(a.mReal[i]);
 
-			var temp02 = ByteTool::ByteToInts(b.mReal[i]);
+				var one_a = std::get<0>(temp01);
+				var two_a = std::get<1>(temp01);
 
-			var one_b = std::get<0>(temp02);
-			var two_b = std::get<1>(temp02);
+				var temp02 = ByteTool::ByteToInts(b.mReal[i]);
 
-			Byte temp04 = two_a + two_b + up;
-			up = temp04 > 9 ? 1 : 0;
-			if (up != 0) temp04 -= 10;
+				var one_b = std::get<0>(temp02);
+				var two_b = std::get<1>(temp02);
 
-			Byte temp03 = one_a + one_b + up;
-			up = temp03 > 9 ? 1 : 0;
-			if (up != 0) temp03 -= 10;
+				Byte temp04 = two_a + two_b + up;
+				up = temp04 > 9 ? 1 : 0;
+				if (up != 0) temp04 -= 10;
 
-			c.mReal.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
-		
-			if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+				Byte temp03 = one_a + one_b + up;
+				up = temp03 > 9 ? 1 : 0;
+				if (up != 0) temp03 -= 10;
+
+				c.mReal.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+
+				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+			}
+		}
+
+		if (a.mInteger.length() >= b.mInteger.length())
+			b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+		else
+			a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+		{ // Integer
+			for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
+			{
+				var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
+
+				var one_a = std::get<0>(temp01);
+				var two_a = std::get<1>(temp01);
+
+				var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
+
+				var one_b = std::get<0>(temp02);
+				var two_b = std::get<1>(temp02);
+
+				Byte temp04 = two_a + two_b + up;
+				up = temp04 > 9 ? 1 : 0;
+				if (up != 0) temp04 -= 10;
+
+				Byte temp03 = one_a + one_b + up;
+				up = temp03 > 9 ? 1 : 0;
+				if (up != 0) temp03 -= 10;
+
+				c.mInteger.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+
+				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+			}
+
+			c.mInteger = ByteTool::IntsToByte(0, up) + c.mInteger;
 		}
 	}
-
-	if (a.mInteger.length() >= b.mInteger.length())
-		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
-	else
-		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
-
-	{ // Integer
-		for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
-		{
-			var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
-
-			var one_a = std::get<0>(temp01);
-			var two_a = std::get<1>(temp01);
-
-			var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
-
-			var one_b = std::get<0>(temp02);
-			var two_b = std::get<1>(temp02);
-
-			Byte temp04 = two_a + two_b + up;
-			up = temp04 > 9 ? 1 : 0;
-			if (up != 0) temp04 -= 10;
-
-			Byte temp03 = one_a + one_b + up;
-			up = temp03 > 9 ? 1 : 0;
-			if (up != 0) temp03 -= 10;
-
-			c.mInteger.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
-
-			if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
-		}
-
-		c.mInteger = ByteTool::IntsToByte(0, up) + c.mInteger;
+	// a가 양수일 때
+	else if (!a.isN && b.isN)
+	{
+		Decimal d = b;
+		d.isN = false;
+		c = a - d;
+	}
+	// b가 양수일 때
+	else if (a.isN && !b.isN)
+	{
+		Decimal d = a;
+		d.isN = false;
+		c = b - d;
 	}
 
 	c.Clean();
@@ -265,61 +297,85 @@ Decimal Decimal::operator+(Decimal&& d) const
 
 	Byte up = 0;
 
-	{ // Real
-		for (size_t i = a.mReal.length() - 1; i >= 0; i--)
-		{
-			var temp01 = ByteTool::ByteToInts(a.mReal[i]);
+	// 둘다 음수이거나 들다 양수일 때
+	if (!a.isN && !b.isN || a.isN && b.isN)
+	{
+		c.isN = a.isN;
 
-			var one_a = std::get<0>(temp01);
-			var two_a = std::get<1>(temp01);
+		{ // Real
+			for (size_t i = a.mReal.length() - 1; i >= 0; i--)
+			{
+				var temp01 = ByteTool::ByteToInts(a.mReal[i]);
 
-			var temp02 = ByteTool::ByteToInts(b.mReal[i]);
+				var one_a = std::get<0>(temp01);
+				var two_a = std::get<1>(temp01);
 
-			var one_b = std::get<0>(temp02);
-			var two_b = std::get<1>(temp02);
+				var temp02 = ByteTool::ByteToInts(b.mReal[i]);
 
-			Byte temp04 = two_a + two_b + up;
-			up = temp04 > 9 ? temp04 - 9 : 0;
+				var one_b = std::get<0>(temp02);
+				var two_b = std::get<1>(temp02);
 
-			Byte temp03 = one_a + one_b + up;
-			up = temp03 > 9 ? temp03 - 9 : 0;
+				Byte temp04 = two_a + two_b + up;
+				up = temp04 > 9 ? 1 : 0;
+				if (up != 0) temp04 -= 10;
 
-			c.mReal.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+				Byte temp03 = one_a + one_b + up;
+				up = temp03 > 9 ? 1 : 0;
+				if (up != 0) temp03 -= 10;
 
-			if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+				c.mReal.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+
+				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+			}
+		}
+
+		if (a.mInteger.length() >= b.mInteger.length())
+			b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+		else
+			a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+		{ // Integer
+			for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
+			{
+				var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
+
+				var one_a = std::get<0>(temp01);
+				var two_a = std::get<1>(temp01);
+
+				var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
+
+				var one_b = std::get<0>(temp02);
+				var two_b = std::get<1>(temp02);
+
+				Byte temp04 = two_a + two_b + up;
+				up = temp04 > 9 ? 1 : 0;
+				if (up != 0) temp04 -= 10;
+
+				Byte temp03 = one_a + one_b + up;
+				up = temp03 > 9 ? 1 : 0;
+				if (up != 0) temp03 -= 10;
+
+				c.mInteger.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+
+				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+			}
+
+			c.mInteger = ByteTool::IntsToByte(0, up) + c.mInteger;
 		}
 	}
-
-	if (a.mInteger.length() >= b.mInteger.length())
-		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
-	else
-		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
-
-	{ // Integer
-		for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
-		{
-			var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
-
-			var one_a = std::get<0>(temp01);
-			var two_a = std::get<1>(temp01);
-
-			var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
-
-			var one_b = std::get<0>(temp02);
-			var two_b = std::get<1>(temp02);
-
-			Byte temp04 = two_a + two_b + up;
-			up = temp04 > 9 ? temp04 - 9 : 0;
-
-			Byte temp03 = one_a + one_b + up;
-			up = temp03 > 9 ? temp03 - 9 : 0;
-
-			c.mInteger.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
-
-			if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
-		}
-
-		c.mInteger = ByteTool::IntsToByte(0, up) + c.mInteger;
+	// a가 양수일 때
+	else if (!a.isN && b.isN)
+	{
+		Decimal d = b;
+		d.isN = false;
+		c = a - d;
+	}
+	// b가 양수일 때
+	else if (a.isN && !b.isN)
+	{
+		Decimal d = a;
+		d.isN = false;
+		c = b - d;
 	}
 
 	c.Clean();
@@ -369,7 +425,7 @@ Decimal Decimal::operator++(int)
 Decimal Decimal::operator-(const Decimal& d) const
 {
 	Decimal a = *this;
-	Decimal b = d;
+	Decimal b = Decimal(d);
 	Decimal c = 0.0;
 	c.mInteger = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
 	c.mReal = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
@@ -379,55 +435,75 @@ Decimal Decimal::operator-(const Decimal& d) const
 	else
 		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
 
-	{ // Real
-		for (size_t i = a.mReal.length() - 1; i >= 0; i--)
-		{
-			var temp01 = ByteTool::ByteToInts(a.mReal[i]);
+	// 둘다 음수이거나 들다 양수일 때
+	if (!a.isN && !b.isN || a.isN && b.isN)
+	{
+		c.isN = a.isN;
 
-			var one_a = std::get<0>(temp01);
-			var two_a = std::get<1>(temp01);
+		{ // Real
+			for (size_t i = a.mReal.length() - 1; i >= 0; i--)
+			{
+				var temp01 = ByteTool::ByteToInts(a.mReal[i]);
 
-			var temp02 = ByteTool::ByteToInts(b.mReal[i]);
+				var one_a = std::get<0>(temp01);
+				var two_a = std::get<1>(temp01);
 
-			var one_b = std::get<0>(temp02);
-			var two_b = std::get<1>(temp02);
+				var temp02 = ByteTool::ByteToInts(b.mReal[i]);
 
-			Byte temp04 = two_a - two_b;
+				var one_b = std::get<0>(temp02);
+				var two_b = std::get<1>(temp02);
 
-			Byte temp03 = one_a - one_b;
+				Byte temp04 = two_a - two_b;
 
-			c.mReal.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+				Byte temp03 = one_a - one_b;
 
-			if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+				c.mReal.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+
+				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+			}
+		}
+
+		if (a.mInteger.length() >= b.mInteger.length())
+			b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+		else
+			a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+		{ // Integer
+			for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
+			{
+				var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
+
+				var one_a = std::get<0>(temp01);
+				var two_a = std::get<1>(temp01);
+
+				var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
+
+				var one_b = std::get<0>(temp02);
+				var two_b = std::get<1>(temp02);
+
+				Byte temp04 = two_a - two_b;
+
+				Byte temp03 = one_a - one_b;
+
+				c.mInteger.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+
+				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+			}
 		}
 	}
-
-	if (a.mInteger.length() >= b.mInteger.length())
-		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
-	else
-		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
-
-	{ // Integer
-		for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
-		{
-			var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
-
-			var one_a = std::get<0>(temp01);
-			var two_a = std::get<1>(temp01);
-
-			var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
-
-			var one_b = std::get<0>(temp02);
-			var two_b = std::get<1>(temp02);
-
-			Byte temp04 = two_a - two_b;
-
-			Byte temp03 = one_a - one_b;
-
-			c.mInteger.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
-
-			if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
-		}
+	// a가 양수일 때
+	else if (!a.isN && b.isN)
+	{
+		Decimal d = b;
+		d.isN = false;
+		c = a + d;
+	}
+	// b가 양수일 때
+	else if (a.isN && !b.isN)
+	{
+		Decimal d = a;
+		d.isN = true;
+		c = b + d;
 	}
 
 	c.Clean();
