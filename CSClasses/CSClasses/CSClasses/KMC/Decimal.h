@@ -46,6 +46,12 @@ namespace CSClasses
 			inline String ToString(size_t realsize) const;
 
 		public:
+			static Decimal Parse(const String& str);
+			inline static Decimal Parse(Int64 integer);
+			inline static Decimal Parse(Int64 integer, const String& real);
+			inline static Decimal Parse(Double real);
+
+		public:
 			Boolean operator==(const Object& obj) override;
 			Boolean operator!=(const Object& obj) override;
 

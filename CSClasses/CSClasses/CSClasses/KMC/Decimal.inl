@@ -70,3 +70,18 @@ void Decimal::Clean()
 	while (mInteger.size() > 1 && mInteger[0] == 0)
 		mInteger.erase(mInteger.begin());
 }
+
+Decimal Decimal::Parse(Int64 integer)
+{
+	return Parse(std::to_string(integer));
+}
+
+Decimal Decimal::Parse(Int64 integer, const String& real)
+{
+	return Parse(std::to_string(integer) + "." + real);
+}
+
+Decimal Decimal::Parse(Double real)
+{
+	return Parse(std::to_string(real));
+}

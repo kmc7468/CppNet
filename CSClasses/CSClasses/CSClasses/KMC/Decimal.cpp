@@ -9,46 +9,8 @@ Decimal::Decimal()
 }
 
 Decimal::Decimal(const String& str)
-{
-	String s(str);
-	s.insert(0, s.length() % 2, '0');
-
-	if (s.find('.') == String::npos)
-	{
-		for (size_t i = 0; i < s.length() / 2; i++)
-			mInteger += ByteTool::IntsToByte(ByteTool::ToByte(s[i * 2]), ByteTool::ToByte(s[i * 2 + 1]));
-
-		mReal += (Byte)0;
-	}
-	else
-	{
-		size_t dot = s.find('.');
-
-		String integer = s.substr(0, dot);
-		String real = s.substr(dot + 1);
-
-		integer.insert(0, integer.length() % 2, '0');
-		real.insert(real.length(), real.length() % 2, '0');
-
-		for (size_t i = 0; i < integer.length() / 2; i++)
-		{
-			Byte first = ByteTool::ToByte(integer[i * 2]);
-			Byte second = ByteTool::ToByte(integer[i * 2 + 1]);
-			Byte c = ByteTool::IntsToByte(first, second);
-			mInteger += c;
-		}
-
-		for (size_t i = 0; i < real.length() / 2; i++)
-		{
-			Byte first = ByteTool::ToByte(real[i * 2]);
-			Byte second = ByteTool::ToByte(real[i * 2 + 1]);
-			Byte c = ByteTool::IntsToByte(first, second);
-			mReal += c;
-		}
-	}
-
-	Clean();
-}
+	: Decimal(Parse(str))
+{ }
 
 Decimal::Decimal(Int64 integer)
 	: Decimal(std::to_string(integer))
@@ -76,6 +38,52 @@ Decimal::Decimal(const Decimal& d)
 	mReal = d.mReal;
 
 	Clean();
+}
+
+Decimal Decimal::Parse(const String& str)
+{
+	Decimal r;
+
+	String s(str);
+	s.insert(0, s.length() % 2, '0');
+
+	if (s.find('.') == String::npos)
+	{
+		for (size_t i = 0; i < s.length() / 2; i++)
+			r.mInteger += ByteTool::IntsToByte(ByteTool::ToByte(s[i * 2]), ByteTool::ToByte(s[i * 2 + 1]));
+
+		r.mReal += (Byte)0;
+	}
+	else
+	{
+		size_t dot = s.find('.');
+
+		String integer = s.substr(0, dot);
+		String real = s.substr(dot + 1);
+
+		integer.insert(0, integer.length() % 2, '0');
+		real.insert(real.length(), real.length() % 2, '0');
+
+		for (size_t i = 0; i < integer.length() / 2; i++)
+		{
+			Byte first = ByteTool::ToByte(integer[i * 2]);
+			Byte second = ByteTool::ToByte(integer[i * 2 + 1]);
+			Byte c = ByteTool::IntsToByte(first, second);
+			r.mInteger += c;
+		}
+
+		for (size_t i = 0; i < real.length() / 2; i++)
+		{
+			Byte first = ByteTool::ToByte(real[i * 2]);
+			Byte second = ByteTool::ToByte(real[i * 2 + 1]);
+			Byte c = ByteTool::IntsToByte(first, second);
+			r.mReal += c;
+		}
+	}
+
+	r.Clean();
+
+	return r;
 }
 
 Boolean Decimal::operator==(const Object& obj)
