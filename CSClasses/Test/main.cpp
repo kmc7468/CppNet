@@ -61,7 +61,7 @@ int main(void)
 
 		Decimal d1 = a;
 		Decimal d2 = b;
-		Decimal d3 = d1 + d2;
+		Decimal d3 = d1 - d2;
 
 		Console::WriteLine(d3.ToString());
 	}

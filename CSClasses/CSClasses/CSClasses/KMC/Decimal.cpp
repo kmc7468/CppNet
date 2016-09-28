@@ -54,10 +54,10 @@ Decimal Decimal::Parse(const String& str)
 		s = s.substr(1);
 	}
 
-	s.insert(0, s.length() % 2, '0');
-
 	if (s.find('.') == String::npos)
 	{
+		s.insert(0, s.length() % 2, '0');
+
 		for (size_t i = 0; i < s.length() / 2; i++)
 			r.mInteger += ByteTool::IntsToByte(ByteTool::ToByte(s[i * 2]), ByteTool::ToByte(s[i * 2 + 1]));
 
@@ -86,7 +86,7 @@ Decimal Decimal::Parse(const String& str)
 			Byte first = ByteTool::ToByte(real[i * 2]);
 			Byte second = ByteTool::ToByte(real[i * 2 + 1]);
 			Byte c = ByteTool::IntsToByte(first, second);
-			r.mReal += c;
+			r.mReal = c + r.mReal;
 		}
 	}
 
