@@ -867,8 +867,6 @@ Decimal Decimal::operator-(const Decimal& d) const
 	/*TODO
 	
 	- 내림 구현하기
-	- (-x)-(-y)에서 -x가 -y보다 작을 경우 -y => +y가 된 후 계산하는것
-	- x-y 에서 x가 y보다 작을 경우 y-x 를 한 후 음수 부호 붙이는것
 
 	*/
 
