@@ -119,6 +119,7 @@ Decimal Decimal::operator=(const Decimal& d)
 {
 	mInteger = d.mInteger;
 	mReal = d.mReal;
+	isN = d.isN;
 
 	Clean();
 
@@ -129,6 +130,7 @@ Decimal Decimal::operator=(Decimal&& d)
 {
 	mInteger = d.mInteger;
 	mReal = d.mReal;
+	isN = d.isN;
 
 	Clean();
 
@@ -490,20 +492,20 @@ Decimal Decimal::operator-(const Decimal& d) const
 				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
 			}
 		}
-	}
+	} 
 	// a가 양수일 때
 	else if (!a.isN && b.isN)
 	{
 		Decimal d = b;
 		d.isN = false;
-		c = a + d;
+		c = d + b;
 	}
 	// b가 양수일 때
 	else if (a.isN && !b.isN)
 	{
-		Decimal d = a;
+		Decimal d = b;
 		d.isN = true;
-		c = b + d;
+		c = a + d;
 	}
 
 	c.Clean();
