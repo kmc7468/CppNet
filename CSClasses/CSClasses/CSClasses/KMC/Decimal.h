@@ -56,6 +56,18 @@ namespace CSClasses
 			Boolean operator!=(const Object& obj) override;
 
 		public:
+			Boolean operator>(const Decimal& d) const;
+			Boolean operator>(Decimal&& d) const;
+
+			Boolean operator>=(const Decimal& d) const;
+			Boolean operator>=(Decimal&& d) const;
+
+			Boolean operator<(const Decimal& d) const;
+			Boolean operator<(Decimal&& d) const;
+
+			Boolean operator<=(const Decimal& d) const;
+			Boolean operator<=(Decimal&& d) const;
+
 			Decimal operator=(const Decimal& d);
 			Decimal operator=(Decimal&& d);
 

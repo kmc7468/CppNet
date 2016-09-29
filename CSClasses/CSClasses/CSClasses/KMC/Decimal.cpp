@@ -97,7 +97,7 @@ Decimal Decimal::Parse(const String& str)
 
 Boolean Decimal::operator==(const Object& obj)
 {
-	if (is<const Decimal&>(obj))
+	if (is<const Decimal, std::remove_reference<const Object&>::type>())
 	{
 		var a = as<const Decimal&>(obj);
 
@@ -115,6 +115,448 @@ Boolean Decimal::operator!=(const Object& obj)
 	return !Decimal::operator==(obj);
 }
 
+Boolean Decimal::operator>(const Decimal& d) const
+{
+	Decimal a = *this;
+	Decimal b = d;
+
+	// 패딩
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+	
+	// 체크
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
+		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one > b_one) return true;
+
+		if (a_two > b_two) return true;
+	}
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
+		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one > b_one) return true;
+
+		if (a_two > b_two) return true;
+	}
+
+	return false;
+}
+Boolean Decimal::operator>(Decimal&& d) const
+{
+	Boolean r = false;
+
+	Decimal a = *this;
+	Decimal b = d;
+
+	// 패딩
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	// 체크
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
+		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one > b_one) return true;
+
+		if (a_two > b_two) return true;
+	}
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
+		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one > b_one) return true;
+
+		if (a_two > b_two) return true;
+	}
+
+	return r;
+}
+
+Boolean Decimal::operator>=(const Decimal& d) const
+{
+	Boolean r = false;
+
+	Decimal a = *this;
+	Decimal b = d;
+
+	// 패딩
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	// 체크
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
+		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one >= b_one) return true;
+
+		if (a_two >= b_two) return true;
+	}
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
+		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one >= b_one) return true;
+
+		if (a_two >= b_two) return true;
+	}
+
+	return r;
+}
+Boolean Decimal::operator>=(Decimal&& d) const
+{
+	Boolean r = false;
+
+	Decimal a = *this;
+	Decimal b = d;
+
+	// 패딩
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	// 체크
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
+		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one >= b_one) return true;
+
+		if (a_two >= b_two) return true;
+	}
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
+		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one >= b_one) return true;
+
+		if (a_two >= b_two) return true;
+	}
+
+	return r;
+}
+
+Boolean Decimal::operator<(const Decimal& d) const
+{
+	Boolean r = false;
+
+	Decimal a = *this;
+	Decimal b = d;
+
+	// 패딩
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	// 체크
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
+		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one < b_one) return true;
+
+		if (a_two < b_two) return true;
+	}
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
+		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one < b_one) return true;
+
+		if (a_two < b_two) return true;
+	}
+
+	return r;
+}
+Boolean Decimal::operator<(Decimal&& d) const
+{
+	Boolean r = false;
+
+	Decimal a = *this;
+	Decimal b = d;
+
+	// 패딩
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	// 체크
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
+		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one < b_one) return true;
+
+		if (a_two < b_two) return true;
+	}
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
+		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one < b_one) return true;
+
+		if (a_two < b_two) return true;
+	}
+
+	return r;
+}
+
+Boolean Decimal::operator<=(const Decimal& d) const
+{
+	Boolean r = false;
+
+	Decimal a = *this;
+	Decimal b = d;
+
+	// 패딩
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	// 체크
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
+		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one <= b_one) return true;
+
+		if (a_two <= b_two) return true;
+	}
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
+		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one <= b_one) return true;
+
+		if (a_two <= b_two) return true;
+	}
+
+	return r;
+}
+Boolean Decimal::operator<=(Decimal&& d) const
+{
+	Boolean r = false;
+
+	Decimal a = *this;
+	Decimal b = d;
+
+	// 패딩
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	// 체크
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
+		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one <= b_one) return true;
+
+		if (a_two <= b_two) return true;
+	}
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+	{
+		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
+		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
+
+		var a_one = std::get<0>(temp_a);
+		var a_two = std::get<1>(temp_a);
+
+		var b_one = std::get<0>(temp_b);
+		var b_two = std::get<1>(temp_b);
+
+		if (a_one <= b_one) return true;
+
+		if (a_two <= b_two) return true;
+	}
+
+	return r;
+}
+
 Decimal Decimal::operator=(const Decimal& d)
 {
 	mInteger = d.mInteger;
@@ -125,7 +567,6 @@ Decimal Decimal::operator=(const Decimal& d)
 
 	return *this;
 }
-
 Decimal Decimal::operator=(Decimal&& d)
 {
 	mInteger = d.mInteger;
@@ -283,7 +724,6 @@ Decimal Decimal::operator+(const Decimal& d) const
 
 	return c;
 }
-
 Decimal Decimal::operator+(Decimal&& d) const
 {
 	Decimal a = *this;
@@ -394,7 +834,6 @@ Decimal Decimal::operator+=(const Decimal& d)
 
 	return *this;
 }
-
 Decimal Decimal::operator+=(Decimal&& d)
 {
 	Decimal a = *this + d;
@@ -413,7 +852,6 @@ Decimal Decimal::operator++()
 
 	return *this;
 }
-
 Decimal Decimal::operator++(int)
 {
 	Decimal a = *this + 1.0;
@@ -426,6 +864,14 @@ Decimal Decimal::operator++(int)
 
 Decimal Decimal::operator-(const Decimal& d) const
 {
+	/*TODO
+	
+	- 내림 구현하기
+	- (-x)-(-y)에서 -x가 -y보다 작을 경우 -y => +y가 된 후 계산하는것
+	- x-y 에서 x가 y보다 작을 경우 y-x 를 한 후 음수 부호 붙이는것
+
+	*/
+
 	Decimal a = *this;
 	Decimal b = Decimal(d);
 	Decimal c = 0.0;
@@ -442,54 +888,76 @@ Decimal Decimal::operator-(const Decimal& d) const
 	{
 		c.isN = a.isN;
 
-		{ // Real
-			for (size_t i = a.mReal.length() - 1; i >= 0; i--)
-			{
-				var temp01 = ByteTool::ByteToInts(a.mReal[i]);
+		if (!a.isN && !b.isN && a < b)
+		{
+			Decimal d = a;
+			Decimal e = b;
 
-				var one_a = std::get<0>(temp01);
-				var two_a = std::get<1>(temp01);
+			a = e;
+			b = d;
 
-				var temp02 = ByteTool::ByteToInts(b.mReal[i]);
-
-				var one_b = std::get<0>(temp02);
-				var two_b = std::get<1>(temp02);
-
-				Byte temp04 = two_a - two_b;
-
-				Byte temp03 = one_a - one_b;
-
-				c.mReal.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
-
-				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
-			}
+			c.isN = true;
 		}
 
-		if (a.mInteger.length() >= b.mInteger.length())
-			b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+		if (a.isN && b.isN && a < b)
+		{
+			Decimal d = b;
+			
+			d.isN = false;
+
+			c = a + d;
+		}
 		else
-			a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+		{
+			{ // Real
+				for (size_t i = a.mReal.length() - 1; i >= 0; i--)
+				{
+					var temp01 = ByteTool::ByteToInts(a.mReal[i]);
 
-		{ // Integer
-			for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
-			{
-				var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
+					var one_a = std::get<0>(temp01);
+					var two_a = std::get<1>(temp01);
 
-				var one_a = std::get<0>(temp01);
-				var two_a = std::get<1>(temp01);
+					var temp02 = ByteTool::ByteToInts(b.mReal[i]);
 
-				var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
+					var one_b = std::get<0>(temp02);
+					var two_b = std::get<1>(temp02);
 
-				var one_b = std::get<0>(temp02);
-				var two_b = std::get<1>(temp02);
+					Byte temp04 = two_a - two_b;
 
-				Byte temp04 = two_a - two_b;
+					Byte temp03 = one_a - one_b;
 
-				Byte temp03 = one_a - one_b;
+					c.mReal = ByteTool::IntsToByte(temp03, temp04) + c.mReal;;
 
-				c.mInteger.insert(0, 1, ByteTool::IntsToByte(temp03, temp04));
+					if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+				}
+			}
 
-				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+			if (a.mInteger.length() >= b.mInteger.length())
+				b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+			else
+				a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+			{ // Integer
+				for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
+				{
+					var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
+
+					var one_a = std::get<0>(temp01);
+					var two_a = std::get<1>(temp01);
+
+					var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
+
+					var one_b = std::get<0>(temp02);
+					var two_b = std::get<1>(temp02);
+
+					Byte temp04 = two_a - two_b;
+
+					Byte temp03 = one_a - one_b;
+
+					c.mInteger = ByteTool::IntsToByte(temp03, temp04) + c.mInteger;
+
+					if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+				}
 			}
 		}
 	} 

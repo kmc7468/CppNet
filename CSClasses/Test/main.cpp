@@ -63,6 +63,13 @@ int main(void)
 		Decimal d2 = b;
 		Decimal d3 = d1 - d2;
 
+		if (d1 > d2)
+			Console::WriteLine("d1 > d2"s);
+		else if (d1 < d2)
+			Console::WriteLine("d1 < d2"s);
+		else if (d1 == d2)
+			Console::WriteLine("d1 == d2"s);
+
 		Console::WriteLine(d3.ToString());
 	}
 

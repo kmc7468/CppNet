@@ -13,9 +13,33 @@
 template <typename T, typename U>
 inline System::Boolean is(U&& u)
 {
-	std::is_base_of<T, U> r;
+	std::is_base_of<U, T> r;
 
-	return r();
+	System::Boolean result = r();
+
+	if (result) return result;
+	else
+	{
+		std::is_base_of<T, U> r2;
+
+		return r2();
+	}
+}
+
+template<typename T, typename U>
+inline System::Boolean is()
+{
+	std::is_base_of<U, T> r;
+
+	System::Boolean result = r();
+
+	if (result) return result;
+	else
+	{
+		std::is_base_of<T, U> r2;
+
+		return r2();
+	}
 }
 
 template <typename T, typename U>
