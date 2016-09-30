@@ -120,6 +120,9 @@ Boolean Decimal::operator>(const Decimal& d) const
 	Decimal a = *this;
 	Decimal b = d;
 
+	if (a.isN && !b.isN) return false;
+	else if (!a.isN && b.isN) return true;
+
 	// 패딩
 
 	if (a.mReal.length() >= b.mReal.length())
@@ -131,7 +134,7 @@ Boolean Decimal::operator>(const Decimal& d) const
 		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
 	else
 		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
-	
+
 	// 체크
 
 	for (size_t i = 0; i < a.mInteger.length(); i++)
@@ -145,9 +148,9 @@ Boolean Decimal::operator>(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one > b_one) return true;
+		if ((!a.isN && a_one > b_one) || (a.isN && a_one < b_one)) return true;
 
-		if (a_two > b_two) return true;
+		if ((!a.isN && a_two > b_two) || (a.isN && a_two < b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -161,19 +164,20 @@ Boolean Decimal::operator>(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one > b_one) return true;
+		if ((!a.isN && a_one > b_one) || (a.isN && a_one < b_one)) return true;
 
-		if (a_two > b_two) return true;
+		if ((!a.isN && a_two > b_two) || (a.isN && a_two < b_two)) return true;
 	}
 
 	return false;
 }
 Boolean Decimal::operator>(Decimal&& d) const
 {
-	Boolean r = false;
-
 	Decimal a = *this;
 	Decimal b = d;
+
+	if (a.isN && !b.isN) return false;
+	else if (!a.isN && b.isN) return true;
 
 	// 패딩
 
@@ -200,9 +204,9 @@ Boolean Decimal::operator>(Decimal&& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one > b_one) return true;
+		if ((!a.isN && a_one > b_one) || (a.isN && a_one < b_one)) return true;
 
-		if (a_two > b_two) return true;
+		if ((!a.isN && a_two > b_two) || (a.isN && a_two < b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -216,20 +220,21 @@ Boolean Decimal::operator>(Decimal&& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one > b_one) return true;
+		if ((!a.isN && a_one > b_one) || (a.isN && a_one < b_one)) return true;
 
-		if (a_two > b_two) return true;
+		if ((!a.isN && a_two > b_two) || (a.isN && a_two < b_two)) return true;
 	}
 
-	return r;
+	return false;
 }
 
 Boolean Decimal::operator>=(const Decimal& d) const
 {
-	Boolean r = false;
-
 	Decimal a = *this;
 	Decimal b = d;
+
+	if (a.isN && !b.isN) return false;
+	else if (!a.isN && b.isN) return true;
 
 	// 패딩
 
@@ -256,9 +261,9 @@ Boolean Decimal::operator>=(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one >= b_one) return true;
+		if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
 
-		if (a_two >= b_two) return true;
+		if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -272,19 +277,20 @@ Boolean Decimal::operator>=(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one >= b_one) return true;
+		if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
 
-		if (a_two >= b_two) return true;
+		if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
 	}
 
-	return r;
+	return false;
 }
 Boolean Decimal::operator>=(Decimal&& d) const
 {
-	Boolean r = false;
-
 	Decimal a = *this;
 	Decimal b = d;
+
+	if (a.isN && !b.isN) return false;
+	else if (!a.isN && b.isN) return true;
 
 	// 패딩
 
@@ -311,9 +317,9 @@ Boolean Decimal::operator>=(Decimal&& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one >= b_one) return true;
+		if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
 
-		if (a_two >= b_two) return true;
+		if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -327,20 +333,21 @@ Boolean Decimal::operator>=(Decimal&& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one >= b_one) return true;
+		if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
 
-		if (a_two >= b_two) return true;
+		if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
 	}
 
-	return r;
+	return false;
 }
 
 Boolean Decimal::operator<(const Decimal& d) const
 {
-	Boolean r = false;
-
 	Decimal a = *this;
 	Decimal b = d;
+
+	if (!a.isN && b.isN) return false;
+	else if (a.isN && !b.isN) return true;
 
 	// 패딩
 
@@ -367,9 +374,9 @@ Boolean Decimal::operator<(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one < b_one) return true;
+		if ((!a.isN && a_one < b_one) || (a.isN && a_one > b_one)) return true;
 
-		if (a_two < b_two) return true;
+		if ((!a.isN && a_two < b_two) || (a.isN && a_two > b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -383,19 +390,20 @@ Boolean Decimal::operator<(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one < b_one) return true;
+		if ((!a.isN && a_one < b_one) || (a.isN && a_one > b_one)) return true;
 
-		if (a_two < b_two) return true;
+		if ((!a.isN && a_two < b_two) || (a.isN && a_two > b_two)) return true;
 	}
 
-	return r;
+	return false;
 }
 Boolean Decimal::operator<(Decimal&& d) const
 {
-	Boolean r = false;
-
 	Decimal a = *this;
 	Decimal b = d;
+
+	if (!a.isN && b.isN) return false;
+	else if (a.isN && !b.isN) return true;
 
 	// 패딩
 
@@ -422,9 +430,9 @@ Boolean Decimal::operator<(Decimal&& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one < b_one) return true;
+		if ((!a.isN && a_one < b_one) || (a.isN && a_one > b_one)) return true;
 
-		if (a_two < b_two) return true;
+		if ((!a.isN && a_two < b_two) || (a.isN && a_two > b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -438,20 +446,21 @@ Boolean Decimal::operator<(Decimal&& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one < b_one) return true;
+		if ((!a.isN && a_one < b_one) || (a.isN && a_one > b_one)) return true;
 
-		if (a_two < b_two) return true;
+		if ((!a.isN && a_two < b_two) || (a.isN && a_two > b_two)) return true;
 	}
 
-	return r;
+	return false;
 }
 
 Boolean Decimal::operator<=(const Decimal& d) const
 {
-	Boolean r = false;
-
 	Decimal a = *this;
 	Decimal b = d;
+
+	if (!a.isN && b.isN) return false;
+	else if (a.isN && !b.isN) return true;
 
 	// 패딩
 
@@ -478,9 +487,9 @@ Boolean Decimal::operator<=(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one <= b_one) return true;
+		if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
 
-		if (a_two <= b_two) return true;
+		if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -494,19 +503,21 @@ Boolean Decimal::operator<=(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one <= b_one) return true;
 
-		if (a_two <= b_two) return true;
+		if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
+
+		if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
 	}
 
-	return r;
+	return false;
 }
 Boolean Decimal::operator<=(Decimal&& d) const
 {
-	Boolean r = false;
-
 	Decimal a = *this;
 	Decimal b = d;
+
+	if (!a.isN && b.isN) return false;
+	else if (a.isN && !b.isN) return true;
 
 	// 패딩
 
@@ -533,9 +544,9 @@ Boolean Decimal::operator<=(Decimal&& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one <= b_one) return true;
+		if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
 
-		if (a_two <= b_two) return true;
+		if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -549,12 +560,12 @@ Boolean Decimal::operator<=(Decimal&& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if (a_one <= b_one) return true;
+		if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
 
-		if (a_two <= b_two) return true;
+		if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
 	}
 
-	return r;
+	return false;
 }
 
 Decimal Decimal::operator=(const Decimal& d)
@@ -578,8 +589,10 @@ Decimal Decimal::operator=(Decimal&& d)
 	return *this;
 }
 
-String Decimal::ToString() const
+String Decimal::ToString()
 {
+	Clean();
+
 	String integer = "";
 
 	for (var i = mInteger.begin(); i < mInteger.end(); i++)
@@ -865,7 +878,7 @@ Decimal Decimal::operator++(int)
 Decimal Decimal::operator-(const Decimal& d) const
 {
 	/*TODO
-	
+
 	- 내림 구현하기
 
 	*/
@@ -897,10 +910,10 @@ Decimal Decimal::operator-(const Decimal& d) const
 			c.isN = true;
 		}
 
-		if (a.isN && b.isN && a < b)
+		if (a.isN && b.isN && a > b)
 		{
 			Decimal d = b;
-			
+
 			d.isN = false;
 
 			c = a + d;
@@ -958,7 +971,7 @@ Decimal Decimal::operator-(const Decimal& d) const
 				}
 			}
 		}
-	} 
+	}
 	// a가 양수일 때
 	else if (!a.isN && b.isN)
 	{

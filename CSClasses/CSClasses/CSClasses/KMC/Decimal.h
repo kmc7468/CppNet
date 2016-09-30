@@ -42,8 +42,8 @@ namespace CSClasses
 			~Decimal() = default;
 
 		public:
-			String ToString() const;
-			inline String ToString(size_t realsize) const;
+			String ToString();
+			inline String ToString(size_t realsize);
 
 		public:
 			static Decimal Parse(const String& str);

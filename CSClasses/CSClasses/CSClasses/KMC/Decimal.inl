@@ -41,7 +41,7 @@ char Decimal::ByteTool::FromByte(Byte b)
 	return b + '0';
 }
 
-String Decimal::ToString(size_t realsize) const
+String Decimal::ToString(size_t realsize)
 {
 	var a = ToString();
 
@@ -69,6 +69,9 @@ void Decimal::Clean()
 
 	while (mInteger.size() > 1 && mInteger[0] == 0)
 		mInteger.erase(mInteger.begin());
+
+	if (mInteger.length() == 1 && mInteger[0] == 0 && mReal.length() == 1 && mReal[0] == 0 && isN)
+		isN = false;
 }
 
 Decimal Decimal::Parse(Int64 integer)
