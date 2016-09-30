@@ -26,9 +26,9 @@ namespace System
 
 	InvalidOperationException::InvalidOperationException(InvalidOperationException &&sNewException)
 	{
-		message = sNewException.message;
-		source = sNewException.source;
-		link = sNewException.link;
+		message = std::move(sNewException.message);
+		source = std::move(sNewException.source);
+		link = std::move(sNewException.link);
 		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀºº¹»ç
@@ -46,7 +46,7 @@ namespace System
 
 	InvalidOperationException InvalidOperationException::operator=(InvalidOperationException&& ex)
 	{
-		return InvalidOperationException(ex);
+		return InvalidOperationException(std::move(ex));
 	}
 
 	InvalidOperationException InvalidOperationException::operator=(const InvalidOperationException& ex)

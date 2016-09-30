@@ -1,4 +1,4 @@
-#include "Exception.h"
+ï»¿#include "Exception.h"
 
 #include "Language.h"
 
@@ -15,12 +15,12 @@ namespace System
 
 	Exception::ExceptionData::ExceptionData(Exception::ExceptionData&& sNewExceptionData)
 	{
-		message = sNewExceptionData.message;
-		source = sNewExceptionData.source;
-		link = sNewExceptionData.link;
+		message = std::move(sNewExceptionData.message);
+		source = std::move(sNewExceptionData.source);
+		link = std::move(sNewExceptionData.link);
 		target = sNewExceptionData.target;
 		inner = sNewExceptionData.inner;
-		// FIXME inner ¾èÀºº¹»ç
+		// FIXME inner ì–•ì€ë³µì‚¬
 	}
 
 	Exception::ExceptionData::ExceptionData(const Exception::ExceptionData& sNewExceptionData)
@@ -30,17 +30,19 @@ namespace System
 		link = sNewExceptionData.link;
 		target = sNewExceptionData.target;
 		inner = sNewExceptionData.inner;
-		// FIXME inner ¾èÀºº¹»ç
+		// FIXME inner ì–•ì€ë³µì‚¬
 	}
 
 	Exception::ExceptionData Exception::ExceptionData::operator=(const Exception::ExceptionData& ex)
 	{
+		// FIXME ëŒ€ì…ì´ ì´ë£¨ì–´ì§€ì§€ ì•ŠìŒ.
 		return Exception::ExceptionData(ex);
 	}
 
 	Exception::ExceptionData Exception::ExceptionData::operator=(Exception::ExceptionData&& ex)
 	{
-		return Exception::ExceptionData(ex);
+		// FIXME ëŒ€ì…ì´ ì´ë£¨ì–´ì§€ì§€ ì•ŠìŒ.
+		return Exception::ExceptionData(std::move(ex));
 	}
 
 	String Exception::ExceptionData::Message() const
@@ -90,12 +92,12 @@ namespace System
 
 	Exception::Exception(Exception &&sNewException)
 	{
-		message = sNewException.message;
-		source = sNewException.source;
-		link = sNewException.link;
+		message = std::move(sNewException.message);
+		source = std::move(sNewException.source);
+		link = std::move(sNewException.link);
 		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
-		// FIXME innerException ¾èÀºº¹»ç
+		// FIXME innerException ì–•ì€ë³µì‚¬
 	}
 
 	Exception::Exception(const Exception& sNewException)
@@ -105,16 +107,18 @@ namespace System
 		link = sNewException.link;
 		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
-		// FIXME innerException ¾èÀºº¹»ç
+		// FIXME innerException ì–•ì€ë³µì‚¬
 	}
 
 	Exception Exception::operator=(const Exception& ex)
 	{
+		// FIXME ëŒ€ì…ì´ ì´ë£¨ì–´ì§€ì§€ ì•ŠìŒ.
 		return Exception(ex);
 	}
 	Exception Exception::operator=(Exception&& ex)
 	{
-		return Exception(ex);
+		// FIXME ëŒ€ì…ì´ ì´ë£¨ì–´ì§€ì§€ ì•ŠìŒ.
+		return Exception(std::move(ex));
 	}
 
 	String Exception::Message() const

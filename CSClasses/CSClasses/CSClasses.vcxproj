@@ -148,6 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ArgumentException.h" />
     <ClInclude Include="BitConverter.h" />
     <ClInclude Include="Boolean.h" />
     <ClInclude Include="Byte.h" />
@@ -212,6 +213,7 @@
     <ClInclude Include="_IEnumerator.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArgumentException.cpp" />
     <ClCompile Include="BitConverter.cpp" />
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="CharUnicodeInfo.cpp" />

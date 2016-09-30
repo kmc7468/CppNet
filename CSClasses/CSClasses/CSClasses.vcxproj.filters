@@ -258,6 +258,9 @@
     <ClInclude Include="CSClasses\KMC\Decimal.h">
       <Filter>헤더 파일\CSClasses\KMC</Filter>
     </ClInclude>
+    <ClInclude Include="ArgumentException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">
@@ -321,6 +324,9 @@
     </ClCompile>
     <ClCompile Include="CSClasses\KMC\Decimal.cpp">
       <Filter>소스 파일\CSClasses\KMC</Filter>
+    </ClCompile>
+    <ClCompile Include="ArgumentException.cpp">
+      <Filter>소스 파일\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
