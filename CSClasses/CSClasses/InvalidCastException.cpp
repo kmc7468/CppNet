@@ -26,9 +26,9 @@ namespace System
 
 	InvalidCastException::InvalidCastException(InvalidCastException &&sNewException)
 	{
-		message = std::move(sNewException.message);
-		source = std::move(sNewException.source);
-		link = std::move(sNewException.link);
+		message = sNewException.message;
+		source = sNewException.source;
+		link = sNewException.link;
 		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀºº¹»ç
@@ -46,7 +46,7 @@ namespace System
 
 	InvalidCastException InvalidCastException::operator=(InvalidCastException&& ex)
 	{
-		return InvalidCastException(std::move(ex));
+		return InvalidCastException(ex);
 	}
 
 	InvalidCastException InvalidCastException::operator=(const InvalidCastException& ex)

@@ -13,24 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="헤더 파일\System">
-      <UniqueIdentifier>{a2f0b789-52fe-4aa9-906d-9442778262a2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\System\Collections">
-      <UniqueIdentifier>{39ee6381-dcf7-4bd0-9895-16dfb57b5746}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\System\Collections\Generic">
-      <UniqueIdentifier>{4fce894b-3e0d-4074-ab66-e25a2f798f4b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\System\Drawing">
-      <UniqueIdentifier>{844fe2ba-b436-4e82-80e9-c7de82f3eb96}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\System\Windows">
-      <UniqueIdentifier>{cfc22587-3407-47bd-be01-eddccc8627f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\System\Windows\Forms">
-      <UniqueIdentifier>{792f2b6d-7803-4d68-9dbe-d091807e2f58}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\System">
       <UniqueIdentifier>{9b59105a-64d6-4ba3-90ce-1cc33840be53}</UniqueIdentifier>
     </Filter>
@@ -48,9 +30,6 @@
     </Filter>
     <Filter Include="인라인 구현 파일\System\Collections\Generic">
       <UniqueIdentifier>{affce4a8-24b9-45eb-8620-536c9df0f106}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\System\Globalization">
-      <UniqueIdentifier>{22d87b8d-98fa-4382-ac58-c2576f1bb0cb}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\System\Globalization">
       <UniqueIdentifier>{44a8959c-1036-415b-b801-865865d29ebb}</UniqueIdentifier>
@@ -72,6 +51,27 @@
     </Filter>
     <Filter Include="인라인 구현 파일\CSClasses\KMC">
       <UniqueIdentifier>{174915e5-975b-4382-ab4f-f7024af57c3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System">
+      <UniqueIdentifier>{a2f0b789-52fe-4aa9-906d-9442778262a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Collections">
+      <UniqueIdentifier>{39ee6381-dcf7-4bd0-9895-16dfb57b5746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Collections\Generic">
+      <UniqueIdentifier>{4fce894b-3e0d-4074-ab66-e25a2f798f4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Drawing">
+      <UniqueIdentifier>{844fe2ba-b436-4e82-80e9-c7de82f3eb96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Windows">
+      <UniqueIdentifier>{cfc22587-3407-47bd-be01-eddccc8627f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Windows\Forms">
+      <UniqueIdentifier>{792f2b6d-7803-4d68-9dbe-d091807e2f58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Globalization">
+      <UniqueIdentifier>{22d87b8d-98fa-4382-ac58-c2576f1bb0cb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -258,7 +258,7 @@
     <ClInclude Include="CSClasses\KMC\Decimal.h">
       <Filter>헤더 파일\CSClasses\KMC</Filter>
     </ClInclude>
-    <ClInclude Include="ArgumentException.h">
+    <ClInclude Include="System\Tuple.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
   </ItemGroup>
@@ -324,9 +324,6 @@
     </ClCompile>
     <ClCompile Include="CSClasses\KMC\Decimal.cpp">
       <Filter>소스 파일\CSClasses\KMC</Filter>
-    </ClCompile>
-    <ClCompile Include="ArgumentException.cpp">
-      <Filter>소스 파일\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

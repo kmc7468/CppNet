@@ -908,6 +908,8 @@ Decimal Decimal::operator-(const Decimal& d) const
 			b = d;
 
 			c.isN = true;
+
+			goto Exit;
 		}
 
 		if (a.isN && b.isN && a > b)
@@ -917,60 +919,77 @@ Decimal Decimal::operator-(const Decimal& d) const
 			d.isN = false;
 
 			c = a + d;
+
+			goto Exit;
 		}
-		else
+
 		{
-			{ // Real
-				for (size_t i = a.mReal.length() - 1; i >= 0; i--)
-				{
-					var temp01 = ByteTool::ByteToInts(a.mReal[i]);
+			Decimal temp01;
+			temp01.isN = false;
+			temp01.mInteger = a.mInteger;
+			temp01.mReal = a.mReal;
 
-					var one_a = std::get<0>(temp01);
-					var two_a = std::get<1>(temp01);
+			Decimal temp02;
+			temp02.isN = false;
+			temp02.mInteger = b.mInteger;
+			temp02.mReal = b.mReal;
 
-					var temp02 = ByteTool::ByteToInts(b.mReal[i]);
+			temp01.Clean();
+			temp02.Clean();
+		}
 
-					var one_b = std::get<0>(temp02);
-					var two_b = std::get<1>(temp02);
+		{ // Real
+			for (size_t i = a.mReal.length() - 1; i >= 0; i--)
+			{
+				var temp01 = ByteTool::ByteToInts(a.mReal[i]);
 
-					Byte temp04 = two_a - two_b;
+				var one_a = std::get<0>(temp01);
+				var two_a = std::get<1>(temp01);
 
-					Byte temp03 = one_a - one_b;
+				var temp02 = ByteTool::ByteToInts(b.mReal[i]);
 
-					c.mReal = ByteTool::IntsToByte(temp03, temp04) + c.mReal;;
+				var one_b = std::get<0>(temp02);
+				var two_b = std::get<1>(temp02);
 
-					if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
-				}
-			}
+				Byte temp04 = two_a - two_b;
 
-			if (a.mInteger.length() >= b.mInteger.length())
-				b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
-			else
-				a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+				Byte temp03 = one_a - one_b;
 
-			{ // Integer
-				for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
-				{
-					var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
+				c.mReal = ByteTool::IntsToByte(temp03, temp04) + c.mReal;;
 
-					var one_a = std::get<0>(temp01);
-					var two_a = std::get<1>(temp01);
-
-					var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
-
-					var one_b = std::get<0>(temp02);
-					var two_b = std::get<1>(temp02);
-
-					Byte temp04 = two_a - two_b;
-
-					Byte temp03 = one_a - one_b;
-
-					c.mInteger = ByteTool::IntsToByte(temp03, temp04) + c.mInteger;
-
-					if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
-				}
+				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
 			}
 		}
+
+		if (a.mInteger.length() >= b.mInteger.length())
+			b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+		else
+			a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+		{ // Integer
+			for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
+			{
+				var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
+
+				var one_a = std::get<0>(temp01);
+				var two_a = std::get<1>(temp01);
+
+				var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
+
+				var one_b = std::get<0>(temp02);
+				var two_b = std::get<1>(temp02);
+
+				Byte temp04 = two_a - two_b;
+
+				Byte temp03 = one_a - one_b;
+
+				c.mInteger = ByteTool::IntsToByte(temp03, temp04) + c.mInteger;
+
+				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
+			}
+		}
+
+		goto Exit;
 	}
 	// a가 양수일 때
 	else if (!a.isN && b.isN)
@@ -987,6 +1006,8 @@ Decimal Decimal::operator-(const Decimal& d) const
 		c = a + d;
 	}
 
+
+Exit:
 	c.Clean();
 
 	return c;

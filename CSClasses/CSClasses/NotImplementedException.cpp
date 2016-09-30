@@ -26,9 +26,9 @@ namespace System
 
 	NotImplementedException::NotImplementedException(NotImplementedException &&sNewException)
 	{
-		message = std::move(sNewException.message);
-		source = std::move(sNewException.source);
-		link = std::move(sNewException.link);
+		message = sNewException.message;
+		source = sNewException.source;
+		link = sNewException.link;
 		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀºº¹»ç
@@ -46,7 +46,7 @@ namespace System
 
 	NotImplementedException NotImplementedException::operator=(NotImplementedException&& ex)
 	{
-		return NotImplementedException(std::move(ex));
+		return NotImplementedException(ex);
 	}
 
 	NotImplementedException NotImplementedException::operator=(const NotImplementedException& ex)

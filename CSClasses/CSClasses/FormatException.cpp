@@ -26,9 +26,9 @@ namespace System
 
 	FormatException::FormatException(FormatException &&sNewException)
 	{
-		message = std::move(sNewException.message);
-		source = std::move(sNewException.source);
-		link = std::move(sNewException.link);
+		message = sNewException.message;
+		source = sNewException.source;
+		link = sNewException.link;
 		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀºº¹»ç
@@ -46,7 +46,7 @@ namespace System
 
 	FormatException FormatException::operator=(FormatException&& ex)
 	{
-		return FormatException(std::move(ex));
+		return FormatException(ex);
 	}
 
 	FormatException FormatException::operator=(const FormatException& ex)

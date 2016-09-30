@@ -148,7 +148,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ArgumentException.h" />
     <ClInclude Include="BitConverter.h" />
     <ClInclude Include="Boolean.h" />
     <ClInclude Include="Byte.h" />
@@ -201,6 +200,7 @@
     <ClInclude Include="System.Windows.Forms.h" />
     <ClInclude Include="SystemTypes.h" />
     <ClInclude Include="System\String.h" />
+    <ClInclude Include="System\Tuple.h" />
     <ClInclude Include="System\Version.h" />
     <ClInclude Include="TimeSpan.h" />
     <ClInclude Include="UInt16.h" />
@@ -213,7 +213,6 @@
     <ClInclude Include="_IEnumerator.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArgumentException.cpp" />
     <ClCompile Include="BitConverter.cpp" />
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="CharUnicodeInfo.cpp" />
