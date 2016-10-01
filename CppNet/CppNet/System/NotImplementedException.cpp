@@ -26,12 +26,12 @@ namespace System
 
 	NotImplementedException::NotImplementedException(NotImplementedException &&sNewException)
 	{
-		message = sNewException.message;
-		source = sNewException.source;
-		link = sNewException.link;
+		message = std::move(sNewException.message);
+		source = std::move(sNewException.source);
+		link = std::move(sNewException.link);
 		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
-		// FIXME innerException ¾èÀºº¹»ç
+		// FIXME innerException ¾èÀº º¹»ç
 	}
 
 	NotImplementedException::NotImplementedException(const NotImplementedException& sNewException)
@@ -41,17 +41,29 @@ namespace System
 		link = sNewException.link;
 		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
-		// FIXME innerException ¾èÀºº¹»ç
+		// FIXME innerException ¾èÀº º¹»ç
 	}
 
 	NotImplementedException NotImplementedException::operator=(NotImplementedException&& ex)
 	{
-		return NotImplementedException(ex);
+		message = std::move(ex.message);
+		source = std::move(ex.source);
+		link = std::move(ex.link);
+		targetsite = std::move(ex.targetsite);
+		innerException = std::move(ex.innerException);
+
+		return *this;
 	}
 
 	NotImplementedException NotImplementedException::operator=(const NotImplementedException& ex)
 	{
-		return NotImplementedException(ex);
+		message = ex.message;
+		source = ex.source;
+		link = ex.link;
+		targetsite = ex.targetsite;
+		innerException = ex.innerException;
+
+		return *this;
 	}
 
 	String NotImplementedException::Message() const

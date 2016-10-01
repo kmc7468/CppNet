@@ -264,6 +264,9 @@
     <ClInclude Include="System\Version.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="System\ArgumentException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -325,6 +328,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
       <Filter>소스 파일\CppNet\KMC</Filter>
+    </ClCompile>
+    <ClCompile Include="System\ArgumentException.cpp">
+      <Filter>소스 파일\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

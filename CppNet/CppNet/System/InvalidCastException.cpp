@@ -46,12 +46,24 @@ namespace System
 
 	InvalidCastException InvalidCastException::operator=(InvalidCastException&& ex)
 	{
-		return InvalidCastException(ex);
+		message = std::move(ex.message);
+		source = std::move(ex.source);
+		link = std::move(ex.link);
+		targetsite = std::move(ex.targetsite);
+		innerException = std::move(ex.innerException);
+
+		return *this;
 	}
 
 	InvalidCastException InvalidCastException::operator=(const InvalidCastException& ex)
 	{
-		return InvalidCastException(ex);
+		message = ex.message;
+		source = ex.source;
+		link = ex.link;
+		targetsite = ex.targetsite;
+		innerException = ex.innerException;
+
+		return *this;
 	}
 
 	String InvalidCastException::Message() const

@@ -26,6 +26,7 @@
     <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="SystemTypes.h" />
+    <ClInclude Include="System\ArgumentException.h" />
     <ClInclude Include="System\BitConverter.h" />
     <ClInclude Include="System\Boolean.h" />
     <ClInclude Include="System\Byte.h" />
@@ -85,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp" />
+    <ClCompile Include="System\ArgumentException.cpp" />
     <ClCompile Include="System\BitConverter.cpp" />
     <ClCompile Include="System\Char.cpp" />
     <ClCompile Include="System\DateTime.cpp" />

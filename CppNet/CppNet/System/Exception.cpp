@@ -15,9 +15,9 @@ namespace System
 
 	Exception::ExceptionData::ExceptionData(Exception::ExceptionData&& sNewExceptionData)
 	{
-		message = sNewExceptionData.message;
-		source = sNewExceptionData.source;
-		link = sNewExceptionData.link;
+		message = std::move(sNewExceptionData.message);
+		source = std::move(sNewExceptionData.source);
+		link = std::move(sNewExceptionData.link);
 		target = sNewExceptionData.target;
 		inner = sNewExceptionData.inner;
 		// FIXME inner ¾èÀºº¹»ç
@@ -33,14 +33,26 @@ namespace System
 		// FIXME inner ¾èÀºº¹»ç
 	}
 
-	Exception::ExceptionData Exception::ExceptionData::operator=(const Exception::ExceptionData& ex)
+	Exception::ExceptionData& Exception::ExceptionData::operator=(const Exception::ExceptionData& ex)
 	{
-		return Exception::ExceptionData(ex);
+		message = ex.message;
+		source = ex.source;
+		link = ex.link;
+		target = ex.target;
+		inner = ex.inner;
+
+		return *this;
 	}
 
-	Exception::ExceptionData Exception::ExceptionData::operator=(Exception::ExceptionData&& ex)
+	Exception::ExceptionData& Exception::ExceptionData::operator=(Exception::ExceptionData&& ex)
 	{
-		return Exception::ExceptionData(ex);
+		message = std::move(ex.message);
+		source = std::move(ex.source);
+		link = std::move(ex.link);
+		target = std::move(ex.target);
+		inner = std::move(ex.inner);
+
+		return *this;
 	}
 
 	String Exception::ExceptionData::Message() const
@@ -90,9 +102,9 @@ namespace System
 
 	Exception::Exception(Exception &&sNewException)
 	{
-		message = sNewException.message;
-		source = sNewException.source;
-		link = sNewException.link;
+		message = std::move(sNewException.message);
+		source = std::move(sNewException.source);
+		link = std::move(sNewException.link);
 		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀºº¹»ç
@@ -108,13 +120,26 @@ namespace System
 		// FIXME innerException ¾èÀºº¹»ç
 	}
 
-	Exception Exception::operator=(const Exception& ex)
+	Exception& Exception::operator=(const Exception& ex)
 	{
-		return Exception(ex);
+		message = ex.message;
+		source = ex.source;
+		link = ex.link;
+		targetsite = ex.targetsite;
+		innerException = ex.innerException;
+
+		return *this;
 	}
-	Exception Exception::operator=(Exception&& ex)
+
+	Exception& Exception::operator=(Exception&& ex)
 	{
-		return Exception(ex);
+		message = std::move(ex.message);
+		source = std::move(ex.source);
+		link = std::move(ex.link);
+		targetsite = std::move(ex.targetsite);
+		innerException = std::move(ex.innerException);
+
+		return *this;
 	}
 
 	String Exception::Message() const

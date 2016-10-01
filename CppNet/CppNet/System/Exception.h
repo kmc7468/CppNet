@@ -18,8 +18,8 @@ namespace System
 			virtual ~ExceptionData() = default;
 
 		public:
-			ExceptionData operator=(const ExceptionData& ex);
-			ExceptionData operator=(ExceptionData&& ex);
+			ExceptionData& operator=(const ExceptionData& ex);
+			ExceptionData& operator=(ExceptionData&& ex);
 
 		private:
 			String message;
@@ -53,8 +53,8 @@ namespace System
 		String link;
 
 	public:
-		Exception operator=(const Exception& ex);
-		Exception operator=(Exception&& ex);
+		Exception& operator=(const Exception& ex);
+		Exception& operator=(Exception&& ex);
 
 	public:
 		virtual String Message() const;
