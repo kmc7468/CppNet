@@ -36,6 +36,7 @@
     <ClInclude Include="System\Collections\Generic\IEnumerator.h" />
     <ClInclude Include="System\Collections\Generic\IList.h" />
     <ClInclude Include="System\Collections\Generic\Queue.h" />
+    <ClInclude Include="System\Collections\Generic\Stack.h" />
     <ClInclude Include="System\Collections\Generic\System.Collections.Generic.h" />
     <ClInclude Include="System\Collections\ICollection.h" />
     <ClInclude Include="System\Collections\IEnumerable.h" />
@@ -112,6 +113,7 @@
     <None Include="System\BitConverter.inl" />
     <None Include="System\Char.inl" />
     <None Include="System\Collections\Generic\Queue.inl" />
+    <None Include="System\Collections\Generic\Stack.inl" />
     <None Include="System\Console.inl" />
     <None Include="System\Convert.inl" />
     <None Include="System\DoubleT.inl" />

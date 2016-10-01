@@ -267,6 +267,9 @@
     <ClInclude Include="System\ArgumentException.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="System\Collections\Generic\Stack.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -363,6 +366,9 @@
     </None>
     <None Include="System\Version.inl">
       <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="System\Collections\Generic\Stack.inl">
+      <Filter>인라인 구현 파일\System\Collections\Generic</Filter>
     </None>
   </ItemGroup>
 </Project>

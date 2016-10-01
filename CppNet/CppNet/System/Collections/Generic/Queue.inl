@@ -1,6 +1,7 @@
 #include <algorithm>
 #include "../../InvalidOperationException.h"
 #include "Queue.h"
+#include "Stack.h"
 
 namespace System
 {
@@ -63,7 +64,7 @@ namespace System
 			{
 				queue.shrink_to_fit();
 			}
-			
+
 			template<typename T>
 			Boolean Queue<T>::operator==(const Object & obj)
 			{
@@ -74,7 +75,7 @@ namespace System
 			{
 				return !this->operator==(obj);
 			}
-			
+
 			template<typename T>
 			void Queue<T>::Add(T& item)
 			{

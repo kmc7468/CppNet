@@ -14,7 +14,7 @@ namespace System
 		namespace Generic
 		{
 			template <typename T>
-			interface IReadOnlyCollection : public IEnumerable<T>
+			interface IReadOnlyCollection : virtual public IEnumerable<T>
 			{
 				virtual Int32 Count() const = 0;
 			};
