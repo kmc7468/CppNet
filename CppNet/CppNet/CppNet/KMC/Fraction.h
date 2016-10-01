@@ -26,8 +26,10 @@ namespace CppNet
 			integer numerator = 1; // 분자
 			integer denominator = 1; // 분모
 
+			inline integer gcd(integer a, integer b) const;
+
 		public:
-			Fraction<integer> Reduction();
+			inline Fraction<integer> Reduction();
 		};
 
 		using Fraction64 = Fraction<UInt64>;

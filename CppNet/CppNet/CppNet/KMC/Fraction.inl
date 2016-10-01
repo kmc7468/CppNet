@@ -29,8 +29,6 @@ Fraction<integer>::Fraction(const Decimal& decimal)
 	UInt64 temp = std::stoull(str2);
 
 	numerator = (integer)str2;
-
-	Reduction();
 }
 
 template<typename integer>
@@ -44,8 +42,6 @@ Fraction<integer>::Fraction(const String& fraction)
 
 	numerator = (integer)temp1;
 	denominator = (integer)temp02;
-
-	Reduction();
 }
 
 template<typename integer>
@@ -65,7 +61,25 @@ Fraction<integer>::Fraction(Fraction<integer>&& f)
 template<typename integer>
 Fraction<integer> Fraction<integer>::Reduction()
 {
-	// TODO
+	integer div = gcd(numerator, denominator);
+
+	numerator /= div;
+	denominator /= div;
 
 	return *this;
+}
+
+template<typename integer>
+integer Fraction<integer>::gcd(integer a, integer b) const
+{
+	integer c;
+
+	while (a != 0)
+	{
+		c = a;
+		a = b % a;
+		b = c;
+	}
+
+	return b;
 }
