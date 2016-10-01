@@ -1019,4 +1019,6 @@ Exit:
 
 	return c;
 	*/
+
+	return Decimal();
 }
