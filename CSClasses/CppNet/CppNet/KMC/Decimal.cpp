@@ -1,5 +1,5 @@
 #include "Decimal.h"
-using namespace CSClasses::KMC;
+using namespace CppNet::KMC;
 using namespace System;
 
 Decimal::Decimal()

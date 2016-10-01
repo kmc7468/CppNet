@@ -34,22 +34,22 @@
     <Filter Include="소스 파일\System\Globalization">
       <UniqueIdentifier>{44a8959c-1036-415b-b801-865865d29ebb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\CSClasses">
+    <Filter Include="헤더 파일\CppNet">
       <UniqueIdentifier>{b43d1b23-5baa-4bd7-bab7-bda23db00e0b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\CSClasses\KMC">
+    <Filter Include="헤더 파일\CppNet\KMC">
       <UniqueIdentifier>{e8953710-73c3-445f-9c5d-8fbdb6b99c70}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\CSClasses">
+    <Filter Include="소스 파일\CppNet">
       <UniqueIdentifier>{afef3e5e-dc9c-499e-81c4-34a9802fe0e1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\CSClasses\KMC">
+    <Filter Include="소스 파일\CppNet\KMC">
       <UniqueIdentifier>{aecb40c9-ebc1-4fdf-a3d1-e5d3985d3090}</UniqueIdentifier>
     </Filter>
-    <Filter Include="인라인 구현 파일\CSClasses">
+    <Filter Include="인라인 구현 파일\CppNet">
       <UniqueIdentifier>{b4a4636b-d437-425a-ac29-83101d5e1af2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="인라인 구현 파일\CSClasses\KMC">
+    <Filter Include="인라인 구현 파일\CppNet\KMC">
       <UniqueIdentifier>{174915e5-975b-4382-ab4f-f7024af57c3a}</UniqueIdentifier>
     </Filter>
     <Filter Include="헤더 파일\System">
@@ -84,7 +84,7 @@
     <ClInclude Include="Object.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="CSClasses.h">
+    <ClInclude Include="CppNet.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Convert.h">
@@ -240,23 +240,23 @@
     <ClInclude Include="CharUnicodeInfo.h">
       <Filter>헤더 파일\System\Globalization</Filter>
     </ClInclude>
-    <ClInclude Include="CSClasses\Unicode.h">
-      <Filter>헤더 파일\CSClasses</Filter>
+    <ClInclude Include="CppNet\Unicode.h">
+      <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
     <ClInclude Include="System\String.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="CSClasses\CSClasses.h">
-      <Filter>헤더 파일\CSClasses</Filter>
+    <ClInclude Include="CppNet\CppNet.h">
+      <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
     <ClInclude Include="System\Version.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="CSClasses\KMC\KMC.h">
-      <Filter>헤더 파일\CSClasses\KMC</Filter>
+    <ClInclude Include="CppNet\KMC\KMC.h">
+      <Filter>헤더 파일\CppNet\KMC</Filter>
     </ClInclude>
-    <ClInclude Include="CSClasses\KMC\Decimal.h">
-      <Filter>헤더 파일\CSClasses\KMC</Filter>
+    <ClInclude Include="CppNet\KMC\Decimal.h">
+      <Filter>헤더 파일\CppNet\KMC</Filter>
     </ClInclude>
     <ClInclude Include="System\Tuple.h">
       <Filter>헤더 파일\System</Filter>
@@ -322,8 +322,8 @@
     <ClCompile Include="System\Version.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
-    <ClCompile Include="CSClasses\KMC\Decimal.cpp">
-      <Filter>소스 파일\CSClasses\KMC</Filter>
+    <ClCompile Include="CppNet\KMC\Decimal.cpp">
+      <Filter>소스 파일\CppNet\KMC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -354,8 +354,8 @@
     <None Include="System\Version.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
-    <None Include="CSClasses\KMC\Decimal.inl">
-      <Filter>인라인 구현 파일\CSClasses\KMC</Filter>
+    <None Include="CppNet\KMC\Decimal.inl">
+      <Filter>인라인 구현 파일\CppNet\KMC</Filter>
     </None>
   </ItemGroup>
 </Project>

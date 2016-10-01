@@ -21,8 +21,9 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E6CAD7AD-2172-471B-AC48-34D726DFDF62}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CSClasses</RootNamespace>
+    <RootNamespace>CppNet</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>CppNet</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -156,11 +157,11 @@
     <ClInclude Include="Console.h" />
     <ClInclude Include="Control.h" />
     <ClInclude Include="Convert.h" />
-    <ClInclude Include="CSClasses.h" />
-    <ClInclude Include="CSClasses\CSClasses.h" />
-    <ClInclude Include="CSClasses\KMC\Decimal.h" />
-    <ClInclude Include="CSClasses\KMC\KMC.h" />
-    <ClInclude Include="CSClasses\Unicode.h" />
+    <ClInclude Include="CppNet.h" />
+    <ClInclude Include="CppNet\CppNet.h" />
+    <ClInclude Include="CppNet\KMC\Decimal.h" />
+    <ClInclude Include="CppNet\KMC\KMC.h" />
+    <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Double.h" />
     <ClInclude Include="DoubleT.h" />
@@ -216,7 +217,7 @@
     <ClCompile Include="BitConverter.cpp" />
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="CharUnicodeInfo.cpp" />
-    <ClCompile Include="CSClasses\KMC\Decimal.cpp" />
+    <ClCompile Include="CppNet\KMC\Decimal.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="DoubleT.cpp" />
     <ClCompile Include="Exception.cpp" />
@@ -238,7 +239,7 @@
     <None Include="Char.inl" />
     <None Include="Console.inl" />
     <None Include="Convert.inl" />
-    <None Include="CSClasses\KMC\Decimal.inl" />
+    <None Include="CppNet\KMC\Decimal.inl" />
     <None Include="DoubleT.inl" />
     <None Include="Math.inl" />
     <None Include="Object.inl" />

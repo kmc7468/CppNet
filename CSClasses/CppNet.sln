@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CSClasses", "CSClasses\CSClasses.vcxproj", "{E6CAD7AD-2172-471B-AC48-34D726DFDF62}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppNet", "CppNet\CppNet.vcxproj", "{E6CAD7AD-2172-471B-AC48-34D726DFDF62}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{7EF653EF-3090-4835-B400-D6596759E523}"
 EndProject

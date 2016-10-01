@@ -1,11 +1,11 @@
-#ifndef CSCLASSES_H
-#define CSCLASSES_H
+#ifndef CPPNET_H
+#define CPPNET_H
 
 #include "Utility.h"
 #include "Language.h"
 #include "SystemTypes.h"
 
-#include "CSClasses/CSClasses.h"
+#include "CppNet/CppNet.h"
 
 #include "System.h"
 #include "System.Collections.h"
@@ -13,6 +13,6 @@
 #include "System.Drawing.h"
 #include "System.Windows.Forms.h"
 
-#include "CSClasses/KMC/KMC.h"
+#include "CppNet/KMC/KMC.h"
 
 #endif

@@ -1,7 +1,7 @@
-#ifndef CSCLASSES_UNICODE_H
-#define CSCLASSES_UNICODE_H
+#ifndef CPPNET_UNICODE_H
+#define CPPNET_UNICODE_H
 
-namespace CSClasses
+namespace CppNet
 {
 	class Unicode
 	{

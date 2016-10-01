@@ -2,7 +2,7 @@
 
 #include "../../BitConverter.h"
 using namespace System;
-using namespace CSClasses::KMC;
+using namespace CppNet::KMC;
 
 Byte Decimal::ByteTool::IntsToByte(Byte a, Byte b)
 {

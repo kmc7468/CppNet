@@ -1,5 +1,5 @@
-#ifndef CSCLASSES_KMC_DECIMAL_H
-#define CSCLASSES_KMC_DECIMAL_H
+#ifndef CPPNET_KMC_DECIMAL_H
+#define CPPNET_KMC_DECIMAL_H
 
 #include "../../SystemTypes.h"
 #include "../../Queue.h"
@@ -7,7 +7,7 @@
 using namespace::System;
 using namespace::System::Collections::Generic;
 
-namespace CSClasses
+namespace CppNet
 {
 	namespace KMC
 	{

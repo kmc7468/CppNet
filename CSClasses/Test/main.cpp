@@ -2,8 +2,9 @@
 #define WIN32
 
 #include <string>
-#include <CSClasses\CSClasses.h>
 #include <chrono>
+
+#include <CppNet/CppNet.h>
 
 using namespace std;
 using namespace System;
