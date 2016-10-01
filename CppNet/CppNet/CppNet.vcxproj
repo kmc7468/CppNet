@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CppNet\KMC\Decimal.inl" />
+    <None Include="CppNet\KMC\Fraction.inl" />
     <None Include="CppNet\Unicode.inl" />
     <None Include="System\BitConverter.inl" />
     <None Include="System\Char.inl" />

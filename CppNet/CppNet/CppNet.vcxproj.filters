@@ -385,5 +385,8 @@
     <None Include="CppNet\Unicode.inl">
       <Filter>인라인 구현 파일\CppNet</Filter>
     </None>
+    <None Include="CppNet\KMC\Fraction.inl">
+      <Filter>인라인 구현 파일\CppNet\KMC</Filter>
+    </None>
   </ItemGroup>
 </Project>
