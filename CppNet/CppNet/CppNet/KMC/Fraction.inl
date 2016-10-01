@@ -59,7 +59,7 @@ Fraction<integer>::Fraction(Fraction<integer>&& f)
 }
 
 template<typename integer>
-Fraction<integer> Fraction<integer>::Reduction()
+Fraction<integer> Fraction<integer>::ROAF()
 {
 	integer div = gcd(numerator, denominator);
 
@@ -70,7 +70,24 @@ Fraction<integer> Fraction<integer>::Reduction()
 }
 
 template<typename integer>
-integer Fraction<integer>::gcd(integer a, integer b) const
+std::tuple<Fraction<integer>, Fraction<integer>> Fraction<integer>::RTCD(const Fraction<integer>& extra)
+{
+	Fraction<integer> a(1);
+	Fraction<integer> b(1);
+
+	integer mul = lcm(denominator, extra.denominator);
+
+	a.denominator = mul;
+	b.denominator = mul;
+
+	a.numerator = numerator * (mul / denominator);
+	b.numerator = extra.numerator * (mul / extra.denominator);
+
+	return std::make_tuple(a, b);
+}
+
+template<typename integer>
+integer Fraction<integer>::gcd(integer a, integer b)
 {
 	integer c;
 
@@ -82,4 +99,30 @@ integer Fraction<integer>::gcd(integer a, integer b) const
 	}
 
 	return b;
+}
+
+template<typename integer>
+integer Fraction<integer>::lcm(integer a, integer b)
+{
+	integer temp = gcd(a, b);
+
+	return temp ? (a / temp * b) : 0;
+}
+
+template<typename integer>
+Fraction<integer>& Fraction<integer>::operator=(const Fraction<integer>& f)
+{
+	numerator = f.numerator;
+	denominator = f.denominator;
+
+	return *this;
+}
+
+template<typename integer>
+Fraction<integer>& Fraction<integer>::operator=(Fraction<integer>&& f)
+{
+	numerator = std::move(f.numerator);
+	denominator = std::move(f.denominator);
+
+	return *this;
 }

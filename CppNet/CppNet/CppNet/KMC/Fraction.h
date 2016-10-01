@@ -1,6 +1,8 @@
 #ifndef CPPNET_KMC_FRACTION_H
 #define CPPNET_KMC_FRACTION_H
 
+#include <tuple>
+
 #include "../../SystemTypes.h"
 using namespace System;
 
@@ -26,10 +28,18 @@ namespace CppNet
 			integer numerator = 1; // 분자
 			integer denominator = 1; // 분모
 
-			inline integer gcd(integer a, integer b) const;
+			static inline integer gcd(integer a, integer b); // 최대 공약수
+			static inline integer lcm(integer a, integer b); // 최소 공배수
 
 		public:
-			inline Fraction<integer> Reduction();
+			Fraction<integer>& operator=(const Fraction<integer>& f);
+			Fraction<integer>& operator=(Fraction<integer>&& f);
+
+		public: 
+			// 약분
+			inline Fraction<integer> ROAF();
+			// 통분
+			inline std::tuple<Fraction<integer>, Fraction<integer>> RTCD(const Fraction<integer>& extra);
 		};
 
 		using Fraction64 = Fraction<UInt64>;

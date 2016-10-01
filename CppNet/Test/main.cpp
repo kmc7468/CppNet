@@ -3,6 +3,7 @@
 
 #include <string>
 #include <chrono>
+#include <tuple>
 
 #include <CppNet/CppNet.h>
 
@@ -17,9 +18,13 @@ int main(void)
 	cout.imbue(locale("korean"));
 	cin.imbue(locale("korean"));
 
-	Fraction64 f(5, 10);
+	Fraction64 f(1, 6);
 
-	f.Reduction();
+	Fraction64 f2(2, 12);
+
+	f = std::get<0>(f.RTCD(f2));
+
+	f.ROAF();
 
 	MAIN_END
 }
