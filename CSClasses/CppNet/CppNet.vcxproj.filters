@@ -1,323 +1,324 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="소스 파일\System">
-      <UniqueIdentifier>{9b59105a-64d6-4ba3-90ce-1cc33840be53}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\System\Drawing">
-      <UniqueIdentifier>{434df7cb-2657-414c-bed1-d92866c0fc85}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="인라인 구현 파일">
-      <UniqueIdentifier>{c775729c-b390-4581-8101-17688de22b6c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="인라인 구현 파일\System">
-      <UniqueIdentifier>{3f51ef8c-3466-473e-ba38-94d27d780084}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="인라인 구현 파일\System\Collections">
-      <UniqueIdentifier>{cef4aed6-9cf6-4097-af3c-c27022b2f48e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="인라인 구현 파일\System\Collections\Generic">
-      <UniqueIdentifier>{affce4a8-24b9-45eb-8620-536c9df0f106}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\System\Globalization">
-      <UniqueIdentifier>{44a8959c-1036-415b-b801-865865d29ebb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\CppNet">
-      <UniqueIdentifier>{b43d1b23-5baa-4bd7-bab7-bda23db00e0b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\CppNet\KMC">
-      <UniqueIdentifier>{e8953710-73c3-445f-9c5d-8fbdb6b99c70}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\CppNet">
-      <UniqueIdentifier>{afef3e5e-dc9c-499e-81c4-34a9802fe0e1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\CppNet\KMC">
-      <UniqueIdentifier>{aecb40c9-ebc1-4fdf-a3d1-e5d3985d3090}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="인라인 구현 파일\CppNet">
-      <UniqueIdentifier>{b4a4636b-d437-425a-ac29-83101d5e1af2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="인라인 구현 파일\CppNet\KMC">
-      <UniqueIdentifier>{174915e5-975b-4382-ab4f-f7024af57c3a}</UniqueIdentifier>
+      <UniqueIdentifier>{5de0cac2-991e-4a5d-8e91-4c69bd74c740}</UniqueIdentifier>
     </Filter>
     <Filter Include="헤더 파일\System">
-      <UniqueIdentifier>{a2f0b789-52fe-4aa9-906d-9442778262a2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\System\Collections">
-      <UniqueIdentifier>{39ee6381-dcf7-4bd0-9895-16dfb57b5746}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\System\Collections\Generic">
-      <UniqueIdentifier>{4fce894b-3e0d-4074-ab66-e25a2f798f4b}</UniqueIdentifier>
+      <UniqueIdentifier>{2cd90f4b-e200-40db-b314-6682bb43211c}</UniqueIdentifier>
     </Filter>
     <Filter Include="헤더 파일\System\Drawing">
-      <UniqueIdentifier>{844fe2ba-b436-4e82-80e9-c7de82f3eb96}</UniqueIdentifier>
+      <UniqueIdentifier>{ec0845db-9378-4ed0-af61-3e0c635b4e1a}</UniqueIdentifier>
     </Filter>
     <Filter Include="헤더 파일\System\Windows">
-      <UniqueIdentifier>{cfc22587-3407-47bd-be01-eddccc8627f9}</UniqueIdentifier>
+      <UniqueIdentifier>{9bfa0dc7-49da-4201-9f5a-77ef82857b20}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\System\Windows\Forms">
-      <UniqueIdentifier>{792f2b6d-7803-4d68-9dbe-d091807e2f58}</UniqueIdentifier>
+    <Filter Include="헤더 파일\System\Collections">
+      <UniqueIdentifier>{74626054-eee9-47e7-9f84-1ec41c75eb4c}</UniqueIdentifier>
     </Filter>
     <Filter Include="헤더 파일\System\Globalization">
-      <UniqueIdentifier>{22d87b8d-98fa-4382-ac58-c2576f1bb0cb}</UniqueIdentifier>
+      <UniqueIdentifier>{537f2a37-9296-40d8-ae91-738640a417df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\CppNet">
+      <UniqueIdentifier>{cd8afa11-29c6-4f6f-9757-1d74440e448e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\CppNet\KMC">
+      <UniqueIdentifier>{c8bc33c5-f001-4b3d-a7cb-168dbb7157e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Collections\Generic">
+      <UniqueIdentifier>{1b2b48a3-6dc5-4323-accc-9a761e53fff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Windows\Forms">
+      <UniqueIdentifier>{9044115b-0caa-4bd3-88e9-d53f9babcd71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{eadfd985-11de-48ec-bb1c-9f1fe2d56199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일">
+      <UniqueIdentifier>{66dcfe8c-162c-4b2b-817d-904a17e0f3fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\CppNet">
+      <UniqueIdentifier>{b6f40425-0f25-42cf-bed7-9b73132978e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\CppNet\KMC">
+      <UniqueIdentifier>{dc2d2a79-1f58-4803-9625-e76226e26157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CppNet">
+      <UniqueIdentifier>{0eede39e-0c28-46bc-a93d-7624c63a287b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CppNet\KMC">
+      <UniqueIdentifier>{eb556e8d-5792-4ef8-84f2-c654802b99a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\System">
+      <UniqueIdentifier>{95c037af-bf33-47b9-8d7b-e77304538f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System">
+      <UniqueIdentifier>{5039e2fd-b148-4929-b9fd-6599a85c2ccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System\Globalization">
+      <UniqueIdentifier>{516469c2-f731-43e0-9f03-6faa906ef3a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System\Drawing">
+      <UniqueIdentifier>{a71bcabf-ed44-40af-b54f-78b6ec98b692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System\Windows">
+      <UniqueIdentifier>{e7d1ba06-33fa-4bc4-a784-3a3c3f987e62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System\Windows\Forms">
+      <UniqueIdentifier>{eafdbcf6-ba07-48f7-a42e-16a3025daaa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\System\Collections">
+      <UniqueIdentifier>{22da5613-bbcb-4c14-b87a-34c0b96887cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\System\Collections\Generic">
+      <UniqueIdentifier>{e1717ddd-7198-47ec-9073-ce8711dd7bce}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Console.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Math.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Convert.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Exception.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="DateTime.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="TimeSpan.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="InvalidCastException.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Language.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="FormatException.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="IEnumerable.h">
-      <Filter>헤더 파일\System\Collections\Generic</Filter>
-    </ClInclude>
-    <ClInclude Include="Utility.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="NotImplementedException.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="_ICollection.h">
-      <Filter>헤더 파일\System\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="_IEnumerable.h">
-      <Filter>헤더 파일\System\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="ICloneable.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="ICollection.h">
-      <Filter>헤더 파일\System\Collections\Generic</Filter>
-    </ClInclude>
-    <ClInclude Include="IList.h">
-      <Filter>헤더 파일\System\Collections\Generic</Filter>
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>헤더 파일\System\Drawing</Filter>
-    </ClInclude>
-    <ClInclude Include="PointF.h">
-      <Filter>헤더 파일\System\Drawing</Filter>
-    </ClInclude>
-    <ClInclude Include="System.Collections.Generic.h">
-      <Filter>헤더 파일\System\Collections\Generic</Filter>
-    </ClInclude>
-    <ClInclude Include="System.Collections.h">
-      <Filter>헤더 파일\System\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="System.Drawing.h">
-      <Filter>헤더 파일\System\Drawing</Filter>
-    </ClInclude>
-    <ClInclude Include="System.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Control.h">
-      <Filter>헤더 파일\System\Windows\Forms</Filter>
-    </ClInclude>
-    <ClInclude Include="System.Windows.Forms.h">
-      <Filter>헤더 파일\System\Windows\Forms</Filter>
-    </ClInclude>
-    <ClInclude Include="IConvertible.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="IFormatProvider.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="_IEnumerator.h">
-      <Filter>헤더 파일\System\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="IEnumerator.h">
-      <Filter>헤더 파일\System\Collections\Generic</Filter>
-    </ClInclude>
-    <ClInclude Include="Queue.h">
-      <Filter>헤더 파일\System\Collections\Generic</Filter>
-    </ClInclude>
-    <ClInclude Include="Boolean.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Char.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Byte.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="SByte.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Int16.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Int32.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Int64.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="UInt16.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="UInt32.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="UInt64.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Single.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Double.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Func.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="SystemTypes.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="InvalidOperationException.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="DoubleT.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="IComparable.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="IEquatable.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="IFormattable.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="SizeF.h">
-      <Filter>헤더 파일\System\Drawing</Filter>
-    </ClInclude>
-    <ClInclude Include="BitConverter.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="UnicodeCategory.h">
-      <Filter>헤더 파일\System\Globalization</Filter>
-    </ClInclude>
-    <ClInclude Include="CharUnicodeInfo.h">
-      <Filter>헤더 파일\System\Globalization</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\Unicode.h">
-      <Filter>헤더 파일\CppNet</Filter>
-    </ClInclude>
-    <ClInclude Include="System\String.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\CppNet.h">
-      <Filter>헤더 파일\CppNet</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Version.h">
-      <Filter>헤더 파일\System</Filter>
+    <ClInclude Include="CppNet\KMC\Decimal.h">
+      <Filter>헤더 파일\CppNet\KMC</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\KMC\KMC.h">
       <Filter>헤더 파일\CppNet\KMC</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\KMC\Decimal.h">
-      <Filter>헤더 파일\CppNet\KMC</Filter>
+    <ClInclude Include="CppNet\CppNet.h">
+      <Filter>헤더 파일\CppNet</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\Unicode.h">
+      <Filter>헤더 파일\CppNet</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Globalization\CharUnicodeInfo.h">
+      <Filter>헤더 파일\System\Globalization</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Globalization\UnicodeCategory.h">
+      <Filter>헤더 파일\System\Globalization</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Language.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemTypes.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Windows\Forms\Control.h">
+      <Filter>헤더 파일\System\Windows\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Windows\Forms\System.Windows.Forms.h">
+      <Filter>헤더 파일\System\Windows\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\Generic\ICollection.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\Generic\IEnumerable.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\Generic\IEnumerator.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\Generic\IList.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\Generic\Queue.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\Generic\System.Collections.Generic.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\ICollection.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\IEnumerable.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\IEnumerator.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\System.Collections.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Drawing\Point.h">
+      <Filter>헤더 파일\System\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Drawing\PointF.h">
+      <Filter>헤더 파일\System\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Drawing\SizeF.h">
+      <Filter>헤더 파일\System\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Drawing\System.Drawing.h">
+      <Filter>헤더 파일\System\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="System\BitConverter.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Boolean.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Byte.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Char.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Console.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Convert.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\DateTime.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Double.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\DoubleT.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Exception.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\FormatException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Func.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ICloneable.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IComparable.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IConvertible.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IEquatable.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IFormatProvider.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IFormattable.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Int16.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Int32.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Int64.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\InvalidCastException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\InvalidOperationException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Math.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\NotImplementedException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Object.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Random.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\SByte.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Single.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\String.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\System.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\TimeSpan.h">
+      <Filter>헤더 파일\System</Filter>
     </ClInclude>
     <ClInclude Include="System\Tuple.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Random.h">
+    <ClInclude Include="System\UInt16.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\UInt32.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\UInt64.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Version.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DateTime.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="Exception.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="FormatException.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="InvalidCastException.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="Math.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="NotImplementedException.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="Object.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="TimeSpan.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="Random.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
+    <ClCompile Include="System\Drawing\Point.cpp">
       <Filter>소스 파일\System\Drawing</Filter>
     </ClCompile>
-    <ClCompile Include="PointF.cpp">
+    <ClCompile Include="System\Drawing\PointF.cpp">
       <Filter>소스 파일\System\Drawing</Filter>
     </ClCompile>
-    <ClCompile Include="InvalidOperationException.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="DoubleT.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="SizeF.cpp">
+    <ClCompile Include="System\Drawing\SizeF.cpp">
       <Filter>소스 파일\System\Drawing</Filter>
     </ClCompile>
-    <ClCompile Include="BitConverter.cpp">
-      <Filter>소스 파일\System</Filter>
+    <ClCompile Include="System\Windows\Forms\Control.cpp">
+      <Filter>소스 파일\System\Windows\Forms</Filter>
     </ClCompile>
-    <ClCompile Include="Char.cpp">
-      <Filter>소스 파일\System</Filter>
-    </ClCompile>
-    <ClCompile Include="CharUnicodeInfo.cpp">
+    <ClCompile Include="System\Globalization\CharUnicodeInfo.cpp">
       <Filter>소스 파일\System\Globalization</Filter>
+    </ClCompile>
+    <ClCompile Include="System\BitConverter.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Char.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\DateTime.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\DoubleT.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Exception.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\FormatException.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\InvalidCastException.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\InvalidOperationException.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Math.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\NotImplementedException.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Object.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Random.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\TimeSpan.cpp">
+      <Filter>소스 파일\System</Filter>
     </ClCompile>
     <ClCompile Include="System\Version.cpp">
       <Filter>소스 파일\System</Filter>
@@ -327,35 +328,35 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Console.inl">
-      <Filter>인라인 구현 파일\System</Filter>
-    </None>
-    <None Include="Object.inl">
-      <Filter>인라인 구현 파일\System</Filter>
-    </None>
-    <None Include="Math.inl">
-      <Filter>인라인 구현 파일\System</Filter>
-    </None>
-    <None Include="Convert.inl">
-      <Filter>인라인 구현 파일\System</Filter>
-    </None>
-    <None Include="Queue.inl">
+    <None Include="System\Collections\Generic\Queue.inl">
       <Filter>인라인 구현 파일\System\Collections\Generic</Filter>
     </None>
-    <None Include="DoubleT.inl">
+    <None Include="CppNet\KMC\Decimal.inl">
+      <Filter>인라인 구현 파일\CppNet\KMC</Filter>
+    </None>
+    <None Include="System\BitConverter.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
-    <None Include="BitConverter.inl">
+    <None Include="System\Char.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
-    <None Include="Char.inl">
+    <None Include="System\Console.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="System\Convert.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="System\DoubleT.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="System\Math.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="System\Object.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
     <None Include="System\Version.inl">
       <Filter>인라인 구현 파일\System</Filter>
-    </None>
-    <None Include="CppNet\KMC\Decimal.inl">
-      <Filter>인라인 구현 파일\CppNet\KMC</Filter>
     </None>
   </ItemGroup>
 </Project>

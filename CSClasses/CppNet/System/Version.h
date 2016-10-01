@@ -1,10 +1,10 @@
 #ifndef SYSTEM_VERSION_H
 #define SYSTEM_VERSION_H
 
-#include "../Object.h"
-#include "../ICloneable.h"
-#include "../IComparable.h"
-#include "../IEquatable.h"
+#include "../System/Object.h"
+#include "../System/ICloneable.h"
+#include "../System/IComparable.h"
+#include "../System/IEquatable.h"
 
 namespace System
 {

@@ -1,6 +1,6 @@
 #include "Decimal.h"
 
-#include "../../BitConverter.h"
+#include "../../System/BitConverter.h"
 using namespace System;
 using namespace CppNet::KMC;
 

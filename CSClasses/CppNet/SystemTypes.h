@@ -1,29 +1,29 @@
 #ifndef SYSTEMTYPES_H
 #define SYSTEMTYPES_H
 
-#include "Boolean.h"
+#include "System/Boolean.h"
 
-#include "Byte.h"
-#include "SByte.h"
+#include "System/Byte.h"
+#include "System/SByte.h"
 
 #include "System/String.h"
 
-#include "Int16.h"
-#include "Int32.h"
-#include "Int64.h"
+#include "System/Int16.h"
+#include "System/Int32.h"
+#include "System/Int64.h"
 
-#include "UInt16.h"
-#include "UInt32.h"
-#include "UInt64.h"
+#include "System/UInt16.h"
+#include "System/UInt32.h"
+#include "System/UInt64.h"
 
-#include "Single.h"
-#include "Double.h"
+#include "System/Single.h"
+#include "System/Double.h"
 
-#include "Func.h"
+#include "System/Func.h"
 #include "System/Tuple.h"
 
-#include "Object.h"
+#include "System/Object.h"
 
-#include "Char.h"
+#include "System/Char.h"
 
 #endif

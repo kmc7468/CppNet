@@ -76,8 +76,8 @@ Version Version::Parse(const String& input)
 {
 	std::vector<String> a;
 
-	var i = 0;
-	var pos = input.find('.');
+	size_t i = 0;
+	size_t pos = input.find('.');
 	while (pos != String::npos)
 	{
 		a.push_back(input.substr(i, pos - i));

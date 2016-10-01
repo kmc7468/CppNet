@@ -1,7 +1,7 @@
 #include "Version.h"
 using namespace System;
 
-#include "../Exception.h"
+#include "Exception.h"
 
 Object Version::Clone()
 {

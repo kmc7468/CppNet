@@ -2,10 +2,8 @@
 #define CPPNET_KMC_DECIMAL_H
 
 #include "../../SystemTypes.h"
-#include "../../Queue.h"
 #include <vector>
 using namespace::System;
-using namespace::System::Collections::Generic;
 
 namespace CppNet
 {

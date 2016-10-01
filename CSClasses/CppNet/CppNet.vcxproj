@@ -18,6 +18,105 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CppNet.h" />
+    <ClInclude Include="CppNet\CppNet.h" />
+    <ClInclude Include="CppNet\KMC\Decimal.h" />
+    <ClInclude Include="CppNet\KMC\KMC.h" />
+    <ClInclude Include="CppNet\Unicode.h" />
+    <ClInclude Include="Language.h" />
+    <ClInclude Include="SystemTypes.h" />
+    <ClInclude Include="System\BitConverter.h" />
+    <ClInclude Include="System\Boolean.h" />
+    <ClInclude Include="System\Byte.h" />
+    <ClInclude Include="System\Char.h" />
+    <ClInclude Include="System\Collections\Generic\ICollection.h" />
+    <ClInclude Include="System\Collections\Generic\IEnumerable.h" />
+    <ClInclude Include="System\Collections\Generic\IEnumerator.h" />
+    <ClInclude Include="System\Collections\Generic\IList.h" />
+    <ClInclude Include="System\Collections\Generic\Queue.h" />
+    <ClInclude Include="System\Collections\Generic\System.Collections.Generic.h" />
+    <ClInclude Include="System\Collections\ICollection.h" />
+    <ClInclude Include="System\Collections\IEnumerable.h" />
+    <ClInclude Include="System\Collections\IEnumerator.h" />
+    <ClInclude Include="System\Collections\System.Collections.h" />
+    <ClInclude Include="System\Console.h" />
+    <ClInclude Include="System\Convert.h" />
+    <ClInclude Include="System\DateTime.h" />
+    <ClInclude Include="System\Double.h" />
+    <ClInclude Include="System\DoubleT.h" />
+    <ClInclude Include="System\Drawing\Point.h" />
+    <ClInclude Include="System\Drawing\PointF.h" />
+    <ClInclude Include="System\Drawing\SizeF.h" />
+    <ClInclude Include="System\Drawing\System.Drawing.h" />
+    <ClInclude Include="System\Exception.h" />
+    <ClInclude Include="System\FormatException.h" />
+    <ClInclude Include="System\Func.h" />
+    <ClInclude Include="System\Globalization\CharUnicodeInfo.h" />
+    <ClInclude Include="System\Globalization\UnicodeCategory.h" />
+    <ClInclude Include="System\ICloneable.h" />
+    <ClInclude Include="System\IComparable.h" />
+    <ClInclude Include="System\IConvertible.h" />
+    <ClInclude Include="System\IEquatable.h" />
+    <ClInclude Include="System\IFormatProvider.h" />
+    <ClInclude Include="System\IFormattable.h" />
+    <ClInclude Include="System\Int16.h" />
+    <ClInclude Include="System\Int32.h" />
+    <ClInclude Include="System\Int64.h" />
+    <ClInclude Include="System\InvalidCastException.h" />
+    <ClInclude Include="System\InvalidOperationException.h" />
+    <ClInclude Include="System\Math.h" />
+    <ClInclude Include="System\NotImplementedException.h" />
+    <ClInclude Include="System\Object.h" />
+    <ClInclude Include="System\Random.h" />
+    <ClInclude Include="System\SByte.h" />
+    <ClInclude Include="System\Single.h" />
+    <ClInclude Include="System\String.h" />
+    <ClInclude Include="System\System.h" />
+    <ClInclude Include="System\TimeSpan.h" />
+    <ClInclude Include="System\Tuple.h" />
+    <ClInclude Include="System\UInt16.h" />
+    <ClInclude Include="System\UInt32.h" />
+    <ClInclude Include="System\UInt64.h" />
+    <ClInclude Include="System\Version.h" />
+    <ClInclude Include="System\Windows\Forms\Control.h" />
+    <ClInclude Include="System\Windows\Forms\System.Windows.Forms.h" />
+    <ClInclude Include="Utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CppNet\KMC\Decimal.cpp" />
+    <ClCompile Include="System\BitConverter.cpp" />
+    <ClCompile Include="System\Char.cpp" />
+    <ClCompile Include="System\DateTime.cpp" />
+    <ClCompile Include="System\DoubleT.cpp" />
+    <ClCompile Include="System\Drawing\Point.cpp" />
+    <ClCompile Include="System\Drawing\PointF.cpp" />
+    <ClCompile Include="System\Drawing\SizeF.cpp" />
+    <ClCompile Include="System\Exception.cpp" />
+    <ClCompile Include="System\FormatException.cpp" />
+    <ClCompile Include="System\Globalization\CharUnicodeInfo.cpp" />
+    <ClCompile Include="System\InvalidCastException.cpp" />
+    <ClCompile Include="System\InvalidOperationException.cpp" />
+    <ClCompile Include="System\Math.cpp" />
+    <ClCompile Include="System\NotImplementedException.cpp" />
+    <ClCompile Include="System\Object.cpp" />
+    <ClCompile Include="System\Random.cpp" />
+    <ClCompile Include="System\TimeSpan.cpp" />
+    <ClCompile Include="System\Version.cpp" />
+    <ClCompile Include="System\Windows\Forms\Control.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CppNet\KMC\Decimal.inl" />
+    <None Include="System\BitConverter.inl" />
+    <None Include="System\Char.inl" />
+    <None Include="System\Collections\Generic\Queue.inl" />
+    <None Include="System\Console.inl" />
+    <None Include="System\Convert.inl" />
+    <None Include="System\DoubleT.inl" />
+    <None Include="System\Math.inl" />
+    <None Include="System\Object.inl" />
+    <None Include="System\Version.inl" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E6CAD7AD-2172-471B-AC48-34D726DFDF62}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -148,104 +247,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="BitConverter.h" />
-    <ClInclude Include="Boolean.h" />
-    <ClInclude Include="Byte.h" />
-    <ClInclude Include="Char.h" />
-    <ClInclude Include="CharUnicodeInfo.h" />
-    <ClInclude Include="Console.h" />
-    <ClInclude Include="Control.h" />
-    <ClInclude Include="Convert.h" />
-    <ClInclude Include="CppNet.h" />
-    <ClInclude Include="CppNet\CppNet.h" />
-    <ClInclude Include="CppNet\KMC\Decimal.h" />
-    <ClInclude Include="CppNet\KMC\KMC.h" />
-    <ClInclude Include="CppNet\Unicode.h" />
-    <ClInclude Include="DateTime.h" />
-    <ClInclude Include="Double.h" />
-    <ClInclude Include="DoubleT.h" />
-    <ClInclude Include="Exception.h" />
-    <ClInclude Include="FormatException.h" />
-    <ClInclude Include="Func.h" />
-    <ClInclude Include="ICloneable.h" />
-    <ClInclude Include="ICollection.h" />
-    <ClInclude Include="IComparable.h" />
-    <ClInclude Include="IConvertible.h" />
-    <ClInclude Include="IEnumerable.h" />
-    <ClInclude Include="IEnumerator.h" />
-    <ClInclude Include="IEquatable.h" />
-    <ClInclude Include="IFormatProvider.h" />
-    <ClInclude Include="IFormattable.h" />
-    <ClInclude Include="IList.h" />
-    <ClInclude Include="Int16.h" />
-    <ClInclude Include="Int32.h" />
-    <ClInclude Include="Int64.h" />
-    <ClInclude Include="InvalidCastException.h" />
-    <ClInclude Include="InvalidOperationException.h" />
-    <ClInclude Include="Language.h" />
-    <ClInclude Include="Math.h" />
-    <ClInclude Include="NotImplementedException.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="Point.h" />
-    <ClInclude Include="PointF.h" />
-    <ClInclude Include="Queue.h" />
-    <ClInclude Include="Random.h" />
-    <ClInclude Include="SByte.h" />
-    <ClInclude Include="Single.h" />
-    <ClInclude Include="SizeF.h" />
-    <ClInclude Include="System.Collections.Generic.h" />
-    <ClInclude Include="System.Collections.h" />
-    <ClInclude Include="System.Drawing.h" />
-    <ClInclude Include="System.h" />
-    <ClInclude Include="System.Windows.Forms.h" />
-    <ClInclude Include="SystemTypes.h" />
-    <ClInclude Include="System\String.h" />
-    <ClInclude Include="System\Tuple.h" />
-    <ClInclude Include="System\Version.h" />
-    <ClInclude Include="TimeSpan.h" />
-    <ClInclude Include="UInt16.h" />
-    <ClInclude Include="UInt32.h" />
-    <ClInclude Include="UInt64.h" />
-    <ClInclude Include="UnicodeCategory.h" />
-    <ClInclude Include="Utility.h" />
-    <ClInclude Include="_ICollection.h" />
-    <ClInclude Include="_IEnumerable.h" />
-    <ClInclude Include="_IEnumerator.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="BitConverter.cpp" />
-    <ClCompile Include="Char.cpp" />
-    <ClCompile Include="CharUnicodeInfo.cpp" />
-    <ClCompile Include="CppNet\KMC\Decimal.cpp" />
-    <ClCompile Include="DateTime.cpp" />
-    <ClCompile Include="DoubleT.cpp" />
-    <ClCompile Include="Exception.cpp" />
-    <ClCompile Include="FormatException.cpp" />
-    <ClCompile Include="InvalidCastException.cpp" />
-    <ClCompile Include="InvalidOperationException.cpp" />
-    <ClCompile Include="Math.cpp" />
-    <ClCompile Include="NotImplementedException.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Point.cpp" />
-    <ClCompile Include="PointF.cpp" />
-    <ClCompile Include="Random.cpp" />
-    <ClCompile Include="SizeF.cpp" />
-    <ClCompile Include="System\Version.cpp" />
-    <ClCompile Include="TimeSpan.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="BitConverter.inl" />
-    <None Include="Char.inl" />
-    <None Include="Console.inl" />
-    <None Include="Convert.inl" />
-    <None Include="CppNet\KMC\Decimal.inl" />
-    <None Include="DoubleT.inl" />
-    <None Include="Math.inl" />
-    <None Include="Object.inl" />
-    <None Include="Queue.inl" />
-    <None Include="System\Version.inl" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
