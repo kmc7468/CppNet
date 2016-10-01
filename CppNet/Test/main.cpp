@@ -75,5 +75,7 @@ int main(void)
 		Console::WriteLine(d3.ToString());
 	}
 
+	Console::WriteLine(CppNet::KMC::Decimal::PI.ToString());
+
 	MAIN_END
 }

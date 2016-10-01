@@ -270,6 +270,9 @@
     <ClInclude Include="System\Collections\Generic\Stack.h">
       <Filter>헤더 파일\System\Collections\Generic</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\Unicode9_0.h">
+      <Filter>헤더 파일\CppNet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -335,6 +338,12 @@
     <ClCompile Include="System\ArgumentException.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
+    <ClCompile Include="CppNet\Unicode.cpp">
+      <Filter>소스 파일\CppNet</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\Unicode9_0.cpp">
+      <Filter>소스 파일\CppNet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="System\Collections\Generic\Queue.inl">
@@ -369,6 +378,9 @@
     </None>
     <None Include="System\Collections\Generic\Stack.inl">
       <Filter>인라인 구현 파일\System\Collections\Generic</Filter>
+    </None>
+    <None Include="CppNet\Unicode.inl">
+      <Filter>인라인 구현 파일\CppNet</Filter>
     </None>
   </ItemGroup>
 </Project>

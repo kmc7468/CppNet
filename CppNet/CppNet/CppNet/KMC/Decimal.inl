@@ -41,7 +41,7 @@ char Decimal::ByteTool::FromByte(Byte b)
 	return b + '0';
 }
 
-String Decimal::ToString(size_t realsize)
+String Decimal::ToString(size_t realsize) const
 {
 	var a = ToString();
 

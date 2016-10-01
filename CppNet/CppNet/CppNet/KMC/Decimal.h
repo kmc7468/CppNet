@@ -11,6 +11,10 @@ namespace CppNet
 	{
 		class Decimal final : public Object
 		{
+		public:
+			static const Decimal PI;
+			static const Decimal E;
+
 		private:
 			class ByteTool final
 			{
@@ -40,8 +44,8 @@ namespace CppNet
 			~Decimal() = default;
 
 		public:
-			String ToString();
-			inline String ToString(size_t realsize);
+			String ToString() const;
+			inline String ToString(size_t realsize) const;
 
 		public:
 			static Decimal Parse(const String& str);

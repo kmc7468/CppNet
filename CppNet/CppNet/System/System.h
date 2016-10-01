@@ -17,6 +17,7 @@
 #include "InvalidOperationException.h"
 #include "FormatException.h"
 #include "NotImplementedException.h"
+#include "ArgumentException.h"
 
 #include "TimeSpan.h"
 #include "DateTime.h"

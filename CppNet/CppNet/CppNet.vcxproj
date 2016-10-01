@@ -24,6 +24,7 @@
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\KMC.h" />
     <ClInclude Include="CppNet\Unicode.h" />
+    <ClInclude Include="CppNet\Unicode9_0.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="SystemTypes.h" />
     <ClInclude Include="System\ArgumentException.h" />
@@ -87,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp" />
+    <ClCompile Include="CppNet\Unicode.cpp" />
+    <ClCompile Include="CppNet\Unicode9_0.cpp" />
     <ClCompile Include="System\ArgumentException.cpp" />
     <ClCompile Include="System\BitConverter.cpp" />
     <ClCompile Include="System\Char.cpp" />
@@ -110,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CppNet\KMC\Decimal.inl" />
+    <None Include="CppNet\Unicode.inl" />
     <None Include="System\BitConverter.inl" />
     <None Include="System\Char.inl" />
     <None Include="System\Collections\Generic\Queue.inl" />
