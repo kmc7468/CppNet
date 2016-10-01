@@ -57,15 +57,16 @@ Decimal Decimal::Parse(const String& str)
 	if (s[0] == '-')
 	{
 		r.isN = true;
-		s = s.substr(1);
+		s.erase(s.begin());
 	}
 
 	if (s.find('.') == String::npos)
 	{
-		s.insert(0, s.length() % 2, '0');
+		s.insert(0, s.length() & 1, '0');
 
-		for (size_t i = 0; i < s.length() / 2; i++)
-			r.mInteger += ByteTool::IntsToByte(ByteTool::ToByte(s[i * 2]), ByteTool::ToByte(s[i * 2 + 1]));
+		int n = s.length() >> 1;
+		for (size_t i = 0; i < n; i++)
+			r.mInteger += ByteTool::IntsToByte(ByteTool::ToByte(s[i << 1]), ByteTool::ToByte(s[(i << 1) + 1]));
 
 		r.mReal += (Byte)0;
 	}
@@ -76,21 +77,21 @@ Decimal Decimal::Parse(const String& str)
 		String integer = s.substr(0, dot);
 		String real = s.substr(dot + 1);
 
-		integer.insert(0, integer.length() % 2, '0');
-		real.insert(real.length(), real.length() % 2, '0');
+		integer.insert(0, integer.length() & 1, '0');
+		real.insert(real.length(), real.length() & 1, '0');
 
-		for (size_t i = 0; i < integer.length() / 2; i++)
+		for (size_t i = 0; i < integer.length() & 1; i++)
 		{
-			Byte first = ByteTool::ToByte(integer[i * 2]);
-			Byte second = ByteTool::ToByte(integer[i * 2 + 1]);
+			Byte first = ByteTool::ToByte(integer[i << 1]);
+			Byte second = ByteTool::ToByte(integer[(i << 1) + 1]);
 			Byte c = ByteTool::IntsToByte(first, second);
 			r.mInteger += c;
 		}
 
-		for (size_t i = 0; i < real.length() / 2; i++)
+		for (size_t i = 0; i < real.length() & 1; i++)
 		{
-			Byte first = ByteTool::ToByte(real[i * 2]);
-			Byte second = ByteTool::ToByte(real[i * 2 + 1]);
+			Byte first = ByteTool::ToByte(real[i << 1]);
+			Byte second = ByteTool::ToByte(real[(i << 1) + 1]);
 			Byte c = ByteTool::IntsToByte(first, second);
 			if (i == 0)
 				r.mReal = c;
