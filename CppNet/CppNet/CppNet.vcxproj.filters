@@ -273,6 +273,9 @@
     <ClInclude Include="CppNet\Unicode9_0.h">
       <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\KMC\Fraction.h">
+      <Filter>헤더 파일\CppNet\KMC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">

@@ -22,6 +22,7 @@
     <ClInclude Include="CppNet.h" />
     <ClInclude Include="CppNet\CppNet.h" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
+    <ClInclude Include="CppNet\KMC\Fraction.h" />
     <ClInclude Include="CppNet\KMC\KMC.h" />
     <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="CppNet\Unicode9_0.h" />
