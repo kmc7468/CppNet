@@ -6,29 +6,12 @@ using namespace CppNet::KMC;
 
 Byte Decimal::ByteTool::IntsToByte(Byte a, Byte b)
 {
-	if (a == 0 && b == 0) return 0;
-
-	String bin1 = a != 0 ? BitConverter::BytesToBinString(std::array<Byte, 1>{a}) : "";
-	String bin2 = b != 0 ? BitConverter::BytesToBinString(std::array<Byte, 1>{b}) : "";
-	bin1.insert(0, 4 - bin1.length(), '0');
-	bin2.insert(0, 4 - bin2.length(), '0');
-
-	var temp = BitConverter::BinStringToBytes<1>(bin1 + bin2);
-
-	return temp[0];
+	return (a << 4) | (b & 0xF);
 }
 
 std::tuple<Byte, Byte> Decimal::ByteTool::ByteToInts(Byte b)
 {
-	if (b == 0) return std::make_tuple<Byte, Byte>(0, 0);
-
-	String bin = BitConverter::BytesToBinString(std::array<Byte, 1>{b});
-	bin.insert(0, 8 - bin.length(), '0');
-
-	Byte a = BitConverter::BinStringToBytes<1>(bin.substr(0, 4))[0];
-	Byte c = BitConverter::BinStringToBytes<1>(bin.substr(4, 4))[0];
-
-	return std::make_tuple(a, c);
+	return std::make_tuple(b >> 4, b & 0xF);
 }
 
 Byte Decimal::ByteTool::ToByte(char c)

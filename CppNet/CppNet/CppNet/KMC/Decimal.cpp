@@ -885,12 +885,12 @@ Decimal Decimal::operator++(int)
 
 Decimal Decimal::operator-(const Decimal& d) const
 {
-	/*TODO
+	/*NOTE
 
-	- 내림 구현하기
+	- 내림 구현중 lol
 
 	*/
-
+	/*
 	Decimal a = *this;
 	Decimal b = Decimal(d);
 	Decimal c = 0.0;
@@ -1014,9 +1014,9 @@ Decimal Decimal::operator-(const Decimal& d) const
 		c = a + d;
 	}
 
-
 Exit:
 	c.Clean();
 
 	return c;
+	*/
 }
