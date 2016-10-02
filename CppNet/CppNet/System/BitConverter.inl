@@ -1,8 +1,13 @@
 #include "BitConverter.h"
 
 #include <algorithm>
+#include <string>
 #include <bitset>
+#include <iomanip>
+#include <sstream>
+#include "ArgumentException.h"
 #include "Math.h"
+using namespace std;
 
 namespace System
 {
@@ -122,10 +127,8 @@ namespace System
 	{
 		if (arr[0] == 0)
 			return false;
-		else if (arr[0] == 1)
-			return true;
 		else
-			throw Exception("응 인자오류~"); // FIXME Arg 뭐시기 Exception
+			return true;
 	}
 
 	Char BitConverter::ToChar(std::array<Byte, 4> arr, Boolean igroneEndian)
@@ -225,8 +228,9 @@ namespace System
 
 		for (var d : arr)
 		{
-			char c[9];
-			String temp = itoa(d, c, 2);
+			std::bitset<8> bit(d);
+
+			String temp = bit.to_string();
 			temp.insert(0, 8 - temp.length(), '0');
 
 			b += temp;
@@ -247,11 +251,16 @@ namespace System
 
 		for (size_t i = 0; i < size; i++)
 		{
-			i < start ? r[i] = 0 : 0;
+			if (i < start)
+			{
+				r[i] = 0;
+				continue;
+			}
 
 			Byte b = 0;
 
-			b = (Byte)strtol(bin.substr(i * 8, 8).c_str(), NULL, 2);
+			std::bitset<8> bit(bin.substr((i - start) * 8, 8));
+			b = bit.to_ullong();
 
 			r[i] = b;
 		}
@@ -266,11 +275,10 @@ namespace System
 
 		for (var d : arr)
 		{
-			char c[3];
-			String temp = _itoa(d, c, 16);
-			temp.insert(0, 2 - temp.length(), '0');
+			char buf[3];
+			sprintf(buf, "%02X", d);
 
-			b += temp;
+			b += String(buf);
 		}
 
 		while (b[0] == '0')
@@ -297,11 +305,11 @@ namespace System
 				continue;
 			}
 
-			Byte b = 0;
+			Byte *b = new Byte(0);
 
-			b = (Byte)strtol(hex.substr(i * 2, 2).c_str(), NULL, 16);
+			sscanf(("0x"s + hex.substr((i - start) * 2, 2)).c_str(), "%x", b);
 
-			r[i] = b;
+			r[i] = *b;
 		}
 
 		return r;
