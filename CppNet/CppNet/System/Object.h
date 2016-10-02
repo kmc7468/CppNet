@@ -19,8 +19,8 @@ namespace System
 		virtual ~Object() = default;
 
 	public:
-		virtual Boolean operator==(const Object& obj);
-		virtual Boolean operator!=(const Object& obj);
+		virtual Boolean operator==(const Object& obj) const;
+		virtual Boolean operator!=(const Object& obj) const;
 
 	public:
 		virtual inline Boolean Equals(Object& obj) const;

@@ -22,9 +22,7 @@ int main(void)
 
 	Fraction64 f2(2, 12);
 
-	f = std::get<0>(f.RTCD(f2));
-
-	f.ROAF();
+	var fs = Fraction64::Irreducible(f);
 
 	MAIN_END
 }

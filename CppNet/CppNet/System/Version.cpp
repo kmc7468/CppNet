@@ -62,12 +62,12 @@ Version::Version(const Version& ver)
 	revision = ver.revision;
 }
 
-Boolean Version::operator==(const Object& obj)
+Boolean Version::operator==(const Object& obj) const
 {
 	return Equals(*const_cast<Object*>(&obj));
 }
 
-Boolean Version::operator!=(const Object& obj)
+Boolean Version::operator!=(const Object& obj) const
 {
 	return !Equals(*const_cast<Object*>(&obj));
 }

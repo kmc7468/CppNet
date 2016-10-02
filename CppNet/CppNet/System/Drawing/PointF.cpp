@@ -14,7 +14,7 @@ namespace System
 			Y = y;
 		}
 
-		Boolean PointF::operator==(const Object& obj)
+		Boolean PointF::operator==(const Object& obj) const
 		{
 			if (is<const PointF&>(obj))
 			{
@@ -28,7 +28,7 @@ namespace System
 				return false;
 		}
 
-		Boolean PointF::operator!=(const Object& obj)
+		Boolean PointF::operator!=(const Object& obj) const
 		{
 			if (is<const PointF&>(obj))
 			{

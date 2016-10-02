@@ -204,7 +204,7 @@ namespace System
 		return DoubleT(d);
 	}
 
-	Boolean DoubleT::operator==(const Object& obj)
+	Boolean DoubleT::operator==(const Object& obj) const
 	{
 		if (is<const DoubleT&>(obj))
 		{
@@ -217,7 +217,7 @@ namespace System
 		else return false;
 	}
 
-	Boolean DoubleT::operator!=(const Object& obj)
+	Boolean DoubleT::operator!=(const Object& obj) const
 	{
 		if (is<const DoubleT&>(obj))
 		{

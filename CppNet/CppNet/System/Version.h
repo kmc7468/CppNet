@@ -32,8 +32,8 @@ namespace System
 		inline Boolean Equals(Object& obj) const override;
 
 	public:
-		Boolean operator==(const Object& obj) override;
-		Boolean operator!=(const Object& obj) override;
+		Boolean operator==(const Object& obj) const override;
+		Boolean operator!=(const Object& obj) const override;
 
 	public:
 		static Version Parse(const String& input);

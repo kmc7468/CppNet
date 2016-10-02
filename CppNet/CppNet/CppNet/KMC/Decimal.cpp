@@ -105,7 +105,7 @@ Decimal Decimal::Parse(const String& str)
 	return r;
 }
 
-Boolean Decimal::operator==(const Object& obj)
+Boolean Decimal::operator==(const Object& obj) const
 {
 	if (is<const Decimal, std::remove_reference<const Object&>::type>())
 	{
@@ -120,7 +120,7 @@ Boolean Decimal::operator==(const Object& obj)
 		return false;
 }
 
-Boolean Decimal::operator!=(const Object& obj)
+Boolean Decimal::operator!=(const Object& obj) const
 {
 	return !Decimal::operator==(obj);
 }

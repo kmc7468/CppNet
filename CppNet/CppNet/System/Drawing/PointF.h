@@ -21,9 +21,9 @@ namespace System
 			// TODO Subtract(s)
 
 		public:
-			Boolean operator==(const Object& obj) override;
+			Boolean operator==(const Object& obj) const override;
 
-			Boolean operator!=(const Object& obj) override;
+			Boolean operator!=(const Object& obj) const override;
 
 		public:
 			String ToString() const override;

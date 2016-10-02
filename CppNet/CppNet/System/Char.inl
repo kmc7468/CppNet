@@ -37,12 +37,12 @@ namespace System
 		return Char(c);
 	}
 
-	Boolean Char::operator==(const Object& obj)
+	Boolean Char::operator==(const Object& obj) const
 	{
 		return Equals(*const_cast<Object*>(&obj));
 	}
 
-	Boolean Char::operator!=(const Object& obj)
+	Boolean Char::operator!=(const Object& obj) const
 	{
 		return !Equals(*const_cast<Object*>(&obj));
 	}

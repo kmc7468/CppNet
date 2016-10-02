@@ -54,8 +54,8 @@ namespace CppNet
 			inline static Decimal Parse(Double real);
 
 		public:
-			Boolean operator==(const Object& obj) override;
-			Boolean operator!=(const Object& obj) override;
+			Boolean operator==(const Object& obj) const override;
+			Boolean operator!=(const Object& obj) const override;
 
 		public:
 			Boolean operator>(const Decimal& d) const;

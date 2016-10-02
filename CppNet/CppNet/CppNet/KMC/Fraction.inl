@@ -2,9 +2,9 @@
 using namespace CppNet::KMC;
 
 template<typename integer>
-Fraction<integer>::Fraction(integer denominator)
+Fraction<integer>::Fraction(integer numerator)
 {
-	this->denominator = denominator;
+	this->numerator = numerator;
 }
 
 template<typename integer>
@@ -59,7 +59,20 @@ Fraction<integer>::Fraction(Fraction<integer>&& f)
 }
 
 template<typename integer>
-Fraction<integer> Fraction<integer>::ROAF()
+Fraction<integer> Fraction<integer>::Irreducible(const Fraction<integer>& f)
+{
+	Fraction<integer> r(f);
+
+	integer div = gcd(r.numerator, r.denominator);
+
+	r.numerator /= div;
+	r.denominator /= div;
+
+	return r;
+}
+
+template<typename integer>
+Fraction<integer>& Fraction<integer>::Irreducible()
 {
 	integer div = gcd(numerator, denominator);
 
@@ -70,20 +83,36 @@ Fraction<integer> Fraction<integer>::ROAF()
 }
 
 template<typename integer>
-std::tuple<Fraction<integer>, Fraction<integer>> Fraction<integer>::RTCD(const Fraction<integer>& extra)
+Tuple<Fraction<integer>, Fraction<integer>> Fraction<integer>::Reduce(const Fraction<integer>& a, const Fraction<integer>& b)
 {
-	Fraction<integer> a(1);
-	Fraction<integer> b(1);
+	Fraction<integer> first(a);
+	Fraction<integer> last(b);
 
-	integer mul = lcm(denominator, extra.denominator);
+	integer mul = lcm(first.denominator, last.denominator);
 
-	a.denominator = mul;
-	b.denominator = mul;
+	first.numerator = first.numerator * (mul / first.denominator);
+	last.numerator = last.numerator * (mul / last.denominator);
 
-	a.numerator = numerator * (mul / denominator);
-	b.numerator = extra.numerator * (mul / extra.denominator);
+	first.denominator = mul;
+	last.denominator = mul;
 
-	return std::make_tuple(a, b);
+	return std::make_tuple(first, last);
+}
+
+template<typename integer>
+Tuple<Fraction<integer>, Fraction<integer>> Fraction<integer>::Reduce(const Fraction<integer>& f)
+{
+	Fraction<integer> last(f);
+
+	integer mul = lcm(denominator, last.denominator);
+
+	numerator = numerator * (mul / denominator);
+	last.numerator = last.numerator * (mul / last.denominator);
+
+	denominator = mul;
+	last.denominator = mul;
+
+	return std::make_tuple(*this, last);
 }
 
 template<typename integer>
@@ -125,4 +154,46 @@ Fraction<integer>& Fraction<integer>::operator=(Fraction<integer>&& f)
 	denominator = std::move(f.denominator);
 
 	return *this;
+}
+
+template<typename integer>
+String Fraction<integer>::ToString() const
+{
+	return std::to_string(numerator) + "/" + std::to_string(denominator);
+}
+
+template<typename integer>
+Object Fraction<integer>::Clone()
+{
+	return Fraction<integer>(*this);
+}
+
+template<typename integer>
+Boolean Fraction<integer>::operator==(const Object& obj) const
+{
+	if (is<const Fraction<integer>, std::remove_reference<const Object&>::type>())
+	{
+		var a = as<const Fraction<integer>&>(obj);
+
+		Fraction<integer> b(a);
+
+		b.Irreducible();
+
+		Fraction<integer> c(*this);
+
+		c.Irreducible();
+
+		if (b.ToString() == c.ToString())
+			return true;
+		else
+			return false;
+	}
+	else
+		return false;
+}
+
+template<typename integer>
+Boolean Fraction<integer>::operator!=(const Object& obj) const
+{
+	return !((*this).operator==(obj));
 }
