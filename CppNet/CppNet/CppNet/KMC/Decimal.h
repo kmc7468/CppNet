@@ -58,31 +58,27 @@ namespace CppNet
 			Boolean operator!=(const Object& obj) const override;
 
 		public:
+			Decimal& operator=(const Decimal& d);
+			Decimal& operator=(Decimal&& d);
+
 			Boolean operator>(const Decimal& d) const;
-			Boolean operator>(Decimal&& d) const;
 
 			Boolean operator>=(const Decimal& d) const;
-			Boolean operator>=(Decimal&& d) const;
 
 			Boolean operator<(const Decimal& d) const;
-			Boolean operator<(Decimal&& d) const;
 
 			Boolean operator<=(const Decimal& d) const;
-			Boolean operator<=(Decimal&& d) const;
-
-			Decimal operator=(const Decimal& d);
-			Decimal operator=(Decimal&& d);
 
 			Decimal operator+(const Decimal& d) const;
-			Decimal operator+(Decimal&& d) const;
 
 			Decimal operator+=(const Decimal& d);
-			Decimal operator+=(Decimal&& d);
 
 			Decimal operator++();
 			Decimal operator++(int);
 
 			Decimal operator-(const Decimal& d) const;
+
+			Decimal operator*(const Decimal& d) const;
 
 		private:
 			inline void Clean();
