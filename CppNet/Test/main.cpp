@@ -20,9 +20,12 @@ int main(void)
 
 	Fraction64 f(1, 6);
 
-	Fraction64 f2(2, 12);
+	Fraction64 f2(12, 2);
 
-	var fs = Fraction64::Irreducible(f);
+	Fraction64 f3 = f2;
+
+	Console::WriteLine(f3.ToString());
+	Console::WriteLine(f3.ToReal64());
 
 	MAIN_END
 }

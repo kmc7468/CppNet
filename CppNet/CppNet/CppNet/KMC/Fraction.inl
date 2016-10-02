@@ -169,6 +169,24 @@ Object Fraction<integer>::Clone()
 }
 
 template<typename integer>
+Double Fraction<integer>::ToReal64() const
+{
+	return (Double)numerator / (Double)denominator;
+}
+
+template<typename integer>
+Decimal Fraction<integer>::ToReal() const
+{
+	// TODO: Decimal에 나눗셈이 구현되면 주석 해제 후 임시 코드 삭제 바람
+	/*Decimal a((Double)numerator);
+	Decimal b((Double)denominator);
+
+	return a / b;*/
+
+	return Decimal(ToReal64());
+}
+
+template<typename integer>
 Boolean Fraction<integer>::operator==(const Object& obj) const
 {
 	if (is<const Fraction<integer>, std::remove_reference<const Object&>::type>())
@@ -196,4 +214,51 @@ template<typename integer>
 Boolean Fraction<integer>::operator!=(const Object& obj) const
 {
 	return !((*this).operator==(obj));
+}
+
+template<typename integer>
+Fraction<integer> Fraction<integer>::operator+(const Fraction<integer>& f) const
+{
+	var t = Fraction<integer>::Reduce(*this, f);
+
+	Fraction<integer> a = std::get<0>(t);
+	Fraction<integer> b = std::get<1>(t);
+
+	a.numerator += b.numerator;
+
+	return a;
+}
+
+template<typename integer>
+Fraction<integer>& Fraction<integer>::operator+=(const Fraction<integer>& f)
+{
+	var t = Fraction<integer>::Reduce(*this, f);
+
+	Fraction<integer> a = std::get<0>(t);
+	Fraction<integer> b = std::get<1>(t);
+
+	a.numerator += b.numerator;
+
+	numerator = a.numerator;
+	denominator = a.denominator;
+
+	return *this;
+}
+
+template<typename integer>
+Fraction<integer> Fraction<integer>::operator++()
+{
+	numerator += 1;
+
+	return *this;
+}
+
+template<typename integer>
+Fraction<integer> Fraction<integer>::operator++(int)
+{
+	Fraction<integer> i = *this;
+
+	numerator += 1;
+
+	return i;
 }

@@ -27,6 +27,8 @@ namespace CppNet
 		public:
 			inline String ToString() const override;
 			inline Object Clone() override;
+			inline Double ToReal64() const;
+			inline Decimal ToReal() const;
 
 		private:
 			integer numerator = 1;
@@ -41,6 +43,11 @@ namespace CppNet
 
 			Boolean operator==(const Object& obj) const override;
 			Boolean operator!=(const Object& obj) const override;
+
+			Fraction<integer> operator+(const Fraction<integer>& f) const;
+			Fraction<integer>& operator+=(const Fraction<integer>& f);
+			Fraction<integer> operator++();
+			Fraction<integer> operator++(int);
 
 		public: 
 			static Fraction<integer> Irreducible(const Fraction<integer>& f);
