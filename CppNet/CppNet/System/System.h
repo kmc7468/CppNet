@@ -7,10 +7,10 @@
 #ifndef N_SYSTEM_H
 #define N_SYSTEM_H
 
-#include "Language.h"
-#include "Utility.h"
+#include "../Language.h"
+#include "../Utility.h"
 
-#include "SystemTypes.h"
+#include "../SystemTypes.h"
 
 #include "Exception.h"
 #include "InvalidCastException.h"
@@ -38,6 +38,6 @@
 
 #include "BitConverter.h"
 
-#include "System/Version.h"
+#include "Version.h"
 
 #endif

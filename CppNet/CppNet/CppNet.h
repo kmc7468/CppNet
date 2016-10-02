@@ -8,6 +8,7 @@
 #include "CppNet/CppNet.h"
 
 #include "System/System.h"
+#include "System/Globalization/System.Globalization.h"
 #include "System/Collections/System.Collections.h"
 #include "System/Collections/Generic/System.Collections.Generic.h"
 #include "System/Drawing/System.Drawing.h"

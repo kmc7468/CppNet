@@ -57,6 +57,7 @@
     <ClInclude Include="System\FormatException.h" />
     <ClInclude Include="System\Func.h" />
     <ClInclude Include="System\Globalization\CharUnicodeInfo.h" />
+    <ClInclude Include="System\Globalization\System.Globalization.h" />
     <ClInclude Include="System\Globalization\UnicodeCategory.h" />
     <ClInclude Include="System\ICloneable.h" />
     <ClInclude Include="System\IComparable.h" />
@@ -79,6 +80,7 @@
     <ClInclude Include="System\System.h" />
     <ClInclude Include="System\TimeSpan.h" />
     <ClInclude Include="System\Tuple.h" />
+    <ClInclude Include="System\Type.h" />
     <ClInclude Include="System\UInt16.h" />
     <ClInclude Include="System\UInt32.h" />
     <ClInclude Include="System\UInt64.h" />

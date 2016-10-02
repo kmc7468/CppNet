@@ -27,5 +27,10 @@ int main(void)
 	Console::WriteLine(f3.ToString());
 	Console::WriteLine(f3.ToReal64());
 
+	Console::WriteLine(String(typeof(f3).name()));
+	Console::WriteLine(String(nameof(f3)));
+
+	typeid(Char);
+
 	MAIN_END
 }
