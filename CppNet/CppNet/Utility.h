@@ -8,6 +8,8 @@
 #define interface struct
 #define var auto
 
+#define nameof(x) #x
+
 #define MAIN_END system("pause");return 0;
 
 template <typename T, typename U>

@@ -226,7 +226,7 @@ namespace System
 		for (var d : arr)
 		{
 			char c[9];
-			String temp = _itoa(d, c, 2);
+			String temp = itoa(d, c, 2);
 			temp.insert(0, 8 - temp.length(), '0');
 
 			b += temp;
