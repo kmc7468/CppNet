@@ -2,7 +2,9 @@
 
 int main()
 {
-	Decimal a(3.141592), b(1.4142);
+	Decimal a(1.5), b(1.0);
+	Console::WriteLine((Boolean)(a > b));
 	Console::WriteLine((a - b).ToString());
-	return 0;
+	
+	MAIN_END
 }

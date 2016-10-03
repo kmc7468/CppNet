@@ -9,7 +9,7 @@ namespace System
 {
 	void Console::Write(Boolean boolean)
 	{
-		std::cout << (boolean ? L"True" : L"False");
+		std::cout << (boolean ? "True" : "False");
 	}
 
 	void Console::Write(Char character)
@@ -84,7 +84,7 @@ namespace System
 
 	void Console::WriteLine(Boolean boolean)
 	{
-		std::cout << (boolean ? L"True" : L"False") << std::endl;
+		std::cout << (boolean ? "True" : "False") << std::endl;
 	}
 
 	void Console::WriteLine(Char character)

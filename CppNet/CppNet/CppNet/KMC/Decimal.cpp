@@ -158,9 +158,11 @@ Boolean Decimal::operator>(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if ((!a.isN && a_one > b_one) || (a.isN && a_one < b_one)) return true;
+		if (a_one != 0 || b_one != 0)
+			if ((!a.isN && a_one > b_one) || (a.isN && a_one < b_one)) return true;
 
-		if ((!a.isN && a_two > b_two) || (a.isN && a_two < b_two)) return true;
+		if (a_two != 0 || b_two != 0)
+			if ((!a.isN && a_two > b_two) || (a.isN && a_two < b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -174,9 +176,11 @@ Boolean Decimal::operator>(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if ((!a.isN && a_one > b_one) || (a.isN && a_one < b_one)) return true;
+		if (a_one != 0 || b_one != 0)
+			if ((!a.isN && a_one > b_one) || (a.isN && a_one < b_one)) return true;
 
-		if ((!a.isN && a_two > b_two) || (a.isN && a_two < b_two)) return true;
+		if (a_two != 0 || b_two != 0)
+			if ((!a.isN && a_two > b_two) || (a.isN && a_two < b_two)) return true;
 	}
 
 	return false;
@@ -215,9 +219,11 @@ Boolean Decimal::operator>=(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
+		if (a_one != 0 || b_one != 0)
+			if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
 
-		if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
+		if (a_two != 0 || b_two != 0)
+			if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -231,9 +237,11 @@ Boolean Decimal::operator>=(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
+		if (a_one != 0 || b_one != 0)
+			if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
 
-		if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
+		if (a_two != 0 || b_two != 0)
+			if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
 	}
 
 	return false;
@@ -272,9 +280,11 @@ Boolean Decimal::operator<(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if ((!a.isN && a_one < b_one) || (a.isN && a_one > b_one)) return true;
+		if (a_one != 0 || b_one != 0)
+			if ((!a.isN && a_one < b_one) || (a.isN && a_one > b_one)) return true;
 
-		if ((!a.isN && a_two < b_two) || (a.isN && a_two > b_two)) return true;
+		if (a_two != 0 || b_two != 0)
+			if ((!a.isN && a_two < b_two) || (a.isN && a_two > b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -288,9 +298,11 @@ Boolean Decimal::operator<(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if ((!a.isN && a_one < b_one) || (a.isN && a_one > b_one)) return true;
+		if (a_one != 0 || b_one != 0)
+			if ((!a.isN && a_one < b_one) || (a.isN && a_one > b_one)) return true;
 
-		if ((!a.isN && a_two < b_two) || (a.isN && a_two > b_two)) return true;
+		if (a_two != 0 || b_two != 0)
+			if ((!a.isN && a_two < b_two) || (a.isN && a_two > b_two)) return true;
 	}
 
 	return false;
@@ -329,9 +341,11 @@ Boolean Decimal::operator<=(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
-		if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
+		if (a_one != 0 || b_one != 0)
+			if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
 
-		if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
+		if (a_two != 0 || b_two != 0)
+			if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
 	}
 
 	for (size_t i = 0; i < a.mReal.length(); i++)
@@ -345,10 +359,11 @@ Boolean Decimal::operator<=(const Decimal& d) const
 		var b_one = std::get<0>(temp_b);
 		var b_two = std::get<1>(temp_b);
 
+		if (a_one != 0 || b_one != 0)
+			if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
 
-		if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
-
-		if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
+		if (a_two != 0 || b_two != 0)
+			if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
 	}
 
 	return false;
@@ -586,7 +601,7 @@ Decimal Decimal::operator-(const Decimal& d) const
 		smaller.mReal.rbegin(), smaller.mReal.rend(),
 		[](auto byte)
 	{
-		return (bool) byte;
+		return (bool)byte;
 	}
 	);
 	//t가 false이면 소수 부분이 0인 경우입니다
@@ -628,7 +643,7 @@ Decimal Decimal::operator-(const Decimal& d) const
 	//revit이 처음부터 rend일 경우 따로 처리를 안 해줘도 됩니다.
 	for (; revit != smaller.mInteger.rend(); ++revit)
 		*revit = (9 - (*revit >> 4)) << 4 | (9 - (*revit & 0x0F));
-	
+
 	//맨 앞쪽은 0 ? 혹은 ? ? 이므로
 	//0 ?일 경우 지워줍니다.
 	if (!(bigger.mInteger[0] >> 4))
