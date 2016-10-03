@@ -34,6 +34,11 @@ Fraction<integer>::Fraction(const Decimal& decimal)
 template<typename integer>
 Fraction<integer>::Fraction(const String& fraction)
 {
+	if (fraction.find('/') == String::npos)
+	{
+		throw FormatException(Exception::ExceptionData(TXT_FORMAT_FRACTION_NOSLASH, "", "", nullptr));
+	}
+
 	String n = fraction.substr(0, fraction.find('/'));
 	String d = fraction.substr(fraction.find('/') + 1);
 
@@ -41,7 +46,7 @@ Fraction<integer>::Fraction(const String& fraction)
 	UInt64 temp2 = std::stoull(d);
 
 	numerator = (integer)temp1;
-	denominator = (integer)temp02;
+	denominator = (integer)temp2;
 }
 
 template<typename integer>
@@ -261,4 +266,117 @@ Fraction<integer> Fraction<integer>::operator++(int)
 	numerator += 1;
 
 	return i;
+}
+
+template<typename integer>
+Fraction<integer> Fraction<integer>::operator-(const Fraction<integer>& f) const
+{
+	var t = Fraction<integer>::Reduce(*this, f);
+
+	Fraction<integer> a = std::get<0>(t);
+	Fraction<integer> b = std::get<1>(t);
+
+	a.numerator -= b.numerator;
+
+	return a;
+}
+
+template<typename integer>
+Fraction<integer>& Fraction<integer>::operator-=(const Fraction<integer>& f)
+{
+	var t = Fraction<integer>::Reduce(*this, f);
+
+	Fraction<integer> a = std::get<0>(t);
+	Fraction<integer> b = std::get<1>(t);
+
+	a.numerator -= b.numerator;
+
+	numerator = a.numerator;
+	denominator = a.denominator;
+
+	return *this;
+}
+
+template<typename integer>
+Fraction<integer> Fraction<integer>::operator--()
+{
+	numerator -= 1;
+
+	return *this;
+}
+
+template<typename integer>
+Fraction<integer> Fraction<integer>::operator--(int)
+{
+	Fraction<integer> i = *this;
+
+	numerator -= 1;
+
+	return i;
+}
+
+template<typename integer>
+Fraction<integer> Fraction<integer>::operator*(const Fraction<integer>& f) const
+{
+	Fraction<integer> a = *this;
+	Fraction<integer> b = f;
+
+	a.numerator *= b.numerator;
+	a.denominator *= b.denominator;
+
+	return a;
+}
+
+template<typename integer>
+Fraction<integer>& Fraction<integer>::operator*=(const Fraction<integer>& f)
+{
+	Fraction<integer> a = *this;
+	Fraction<integer> b = f;
+
+	a.numerator *= b.numerator;
+	a.denominator *= b.denominator;
+
+	numerator = a.numerator;
+	denominator = a.denominator;
+
+	return *this;
+}
+
+template<typename integer>
+Fraction<integer> Fraction<integer>::operator/(const Fraction<integer>& f) const
+{
+	Fraction<integer> a = *this;
+	Fraction<integer> b = f;
+	b.inverse();
+
+	a.numerator *= b.numerator;
+	a.denominator *= b.denominator;
+
+	return a;
+}
+
+template<typename integer>
+Fraction<integer>& Fraction<integer>::operator/=(const Fraction<integer>& f)
+{
+	Fraction<integer> a = *this;
+	Fraction<integer> b = f;
+	b.inverse();
+
+	a.numerator *= b.numerator;
+	a.denominator *= b.denominator;
+
+	numerator = a.numerator;
+	denominator = a.denominator;
+
+	return *this;
+}
+
+template<typename integer>
+void Fraction<integer>::inverse()
+{
+	integer a = denominator;
+	integer b = numerator;
+
+	numerator = a;
+	denominator = b;
 }

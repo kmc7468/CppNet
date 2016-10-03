@@ -30,7 +30,6 @@ namespace System
 		message = std::move(sNewException.message);
 		source = std::move(sNewException.source);
 		link = std::move(sNewException.link);
-		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀºº¹»ç
 
@@ -42,7 +41,6 @@ namespace System
 		message = sNewException.message;
 		source = sNewException.source;
 		link = sNewException.link;
-		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀºº¹»ç
 

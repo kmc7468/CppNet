@@ -17,14 +17,12 @@ namespace System
 
 	Boolean Convert::ToBoolean(Char c)
 	{
-		Boolean(*p)(Char) = ToBoolean;
-		throw InvalidCastException(Exception::ExceptionData(TXT_INVAILD_CAST_CHAR2BOOL, "", "", p, nullptr));
+		throw InvalidCastException(Exception::ExceptionData(TXT_INVAILD_CAST_CHAR2BOOL, "", "", nullptr));
 	}
 
 	Boolean Convert::ToBoolean(DateTime d)
 	{
-		Boolean(*p)(DateTime) = ToBoolean;
-		throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BOOL, "", "", p, nullptr));
+		throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BOOL, "", "", nullptr));
 	}
 
 	Boolean Convert::ToBoolean(Byte b)
@@ -102,8 +100,7 @@ namespace System
 		}
 		else
 		{
-			Boolean(*p)(const String&) = ToBoolean;
-			throw FormatException(Exception::ExceptionData(TXT_FORMAT_STRING2BOOL_NOTSTR, "", "", p, nullptr));
+			throw FormatException(Exception::ExceptionData(TXT_FORMAT_STRING2BOOL_NOTSTR, "", "", nullptr));
 		}
 	}
 
@@ -138,8 +135,7 @@ namespace System
 
 	Byte Convert::ToByte(DateTime d)
 	{
-		Byte(*p)(DateTime) = ToByte;
-		throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BYTE, "", "", p, nullptr));
+		throw InvalidCastException(Exception::ExceptionData(TXT_INVALID_CAST_DATETIME2BYTE, "", "", nullptr));
 	}
 
 	Byte Convert::ToByte(Byte b)

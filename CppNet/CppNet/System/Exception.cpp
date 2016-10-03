@@ -4,12 +4,11 @@
 
 namespace System
 {
-	Exception::ExceptionData::ExceptionData(const String& message, const String& source, const String& link, void* target, Exception* inner)
+	Exception::ExceptionData::ExceptionData(const String& message, const String& source, const String& link, Exception* inner)
 	{
 		this->message = message;
 		this->source = source;
 		this->link = link;
-		this->target = target;
 		this->inner = inner;
 	}
 
@@ -18,7 +17,6 @@ namespace System
 		message = std::move(sNewExceptionData.message);
 		source = std::move(sNewExceptionData.source);
 		link = std::move(sNewExceptionData.link);
-		target = sNewExceptionData.target;
 		inner = sNewExceptionData.inner;
 		// FIXME inner ¾èÀºº¹»ç
 	}
@@ -28,7 +26,6 @@ namespace System
 		message = sNewExceptionData.message;
 		source = sNewExceptionData.source;
 		link = sNewExceptionData.link;
-		target = sNewExceptionData.target;
 		inner = sNewExceptionData.inner;
 		// FIXME inner ¾èÀºº¹»ç
 	}
@@ -38,7 +35,6 @@ namespace System
 		message = ex.message;
 		source = ex.source;
 		link = ex.link;
-		target = ex.target;
 		inner = ex.inner;
 
 		return *this;
@@ -49,7 +45,6 @@ namespace System
 		message = std::move(ex.message);
 		source = std::move(ex.source);
 		link = std::move(ex.link);
-		target = std::move(ex.target);
 		inner = std::move(ex.inner);
 
 		return *this;
@@ -68,11 +63,6 @@ namespace System
 	String Exception::ExceptionData::Source() const
 	{
 		return source;
-	}
-
-	void* Exception::ExceptionData::TargetSite() const
-	{
-		return target;
 	}
 
 	Exception* Exception::ExceptionData::InnerException() const
@@ -95,7 +85,6 @@ namespace System
 	{
 		this->message = data.Message();
 		this->source = data.Source();
-		this->targetsite = data.TargetSite();
 		this->link = data.HelpLink();
 		this->innerException = data.InnerException();
 	}
@@ -105,7 +94,6 @@ namespace System
 		message = std::move(sNewException.message);
 		source = std::move(sNewException.source);
 		link = std::move(sNewException.link);
-		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀºº¹»ç
 	}
@@ -115,7 +103,6 @@ namespace System
 		message = sNewException.message;
 		source = sNewException.source;
 		link = sNewException.link;
-		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀºº¹»ç
 	}
@@ -125,7 +112,6 @@ namespace System
 		message = ex.message;
 		source = ex.source;
 		link = ex.link;
-		targetsite = ex.targetsite;
 		innerException = ex.innerException;
 
 		return *this;
@@ -136,7 +122,6 @@ namespace System
 		message = std::move(ex.message);
 		source = std::move(ex.source);
 		link = std::move(ex.link);
-		targetsite = std::move(ex.targetsite);
 		innerException = std::move(ex.innerException);
 
 		return *this;
@@ -149,11 +134,6 @@ namespace System
 		msg.append(message);
 
 		return msg;
-	}
-
-	const void* const Exception::TargetSite() const
-	{
-		return targetsite;
 	}
 
 	String* Exception::Source()

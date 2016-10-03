@@ -12,7 +12,7 @@ namespace System
 		class ExceptionData
 		{
 		public:
-			ExceptionData(const String& message = "", const String& source = "", const String& link = "", void* target = nullptr, Exception* inner = nullptr);
+			ExceptionData(const String& message = "", const String& source = "", const String& link = "", Exception* inner = nullptr);
 			ExceptionData(ExceptionData &&sNewExceptionData);
 			ExceptionData(const ExceptionData& sNewExceptionData);
 			virtual ~ExceptionData() = default;
@@ -32,7 +32,6 @@ namespace System
 			String Message() const;
 			String HelpLink() const;
 			String Source() const;
-			void* TargetSite() const;
 			Exception* InnerException() const;
 		};
 
@@ -47,7 +46,6 @@ namespace System
 
 	protected:
 		String message;
-		void* targetsite;
 		String source;
 		Exception* innerException = nullptr;
 		String link;
@@ -58,7 +56,6 @@ namespace System
 
 	public:
 		virtual String Message() const;
-		virtual const void* const TargetSite() const;
 		virtual String* Source();
 		virtual const Exception* const InnerExcpetion() const;
 		virtual String HelpLink() const;

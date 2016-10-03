@@ -11,6 +11,7 @@
 
 #define TXT_FORMAT_DEFMSG "포맷 또는 구성이 잘못되어 오류가 발생하였습니다."
 #define TXT_FORMAT_STRING2BOOL_NOTSTR "잘못된 문자열입니다."
+#define TXT_FORMAT_FRACTION_NOSLASH "잘못된 문자열입니다. 분자와 분모를 구분하는 문자인 '/'가 있어야 합니다."
 
 #define TXT_NOTIMPL_DEFMSG "요청한 메서드 또는 연산이 구현되지 않았습니다."
 
@@ -29,6 +30,7 @@
 
 #define TXT_FORMAT_DEFMSG "Nevalida formato escepto."
 #define TXT_FORMAT_STRING2BOOL_NOTSTR "Nevalida kordoj."
+#define TXT_FORMAT_FRACTION_NOSLASH "Nevalida kordoj. Vi devas havi la karakteron '/' apartigi la numeratoro kaj denominatoro."
 
 #define TXT_NOTIMPL_DEFMSG "Petitaj metodo a? operacio ne efektivigis."
 
@@ -46,6 +48,7 @@
 
 #define TXT_FORMAT_DEFMSG "Invalid format exception."
 #define TXT_FORMAT_STRING2BOOL_NOTSTR "Invalid string."
+#define TXT_FORMAT_FRACTION_NOSLASH "Invalid string. You must have the character '/' to separate the numerator and denominator."
 
 #define TXT_NOTIMPL_DEFMSG "Requested method or operation is not implemented."
 

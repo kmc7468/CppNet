@@ -18,23 +18,13 @@ int main(void)
 	cout.imbue(locale("korean"));
 	cin.imbue(locale("korean"));
 
-	UInt64 integer = std::stoull(Console::ReadLine());
+	Fraction64 a = Console::ReadLine();
+	Fraction64 b = Console::ReadLine();
 
-	var binstr = BitConverter::BytesToBinString(BitConverter::GetBytes(integer));
-
-	Console::WriteLine(binstr);
-
-	var hexstr = BitConverter::BytesToHexString(BitConverter::GetBytes(integer));
-
-	Console::WriteLine(hexstr);
-
-	UInt64 org = BitConverter::ToUInt64(BitConverter::BinStringToBytes<8>(binstr));
-
-	Console::WriteLine(org);
-
-	org = BitConverter::ToUInt64(BitConverter::HexStringToBytes<8>(hexstr));
-
-	Console::WriteLine(org);
+	Console::WriteLine((a + b).ToString());
+	Console::WriteLine((a - b).ToString());
+	Console::WriteLine((a * b).ToString());
+	Console::WriteLine((a / b).ToString());
 
 	MAIN_END
 }

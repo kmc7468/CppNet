@@ -19,7 +19,6 @@ namespace System
 	{
 		this->message = data.Message();
 		this->source = data.Source();
-		this->targetsite = data.TargetSite();
 		this->link = data.HelpLink();
 		this->innerException = data.InnerException();
 	}
@@ -29,7 +28,6 @@ namespace System
 		message = std::move(sNewException.message);
 		source = std::move(sNewException.source);
 		link = std::move(sNewException.link);
-		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀº º¹»ç
 	}
@@ -39,7 +37,6 @@ namespace System
 		message = sNewException.message;
 		source = sNewException.source;
 		link = sNewException.link;
-		targetsite = sNewException.targetsite;
 		innerException = sNewException.innerException;
 		// FIXME innerException ¾èÀº º¹»ç
 	}
@@ -49,7 +46,6 @@ namespace System
 		message = std::move(ex.message);
 		source = std::move(ex.source);
 		link = std::move(ex.link);
-		targetsite = std::move(ex.targetsite);
 		innerException = std::move(ex.innerException);
 
 		return *this;
@@ -60,7 +56,6 @@ namespace System
 		message = ex.message;
 		source = ex.source;
 		link = ex.link;
-		targetsite = ex.targetsite;
 		innerException = ex.innerException;
 
 		return *this;

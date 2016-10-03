@@ -36,6 +36,7 @@ namespace CppNet
 
 			static inline integer gcd(integer a, integer b); // 최대 공약수
 			static inline integer lcm(integer a, integer b); // 최소 공배수
+			inline void inverse();
 
 		public:
 			Fraction<integer>& operator=(const Fraction<integer>& f);
@@ -48,6 +49,17 @@ namespace CppNet
 			Fraction<integer>& operator+=(const Fraction<integer>& f);
 			Fraction<integer> operator++();
 			Fraction<integer> operator++(int);
+
+			Fraction<integer> operator-(const Fraction<integer>& f) const;
+			Fraction<integer>& operator-=(const Fraction<integer>& f);
+			Fraction<integer> operator--();
+			Fraction<integer> operator--(int);
+
+			Fraction<integer> operator*(const Fraction<integer>& f) const;
+			Fraction<integer>& operator*=(const Fraction<integer>& f);
+
+			Fraction<integer> operator/(const Fraction<integer>& f) const;
+			Fraction<integer>& operator/=(const Fraction<integer>& f);
 
 		public: 
 			static Fraction<integer> Irreducible(const Fraction<integer>& f);
