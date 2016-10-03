@@ -2,10 +2,18 @@
 
 int main()
 {
-	Decimal a(1.5), b(1.0);
-	Console::WriteLine((Boolean)(b >= a));
+	while (true)
+	{
+		String temp = Console::ReadLine();
 
-	Console::WriteLine((a - b).ToString());
-	
+		if (temp == "X") break;
+
+		String temp2 = Console::ReadLine();
+
+		Decimal a(temp), b(temp2);
+
+		Console::WriteLine((a * b).ToString());
+	}
+
 	MAIN_END
 }

@@ -15,6 +15,18 @@ namespace CppNet
 			static const Decimal PI;
 			static const Decimal E;
 
+			static const Decimal Zero;
+			static const Decimal One;
+			static const Decimal Two;
+			static const Decimal Three;
+			static const Decimal Four;
+			static const Decimal Five;
+			static const Decimal Six;
+			static const Decimal Seven;
+			static const Decimal Eight;
+			static const Decimal Nine;
+			static const Decimal Ten;
+
 		private:
 			class ByteTool final
 			{
