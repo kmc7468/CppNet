@@ -1,5 +1,7 @@
 // SourceURL: http://mrhook.co.kr/89
 
+#include <CppNet/CppNet.h>
+
 #include "stdafx.h"
 
 HINSTANCE g_hInst;
