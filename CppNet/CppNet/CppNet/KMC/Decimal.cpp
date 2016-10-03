@@ -552,142 +552,90 @@ Decimal Decimal::operator++(int)
 
 Decimal Decimal::operator-(const Decimal& d) const
 {
-	/*NOTE
-
-	- 내림 구현중 lol
-
-	*/
-	/*
-	Decimal a = *this;
-	Decimal b = Decimal(d);
-	Decimal c = 0.0;
-	c.mInteger = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
-	c.mReal = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
-
-	if (a.mReal.length() >= b.mReal.length())
-		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
-	else
-		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
-
-	// 둘다 음수이거나 들다 양수일 때
-	if (!a.isN && !b.isN || a.isN && b.isN)
+	if (isN && !d.isN)
 	{
-		c.isN = a.isN;
-
-		if (!a.isN && !b.isN && a < b)
+		Decimal d_t = d;
+		d_t.isN = true;
+		return this->operator+(d_t);
+	}
+	else if (isN && d.isN)
+	{
+		Decimal this_t = *this;
+		this_t.isN = false;
+		return d - this_t;
+	}
+	else if (!isN && d.isN)
+	{
+		Decimal d_t = d;
+		d_t.isN = false;
+		return this->operator+(d_t);
+	}
+	bool sign = this->operator>=(d);
+	Decimal bigger = sign ? *this : d, smaller = sign ? d : *this;
+	//패딩
+	smaller.mInteger.insert(smaller.mInteger.begin(), bigger.mInteger.length() - smaller.mInteger.length(), 0x00);
+	//소수부분 패딩은 자릿수 계산 후에
+	bool t = bigger.mReal.length() >= smaller.mReal.length();
+	Decimal* shorter = t ? &smaller : &bigger, *longer = t ? &bigger : &smaller;
+	shorter->mReal.append(longer->mReal.length() - shorter->mReal.length(), 0x00);
+	//소수부분부터 보수로 변환
+	//reverse iterator을 사용하는 이유는 끝부터 0이 아님을 체크하기 때문
+	auto revit = std::find_if(
+		smaller.mReal.rbegin(), smaller.mReal.rend(),
+		[](auto byte)
+	{
+		//뒤쪽의 0을 무시하다가 ? 0 혹은 ? ? 혹은 끝에서 멈춥니다
+		return (bool)(byte >> 4);
+	}
+	);
+	//t가 false이면 소수 부분이 0인 경우입니다
+	if (t = revit != smaller.mReal.rend())
+	{
+		if (!(*revit & 0x0F))
 		{
-			Decimal d = a;
-			Decimal e = b;
-
-			a = e;
-			b = d;
-
-			c.isN = true;
-
-			goto Exit;
+			*revit = (10 - (*revit >> 4)) << 4;
+			++revit;
 		}
-
-		if (a.isN && b.isN && a > b)
-		{
-			Decimal d = b;
-
-			d.isN = false;
-
-			c = a + d;
-
-			goto Exit;
-		}
-
-		{
-			Decimal temp01;
-			temp01.isN = false;
-			temp01.mInteger = a.mInteger;
-			temp01.mReal = a.mReal;
-
-			Decimal temp02;
-			temp02.isN = false;
-			temp02.mInteger = b.mInteger;
-			temp02.mReal = b.mReal;
-
-			temp01.Clean();
-			temp02.Clean();
-		}
-
-		{ // Real
-			for (size_t i = a.mReal.length() - 1; i >= 0; i--)
-			{
-				var temp01 = ByteTool::ByteToInts(a.mReal[i]);
-
-				var one_a = std::get<0>(temp01);
-				var two_a = std::get<1>(temp01);
-
-				var temp02 = ByteTool::ByteToInts(b.mReal[i]);
-
-				var one_b = std::get<0>(temp02);
-				var two_b = std::get<1>(temp02);
-
-				Byte temp04 = two_a - two_b;
-
-				Byte temp03 = one_a - one_b;
-
-				c.mReal = ByteTool::IntsToByte(temp03, temp04) + c.mReal;;
-
-				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
-			}
-		}
-
-		if (a.mInteger.length() >= b.mInteger.length())
-			b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
 		else
-			a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+			*revit -= 1;
+	}
+	for (; revit != smaller.mReal.rend(); ++revit)
+		*revit = (9 - (*revit >> 4)) << 4 | (9 - (*revit & 0x0F));
+	//소수 변환 완료
 
-		{ // Integer
-			for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
-			{
-				var temp01 = ByteTool::ByteToInts(a.mInteger[i]);
-
-				var one_a = std::get<0>(temp01);
-				var two_a = std::get<1>(temp01);
-
-				var temp02 = ByteTool::ByteToInts(b.mInteger[i]);
-
-				var one_b = std::get<0>(temp02);
-				var two_b = std::get<1>(temp02);
-
-				Byte temp04 = two_a - two_b;
-
-				Byte temp03 = one_a - one_b;
-
-				c.mInteger = ByteTool::IntsToByte(temp03, temp04) + c.mInteger;
-
-				if (i == 0) break; // NOTE: size_t = unsigned long long이기 때문에 음수를 처리 못해서
-			}
+	//소수부분이 0일 경우 정수부분에서도 0을 무시해줘야 합니다
+	revit = smaller.mInteger.rbegin();
+	if (!t)
+	{
+		revit = std::find_if(revit, smaller.mInteger.rend(),
+			[](auto byte)
+		{
+			//뒤쪽의 0을 무시하다가 ? 0 혹은 ? ? 혹은 끝에서 멈춥니다
+			return (bool)(byte >> 4);
 		}
-
-		goto Exit;
+		);
 	}
-	// a가 양수일 때
-	else if (!a.isN && b.isN)
-	{
-		Decimal d = b;
-		d.isN = false;
-		c = d + b;
-	}
-	// b가 양수일 때
-	else if (a.isN && !b.isN)
-	{
-		Decimal d = b;
-		d.isN = true;
-		c = a + d;
-	}
+	//revit이 처음부터 rend일 경우 따로 처리를 안 해줘도 됩니다.
+	for (; revit != smaller.mInteger.rend(); ++revit)
+		*revit = (9 - (*revit >> 4)) << 4 | (9 - (*revit & 0x0F));
+	
+	//맨 앞쪽은 0 ? 혹은 ? ? 이므로
+	//0 ?일 경우 지워줍니다.
+	if (!(bigger.mInteger[0] >> 4))
+		smaller.mInteger[0] &= 0x0F;
 
-Exit:
-	c.Clean();
+	Decimal& ret = bigger + smaller;
+	//맨 앞자리는 0 1 혹은 1 ? 입니다.
+	//1을 지워줍니다.
+	if (ret.mInteger[0] >> 4)
+		ret.mInteger[0] &= 0x0F;
+	else
+		ret.mInteger.erase(ret.mInteger.begin());
 
-	return c;
-	*/
+	//부호도 빼먹으면 안됩니다.
+	ret.isN = !sign;
 
-	return Decimal();
+	return ret;
 }
 
 Decimal Decimal::operator*(const Decimal& d) const
