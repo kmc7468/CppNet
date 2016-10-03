@@ -574,25 +574,123 @@ Decimal Decimal::operator*(const Decimal& d) const
 
 	size_t count_real_size = 0;
 
-	if (a.mReal[0] != 0 || b.mReal[0] != 0)
-		count_real_size = std::stoull(std::to_string((a.mReal.length() * 2) + (b.mReal.length() * 2)));
+	if (a.mReal[0] != 0)
+		count_real_size = std::stoull(std::to_string(a.mReal.length() * 2));
+	if(b.mReal[0] != 0)
+		count_real_size += std::stoull(std::to_string(b.mReal.length() * 2));
 
 	a.mReal = (Byte)'\u0000';
 	b.mReal = (Byte)'\u0000';
 
 	if (a.mInteger.length() >= b.mInteger.length())
-		b.mInteger.insert(b.mInteger.length(), a.mInteger.length() - b.mInteger.length(), 0);
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
 	else
-		a.mInteger.insert(a.mInteger.length(), b.mInteger.length() - a.mInteger.length(), 0);
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
 
-	// TODO
+	size_t plus = 0;
+	for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
+	{
+		Byte up = 0;
+		String value = "";
+
+		var b_index = ByteTool::ByteToInts(b.mInteger[i]);
+
+		var mul = std::get<1>(b_index);
+
+		for (size_t j = a.mInteger.length() - 1; j >= 0; j--)
+		{
+			var a_index = ByteTool::ByteToInts(a.mInteger[j]);
+
+			var high = std::get<0>(a_index);
+			var low = std::get<1>(a_index);
+
+			Byte low_mul = low * mul + up;
+			up = 0;
+			if (low_mul > 9)
+			{
+				up = std::stoi(std::to_string(low_mul).substr(0, 1));
+				low_mul -= up * 10;
+			}
+
+			Byte high_mul = high * mul + up;
+			up = 0;
+			if (high_mul > 9)
+			{
+				up = std::stoi(std::to_string(high_mul).substr(0, 1));
+				high_mul -= up * 10;
+			}
+
+			value = std::to_string(high_mul) + std::to_string(low_mul) + value;
+
+			if (j == 0) break;
+		}
+
+		if (up != 0)
+			value = std::to_string(up) + value;
+
+		value.insert(value.length(), plus, '0');
+
+		result += Decimal(value);
+
+		value = "";
+
+		plus++;
+
+		mul = std::get<0>(b_index);
+
+		up = 0;
+
+		for (size_t j = a.mInteger.length() - 1; j >= 0; j--)
+		{
+			var a_index = ByteTool::ByteToInts(a.mInteger[j]);
+
+			var high = std::get<0>(a_index);
+			var low = std::get<1>(a_index);
+
+			Byte low_mul = low * mul + up;
+			up = 0;
+			if (low_mul > 9)
+			{
+				up = std::stoi(std::to_string(low_mul).substr(0, 1));
+				low_mul -= up * 10;
+			}
+
+			Byte high_mul = high * mul + up;
+			up = 0;
+			if (high_mul > 9)
+			{
+				up = std::stoi(std::to_string(high_mul).substr(0, 1));
+				high_mul -= up * 10;
+			}
+
+			value = std::to_string(high_mul) + std::to_string(low_mul) + value;
+
+			if (j == 0) break;
+		}
+
+		if (up != 0)
+			value = std::to_string(up) + value;
+
+		value.insert(value.length(), plus, '0');
+
+		result += Decimal(value);
+
+		value = "";
+
+		plus++;
+
+		if (i == 0) break;
+	}
 
 	if (count_real_size != 0)
 	{
 		String to = result.ToString();
 
-		String integer = to.substr(0, count_real_size);
-		String real = to.substr(count_real_size);
+		if (count_real_size >= to.length())
+			to.insert(0, count_real_size - to.length(), '0');
+
+		String integer = to.substr(0, to.length() - count_real_size);
+		String real = to.substr(to.length() - count_real_size);
 
 		result = Decimal(integer + "." + real);
 	}
