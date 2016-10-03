@@ -8,7 +8,7 @@
 #define interface struct
 #define var auto
 
-#define nameof(x) #x
+#define nameof(x) String(#x);
 #define typeof(x) typeid(x)
 
 #define MAIN_END system("pause");return 0;
