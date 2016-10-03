@@ -71,3 +71,23 @@ Decimal Decimal::Parse(Double real)
 {
 	return Parse(std::to_string(real));
 }
+
+Boolean Decimal::operator>=(const Decimal& d) const
+{
+	Decimal a = *this;
+	Decimal b = d;
+
+	Boolean res = a > b;
+
+	return res ? res : a == b;
+}
+
+Boolean Decimal::operator<=(const Decimal& d) const
+{
+	Decimal a = *this;
+	Decimal b = d;
+
+	Boolean res = a < b;
+
+	return res ? res : a == b;
+}

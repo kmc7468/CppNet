@@ -186,67 +186,6 @@ Boolean Decimal::operator>(const Decimal& d) const
 	return false;
 }
 
-Boolean Decimal::operator>=(const Decimal& d) const
-{
-	Decimal a = *this;
-	Decimal b = d;
-
-	if (a.isN && !b.isN) return false;
-	else if (!a.isN && b.isN) return true;
-
-	// 패딩
-
-	if (a.mReal.length() >= b.mReal.length())
-		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
-	else
-		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
-
-	if (a.mInteger.length() >= b.mInteger.length())
-		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
-	else
-		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
-
-	// 체크
-
-	for (size_t i = 0; i < a.mInteger.length(); i++)
-	{
-		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
-		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
-
-		var a_one = std::get<0>(temp_a);
-		var a_two = std::get<1>(temp_a);
-
-		var b_one = std::get<0>(temp_b);
-		var b_two = std::get<1>(temp_b);
-
-		if (a_one != 0 || b_one != 0)
-			if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
-
-		if (a_two != 0 || b_two != 0)
-			if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
-	}
-
-	for (size_t i = 0; i < a.mReal.length(); i++)
-	{
-		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
-		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
-
-		var a_one = std::get<0>(temp_a);
-		var a_two = std::get<1>(temp_a);
-
-		var b_one = std::get<0>(temp_b);
-		var b_two = std::get<1>(temp_b);
-
-		if (a_one != 0 || b_one != 0)
-			if ((!a.isN && a_one >= b_one) || (a.isN && a_one <= b_one)) return true;
-
-		if (a_two != 0 || b_two != 0)
-			if ((!a.isN && a_two >= b_two) || (a.isN && a_two <= b_two)) return true;
-	}
-
-	return false;
-}
-
 Boolean Decimal::operator<(const Decimal& d) const
 {
 	Decimal a = *this;
@@ -308,66 +247,6 @@ Boolean Decimal::operator<(const Decimal& d) const
 	return false;
 }
 
-Boolean Decimal::operator<=(const Decimal& d) const
-{
-	Decimal a = *this;
-	Decimal b = d;
-
-	if (!a.isN && b.isN) return false;
-	else if (a.isN && !b.isN) return true;
-
-	// 패딩
-
-	if (a.mReal.length() >= b.mReal.length())
-		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
-	else
-		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
-
-	if (a.mInteger.length() >= b.mInteger.length())
-		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
-	else
-		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
-
-	// 체크
-
-	for (size_t i = 0; i < a.mInteger.length(); i++)
-	{
-		var temp_a = ByteTool::ByteToInts(a.mInteger[i]);
-		var temp_b = ByteTool::ByteToInts(b.mInteger[i]);
-
-		var a_one = std::get<0>(temp_a);
-		var a_two = std::get<1>(temp_a);
-
-		var b_one = std::get<0>(temp_b);
-		var b_two = std::get<1>(temp_b);
-
-		if (a_one != 0 || b_one != 0)
-			if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
-
-		if (a_two != 0 || b_two != 0)
-			if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
-	}
-
-	for (size_t i = 0; i < a.mReal.length(); i++)
-	{
-		var temp_a = ByteTool::ByteToInts(a.mReal[i]);
-		var temp_b = ByteTool::ByteToInts(b.mReal[i]);
-
-		var a_one = std::get<0>(temp_a);
-		var a_two = std::get<1>(temp_a);
-
-		var b_one = std::get<0>(temp_b);
-		var b_two = std::get<1>(temp_b);
-
-		if (a_one != 0 || b_one != 0)
-			if ((!a.isN && a_one <= b_one) || (a.isN && a_one >= b_one)) return true;
-
-		if (a_two != 0 || b_two != 0)
-			if ((!a.isN && a_two <= b_two) || (a.isN && a_two >= b_two)) return true;
-	}
-
-	return false;
-}
 
 Decimal& Decimal::operator=(const Decimal& d)
 {

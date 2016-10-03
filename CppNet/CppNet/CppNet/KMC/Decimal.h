@@ -62,17 +62,13 @@ namespace CppNet
 			Decimal& operator=(Decimal&& d);
 
 			Boolean operator>(const Decimal& d) const;
-
-			Boolean operator>=(const Decimal& d) const;
+			inline Boolean operator>=(const Decimal& d) const;
 
 			Boolean operator<(const Decimal& d) const;
-
-			Boolean operator<=(const Decimal& d) const;
+			inline Boolean operator<=(const Decimal& d) const;
 
 			Decimal operator+(const Decimal& d) const;
-
 			Decimal operator+=(const Decimal& d);
-
 			Decimal operator++();
 			Decimal operator++(int);
 
