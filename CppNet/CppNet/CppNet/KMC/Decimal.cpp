@@ -78,9 +78,9 @@ Decimal Decimal::Parse(const String& str)
 		String real = s.substr(dot + 1);
 
 		integer.insert(0, integer.length() & 1, '0');
-		real.insert(real.length(), real.length() & 1, '0');
+		real.append(real.length() & 1, '0');
 
-		for (size_t i = 0; i < integer.length() & 1; i++)
+		for (size_t i = 0; i < integer.length() >> 1; i++)
 		{
 			Byte first = ByteTool::ToByte(integer[i << 1]);
 			Byte second = ByteTool::ToByte(integer[(i << 1) + 1]);
@@ -88,7 +88,7 @@ Decimal Decimal::Parse(const String& str)
 			r.mInteger += c;
 		}
 
-		for (size_t i = 0; i < real.length() & 1; i++)
+		for (size_t i = 0; i < real.length() >> 1; i++)
 		{
 			Byte first = ByteTool::ToByte(real[i << 1]);
 			Byte second = ByteTool::ToByte(real[(i << 1) + 1]);

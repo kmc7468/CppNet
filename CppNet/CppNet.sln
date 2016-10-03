@@ -8,6 +8,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowsTest", "WindowsTest\WindowsTest.vcxproj", "{8E839169-5AFE-4701-BF93-FA99B258559E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{1F31975A-C425-4E79-B471-AFADEE18F998}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E6CAD7AD-2172-471B-AC48-34D726DFDF62} = {E6CAD7AD-2172-471B-AC48-34D726DFDF62}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -38,7 +38,7 @@ namespace CppNet
 			Decimal(const String& str);
 			Decimal(Int64 integer);
 			Decimal(Int64 integer, const String& real);
-			Decimal(Double real);
+			explicit Decimal(Double real);
 			Decimal(Decimal&& d);
 			Decimal(const Decimal& d);
 			~Decimal() = default;
