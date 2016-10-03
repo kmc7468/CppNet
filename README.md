@@ -34,7 +34,6 @@ https://github.com/kmc7468/CppNet/wiki
 - 아크릴새우
 - kiwiyou
 - NeuroWhAI
-- BasixKOR
 
 ### 도움
 - .Net framework 자문: 맛난호빵
