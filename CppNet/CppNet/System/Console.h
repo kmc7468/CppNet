@@ -7,7 +7,7 @@
 #ifndef SYSTEM_CONSOLE_H
 #define SYSTEM_CONSOLE_H
 
-#include "SystemTypes.h"
+#include "../SystemTypes.h"
 #include "Object.h"
 
 #include <iostream>

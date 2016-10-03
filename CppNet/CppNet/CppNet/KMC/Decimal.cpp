@@ -560,9 +560,9 @@ Decimal Decimal::operator-(const Decimal& d) const
 	}
 	else if (isN && d.isN)
 	{
-		Decimal this_t = *this;
-		this_t.isN = false;
-		return d - this_t;
+		Decimal d_t = d;
+		d_t.isN = false;
+		return this->operator+(d_t);
 	}
 	else if (!isN && d.isN)
 	{
@@ -574,18 +574,19 @@ Decimal Decimal::operator-(const Decimal& d) const
 	Decimal bigger = sign ? *this : d, smaller = sign ? d : *this;
 	//패딩
 	smaller.mInteger.insert(smaller.mInteger.begin(), bigger.mInteger.length() - smaller.mInteger.length(), 0x00);
+
 	//소수부분 패딩은 자릿수 계산 후에
 	bool t = bigger.mReal.length() >= smaller.mReal.length();
 	Decimal* shorter = t ? &smaller : &bigger, *longer = t ? &bigger : &smaller;
 	shorter->mReal.append(longer->mReal.length() - shorter->mReal.length(), 0x00);
+
 	//소수부분부터 보수로 변환
 	//reverse iterator을 사용하는 이유는 끝부터 0이 아님을 체크하기 때문
 	auto revit = std::find_if(
 		smaller.mReal.rbegin(), smaller.mReal.rend(),
 		[](auto byte)
 	{
-		//뒤쪽의 0을 무시하다가 ? 0 혹은 ? ? 혹은 끝에서 멈춥니다
-		return (bool)(byte >> 4);
+		return (bool) byte;
 	}
 	);
 	//t가 false이면 소수 부분이 0인 경우입니다
@@ -610,10 +611,19 @@ Decimal Decimal::operator-(const Decimal& d) const
 		revit = std::find_if(revit, smaller.mInteger.rend(),
 			[](auto byte)
 		{
-			//뒤쪽의 0을 무시하다가 ? 0 혹은 ? ? 혹은 끝에서 멈춥니다
-			return (bool)(byte >> 4);
+			return (bool)byte;
 		}
 		);
+		if (revit != smaller.mInteger.rend())
+		{
+			if (!(*revit & 0x0F))
+			{
+				*revit = (10 - (*revit >> 4)) << 4;
+				++revit;
+			}
+			else
+				*revit -= 1;
+		}
 	}
 	//revit이 처음부터 rend일 경우 따로 처리를 안 해줘도 됩니다.
 	for (; revit != smaller.mInteger.rend(); ++revit)
@@ -629,7 +639,7 @@ Decimal Decimal::operator-(const Decimal& d) const
 	//1을 지워줍니다.
 	if (ret.mInteger[0] >> 4)
 		ret.mInteger[0] &= 0x0F;
-	else
+	else if (ret.mInteger.length() != 1)
 		ret.mInteger.erase(ret.mInteger.begin());
 
 	//부호도 빼먹으면 안됩니다.
