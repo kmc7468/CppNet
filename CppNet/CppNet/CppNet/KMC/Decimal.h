@@ -80,13 +80,17 @@ namespace CppNet
 			inline Boolean operator<=(const Decimal& d) const;
 
 			Decimal operator+(const Decimal& d) const;
-			Decimal operator+=(const Decimal& d);
+			Decimal& operator+=(const Decimal& d);
 			Decimal operator++();
 			Decimal operator++(int);
 
 			Decimal operator-(const Decimal& d) const;
+			Decimal& operator-=(const Decimal& d);
+			Decimal operator--();
+			Decimal operator--(int);
 
 			Decimal operator*(const Decimal& d) const;
+			Decimal& operator*=(const Decimal& d);
 
 		private:
 			inline void Clean();

@@ -427,7 +427,7 @@ Decimal Decimal::operator+(const Decimal& d) const
 	return c;
 }
 
-Decimal Decimal::operator+=(const Decimal& d)
+Decimal& Decimal::operator+=(const Decimal& d)
 {
 	Decimal a = *this + d;
 
@@ -551,6 +551,35 @@ Decimal Decimal::operator-(const Decimal& d) const
 	ret.isN = !sign;
 
 	return ret;
+}
+
+Decimal& Decimal::operator-=(const Decimal& d)
+{
+	Decimal a = *this - d;
+
+	mInteger = a.mInteger;
+	mReal = a.mReal;
+
+	return *this;
+}
+
+Decimal Decimal::operator--()
+{
+	Decimal a = *this - 1.0;
+
+	mInteger = a.mInteger;
+
+	return *this;
+}
+
+Decimal Decimal::operator--(int)
+{
+	Decimal a = *this - 1.0;
+	Decimal b = *this;
+
+	mInteger = a.mInteger;
+
+	return b;
 }
 
 Decimal Decimal::operator*(const Decimal& d) const
@@ -703,4 +732,14 @@ Decimal Decimal::operator*(const Decimal& d) const
 	result.Clean();
 
 	return result;
+}
+
+Decimal& Decimal::operator*=(const Decimal& d)
+{
+	Decimal a = *this * d;
+
+	mInteger = a.mInteger;
+	mReal = a.mReal;
+
+	return *this;
 }
