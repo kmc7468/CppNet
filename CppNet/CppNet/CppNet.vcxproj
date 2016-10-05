@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="CppNet.h" />
     <ClInclude Include="CppNet\CppNet.h" />
+    <ClInclude Include="CppNet\gc_ptr.h" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
     <ClInclude Include="CppNet\KMC\KMC.h" />
