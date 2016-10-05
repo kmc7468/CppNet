@@ -8,10 +8,10 @@ namespace CppNet
 	class Unicode9_0 final : public Unicode
 	{
 	public:
-		Unicode9_0() = default;
+		Unicode9_0();
 		Unicode9_0(Unicode9_0&& u) = default;
 		Unicode9_0(const Unicode9_0& u) = default;
-		~Unicode9_0() = default;
+		~Unicode9_0();
 
 	public:
 		System::Int32 GetDecimalDightValue(const System::Char& c) const override;

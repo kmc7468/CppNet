@@ -1,7 +1,7 @@
 #ifndef CPPNET_UNICODE_H
 #define CPPNET_UNICODE_H
 
-#include <memory>
+#include <vector>
 
 #include "../System/Object.h"
 #include "../System/Char.h"
@@ -21,9 +21,12 @@ namespace CppNet
 
 	public:
 		static inline const Unicode* const GetUnicode();
-//#ifdef UNICODE_CUSTOM
+#ifdef UNICODE_CUSTOM
 		static inline void SetUnicode(Unicode* uni);
-//#endif
+#endif
+
+	protected:
+		std::vector<char32_t>* numStarts = nullptr;
 	};
 }
 

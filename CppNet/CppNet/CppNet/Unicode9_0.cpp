@@ -1,78 +1,84 @@
 #include "Unicode9_0.h"
 using namespace CppNet;
 
+Unicode9_0::Unicode9_0()
+{
+	numStarts = new std::vector<char32_t>;
+
+	numStarts->push_back(0x30);
+	numStarts->push_back(0x660);
+	numStarts->push_back(0x6F0);
+	numStarts->push_back(0x7C0);
+	numStarts->push_back(0x966);
+	numStarts->push_back(0x9E6);
+	numStarts->push_back(0xA66);
+	numStarts->push_back(0xAE6);
+	numStarts->push_back(0xB66);
+	numStarts->push_back(0xBE6);
+	numStarts->push_back(0xC66);
+	numStarts->push_back(0xCE6);
+	numStarts->push_back(0xD66);
+	numStarts->push_back(0xDE6);
+	numStarts->push_back(0xE50);
+	numStarts->push_back(0xED0);
+	numStarts->push_back(0xF20);
+	numStarts->push_back(0x1040);
+	numStarts->push_back(0x1090);
+	numStarts->push_back(0x17E0);
+	numStarts->push_back(0x1810);
+	numStarts->push_back(0x1946);
+	numStarts->push_back(0x19D0);
+	numStarts->push_back(0x1A80);
+	numStarts->push_back(0x1A90);
+	numStarts->push_back(0x1B50);
+	numStarts->push_back(0x1BB0);
+	numStarts->push_back(0x1C40);
+	numStarts->push_back(0x1C50);
+	numStarts->push_back(0xA620);
+	numStarts->push_back(0xA8D0);
+	numStarts->push_back(0xA900);
+	numStarts->push_back(0xA9D0);
+	numStarts->push_back(0xA9F0);
+	numStarts->push_back(0xAA50);
+	numStarts->push_back(0xABF0);
+	numStarts->push_back(0xFF10);
+	numStarts->push_back(0x104A0);
+	numStarts->push_back(0x11066);
+	numStarts->push_back(0x110F0);
+	numStarts->push_back(0x11136);
+	numStarts->push_back(0x111D0);
+	numStarts->push_back(0x112F0);
+	numStarts->push_back(0x11450);
+	numStarts->push_back(0x114D0);
+	numStarts->push_back(0x11650);
+	numStarts->push_back(0x116C0);
+	numStarts->push_back(0x11730);
+	numStarts->push_back(0x118E0);
+	numStarts->push_back(0x11C50);
+	numStarts->push_back(0x16A60);
+	numStarts->push_back(0x16B50);
+	numStarts->push_back(0x1D7CE);
+	numStarts->push_back(0x1D7D8);
+	numStarts->push_back(0x1D7E2);
+	numStarts->push_back(0x1D7EC);
+	numStarts->push_back(0x1D7F6);
+	numStarts->push_back(0x1E950);
+}
+
+Unicode9_0::~Unicode9_0()
+{
+	delete numStarts;
+}
+
 System::Int32 Unicode9_0::GetDecimalDightValue(const System::Char& c) const
 {
-	System::Char cc = *const_cast<System::Char*>(&c);
-	if (cc >= U'0' && cc <= U'9')
+	for (auto n : *numStarts)
 	{
-		return cc - U'0';
+		if (c >= n && c <= (n + 9))
+		{
+			return c - n;
+		}
 	}
-	else if (cc >= U'\u0660' && cc <= U'\u0669')
-	{
-		return cc - U'\u0660';
-	}
-	else if (cc >= U'\u06F0' && cc <= U'\u06F9')
-	{
-		return cc - U'\u06F0';
-	}
-	else if (cc >= U'\u07C0' && cc <= U'\u07C9')
-	{
-		return cc - U'\u07C0';
-	}
-	else if (cc >= U'\u0966' && cc <= U'\u096F')
-	{
-		return cc - U'\u0966';
-	}
-	else if (cc >= U'\u09E6' && cc <= U'\u09EF')
-	{
-		return cc - U'\u09EF';
-	}
-	else if (cc >= U'\u0A66' && cc <= U'\u0A6F')
-	{
-		return cc - U'\u0A66';
-	}
-	else if (cc >= U'\u0AE6' && cc <= U'\u0AEF')
-	{
-		return cc - U'\u0AE6';
-	}
-	else if (cc >= U'\u0B66' && cc <= U'\u0B6F')
-	{
-		return cc - U'\u0B66';
-	}
-	else if (cc >= U'\u0BE6' && cc <= U'\u0BEF')
-	{
-		return cc - U'\u0BE6';
-	}
-	else if (cc >= U'\u0C66' && cc <= U'\u0C6F')
-	{
-		return cc - U'\u0C66';
-	}
-	else if (cc >= U'\u0CE6' && cc <= U'\u0CEF')
-	{
-		return cc - U'\u0CE6';
-	}
-	else if (cc >= U'\u0D66' && cc <= U'\u0D6F')
-	{
-		return cc - U'\u0D66';
-	}
-	else if (cc >= U'\u0DE6' && cc <= U'\u0DEF')
-	{
-		return cc - U'\u0DE6';
-	}
-	else if (cc >= U'\u0E50' && cc <= U'\u0E59')
-	{
-		return cc - U'\u0E59';
-	}
-	else if (cc >= U'\u0ED0' && cc <= U'\u0ED0')
-	{
-		return cc - U'\u0ED0';
-	}
-	else if (cc >= U'\u0F20' && cc <= U'\u0F29')
-	{
-		return cc - U'\u0F20';
-	}
-	// TODO
 	return -1;
 }
 

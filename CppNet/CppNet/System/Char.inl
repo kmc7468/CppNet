@@ -29,12 +29,12 @@ namespace System
 
 	Char Char::operator=(Char&& c)
 	{
-		return Char(c);
+		dat = std::move(c.dat);
 	}
 
 	Char Char::operator=(const Char& c)
 	{
-		return Char(c);
+		dat = c.dat;
 	}
 
 	Boolean Char::operator==(const Object& obj) const
@@ -47,42 +47,42 @@ namespace System
 		return !Equals(*const_cast<Object*>(&obj));
 	}
 
-	Boolean Char::operator<(const Char& obj)
+	Boolean Char::operator<(const Char& obj) const
 	{
 		return (dat < obj.dat);
 	}
-
-	Boolean Char::operator<=(const Char& obj)
+	 
+	Boolean Char::operator<=(const Char& obj) const
 	{
 		return (dat <= obj.dat);
 	}
 
-	Boolean Char::operator>(const Char& obj)
+	Boolean Char::operator>(const Char& obj) const
 	{
 		return (dat > obj.dat);
 	}
-
-	Boolean Char::operator>=(const Char& obj)
+	 
+	Boolean Char::operator>=(const Char& obj) const
 	{
 		return (dat >= obj.dat);
 	}
 
-	Boolean Char::operator<(char32_t obj)
+	Boolean Char::operator<(char32_t obj) const
 	{
 		return (dat < obj);
 	}
 
-	Boolean Char::operator<=(char32_t obj)
+	Boolean Char::operator<=(char32_t obj) const
 	{
 		return (dat <= obj);
 	}
 
-	Boolean Char::operator>(char32_t obj)
+	Boolean Char::operator>(char32_t obj) const
 	{
 		return (dat > obj);
 	}
 
-	Boolean Char::operator>=(char32_t obj)
+	Boolean Char::operator>=(char32_t obj) const
 	{
 		return (dat >= obj);
 	}
@@ -101,5 +101,65 @@ namespace System
 			return Equals(as<Char&>(obj));
 		else
 			return false;
+	}
+
+	Char Char::operator+(const Char& c) const
+	{
+		return dat + c.dat;
+	}
+
+	Char Char::operator-(const Char& c) const
+	{
+		return dat - c.dat;
+	}
+
+	Char Char::operator*(const Char& c) const
+	{
+		return dat * c.dat;
+	}
+
+	Char Char::operator/(const Char& c) const
+	{
+		return dat / c.dat;
+	}
+
+	Char Char::operator%(const Char& c) const
+	{
+		return dat % c.dat;
+	}
+
+	Char& Char::operator+=(const Char& c)
+	{
+		dat += c.dat;
+
+		return *this;
+	}
+
+	Char& Char::operator-=(const Char& c)
+	{
+		dat -= c.dat;
+
+		return *this;
+	}
+
+	Char& Char::operator*=(const Char& c)
+	{
+		dat *= c.dat;
+
+		return *this;
+	}
+
+	Char& Char::operator/=(const Char& c)
+	{
+		dat /= c.dat;
+
+		return *this;
+	}
+
+	Char& Char::operator%=(const Char& c)
+	{
+		dat %= c.dat;
+
+		return *this;
 	}
 }

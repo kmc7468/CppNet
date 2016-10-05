@@ -10,10 +10,10 @@ using namespace std;
 
 namespace System
 {
-	const Char Char::MaxValue = Char(std::numeric_limits<Int32>::max());
-	const Char Char::MinValue = Char(std::numeric_limits<Int32>::min());
+	const Char Char::MaxValue = Char(std::numeric_limits<char32_t>::max());
+	const Char Char::MinValue = Char(std::numeric_limits<char32_t>::min());
 
-	Char::Char(Int32 unicode)
+	Char::Char(char32_t unicode)
 	{
 		dat = unicode;
 	}
@@ -38,14 +38,9 @@ namespace System
 		: Char(utf8chars.data(), 2)
 	{ }
 
-	Char::Char(char data)
-	{
-		dat = data;
-	}
-
 	Char::Char(const char* utf8chars, Byte size, Byte index)
 	{
-		if (size <= 0 || size > 4)
+		if (size <= 0 || size > 6)
 		{
 			//FIXME OverflowException
 

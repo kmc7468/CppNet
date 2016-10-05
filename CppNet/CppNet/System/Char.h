@@ -19,13 +19,12 @@ namespace System
 	{
 	public:
 		Char() = default;
-		Char(Int32 unicode);
+		Char(char32_t unicode);
 		Char(std::array<char, 6> utf8chars);
 		Char(std::array<char, 5> utf8chars);
 		Char(std::array<char, 4> utf8chars);
 		Char(std::array<char, 3> utf8chars);
 		Char(std::array<char, 2> utf8chars);
-		Char(char data);
 		Char(const char* utf8chars, Byte size, Byte index = 0);
 		Char(std::string utf8chars);
 		Char(Char&& c);
@@ -50,15 +49,27 @@ namespace System
 		inline Boolean operator==(const Object& obj) const override;
 		inline Boolean operator!=(const Object& obj) const override;
 
-		inline Boolean operator>(const Char& c);
-		inline Boolean operator<(const Char& c);
-		inline Boolean operator>=(const Char& c);
-		inline Boolean operator<=(const Char& c);
+		inline Boolean operator>(const Char& c) const;
+		inline Boolean operator<(const Char& c) const;
+		inline Boolean operator>=(const Char& c) const;
+		inline Boolean operator<=(const Char& c) const;
 
-		inline Boolean operator>(char32_t c);
-		inline Boolean operator<(char32_t c);
-		inline Boolean operator>=(char32_t c);
-		inline Boolean operator<=(char32_t c);
+		inline Boolean operator>(char32_t c) const;
+		inline Boolean operator<(char32_t c) const;
+		inline Boolean operator>=(char32_t c) const;
+		inline Boolean operator<=(char32_t c) const;
+
+		inline Char operator+(const Char& c) const;
+		inline Char operator-(const Char& c) const;
+		inline Char operator*(const Char& c) const;
+		inline Char operator/(const Char& c) const;
+		inline Char operator%(const Char& c) const;
+
+		inline Char& operator+=(const Char& c);
+		inline Char& operator-=(const Char& c);
+		inline Char& operator*=(const Char& c);
+		inline Char& operator/=(const Char& c);
+		inline Char& operator%=(const Char& c);
 
 	private:
 		Int32 dat;
