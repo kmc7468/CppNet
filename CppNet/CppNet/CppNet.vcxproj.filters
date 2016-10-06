@@ -406,5 +406,8 @@
     <None Include="CppNet\gc_ptr.inl">
       <Filter>인라인 구현 파일\CppNet</Filter>
     </None>
+    <None Include="CppNet\gc.inl">
+      <Filter>인라인 구현 파일\CppNet</Filter>
+    </None>
   </ItemGroup>
 </Project>

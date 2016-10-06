@@ -118,6 +118,7 @@
     <ClCompile Include="System\Windows\Forms\Control.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="CppNet\gc.inl" />
     <None Include="CppNet\gc_ptr.inl" />
     <None Include="CppNet\KMC\Decimal.inl" />
     <None Include="CppNet\KMC\Fraction.inl" />

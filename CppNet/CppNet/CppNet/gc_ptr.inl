@@ -1,46 +1,48 @@
 #include "gc_ptr.h"
 
 #include "gc.h"
+
+#include <algorithm>
 using namespace CppNet;
 
-template<typename T>
-gc_ptr<T>::gc_ptr(void** address)
+template<class T>
+gc_ptr<T>::gc_ptr(size_t index)
 {
-	gc::refcounts[std::find(gc::allocs.begin(), gc::allocs.end(), *address)] += 1;
+	gc::data.at(index)->ref_count++;
 
-	this->address = address;
+	this->index = index;
 }
 
-template<typename T>
+template<class T>
 gc_ptr<T>::gc_ptr(gc_ptr<T>&& gc)
 {
-	gc::refcounts[std::find(gc::allocs.begin(), gc::allocs.end(), *address)] += 1;
+	gc::data.at(index)->ref_count++;
 
-	address = std::move(gc.address);
+	index = std::move(gc.index);
 }
 
-template<typename T>
+template<class T>
 gc_ptr<T>::gc_ptr(const gc_ptr<T>& gc)
 {
-	gc::refcounts[std::find(gc::allocs.begin(), gc::allocs.end(), *address)] += 1;
+	gc::data.at(index)->ref_count++;
 
-	address = gc.address;
+	index = gc.index;
 }
 
-template<typename T>
+template<class T>
 gc_ptr<T>::~gc_ptr()
 {
-	gc::refcounts[std::find(gc::allocs.begin(), gc::allocs.end(), *address)] -= 1;
+	gc::data.at(index)->ref_count--;
 }
 
-template<typename T>
-T** gc_ptr<T>::operator->() const
+template<class T>
+T* gc_ptr<T>::operator->() const
 {
-	return (T**)address;
+	return gc::allocs[index]->address;
 }
 
-template<typename T>
+template<class T>
 T& gc_ptr<T>::operator*() const
 {
-	return **((T**)address);
+	return *(gc::allocs[index]->address);
 }

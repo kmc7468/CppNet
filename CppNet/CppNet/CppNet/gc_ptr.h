@@ -8,23 +8,21 @@
 
 namespace CppNet
 {
-	template<typename T>
+	template<class T>
 	class gc_ptr : public System::Object
 	{
 	public:
-		gc_ptr(void** address);
+		gc_ptr(size_t index);
 		gc_ptr(gc_ptr<T>&& gc);
 		gc_ptr(const gc_ptr<T>& gc);
 		~gc_ptr();
 
 	private:
-		void** address;
-		/* NOTE
-		address 포인터는 gc 클래스에 있는 std::vector<void*>에 저장된 포인터를 가르키게 됨
-		*/
+		size_t index = 0;
+		// 여기서 index는 식별 코드이다.
 
 	public:
-		T** operator->() const;
+		T* operator->() const;
 		T& operator*() const;
 	};
 }
