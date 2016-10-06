@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="CppNet.h" />
     <ClInclude Include="CppNet\CppNet.h" />
+    <ClInclude Include="CppNet\gc.h" />
     <ClInclude Include="CppNet\gc_ptr.h" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
@@ -91,6 +92,7 @@
     <ClInclude Include="Utility.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CppNet\gc.cpp" />
     <ClCompile Include="CppNet\KMC\Decimal.cpp" />
     <ClCompile Include="CppNet\Unicode.cpp" />
     <ClCompile Include="CppNet\Unicode9_0.cpp" />
@@ -116,6 +118,7 @@
     <ClCompile Include="System\Windows\Forms\Control.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="CppNet\gc_ptr.inl" />
     <None Include="CppNet\KMC\Decimal.inl" />
     <None Include="CppNet\KMC\Fraction.inl" />
     <None Include="CppNet\Unicode.inl" />

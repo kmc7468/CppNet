@@ -285,6 +285,9 @@
     <ClInclude Include="CppNet\gc_ptr.h">
       <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\gc.h">
+      <Filter>헤더 파일\CppNet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -356,6 +359,9 @@
     <ClCompile Include="CppNet\Unicode9_0.cpp">
       <Filter>소스 파일\CppNet</Filter>
     </ClCompile>
+    <ClCompile Include="CppNet\gc.cpp">
+      <Filter>소스 파일\CppNet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="System\Collections\Generic\Queue.inl">
@@ -396,6 +402,9 @@
     </None>
     <None Include="CppNet\KMC\Fraction.inl">
       <Filter>인라인 구현 파일\CppNet\KMC</Filter>
+    </None>
+    <None Include="CppNet\gc_ptr.inl">
+      <Filter>인라인 구현 파일\CppNet</Filter>
     </None>
   </ItemGroup>
 </Project>
