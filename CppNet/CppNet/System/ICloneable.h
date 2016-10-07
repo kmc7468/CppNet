@@ -1,12 +1,13 @@
 #ifndef SYSTEM_ICLONEABLE_H
 #define SYSTEM_ICLONEABLE_H
 
-#include "Object.h"
+#include "../Defines.h"
+
 #include "../Utility.h"
 
 namespace System
 {
-	interface ICloneable : private virtual Object
+	interface ICloneable
 	{
 		virtual inline Object Clone() = 0;
 	};

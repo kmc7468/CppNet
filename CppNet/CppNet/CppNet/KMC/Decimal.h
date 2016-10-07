@@ -1,6 +1,8 @@
 #ifndef CPPNET_KMC_DECIMAL_H
 #define CPPNET_KMC_DECIMAL_H
 
+#include "../../Defines.h"
+
 #include "../../SystemTypes.h"
 #include <vector>
 using namespace::System;

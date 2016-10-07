@@ -1,6 +1,8 @@
 #ifndef SYSTEM_VERSION_H
 #define SYSTEM_VERSION_H
 
+#include "../Defines.h"
+
 #include "../System/Object.h"
 #include "../System/ICloneable.h"
 #include "../System/IComparable.h"
@@ -8,7 +10,7 @@
 
 namespace System
 {
-	class Version final : public virtual Object, public ICloneable, public IComparable<>, public IComparable<Version>, public IEquatable<Version>
+	class Version final : public Object, public ICloneable, public IComparable<>, public IComparable<Version>, public IEquatable<Version>
 	{
 	public:
 		Version() = default;

@@ -1,6 +1,8 @@
 #ifndef SYSTEM_INVALIDOPERATIONEXCEPTION_H
 #define SYSTEM_INVALIDOPERATIONEXCEPTION_H
 
+#include "../Defines.h"
+
 #include "Exception.h"
 #include "String.h"
 

@@ -1,6 +1,8 @@
 #ifndef SYSTEM_DRAWING_POINT_H
 #define SYSTEM_DRAWING_POINT_H
 
+#include "../../Defines.h"
+
 #include "../Int32.h"
 #include "../Boolean.h"
 #include "../Object.h"

@@ -1,6 +1,8 @@
 #ifndef SYSTEMTYPES_H
 #define SYSTEMTYPES_H
 
+#include "Defines.h"
+
 #include "System/Boolean.h"
 
 #include "System/Byte.h"

@@ -1,6 +1,8 @@
 #ifndef SYSTEM_IFORMATTABLE_H
 #define SYSTEM_IFORMATTABLE_H
 
+#include "../Defines.h"
+
 #include <memory>
 
 #include "../Utility.h"
@@ -10,7 +12,7 @@
 
 namespace System
 {
-	interface IFormattable : private virtual Object
+	interface IFormattable
 	{
 		virtual inline String ToString(String format, std::unique_ptr<IFormatProvider> formatProvider) = 0;
 	};

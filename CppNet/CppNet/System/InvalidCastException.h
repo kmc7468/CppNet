@@ -1,6 +1,8 @@
 #ifndef SYSTEM_INVALIDCASTEXCEPTION_H
 #define SYSTEM_INVALIDCASTEXCEPTION_H
 
+#include "../Defines.h"
+
 #include "Exception.h"
 #include "String.h"
 

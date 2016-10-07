@@ -1,6 +1,8 @@
 #ifndef UTILITY_H
 #define UTILITY_H
 
+#include "Defines.h"
+
 #include "System/Boolean.h"
 
 #include <type_traits>

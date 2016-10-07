@@ -1,6 +1,8 @@
 #ifndef SYSTEM_DOUBLET_H
 #define SYSTEM_DOUBLET_H
 
+#include "../Defines.h"
+
 #include "Object.h"
 #include "Double.h"
 #include "Char.h"
@@ -11,7 +13,7 @@
 
 namespace System
 {
-	class DoubleT : public virtual Object, public IComparable<Object>, public IComparable<DoubleT>, public IFormattable, public IConvertible, public IEquatable<DoubleT>
+	class DoubleT : public Object, public IComparable<Object>, public IComparable<DoubleT>, public IFormattable, public IConvertible, public IEquatable<DoubleT>
 	{	
 	private:
 		Double dat;

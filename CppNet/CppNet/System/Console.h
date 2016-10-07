@@ -1,11 +1,7 @@
-
-/*
-	2016.09.07
-	Created by kmc7468
-*/
-
 #ifndef SYSTEM_CONSOLE_H
 #define SYSTEM_CONSOLE_H
+
+#include "../Defines.h"
 
 #include "../SystemTypes.h"
 #include "Object.h"

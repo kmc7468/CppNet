@@ -1,6 +1,8 @@
 ﻿#ifndef SYSTEM_COLLECTIONS_IENUMERABLE_H
 #define SYSTEM_COLLECTIONS_IENUMERABLE_H
 
+#include "../../Defines.h"
+
 #include <memory>
 
 #include "../System.h"
@@ -10,7 +12,7 @@ namespace System
 {
 	namespace Collections
 	{
-		interface IEnumerable : public Object
+		interface IEnumerable
 		{
 			virtual std::unique_ptr<IEnumerator> GetEnumerator() = 0;
 

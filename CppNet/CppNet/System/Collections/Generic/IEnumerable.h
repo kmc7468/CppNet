@@ -1,6 +1,8 @@
 ﻿#ifndef SYSTEM_COLLECTIONS_GENERIC_IENUMERABLE_H
 #define SYSTEM_COLLECTIONS_GENERIC_IENUMERABLE_H
 
+#include "../../../Defines.h"
+
 #include <memory>
 
 #include "../../System.h"
@@ -16,7 +18,7 @@ namespace System
 			//아예 다른 클래스로 분리했습니다 (여기서의 상속은 의미가 없다고 판단)
 
 			template <typename T>
-			interface IEnumerable : public Object
+			interface IEnumerable
 			{
 				virtual std::unique_ptr<IEnumerator<T>> GetEnumerator() = 0;
 			};

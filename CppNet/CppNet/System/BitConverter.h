@@ -1,6 +1,8 @@
 #ifndef SYSTEM_BITCONVERTER_H
 #define SYSTEM_BITCONVERTER_H
 
+#include "../Defines.h"
+
 #include "../SystemTypes.h"
 
 #include <array>

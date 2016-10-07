@@ -1,6 +1,8 @@
 #ifndef SYSTEM_RANDOM_H
 #define SYSTEM_RANDOM_H
 
+#include "../Defines.h"
+
 #include "Int64.h"
 #include "Int32.h"
 #include "UInt32.h"

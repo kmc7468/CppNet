@@ -1,6 +1,8 @@
 #ifndef SYSTEM_COLLECTIONS_GENERIC_QUEUE_H
 #define SYSTEM_COLLECTIONS_GENERIC_QUEUE_H
 
+#include "../../../Defines.h"
+
 #include <deque>
 #include "../../../SystemTypes.h"
 #include "IEnumerator.h"

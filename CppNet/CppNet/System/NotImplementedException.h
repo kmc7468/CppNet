@@ -1,6 +1,8 @@
 #ifndef SYSTEM_NOTIMPLEMENTEDEXCEPTION_H
 #define SYSTEM_NOTIMPLEMENTEDEXCEPTION_H
 
+#include "../Defines.h"
+
 #include "Exception.h"
 
 #include "String.h"

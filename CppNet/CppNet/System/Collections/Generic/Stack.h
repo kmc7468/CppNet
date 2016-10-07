@@ -1,6 +1,8 @@
 #ifndef SYSTEM_COLLECTIONS_GENERIC_STACK_H
 #define SYSTEM_COLLECTIONS_GENERIC_STACK_H
 
+#include "../../../Defines.h"
+
 #include <deque>
 #include "../../../SystemTypes.h"
 #include "IEnumerable.h"
@@ -14,7 +16,7 @@ namespace System
 		namespace Generic
 		{
 			template <typename T>
-			class Stack : public IReadOnlyCollection<T>, protected ICollection<T>
+			class Stack : public Object, public IReadOnlyCollection<T>, protected ICollection<T>
 			{
 			public:
 				Stack();

@@ -1,6 +1,8 @@
 #ifndef SYSTEM_GLOBALIZATION_CHARUNICODEINFO_H
 #define SYSTEM_GLOBALIZATION_CHARUNICODEINFO_H
 
+#include "../../Defines.h"
+
 #include "../Object.h"
 
 #include "../Int32.h"

@@ -1,12 +1,7 @@
-
-
-/*
-	2016.09.07
-	Created by kmc7468
-*/
-
 #ifndef SYSTEM_OBJECT_H
 #define SYSTEM_OBJECT_H
+
+#include "../Defines.h"
 
 #include "Boolean.h"
 #include "String.h"

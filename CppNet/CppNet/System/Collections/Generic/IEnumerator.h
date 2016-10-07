@@ -1,6 +1,8 @@
 #ifndef SYSTEM_COLLECTIONS_GENERIC_IENUMERATOR_H
 #define SYSTEM_COLLECTIONS_GENERIC_IENUMERATOR_H
 
+#include "../../../Defines.h"
+
 #include "../../System.h"
 
 namespace System
@@ -10,7 +12,7 @@ namespace System
 		namespace Generic
 		{
 			template <typename T>
-			interface IEnumerator : public Object
+			interface IEnumerator
 			{
 				virtual T& Current() = 0;
 

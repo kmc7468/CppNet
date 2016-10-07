@@ -1,6 +1,8 @@
 #ifndef CPPNET_KMC_FRACTION_H
 #define CPPNET_KMC_FRACTION_H
 
+#include "../../Defines.h"
+
 #include <tuple>
 
 #include "../../SystemTypes.h"

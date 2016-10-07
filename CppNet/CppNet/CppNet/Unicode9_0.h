@@ -1,6 +1,8 @@
 #ifndef CPPNET_UNICODE9_0_H
 #define CPPNET_UNICODE9_0_H
 
+#include "../Defines.h"
+
 #include "Unicode.h"
 
 namespace CppNet

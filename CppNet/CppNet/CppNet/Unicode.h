@@ -1,6 +1,8 @@
 #ifndef CPPNET_UNICODE_H
 #define CPPNET_UNICODE_H
 
+#include "../Defines.h"
+
 #include <vector>
 
 #include "../System/Object.h"

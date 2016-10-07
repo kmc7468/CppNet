@@ -1,6 +1,8 @@
 #ifndef SYSTEM_FORMATEXCEPTION_H
 #define SYSTEM_FORMATEXCEPTION_H
 
+#include "../Defines.h"
+
 #include "Exception.h"
 #include "String.h"
 

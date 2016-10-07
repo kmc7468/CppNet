@@ -1,6 +1,8 @@
 #ifndef SYSTEM_DRAWING_SIZEF_H
 #define SYSTEM_DRAWING_SIZEF_H
 
+#include "../../Defines.h"
+
 #include "../Object.h"
 #include "PointF.h"
 #include "../Single.h"

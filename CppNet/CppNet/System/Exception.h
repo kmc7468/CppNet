@@ -1,6 +1,8 @@
 #ifndef SYSTEM_EXCEPTION_H
 #define SYSTEM_EXCEPTION_H
 
+#include "../Defines.h"
+
 #include "String.h"
 #include "Object.h"
 

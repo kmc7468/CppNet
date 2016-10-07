@@ -1,6 +1,8 @@
 #ifndef SYSTEM_WINDOWS_FORMS_CONTROL_H
 #define SYSTEM_WINDOWS_FORMS_CONTROL_H
 
+#include "../../../Defines.h"
+
 #include "../../Object.h"
 
 #ifdef WIN32

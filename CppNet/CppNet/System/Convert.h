@@ -1,6 +1,8 @@
 #ifndef SYSTEM_CONVERT_H
 #define SYSTEM_CONVERT_H
 
+#include "../Defines.h"
+
 #include "SystemTypes.h"
 #include "DateTime.h"
 

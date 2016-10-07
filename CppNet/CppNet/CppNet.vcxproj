@@ -28,6 +28,7 @@
     <ClInclude Include="CppNet\KMC\KMC.h" />
     <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="CppNet\Unicode9_0.h" />
+    <ClInclude Include="Defines.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="SystemTypes.h" />
     <ClInclude Include="System\ArgumentException.h" />

@@ -1,6 +1,8 @@
 #ifndef SYSTEM_TIMESPAN_H
 #define SYSTEM_TIMESPAN_H
 
+#include "../Defines.h"
+
 #include "Int64.h"
 #include "Int32.h"
 #include "Boolean.h"

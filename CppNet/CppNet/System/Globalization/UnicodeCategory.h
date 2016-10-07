@@ -1,6 +1,8 @@
 #ifndef SYSTEM_GLOBALIZATION_UNICODECATEGORY_H
 #define SYSTEM_GLOBALIZATION_UNICODECATEGORY_H
 
+#include "../../Defines.h"
+
 namespace System
 {
 	namespace Globalization

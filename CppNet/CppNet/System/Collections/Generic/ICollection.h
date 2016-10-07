@@ -1,6 +1,8 @@
 #ifndef SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_H
 #define SYSTEM_COLLECTIONS_GENERIC_ICOLLECTION_H
 
+#include "../../../Defines.h"
+
 #include "../../Boolean.h"
 
 #include "IEnumerable.h"

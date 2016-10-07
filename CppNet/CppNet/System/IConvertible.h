@@ -1,6 +1,8 @@
 #ifndef SYSTEM_ICONVERTIBLE_H
 #define SYSTEM_ICONVERTIBLE_H
 
+#include "../Defines.h"
+
 #include "../SystemTypes.h"
 
 #include "DateTime.h"
@@ -15,7 +17,7 @@ namespace System
 {
 	class Char;
 
-	interface IConvertible : private virtual Object
+	interface IConvertible
 	{
 		virtual Boolean ToBoolean(std::unique_ptr<IFormatProvider> i) = 0;
 		virtual Byte ToByte(std::unique_ptr<IFormatProvider> i) = 0;

@@ -1,6 +1,8 @@
 #ifndef SYSTEM_CHAR_H
 #define SYSTEM_CHAR_H
 
+#include "../Defines.h"
+
 #include "Object.h"
 #include "Int32.h"
 #include "UInt32.h"
@@ -15,7 +17,7 @@
 
 namespace System
 {
-	class Char : public virtual Object, public IComparable<Object>, public IComparable<Char>/*, public IConvertible*/, public IEquatable<Char>																  
+	class Char : public Object, public IComparable<Object>, public IComparable<Char>/*, public IConvertible*/, public IEquatable<Char>																  
 	{
 	public:
 		Char() = default;

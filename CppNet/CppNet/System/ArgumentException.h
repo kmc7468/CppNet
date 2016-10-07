@@ -1,6 +1,8 @@
 #ifndef SYSTEM_ARGUMENTEXCEPTION_H
 #define SYSTEM_ARGUMENTEXCEPTION_H
 
+#include "../Defines.h"
+
 #include "Exception.h"
 #include "String.h"
 
