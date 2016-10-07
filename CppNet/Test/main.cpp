@@ -1,19 +1,19 @@
 #include <CppNet/CppNet.h>
 
+#include <chrono>
+using namespace std::chrono;
+
 int main()
 {
-	while (true)
-	{
-		String temp = Console::ReadLine();
+	auto g = gc::newgc<CppNet::KMC::Decimal>(3, "141592");
 
-		if (temp == "X") break;
+	std::cout << (*g).ToString() << std::endl;
 
-		String temp2 = Console::ReadLine();
+	auto g2 = gc::newgc<CppNet::KMC::Decimal, 3>();
 
-		Decimal a(temp), b(temp2);
-
-		Console::WriteLine((a * b).ToString());
-	}
+	std::cout << (g2[0])->ToString() << std::endl;
+	std::cout << (g2[1])->ToString() << std::endl;
+	std::cout << (g2[2])->ToString() << std::endl;
 
 	MAIN_END
 }

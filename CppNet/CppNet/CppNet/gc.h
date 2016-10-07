@@ -24,12 +24,18 @@ namespace CppNet
 {
 	class gc : public System::Object
 	{
-		template<typename T>
+		template<class T>
 		friend class gc_ptr;
 
 	private:
+		class mem_data;
+
 		class mem_data
 		{
+		public:
+			mem_data() = default;
+			~mem_data() = default;
+
 		public:
 			void* address = nullptr;
 			size_t ref_count = 0;
@@ -42,16 +48,9 @@ namespace CppNet
 	public:
 		template<typename T, typename... InitArgs>
 		static gc_ptr<T> newgc(InitArgs... args);
-#ifdef CppNet_Unsafe
-		template<typename T>
-		static void deletegc(const gc_ptr<T>& gc);
-#endif
+
 		template<typename T, size_t size, typename... InitArgs>
 		static std::array<gc_ptr<T>, size> newgc(InitArgs... args);
-#ifdef CppNet_Unsafe
-		template<typename T, size_t size>
-		static void deletegc(std::array<gc_ptr<T>, size> arr);
-#endif
 		
 	private:
 		static void* space_address;

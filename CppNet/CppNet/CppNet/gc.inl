@@ -1,4 +1,6 @@
 #include "gc.h"
+
+#include <array>
 using namespace CppNet;
 
 template<typename T, typename ...InitArgs>
@@ -7,7 +9,17 @@ gc_ptr<T> gc::newgc(InitArgs ...args)
 	if (gc::allocs.size() == 0)
 		gc::allocs.push_back(new gc::mem_data()); // 쓰레기 값
 
-	void* vp = new(space_address + use_bytes) T(std::forward(args...));
+	if (gc::space_address == nullptr)
+		gc::alloc_space();
+
+	while (gc::use_bytes + sizeof(T) > gc::space_size)
+	{
+		gc::alloc_space();
+	}
+
+	T* p = new((void*)((size_t)space_address + use_bytes)) T(args...);
+
+	void* vp = p;
 
 	use_bytes += sizeof(T);
 
@@ -17,29 +29,20 @@ gc_ptr<T> gc::newgc(InitArgs ...args)
 
 	gc::allocs.push_back(d);
 
-	gc_ptr<T> g(gc::allocs.at(gc::allocs.size() - 1));
+	gc_ptr<T> g(gc::allocs.size() - 1, 0);
 
 	return g;
 }
 
-#ifdef CppNet_Unsafe
-template<typename T>
-void gc::deletegc(const gc_ptr<T>& gc)
-{
-	gc.index = 0;
-}
-#endif
-
 template<typename T, size_t size, typename... InitArgs>
 std::array<gc_ptr<T>, size> gc::newgc(InitArgs... args)
 {
+	std::array<gc_ptr<T>, size> arr;
 
+	for (size_t i = 0; i < size; i++)
+	{
+		arr[i] = newgc<T>(args...);
+	}
+
+	return arr;
 }
-
-#ifdef CppNet_Unsafe
-template<typename T, size_t size>
-void gc::deletegc(std::array<gc_ptr<T>, size> arr)
-{
-
-}
-#endif
