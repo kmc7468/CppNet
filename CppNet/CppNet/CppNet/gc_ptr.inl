@@ -8,7 +8,7 @@ using namespace CppNet;
 template<class T>
 gc_ptr<T>::gc_ptr(size_t index, size_t arr_num)
 {
-	gc::allocs.at(index)->ref_count++;
+	std::get<1>(gc::allocs.at(index))++;
 
 	this->index = index;
 	this->arr_num = arr_num;
@@ -17,7 +17,7 @@ gc_ptr<T>::gc_ptr(size_t index, size_t arr_num)
 template<class T>
 gc_ptr<T>::gc_ptr(gc_ptr<T>&& gc)
 {
-	gc::allocs.at(index)->ref_count++;
+	std::get<1>(gc::allocs.at(index))++;
 
 	index = std::move(gc.index);
 	arr_num = std::move(gc.arr_num);
@@ -26,7 +26,7 @@ gc_ptr<T>::gc_ptr(gc_ptr<T>&& gc)
 template<class T>
 gc_ptr<T>::gc_ptr(const gc_ptr<T>& gc)
 {
-	gc::allocs.at(index)->ref_count++;
+	std::get<1>(gc::allocs.at(index))++;
 
 	index = gc.index;
 	arr_num = gc.arr_num;
@@ -35,19 +35,19 @@ gc_ptr<T>::gc_ptr(const gc_ptr<T>& gc)
 template<class T>
 gc_ptr<T>::~gc_ptr()
 {
-	gc::allocs.at(index)->ref_count--;
+	std::get<1>(gc::allocs.at(index))--;
 }
 
 template<class T>
 T* gc_ptr<T>::operator->() const
 {
-	return ((T*)(gc::allocs[index]->address)) + arr_num;
+	return ((T*)(std::get<0>(gc::allocs.at(index)))) + arr_num;
 }
 
 template<class T>
 T& gc_ptr<T>::operator*() const
 {
-	return *(((T*)(gc::allocs[index]->address)) + arr_num);
+	return *(((T*)(std::get<0>(gc::allocs.at(index)))) + arr_num);
 }
 
 template<class T>

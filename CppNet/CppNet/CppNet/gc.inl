@@ -7,7 +7,7 @@ template<typename T, typename ...InitArgs>
 gc_ptr<T> gc::newgc(InitArgs ...args)
 {
 	if (gc::allocs.size() == 0)
-		gc::allocs.push_back(new gc::mem_data()); // 쓰레기 값
+		gc::allocs.push_back(std::make_tuple<void*, size_t, size_t>(nullptr, 0, 0)); // 쓰레기 값
 
 	if (gc::space_address == nullptr)
 		gc::alloc_space();
@@ -23,13 +23,12 @@ gc_ptr<T> gc::newgc(InitArgs ...args)
 
 	use_bytes += sizeof(T);
 
-	gc::mem_data* d = new gc::mem_data;
-	d->alloc_size = 1;
-	d->address = vp;
+	std::tuple<void*, size_t, size_t> tup(vp, 0, 1);
 
-	gc::allocs.push_back(d);
+	gc::allocs.push_back(tup);
 
-	gc_ptr<T> g(gc::allocs.size() - 1, 0);
+	size_t s = gc::allocs.size() - 1;
+	gc_ptr<T> g(s, 0);
 
 	return g;
 }
@@ -41,7 +40,34 @@ std::array<gc_ptr<T>, size> gc::newgc(InitArgs... args)
 
 	for (size_t i = 0; i < size; i++)
 	{
-		arr[i] = newgc<T>(args...);
+		if (gc::allocs.size() == 0)
+			gc::allocs.push_back(std::make_tuple<void*, size_t, size_t>(nullptr, 0, 0)); // 쓰레기 값
+
+		if (gc::space_address == nullptr)
+			gc::alloc_space();
+
+		while (gc::use_bytes + sizeof(T) > gc::space_size)
+		{
+			gc::alloc_space();
+		}
+
+		T* p = new((void*)((size_t)space_address + use_bytes)) T(args...);
+
+		void* vp = p;
+
+		if (i == 0)
+		{
+			std::tuple<void*, size_t, size_t> tup(vp, 0, size);
+
+			gc::allocs.push_back(tup);
+		}
+
+		use_bytes += sizeof(T);
+
+		size_t s = gc::allocs.size() - 1;
+		gc_ptr<T> g(s, i);
+
+		arr[i] = g;
 	}
 
 	return arr;

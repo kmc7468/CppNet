@@ -5,15 +5,29 @@ using namespace std::chrono;
 
 int main()
 {
-	auto g = gc::newgc<CppNet::KMC::Decimal>(3, "141592");
+	system_clock::time_point a = system_clock::now();
+	auto g = gc::newgc<int>(100);
+	system_clock::time_point b = system_clock::now();
 
-	std::cout << (*g).ToString() << std::endl;
+	duration<double> d = b - a;
 
-	auto g2 = gc::newgc<CppNet::KMC::Decimal, 3>();
+	std::cout << d.count() << std::endl;
 
-	std::cout << (g2[0])->ToString() << std::endl;
-	std::cout << (g2[1])->ToString() << std::endl;
-	std::cout << (g2[2])->ToString() << std::endl;
+	std::cout << *g << std::endl;
+
+	a = system_clock::now();
+	auto g2 = gc::newgc<unsigned char, 10000>(20);
+	b = system_clock::now();
+	d = b - a;
+
+	std::cout << d.count() << std::endl;
+	
+	/*size_t index = 0;
+	for (auto a : g2)
+	{
+		std::cout << index << " " << *a << std::endl;
+		index++;
+	}*/
 
 	MAIN_END
 }

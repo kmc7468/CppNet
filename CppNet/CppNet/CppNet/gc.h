@@ -28,22 +28,7 @@ namespace CppNet
 		friend class gc_ptr;
 
 	private:
-		class mem_data;
-
-		class mem_data
-		{
-		public:
-			mem_data() = default;
-			~mem_data() = default;
-
-		public:
-			void* address = nullptr;
-			size_t ref_count = 0;
-			size_t alloc_size = 0;
-		};
-
-	private:
-		static std::vector<mem_data*> allocs;
+		static std::vector<std::tuple<void*, size_t, size_t>> allocs;
 
 	public:
 		template<typename T, typename... InitArgs>
