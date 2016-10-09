@@ -14,6 +14,18 @@ namespace System
 			Y = y;
 		}
 
+		PointF::PointF(PointF&& pf)
+		{
+			X = std::move(pf.X);
+			Y = std::move(pf.Y);
+		}
+
+		PointF::PointF(const PointF& pf)
+		{
+			X = pf.X;
+			Y = pf.Y;
+		}
+
 		Boolean PointF::operator==(const Object& obj) const
 		{
 			if (is<const PointF&>(obj))

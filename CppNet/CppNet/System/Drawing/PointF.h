@@ -15,6 +15,8 @@ namespace System
 		{
 		public:
 			PointF(Single x, Single y);
+			PointF(PointF&& pf);
+			PointF(const PointF& pf);
 
 		public:
 			static const PointF& Empty;

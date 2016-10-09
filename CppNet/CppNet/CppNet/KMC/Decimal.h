@@ -58,7 +58,7 @@ namespace CppNet
 			~Decimal() = default;
 
 		public:
-			String ToString() const;
+			String ToString() const override;
 			inline String ToString(size_t realsize) const;
 
 		public:

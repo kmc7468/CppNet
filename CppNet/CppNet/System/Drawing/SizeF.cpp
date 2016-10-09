@@ -1,9 +1,13 @@
 #include "SizeF.h"
 
+#include "../../Utility.h"
+
 namespace System
 {
 	namespace Drawing
 	{
+		const SizeF& SizeF::Empty = SizeF(0.0, 0.0);
+
 		SizeF::SizeF(const PointF& pf)
 		{
 			Width = pf.X;
@@ -18,8 +22,8 @@ namespace System
 
 		SizeF::SizeF(SizeF&& sf)
 		{
-			Width = sf.Width;
-			Height = sf.Height;
+			Width = std::move(sf.Width);
+			Height = std::move(sf.Height);
 		}
 
 		SizeF::SizeF(const SizeF& sf)
@@ -31,6 +35,19 @@ namespace System
 		Boolean SizeF::IsEmpty() const
 		{
 			return (Width == 0.0 && Height == 0.0);
+		}
+
+		Boolean SizeF::Equals(Object& obj) const
+		{
+			if (_is(dref(Object&), SizeF))
+			{
+				auto a = _as(obj, SizeF&);
+
+				if (Width == a.Width && Height == a.Height)
+					return true;
+			}
+
+			return false;
 		}
 	}
 }

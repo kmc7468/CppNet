@@ -73,6 +73,9 @@
     <Filter Include="인라인 구현 파일\System\Collections\Generic">
       <UniqueIdentifier>{e1717ddd-7198-47ec-9073-ce8711dd7bce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="인라인 구현 파일\System\Drawing">
+      <UniqueIdentifier>{52117856-be9e-45ba-b6e5-ea2371087be5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -411,6 +414,9 @@
     </None>
     <None Include="CppNet\gc.inl">
       <Filter>인라인 구현 파일\CppNet</Filter>
+    </None>
+    <None Include="System\Drawing\SizeF.inl">
+      <Filter>인라인 구현 파일\System\Drawing</Filter>
     </None>
   </ItemGroup>
 </Project>

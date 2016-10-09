@@ -131,6 +131,7 @@
     <None Include="System\Console.inl" />
     <None Include="System\Convert.inl" />
     <None Include="System\DoubleT.inl" />
+    <None Include="System\Drawing\SizeF.inl" />
     <None Include="System\Math.inl" />
     <None Include="System\Object.inl" />
     <None Include="System\Version.inl" />

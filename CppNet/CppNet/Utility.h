@@ -15,6 +15,14 @@
 
 #define MAIN_END system("pause");return 0;
 
+#define dref(t) std::remove_reference<##t>::type
+#define dcst(from, to_type) (*const_cast<to_type##*>(&##from))
+
+#define _is(from_type, to_type) is<to_type, from_type>()
+#define __is(from, to_type) is<to_type>(from)
+
+#define _as(from, to_type) as<to_type>(from)
+
 template <typename T, typename U>
 inline System::Boolean is(U&& u)
 {
