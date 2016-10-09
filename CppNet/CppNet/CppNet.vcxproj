@@ -75,6 +75,7 @@
     <ClInclude Include="System\InvalidCastException.h" />
     <ClInclude Include="System\InvalidOperationException.h" />
     <ClInclude Include="System\IO\File.h" />
+    <ClInclude Include="System\IO\FileNotFoundException.h" />
     <ClInclude Include="System\IO\IOException.h" />
     <ClInclude Include="System\IO\System.IO.h" />
     <ClInclude Include="System\Math.h" />
@@ -117,6 +118,7 @@
     <ClCompile Include="System\InvalidCastException.cpp" />
     <ClCompile Include="System\InvalidOperationException.cpp" />
     <ClCompile Include="System\IO\File.cpp" />
+    <ClCompile Include="System\IO\FileNotFoundException.cpp" />
     <ClCompile Include="System\IO\IOException.cpp" />
     <ClCompile Include="System\Math.cpp" />
     <ClCompile Include="System\NotImplementedException.cpp" />

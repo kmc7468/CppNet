@@ -23,6 +23,7 @@
 #define TXT_INVALID_OPER_UNSAFE "프로그램 등에 큰 영향을 끼칠 수 있는 코드가 포함되어 있어 명령을 수행할 수 없습니다."
 
 #define TXT_IO_DEFMSG "I/O 오류가 발생하였습니다."
+#define TXT_IO_FILE404 "파일을 찾을 수 없습니다."
 
 
 #elif defined(LANG_ESP)
@@ -45,6 +46,7 @@
 #define TXT_INVALID_OPER_UNSAFE "Ĝi enhavas la kodon kiu povas havi grandan efikon tiaj programoj ne povas kuri la komando."
 
 #define TXT_IO_DEFMSG "I/O eraro."
+#define TXT_IO_FILE404 "Dosiero ne trovita."
 
 #else
 #define TXT_INVALID_ARGUMENT_DEFMSG "Invalid argument exception."
@@ -66,6 +68,7 @@
 #define TXT_INVALID_OPER_UNSAFE "It contains the code that can have a big impact such programs can not run the command."
 
 #define TXT_IO_DEFMSG "An I/O error occurred."
+#define TXT_IO_FILE404 "File not found."
 
 #endif
 

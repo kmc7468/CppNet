@@ -315,6 +315,9 @@
     <ClInclude Include="System\IO\IOException.h">
       <Filter>헤더 파일\System\IO</Filter>
     </ClInclude>
+    <ClInclude Include="System\IO\FileNotFoundException.h">
+      <Filter>헤더 파일\System\IO</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -399,6 +402,9 @@
       <Filter>소스 파일\System</Filter>
     </ClCompile>
     <ClCompile Include="System\IO\IOException.cpp">
+      <Filter>소스 파일\System\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="System\IO\FileNotFoundException.cpp">
       <Filter>소스 파일\System\IO</Filter>
     </ClCompile>
   </ItemGroup>
