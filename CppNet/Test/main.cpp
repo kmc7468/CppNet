@@ -6,28 +6,28 @@ using namespace std::chrono;
 int main()
 {
 	system_clock::time_point a = system_clock::now();
-	auto g = gc::newgc<int>(100);
+	Integer i = 1;
 	system_clock::time_point b = system_clock::now();
-
-	duration<double> d = b - a;
-
-	std::cout << d.count() << std::endl;
-
-	std::cout << *g << std::endl;
+	duration<double> c = b - a;
+	std::cout << c.count() << std::endl;
+	
+	Integer i2 = 1;
 
 	a = system_clock::now();
-	auto g2 = gc::newgc<unsigned char, 10000>(20);
+	Integer i3 = i + i2;
 	b = system_clock::now();
-	d = b - a;
 
-	std::cout << d.count() << std::endl;
-	
-	/*size_t index = 0;
-	for (auto a : g2)
-	{
-		std::cout << index << " " << *a << std::endl;
-		index++;
-	}*/
+	c = b - a;
+
+	std::cout << c.count() << std::endl;
+
+	a = system_clock::now();
+	UInt64 i4 = 1 + 1;
+	b = system_clock::now();
+
+	c = b - a;
+
+	std::cout << c.count() << std::endl;
 
 	MAIN_END
 }

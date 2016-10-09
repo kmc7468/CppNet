@@ -25,6 +25,7 @@
     <ClInclude Include="CppNet\gc_ptr.h" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
+    <ClInclude Include="CppNet\KMC\Integer.h" />
     <ClInclude Include="CppNet\KMC\KMC.h" />
     <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="CppNet\Unicode9_0.h" />
@@ -95,6 +96,7 @@
   <ItemGroup>
     <ClCompile Include="CppNet\gc.cpp" />
     <ClCompile Include="CppNet\KMC\Decimal.cpp" />
+    <ClCompile Include="CppNet\KMC\Integer.cpp" />
     <ClCompile Include="CppNet\Unicode.cpp" />
     <ClCompile Include="CppNet\Unicode9_0.cpp" />
     <ClCompile Include="System\ArgumentException.cpp" />
