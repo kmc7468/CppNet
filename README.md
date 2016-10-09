@@ -9,6 +9,9 @@
 활용 예제나 자세한 설명 등은 CNWiki(CppNet Wiki)를 참조하십시오.<br>
 https://github.com/kmc7468/CppNet/wiki
 
+## 컴파일 확인
+- Visual Studio 2015 Update 3
+
 ## 적용 방법 (Visual Studio)
 - CppNet 프로젝트를 빌드합니다.
 - CppNet의 헤더 파일을 한 폴더에 모아 놓습니다.
