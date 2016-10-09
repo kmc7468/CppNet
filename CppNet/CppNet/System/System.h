@@ -13,6 +13,7 @@
 #include "../SystemTypes.h"
 
 #include "Exception.h"
+#include "SystemException.h"
 #include "InvalidCastException.h"
 #include "InvalidOperationException.h"
 #include "FormatException.h"

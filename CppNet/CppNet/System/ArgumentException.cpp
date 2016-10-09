@@ -5,21 +5,21 @@
 namespace System
 {
 	ArgumentException::ArgumentException(const String& message, const String& paramName)
-		: Exception(message)
+		: SystemException(message)
 		, paramName(paramName)
 	{
 
 	}
 
 	ArgumentException::ArgumentException(const String& message, Exception* innerEx, const String& paramName)
-		: Exception(message, innerEx)
+		: SystemException(message, innerEx)
 		, paramName(paramName)
 	{
 
 	}
 
 	ArgumentException::ArgumentException(const ExceptionData& data, const String& paramName)
-		: Exception(data)
+		: SystemException(data)
 		, paramName(paramName)
 	{
 
@@ -70,8 +70,11 @@ namespace System
 	String ArgumentException::Message() const
 	{
 		String msg = TXT_INVALID_ARGUMENT_DEFMSG;
-		msg.append(" ");
-		msg.append(message);
+		if (message != "")
+		{
+			msg.append(" ");
+			msg.append(message);
+		}
 
 		return msg;
 	}

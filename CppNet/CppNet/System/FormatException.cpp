@@ -41,7 +41,7 @@ namespace System
 		// FIXME innerException ¾èÀºº¹»ç
 	}
 
-	FormatException FormatException::operator=(FormatException&& ex)
+	FormatException &FormatException::operator=(FormatException&& ex)
 	{
 		message = std::move(ex.message);
 		source = std::move(ex.source);
@@ -51,7 +51,7 @@ namespace System
 		return *this;
 	}
 
-	FormatException FormatException::operator=(const FormatException& ex)
+	FormatException &FormatException::operator=(const FormatException& ex)
 	{
 		message = ex.message;
 		source = ex.source;
@@ -64,8 +64,11 @@ namespace System
 	String FormatException::Message() const
 	{
 		String msg = TXT_FORMAT_DEFMSG;
-		msg.append(" ");
-		msg.append(message);
+		if (message != "")
+		{
+			msg.append(" ");
+			msg.append(message);
+		}
 
 		return msg;
 	}

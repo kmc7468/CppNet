@@ -76,12 +76,15 @@
     <Filter Include="인라인 구현 파일\System\Drawing">
       <UniqueIdentifier>{52117856-be9e-45ba-b6e5-ea2371087be5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\IO">
+      <UniqueIdentifier>{796b8306-28a0-4f16-99cb-423d7f211c3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System\IO">
+      <UniqueIdentifier>{9015a463-aebe-42aa-a125-b04758b0994c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
-      <Filter>헤더 파일\CppNet\KMC</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\KMC\KMC.h">
       <Filter>헤더 파일\CppNet\KMC</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\CppNet.h">
@@ -297,6 +300,21 @@
     <ClInclude Include="CppNet\KMC\Integer.h">
       <Filter>헤더 파일\CppNet\KMC</Filter>
     </ClInclude>
+    <ClInclude Include="System\IO\File.h">
+      <Filter>헤더 파일\System\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IO\System.IO.h">
+      <Filter>헤더 파일\System\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\KMC\CppNet.KMC.h">
+      <Filter>헤더 파일\CppNet\KMC</Filter>
+    </ClInclude>
+    <ClInclude Include="System\SystemException.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IO\IOException.h">
+      <Filter>헤더 파일\System\IO</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -373,6 +391,15 @@
     </ClCompile>
     <ClCompile Include="CppNet\KMC\Integer.cpp">
       <Filter>소스 파일\CppNet\KMC</Filter>
+    </ClCompile>
+    <ClCompile Include="System\IO\File.cpp">
+      <Filter>소스 파일\System\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="System\SystemException.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\IO\IOException.cpp">
+      <Filter>소스 파일\System\IO</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

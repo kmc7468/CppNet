@@ -4,12 +4,12 @@
 #include "../Defines.h"
 
 #include "Exception.h"
-
+#include "SystemException.h"
 #include "String.h"
 
 namespace System
 {
-	class NotImplementedException : public Exception
+	class NotImplementedException : public SystemException
 	{
 	public:
 		NotImplementedException() = default;
@@ -21,8 +21,8 @@ namespace System
 		~NotImplementedException() = default;
 
 	public:
-		NotImplementedException operator=(NotImplementedException&& ex);
-		NotImplementedException operator=(const NotImplementedException& ex);
+		NotImplementedException &operator=(NotImplementedException&& ex);
+		NotImplementedException &operator=(const NotImplementedException& ex);
 
 	public:
 		String Message() const override;

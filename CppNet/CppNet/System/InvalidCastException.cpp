@@ -41,7 +41,7 @@ namespace System
 		// FIXME innerException ¾èÀºº¹»ç
 	}
 
-	InvalidCastException InvalidCastException::operator=(InvalidCastException&& ex)
+	InvalidCastException &InvalidCastException::operator=(InvalidCastException&& ex)
 	{
 		message = std::move(ex.message);
 		source = std::move(ex.source);
@@ -51,7 +51,7 @@ namespace System
 		return *this;
 	}
 
-	InvalidCastException InvalidCastException::operator=(const InvalidCastException& ex)
+	InvalidCastException &InvalidCastException::operator=(const InvalidCastException& ex)
 	{
 		message = ex.message;
 		source = ex.source;
@@ -64,8 +64,11 @@ namespace System
 	String InvalidCastException::Message() const
 	{
 		String msg = TXT_INVALID_CAST_DEFMSG;
-		msg.append(" ");
-		msg.append(message);
+		if (message != "")
+		{
+			msg.append(" ");
+			msg.append(message);
+		}
 
 		return msg;
 	}

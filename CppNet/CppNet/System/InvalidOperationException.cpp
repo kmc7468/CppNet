@@ -41,7 +41,7 @@ namespace System
 		// FIXME innerException ¾èÀºº¹»ç
 	}
 
-	InvalidOperationException InvalidOperationException::operator=(InvalidOperationException&& ex)
+	InvalidOperationException &InvalidOperationException::operator=(InvalidOperationException&& ex)
 	{
 		message = std::move(ex.message);
 		source = std::move(ex.source);
@@ -51,7 +51,7 @@ namespace System
 		return *this;
 	}
 
-	InvalidOperationException InvalidOperationException::operator=(const InvalidOperationException& ex)
+	InvalidOperationException &InvalidOperationException::operator=(const InvalidOperationException& ex)
 	{
 		message = ex.message;
 		source = ex.source;
@@ -64,8 +64,11 @@ namespace System
 	String InvalidOperationException::Message() const
 	{
 		String msg = TXT_INVALID_OPER_DEFMSG;
-		msg.append(" ");
-		msg.append(message);
+		if (message != "")
+		{
+			msg.append(" ");
+			msg.append(message);
+		}
 
 		return msg;
 	}

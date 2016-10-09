@@ -4,11 +4,12 @@
 #include "../Defines.h"
 
 #include "Exception.h"
+#include "SystemException.h"
 #include "String.h"
 
 namespace System
 {
-	class ArgumentException : public Exception
+	class ArgumentException : public SystemException
 	{
 	public:
 		ArgumentException() = default;

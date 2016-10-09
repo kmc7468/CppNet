@@ -4,11 +4,12 @@
 #include "../Defines.h"
 
 #include "Exception.h"
+#include "SystemException.h"
 #include "String.h"
 
 namespace System
 {
-	class FormatException : public Exception
+	class FormatException : public SystemException
 	{
 	public:
 		FormatException() = default;
@@ -20,8 +21,8 @@ namespace System
 		~FormatException() = default;
 
 	public:
-		FormatException operator=(FormatException&& ex);
-		FormatException operator=(const FormatException& ex);
+		FormatException &operator=(FormatException&& ex);
+		FormatException &operator=(const FormatException& ex);
 
 	public:
 		String Message() const override;

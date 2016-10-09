@@ -4,11 +4,12 @@
 #include "../Defines.h"
 
 #include "Exception.h"
+#include "SystemException.h"
 #include "String.h"
 
 namespace System
 {
-	class InvalidCastException : public Exception
+	class InvalidCastException : public SystemException
 	{
 	public:
 		InvalidCastException() = default;
@@ -20,8 +21,8 @@ namespace System
 		~InvalidCastException() = default;
 
 	public:
-		InvalidCastException operator=(InvalidCastException&& ex);
-		InvalidCastException operator=(const InvalidCastException& ex);
+		InvalidCastException &operator=(InvalidCastException&& ex);
+		InvalidCastException &operator=(const InvalidCastException& ex);
 
 	public:
 		String Message() const override;

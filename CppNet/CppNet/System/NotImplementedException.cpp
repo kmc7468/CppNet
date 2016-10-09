@@ -41,7 +41,7 @@ namespace System
 		// FIXME innerException ¾èÀº º¹»ç
 	}
 
-	NotImplementedException NotImplementedException::operator=(NotImplementedException&& ex)
+	NotImplementedException &NotImplementedException::operator=(NotImplementedException&& ex)
 	{
 		message = std::move(ex.message);
 		source = std::move(ex.source);
@@ -51,7 +51,7 @@ namespace System
 		return *this;
 	}
 
-	NotImplementedException NotImplementedException::operator=(const NotImplementedException& ex)
+	NotImplementedException &NotImplementedException::operator=(const NotImplementedException& ex)
 	{
 		message = ex.message;
 		source = ex.source;
@@ -64,8 +64,11 @@ namespace System
 	String NotImplementedException::Message() const
 	{
 		String msg = TXT_NOTIMPL_DEFMSG;
-		msg.append(" ");
-		msg.append(message);
+		if (message != "")
+		{
+			msg.append(" ");
+			msg.append(message);
+		}
 
 		return msg;
 	}

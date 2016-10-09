@@ -11,8 +11,9 @@
 #include "System/Collections/Generic/System.Collections.Generic.h"
 #include "System/Drawing/System.Drawing.h"
 #include "System/Windows/Forms/System.Windows.Forms.h"
+#include "System/IO/System.IO.h"
 
 #include "CppNet/CppNet.h"
-#include "CppNet/KMC/KMC.h"
+#include "CppNet/KMC/CppNet.KMC.h"
 
 #endif

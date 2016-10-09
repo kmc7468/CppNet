@@ -26,7 +26,7 @@
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
     <ClInclude Include="CppNet\KMC\Integer.h" />
-    <ClInclude Include="CppNet\KMC\KMC.h" />
+    <ClInclude Include="CppNet\KMC\CppNet.KMC.h" />
     <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="CppNet\Unicode9_0.h" />
     <ClInclude Include="Defines.h" />
@@ -74,6 +74,9 @@
     <ClInclude Include="System\Int64.h" />
     <ClInclude Include="System\InvalidCastException.h" />
     <ClInclude Include="System\InvalidOperationException.h" />
+    <ClInclude Include="System\IO\File.h" />
+    <ClInclude Include="System\IO\IOException.h" />
+    <ClInclude Include="System\IO\System.IO.h" />
     <ClInclude Include="System\Math.h" />
     <ClInclude Include="System\NotImplementedException.h" />
     <ClInclude Include="System\Object.h" />
@@ -82,6 +85,7 @@
     <ClInclude Include="System\Single.h" />
     <ClInclude Include="System\String.h" />
     <ClInclude Include="System\System.h" />
+    <ClInclude Include="System\SystemException.h" />
     <ClInclude Include="System\TimeSpan.h" />
     <ClInclude Include="System\Tuple.h" />
     <ClInclude Include="System\Type.h" />
@@ -112,10 +116,13 @@
     <ClCompile Include="System\Globalization\CharUnicodeInfo.cpp" />
     <ClCompile Include="System\InvalidCastException.cpp" />
     <ClCompile Include="System\InvalidOperationException.cpp" />
+    <ClCompile Include="System\IO\File.cpp" />
+    <ClCompile Include="System\IO\IOException.cpp" />
     <ClCompile Include="System\Math.cpp" />
     <ClCompile Include="System\NotImplementedException.cpp" />
     <ClCompile Include="System\Object.cpp" />
     <ClCompile Include="System\Random.cpp" />
+    <ClCompile Include="System\SystemException.cpp" />
     <ClCompile Include="System\TimeSpan.cpp" />
     <ClCompile Include="System\Version.cpp" />
     <ClCompile Include="System\Windows\Forms\Control.cpp" />
