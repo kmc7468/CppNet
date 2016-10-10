@@ -30,7 +30,15 @@ namespace System
 
 			// TODO
 
+			static void Delete(const String& source);
+
+			// TODO
+
 			static Boolean Exists(const String& source);
+
+			// TODO
+
+			static void Rename(const String& source, const String& newname);
 		};
 	}
 }

@@ -1,4 +1,6 @@
 #include "File.h"
+
+#include "FileNotFoundException.h"
 using namespace System;
 using namespace System::IO;
 
@@ -10,7 +12,7 @@ void File::Copy(const String& source, const String& to)
 
 	if (!Exists(source))
 	{
-
+		throw FileNotFoundException();
 	}
 
 	std::ifstream srce(source, std::ios::binary);
@@ -29,6 +31,21 @@ void File::Copy(const String& source, const String& to)
 	}
 }
 
+void File::Delete(const String& source)
+{
+	// TODO 오류처리
+
+	if (!Exists(source))
+	{
+		throw FileNotFoundException();
+	}
+
+	if (remove(source.c_str()) == -1)
+	{
+		// TODO 삭제 하지 못했을 경우 오류 처리
+	}
+}
+
 Boolean File::Exists(const String& source)
 {
 	if (FILE* f = fopen(source.c_str(), "r"))
@@ -37,4 +54,19 @@ Boolean File::Exists(const String& source)
 		return true;
 	}
 	return false;
+}
+
+void File::Rename(const String& source, const String& newname)
+{
+	// TODO 오류처리
+
+	if (!Exists(source))
+	{
+		throw FileNotFoundException();
+	}
+
+	if (rename(source.c_str(), newname.c_str()) == -1)
+	{
+		// TODO 이름 변경을 하지 못했을 경우 오류 처리
+	}
 }
