@@ -22,7 +22,7 @@ namespace System
 		return (dat - obj.dat);
 	}
 
-	Char::operator Int32()
+	Char::operator UInt32()
 	{
 		return dat;
 	}

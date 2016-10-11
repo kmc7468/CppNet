@@ -42,7 +42,7 @@ namespace System
 		inline Boolean Equals(Object& obj) const;
 
 	public:
-		inline operator Int32();
+		inline operator UInt32();
 		operator String();
 
 		inline Char operator=(Char&& c);
