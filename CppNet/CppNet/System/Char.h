@@ -74,7 +74,7 @@ namespace System
 		inline Char& operator%=(const Char& c);
 
 	private:
-		Int32 dat;
+		char32_t dat;
 
 	public:
 		inline Int32 CompareTo(const Char& obj) override;

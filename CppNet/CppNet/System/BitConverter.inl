@@ -260,7 +260,7 @@ namespace System
 			Byte b = 0;
 
 			std::bitset<8> bit(bin.substr((i - start) * 8, 8));
-			b = bit.to_ullong();
+			b = (Byte) bit.to_ullong();
 
 			r[i] = b;
 		}

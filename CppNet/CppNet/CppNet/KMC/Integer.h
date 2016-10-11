@@ -18,7 +18,7 @@ namespace CppNet
 		{
 		private:
 			Byte* data = nullptr;
-			Byte len = 0;
+			size_t len = 0;
 			/* len의 자료형을 조정하면 더 넓은 범위를 표현할 수 있습니다.
 			조정하게 될 경우 반드시 unsigned로 해주세요. signed로 설정시 unsigned의 절반 정도만큼만
 			표현할 수 있게 됩니다.

@@ -76,7 +76,7 @@ Decimal Decimal::Parse(const String& str)
 	{
 		s.insert(0, s.length() & 1, '0');
 
-		int n = s.length() >> 1;
+		size_t n = s.length() >> 1;
 		for (size_t i = 0; i < n; i++)
 			r.mInteger += ByteTool::IntsToByte(ByteTool::ToByte(s[i << 1]), ByteTool::ToByte(s[(i << 1) + 1]));
 
@@ -330,7 +330,7 @@ Decimal Decimal::operator+(const Decimal& d) const
 {
 	Decimal a = *this;
 	Decimal b = Decimal(d);
-	Decimal c = 0.0;
+	Decimal c = 0;
 	c.mInteger = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
 	c.mReal = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
 
@@ -439,7 +439,7 @@ Decimal& Decimal::operator+=(const Decimal& d)
 
 Decimal Decimal::operator++()
 {
-	Decimal a = *this + 1.0;
+	Decimal a = *this + 1;
 
 	mInteger = a.mInteger;
 
@@ -447,7 +447,7 @@ Decimal Decimal::operator++()
 }
 Decimal Decimal::operator++(int)
 {
-	Decimal a = *this + 1.0;
+	Decimal a = *this + 1;
 	Decimal b = *this;
 
 	mInteger = a.mInteger;
@@ -491,7 +491,7 @@ Decimal Decimal::operator-(const Decimal& d) const
 		smaller.mReal.rbegin(), smaller.mReal.rend(),
 		[](auto byte)
 	{
-		return (bool)byte;
+		return byte == 0 ? false : true;
 	}
 	);
 	//t가 false이면 소수 부분이 0인 경우입니다
@@ -516,7 +516,7 @@ Decimal Decimal::operator-(const Decimal& d) const
 		revit = std::find_if(revit, smaller.mInteger.rend(),
 			[](auto byte)
 		{
-			return (bool)byte;
+			return byte == 0 ? false : true;
 		}
 		);
 		if (revit != smaller.mInteger.rend())
@@ -565,7 +565,7 @@ Decimal& Decimal::operator-=(const Decimal& d)
 
 Decimal Decimal::operator--()
 {
-	Decimal a = *this - 1.0;
+	Decimal a = *this - 1;
 
 	mInteger = a.mInteger;
 
@@ -574,7 +574,7 @@ Decimal Decimal::operator--()
 
 Decimal Decimal::operator--(int)
 {
-	Decimal a = *this - 1.0;
+	Decimal a = *this - 1;
 	Decimal b = *this;
 
 	mInteger = a.mInteger;
@@ -585,8 +585,8 @@ Decimal Decimal::operator--(int)
 Decimal Decimal::operator*(const Decimal& d) const
 {
 	if (d.ToString() == "1") return *this;
-	else if (d.ToString() == "0") return 0.0;
-	else if (this->ToString() == "0") return 0.0;
+	else if (d.ToString() == "0") return Decimal(0.0);
+	else if (this->ToString() == "0") return Decimal(0.0);
 
 	Decimal a = *this;
 	Decimal b = d;
