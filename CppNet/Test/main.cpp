@@ -4,7 +4,13 @@
 using namespace std::chrono;
 
 static int i = 25;
-static prop(int, TestA, [&]()->int& {return i; }, [&](const int& a)->void {i = a; })
+static prop(int, TestA,
+	GET(int,
+		return i;
+	),
+	SET(int,
+		i = a;
+	))
 
 static double d = 5.0;
 static propr(double, TestB, [&]()->double& {return d; })

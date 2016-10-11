@@ -24,8 +24,8 @@
 
 #define _as(from, to_type) as<to_type>(from)
 
-#define GET(code) [&](){code}
-#define SET(type, code) [&](const type& a){code}
+#define GET(type, code) [&]()->type&{code}
+#define SET(type, code) [&](const type& a)->void{code}
 
 #define prop(type, name, getter, setter) CppNet::Property<type> name = CppNet::Property<type>(getter, setter);
 #define propr(type, name, getter) CppNet::PropertyR<type> name = CppNet::PropertyR<type>(getter);
