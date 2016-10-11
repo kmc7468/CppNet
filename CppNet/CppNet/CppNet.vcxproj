@@ -66,6 +66,7 @@
     <ClInclude Include="System\ICloneable.h" />
     <ClInclude Include="System\IComparable.h" />
     <ClInclude Include="System\IConvertible.h" />
+    <ClInclude Include="System\IDisposable.h" />
     <ClInclude Include="System\IEquatable.h" />
     <ClInclude Include="System\IFormatProvider.h" />
     <ClInclude Include="System\IFormattable.h" />

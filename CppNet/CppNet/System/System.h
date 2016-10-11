@@ -29,6 +29,7 @@
 #include "IComparable.h"
 #include "IEquatable.h"
 #include "IFormattable.h"
+#include "IDisposable.h"
 
 #include "Console.h"
 #include "Math.h"
