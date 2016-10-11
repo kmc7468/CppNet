@@ -4,5 +4,6 @@
 #include "Unicode.h"
 #include "gc_ptr.h"
 #include "gc.h"
+#include "Property.h"
 
 #endif
