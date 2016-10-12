@@ -3,26 +3,8 @@
 #include <chrono>
 using namespace std::chrono;
 
-static int i = 25;
-static prop(int, TestA,
-	GET(int,
-		return i;
-	),
-	SET(int,
-		i = a;
-	))
-
-static double d = 5.0;
-static propr(double, TestB, [&]()->double& {return d; })
-
 int main()
 {
-	Console::WriteLine(TestA);
-	TestA = 10;
-	Console::WriteLine(TestA);
-
-	Console::WriteLine(TestB);
-
 	system_clock::time_point a = system_clock::now();
 	Integer i = 1;
 	system_clock::time_point b = system_clock::now();

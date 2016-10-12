@@ -321,9 +321,6 @@
     <ClInclude Include="System\IDisposable.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\Property.h">
-      <Filter>헤더 파일\CppNet</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -462,9 +459,6 @@
     </None>
     <None Include="System\Drawing\SizeF.inl">
       <Filter>인라인 구현 파일\System\Drawing</Filter>
-    </None>
-    <None Include="CppNet\Property.inl">
-      <Filter>인라인 구현 파일\CppNet</Filter>
     </None>
   </ItemGroup>
 </Project>

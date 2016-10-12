@@ -27,7 +27,6 @@
     <ClInclude Include="CppNet\KMC\Fraction.h" />
     <ClInclude Include="CppNet\KMC\Integer.h" />
     <ClInclude Include="CppNet\KMC\CppNet.KMC.h" />
-    <ClInclude Include="CppNet\Property.h" />
     <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="CppNet\Unicode9_0.h" />
     <ClInclude Include="Defines.h" />
@@ -136,7 +135,6 @@
     <None Include="CppNet\gc_ptr.inl" />
     <None Include="CppNet\KMC\Decimal.inl" />
     <None Include="CppNet\KMC\Fraction.inl" />
-    <None Include="CppNet\Property.inl" />
     <None Include="CppNet\Unicode.inl" />
     <None Include="System\BitConverter.inl" />
     <None Include="System\Char.inl" />
