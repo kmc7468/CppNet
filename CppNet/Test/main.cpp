@@ -3,8 +3,20 @@
 #include <chrono>
 using namespace std::chrono;
 
+prop(int, testa, GET{
+	return value;
+},
+SET
+{
+	this->value = value;
+})
+
 int main()
 {
+	std::cout << testa << std::endl;
+	testa = 5;
+	std::cout << testa << std::endl;
+
 	system_clock::time_point a = system_clock::now();
 	Integer i = 1;
 	system_clock::time_point b = system_clock::now();

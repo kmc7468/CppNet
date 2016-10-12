@@ -22,6 +22,89 @@
 
 #define _as(from, to_type) as<to_type>(from)
 
+#define GET
+#define SET
+
+// 일반적인 프로퍼티
+#define prop(type, name, getter, setter) \
+class{\
+private:\
+type value;\
+public:\
+operator type() {\
+getter\
+;\
+}\
+type##& operator=(const type##&value){\
+setter\
+;return this->value;\
+}\
+} name;
+
+// 초기 값이 있는 일반적인 프로퍼티
+#define props(type, name, getter, setter, start) \
+class{\
+private:\
+type value = start;\
+public:\
+operator type() {\
+getter\
+;\
+}\
+type##& operator=(const type##&value){\
+setter\
+;return this->value;\
+}\
+} name;
+
+// value 변수가 내장되지 않은 일반적인 프로퍼티
+#define propv(type, name, getter, setter) \
+class{\
+public:\
+operator type() {\
+getter\
+;\
+}\
+type##& operator=(const type##&value){\
+setter\
+;return this->value;\
+}\
+} name;
+
+// 읽기 전용인 프로퍼티
+#define propg(type, name, getter) \
+class{\
+private:\
+type value;\
+public:\
+operator type() {\
+getter\
+;\
+}\
+} name;
+
+// 읽기 전용이고 초기 값이 있는 프로퍼티
+#define propgs(type, name, getter, start) \
+class{\
+private:\
+type value = start;\
+public:\
+operator type() {\
+getter\
+;\
+}\
+} name;
+
+// value 변수가 내장되지 않고 읽기 전용인 프로퍼티
+#define propgv(type, name, getter) \
+class{\
+public:\
+operator type() {\
+getter\
+;\
+}\
+} name;
+
 template <typename T, typename U>
 inline System::Boolean is(U&& u)
 {
