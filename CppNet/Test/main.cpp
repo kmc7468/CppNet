@@ -3,13 +3,7 @@
 #include <chrono>
 using namespace std::chrono;
 
-prop(int, testa, GET{
-	return value;
-},
-SET
-{
-	this->value = value;
-})
+prop(int, testa, GETA, SETA)
 
 int main()
 {

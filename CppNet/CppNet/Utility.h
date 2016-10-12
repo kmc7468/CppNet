@@ -25,6 +25,9 @@
 #define GET
 #define SET
 
+#define GETA return this->value;
+#define SETA this->value = value;
+
 // 일반적인 프로퍼티
 #define prop(type, name, getter, setter) \
 class{\
