@@ -36,6 +36,8 @@ namespace System
 
 		static const DoubleT Zero;
 
+		static const DoubleT NegativeZero;
+
 	public:
 		inline DoubleT& operator=(DoubleT&& d) const;
 		inline DoubleT& operator=(const DoubleT& d) const;
@@ -71,6 +73,7 @@ namespace System
 		static inline Boolean IsPositiveInfinity(const DoubleT& d);
 		static inline Boolean IsNegativeInfinity(const DoubleT& d);
 		static inline Boolean IsNaN(const DoubleT& d);
+		static inline Boolean IsNegative(const DoubleT& d);
 	
 	public:
 		inline Double Data() const;

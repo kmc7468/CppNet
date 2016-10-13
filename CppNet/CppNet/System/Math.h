@@ -40,12 +40,9 @@ namespace System
 		static inline Int64 DivRem(Int64 a, Int64 b, Int64& result);
 		static inline Int32 DivRem(Int32 a, Int32 b, Int32& result);
 		static inline Double Exp(Double d);
-
-		// TODO IEEERemainder
-
+		static Double IEEERemainder(Double a, Double b);
 		static inline Double Log(Double d);
 		static inline Double Log(Double d, Double newBase);
-
 		static inline Double Log10(Double d);
 		static inline Byte Max(Byte b, Byte b2);
 		static inline Double Max(Double d, Double d2);

@@ -189,6 +189,11 @@ namespace System
 		return (*(UInt64*)(&a) & (Int64)0x7FFFFFFFFFFFFFFF) > (Int64)0x7FF0000000000000;
 	}
 
+	Boolean DoubleT::IsNegative(const DoubleT& d)
+	{
+		return (*(UInt64*)(&(d.dat)) & 0x8000000000000000) == 0x8000000000000000;
+	}
+
 	Double DoubleT::Data() const
 	{
 		return dat;
