@@ -256,4 +256,11 @@ namespace System
 	{
 		return std::remainder(a, b);
 	}
+
+	// http://shaeod.tistory.com/384
+
+	Double Math::Round(Double d, Int32 digits)
+	{
+		return (floor((d)* pow(1.0, digits) + 0.5f) / pow(10.0, digits));
+	}
 }

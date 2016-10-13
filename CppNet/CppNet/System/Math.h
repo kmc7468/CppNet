@@ -64,9 +64,7 @@ namespace System
 		static inline Single Min(Single d, Single d2);
 		static inline Double Pow(Double d, Double d2);
 		static inline Double Round(Double d);
-		
-		// TODO Round(Double, Int32)
-
+		static inline Double Round(Double d, Int32 digits);
 		static inline Double Sign(Double d);
 		static inline Single Sign(Single d);
 		static inline Double Sin(Double d);
