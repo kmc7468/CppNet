@@ -251,4 +251,9 @@ namespace System
 	{
 		return trunc(d);
 	}
+
+	Double Math::IEEERemainder(Double a, Double b)
+	{
+		return std::remainder(a, b);
+	}
 }
