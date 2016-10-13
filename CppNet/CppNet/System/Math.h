@@ -73,6 +73,8 @@ namespace System
 		static inline Double Tan(Double d);
 		static inline Double Tanh(Double d);
 		static inline Double Truncaste(Double d);
+
+		static inline UInt64 Factorial(UInt64 i);
 	};
 }
 

@@ -86,7 +86,7 @@ namespace System
 
 	Double Math::Log(Double d, Double newBase)
 	{
-
+		return log(d) / log(newBase);
 	}
 
 	Double Math::Log10(Double d)
@@ -262,5 +262,17 @@ namespace System
 	Double Math::Round(Double d, Int32 digits)
 	{
 		return (floor((d)* pow(1.0, digits) + 0.5f) / pow(10.0, digits));
+	}
+
+	UInt64 Math::Factorial(UInt64 i)
+	{
+		UInt64 v = 0;
+
+		for (UInt64 j = i; j >= 1; j--)
+		{
+			v *= j;
+		}
+
+		return v;
 	}
 }
