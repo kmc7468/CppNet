@@ -76,25 +76,19 @@ namespace System
 		//TODO: static Bool TryParseExact(String input, String[] formats, IFormatProvider formatProvider, out TimeSpan result);
 		//TODO: static Bool TryParseExact(String input, String format, IFormatProvider formatProvider, TimeSpanStyles styles, out TimeSpan result);
 		//TODO: static Bool TryParseExact(String input, String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles, out TimeSpan result);
-		TimeSpan Add(const TimeSpan& ts);
-		//TODO: Int32 CompareTo(Object value);
+		TimeSpan Add(const TimeSpan& ts) const;
 
 		Int32 CompareTo(const Object& obj) const override;
 		Int32 CompareTo(const TimeSpan& value) const override;
-
-		TimeSpan Duration();
-
 		Boolean Equals(const TimeSpan& value) const override;
-		//TODO: bool Equals(const TimeSpan& obj);
-		//TODO: override int GetHashCode();
 
-		TimeSpan Negate();
-
-		//TODO: TimeSpan Subtract(const TimeSpan& ts)
+		TimeSpan Duration() const;
+		TimeSpan Negate() const;
+		TimeSpan Subtract(const TimeSpan& ts) const;
 
 	public:
-		//TODO: TimeSpan operator +(const TimeSpan& t);
-		//TODO: TimeSpan operator -(const TimeSpan& t);
+		TimeSpan operator +(const TimeSpan& t) const;
+		TimeSpan operator -(const TimeSpan& t) const;
 
 		Boolean operator ==(const TimeSpan& t) const;
 		Boolean operator !=(const TimeSpan& t) const;

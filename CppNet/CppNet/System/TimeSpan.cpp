@@ -34,7 +34,7 @@ namespace System
 		this->ticks = ticks;
 	}
 
-	TimeSpan TimeSpan::Add(const TimeSpan& time)
+	TimeSpan TimeSpan::Add(const TimeSpan& time) const
 	{
 		return ticks + time.ticks;
 	}
@@ -91,12 +91,12 @@ namespace System
 		return Compare(*this, value);
 	}
 
-	TimeSpan TimeSpan::Duration()
+	TimeSpan TimeSpan::Duration() const
 	{
 		return ticks >= 0 ? ticks : -ticks;
 	}
 
-	TimeSpan TimeSpan::Negate()
+	TimeSpan TimeSpan::Negate() const
 	{
 		return -ticks;
 	}
@@ -140,5 +140,20 @@ namespace System
 	Boolean TimeSpan::Equals(const TimeSpan& value) const
 	{
 		return this->operator==(value);
+	}
+
+	TimeSpan TimeSpan::Subtract(const TimeSpan& ts) const
+	{
+		return ticks - ts.ticks;
+	}
+
+	TimeSpan TimeSpan::operator+(const TimeSpan& value) const
+	{
+		return Add(value);
+	}
+
+	TimeSpan TimeSpan::operator-(const TimeSpan& value) const
+	{
+		return Subtract(value);
 	}
 }
