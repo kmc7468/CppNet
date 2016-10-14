@@ -7,8 +7,8 @@ Object Version::Clone()
 {
 	return Version(major, minor, build, revision);
 }
-
-Int32 Version::CompareTo(const Object& obj)
+ 
+Int32 Version::CompareTo(const Object& obj) const
 {
 	if (is<const Version&>(obj))
 	{
@@ -18,7 +18,7 @@ Int32 Version::CompareTo(const Object& obj)
 		throw Exception("응 인자오류~"); // FIXME Arg 뭐시기 Exception
 }
 
-Int32 Version::CompareTo(const Version& obj)
+Int32 Version::CompareTo(const Version& obj) const
 {
 	if (major != obj.major)
 		if (major > obj.major)

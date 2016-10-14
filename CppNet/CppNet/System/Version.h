@@ -28,8 +28,8 @@ namespace System
 
 	public:
 		inline Object Clone() override;
-		inline Int32 CompareTo(const Object& obj) override;
-		inline Int32 CompareTo(const Version& obj) override;
+		inline Int32 CompareTo(const Object& obj) const override;
+		inline Int32 CompareTo(const Version& obj) const override;
 		inline Boolean Equals(const Version& obj) const override;
 		inline Boolean Equals(Object& obj) const override;
 

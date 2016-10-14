@@ -14,7 +14,7 @@ namespace System
 		return dat;
 	}
 
-	Int32 DoubleT::CompareTo(const Object& obj)
+	Int32 DoubleT::CompareTo(const Object& obj) const
 	{
 		if (is<const DoubleT&>(obj))
 		{
@@ -33,7 +33,7 @@ namespace System
 		throw Exception("파라미터 오류"); // FIXME ArgumentException
 	}
 
-	Int32 DoubleT::CompareTo(const DoubleT& obj)
+	Int32 DoubleT::CompareTo(const DoubleT& obj) const
 	{
 		var d = as<const DoubleT&>(obj);
 

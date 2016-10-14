@@ -11,7 +11,7 @@ namespace System
 	template<typename T = System::Object>
 	interface IComparable
 	{
-		virtual inline Int32 CompareTo(const T& obj) = 0;
+		virtual inline Int32 CompareTo(const T& obj) const = 0;
 	};
 }
 

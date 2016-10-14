@@ -48,8 +48,8 @@ namespace System
 		inline operator Double();
 
 	public:
-		inline Int32 CompareTo(const Object& obj) override;
-		inline Int32 CompareTo(const DoubleT& obj) override;
+		inline Int32 CompareTo(const Object& obj) const override;
+		inline Int32 CompareTo(const DoubleT& obj) const override;
 		inline String ToString(String format, std::unique_ptr<IFormatProvider> formatProvider) override;
 		inline Boolean ToBoolean(std::unique_ptr<IFormatProvider> i) override;
 		inline Byte ToByte(std::unique_ptr<IFormatProvider> i) override;

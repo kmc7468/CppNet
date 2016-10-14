@@ -460,5 +460,8 @@
     <None Include="System\Drawing\SizeF.inl">
       <Filter>인라인 구현 파일\System\Drawing</Filter>
     </None>
+    <None Include="System\TimeSpan.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
   </ItemGroup>
 </Project>

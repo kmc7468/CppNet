@@ -5,7 +5,7 @@
 
 namespace System
 {
-	Int32 Char::CompareTo(const Object& obj)
+	Int32 Char::CompareTo(const Object& obj) const
 	{
 		if (is<const Char&>(obj))
 		{
@@ -17,7 +17,7 @@ namespace System
 			throw Exception("응 인자오류~"); // FIXME ArgumentException
 	}
 
-	Int32 Char::CompareTo(const Char& obj)
+	Int32 Char::CompareTo(const Char& obj) const
 	{
 		return (dat - obj.dat);
 	}

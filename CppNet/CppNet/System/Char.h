@@ -77,8 +77,8 @@ namespace System
 		char32_t dat;
 
 	public:
-		inline Int32 CompareTo(const Char& obj) override;
-		inline Int32 CompareTo(const Object& obj) override;
+		inline Int32 CompareTo(const Char& obj) const override;
+		inline Int32 CompareTo(const Object& obj) const override;
 
 	public:
 		

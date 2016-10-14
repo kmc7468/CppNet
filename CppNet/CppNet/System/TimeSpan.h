@@ -3,15 +3,19 @@
 
 #include "../Defines.h"
 
+#include "UInt64.h"
 #include "Int64.h"
 #include "Int32.h"
 #include "Boolean.h"
 #include "Double.h"
 #include "Object.h"
+#include "IComparable.h"
+#include "IEquatable.h"
+#include "IFormattable.h"
 
 namespace System
 {
-	class TimeSpan : public Object
+	class TimeSpan : public Object, public IComparable<>, public IComparable<TimeSpan>, public IEquatable<TimeSpan>/*, public IFormattable*/
 	{
 	public:
 		static const Int64 TicksPerDay;
@@ -20,6 +24,13 @@ namespace System
 		static const Int64 TicksPerMinute;
 		static const Int64 TicksPerSecond;
 
+	private:
+		static const Double DaysPerTick;
+		static const Double HoursPerTick;
+		static const Double MillisecondsPerTick;
+		static const Double MinutesPerTick;
+		static const Double SecondsPerTick;
+
 	public:
 		TimeSpan(Int32 hour, Int32 min, Int32 sec);
 		TimeSpan(Int32 day, Int32 hour, Int32 min, Int32 sec);
@@ -27,29 +38,23 @@ namespace System
 		TimeSpan(Int64 ticks);
 
 	private:
-		Int32 day = 0;
-		Int32 hour = 0;
-		Int32 min = 0;
-		Int32 sec = 0;
-		Int32 mill_sec = 0;
+		Int64 ticks = 0;
 
 	public:
-		// TODO: 
-		/*int Days{ get; }
-		int Hours{ get; }
-		int Milliseconds{ get; }
-		int Minutes{ get; }
-		int Seconds{ get; }
-		long Ticks{ get; }
-		double TotalDays{ get; }
-		double TotalHours{ get; }
-		double TotalMilliseconds{ get; }
-		double TotalMinutes{ get; }
-		double TotalSeconds{ get; }*/
+		inline Int64 Ticks() const;
+		inline Int32 Days() const;
+		inline Int32 Hours() const;
+		inline Int32 Milliseconds() const;
+		inline Int32 Minutes() const;
+		inline Int32 Seconds() const;
+		inline Double TotalDays() const;
+		inline Double TotalHours() const;
+		inline Double TotalMilliseconds() const;
+		inline Double TotalMinutes() const;
+		inline Double TotalSeconds() const;
 
 	public:
 		static Int32 Compare(const TimeSpan& t1, const TimeSpan& t2);
-
 		static Boolean Equals(const TimeSpan& t1, const TimeSpan& t2);
 
 		static TimeSpan FromDays(Double value);
@@ -71,14 +76,15 @@ namespace System
 		//TODO: static Bool TryParseExact(String input, String[] formats, IFormatProvider formatProvider, out TimeSpan result);
 		//TODO: static Bool TryParseExact(String input, String format, IFormatProvider formatProvider, TimeSpanStyles styles, out TimeSpan result);
 		//TODO: static Bool TryParseExact(String input, String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles, out TimeSpan result);
-		//TODO: TimeSpan Add(const TimeSpan& ts);
+		TimeSpan Add(const TimeSpan& ts);
 		//TODO: Int32 CompareTo(Object value);
 
-		Int32 CompareTo(const TimeSpan& value);
+		Int32 CompareTo(const Object& obj) const override;
+		Int32 CompareTo(const TimeSpan& value) const override;
 
 		TimeSpan Duration();
 
-		//TODO: override bool Equals(object value);
+		Boolean Equals(const TimeSpan& value) const override;
 		//TODO: bool Equals(const TimeSpan& obj);
 		//TODO: override int GetHashCode();
 
@@ -90,13 +96,18 @@ namespace System
 		//TODO: TimeSpan operator +(const TimeSpan& t);
 		//TODO: TimeSpan operator -(const TimeSpan& t);
 
-		Boolean operator ==(const TimeSpan& t);
-		Boolean operator !=(const TimeSpan& t);
-		Boolean operator <(const TimeSpan& t);
-		Boolean operator >(const TimeSpan& t);
-		Boolean operator <=(const TimeSpan& t);
-		Boolean operator >=(const TimeSpan& t);
+		Boolean operator ==(const TimeSpan& t) const;
+		Boolean operator !=(const TimeSpan& t) const;
+		Boolean operator <(const TimeSpan& t) const;
+		Boolean operator >(const TimeSpan& t) const;
+		Boolean operator <=(const TimeSpan& t) const;
+		Boolean operator >=(const TimeSpan& t) const;
+
+	private:
+		static Int64 TimeToTicks(Int32 hour, Int32 min, Int32 second);
 	};
 }
+
+#include "TimeSpan.inl"
 
 #endif

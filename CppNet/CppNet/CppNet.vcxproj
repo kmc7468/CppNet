@@ -146,6 +146,7 @@
     <None Include="System\Drawing\SizeF.inl" />
     <None Include="System\Math.inl" />
     <None Include="System\Object.inl" />
+    <None Include="System\TimeSpan.inl" />
     <None Include="System\Version.inl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
