@@ -34,7 +34,7 @@ class{\
 private:\
 type value;\
 public:\
-operator type() {\
+operator type() const {\
 getter\
 ;\
 }\
@@ -50,7 +50,7 @@ class{\
 private:\
 type value = start;\
 public:\
-operator type() {\
+operator type() const {\
 getter\
 ;\
 }\
@@ -64,7 +64,7 @@ setter\
 #define propv(type, name, getter, setter) \
 class{\
 public:\
-operator type() {\
+operator type() const {\
 getter\
 ;\
 }\
@@ -80,7 +80,7 @@ class{\
 private:\
 type value;\
 public:\
-operator type() {\
+operator type() const {\
 getter\
 ;\
 }\
@@ -92,7 +92,7 @@ class{\
 private:\
 type value = start;\
 public:\
-operator type() {\
+operator type() const {\
 getter\
 ;\
 }\
@@ -102,7 +102,7 @@ getter\
 #define propgv(type, name, getter) \
 class{\
 public:\
-operator type() {\
+operator type() const {\
 getter\
 ;\
 }\
