@@ -9,9 +9,6 @@
 활용 예제나 자세한 설명 등은 CNWiki(CppNet Wiki)를 참조하십시오.<br>
 https://github.com/kmc7468/CppNet/wiki
 
-## 컴파일 확인
-- Visual Studio 2015 Update 3
-
 ## 적용 방법 (Visual Studio)
 - CppNet 프로젝트를 빌드합니다.
 - CppNet의 헤더 파일을 한 폴더에 모아 놓습니다.
@@ -23,12 +20,6 @@ https://github.com/kmc7468/CppNet/wiki
 ## 사용 방법
 - ```#include <System.h>``` 이런식으로 CppNet 의 헤더 파일을 include해서 사용합니다.
 - 취향에 따라 ```using namespace```를 사용할 수도 있습니다.
-
-## 특징
-- 대부분의 코드가 표준 코드로 작성되어 있어 크로스 플랫폼에 용이합니다.
-- 닷넷 프레임워크에서 제공하는 기능과 매우 유사하게 구현 하였습니다.
-- 닷넷 프레임워크에서 제공하는 기능 위에 직접 고안해 낸 기능을 얹은 기능의 경우 닷넷 프레임워크의 기능보다 더욱 강력하게 사용할 수 있습니다.
-- 정적 라이브러리 프로젝트이기 때문에 이식이 용이합니다.
 
 ## 개발진
 총 담당/기획자: static
