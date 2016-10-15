@@ -4,11 +4,18 @@
 using namespace System;
 using namespace System::IO;
 
+#include "../../Language.h"
+
 #include <fstream>
 
-void File::Copy(const String& source, const String& to)
+void File::Copy(const String& source, const String& to, Boolean overwrite)
 {
 	// TODO 오류처리
+
+	if (!overwrite && Exists(to))
+	{
+		throw IOException(TXT_IO_FILEALREADY);
+	}
 
 	if (!Exists(source))
 	{
@@ -17,9 +24,11 @@ void File::Copy(const String& source, const String& to)
 
 	std::ifstream srce(source, std::ios::binary);
 	std::ofstream dest(to, std::ios::binary);
-	
+
 	if (srce.is_open() && dest.is_open())
 	{
+		dest.clear();
+
 		dest << srce.rdbuf();
 
 		srce.close();
@@ -27,7 +36,7 @@ void File::Copy(const String& source, const String& to)
 	}
 	else
 	{
-		// TODO 열지 못했을 경우 오류처리
+		throw IOException();
 	}
 }
 
@@ -42,7 +51,7 @@ void File::Delete(const String& source)
 
 	if (remove(source.c_str()) == -1)
 	{
-		// TODO 삭제 하지 못했을 경우 오류 처리
+		throw IOException();
 	}
 }
 
@@ -56,17 +65,17 @@ Boolean File::Exists(const String& source)
 	return false;
 }
 
-void File::Rename(const String& source, const String& newname)
+void File::Move(const String& source, const String& to)
 {
 	// TODO 오류처리
 
-	if (!Exists(source))
+	if (!Exists(to))
 	{
 		throw FileNotFoundException();
 	}
 
-	if (rename(source.c_str(), newname.c_str()) == -1)
+	if (rename(source.c_str(), to.c_str()) == -1)
 	{
-		// TODO 이름 변경을 하지 못했을 경우 오류 처리
+		throw IOException();
 	}
 }

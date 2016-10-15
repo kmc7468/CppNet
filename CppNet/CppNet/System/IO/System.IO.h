@@ -4,5 +4,6 @@
 #include "IOException.h"
 #include "FileNotFoundException.h"
 #include "File.h"
+#include "Stream.h"
 
 #endif

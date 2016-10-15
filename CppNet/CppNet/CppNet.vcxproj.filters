@@ -82,6 +82,9 @@
     <Filter Include="소스 파일\System\IO">
       <UniqueIdentifier>{9015a463-aebe-42aa-a125-b04758b0994c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="인라인 구현 파일\System\IO">
+      <UniqueIdentifier>{e01fadf2-1302-4c50-9db7-2aa9e0b4cce8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -321,6 +324,9 @@
     <ClInclude Include="System\IDisposable.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="System\IO\Stream.h">
+      <Filter>헤더 파일\System\IO</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -462,6 +468,12 @@
     </None>
     <None Include="System\TimeSpan.inl">
       <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="System\IO\File.inl">
+      <Filter>인라인 구현 파일\System\IO</Filter>
+    </None>
+    <None Include="System\IO\Stream.inl">
+      <Filter>인라인 구현 파일\System\IO</Filter>
     </None>
   </ItemGroup>
 </Project>

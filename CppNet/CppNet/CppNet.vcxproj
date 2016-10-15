@@ -78,6 +78,7 @@
     <ClInclude Include="System\IO\File.h" />
     <ClInclude Include="System\IO\FileNotFoundException.h" />
     <ClInclude Include="System\IO\IOException.h" />
+    <ClInclude Include="System\IO\Stream.h" />
     <ClInclude Include="System\IO\System.IO.h" />
     <ClInclude Include="System\Math.h" />
     <ClInclude Include="System\NotImplementedException.h" />
@@ -144,6 +145,8 @@
     <None Include="System\Convert.inl" />
     <None Include="System\DoubleT.inl" />
     <None Include="System\Drawing\SizeF.inl" />
+    <None Include="System\IO\File.inl" />
+    <None Include="System\IO\Stream.inl" />
     <None Include="System\Math.inl" />
     <None Include="System\Object.inl" />
     <None Include="System\TimeSpan.inl" />

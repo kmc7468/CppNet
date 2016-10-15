@@ -26,7 +26,8 @@ namespace System
 		public:
 			// TODO
 
-			static void Copy(const String& source, const String& to);
+			inline static void Copy(const String& source, const String& to);
+			static void Copy(const String& source, const String& to, Boolean overwrite);
 
 			// TODO
 
@@ -38,9 +39,11 @@ namespace System
 
 			// TODO
 
-			static void Rename(const String& source, const String& newname);
+			static void Move(const String& source, const String& to);
 		};
 	}
 }
+
+#include "File.inl"
 
 #endif
