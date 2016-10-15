@@ -15,7 +15,7 @@ namespace CppNet
 	namespace KMC
 	{
 		template<typename integer = UInt32>
-		class Fraction final : public virtual Object, public ICloneable
+		class Fraction final : public Object, public ICloneable
 		{
 		public:
 			Fraction(integer numerator);
