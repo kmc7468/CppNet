@@ -23,6 +23,19 @@ namespace System
 			virtual void SetPosition(Int64 pos) = 0;
 			inline virtual Int32 GetReadTimeout() const;
 			inline virtual void SetReadTimeout(Int32 value);
+			inline virtual Int32 GetWriteTimeout() const;
+			inline virtual void SetWriteTimeout(Int32 value);
+
+		public:
+			// TODO CopyTo
+
+		public:
+			virtual void Close();
+			void Dispose() override;
+			virtual void Flush() = 0;
+
+		protected:
+			virtual void Dispose(Boolean disposing);
 		};
 	}
 }

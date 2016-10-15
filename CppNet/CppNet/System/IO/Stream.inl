@@ -16,3 +16,28 @@ void Stream::SetReadTimeout(Int32 value)
 {
 	throw InvalidOperationException();
 }
+
+Int32 Stream::GetWriteTimeout() const
+{
+	throw InvalidOperationException();
+}
+
+void Stream::SetWriteTimeout(Int32 value)
+{
+	throw InvalidOperationException();
+}
+
+void Stream::Close()
+{
+	Dispose(true);
+}
+
+void Stream::Dispose()
+{
+	Close();
+}
+
+void Stream::Dispose(Boolean disposing)
+{
+
+}
