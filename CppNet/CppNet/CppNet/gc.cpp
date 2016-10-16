@@ -11,6 +11,9 @@ size_t gc::use_bytes = 0;
 
 void gc::alloc_space()
 {
+	if (GC_MAXRAM < GC_ALLOCRAM + use_bytes)
+		throw std::bad_alloc();
+
 	if (space_address == nullptr)
 	{
 		space_address = malloc(GC_STARTRAM);
