@@ -94,8 +94,8 @@
     <Filter Include="헤더 파일\System\Runtime\InteropServices">
       <UniqueIdentifier>{28055efd-a401-4970-8668-d7e65ab75eab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\System\Runtime\ConstrainedExecution">
-      <UniqueIdentifier>{5df447c2-b68f-46e4-8c2e-b401551a5e37}</UniqueIdentifier>
+    <Filter Include="소스 파일\System\Threading">
+      <UniqueIdentifier>{dc171a0e-2ebe-4d3a-9cb2-dbd648cc11b9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -363,11 +363,8 @@
     <ClInclude Include="System\IntPtr.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
-    <ClInclude Include="System\Runtime\ConstrainedExecution\System.Runtime.ConstrainedExecution.h">
-      <Filter>헤더 파일\System\Runtime\ConstrainedExecution</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Runtime\ConstrainedExecution\CriticalFinalizerObject.h">
-      <Filter>헤더 파일\System\Runtime\ConstrainedExecution</Filter>
+    <ClInclude Include="System\Threading\Thread.h">
+      <Filter>헤더 파일\System\Threading</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -460,6 +457,9 @@
     </ClCompile>
     <ClCompile Include="System\IntPtr.cpp">
       <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Threading\WaitHandle.cpp">
+      <Filter>소스 파일\System\Threading</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

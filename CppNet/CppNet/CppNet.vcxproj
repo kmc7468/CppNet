@@ -88,8 +88,6 @@
     <ClInclude Include="System\NotImplementedException.h" />
     <ClInclude Include="System\Object.h" />
     <ClInclude Include="System\Random.h" />
-    <ClInclude Include="System\Runtime\ConstrainedExecution\CriticalFinalizerObject.h" />
-    <ClInclude Include="System\Runtime\ConstrainedExecution\System.Runtime.ConstrainedExecution.h" />
     <ClInclude Include="System\Runtime\InteropServices\System.Runtime.InteropServices.h" />
     <ClInclude Include="System\Runtime\InteropServices\_Thread.h" />
     <ClInclude Include="System\SByte.h" />
@@ -98,6 +96,7 @@
     <ClInclude Include="System\System.h" />
     <ClInclude Include="System\SystemException.h" />
     <ClInclude Include="System\Threading\System.Threading.h" />
+    <ClInclude Include="System\Threading\Thread.h" />
     <ClInclude Include="System\Threading\WaitHandle.h" />
     <ClInclude Include="System\TimeSpan.h" />
     <ClInclude Include="System\Tuple.h" />
@@ -138,6 +137,7 @@
     <ClCompile Include="System\Object.cpp" />
     <ClCompile Include="System\Random.cpp" />
     <ClCompile Include="System\SystemException.cpp" />
+    <ClCompile Include="System\Threading\WaitHandle.cpp" />
     <ClCompile Include="System\TimeSpan.cpp" />
     <ClCompile Include="System\Version.cpp" />
     <ClCompile Include="System\Windows\Forms\Control.cpp" />
