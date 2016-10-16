@@ -88,6 +88,12 @@
     <Filter Include="헤더 파일\System\Threading">
       <UniqueIdentifier>{d89e11ca-a2a1-40c8-b8ce-5741b2971fc8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\Runtime">
+      <UniqueIdentifier>{05723f63-c13c-4951-9d43-73377f9e431e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Runtime\InteropServices">
+      <UniqueIdentifier>{28055efd-a401-4970-8668-d7e65ab75eab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -342,6 +348,18 @@
     <ClInclude Include="System\AsyncCallback.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="System\Runtime\InteropServices\_Thread.h">
+      <Filter>헤더 파일\System\Runtime\InteropServices</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\InteropServices\System.Runtime.InteropServices.h">
+      <Filter>헤더 파일\System\Runtime\InteropServices</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Guid.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IntPtr.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -430,6 +448,9 @@
     </ClCompile>
     <ClCompile Include="System\IO\FileNotFoundException.cpp">
       <Filter>소스 파일\System\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="System\IntPtr.cpp">
+      <Filter>소스 파일\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

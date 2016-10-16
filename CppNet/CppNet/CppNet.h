@@ -15,6 +15,7 @@
 #include "System/Windows/Forms/System.Windows.Forms.h"
 #include "System/IO/System.IO.h"
 #include "System/Threading/System.Threading.h"
+#include "System/Runtime/InteropServices/System.Runtime.InteropServices.h"
 
 #include "CppNet/CppNet.h"
 #include "CppNet/KMC/CppNet.KMC.h"

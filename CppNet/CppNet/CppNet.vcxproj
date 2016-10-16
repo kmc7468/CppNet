@@ -64,6 +64,7 @@
     <ClInclude Include="System\Globalization\CharUnicodeInfo.h" />
     <ClInclude Include="System\Globalization\System.Globalization.h" />
     <ClInclude Include="System\Globalization\UnicodeCategory.h" />
+    <ClInclude Include="System\Guid.h" />
     <ClInclude Include="System\IAsyncResult.h" />
     <ClInclude Include="System\ICloneable.h" />
     <ClInclude Include="System\IComparable.h" />
@@ -75,6 +76,7 @@
     <ClInclude Include="System\Int16.h" />
     <ClInclude Include="System\Int32.h" />
     <ClInclude Include="System\Int64.h" />
+    <ClInclude Include="System\IntPtr.h" />
     <ClInclude Include="System\InvalidCastException.h" />
     <ClInclude Include="System\InvalidOperationException.h" />
     <ClInclude Include="System\IO\File.h" />
@@ -86,6 +88,8 @@
     <ClInclude Include="System\NotImplementedException.h" />
     <ClInclude Include="System\Object.h" />
     <ClInclude Include="System\Random.h" />
+    <ClInclude Include="System\Runtime\InteropServices\System.Runtime.InteropServices.h" />
+    <ClInclude Include="System\Runtime\InteropServices\_Thread.h" />
     <ClInclude Include="System\SByte.h" />
     <ClInclude Include="System\Single.h" />
     <ClInclude Include="System\String.h" />
@@ -121,6 +125,7 @@
     <ClCompile Include="System\Exception.cpp" />
     <ClCompile Include="System\FormatException.cpp" />
     <ClCompile Include="System\Globalization\CharUnicodeInfo.cpp" />
+    <ClCompile Include="System\IntPtr.cpp" />
     <ClCompile Include="System\InvalidCastException.cpp" />
     <ClCompile Include="System\InvalidOperationException.cpp" />
     <ClCompile Include="System\IO\File.cpp" />

@@ -20,6 +20,8 @@
 #include "NotImplementedException.h"
 #include "ArgumentException.h"
 
+#include "IntPtr.h"
+
 #include "TimeSpan.h"
 #include "DateTime.h"
 
@@ -43,6 +45,7 @@
 #include "BitConverter.h"
 
 #include "Version.h"
+#include "Guid.h"
 
 #include "AsyncCallback.h"
 
