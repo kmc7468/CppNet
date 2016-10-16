@@ -97,6 +97,12 @@
     <Filter Include="소스 파일\System\Threading">
       <UniqueIdentifier>{dc171a0e-2ebe-4d3a-9cb2-dbd648cc11b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\Xml">
+      <UniqueIdentifier>{1a0d55c1-a415-4d8c-9126-c8eec5496d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Xml\XPath">
+      <UniqueIdentifier>{0b6085f5-1107-449e-8a93-14a3ea69a7e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -365,6 +371,30 @@
     </ClInclude>
     <ClInclude Include="System\Threading\Thread.h">
       <Filter>헤더 파일\System\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Xml\XmlDocument.h">
+      <Filter>헤더 파일\System\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Xml\System.Xml.h">
+      <Filter>헤더 파일\System\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Xml\XmlNode.h">
+      <Filter>헤더 파일\System\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Xml\XPath\IXPathNavigable.h">
+      <Filter>헤더 파일\System\Xml\XPath</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Xml\XPath\System.Xml.XPath.h">
+      <Filter>헤더 파일\System\Xml\XPath</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Xml\XPath\XPathNavigator.h">
+      <Filter>헤더 파일\System\Xml\XPath</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Xml\XPath\XPathItem.h">
+      <Filter>헤더 파일\System\Xml\XPath</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Xml\IXmlNamespaceResolver.h">
+      <Filter>헤더 파일\System\Xml</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

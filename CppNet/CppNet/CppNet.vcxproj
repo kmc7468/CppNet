@@ -107,6 +107,14 @@
     <ClInclude Include="System\Version.h" />
     <ClInclude Include="System\Windows\Forms\Control.h" />
     <ClInclude Include="System\Windows\Forms\System.Windows.Forms.h" />
+    <ClInclude Include="System\Xml\IXmlNamespaceResolver.h" />
+    <ClInclude Include="System\Xml\System.Xml.h" />
+    <ClInclude Include="System\Xml\XmlDocument.h" />
+    <ClInclude Include="System\Xml\XmlNode.h" />
+    <ClInclude Include="System\Xml\XPath\IXPathNavigable.h" />
+    <ClInclude Include="System\Xml\XPath\System.Xml.XPath.h" />
+    <ClInclude Include="System\Xml\XPath\XPathItem.h" />
+    <ClInclude Include="System\Xml\XPath\XPathNavigator.h" />
     <ClInclude Include="Utility.h" />
   </ItemGroup>
   <ItemGroup>
