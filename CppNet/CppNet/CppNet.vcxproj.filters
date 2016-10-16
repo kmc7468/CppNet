@@ -85,6 +85,9 @@
     <Filter Include="인라인 구현 파일\System\IO">
       <UniqueIdentifier>{e01fadf2-1302-4c50-9db7-2aa9e0b4cce8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\Threading">
+      <UniqueIdentifier>{d89e11ca-a2a1-40c8-b8ce-5741b2971fc8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -326,6 +329,18 @@
     </ClInclude>
     <ClInclude Include="System\IO\Stream.h">
       <Filter>헤더 파일\System\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IAsyncResult.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Threading\WaitHandle.h">
+      <Filter>헤더 파일\System\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Threading\System.Threading.h">
+      <Filter>헤더 파일\System\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="System\AsyncCallback.h">
+      <Filter>헤더 파일\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

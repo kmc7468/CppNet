@@ -31,6 +31,8 @@
 #include "IFormattable.h"
 #include "IDisposable.h"
 
+#include "IAsyncResult.h"
+
 #include "Console.h"
 #include "Math.h"
 #include "Random.h"
@@ -41,5 +43,7 @@
 #include "BitConverter.h"
 
 #include "Version.h"
+
+#include "AsyncCallback.h"
 
 #endif

@@ -33,6 +33,7 @@
     <ClInclude Include="Language.h" />
     <ClInclude Include="SystemTypes.h" />
     <ClInclude Include="System\ArgumentException.h" />
+    <ClInclude Include="System\AsyncCallback.h" />
     <ClInclude Include="System\BitConverter.h" />
     <ClInclude Include="System\Boolean.h" />
     <ClInclude Include="System\Byte.h" />
@@ -63,6 +64,7 @@
     <ClInclude Include="System\Globalization\CharUnicodeInfo.h" />
     <ClInclude Include="System\Globalization\System.Globalization.h" />
     <ClInclude Include="System\Globalization\UnicodeCategory.h" />
+    <ClInclude Include="System\IAsyncResult.h" />
     <ClInclude Include="System\ICloneable.h" />
     <ClInclude Include="System\IComparable.h" />
     <ClInclude Include="System\IConvertible.h" />
@@ -89,6 +91,8 @@
     <ClInclude Include="System\String.h" />
     <ClInclude Include="System\System.h" />
     <ClInclude Include="System\SystemException.h" />
+    <ClInclude Include="System\Threading\System.Threading.h" />
+    <ClInclude Include="System\Threading\WaitHandle.h" />
     <ClInclude Include="System\TimeSpan.h" />
     <ClInclude Include="System\Tuple.h" />
     <ClInclude Include="System\Type.h" />

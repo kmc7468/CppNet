@@ -1,6 +1,8 @@
 #ifndef CPPNET_H
 #define CPPNET_H
 
+#include "Defines.h"
+
 #include "Utility.h"
 #include "Language.h"
 #include "SystemTypes.h"
@@ -12,6 +14,7 @@
 #include "System/Drawing/System.Drawing.h"
 #include "System/Windows/Forms/System.Windows.Forms.h"
 #include "System/IO/System.IO.h"
+#include "System/Threading/System.Threading.h"
 
 #include "CppNet/CppNet.h"
 #include "CppNet/KMC/CppNet.KMC.h"
