@@ -88,6 +88,8 @@
     <ClInclude Include="System\NotImplementedException.h" />
     <ClInclude Include="System\Object.h" />
     <ClInclude Include="System\Random.h" />
+    <ClInclude Include="System\Runtime\ConstrainedExecution\CriticalFinalizerObject.h" />
+    <ClInclude Include="System\Runtime\ConstrainedExecution\System.Runtime.ConstrainedExecution.h" />
     <ClInclude Include="System\Runtime\InteropServices\System.Runtime.InteropServices.h" />
     <ClInclude Include="System\Runtime\InteropServices\_Thread.h" />
     <ClInclude Include="System\SByte.h" />

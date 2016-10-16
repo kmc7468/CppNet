@@ -94,6 +94,9 @@
     <Filter Include="헤더 파일\System\Runtime\InteropServices">
       <UniqueIdentifier>{28055efd-a401-4970-8668-d7e65ab75eab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\Runtime\ConstrainedExecution">
+      <UniqueIdentifier>{5df447c2-b68f-46e4-8c2e-b401551a5e37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -359,6 +362,12 @@
     </ClInclude>
     <ClInclude Include="System\IntPtr.h">
       <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\ConstrainedExecution\System.Runtime.ConstrainedExecution.h">
+      <Filter>헤더 파일\System\Runtime\ConstrainedExecution</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\ConstrainedExecution\CriticalFinalizerObject.h">
+      <Filter>헤더 파일\System\Runtime\ConstrainedExecution</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
