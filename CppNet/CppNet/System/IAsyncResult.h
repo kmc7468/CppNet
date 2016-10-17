@@ -13,7 +13,7 @@ namespace System
 	interface IAsyncResult
 	{
 		Boolean IsCompleted() const;
-		Threading::WaitHandle AsyncWaitHandle() const;
+		std::unique_ptr<Threading::WaitHandle> AsyncWaitHandle() const;
 		Object AsyncState() const;
 		Boolean CompletedSynchronously() const;
 	};

@@ -396,6 +396,15 @@
     <ClInclude Include="System\Xml\IXmlNamespaceResolver.h">
       <Filter>헤더 파일\System\Xml</Filter>
     </ClInclude>
+    <ClInclude Include="System\KeyValuePair.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\Generic\IDictionary.h">
+      <Filter>헤더 파일\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Xml\XmlNamespaceScope.h">
+      <Filter>헤더 파일\System\Xml</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">

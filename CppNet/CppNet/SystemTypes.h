@@ -23,6 +23,7 @@
 
 #include "System/Func.h"
 #include "System/Tuple.h"
+#include "System/KeyValuePair.h"
 #include "System/Type.h"
 
 #include "System/Object.h"

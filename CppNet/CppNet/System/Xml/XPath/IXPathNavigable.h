@@ -3,12 +3,18 @@
 
 #include "../../../Utility.h"
 
-namespace System::Xml::XPath
+namespace System
 {
-	interface IXPathNavigable
+	namespace Xml
 	{
+		namespace XPath
+		{
+			interface IXPathNavigable
+			{
 
-	};
+			};
+		}
+	}
 }
 
 #endif

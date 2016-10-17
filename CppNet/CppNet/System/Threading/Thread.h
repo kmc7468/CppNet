@@ -4,12 +4,15 @@
 #include "../Object.h"
 #include "../Runtime/InteropServices/_Thread.h"
 
-namespace System::Threading
+namespace System
 {
-	class Thread final : public Object, public Runtime::InteropServices::_Thread
+	namespace Threading
 	{
+		class Thread final : public Object, public Runtime::InteropServices::_Thread
+		{
 
-	};
+		};
+	}
 }
 
 #endif

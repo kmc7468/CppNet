@@ -18,6 +18,7 @@
 #include "System/Runtime/InteropServices/System.Runtime.InteropServices.h"
 #include "System/Xml/XPath/System.Xml.XPath.h"
 #include "System/Xml/System.Xml.h"
+#include "System/Xml/XPath/System.Xml.XPath.h"
 
 #include "CppNet/CppNet.h"
 #include "CppNet/KMC/CppNet.KMC.h"

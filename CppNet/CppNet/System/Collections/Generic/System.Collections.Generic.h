@@ -1,11 +1,12 @@
-#ifndef SYSTEM_COLLECTIONS_GENERIC_H
-#define SYSTEM_COLLECTIONS_GENERIC_H
+#ifndef N_SYSTEM_COLLECTIONS_GENERIC_H
+#define N_SYSTEM_COLLECTIONS_GENERIC_H
 
 #include "ICollection.h"
 #include "IEnumerable.h"
 #include "IEnumerator.h"
 #include "IList.h"
 #include "Queue.h"
+#include "IDictionary.h"
 
 #include <vector>
 #include <map>

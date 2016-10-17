@@ -1,13 +1,19 @@
 #ifndef SYSTEM_XML_XPATH_XPATHITEM_H
 #define SYSTEM_XML_XPATH_XPATHITEM_H
 
-namespace System::Xml::XPath
+namespace System
 {
-	class XPathItem : public Object
+	namespace Xml
 	{
-	public:
-		virtual Boolean IsNode() const = 0;
-	};
+		namespace XPath
+		{
+			class XPathItem : public Object
+			{
+			public:
+				virtual Boolean IsNode() const = 0;
+			};
+		}
+	}
 }
 
 #endif

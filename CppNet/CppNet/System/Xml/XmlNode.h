@@ -1,12 +1,15 @@
 #ifndef SYSTEM_XML_XMLNODE_H
 #define SYSTEM_XML_XMLNODE_H
 
-namespace System::Xml
+namespace System
 {
-	class XmlNode : public Object, public ICloneable, public Collections::IEnumerable, public XPath::IXPathNavigable
+	namespace Xml
 	{
+		class XmlNode : public Object, public ICloneable, public Collections::IEnumerable, public XPath::IXPathNavigable
+		{
 
-	};
+		};
+	}
 }
 
 #endif

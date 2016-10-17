@@ -6,18 +6,24 @@
 #include "../../../SystemTypes.h"
 #include "../../Guid.h"
 
-namespace System::Runtime::InteropServices
+namespace System
 {
-	interface _Thread
+	namespace Runtime
 	{
-		void GetTypeInfoCount(UInt32& pcTInfo);
+		namespace InteropServices
+		{
+			interface _Thread
+			{
+				void GetTypeInfoCount(UInt32& pcTInfo);
 
-		void GetTypeInfo(UInt32 iTInfo, UInt32 lcid, const IntPtr& ppTInfo);
+				void GetTypeInfo(UInt32 iTInfo, UInt32 lcid, const IntPtr& ppTInfo);
 
-		void GetIDsOfNames(Guid& riid, const IntPtr& rgszNames, UInt32 cNames, UInt32 lcid, const IntPtr& rgDispId);
+				void GetIDsOfNames(Guid& riid, const IntPtr& rgszNames, UInt32 cNames, UInt32 lcid, const IntPtr& rgDispId);
 
-		void Invoke(UInt32 dispIdMember, Guid& riid, UInt32 lcid, Int16 wFlags, const IntPtr& pDispParams, const IntPtr& pVarResult, const IntPtr& pExcepInfo, const IntPtr& puArgErr);
-	};
+				void Invoke(UInt32 dispIdMember, Guid& riid, UInt32 lcid, Int16 wFlags, const IntPtr& pDispParams, const IntPtr& pVarResult, const IntPtr& pExcepInfo, const IntPtr& puArgErr);
+			};
+		}
+	}
 }
 
 #endif

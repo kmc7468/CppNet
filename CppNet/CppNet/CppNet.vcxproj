@@ -39,6 +39,7 @@
     <ClInclude Include="System\Byte.h" />
     <ClInclude Include="System\Char.h" />
     <ClInclude Include="System\Collections\Generic\ICollection.h" />
+    <ClInclude Include="System\Collections\Generic\IDictionary.h" />
     <ClInclude Include="System\Collections\Generic\IEnumerable.h" />
     <ClInclude Include="System\Collections\Generic\IEnumerator.h" />
     <ClInclude Include="System\Collections\Generic\IList.h" />
@@ -84,6 +85,7 @@
     <ClInclude Include="System\IO\IOException.h" />
     <ClInclude Include="System\IO\Stream.h" />
     <ClInclude Include="System\IO\System.IO.h" />
+    <ClInclude Include="System\KeyValuePair.h" />
     <ClInclude Include="System\Math.h" />
     <ClInclude Include="System\NotImplementedException.h" />
     <ClInclude Include="System\Object.h" />
@@ -110,6 +112,7 @@
     <ClInclude Include="System\Xml\IXmlNamespaceResolver.h" />
     <ClInclude Include="System\Xml\System.Xml.h" />
     <ClInclude Include="System\Xml\XmlDocument.h" />
+    <ClInclude Include="System\Xml\XmlNamespaceScope.h" />
     <ClInclude Include="System\Xml\XmlNode.h" />
     <ClInclude Include="System\Xml\XPath\IXPathNavigable.h" />
     <ClInclude Include="System\Xml\XPath\System.Xml.XPath.h" />
