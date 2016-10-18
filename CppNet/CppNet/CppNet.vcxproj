@@ -45,6 +45,7 @@
     <ClInclude Include="System\Collections\Generic\Queue.h" />
     <ClInclude Include="System\Collections\Generic\Stack.h" />
     <ClInclude Include="System\Collections\Generic\System.Collections.Generic.h" />
+    <ClInclude Include="System\Collections\Hashtable.h" />
     <ClInclude Include="System\Collections\ICollection.h" />
     <ClInclude Include="System\Collections\IEnumerable.h" />
     <ClInclude Include="System\Collections\IEnumerator.h" />
@@ -96,6 +97,8 @@
     <ClInclude Include="System\String.h" />
     <ClInclude Include="System\System.h" />
     <ClInclude Include="System\SystemException.h" />
+    <ClInclude Include="System\Text\Encoding.h" />
+    <ClInclude Include="System\Text\System.Text.h" />
     <ClInclude Include="System\Threading\System.Threading.h" />
     <ClInclude Include="System\Threading\Thread.h" />
     <ClInclude Include="System\Threading\WaitHandle.h" />

@@ -91,6 +91,9 @@
     <Filter Include="헤더 파일\System\Xml\XPath">
       <UniqueIdentifier>{0b6085f5-1107-449e-8a93-14a3ea69a7e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\Text">
+      <UniqueIdentifier>{74ed6bb5-742d-4c3b-9dde-c6c88d78dbc5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -383,6 +386,15 @@
     </ClInclude>
     <ClInclude Include="System\Xml\XmlNamespaceScope.h">
       <Filter>헤더 파일\System\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Text\Encoding.h">
+      <Filter>헤더 파일\System\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Text\System.Text.h">
+      <Filter>헤더 파일\System\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\Hashtable.h">
+      <Filter>헤더 파일\System\Collections</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
