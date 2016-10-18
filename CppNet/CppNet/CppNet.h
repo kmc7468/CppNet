@@ -12,7 +12,6 @@
 #include "System/Collections/System.Collections.h"
 #include "System/Collections/Generic/System.Collections.Generic.h"
 #include "System/Drawing/System.Drawing.h"
-#include "System/Windows/Forms/System.Windows.Forms.h"
 #include "System/IO/System.IO.h"
 #include "System/Threading/System.Threading.h"
 #include "System/Runtime/InteropServices/System.Runtime.InteropServices.h"

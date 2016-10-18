@@ -107,8 +107,6 @@
     <ClInclude Include="System\UInt32.h" />
     <ClInclude Include="System\UInt64.h" />
     <ClInclude Include="System\Version.h" />
-    <ClInclude Include="System\Windows\Forms\Control.h" />
-    <ClInclude Include="System\Windows\Forms\System.Windows.Forms.h" />
     <ClInclude Include="System\Xml\IXmlNamespaceResolver.h" />
     <ClInclude Include="System\Xml\System.Xml.h" />
     <ClInclude Include="System\Xml\XmlDocument.h" />
@@ -151,7 +149,6 @@
     <ClCompile Include="System\Threading\WaitHandle.cpp" />
     <ClCompile Include="System\TimeSpan.cpp" />
     <ClCompile Include="System\Version.cpp" />
-    <ClCompile Include="System\Windows\Forms\Control.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CppNet\gc.inl" />

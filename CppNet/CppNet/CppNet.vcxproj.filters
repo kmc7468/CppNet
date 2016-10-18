@@ -10,9 +10,6 @@
     <Filter Include="헤더 파일\System\Drawing">
       <UniqueIdentifier>{ec0845db-9378-4ed0-af61-3e0c635b4e1a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\System\Windows">
-      <UniqueIdentifier>{9bfa0dc7-49da-4201-9f5a-77ef82857b20}</UniqueIdentifier>
-    </Filter>
     <Filter Include="헤더 파일\System\Collections">
       <UniqueIdentifier>{74626054-eee9-47e7-9f84-1ec41c75eb4c}</UniqueIdentifier>
     </Filter>
@@ -27,9 +24,6 @@
     </Filter>
     <Filter Include="헤더 파일\System\Collections\Generic">
       <UniqueIdentifier>{1b2b48a3-6dc5-4323-accc-9a761e53fff0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\System\Windows\Forms">
-      <UniqueIdentifier>{9044115b-0caa-4bd3-88e9-d53f9babcd71}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일">
       <UniqueIdentifier>{eadfd985-11de-48ec-bb1c-9f1fe2d56199}</UniqueIdentifier>
@@ -60,12 +54,6 @@
     </Filter>
     <Filter Include="소스 파일\System\Drawing">
       <UniqueIdentifier>{a71bcabf-ed44-40af-b54f-78b6ec98b692}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\System\Windows">
-      <UniqueIdentifier>{e7d1ba06-33fa-4bc4-a784-3a3c3f987e62}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\System\Windows\Forms">
-      <UniqueIdentifier>{eafdbcf6-ba07-48f7-a42e-16a3025daaa9}</UniqueIdentifier>
     </Filter>
     <Filter Include="인라인 구현 파일\System\Collections">
       <UniqueIdentifier>{22da5613-bbcb-4c14-b87a-34c0b96887cd}</UniqueIdentifier>
@@ -131,12 +119,6 @@
     </ClInclude>
     <ClInclude Include="Utility.h">
       <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Windows\Forms\Control.h">
-      <Filter>헤더 파일\System\Windows\Forms</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Windows\Forms\System.Windows.Forms.h">
-      <Filter>헤더 파일\System\Windows\Forms</Filter>
     </ClInclude>
     <ClInclude Include="System\Collections\Generic\ICollection.h">
       <Filter>헤더 파일\System\Collections\Generic</Filter>
@@ -415,9 +397,6 @@
     </ClCompile>
     <ClCompile Include="System\Drawing\SizeF.cpp">
       <Filter>소스 파일\System\Drawing</Filter>
-    </ClCompile>
-    <ClCompile Include="System\Windows\Forms\Control.cpp">
-      <Filter>소스 파일\System\Windows\Forms</Filter>
     </ClCompile>
     <ClCompile Include="System\Globalization\CharUnicodeInfo.cpp">
       <Filter>소스 파일\System\Globalization</Filter>
