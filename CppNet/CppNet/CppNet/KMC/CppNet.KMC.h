@@ -3,6 +3,5 @@
 
 #include "Decimal.h"
 #include "Fraction.h"
-#include "Integer.h"
 
 #endif
