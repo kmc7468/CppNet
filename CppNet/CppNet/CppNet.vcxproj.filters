@@ -94,6 +94,9 @@
     <Filter Include="헤더 파일\System\Text">
       <UniqueIdentifier>{74ed6bb5-742d-4c3b-9dde-c6c88d78dbc5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\System\Collections">
+      <UniqueIdentifier>{ae9ba7d4-f034-4255-8f97-1d08bdd72d3b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -399,6 +402,12 @@
     <ClInclude Include="System\Collections\IDictionary.h">
       <Filter>헤더 파일\System\Collections</Filter>
     </ClInclude>
+    <ClInclude Include="System\Collections\DictionaryEntry.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Collections\IDictionaryEnumerator.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -488,6 +497,9 @@
     <ClCompile Include="System\Threading\WaitHandle.cpp">
       <Filter>소스 파일\System\Threading</Filter>
     </ClCompile>
+    <ClCompile Include="System\Collections\DictionaryEntry.cpp">
+      <Filter>소스 파일\System\Collections</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="System\Collections\Generic\Queue.inl">
@@ -546,6 +558,9 @@
     </None>
     <None Include="System\IO\Stream.inl">
       <Filter>인라인 구현 파일\System\IO</Filter>
+    </None>
+    <None Include="System\Collections\DictionaryEntry.inl">
+      <Filter>인라인 구현 파일\System\Collections</Filter>
     </None>
   </ItemGroup>
 </Project>

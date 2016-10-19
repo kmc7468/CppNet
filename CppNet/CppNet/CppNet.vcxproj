@@ -37,6 +37,7 @@
     <ClInclude Include="System\Boolean.h" />
     <ClInclude Include="System\Byte.h" />
     <ClInclude Include="System\Char.h" />
+    <ClInclude Include="System\Collections\DictionaryEntry.h" />
     <ClInclude Include="System\Collections\Generic\ICollection.h" />
     <ClInclude Include="System\Collections\Generic\IDictionary.h" />
     <ClInclude Include="System\Collections\Generic\IEnumerable.h" />
@@ -48,6 +49,7 @@
     <ClInclude Include="System\Collections\Hashtable.h" />
     <ClInclude Include="System\Collections\ICollection.h" />
     <ClInclude Include="System\Collections\IDictionary.h" />
+    <ClInclude Include="System\Collections\IDictionaryEnumerator.h" />
     <ClInclude Include="System\Collections\IEnumerable.h" />
     <ClInclude Include="System\Collections\IEnumerator.h" />
     <ClInclude Include="System\Collections\System.Collections.h" />
@@ -129,6 +131,7 @@
     <ClCompile Include="System\ArgumentException.cpp" />
     <ClCompile Include="System\BitConverter.cpp" />
     <ClCompile Include="System\Char.cpp" />
+    <ClCompile Include="System\Collections\DictionaryEntry.cpp" />
     <ClCompile Include="System\DateTime.cpp" />
     <ClCompile Include="System\DoubleT.cpp" />
     <ClCompile Include="System\Drawing\Point.cpp" />
@@ -160,6 +163,7 @@
     <None Include="CppNet\Unicode.inl" />
     <None Include="System\BitConverter.inl" />
     <None Include="System\Char.inl" />
+    <None Include="System\Collections\DictionaryEntry.inl" />
     <None Include="System\Collections\Generic\Queue.inl" />
     <None Include="System\Collections\Generic\Stack.inl" />
     <None Include="System\Console.inl" />
