@@ -16,6 +16,7 @@ namespace System
 			template <typename T>
 			interface IList : public ICollection<T>
 			{
+				virtual const T& operator[](Int32 index) const = 0;
 				virtual T& operator[](Int32 index) = 0;
 
 				virtual Int32 IndexOf(const T& item) const = 0;
