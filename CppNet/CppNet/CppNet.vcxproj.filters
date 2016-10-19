@@ -396,6 +396,9 @@
     <ClInclude Include="System\Collections\Hashtable.h">
       <Filter>헤더 파일\System\Collections</Filter>
     </ClInclude>
+    <ClInclude Include="System\Collections\IDictionary.h">
+      <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">

@@ -13,7 +13,8 @@ namespace System
 			template<typename TKey, typename TValue>
 			interface IDictionary : public ICollection<KeyValuePair<TKey, TValue>>
 			{
-				virtual TValue& operator[](const TKey& key) const = 0;
+				virtual const TValue& operator[](const TKey& key) const = 0;
+				virtual TValue& operator[](const TKey& key) = 0;
 				virtual ICollection<TKey> Keys() const = 0;
 				virtual ICollection<TValue> Values() const = 0;
 

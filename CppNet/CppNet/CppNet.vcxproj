@@ -47,6 +47,7 @@
     <ClInclude Include="System\Collections\Generic\System.Collections.Generic.h" />
     <ClInclude Include="System\Collections\Hashtable.h" />
     <ClInclude Include="System\Collections\ICollection.h" />
+    <ClInclude Include="System\Collections\IDictionary.h" />
     <ClInclude Include="System\Collections\IEnumerable.h" />
     <ClInclude Include="System\Collections\IEnumerator.h" />
     <ClInclude Include="System\Collections\System.Collections.h" />
