@@ -97,6 +97,9 @@
     <Filter Include="소스 파일\System\Collections">
       <UniqueIdentifier>{ae9ba7d4-f034-4255-8f97-1d08bdd72d3b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\Runtime\Serialization">
+      <UniqueIdentifier>{766f6a15-fff2-4d12-84ab-ecac2cadc392}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -407,6 +410,18 @@
     </ClInclude>
     <ClInclude Include="System\Collections\IDictionaryEnumerator.h">
       <Filter>헤더 파일\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\Serialization\ISerializable.h">
+      <Filter>헤더 파일\System\Runtime\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\Serialization\System.Runtime.Serialization.h">
+      <Filter>헤더 파일\System\Runtime\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\Serialization\SerializationInfo.h">
+      <Filter>헤더 파일\System\Runtime\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\Serialization\StreamingContext.h">
+      <Filter>헤더 파일\System\Runtime\Serialization</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

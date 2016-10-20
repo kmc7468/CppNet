@@ -15,7 +15,7 @@ namespace System
 			virtual std::unique_ptr<IDictionaryEnumerator> GetEnumerator() = 0;
 		};
 
-		interface IDictionary : public ICollection, public _IDictionary
+		interface IDictionary : public _IDictionary, public ICollection
 		{
 			virtual const Object& operator[](const Object& key) const = 0;
 			virtual Object& operator[](const Object& key) = 0;

@@ -95,6 +95,10 @@
     <ClInclude Include="System\Random.h" />
     <ClInclude Include="System\Runtime\InteropServices\System.Runtime.InteropServices.h" />
     <ClInclude Include="System\Runtime\InteropServices\_Thread.h" />
+    <ClInclude Include="System\Runtime\Serialization\ISerializable.h" />
+    <ClInclude Include="System\Runtime\Serialization\SerializationInfo.h" />
+    <ClInclude Include="System\Runtime\Serialization\StreamingContext.h" />
+    <ClInclude Include="System\Runtime\Serialization\System.Runtime.Serialization.h" />
     <ClInclude Include="System\SByte.h" />
     <ClInclude Include="System\Single.h" />
     <ClInclude Include="System\String.h" />
