@@ -1,9 +1,3 @@
-
-/*
-	2016.09.07
-	Created by kmc7468
-*/
-
 #ifndef N_SYSTEM_H
 #define N_SYSTEM_H
 
@@ -32,6 +26,7 @@
 #include "IEquatable.h"
 #include "IFormattable.h"
 #include "IDisposable.h"
+#include "IServiceProvider.h"
 
 #include "IAsyncResult.h"
 

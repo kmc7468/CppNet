@@ -53,6 +53,8 @@
     <ClInclude Include="System\Collections\IEnumerable.h" />
     <ClInclude Include="System\Collections\IEnumerator.h" />
     <ClInclude Include="System\Collections\System.Collections.h" />
+    <ClInclude Include="System\ComponentModel\ISite.h" />
+    <ClInclude Include="System\ComponentModel\System.ComponentModel.h" />
     <ClInclude Include="System\Console.h" />
     <ClInclude Include="System\Convert.h" />
     <ClInclude Include="System\DateTime.h" />
@@ -88,6 +90,7 @@
     <ClInclude Include="System\IO\IOException.h" />
     <ClInclude Include="System\IO\Stream.h" />
     <ClInclude Include="System\IO\System.IO.h" />
+    <ClInclude Include="System\IServiceProvider.h" />
     <ClInclude Include="System\KeyValuePair.h" />
     <ClInclude Include="System\Math.h" />
     <ClInclude Include="System\NotImplementedException.h" />

@@ -100,6 +100,9 @@
     <Filter Include="헤더 파일\System\Runtime\Serialization">
       <UniqueIdentifier>{766f6a15-fff2-4d12-84ab-ecac2cadc392}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\ComponentModel">
+      <UniqueIdentifier>{129ae7d3-b701-4fab-9ed0-9b40858c063d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -422,6 +425,15 @@
     </ClInclude>
     <ClInclude Include="System\Runtime\Serialization\StreamingContext.h">
       <Filter>헤더 파일\System\Runtime\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IServiceProvider.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ComponentModel\ISite.h">
+      <Filter>헤더 파일\System\ComponentModel</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ComponentModel\System.ComponentModel.h">
+      <Filter>헤더 파일\System\ComponentModel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

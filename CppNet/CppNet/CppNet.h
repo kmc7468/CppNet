@@ -19,6 +19,7 @@
 #include "System/Xml/XPath/System.Xml.XPath.h"
 #include "System/Text/System.Text.h"
 #include "System/Runtime/Serialization/System.Runtime.Serialization.h"
+#include "System/ComponentModel/System.ComponentModel.h"
 
 #include "CppNet/CppNet.h"
 #include "CppNet/KMC/CppNet.KMC.h"
