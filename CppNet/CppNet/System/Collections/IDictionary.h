@@ -30,7 +30,7 @@ namespace System
 			virtual Boolean IsReadOnly() const = 0;
 			virtual Boolean IsFixedSize() const = 0;
 
-			virtual std::unique_ptr<IDictionaryEnumerator> _IDictionary::GetEnumerator() = 0;
+			//virtual std::unique_ptr<IDictionaryEnumerator> _IDictionary::GetEnumerator() = 0;
 		};
 	}
 }
