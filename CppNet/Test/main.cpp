@@ -22,7 +22,7 @@ evnt(std::function<void(int)>, e);
 
 int main()
 {
-	e += decltype(e)::del(a);
+	e += a;
 	e += decltype(e)::del(b);
 	e += decltype(e)::del(c);
 

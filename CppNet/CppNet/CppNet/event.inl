@@ -29,3 +29,21 @@ void event<delegate>::operator()(Args... args) const
 		a(args...);
 	}
 }
+
+template<typename delegate>
+template<typename Result>
+inline event<delegate>& CppNet::event<delegate>::operator+=(Result* func)
+{
+	operator+=(del(func));
+
+	return *this;
+}
+
+template<typename delegate>
+template<typename Result>
+inline event<delegate>& CppNet::event<delegate>::operator-=(Result* func)
+{
+	operator-=(del(func));
+
+	return *this;
+}
