@@ -147,6 +147,6 @@ inline T as(U&& u)
 	return dynamic_cast<T>(u);
 }
 
-#define evnt(del, name) CppNet::event<del::result_type(del::argument_type)> name
+#define evnt(del, name) CppNet::event<del> name
 
 #endif

@@ -6,34 +6,31 @@ using namespace CppNet;
 
 template<typename TResult, typename... TArgs>
 template<typename... Args>
-void event<TResult(TArgs...)>::operator()(Args&&... args) const
+void event<std::function<TResult(TArgs...)>>::operator()(Args&&... args) const
 {
-	bool isWriteResult = false;
+	vars.clear();
+
 	for (auto&& a : functions)
 	{
-		if (isWriteResult)
-			a(std::forward<Args>(args)...);
-		else
-		{
-			val = a(std::forward<Args>(args)...);
-		}
+		auto temp = a(std::forward<Args>(args)...);
+		vars.push_back(temp);
 	}
 }
 
 template<typename TResult, typename... TArgs>
 template<typename T>
-event<TResult(TArgs...)>& event<TResult(TArgs...)>::operator+=(T func)
+event<std::function<TResult(TArgs...)>>& event<std::function<TResult(TArgs...)>>::operator+=(T func)
 {
-	functions.push_back(function_type(func));
+	functions.push_back(func);
 
 	return *this;
 }
 
 template<typename TResult, typename... TArgs>
 template<typename T>
-event<TResult(TArgs...)>& event<TResult(TArgs...)>::operator-=(T func)
+event<std::function<TResult(TArgs...)>>& event<std::function<TResult(TArgs...)>>::operator-=(T func)
 {
-	auto a = std::find(functions.begin(), functions.end(), del(func));
+	auto a = std::find(functions.begin(), functions.end(), func);
 
 	if (a != functions.cend())
 		functions.erase(a);
@@ -42,21 +39,15 @@ event<TResult(TArgs...)>& event<TResult(TArgs...)>::operator-=(T func)
 }
 
 template<typename TResult, typename ...TArgs>
-const TResult& event<TResult(TArgs...)>::Result() const
+TResult& event<std::function<TResult(TArgs...)>>::Result(size_t index) const
 {
-	return val;
-}
-
-template<typename TResult, typename ...TArgs>
-TResult& event<TResult(TArgs...)>::Result()
-{
-	return val;
+	return vars.at(index);
 }
 
 #pragma region Æ¯¼öÈ­(void)
 template<typename... TArgs>
 template<typename... Args>
-void event<void(TArgs...)>::operator()(Args&&... args) const
+void event<std::function<void(TArgs...)>>::operator()(Args&&... args) const
 {
 	for (auto&& a : functions)
 	{
@@ -66,18 +57,18 @@ void event<void(TArgs...)>::operator()(Args&&... args) const
 
 template<typename... TArgs>
 template<typename T>
-event<void(TArgs...)>& event<void(TArgs...)>::operator+=(T func)
+event<std::function<void(TArgs...)>>& event<std::function<void(TArgs...)>>::operator+=(T func)
 {
-	functions.push_back(del(func));
+	functions.push_back(func);
 
 	return *this;
 }
 
 template<typename... TArgs>
 template<typename T>
-event<void(TArgs...)>& event<void(TArgs...)>::operator-=(T func)
+event<std::function<void(TArgs...)>>& event<std::function<void(TArgs...)>>::operator-=(T func)
 {
-	auto a = std::find(functions.begin(), functions.end(), function_type(func));
+	auto a = std::find(functions.begin(), functions.end(), func);
 
 	if (a != functions.cend())
 		functions.erase(a);

@@ -3,31 +3,36 @@
 #include <chrono>
 using namespace std::chrono;
 
-void a(int i)
+int a(int i, double d, const char* str)
 {
-	std::cout << "1 " << i << std::endl;
+	std::cout << "1 " << i << " " << d << " " << str << std::endl;
+	return 1;
 }
 
-void b(int i)
+int b(int i, double d, const char* str)
 {
-	std::cout << "2 " << i << std::endl;
+	std::cout << "2 " << i << " " << d << " " << str << std::endl;
+	return 2;
 }
 
-void c(int i)
+int c(int i, double d, const char* str)
 {
-	std::cout << "3 " << i << std::endl;
+	std::cout << "3 " << i << " " << d << " " << str << std::endl;
+	return 3;
 }
 
-evnt(std::function<void(int)>, e);
+evnt(std::function<int(int, double, const char*)>, e);
 
 int main()
 {
 	e += a;
-	e += decltype(e)::function_type(b);
-	e += decltype(e)::function_type(c);
-	e += [](int i) {std::cout << i << std::endl; };
+	e += b;
+	e += c;
+	e += [](int i, double d, const char* str) {std::cout << "4 " << i << " " << d << " " << str << std::endl; return 4; };
 
-	e(5);
+	e(4, 5.0, "¤±¤¤¤·¤©");
+
+	std::cout << e.Result(3) << std::endl;
 
 	MAIN_END
 }

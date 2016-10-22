@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <functional>
+#include <array>
 
 namespace CppNet
 {
@@ -27,33 +28,32 @@ namespace CppNet
 	class event;
 
 	template<typename TResult, typename... TArgs>
-	class event<TResult(TArgs...)> final
+	class event<std::function<TResult(TArgs...)>> final
 	{
 	private:
-		std::vector<std::function<TResult(TArgs...)>> functions;
-		TResult val{};
+		mutable std::vector<std::function<TResult(TArgs...)>> functions;
+		mutable std::vector<TResult> vars;
 
 	public:
 		event() = default;
-		event(const event<TResult(TArgs...)>& evt) = delete;
-		event(event<TResult(TArgs...)>&& evt) = delete;
+		event(const event<std::function<TResult(TArgs...)>>& evt) = delete;
+		event(event<std::function<TResult(TArgs...)>>&& evt) = delete;
 		~event() = default;
 
 	public:
-		event<TResult(TArgs...)>& operator=(const event<TResult(TArgs...)>& evt) = delete;
-		event<TResult(TArgs...)>& operator=(event<TResult(TArgs...)>&& evt) = delete;
+		event<std::function<TResult(TArgs...)>>& operator=(const event<std::function<TResult(TArgs...)>>& evt) = delete;
+		event<std::function<TResult(TArgs...)>>& operator=(event<std::function<TResult(TArgs...)>>&& evt) = delete;
 
 		template<typename T>
-		event<TResult(TArgs...)>& operator+=(T func);
+		event<std::function<TResult(TArgs...)>>& operator+=(T func);
 
 		template<typename T>
-		event<TResult(TArgs...)>& operator-=(T func);
+		event<std::function<TResult(TArgs...)>>& operator-=(T func);
 
 		template<typename...Args>
 		void operator()(Args&&... args) const;
 
-		const TResult& Result() const;
-		TResult& Result();
+		TResult& Result(size_t index = 0) const;
 		
 	public:
 		typedef std::function<TResult(TArgs...)> function_type;
@@ -61,32 +61,32 @@ namespace CppNet
 
 #pragma region Æ¯¼öÈ­(void)
 	template<typename... TArgs>
-	class event<void(TArgs...)> final
+	class event<std::function<void(TArgs...)>> final
 	{
 	private:
 		std::vector<std::function<void(TArgs...)>> functions;
 
 	public:
 		event() = default;
-		event(const event<void(TArgs...)>& evt) = delete;
-		event(event<void(TArgs...)>&& evt) = delete;
+		event(const event<std::function<void(TArgs...)>>& evt) = delete;
+		event(event<std::function<void(TArgs...)>>&& evt) = delete;
 		~event() = default;
 
 	public:
-		event<void(TArgs...)>& operator=(const event<void(TArgs...)>& evt) = delete;
-		event<void(TArgs...)>& operator=(event<void(TArgs...)>&& evt) = delete;
+		event<std::function<void(TArgs...)>>& operator=(const event<std::function<void(TArgs...)>>& evt) = delete;
+		event<std::function<void(TArgs...)>>& operator=(event<std::function<void(TArgs...)>>&& evt) = delete;
 
 		template<typename T>
-		event<void(TArgs...)>& operator+=(T func);
+		event<std::function<void(TArgs...)>>& operator+=(T func);
 
 		template<typename T>
-		event<void(TArgs...)>& operator-=(T func);
+		event<std::function<void(TArgs...)>>& operator-=(T func);
 
 		template<typename...Args>
 		void operator()(Args&&... args) const;
 
 	public:
-		typedef std::function<void(TArgs...)> function_type;
+		typedef std::function<std::function<void(TArgs...)>> function_type;
 	};
 #pragma endregion
 }
