@@ -23,8 +23,8 @@ evnt(std::function<void(int)>, e);
 int main()
 {
 	e += a;
-	e += decltype(e)::del(b);
-	e += decltype(e)::del(c);
+	e += decltype(e)::function_type(b);
+	e += decltype(e)::function_type(c);
 	e += [](int i) {std::cout << i << std::endl; };
 
 	e(5);

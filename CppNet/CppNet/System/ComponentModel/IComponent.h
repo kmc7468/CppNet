@@ -5,6 +5,10 @@
 #include "../IDisposable.h"
 #include "ISite.h"
 
+#include <functional>
+#include <algorithm>
+#include <type_traits>
+
 namespace System
 {
 	namespace ComponentModel
