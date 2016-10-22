@@ -4,6 +4,7 @@
 #include "Defines.h"
 
 #include "System/Boolean.h"
+#include "CppNet/event.h"
 
 #include <type_traits>
 
@@ -145,5 +146,7 @@ inline T as(U&& u)
 {
 	return dynamic_cast<T>(u);
 }
+
+#define evnt(del, name) CppNet::event<del> name
 
 #endif

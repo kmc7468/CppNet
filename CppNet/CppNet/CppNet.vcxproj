@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="CppNet.h" />
     <ClInclude Include="CppNet\CppNet.h" />
+    <ClInclude Include="CppNet\event.h" />
     <ClInclude Include="CppNet\gc.h" />
     <ClInclude Include="CppNet\gc_ptr.h" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
@@ -53,6 +54,7 @@
     <ClInclude Include="System\Collections\IEnumerable.h" />
     <ClInclude Include="System\Collections\IEnumerator.h" />
     <ClInclude Include="System\Collections\System.Collections.h" />
+    <ClInclude Include="System\ComponentModel\IComponent.h" />
     <ClInclude Include="System\ComponentModel\ISite.h" />
     <ClInclude Include="System\ComponentModel\System.ComponentModel.h" />
     <ClInclude Include="System\Console.h" />
@@ -64,6 +66,8 @@
     <ClInclude Include="System\Drawing\PointF.h" />
     <ClInclude Include="System\Drawing\SizeF.h" />
     <ClInclude Include="System\Drawing\System.Drawing.h" />
+    <ClInclude Include="System\EventArgs.h" />
+    <ClInclude Include="System\EventHandler.h" />
     <ClInclude Include="System\Exception.h" />
     <ClInclude Include="System\FormatException.h" />
     <ClInclude Include="System\Func.h" />
@@ -144,6 +148,7 @@
     <ClCompile Include="System\Drawing\Point.cpp" />
     <ClCompile Include="System\Drawing\PointF.cpp" />
     <ClCompile Include="System\Drawing\SizeF.cpp" />
+    <ClCompile Include="System\EventArgs.cpp" />
     <ClCompile Include="System\Exception.cpp" />
     <ClCompile Include="System\FormatException.cpp" />
     <ClCompile Include="System\Globalization\CharUnicodeInfo.cpp" />
@@ -163,6 +168,7 @@
     <ClCompile Include="System\Version.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="CppNet\event.inl" />
     <None Include="CppNet\gc.inl" />
     <None Include="CppNet\gc_ptr.inl" />
     <None Include="CppNet\KMC\Decimal.inl" />

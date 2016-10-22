@@ -435,6 +435,18 @@
     <ClInclude Include="System\ComponentModel\System.ComponentModel.h">
       <Filter>헤더 파일\System\ComponentModel</Filter>
     </ClInclude>
+    <ClInclude Include="System\ComponentModel\IComponent.h">
+      <Filter>헤더 파일\System\ComponentModel</Filter>
+    </ClInclude>
+    <ClInclude Include="System\EventHandler.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\EventArgs.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\event.h">
+      <Filter>헤더 파일\CppNet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -527,6 +539,9 @@
     <ClCompile Include="System\Collections\DictionaryEntry.cpp">
       <Filter>소스 파일\System\Collections</Filter>
     </ClCompile>
+    <ClCompile Include="System\EventArgs.cpp">
+      <Filter>소스 파일\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="System\Collections\Generic\Queue.inl">
@@ -588,6 +603,9 @@
     </None>
     <None Include="System\Collections\DictionaryEntry.inl">
       <Filter>인라인 구현 파일\System\Collections</Filter>
+    </None>
+    <None Include="CppNet\event.inl">
+      <Filter>인라인 구현 파일\CppNet</Filter>
     </None>
   </ItemGroup>
 </Project>
