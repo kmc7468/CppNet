@@ -21,13 +21,13 @@ namespace CppNet
 		event<delegate>& operator=(const event<delegate>& evt) = delete;
 		event<delegate>& operator=(event<delegate>&& evt) = delete;
 
-		event<delegate>& operator+=(delegate& d);
-		template<typename Result>
-		event<delegate>& operator+=(Result* func);
+		//event<delegate>& operator+=(delegate& d);
+		template<typename T>
+		event<delegate>& operator+=(T func);
 
-		event<delegate>& operator-=(delegate& d);
-		template<typename Result>
-		event<delegate>& operator-=(Result* func);
+		//event<delegate>& operator-=(delegate& d);
+		template<typename T>
+		event<delegate>& operator-=(T func);
 
 		template<typename...Args>
 		void operator()(Args... args) const;

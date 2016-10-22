@@ -25,6 +25,7 @@ int main()
 	e += a;
 	e += decltype(e)::del(b);
 	e += decltype(e)::del(c);
+	e += [](int i) {std::cout << i << std::endl; };
 
 	e(5);
 
