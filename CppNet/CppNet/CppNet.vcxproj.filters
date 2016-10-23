@@ -489,6 +489,9 @@
     <ClInclude Include="System\AppDomain.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="System\_String.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -586,6 +589,9 @@
     </ClCompile>
     <ClCompile Include="System\Runtime\Remoting\Contexts\Context.cpp">
       <Filter>소스 파일\System\Runtime\Remoting\Contexts</Filter>
+    </ClCompile>
+    <ClCompile Include="System\_String.cpp">
+      <Filter>소스 파일\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

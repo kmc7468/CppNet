@@ -140,6 +140,7 @@
     <ClInclude Include="System\Xml\XPath\System.Xml.XPath.h" />
     <ClInclude Include="System\Xml\XPath\XPathItem.h" />
     <ClInclude Include="System\Xml\XPath\XPathNavigator.h" />
+    <ClInclude Include="System\_String.h" />
     <ClInclude Include="Utility.h" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +176,7 @@
     <ClCompile Include="System\Threading\WaitHandle.cpp" />
     <ClCompile Include="System\TimeSpan.cpp" />
     <ClCompile Include="System\Version.cpp" />
+    <ClCompile Include="System\_String.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CppNet\event.inl" />

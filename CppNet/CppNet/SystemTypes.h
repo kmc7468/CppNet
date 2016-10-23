@@ -29,5 +29,6 @@
 #include "System/Object.h"
 
 #include "System/Char.h"
+#include "System/_String.h"
 
 #endif
