@@ -32,6 +32,7 @@
     <ClInclude Include="Defines.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="SystemTypes.h" />
+    <ClInclude Include="System\AppDomain.h" />
     <ClInclude Include="System\ArgumentException.h" />
     <ClInclude Include="System\AsyncCallback.h" />
     <ClInclude Include="System\BitConverter.h" />
@@ -105,6 +106,9 @@
     <ClInclude Include="System\Runtime\Remoting\Contexts\Context.h" />
     <ClInclude Include="System\Runtime\Remoting\Contexts\IContextProperty.h" />
     <ClInclude Include="System\Runtime\Remoting\Contexts\System.Runtime.Remoting.Contexts.h" />
+    <ClInclude Include="System\Runtime\Remoting\Messaging\IMessage.h" />
+    <ClInclude Include="System\Runtime\Remoting\Messaging\IMessageCtrl.h" />
+    <ClInclude Include="System\Runtime\Remoting\Messaging\IMessageSink.h" />
     <ClInclude Include="System\Runtime\Remoting\Messaging\System.Runtime.Remoting.Messaging.h" />
     <ClInclude Include="System\Runtime\Serialization\ISerializable.h" />
     <ClInclude Include="System\Runtime\Serialization\SerializationInfo.h" />

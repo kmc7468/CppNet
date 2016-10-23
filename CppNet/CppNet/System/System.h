@@ -42,6 +42,7 @@
 #include "Version.h"
 #include "Guid.h"
 #include "EventArgs.h"
+#include "AppDomain.h"
 
 #include "AsyncCallback.h"
 #include "EventHandler.h"

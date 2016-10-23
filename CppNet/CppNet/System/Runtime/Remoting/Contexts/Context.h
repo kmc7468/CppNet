@@ -6,6 +6,7 @@
 #include "../../../Object.h"
 #include "../../../Int32.h"
 #include "IContextProperty.h"
+#include "../Messaging/IMessageSink.h"
 
 namespace System
 {
@@ -26,6 +27,8 @@ namespace System
 
 				private:
 					IContextProperty* _ctxProps = nullptr;
+					std::unique_ptr<Messaging::IMessageSink> _serverContextChain = nullptr;
+					std::unique_ptr<Messaging::IMessageSink> _clientContextChain = nullptr;
 				};
 			}
 		}

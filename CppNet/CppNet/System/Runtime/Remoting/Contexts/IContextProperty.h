@@ -3,7 +3,6 @@
 
 #include "../../../../Defines.h"
 
-#include "../../../../Utility.h"
 #include "../../../String.h"
 #include "../../../Boolean.h"
 #include "Context.h"
@@ -18,7 +17,7 @@ namespace System
 			{
 				class Context;
 
-				interface IContextProperty
+				struct IContextProperty
 				{
 					virtual const String& Name() const = 0;
 					virtual Boolean IsNewContextOK(const Context& context) const = 0;
