@@ -1,6 +1,8 @@
 #ifndef SYSTEM_TUPLE_H
 #define SYSTEM_TUPLE_H
 
+#include "../Defines.h"
+
 #include <tuple>
 
 namespace System

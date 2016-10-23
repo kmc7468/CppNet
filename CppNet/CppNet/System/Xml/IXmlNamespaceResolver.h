@@ -1,7 +1,12 @@
 #ifndef SYSTEM_XML_IXMLNAMESPACERESOLVER_H
 #define SYSTEM_XML_IXMLNAMESPACERESOLVER_H
 
+#include "../../Defines.h"
+#include "../../Utility.h"
+
 #include "XmlNamespaceScope.h"
+#include "../String.h"
+#include "../Collections/Generic/IDictionary.h"
 
 namespace System
 {

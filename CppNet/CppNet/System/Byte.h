@@ -1,6 +1,8 @@
 #ifndef SYSTEM_BYTE_H
 #define SYSTEM_BYTE_H
 
+#include "../Defines.h"
+
 #include <iostream>
 
 namespace System

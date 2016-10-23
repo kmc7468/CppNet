@@ -1,9 +1,12 @@
 #ifndef SYSTEM_COMPONENTMODEL_ICOMPONENT_H
 #define SYSTEM_COMPONENTMODEL_ICOMPONENT_H
 
+#include "../../Defines.h"
+
 #include "../../Utility.h"
 #include "../IDisposable.h"
 #include "ISite.h"
+#include "../EventHandler.h"
 
 #include <functional>
 #include <algorithm>

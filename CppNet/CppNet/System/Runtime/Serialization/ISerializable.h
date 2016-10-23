@@ -1,6 +1,8 @@
 #ifndef SYSTEM_RUNTIME_ISERIALIZABLE_H
 #define SYSTEM_RUNTIME_ISERIALIZABLE_H
 
+#include "../../../Defines.h"
+
 #include "../../../Utility.h"
 
 namespace System

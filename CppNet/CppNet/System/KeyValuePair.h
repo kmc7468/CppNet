@@ -1,6 +1,8 @@
 #ifndef SYSTEM_KEYVALUEPAIR_H
 #define SYSTEM_KEYVALUEPAIR_H
 
+#include "../Defines.h"
+
 #include <tuple>
 
 namespace System

@@ -1,7 +1,10 @@
 #ifndef SYSTEM_XML_XPATH_XPATHNAVIGATOR_H
 #define SYSTEM_XML_XPATH_XPATHNAVIGATOR_H
 
+#include "../../../Defines.h"
+
 #include "../IXmlNamespaceResolver.h"
+#include "../../ICloneable.h"
 
 namespace System
 {

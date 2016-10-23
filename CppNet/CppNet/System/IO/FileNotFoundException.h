@@ -1,6 +1,8 @@
 #ifndef SYSTEM_IO_FILENOTFOUNDEXCEPTION_H
 #define SYSTEM_IO_FILENOTFOUNDEXCEPTION_H
 
+#include "../../Defines.h"
+
 #include "IOException.h"
 
 #include "../String.h"

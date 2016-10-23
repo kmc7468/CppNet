@@ -1,6 +1,8 @@
 #ifndef SYSTEM_EVENTARGS_H
 #define SYSTEM_EVENTARGS_H
 
+#include "../Defines.h"
+
 #include "Object.h"
 
 namespace System

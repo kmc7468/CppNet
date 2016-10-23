@@ -102,6 +102,10 @@
     <ClInclude Include="System\Random.h" />
     <ClInclude Include="System\Runtime\InteropServices\System.Runtime.InteropServices.h" />
     <ClInclude Include="System\Runtime\InteropServices\_Thread.h" />
+    <ClInclude Include="System\Runtime\Remoting\Contexts\Context.h" />
+    <ClInclude Include="System\Runtime\Remoting\Contexts\IContextProperty.h" />
+    <ClInclude Include="System\Runtime\Remoting\Contexts\System.Runtime.Remoting.Contexts.h" />
+    <ClInclude Include="System\Runtime\Remoting\Messaging\System.Runtime.Remoting.Messaging.h" />
     <ClInclude Include="System\Runtime\Serialization\ISerializable.h" />
     <ClInclude Include="System\Runtime\Serialization\SerializationInfo.h" />
     <ClInclude Include="System\Runtime\Serialization\StreamingContext.h" />
@@ -162,6 +166,7 @@
     <ClCompile Include="System\NotImplementedException.cpp" />
     <ClCompile Include="System\Object.cpp" />
     <ClCompile Include="System\Random.cpp" />
+    <ClCompile Include="System\Runtime\Remoting\Contexts\Context.cpp" />
     <ClCompile Include="System\SystemException.cpp" />
     <ClCompile Include="System\Threading\WaitHandle.cpp" />
     <ClCompile Include="System\TimeSpan.cpp" />
@@ -278,6 +283,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PreprocessorDefinitions>
       </PreprocessorDefinitions>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

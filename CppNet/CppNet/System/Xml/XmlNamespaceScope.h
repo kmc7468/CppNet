@@ -1,6 +1,8 @@
 #ifndef SYSTEM_XML_XMLNAMESPACESCOPE_H
 #define SYSTEM_XML_XMLNAMESPACESCOPE_H
 
+#include "../../Defines.h"
+
 namespace System
 {
 	namespace Xml 

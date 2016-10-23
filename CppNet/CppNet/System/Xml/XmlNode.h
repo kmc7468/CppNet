@@ -1,6 +1,11 @@
 #ifndef SYSTEM_XML_XMLNODE_H
 #define SYSTEM_XML_XMLNODE_H
 
+#include "../../Defines.h"
+
+#include "../Object.h"
+#include "../ICloneable.h"
+#include "../Collections/IEnumerable.h"
 #include "XPath/IXPathNavigable.h"
 
 namespace System

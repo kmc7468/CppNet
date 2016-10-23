@@ -1,6 +1,8 @@
 #ifndef SYSTEM_COMPONENTMODL_ISITE_H
 #define SYSTEM_COMPONENTMODL_ISITE_H
 
+#include "../../Defines.h"
+
 #include "../../Utility.h"
 #include "../IServiceProvider.h"
 #include "../String.h"

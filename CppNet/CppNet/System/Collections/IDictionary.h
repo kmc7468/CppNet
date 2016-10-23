@@ -1,6 +1,8 @@
 #ifndef SYSTEM_COLLECTIONS_IDICTIONARY_H
 #define SYSTEM_COLLECTIONS_IDICTIONARY_H
 
+#include "../../Defines.h"
+
 #include "../../Utility.h"
 #include "ICollection.h"
 #include "../Object.h"

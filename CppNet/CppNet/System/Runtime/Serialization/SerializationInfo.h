@@ -1,6 +1,8 @@
 #ifndef SYSTEM_RUNTIME_SERIALIZATION_SERIALIZATIONINFO_H
 #define SYSTEM_RUNTIME_SERIALIZATION_SERIALIZATIONINFO_H
 
+#include "../../../Defines.h"
+
 #include "../../Object.h"
 
 namespace System

@@ -103,6 +103,24 @@
     <Filter Include="헤더 파일\System\ComponentModel">
       <UniqueIdentifier>{129ae7d3-b701-4fab-9ed0-9b40858c063d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\System\Runtime\Remoting">
+      <UniqueIdentifier>{59d7d2ba-6806-44a8-ac9e-902da50cd4ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Runtime\Remoting\Contexts">
+      <UniqueIdentifier>{0af9a187-6d01-4679-9d16-f0e9a6303e79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System\Runtime">
+      <UniqueIdentifier>{3bf6e51b-152b-4825-95e7-01bf85d59e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System\Runtime\Remoting">
+      <UniqueIdentifier>{1fc0b357-7140-4c73-8bca-b9ef2b3390b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\System\Runtime\Remoting\Contexts">
+      <UniqueIdentifier>{83b516b4-cb94-4439-bdb5-1dcc70e3bda9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\System\Runtime\Remoting\Messaging">
+      <UniqueIdentifier>{e2d2954a-c8f9-4221-acab-a6c9b6446384}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -447,6 +465,18 @@
     <ClInclude Include="CppNet\event.h">
       <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
+    <ClInclude Include="System\Runtime\Remoting\Contexts\Context.h">
+      <Filter>헤더 파일\System\Runtime\Remoting\Contexts</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\Remoting\Contexts\System.Runtime.Remoting.Contexts.h">
+      <Filter>헤더 파일\System\Runtime\Remoting\Contexts</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\Remoting\Contexts\IContextProperty.h">
+      <Filter>헤더 파일\System\Runtime\Remoting\Contexts</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Runtime\Remoting\Messaging\System.Runtime.Remoting.Messaging.h">
+      <Filter>헤더 파일\System\Runtime\Remoting\Messaging</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -541,6 +571,9 @@
     </ClCompile>
     <ClCompile Include="System\EventArgs.cpp">
       <Filter>소스 파일\System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Runtime\Remoting\Contexts\Context.cpp">
+      <Filter>소스 파일\System\Runtime\Remoting\Contexts</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

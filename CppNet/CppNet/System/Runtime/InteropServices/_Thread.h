@@ -1,6 +1,8 @@
 #ifndef SYSTEM_RUNTIME_INTEROPSERVICES__THREAD_H
 #define SYSTEM_RUNTIME_INTEROPSERVICES__THREAD_H
 
+#include "../../../Defines.h"
+
 #include "../../../Utility.h"
 
 #include "../../../SystemTypes.h"

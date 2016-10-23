@@ -1,6 +1,8 @@
 #ifndef SYSTEM_IO_IOEXCEPTION_H
 #define SYSTEM_IO_IOEXCEPTION_H
 
+#include "../../Defines.h"
+
 #include "../Exception.h"
 #include "../SystemException.h"
 

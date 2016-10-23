@@ -1,6 +1,8 @@
 #ifndef SYSTEM_IO_STREAM_H
 #define SYSTEM_IO_STREAM_H
 
+#include "../../Defines.h"
+
 #include "../Object.h"
 #include "../IDisposable.h"
 

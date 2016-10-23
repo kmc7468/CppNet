@@ -1,6 +1,8 @@
 #ifndef SYSTEM_TEXT_ENCODING_H
 #define SYSTEM_TEXT_ENCODING_H
 
+#include "../../Defines.h"
+
 #include "../Object.h"
 #include "../ICloneable.h"
 

@@ -1,6 +1,8 @@
 #ifndef SYSTEM_FUNC_H
 #define SYSTEM_FUNC_H
 
+#include "../Defines.h"
+
 #include <functional>
 
 namespace System

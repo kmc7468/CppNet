@@ -1,6 +1,8 @@
 #ifndef SYSTEM_UINT64_H
 #define SYSTEM_UINT64_H
 
+#include "../Defines.h"
+
 #include <iostream>
 
 namespace System

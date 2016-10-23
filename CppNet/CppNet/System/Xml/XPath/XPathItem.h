@@ -1,6 +1,10 @@
 #ifndef SYSTEM_XML_XPATH_XPATHITEM_H
 #define SYSTEM_XML_XPATH_XPATHITEM_H
 
+#include "../../../Defines.h"
+
+#include "../../Object.h"
+
 namespace System
 {
 	namespace Xml

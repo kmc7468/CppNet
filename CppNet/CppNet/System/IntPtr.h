@@ -1,6 +1,8 @@
 #ifndef SYSTEM_INTPTR_H
 #define SYSTEM_INTPTR_H
 
+#include "../Defines.h"
+
 #include "../SystemTypes.h"
 
 namespace System

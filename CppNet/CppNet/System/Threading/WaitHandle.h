@@ -1,6 +1,8 @@
 #ifndef SYSTEM_THREADING_WAITHANDLE_H
 #define SYSTEM_THREADING_WAITHANDLE_H
 
+#include "../../Defines.h"
+
 #include "../Object.h"
 #include "../IDisposable.h"
 #include "../../SystemTypes.h"

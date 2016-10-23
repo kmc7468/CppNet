@@ -1,6 +1,8 @@
 #ifndef SYSTEM_ASYNCCALLBACK_H
 #define SYSTEM_ASYNCCALLBACK_H
 
+#include "../Defines.h"
+
 #include <functional>
 #include <memory>
 

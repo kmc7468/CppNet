@@ -1,6 +1,8 @@
 #ifndef SYSTEM_ISERVICEPROVIDER_H
 #define SYSTEM_ISERVICEPROVIDER_H
 
+#include "../Defines.h"
+
 #include "../Utility.h"
 
 namespace System
