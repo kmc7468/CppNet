@@ -30,6 +30,7 @@
     <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="CppNet\Unicode9_0.h" />
     <ClInclude Include="Defines.h" />
+    <ClInclude Include="Includes.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="SystemTypes.h" />
     <ClInclude Include="System\AppDomain.h" />

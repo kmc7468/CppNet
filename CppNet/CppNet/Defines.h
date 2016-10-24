@@ -9,3 +9,6 @@ https://github.com/kmc7468/CppNet/wiki/%EC%A0%84%EC%B2%98%EB%A6%AC%EA%B8%B0 */
 #define LANG_KOR
 
 #endif
+
+// 조작하지 마십시오.
+#include "Includes.h"

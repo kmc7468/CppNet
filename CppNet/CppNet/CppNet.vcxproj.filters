@@ -492,6 +492,9 @@
     <ClInclude Include="System\_String.h">
       <Filter>헤더 파일\System</Filter>
     </ClInclude>
+    <ClInclude Include="Includes.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
