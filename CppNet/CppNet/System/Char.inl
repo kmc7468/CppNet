@@ -27,14 +27,18 @@ namespace System
 		return dat;
 	}
 
-	Char Char::operator=(Char&& c)
+	Char& Char::operator=(Char&& c)
 	{
 		dat = std::move(c.dat);
+
+		return *this;
 	}
 
-	Char Char::operator=(const Char& c)
+	Char& Char::operator=(const Char& c)
 	{
 		dat = c.dat;
+
+		return *this;
 	}
 
 	Boolean Char::operator==(const Object& obj) const

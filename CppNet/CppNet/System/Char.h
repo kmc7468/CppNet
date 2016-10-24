@@ -45,8 +45,8 @@ namespace System
 		inline operator UInt32();
 		operator String();
 
-		inline Char operator=(Char&& c);
-		inline Char operator=(const Char& c);
+		inline Char& operator=(Char&& c);
+		inline Char& operator=(const Char& c);
 
 		inline Boolean operator==(const Object& obj) const override;
 		inline Boolean operator!=(const Object& obj) const override;

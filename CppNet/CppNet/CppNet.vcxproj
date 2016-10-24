@@ -200,6 +200,7 @@
     <None Include="System\Object.inl" />
     <None Include="System\TimeSpan.inl" />
     <None Include="System\Version.inl" />
+    <None Include="System\_String.inl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E6CAD7AD-2172-471B-AC48-34D726DFDF62}</ProjectGuid>

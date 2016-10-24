@@ -658,5 +658,8 @@
     <None Include="CppNet\event.inl">
       <Filter>인라인 구현 파일\CppNet</Filter>
     </None>
+    <None Include="System\_String.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
   </ItemGroup>
 </Project>
