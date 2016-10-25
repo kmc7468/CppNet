@@ -5,5 +5,6 @@
 #include "Unicode.h"
 #include "gc_ptr.h"
 #include "gc.h"
+#include "ICrypto.h"
 
 #endif
