@@ -7,7 +7,7 @@ namespace System
 {
 	Int32 Char::CompareTo(const Object& obj) const
 	{
-		if (is<const Char&>(obj))
+		if (is<const Char>(obj))
 		{
 			var c = as<const Char&>(obj);
 
@@ -101,7 +101,7 @@ namespace System
 
 	Boolean Char::Equals(Object& obj) const
 	{
-		if (is<Char&>(obj))
+		if (is<Char>(obj))
 			return Equals(as<Char&>(obj));
 		else
 			return false;

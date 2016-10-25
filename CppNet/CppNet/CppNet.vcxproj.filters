@@ -121,6 +121,9 @@
     <Filter Include="헤더 파일\System\Runtime\Remoting\Messaging">
       <UniqueIdentifier>{e2d2954a-c8f9-4221-acab-a6c9b6446384}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\System\Text">
+      <UniqueIdentifier>{d404be52-affc-4a1b-9112-4b8ffee98f23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -498,6 +501,12 @@
     <ClInclude Include="CppNet\ICrypto.h">
       <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\KMC\SorCrypto.h">
+      <Filter>헤더 파일\CppNet\KMC</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Nullable.h">
+      <Filter>헤더 파일\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -599,6 +608,12 @@
     <ClCompile Include="System\_String.cpp">
       <Filter>소스 파일\System</Filter>
     </ClCompile>
+    <ClCompile Include="CppNet\KMC\SorCrypto.cpp">
+      <Filter>소스 파일\CppNet\KMC</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Text\Encoding.cpp">
+      <Filter>소스 파일\System\Text</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="System\Collections\Generic\Queue.inl">
@@ -665,6 +680,12 @@
       <Filter>인라인 구현 파일\CppNet</Filter>
     </None>
     <None Include="System\_String.inl">
+      <Filter>인라인 구현 파일\System</Filter>
+    </None>
+    <None Include="CppNet\KMC\SorCrypto.inl">
+      <Filter>인라인 구현 파일\CppNet\KMC</Filter>
+    </None>
+    <None Include="System\Nullable.inl">
       <Filter>인라인 구현 파일\System</Filter>
     </None>
   </ItemGroup>

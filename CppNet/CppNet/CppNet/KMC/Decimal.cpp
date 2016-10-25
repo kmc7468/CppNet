@@ -119,7 +119,7 @@ Decimal Decimal::Parse(const String& str)
 
 Boolean Decimal::operator==(const Object& obj) const
 {
-	if (is<const Decimal, std::remove_reference<const Object&>::type>())
+	if (is<const Decimal>(obj))
 	{
 		var a = as<const Decimal&>(obj);
 

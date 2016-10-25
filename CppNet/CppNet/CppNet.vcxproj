@@ -28,6 +28,7 @@
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
     <ClInclude Include="CppNet\KMC\CppNet.KMC.h" />
+    <ClInclude Include="CppNet\KMC\SorCrypto.h" />
     <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="CppNet\Unicode9_0.h" />
     <ClInclude Include="Defines.h" />
@@ -101,6 +102,7 @@
     <ClInclude Include="System\KeyValuePair.h" />
     <ClInclude Include="System\Math.h" />
     <ClInclude Include="System\NotImplementedException.h" />
+    <ClInclude Include="System\Nullable.h" />
     <ClInclude Include="System\Object.h" />
     <ClInclude Include="System\Random.h" />
     <ClInclude Include="System\Runtime\InteropServices\System.Runtime.InteropServices.h" />
@@ -148,6 +150,7 @@
   <ItemGroup>
     <ClCompile Include="CppNet\gc.cpp" />
     <ClCompile Include="CppNet\KMC\Decimal.cpp" />
+    <ClCompile Include="CppNet\KMC\SorCrypto.cpp" />
     <ClCompile Include="CppNet\Unicode.cpp" />
     <ClCompile Include="CppNet\Unicode9_0.cpp" />
     <ClCompile Include="System\ArgumentException.cpp" />
@@ -175,6 +178,7 @@
     <ClCompile Include="System\Random.cpp" />
     <ClCompile Include="System\Runtime\Remoting\Contexts\Context.cpp" />
     <ClCompile Include="System\SystemException.cpp" />
+    <ClCompile Include="System\Text\Encoding.cpp" />
     <ClCompile Include="System\Threading\WaitHandle.cpp" />
     <ClCompile Include="System\TimeSpan.cpp" />
     <ClCompile Include="System\Version.cpp" />
@@ -186,6 +190,7 @@
     <None Include="CppNet\gc_ptr.inl" />
     <None Include="CppNet\KMC\Decimal.inl" />
     <None Include="CppNet\KMC\Fraction.inl" />
+    <None Include="CppNet\KMC\SorCrypto.inl" />
     <None Include="CppNet\Unicode.inl" />
     <None Include="System\BitConverter.inl" />
     <None Include="System\Char.inl" />
@@ -199,6 +204,7 @@
     <None Include="System\IO\File.inl" />
     <None Include="System\IO\Stream.inl" />
     <None Include="System\Math.inl" />
+    <None Include="System\Nullable.inl" />
     <None Include="System\Object.inl" />
     <None Include="System\TimeSpan.inl" />
     <None Include="System\Version.inl" />

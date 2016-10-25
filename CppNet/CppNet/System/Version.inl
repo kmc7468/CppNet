@@ -10,7 +10,7 @@ Object Version::Clone()
  
 Int32 Version::CompareTo(const Object& obj) const
 {
-	if (is<const Version&>(obj))
+	if (is<const Version>(obj))
 	{
 		return CompareTo(as<const Version&>(obj));
 	}
@@ -49,7 +49,7 @@ Int32 Version::CompareTo(const Version& obj) const
 
 Boolean Version::Equals(Object& obj) const
 {
-	if (is<Version&>(obj))
+	if (is<Version>(obj))
 		return Equals(as<Version&>(obj));
 	else return false;
 }

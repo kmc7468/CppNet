@@ -16,7 +16,7 @@ namespace System
 
 	Int32 DoubleT::CompareTo(const Object& obj) const
 	{
-		if (is<const DoubleT&>(obj))
+		if (is<const DoubleT>(obj))
 		{
 			var d = as<const DoubleT&>(obj);
 
@@ -35,14 +35,12 @@ namespace System
 
 	Int32 DoubleT::CompareTo(const DoubleT& obj) const
 	{
-		var d = as<const DoubleT&>(obj);
-
-		if (dat < d) return -1;
-		if (dat > d) return 1;
-		if (dat == d) return 0;
+		if (dat < obj.dat) return -1;
+		if (dat > obj.dat) return 1;
+		if (dat == obj.dat) return 0;
 
 		if (IsNaN(dat))
-			return (IsNaN(d) ? 0 : -1);
+			return (IsNaN(obj.dat) ? 0 : -1);
 		else
 			return 1;
 	}
@@ -211,7 +209,7 @@ namespace System
 
 	Boolean DoubleT::operator==(const Object& obj) const
 	{
-		if (is<const DoubleT&>(obj))
+		if (is<const DoubleT>(obj))
 		{
 			var d = as<const DoubleT&>(obj);
 
@@ -224,7 +222,7 @@ namespace System
 
 	Boolean DoubleT::operator!=(const Object& obj) const
 	{
-		if (is<const DoubleT&>(obj))
+		if (is<const DoubleT>(obj))
 		{
 			var d = as<const DoubleT&>(obj);
 

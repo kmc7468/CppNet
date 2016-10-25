@@ -28,7 +28,7 @@ namespace System
 
 		Boolean PointF::operator==(const Object& obj) const
 		{
-			if (is<const PointF&>(obj))
+			if (is<const PointF>(obj))
 			{
 				const PointF& p = dynamic_cast<const PointF&>(obj);
 
@@ -42,7 +42,7 @@ namespace System
 
 		Boolean PointF::operator!=(const Object& obj) const
 		{
-			if (is<const PointF&>(obj))
+			if (is<const PointF>(obj))
 			{
 				const PointF& p = dynamic_cast<const PointF&>(obj);
 

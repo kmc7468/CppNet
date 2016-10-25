@@ -39,7 +39,7 @@ namespace System
 
 		Boolean SizeF::Equals(Object& obj) const
 		{
-			if (_is(dref(Object&), SizeF))
+			if (_is(obj, SizeF))
 			{
 				auto a = _as(obj, SizeF&);
 

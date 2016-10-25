@@ -106,7 +106,7 @@ namespace System
 
 	Boolean Convert::ToBoolean(const Object& obj, std::unique_ptr<IFormatProvider> format)
 	{
-		if (is<const IConvertible&>(obj))
+		if (is<const IConvertible>(obj))
 		{
 			// TODO
 			throw NotImplementedException();
@@ -254,7 +254,7 @@ namespace System
 
 	Byte Convert::ToByte(const Object& obj, std::unique_ptr<IFormatProvider> format)
 	{
-		if (is<const IConvertible&>(obj))
+		if (is<const IConvertible>(obj))
 		{
 			// TODO
 			throw NotImplementedException();
