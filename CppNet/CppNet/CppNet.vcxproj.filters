@@ -504,9 +504,6 @@
     <ClInclude Include="CppNet\KMC\SorCrypto.h">
       <Filter>헤더 파일\CppNet\KMC</Filter>
     </ClInclude>
-    <ClInclude Include="System\Nullable.h">
-      <Filter>헤더 파일\System</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="System\Drawing\Point.cpp">
@@ -684,9 +681,6 @@
     </None>
     <None Include="CppNet\KMC\SorCrypto.inl">
       <Filter>인라인 구현 파일\CppNet\KMC</Filter>
-    </None>
-    <None Include="System\Nullable.inl">
-      <Filter>인라인 구현 파일\System</Filter>
     </None>
   </ItemGroup>
 </Project>

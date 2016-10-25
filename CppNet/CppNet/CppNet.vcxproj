@@ -102,7 +102,6 @@
     <ClInclude Include="System\KeyValuePair.h" />
     <ClInclude Include="System\Math.h" />
     <ClInclude Include="System\NotImplementedException.h" />
-    <ClInclude Include="System\Nullable.h" />
     <ClInclude Include="System\Object.h" />
     <ClInclude Include="System\Random.h" />
     <ClInclude Include="System\Runtime\InteropServices\System.Runtime.InteropServices.h" />
@@ -204,7 +203,6 @@
     <None Include="System\IO\File.inl" />
     <None Include="System\IO\Stream.inl" />
     <None Include="System\Math.inl" />
-    <None Include="System\Nullable.inl" />
     <None Include="System\Object.inl" />
     <None Include="System\TimeSpan.inl" />
     <None Include="System\Version.inl" />
