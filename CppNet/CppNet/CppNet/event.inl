@@ -2,7 +2,7 @@
 using namespace CppNet;
 
 #include <algorithm>
-#include "../System/Byte.h"
+#include "System/Byte.h"
 
 template<typename TResult, typename... TArgs>
 template<typename... Args>

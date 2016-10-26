@@ -4,8 +4,8 @@
 #include <array>
 
 #include "../Utility.h"
-#include "../System/Object.h"
-#include "../System/Tuple.h"
+#include "System/Object.h"
+#include "System/Tuple.h"
 
 namespace CppNet
 {

@@ -2,9 +2,10 @@
 #define CPPNET_KMC_SORCRYPTO_H
 
 #include "../ICrypto.h"
-#include "../../System/Tuple.h"
-#include "../../System/String.h"
-#include "../../System/Byte.h"
+#include "../System/Tuple.h"
+#include "../System/Tuple.h"
+#include "../System/String.h"
+#include "../System/Byte.h"
 
 namespace CppNet
 {

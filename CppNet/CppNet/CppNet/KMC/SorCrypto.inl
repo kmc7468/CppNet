@@ -1,5 +1,5 @@
 #include "SorCrypto.h"
-using namespace System;
+using namespace CppNet::System;
 using namespace CppNet;
 using namespace CppNet::KMC;
 

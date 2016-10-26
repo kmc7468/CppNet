@@ -5,7 +5,7 @@
 
 #include <vector>
 
-#include "../System/Object.h"
+#include "System/Object.h"
 #include "gc_ptr.h"
 
 #ifndef GC_MAXRAM 

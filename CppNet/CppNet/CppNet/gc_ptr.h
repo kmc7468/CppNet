@@ -5,8 +5,8 @@
 
 #include <memory>
 
-#include "../System/Object.h"
-#include "../System/UInt64.h"
+#include "System/Object.h"
+#include "System/UInt64.h"
 
 namespace CppNet
 {

@@ -1,6 +1,6 @@
 #include "gc.h"
 
-#include "../System/UInt64.h"
+#include "System/UInt64.h"
 using namespace CppNet;
 using namespace System;
 

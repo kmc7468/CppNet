@@ -5,8 +5,8 @@
 
 #include <vector>
 
-#include "../System/Object.h"
-#include "../System/Char.h"
+#include "System/Object.h"
+#include "System/Char.h"
 
 namespace CppNet
 {

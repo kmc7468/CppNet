@@ -3,7 +3,7 @@
 
 #include "Defines.h"
 
-#include "System/Boolean.h"
+#include "CppNet/System/Boolean.h"
 #include "CppNet/event.h"
 
 #include <type_traits>

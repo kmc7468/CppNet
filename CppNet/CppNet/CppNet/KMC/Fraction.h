@@ -6,7 +6,7 @@
 #include <tuple>
 
 #include "../../SystemTypes.h"
-using namespace System;
+using namespace CppNet::System;
 
 #include "Decimal.h"
 
