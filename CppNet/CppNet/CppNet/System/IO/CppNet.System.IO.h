@@ -1,5 +1,5 @@
-#ifndef N_SYSTEM_IO_H
-#define N_SYSTEM_IO_H
+#ifndef N_CPPNET_SYSTEM_IO_H
+#define N_CPPNET_SYSTEM_IO_H
 
 #include "IOException.h"
 #include "FileNotFoundException.h"

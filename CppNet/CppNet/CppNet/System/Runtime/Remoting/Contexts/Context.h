@@ -18,6 +18,8 @@ namespace CppNet
 			{
 				namespace Contexts
 				{
+					interface IContextProperty;
+
 					class Context : public Object
 					{
 					private:

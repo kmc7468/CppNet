@@ -1,5 +1,5 @@
-#ifndef N_SYSTEM_H
-#define N_SYSTEM_H
+#ifndef N_CPPNET_SYSTEM_H
+#define N_CPPNET_SYSTEM_H
 
 #include "../../Language.h"
 #include "../../Utility.h"
@@ -46,5 +46,7 @@
 
 #include "AsyncCallback.h"
 #include "EventHandler.h"
+
+#include "Nullable.h"
 
 #endif

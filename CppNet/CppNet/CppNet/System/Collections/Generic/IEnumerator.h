@@ -3,7 +3,7 @@
 
 #include "../../../../Defines.h"
 
-#include "../../System.h"
+#include "../../CppNet.System.h"
 
 namespace CppNet
 {

@@ -1,5 +1,5 @@
-#ifndef SYSTEM_COLLECTIONS_H
-#define SYSTEM_COLLECTIONS_H
+#ifndef N_CPPNET_SYSTEM_COLLECTIONS_H
+#define N_CPPNET_SYSTEM_COLLECTIONS_H
 
 #include "IEnumerable.h"
 #include "IEnumerator.h"

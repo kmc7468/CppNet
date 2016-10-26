@@ -1,6 +1,0 @@
-#ifndef N_SYSTEM_RUNTIME_INTEROPSERVICES_H
-#define N_SYSTEM_RUNTIME_INTEROPSERVICES_H
-
-#include "_Thread.h"
-
-#endif

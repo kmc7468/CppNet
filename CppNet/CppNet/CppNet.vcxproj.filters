@@ -303,9 +303,6 @@
     <ClInclude Include="CppNet\System\String.h">
       <Filter>헤더 파일\CppNet\System</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\System.h">
-      <Filter>헤더 파일\CppNet\System</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\SystemException.h">
       <Filter>헤더 파일\CppNet\System</Filter>
     </ClInclude>
@@ -351,9 +348,6 @@
     <ClInclude Include="CppNet\System\Collections\IEnumerator.h">
       <Filter>헤더 파일\CppNet\System\Collections</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\Collections\System.Collections.h">
-      <Filter>헤더 파일\CppNet\System\Collections</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\Collections\Generic\ICollection.h">
       <Filter>헤더 파일\CppNet\System\Collections\Generic</Filter>
     </ClInclude>
@@ -375,16 +369,10 @@
     <ClInclude Include="CppNet\System\Collections\Generic\Stack.h">
       <Filter>헤더 파일\CppNet\System\Collections\Generic</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\Collections\Generic\System.Collections.Generic.h">
-      <Filter>헤더 파일\CppNet\System\Collections\Generic</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\ComponentModel\IComponent.h">
       <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\ComponentModel\ISite.h">
-      <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\System\ComponentModel\System.ComponentModel.h">
       <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\Drawing\Point.h">
@@ -396,13 +384,7 @@
     <ClInclude Include="CppNet\System\Drawing\SizeF.h">
       <Filter>헤더 파일\CppNet\System\Drawing</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\Drawing\System.Drawing.h">
-      <Filter>헤더 파일\CppNet\System\Drawing</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\Globalization\CharUnicodeInfo.h">
-      <Filter>헤더 파일\CppNet\System\Globalization</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\System\Globalization\System.Globalization.h">
       <Filter>헤더 파일\CppNet\System\Globalization</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\Globalization\UnicodeCategory.h">
@@ -420,22 +402,13 @@
     <ClInclude Include="CppNet\System\IO\Stream.h">
       <Filter>헤더 파일\CppNet\System\IO</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\IO\System.IO.h">
-      <Filter>헤더 파일\CppNet\System\IO</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\Runtime\InteropServices\_Thread.h">
-      <Filter>헤더 파일\CppNet\System\Runtime\InteropServices</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\System\Runtime\InteropServices\System.Runtime.InteropServices.h">
       <Filter>헤더 파일\CppNet\System\Runtime\InteropServices</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\Runtime\Remoting\Contexts\Context.h">
       <Filter>헤더 파일\CppNet\System\Runtime\Remoting\Contexts</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\Runtime\Remoting\Contexts\IContextProperty.h">
-      <Filter>헤더 파일\CppNet\System\Runtime\Remoting\Contexts</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\System\Runtime\Remoting\Contexts\System.Runtime.Remoting.Contexts.h">
       <Filter>헤더 파일\CppNet\System\Runtime\Remoting\Contexts</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\Runtime\Remoting\Messaging\IMessage.h">
@@ -447,9 +420,6 @@
     <ClInclude Include="CppNet\System\Runtime\Remoting\Messaging\IMessageSink.h">
       <Filter>헤더 파일\CppNet\System\Runtime\Remoting\Messaging</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\Runtime\Remoting\Messaging\System.Runtime.Remoting.Messaging.h">
-      <Filter>헤더 파일\CppNet\System\Runtime\Remoting\Messaging</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\Runtime\Serialization\ISerializable.h">
       <Filter>헤더 파일\CppNet\System\Runtime\Serialization</Filter>
     </ClInclude>
@@ -459,17 +429,8 @@
     <ClInclude Include="CppNet\System\Runtime\Serialization\StreamingContext.h">
       <Filter>헤더 파일\CppNet\System\Runtime\Serialization</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\Runtime\Serialization\System.Runtime.Serialization.h">
-      <Filter>헤더 파일\CppNet\System\Runtime\Serialization</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\Text\Encoding.h">
       <Filter>헤더 파일\CppNet\System\Text</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\System\Text\System.Text.h">
-      <Filter>헤더 파일\CppNet\System\Text</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\System\Threading\System.Threading.h">
-      <Filter>헤더 파일\CppNet\System\Threading</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\Threading\Thread.h">
       <Filter>헤더 파일\CppNet\System\Threading</Filter>
@@ -478,9 +439,6 @@
       <Filter>헤더 파일\CppNet\System\Threading</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\Xml\IXmlNamespaceResolver.h">
-      <Filter>헤더 파일\CppNet\System\Xml</Filter>
-    </ClInclude>
-    <ClInclude Include="CppNet\System\Xml\System.Xml.h">
       <Filter>헤더 파일\CppNet\System\Xml</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\Xml\XmlDocument.h">
@@ -495,14 +453,62 @@
     <ClInclude Include="CppNet\System\Xml\XPath\IXPathNavigable.h">
       <Filter>헤더 파일\CppNet\System\Xml\XPath</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\Xml\XPath\System.Xml.XPath.h">
-      <Filter>헤더 파일\CppNet\System\Xml\XPath</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\Xml\XPath\XPathItem.h">
       <Filter>헤더 파일\CppNet\System\Xml\XPath</Filter>
     </ClInclude>
     <ClInclude Include="CppNet\System\Xml\XPath\XPathNavigator.h">
       <Filter>헤더 파일\CppNet\System\Xml\XPath</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Nullable.h">
+      <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\CppNet.System.h">
+      <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\CppNet.System.Collections.h">
+      <Filter>헤더 파일\CppNet\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\Generic\CppNet.System.Collections.Generic.h">
+      <Filter>헤더 파일\CppNet\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\ComponentModel\CppNet.System.ComponentModel.h">
+      <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Drawing\CppNet.System.Drawing.h">
+      <Filter>헤더 파일\CppNet\System\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Globalization\CppNet.System.Globalization.h">
+      <Filter>헤더 파일\CppNet\System\Globalization</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\IO\CppNet.System.IO.h">
+      <Filter>헤더 파일\CppNet\System\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Xml\CppNet.System.Xml.h">
+      <Filter>헤더 파일\CppNet\System\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Xml\XPath\CppNet.System.Xml.XPath.h">
+      <Filter>헤더 파일\CppNet\System\Xml\XPath</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Threading\CppNet.System.Threading.h">
+      <Filter>헤더 파일\CppNet\System\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Text\CppNet.System.Text.h">
+      <Filter>헤더 파일\CppNet\System\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\InteropServices\CppNet.System.Runtime.InteropServices.h">
+      <Filter>헤더 파일\CppNet\System\Runtime\InteropServices</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\Serialization\CppNet.System.Runtime.Serialization.h">
+      <Filter>헤더 파일\CppNet\System\Runtime\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\Remoting\Contexts\CppNet.System.Runtime.Remoting.Contexts.h">
+      <Filter>헤더 파일\CppNet\System\Runtime\Remoting\Contexts</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\Remoting\Messaging\CppNet.System.Runtime.Remoting.Messaging.h">
+      <Filter>헤더 파일\CppNet\System\Runtime\Remoting\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\ICopy.h">
+      <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -678,6 +684,9 @@
     </None>
     <None Include="CppNet\System\IO\Stream.inl">
       <Filter>인라인 구현 파일\CppNet\System\IO</Filter>
+    </None>
+    <None Include="CppNet\System\Nullable.inl">
+      <Filter>인라인 구현 파일\CppNet\System</Filter>
     </None>
   </ItemGroup>
 </Project>

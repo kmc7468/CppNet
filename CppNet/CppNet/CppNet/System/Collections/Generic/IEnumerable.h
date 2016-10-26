@@ -5,7 +5,7 @@
 
 #include <memory>
 
-#include "../../System.h"
+#include "../../CppNet.System.h"
 #include "IEnumerator.h"
 
 namespace CppNet

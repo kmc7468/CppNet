@@ -34,5 +34,21 @@ int main()
 
 	std::cout << e.Result(3) << std::endl;
 
+	Nullable<int> i;
+
+	std::cout << std::boolalpha << i.HasValue() << std::endl;
+
+	i = 5;
+
+	std::cout << std::boolalpha << i.HasValue() << std::endl;
+
+	std::cout << i.GetValueOrDefault() << std::endl;
+
+	i = nullptr;
+
+	std::cout << std::boolalpha << i.HasValue() << std::endl;
+
+	std::cout << i.GetValueOrDefault(20) << std::endl;
+
 	MAIN_END
 }
