@@ -6,16 +6,7 @@ namespace CppNet
 	{
 		Sor8::Sor8(const String& Key)
 		{
-			key = Key;
-
-			for (Byte i = 0; i < 4; i++)
-			{
-				char c = key.back();
-
-				c += 100;
-
-				key += c;
-			}
+			SetKey(Key);
 		}
 
 		Tuple<Byte*, size_t> Sor8::Encrypt(Byte* bytes, size_t len) const
@@ -54,6 +45,27 @@ namespace CppNet
 			}
 
 			return std::make_tuple(result, len);
+		}
+
+		String Sor8::GetKey() const
+		{
+			String s = key.substr(0, key.length() - 4);
+
+			return s;
+		}
+
+		void Sor8::SetKey(const String& Key)
+		{
+			key = Key;
+
+			for (Byte i = 0; i < 4; i++)
+			{
+				char c = key.back();
+
+				c += 100;
+
+				key += c;
+			}
 		}
 	}
 }

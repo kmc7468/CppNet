@@ -20,6 +20,9 @@ namespace CppNet
 			~Sor8() = default;
 
 		public:
+			String GetKey() const;
+			void SetKey(const String& Key);
+
 			Tuple<Byte*, size_t> Encrypt(Byte* bytes, size_t len) const override;
 			Tuple<Byte*, size_t> Decrypt(Byte* bytes, size_t len) const override;
 		};
