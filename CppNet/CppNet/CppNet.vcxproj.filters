@@ -174,9 +174,6 @@
     <ClInclude Include="CppNet\ICrypto.h">
       <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\KMC\SorCrypto.h">
-      <Filter>헤더 파일\CppNet\KMC</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\_String.h">
       <Filter>헤더 파일\CppNet\System</Filter>
     </ClInclude>
@@ -524,9 +521,6 @@
     <ClCompile Include="CppNet\gc.cpp">
       <Filter>소스 파일\CppNet</Filter>
     </ClCompile>
-    <ClCompile Include="CppNet\KMC\SorCrypto.cpp">
-      <Filter>소스 파일\CppNet\KMC</Filter>
-    </ClCompile>
     <ClCompile Include="CppNet\System\_String.cpp">
       <Filter>소스 파일\CppNet\System</Filter>
     </ClCompile>
@@ -633,9 +627,6 @@
     </None>
     <None Include="CppNet\event.inl">
       <Filter>인라인 구현 파일\CppNet</Filter>
-    </None>
-    <None Include="CppNet\KMC\SorCrypto.inl">
-      <Filter>인라인 구현 파일\CppNet\KMC</Filter>
     </None>
     <None Include="CppNet\System\Collections\DictionaryEntry.inl">
       <Filter>인라인 구현 파일\CppNet\System\Collections</Filter>

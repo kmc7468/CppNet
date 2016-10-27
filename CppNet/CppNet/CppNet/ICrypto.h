@@ -7,12 +7,14 @@
 #include "System/Object.h"
 #include "System/Tuple.h"
 
+using namespace CppNet::System;
+
 namespace CppNet
 {
 	interface ICrypto
 	{
-		virtual System::Tuple<System::Byte*, size_t> Encrypt(System::Byte* bytes, size_t len) const = 0;
-		virtual System::Tuple<System::Byte*, size_t> Decrypt(System::Byte* bytes, size_t len) const = 0;
+		virtual Tuple<Byte*, size_t> Encrypt(Byte* bytes, size_t len) const = 0;
+		virtual Tuple<Byte*, size_t> Decrypt(Byte* bytes, size_t len) const = 0;
 	};
 }
 
