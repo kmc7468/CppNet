@@ -7,6 +7,11 @@
 #include "../ICloneable.h"
 #include "../Collections/Hashtable.h"
 #include "../Int32.h"
+#include "../UInt32.h"
+#include "../String.h"
+#include "../../../SystemTypes.h"
+
+using namespace CppNet::System::Collections;
 
 namespace CppNet
 {
@@ -16,6 +21,52 @@ namespace CppNet
 		{
 			class Encoding abstract : public Object, public ICloneable
 			{
+			private:
+				class CodePageDataItem
+				{
+				public:
+					Int32 m_dataIndex = 0;
+					Int32 m_uiFamilyCodePage = 0;
+					String m_webName = "";
+					String m_headerName = "";
+					String m_bodyName = "";
+					UInt32 m_flags = 0;
+
+					// TODO
+				};
+
+				class InternalEncodingDataItem;
+				class InternalCodePageDataItem;
+
+				class EncodingTable
+				{
+				private:
+					static Int32 lastEncodingItem;
+					static volatile Int32 lastCodePageItem;
+					static Hashtable hashByName;
+					static Hashtable hashByCodePage;
+
+				public:
+					static InternalEncodingDataItem* encodingDataPtr;
+					static InternalCodePageDataItem *codePageDataPtr;
+				};
+
+				class InternalEncodingDataItem
+				{
+				public:
+					SByte* webName = nullptr;
+					UInt16 codePage = 0;
+				};
+
+				class InternalCodePageDataItem
+				{
+				public:
+					UInt16 codePage = 0;
+					UInt16 uiFamilyCodePage = 0;
+					UInt32 flags = 0;
+					SByte* Names = nullptr;
+				};
+
 			private:
 				static volatile Encoding* defaultEncoding;
 				static volatile Encoding* unicodeEncoding;

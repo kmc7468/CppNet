@@ -22,15 +22,12 @@ namespace CppNet
 			~SorCrypto() = default;
 
 		public:
-			inline const System::String& Key() const;
-			inline System::String& Key();
+			inline const System::String& GetKey() const;
+			inline void SetKey(const System::String& key);
 
 		public:
-			/*System::Tuple<System::Byte*, size_t> Encrypt(System::Byte* bytes, size_t len) const override;
-			System::String Encrypt(const System::String& str) const override;
-
+			System::Tuple<System::Byte*, size_t> Encrypt(System::Byte* bytes, size_t len) const override;
 			System::Tuple<System::Byte*, size_t> Decrypt(System::Byte* bytes, size_t len) const override;
-			System::String Decrypt(const System::String& str) const override;*/
 		};
 	}
 }

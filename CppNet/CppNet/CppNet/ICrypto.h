@@ -12,10 +12,7 @@ namespace CppNet
 	interface ICrypto
 	{
 		virtual System::Tuple<System::Byte*, size_t> Encrypt(System::Byte* bytes, size_t len) const = 0;
-		virtual System::String Encrypt(const System::String& str) const = 0;
-
 		virtual System::Tuple<System::Byte*, size_t> Decrypt(System::Byte* bytes, size_t len) const = 0;
-		virtual System::String Decrypt(const System::String& str) const = 0;
 	};
 }
 
