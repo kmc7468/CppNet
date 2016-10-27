@@ -1,0 +1,59 @@
+#include "Sor8.h"
+
+namespace CppNet
+{
+	namespace KMC
+	{
+		Sor8::Sor8(const String& Key)
+		{
+			key = Key;
+
+			for (Byte i = 0; i < 4; i++)
+			{
+				char c = key.back();
+
+				c += 100;
+
+				key += c;
+			}
+		}
+
+		Tuple<Byte*, size_t> Sor8::Encrypt(Byte* bytes, size_t len) const
+		{
+			Byte* result = new Byte[len];
+
+			for (size_t i = 0; i < len; i++)
+			{
+				Byte b = bytes[i];
+
+				b += 30;
+
+				for (size_t j = 0; j < key.length(); j++)
+					b = b ^ key.at(j);
+
+				result[i] = b;
+			}
+
+			return std::make_tuple(result, len);
+		}
+
+		Tuple<Byte*, size_t> Sor8::Decrypt(Byte* bytes, size_t len) const
+		{
+			Byte* result = new Byte[len];
+
+			for (size_t i = 0; i < len; i++)
+			{
+				Byte b = bytes[i];
+
+				for (size_t j = 0; j < key.length(); j++)
+					b = b ^ key.at(j);
+
+				b -= 30;
+
+				result[i] = b;
+			}
+
+			return std::make_tuple(result, len);
+		}
+	}
+}

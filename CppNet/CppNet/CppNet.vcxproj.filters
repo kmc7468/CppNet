@@ -507,6 +507,9 @@
     <ClInclude Include="CppNet\ICopy.h">
       <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\KMC\Sor8.h">
+      <Filter>헤더 파일\CppNet\KMC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -607,6 +610,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Threading\WaitHandle.cpp">
       <Filter>소스 파일\CppNet\System\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\KMC\Sor8.cpp">
+      <Filter>소스 파일\CppNet\KMC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
