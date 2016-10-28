@@ -4,6 +4,6 @@
 #include "Decimal.h"
 #include "Fraction.h"
 
-#include "Sor8.h"
+#include "Sor.h"
 
 #endif

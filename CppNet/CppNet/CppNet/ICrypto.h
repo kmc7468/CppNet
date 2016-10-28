@@ -11,10 +11,11 @@ using namespace CppNet::System;
 
 namespace CppNet
 {
+	template<typename T = Byte>
 	interface ICrypto
 	{
-		virtual Tuple<Byte*, size_t> Encrypt(Byte* bytes, size_t len) const = 0;
-		virtual Tuple<Byte*, size_t> Decrypt(Byte* bytes, size_t len) const = 0;
+		virtual Tuple<T*, size_t> Encrypt(T* bytes, size_t len) const = 0;
+		virtual Tuple<T*, size_t> Decrypt(T* bytes, size_t len) const = 0;
 	};
 }
 

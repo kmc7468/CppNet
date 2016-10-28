@@ -507,7 +507,7 @@
     <ClInclude Include="CppNet\ICopy.h">
       <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\KMC\Sor8.h">
+    <ClInclude Include="CppNet\KMC\Sor.h">
       <Filter>헤더 파일\CppNet\KMC</Filter>
     </ClInclude>
   </ItemGroup>
@@ -611,7 +611,7 @@
     <ClCompile Include="CppNet\System\Threading\WaitHandle.cpp">
       <Filter>소스 파일\CppNet\System\Threading</Filter>
     </ClCompile>
-    <ClCompile Include="CppNet\KMC\Sor8.cpp">
+    <ClCompile Include="CppNet\KMC\Sor.cpp">
       <Filter>소스 파일\CppNet\KMC</Filter>
     </ClCompile>
   </ItemGroup>
@@ -684,6 +684,9 @@
     </None>
     <None Include="CppNet\System\Nullable.inl">
       <Filter>인라인 구현 파일\CppNet\System</Filter>
+    </None>
+    <None Include="CppNet\KMC\Sor.inl">
+      <Filter>인라인 구현 파일\CppNet\KMC</Filter>
     </None>
   </ItemGroup>
 </Project>

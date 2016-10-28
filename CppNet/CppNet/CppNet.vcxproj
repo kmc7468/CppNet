@@ -29,7 +29,7 @@
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
     <ClInclude Include="CppNet\KMC\CppNet.KMC.h" />
-    <ClInclude Include="CppNet\KMC\Sor8.h" />
+    <ClInclude Include="CppNet\KMC\Sor.h" />
     <ClInclude Include="CppNet\System\AppDomain.h" />
     <ClInclude Include="CppNet\System\ArgumentException.h" />
     <ClInclude Include="CppNet\System\AsyncCallback.h" />
@@ -151,7 +151,7 @@
   <ItemGroup>
     <ClCompile Include="CppNet\gc.cpp" />
     <ClCompile Include="CppNet\KMC\Decimal.cpp" />
-    <ClCompile Include="CppNet\KMC\Sor8.cpp" />
+    <ClCompile Include="CppNet\KMC\Sor.cpp" />
     <ClCompile Include="CppNet\System\ArgumentException.cpp" />
     <ClCompile Include="CppNet\System\BitConverter.cpp" />
     <ClCompile Include="CppNet\System\Char.cpp" />
@@ -190,6 +190,7 @@
     <None Include="CppNet\gc_ptr.inl" />
     <None Include="CppNet\KMC\Decimal.inl" />
     <None Include="CppNet\KMC\Fraction.inl" />
+    <None Include="CppNet\KMC\Sor.inl" />
     <None Include="CppNet\System\BitConverter.inl" />
     <None Include="CppNet\System\Char.inl" />
     <None Include="CppNet\System\Collections\DictionaryEntry.inl" />
