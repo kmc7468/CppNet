@@ -4,6 +4,9 @@
 #include "../ICrypto.h"
 #include "../System/Object.h"
 #include "../System/String.h"
+#include "../System/Double.h"
+
+using namespace CppNet::System;
 
 namespace CppNet
 {
@@ -11,6 +14,9 @@ namespace CppNet
 	{
 		class Sor8 : public Object, public ICrypto
 		{
+		public:
+			static const Double Version;
+
 		private:
 			String key = "";
 
