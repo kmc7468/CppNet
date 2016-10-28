@@ -611,9 +611,6 @@
     <ClCompile Include="CppNet\System\Threading\WaitHandle.cpp">
       <Filter>소스 파일\CppNet\System\Threading</Filter>
     </ClCompile>
-    <ClCompile Include="CppNet\KMC\Sor.cpp">
-      <Filter>소스 파일\CppNet\KMC</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="CppNet\KMC\Decimal.inl">

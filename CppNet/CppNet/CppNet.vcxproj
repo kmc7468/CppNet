@@ -151,7 +151,6 @@
   <ItemGroup>
     <ClCompile Include="CppNet\gc.cpp" />
     <ClCompile Include="CppNet\KMC\Decimal.cpp" />
-    <ClCompile Include="CppNet\KMC\Sor.cpp" />
     <ClCompile Include="CppNet\System\ArgumentException.cpp" />
     <ClCompile Include="CppNet\System\BitConverter.cpp" />
     <ClCompile Include="CppNet\System\Char.cpp" />
