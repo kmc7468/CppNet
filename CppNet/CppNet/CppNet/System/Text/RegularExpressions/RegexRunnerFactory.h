@@ -3,18 +3,22 @@
 
 #include "../../Object.h"
 
+#include "RegexRunner.h"
+
 namespace CppNet
 {
 	namespace System
 	{
 		namespace Text
 		{
+			class RegexRunner;
+
 			namespace RegularExpressions
 			{
 				class RegexRunnerFactory : public Object
 				{
 				protected:
-					virtual RegexRunner CreateInstance() const = 0;
+					virtual RegexRunner& CreateInstance() const = 0;
 				};
 			}
 		}

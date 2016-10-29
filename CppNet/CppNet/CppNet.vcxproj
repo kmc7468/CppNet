@@ -121,7 +121,10 @@
     <ClInclude Include="CppNet\System\SystemException.h" />
     <ClInclude Include="CppNet\System\Text\Encoding.h" />
     <ClInclude Include="CppNet\System\Text\CppNet.System.Text.h" />
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\Capture.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\CppNet.System.Text.RegularExpressions.h" />
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\Group.h" />
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\Match.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\Regex.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunner.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunnerFactory.h" />
@@ -181,6 +184,7 @@
     <ClCompile Include="CppNet\System\Runtime\Remoting\Contexts\Context.cpp" />
     <ClCompile Include="CppNet\System\SystemException.cpp" />
     <ClCompile Include="CppNet\System\Text\Encoding.cpp" />
+    <ClCompile Include="CppNet\System\Text\RegularExpressions\RegexRunner.cpp" />
     <ClCompile Include="CppNet\System\Threading\WaitHandle.cpp" />
     <ClCompile Include="CppNet\System\TimeSpan.cpp" />
     <ClCompile Include="CppNet\System\Version.cpp" />
@@ -209,6 +213,7 @@
     <None Include="CppNet\System\Math.inl" />
     <None Include="CppNet\System\Nullable.inl" />
     <None Include="CppNet\System\Object.inl" />
+    <None Include="CppNet\System\Text\RegularExpressions\RegexRunner.inl" />
     <None Include="CppNet\System\TimeSpan.inl" />
     <None Include="CppNet\System\Version.inl" />
     <None Include="CppNet\System\_String.inl" />

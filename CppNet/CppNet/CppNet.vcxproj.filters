@@ -127,6 +127,15 @@
     <Filter Include="헤더 파일\CppNet\System\Text\RegularExpressions">
       <UniqueIdentifier>{cd19452c-4eb6-4317-a27b-4d91f8193f53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\CppNet\System\Text\RegularExpressions">
+      <UniqueIdentifier>{75843b40-2cbd-459f-81fb-30a334fa80e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\CppNet\System\Text">
+      <UniqueIdentifier>{44b73fd9-8064-44bf-ba64-ae00e9e15dd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\CppNet\System\Text\RegularExpressions">
+      <UniqueIdentifier>{e4be68f3-2946-4f15-a9a9-f4183bfaab89}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -528,6 +537,15 @@
     <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunner.h">
       <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\Match.h">
+      <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\Group.h">
+      <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\Capture.h">
+      <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -629,6 +647,9 @@
     <ClCompile Include="CppNet\System\Threading\WaitHandle.cpp">
       <Filter>소스 파일\CppNet\System\Threading</Filter>
     </ClCompile>
+    <ClCompile Include="CppNet\System\Text\RegularExpressions\RegexRunner.cpp">
+      <Filter>소스 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="CppNet\KMC\Decimal.inl">
@@ -702,6 +723,9 @@
     </None>
     <None Include="CppNet\KMC\Sor.inl">
       <Filter>인라인 구현 파일\CppNet\KMC</Filter>
+    </None>
+    <None Include="CppNet\System\Text\RegularExpressions\RegexRunner.inl">
+      <Filter>인라인 구현 파일\CppNet\System\Text\RegularExpressions</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@ namespace CppNet
 		{
 			namespace RegularExpressions
 			{
-				class Regex : public Runtime::Serialization::ISerializable
+				class Regex/* : public Runtime::Serialization::ISerializable*/
 				{
 				protected:
 					String pattern;
