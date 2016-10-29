@@ -1,6 +1,8 @@
 #ifndef CPPNET_ICOPY_H
 #define CPPNET_ICOPY_H
 
+#include "../Defines.h"
+
 #include "../Utility.h"
 
 namespace CppNet

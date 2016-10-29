@@ -1,6 +1,8 @@
 #ifndef CPPNET_SYSTEM_NULLABLE_H
 #define CPPNET_SYSTEM_NULLABLE_H
 
+#include "../../Defines.h"
+
 #include "Object.h"
 #include "../ICopy.h"
 

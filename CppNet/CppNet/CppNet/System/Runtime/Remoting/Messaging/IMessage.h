@@ -1,6 +1,8 @@
 #ifndef SYSTEM_RUNTIME_REMOTING_MESSAGING_IMESSAGE_H
 #define SYSTEM_RUNTIME_REMOTING_MESSAGING_IMESSAGE_H
 
+#include "../../../../../Defines.h"
+
 #include "../../../../../Utility.h"
 
 #include "../../../Collections/IDictionary.h"

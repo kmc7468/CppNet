@@ -1,6 +1,8 @@
 #ifndef SYSTEM_RUNTIME_REMOTING_MESSAGING_IMESSAGECTRL_H
 #define SYSTEM_RUNTIME_REMOTING_MESSAGING_IMESSAGECTRL_H
 
+#include "../../../../../Defines.h"
+
 #include "../../../../../Utility.h"
 #include "IMessage.h"
 

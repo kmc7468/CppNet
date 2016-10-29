@@ -1,6 +1,8 @@
 #ifndef CPPNET_SYSTEM_RUNTIME_SERIALIZATION_IDESERIALIZATIONCALLBACK_H
 #define CPPNET_SYSTEM_RUNTIME_SERIALIZATION_IDESERIALIZATIONCALLBACK_H
 
+#include "../../../../Defines.h"
+
 #include "../../../../Utility.h"
 
 #include "../../Object.h"

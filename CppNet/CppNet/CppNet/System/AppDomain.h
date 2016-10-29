@@ -1,6 +1,8 @@
 #ifndef SYSTEM_APPDOMAIN_H
 #define SYSTEM_APPDOMAIN_H
 
+#include "../../Defines.h"
+
 #include "../../Utility.h"
 
 namespace CppNet

@@ -1,6 +1,8 @@
 #ifndef SYSTEM_IDISPOSABLE_H
 #define SYSTEM_IDISPOSABLE_H
 
+#include "../../Defines.h"
+
 #include "../../Utility.h"
 
 namespace CppNet

@@ -1,6 +1,8 @@
 #ifndef CPPNET_ICRYPTO_H
 #define CPPNET_ICRYPTO_H
 
+#include "../Defines.h"
+
 #include <array>
 
 #include "../Utility.h"

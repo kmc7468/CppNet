@@ -1,6 +1,8 @@
 #ifndef SYSTEM__STRING_H
 #define SYSTEM__STRING_H
 
+#include "../../Defines.h"
+
 #include "Object.h"
 #include "Char.h"
 #include "Text/Encoding.h"

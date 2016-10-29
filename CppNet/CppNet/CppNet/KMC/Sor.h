@@ -1,6 +1,8 @@
 #ifndef CPPNET_KMC_SOR8_H
 #define CPPNET_KMC_SOR8_H
 
+#include "../../Defines.h"
+
 #include "../ICrypto.h"
 #include "../System/Object.h"
 #include "../System/String.h"
