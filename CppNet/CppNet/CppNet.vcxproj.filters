@@ -522,6 +522,12 @@
     <ClInclude Include="CppNet\System\Text\RegularExpressions\Regex.h">
       <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunnerFactory.h">
+      <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunner.h">
+      <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

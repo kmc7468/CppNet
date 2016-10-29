@@ -5,6 +5,8 @@
 
 #include "../../Runtime/Serialization/ISerializable.h"
 
+#include "RegexRunnerFactory.h"
+
 namespace CppNet
 {
 	namespace System
@@ -15,7 +17,8 @@ namespace CppNet
 			{
 				class Regex : public Runtime::Serialization::ISerializable
 				{
-
+				protected:
+					String pattern;
 				};
 			}
 		}
