@@ -19,6 +19,7 @@
 #include "CppNet/System/Runtime/Remoting/Messaging/CppNet.System.Runtime.Remoting.Messaging.h"
 #include "CppNet/System/Runtime/Serialization/CppNet.System.Runtime.Serialization.h"
 #include "CppNet/System/Text/CppNet.System.Text.h"
+#include "CppNet/System/Text/RegularExpressions/CppNet.System.Text.RegularExpressions.h"
 #include "CppNet/System/Threading/CppNet.System.Threading.h"
 #include "CppNet/System/Xml/CppNet.System.Xml.h"
 #include "CppNet/System/Xml/XPath/CppNet.System.Xml.XPath.h"

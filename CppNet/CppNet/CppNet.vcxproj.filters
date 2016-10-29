@@ -124,6 +124,9 @@
     <Filter Include="소스 파일\CppNet\System\Threading">
       <UniqueIdentifier>{b071396f-d470-4d91-84d2-af3eceeac6b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\CppNet\System\Text\RegularExpressions">
+      <UniqueIdentifier>{cd19452c-4eb6-4317-a27b-4d91f8193f53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -512,6 +515,12 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\Runtime\Serialization\IDeserializationCallback.h">
       <Filter>헤더 파일\CppNet\System\Runtime\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\CppNet.System.Text.RegularExpressions.h">
+      <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\Regex.h">
+      <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
