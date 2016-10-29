@@ -108,31 +108,34 @@ getter\
 }\
 } name;
 
-template <typename T, typename U>
-inline System::Boolean is(U& u)
+namespace CppNet
 {
-	/*std::is_base_of<U, T> r;
-
-	System::Boolean result = r();
-
-	if (result) return result;
-	else
+	template <typename T, typename U>
+	inline System::Boolean is(U& u)
 	{
-		std::is_base_of<T, U> r2;
+		/*std::is_base_of<U, T> r;
 
-		return r2();
-	}*/
+		System::Boolean result = r();
 
-	if (T* p = dynamic_cast<T*>(&u))
-		return true;
-	else
-		return false;
-}
+		if (result) return result;
+		else
+		{
+			std::is_base_of<T, U> r2;
 
-template <typename T, typename U>
-inline T as(U& u)
-{
-	return dynamic_cast<T>(u);
+			return r2();
+		}*/
+
+		if (T* p = dynamic_cast<T*>(&u))
+			return true;
+		else
+			return false;
+	}
+
+	template <typename T, typename U>
+	inline T as(U& u)
+	{
+		return dynamic_cast<T>(u);
+	}
 }
 
 #define evnt(del, name) CppNet::event<del> name

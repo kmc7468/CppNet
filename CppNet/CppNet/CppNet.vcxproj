@@ -109,6 +109,7 @@
     <ClInclude Include="CppNet\System\Runtime\Remoting\Messaging\IMessageCtrl.h" />
     <ClInclude Include="CppNet\System\Runtime\Remoting\Messaging\IMessageSink.h" />
     <ClInclude Include="CppNet\System\Runtime\Remoting\Messaging\CppNet.System.Runtime.Remoting.Messaging.h" />
+    <ClInclude Include="CppNet\System\Runtime\Serialization\IDeserializationCallback.h" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\ISerializable.h" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\SerializationInfo.h" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\StreamingContext.h" />

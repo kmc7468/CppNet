@@ -4,5 +4,6 @@
 #include "SerializationInfo.h"
 #include "StreamingContext.h"
 #include "ISerializable.h"
+#include "IDeserializationCallback.h"
 
 #endif

@@ -510,6 +510,9 @@
     <ClInclude Include="CppNet\KMC\Sor.h">
       <Filter>헤더 파일\CppNet\KMC</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\Serialization\IDeserializationCallback.h">
+      <Filter>헤더 파일\CppNet\System\Runtime\Serialization</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

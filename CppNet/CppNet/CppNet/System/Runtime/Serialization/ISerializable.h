@@ -1,9 +1,12 @@
-#ifndef SYSTEM_RUNTIME_ISERIALIZABLE_H
-#define SYSTEM_RUNTIME_ISERIALIZABLE_H
+#ifndef SYSTEM_RUNTIME_SERIALIZATION_ISERIALIZABLE_H
+#define SYSTEM_RUNTIME_SERIALIZATION_ISERIALIZABLE_H
 
 #include "../../../../Defines.h"
 
 #include "../../../../Utility.h"
+
+#include "SerializationInfo.h"
+#include "StreamingContext.h"
 
 namespace CppNet
 {
