@@ -19,7 +19,7 @@ namespace CppNet
 			static const Double Version;
 
 		private:
-			Key key = "";
+			Key key;
 
 		public:
 			Sor() = default;
@@ -35,7 +35,12 @@ namespace CppNet
 		};
 	
 		using Sor8 = Sor<Byte, String>;
+#ifndef WIN32
 		using Sor16 = Sor<UInt16, std::u16string>;
+#else
+		using Sor16 = Sor<wchar_t, std::wstring>;
+#endif
+
 		using Sor32 = Sor<UInt32, std::u32string>;
 	}
 }

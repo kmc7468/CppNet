@@ -2,21 +2,18 @@
 
 int main()
 {
-	std::cout.imbue(locale("korean"));
+	std::wcout.imbue(locale(""));
 
-	Sor8 s("け");
+	wstring org = L"せせせせ";
+	wstring key = L"製劃";
 
-	auto a = s.Encrypt((Byte*)"せ", 1);
+	Sor16 s(key);
 
-	std::cout << (int)(*(std::get<0>(a))) << std::endl;
+	auto a = s.Encrypt(const_cast<wchar_t*>(org.data()), org.length());
 
-	auto b = s.Decrypt(std::get<0>(a), 1);
+	auto b = s.Decrypt(std::get<0>(a), org.length());
 
-	std::cout << (int)(*(std::get<0>(b))) << std::endl;
-
-	String c = s.GetKey();
-
-	std::cout << c << std::endl;
+	std::wcout << std::get<0>(b) << std::endl;
 
 	MAIN_END
 }
