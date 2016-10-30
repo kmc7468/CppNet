@@ -7,6 +7,7 @@
 #include "CppNet/event.h"
 
 #include <type_traits>
+#include <chrono>
 
 #define interface struct
 #define var auto
@@ -142,5 +143,10 @@ namespace CppNet
 
 #define _MaxValue(type) std::numeric_limits<type>::max()
 #define _MinValue(type) std::numeric_limits<type>::min()
+
+#define _CalcTime(codes, result, result_name) std::chrono::system_clock::time_point _CalcTime_A = std::chrono::system_clock::now();\
+codes; \
+std::chrono::system_clock::time_point _CalcTime_B = std::chrono::system_clock::now();\
+result result_name = _CalcTime_B - _CalcTime_A;
 
 #endif

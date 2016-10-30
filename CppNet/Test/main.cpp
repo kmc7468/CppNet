@@ -9,13 +9,15 @@ int main()
 	
 	Console::WriteLine(Math::C);
 
-	std::chrono::system_clock::time_point a = std::chrono::system_clock::now();
+	/*std::chrono::system_clock::time_point a = std::chrono::system_clock::now();
 
 	Console::WriteLine(Math::Energy(Decimal("5")).ToString());
 
 	std::chrono::system_clock::time_point b = std::chrono::system_clock::now();
 
-	std::chrono::duration<Double> c = b - a;
+	std::chrono::duration<Double> c = b - a;*/
+
+	_CalcTime(Console::WriteLine(Math::Energy(Decimal("5")).ToString()), std::chrono::duration<Double>, c)
 
 	Console::WriteLine(c.count());
 
