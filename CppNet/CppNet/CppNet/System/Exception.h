@@ -10,7 +10,7 @@ namespace CppNet
 {
 	namespace System
 	{
-		class Exception : public Object, private std::exception
+		class Exception : public Object, public std::exception
 		{
 		public:
 			class ExceptionData

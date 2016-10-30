@@ -41,8 +41,8 @@ namespace CppNet
 			static const DoubleT NegativeZero;
 
 		public:
-			inline DoubleT& operator=(DoubleT&& d) const;
-			inline DoubleT& operator=(const DoubleT& d) const;
+			inline DoubleT& operator=(DoubleT&& d);
+			inline DoubleT& operator=(const DoubleT& d);
 
 			inline Boolean operator==(const Object& obj) const override;
 			inline Boolean operator!=(const Object& obj) const override;

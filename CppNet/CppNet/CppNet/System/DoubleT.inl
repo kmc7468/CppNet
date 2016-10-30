@@ -199,14 +199,18 @@ namespace CppNet
 			return dat;
 		}
 
-		DoubleT& DoubleT::operator=(DoubleT&& d) const
+		DoubleT& DoubleT::operator=(DoubleT&& d)
 		{
-			return DoubleT(d);
+			dat = std::move(d.dat);
+
+			return *this;
 		}
 
-		DoubleT& DoubleT::operator=(const DoubleT& d) const
+		DoubleT& DoubleT::operator=(const DoubleT& d)
 		{
-			return DoubleT(d);
+			dat = d.dat;
+
+			return *this;
 		}
 
 		Boolean DoubleT::operator==(const Object& obj) const

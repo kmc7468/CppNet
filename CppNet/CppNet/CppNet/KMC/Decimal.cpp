@@ -410,16 +410,16 @@ Decimal Decimal::operator+(const Decimal& d) const
 	// a가 양수일 때
 	else if (!a.isN && b.isN)
 	{
-		Decimal d = b;
-		d.isN = false;
-		c = a - d;
+		Decimal _d = b;
+		_d.isN = false;
+		c = a - _d;
 	}
 	// b가 양수일 때
 	else if (a.isN && !b.isN)
 	{
-		Decimal d = a;
-		d.isN = false;
-		c = b - d;
+		Decimal _d = a;
+		_d.isN = false;
+		c = b - _d;
 	}
 
 	c.Clean();
@@ -539,7 +539,7 @@ Decimal Decimal::operator-(const Decimal& d) const
 	if (!(bigger.mInteger[0] >> 4))
 		smaller.mInteger[0] &= 0x0F;
 
-	Decimal& ret = bigger + smaller;
+	Decimal ret = bigger + smaller;
 	//맨 앞자리는 0 1 혹은 1 ? 입니다.
 	//1을 지워줍니다.
 	if (ret.mInteger[0] >> 4)

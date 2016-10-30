@@ -28,14 +28,20 @@ namespace CppNet
 			seed = sNewRandom.seed;
 		}
 
-		Random Random::operator=(Random &&sNewRandom)
+		Random& Random::operator=(Random &&sNewRandom)
 		{
-			return Random(*this);
+			type = std::move(sNewRandom.type);
+			seed = std::move(sNewRandom.seed);
+
+			return *this;
 		}
 
-		Random Random::operator=(const Random &sNewRandom)
+		Random& Random::operator=(const Random &sNewRandom)
 		{
-			return Random(*this);
+			type = sNewRandom.type;
+			seed = sNewRandom.seed;
+
+			return *this;
 		}
 
 		Int64 Random::Next() const
