@@ -16,6 +16,8 @@ namespace CppNet
 		{
 			namespace RegularExpressions
 			{
+				class Regex;
+
 				class RegexRunner abstract : public Object
 				{
 				protected:
@@ -37,8 +39,8 @@ namespace CppNet
 
 					Int32 runtrackcount;
 
-					Match runmatch;
-					Regex runregex;
+					Match* runmatch = nullptr;
+					Regex* runregex = nullptr;
 
 				private:
 					Int32 timeout;
@@ -52,8 +54,8 @@ namespace CppNet
 					Int32 timeoutChecksToSkip;
 
 				protected:
-					inline Match Scan(Regex regex, String text, Int32 textbeg, Int32 textend, Int32 textstart, Int32 prevlen, Boolean quick);
-					Match Scan(Regex regex, String text, Int32 textbeg, Int32 textend, Int32 textstart, Int32 prevlen, Boolean quick, TimeSpan timeout);
+					inline Match Scan(const Regex& regex, String text, Int32 textbeg, Int32 textend, Int32 textstart, Int32 prevlen, Boolean quick);
+					Match Scan(const Regex& regex, String text, Int32 textbeg, Int32 textend, Int32 textstart, Int32 prevlen, Boolean quick, TimeSpan timeout);
 				};
 			}
 		}

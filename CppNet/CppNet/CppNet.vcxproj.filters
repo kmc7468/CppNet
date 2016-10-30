@@ -549,6 +549,9 @@
     <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexOptions.h">
       <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Threading\Timeout.h">
+      <Filter>헤더 파일\CppNet\System\Threading</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -652,6 +655,12 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Text\RegularExpressions\RegexRunner.cpp">
       <Filter>소스 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Text\RegularExpressions\Regex.cpp">
+      <Filter>소스 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Threading\Timeout.cpp">
+      <Filter>소스 파일\CppNet\System\Threading</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

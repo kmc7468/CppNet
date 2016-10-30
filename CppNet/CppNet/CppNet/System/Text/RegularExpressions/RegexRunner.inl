@@ -13,7 +13,7 @@ namespace CppNet
 		{
 			namespace RegularExpressions
 			{
-				Match RegexRunner::Scan(Regex regex, String text, Int32 textbeg, Int32 textend, Int32 textstart, Int32 prevlen, Boolean quick)
+				Match RegexRunner::Scan(const Regex& regex, String text, Int32 textbeg, Int32 textend, Int32 textstart, Int32 prevlen, Boolean quick)
 				{
 					return Scan(regex, text, textbeg, textend, textstart, prevlen, quick, TimeSpan(std::numeric_limits<Int64>::max() - 1));
 					// FIXME: Timeout - Timespan.FromMilliseconds(Int32.MaxValue - 1)

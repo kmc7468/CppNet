@@ -22,6 +22,14 @@ namespace CppNet
 					String pattern;
 					RegexRunnerFactory* factory = nullptr;
 					RegexOptions roptions = RegexOptions::None;
+
+					TimeSpan internalMatchTimeout = 0;
+
+				private:
+					static const TimeSpan MaximumMatchTimeout;
+
+				public:
+					static const TimeSpan InfiniteMatchTimeout;
 				};
 			}
 		}
