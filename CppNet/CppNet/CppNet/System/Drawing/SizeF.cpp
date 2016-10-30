@@ -39,11 +39,11 @@ namespace CppNet
 				return (Width == 0.0 && Height == 0.0);
 			}
 
-			Boolean SizeF::Equals(Object& obj) const
+			Boolean SizeF::Equals(const Object& obj) const
 			{
-				if (_is(obj, SizeF))
+				if (_is(obj, const SizeF))
 				{
-					auto a = _as(obj, SizeF&);
+					auto a = _as(obj, const SizeF&);
 
 					if (Width == a.Width && Height == a.Height)
 						return true;

@@ -20,8 +20,8 @@ namespace CppNet
 			virtual Boolean operator!=(const Object& obj) const;
 
 		public:
-			virtual inline Boolean Equals(Object& obj) const;
-			static inline Boolean Equals(Object& obj, Object& obj2);
+			virtual inline Boolean Equals(const Object& obj) const;
+			static inline Boolean Equals(const Object& obj, const Object& obj2);
 
 			static inline Boolean ReferenceEquals(Object& obj, Object& obj2);
 

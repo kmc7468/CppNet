@@ -33,7 +33,7 @@ namespace CppNet
 			inline Int32 CompareTo(const Object& obj) const override;
 			inline Int32 CompareTo(const Version& obj) const override;
 			inline Boolean Equals(const Version& obj) const override;
-			inline Boolean Equals(Object& obj) const override;
+			inline Boolean Equals(const Object& obj) const override;
 
 		public:
 			Boolean operator==(const Object& obj) const override;

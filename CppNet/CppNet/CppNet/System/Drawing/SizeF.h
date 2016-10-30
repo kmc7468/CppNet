@@ -49,7 +49,7 @@ namespace CppNet
 				// TODO ToSize
 
 				inline String ToString() const override;
-				Boolean Equals(Object& obj) const override;
+				Boolean Equals(const Object& obj) const override;
 			};
 		}
 	}

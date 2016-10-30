@@ -47,10 +47,10 @@ Int32 Version::CompareTo(const Version& obj) const
 	return 0;
 }
 
-Boolean Version::Equals(Object& obj) const
+Boolean Version::Equals(const Object& obj) const
 {
-	if (is<Version>(obj))
-		return Equals(as<Version&>(obj));
+	if (is<const Version>(obj))
+		return Equals(as<const Version&>(obj));
 	else return false;
 }
 

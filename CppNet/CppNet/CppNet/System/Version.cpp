@@ -64,12 +64,12 @@ Version::Version(const Version& ver)
 
 Boolean Version::operator==(const Object& obj) const
 {
-	return Equals(*const_cast<Object*>(&obj));
+	return Equals(*const_cast<const Object*>(&obj));
 }
 
 Boolean Version::operator!=(const Object& obj) const
 {
-	return !Equals(*const_cast<Object*>(&obj));
+	return !Equals(*const_cast<const Object*>(&obj));
 }
 
 Version Version::Parse(const String& input)

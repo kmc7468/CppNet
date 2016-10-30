@@ -37,7 +37,7 @@ IntPtr::IntPtr(IntPtr&& value)
 	this->value = std::move(value.value);
 }
 
-Boolean IntPtr::Equals(Object& obj) const
+Boolean IntPtr::Equals(const Object& obj) const
 {
 	return operator==(obj);
 }

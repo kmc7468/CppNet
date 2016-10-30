@@ -30,7 +30,7 @@ namespace CppNet
 			IntPtr() = default;
 
 		public:
-			Boolean Equals(Object& obj) const override;
+			Boolean Equals(const Object& obj) const override;
 			Boolean operator==(const Object& obj) const override;
 			Boolean operator!=(const Object& obj) const override;
 
