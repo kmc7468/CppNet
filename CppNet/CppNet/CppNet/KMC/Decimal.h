@@ -50,9 +50,9 @@ namespace CppNet
 		public:
 			Decimal();
 			Decimal(const String& str);
-			Decimal(Int64 integer);
+			explicit Decimal(Int64 integer);
 			Decimal(Int64 integer, const String& real);
-			explicit Decimal(Double real);
+			Decimal(Double real);
 			Decimal(Decimal&& d);
 			Decimal(const Decimal& d);
 			~Decimal() = default;

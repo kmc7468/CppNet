@@ -1,9 +1,10 @@
 # CppNet
-.Net framework Classes for C++14
+.Net framework Classes for C++
 
 ## 설명
-.Net framework에 있는 기능들을 C++14에 있는 기능들을 이용해 구현했습니다. 최대한 비슷하게 구현하게 노력하고 있으나 일부 기능이 누락되거나 .Net framework 와 100% 똑같게 작동하지 않을 수 있습니다.<br>
-타겟 버전: .Net framework 4.6
+.Net framework에 있는 기능들을 C++에 있는 기능들을 이용해 구현했습니다. 최대한 비슷하게 구현하게 노력하고 있으나 일부 기능이 누락되거나 .Net framework 와 100% 똑같게 작동하지 않을 수 있습니다.<br>
+타겟 버전: .Net framework 4.6<br>
+C++ 표준: C++17 표준
 
 ## 레퍼런스 페이지
 활용 예제나 자세한 설명 등은 CNWiki(CppNet Wiki)를 참조하십시오.<br>

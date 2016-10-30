@@ -5,6 +5,9 @@
 
 #include "../../Utility.h"
 
+#include "Object.h"
+#include "Type.h"
+
 namespace CppNet
 {
 	namespace System

@@ -136,6 +136,15 @@
     <Filter Include="인라인 구현 파일\CppNet\System\Text\RegularExpressions">
       <UniqueIdentifier>{e4be68f3-2946-4f15-a9a9-f4183bfaab89}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\CppNet\System\Windows">
+      <UniqueIdentifier>{12aa4d24-ae0b-47a2-a2d9-3660900215b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\CppNet\System\Windows\Forms">
+      <UniqueIdentifier>{51066cb6-ddd5-4b8a-a905-d6d81720b635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CppNet\System\ComponentModel">
+      <UniqueIdentifier>{919def75-4594-49bb-a7ff-21119827b006}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -552,6 +561,18 @@
     <ClInclude Include="CppNet\System\Threading\Timeout.h">
       <Filter>헤더 파일\CppNet\System\Threading</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Windows\Forms\Control.h">
+      <Filter>헤더 파일\CppNet\System\Windows\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Windows\Forms\CppNet.System.Windows.Forms.h">
+      <Filter>헤더 파일\CppNet\System\Windows\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\ComponentModel\Component.h">
+      <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\ComponentModel\EventHandlerList.h">
+      <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -661,6 +682,12 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Threading\Timeout.cpp">
       <Filter>소스 파일\CppNet\System\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\ComponentModel\Component.cpp">
+      <Filter>소스 파일\CppNet\System\ComponentModel</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\ComponentModel\EventHandlerList.cpp">
+      <Filter>소스 파일\CppNet\System\ComponentModel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,19 +1,23 @@
 #include <CppNet/CppNet.h>
 
+#include <chrono>
+
 int main()
 {
 	std::wcout.imbue(locale(""));
+	std::wcin.imbue(locale(""));
+	
+	Console::WriteLine(Math::C);
 
-	wstring org = L"六六六六";
-	wstring key = L"擠傍";
+	std::chrono::system_clock::time_point a = std::chrono::system_clock::now();
 
-	Sor16 s(key);
+	Console::WriteLine(Math::Energy(Decimal("5")).ToString());
 
-	auto a = s.Encrypt(const_cast<wchar_t*>(org.data()), org.length());
+	std::chrono::system_clock::time_point b = std::chrono::system_clock::now();
 
-	auto b = s.Decrypt(std::get<0>(a), org.length());
+	std::chrono::duration<Double> c = b - a;
 
-	std::wcout << std::get<0>(b) << std::endl;
+	Console::WriteLine(c.count());
 
 	MAIN_END
 }

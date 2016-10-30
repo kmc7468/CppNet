@@ -1,5 +1,8 @@
 #include "Math.h"
 
+#include <string>
+using namespace std;
+
 namespace CppNet
 {
 	namespace System
@@ -276,6 +279,11 @@ namespace CppNet
 			}
 
 			return v;
+		}
+
+		KMC::Decimal Math::Energy(KMC::Decimal m)
+		{
+			return m * "18446744072314778980"s;
 		}
 	}
 }

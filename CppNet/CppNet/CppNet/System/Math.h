@@ -5,6 +5,8 @@
 
 #include "../../SystemTypes.h"
 
+#include "../KMC/Decimal.h"
+
 #include <cmath>
 
 namespace CppNet
@@ -26,6 +28,8 @@ namespace CppNet
 		public:
 			static const Double PI;
 			static const Double E;
+			static const Int32 C;
+			static const UInt64 C2;
 
 			static inline Double Abs(Double d);
 			static inline Int64 Abs(Int64 integer);
@@ -77,6 +81,8 @@ namespace CppNet
 			static inline Double Truncaste(Double d);
 
 			static inline UInt64 Factorial(UInt64 i);
+
+			static inline KMC::Decimal Energy(KMC::Decimal m);
 		};
 	}
 }

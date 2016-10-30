@@ -23,6 +23,7 @@
 #include "CppNet/System/Threading/CppNet.System.Threading.h"
 #include "CppNet/System/Xml/CppNet.System.Xml.h"
 #include "CppNet/System/Xml/XPath/CppNet.System.Xml.XPath.h"
+#include "CppNet/System/Windows/Forms/CppNet.System.Windows.Forms.h"
 
 #include "CppNet/CppNet.h"
 #include "CppNet/KMC/CppNet.KMC.h"
