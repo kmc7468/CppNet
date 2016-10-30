@@ -126,6 +126,7 @@
     <ClInclude Include="CppNet\System\Text\RegularExpressions\Group.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\Match.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\Regex.h" />
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexOptions.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunner.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunnerFactory.h" />
     <ClInclude Include="CppNet\System\Threading\CppNet.System.Threading.h" />

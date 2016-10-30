@@ -546,6 +546,9 @@
     <ClInclude Include="CppNet\System\Text\RegularExpressions\Capture.h">
       <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexOptions.h">
+      <Filter>헤더 파일\CppNet\System\Text\RegularExpressions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

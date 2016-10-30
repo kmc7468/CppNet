@@ -6,6 +6,7 @@
 #include "../../Runtime/Serialization/ISerializable.h"
 
 #include "RegexRunnerFactory.h"
+#include "RegexOptions.h"
 
 namespace CppNet
 {
@@ -19,6 +20,8 @@ namespace CppNet
 				{
 				protected:
 					String pattern;
+					RegexRunnerFactory* factory = nullptr;
+					RegexOptions roptions = RegexOptions::None;
 				};
 			}
 		}

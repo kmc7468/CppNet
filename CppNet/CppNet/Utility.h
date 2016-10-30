@@ -140,4 +140,7 @@ namespace CppNet
 
 #define evnt(del, name) CppNet::event<del> name
 
+#define _MaxValue(type) std::numeric_limits<type>::max()
+#define _MinValue(type) std::numeric_limits<type>::min()
+
 #endif

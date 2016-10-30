@@ -55,3 +55,33 @@ Double TimeSpan::TotalSeconds() const
 {
 	return (Double)ticks * SecondsPerTick;
 }
+
+TimeSpan TimeSpan::FromDays(Double value)
+{
+	return Interval(value, MillisPerDay);
+}
+
+TimeSpan TimeSpan::FromHours(Double value)
+{
+	return Interval(value, MillisPerHour);
+}
+
+TimeSpan TimeSpan::FromMinutes(Double value)
+{
+	return Interval(value, MillisPerMinute);
+}
+
+TimeSpan TimeSpan::FromSeconds(Double value)
+{
+	return Interval(value, MillisPerSecond);
+}
+
+TimeSpan TimeSpan::FromMilliseconds(Double value)
+{
+	return Interval(value, 1);
+}
+
+TimeSpan TimeSpan::FromTicks(Int64 ticks)
+{
+	return ticks;
+}

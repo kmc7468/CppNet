@@ -1,5 +1,8 @@
 #include "TimeSpan.h"
 
+#include "DoubleT.h"
+#include "ArgumentException.h"
+
 namespace CppNet
 {
 	namespace System
@@ -10,11 +13,20 @@ namespace CppNet
 		const Int64 TimeSpan::TicksPerMinute = 600000000;
 		const Int64 TimeSpan::TicksPerSecond = 10000000;
 
+		const TimeSpan TimeSpan::Zero = TimeSpan(0);
+		const TimeSpan TimeSpan::MaxValue = TimeSpan(_MaxValue(Int64));
+		const TimeSpan TimeSpan::MinValue = TimeSpan(_MinValue(Int64));
+
 		const Double TimeSpan::DaysPerTick = 1.0 / TimeSpan::TicksPerDay;
 		const Double TimeSpan::HoursPerTick = 1.0 / TimeSpan::TicksPerHour;
 		const Double TimeSpan::MillisecondsPerTick = 1.0 / TimeSpan::TicksPerMillisecond;
 		const Double TimeSpan::MinutesPerTick = 1.0 / TimeSpan::TicksPerMinute;
 		const Double TimeSpan::SecondsPerTick = 1.0 / TimeSpan::TicksPerSecond;
+
+		const Int32 TimeSpan::MillisPerSecond = 1000;
+		const Int32 TimeSpan::MillisPerMinute = TimeSpan::MillisPerSecond * 60;
+		const Int32 TimeSpan::MillisPerHour = TimeSpan::MillisPerMinute * 60;
+		const Int32 TimeSpan::MillisPerDay = TimeSpan::MillisPerHour * 24;
 
 		TimeSpan::TimeSpan(Int32 hour, Int32 min, Int32 sec)
 		{
@@ -51,36 +63,6 @@ namespace CppNet
 		Boolean TimeSpan::Equals(const TimeSpan& t1, const TimeSpan& t2)
 		{
 			return (Compare(t1, t2) == 0);
-		}
-
-		TimeSpan TimeSpan::FromDays(Double value)
-		{
-			return TimeSpan(static_cast<Int64>(value * TicksPerDay));
-		}
-
-		TimeSpan TimeSpan::FromHours(Double value)
-		{
-			return TimeSpan(static_cast<Int64>(value * TicksPerHour));
-		}
-
-		TimeSpan TimeSpan::FromMilliseconds(Double value)
-		{
-			return TimeSpan(static_cast<Int64>(value * TicksPerMillisecond));
-		}
-
-		TimeSpan TimeSpan::FromMinutes(Double value)
-		{
-			return TimeSpan(static_cast<Int64>(value * TicksPerMinute));
-		}
-
-		TimeSpan TimeSpan::FromSeconds(Double value)
-		{
-			return TimeSpan(static_cast<Int64>(value * TicksPerSecond));
-		}
-
-		TimeSpan TimeSpan::FromTicks(Int64 value)
-		{
-			return TimeSpan(value);
 		}
 
 		Int32 TimeSpan::CompareTo(const Object& obj) const
@@ -157,6 +139,17 @@ namespace CppNet
 		TimeSpan TimeSpan::operator-(const TimeSpan& value) const
 		{
 			return Subtract(value);
+		}
+
+		TimeSpan TimeSpan::Interval(Double value, Int32 scale)
+		{
+			if (DoubleT::IsNaN(value))
+				throw ArgumentException(); // FIXME ¾ð¾î
+
+			Double tmp = value * scale;
+			Double millis = tmp + (value >= 0 ? 0.5 : -0.5);
+
+			return TimeSpan((Int64)millis * TicksPerMillisecond);
 		}
 	}
 }

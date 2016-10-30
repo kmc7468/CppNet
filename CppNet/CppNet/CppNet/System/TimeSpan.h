@@ -26,12 +26,21 @@ namespace CppNet
 			static const Int64 TicksPerMinute;
 			static const Int64 TicksPerSecond;
 
+			static const TimeSpan Zero;
+			static const TimeSpan MaxValue;
+			static const TimeSpan MinValue;
+
 		private:
 			static const Double DaysPerTick;
 			static const Double HoursPerTick;
 			static const Double MillisecondsPerTick;
 			static const Double MinutesPerTick;
 			static const Double SecondsPerTick;
+
+			static const Int32 MillisPerSecond;
+			static const Int32 MillisPerMinute;
+			static const Int32 MillisPerHour;
+			static const Int32 MillisPerDay;
 
 		public:
 			TimeSpan(Int32 hour, Int32 min, Int32 sec);
@@ -58,13 +67,6 @@ namespace CppNet
 		public:
 			static Int32 Compare(const TimeSpan& t1, const TimeSpan& t2);
 			static Boolean Equals(const TimeSpan& t1, const TimeSpan& t2);
-
-			static TimeSpan FromDays(Double value);
-			static TimeSpan FromHours(Double value);
-			static TimeSpan FromMilliseconds(Double value);
-			static TimeSpan FromMinutes(Double value);
-			static TimeSpan FromSeconds(Double value);
-			static TimeSpan FromTicks(Int64 value);
 
 			//TODO: static TimeSpan Parse(const String& s);
 			//TODO: static TimeSpan Parse(String input, IFormatProvider formatProvider);
@@ -101,6 +103,15 @@ namespace CppNet
 
 		private:
 			static Int64 TimeToTicks(Int32 hour, Int32 min, Int32 second);
+			static TimeSpan Interval(Double value, Int32 scale);
+
+		public:
+			inline static TimeSpan FromDays(Double value);
+			inline static TimeSpan FromHours(Double value);
+			inline static TimeSpan FromMinutes(Double value);
+			inline static TimeSpan FromSeconds(Double value);
+			inline static TimeSpan FromMilliseconds(Double value);
+			inline static TimeSpan FromTicks(Int64 ticks);
 		};
 	}
 }
