@@ -30,6 +30,10 @@ Decimal::Decimal(const String& str)
 	: Decimal(Parse(str))
 { }
 
+Decimal::Decimal(UInt64 integer)
+	: Decimal(std::to_string(integer))
+{}
+
 Decimal::Decimal(Int64 integer)
 	: Decimal(std::to_string(integer))
 {}
@@ -584,39 +588,154 @@ Decimal Decimal::operator--(int)
 
 Decimal Decimal::operator*(const Decimal& d) const
 {
+	// 불필요한 연산 방지
 	if (d.ToString() == "1") return *this;
-	else if (d.ToString() == "0") return Decimal(0.0);
-	else if (this->ToString() == "0") return Decimal(0.0);
+	else if (this->ToString() == "1") return d;
+	else if (d.ToString() == "0" || this->ToString() == "0") return 0.0;
 
+	// 미리 선언
 	Decimal a = *this;
 	Decimal b = d;
 	Decimal result;
 
+	size_t count_real_size = 0;
+
+	// 패딩 편의 및 연산 속도 향상을 위해
 	a.Clean();
 	b.Clean();
 
-	if (a.mReal[0] != 0)
+	// 실수점 이하 부분이 0이 아닐경우 자연수 부분에 포함
+	if (a.mReal[0] != 0 || a.mReal.length() > 1)
 		a.mInteger += a.mReal;
 
-	if (b.mReal[0] != 0)
+	if (b.mReal[0] != 0 || b.mReal.length() > 1)
 		b.mInteger += b.mReal;
 
-	size_t count_real_size = 0;
+	// 실수점 이하 부분이 0이 아닐경우 0으로 만들고 실수점 위치 저장
+	if (a.mReal.length() > 1 || a.mReal[0] != 0)
+	{
+		count_real_size = a.mReal.length() * 2;
+		a.mReal = (Byte)0;
+	}
 
-	if (a.mReal[0] != 0)
-		count_real_size = std::stoull(std::to_string(a.mReal.length() * 2));
-	if(b.mReal[0] != 0)
-		count_real_size += std::stoull(std::to_string(b.mReal.length() * 2));
+	if (b.mReal.length() > 1 || b.mReal[0] != 0)
+	{
+		count_real_size += b.mReal.length() * 2;
+		b.mReal = (Byte)0;
+	}
 
-	a.mReal = (Byte)'\u0000';
-	b.mReal = (Byte)'\u0000';
-
+	// 패딩
 	if (a.mInteger.length() >= b.mInteger.length())
 		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
 	else
 		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
 
-	size_t plus = 0;
+	// 연산
+	String plus = "";
+
+	for (size_t i = b.mInteger.length() - 1; i >= 0; i--)
+	{
+		Byte up = 0;
+		String value = "";
+
+		auto b_byte = ByteTool::ByteToInts(b.mInteger.at(i));
+
+		Byte low = std::get<1>(b_byte); // 12에서 2에 해당됨
+		Byte high = std::get<0>(b_byte); // 12에서 1에 해당됨
+
+		if (low == 0)
+			goto X;
+
+		// low 먼저 계산
+		for (size_t j = a.mInteger.length() - 1; j >= 0; j--)
+		{
+			auto a_byte = ByteTool::ByteToInts(a.mInteger.at(j));
+
+			Byte low_a = std::get<1>(a_byte);
+			Byte high_a = std::get<0>(a_byte);
+
+			Byte low_mul = low * low_a + up;
+			up = 0;
+			if (low_mul > 9)
+			{
+				up = std::stoi(std::to_string(low_mul).substr(0, 1));
+				low_mul = std::stoi(std::to_string(low_mul).substr(1));
+			}
+
+			Byte high_mul = low * high_a + up;
+			up = 0;
+			if (high_mul > 9)
+			{
+				up = std::stoi(std::to_string(high_mul).substr(0, 1));
+				high_mul = std::stoi(std::to_string(high_mul).substr(1));
+			}
+
+			value = std::to_string(high_mul) + std::to_string(low_mul) + value;
+
+			if (j == 0)
+			{
+				value = std::to_string(up) + value;
+
+				break;
+			}
+		}
+
+	X:
+		value += plus;
+		plus += '0';
+
+		result += value;
+
+		// 초기화
+		value = ""; up = 0;
+
+		if (high == 0)
+			goto Y;
+
+		// high 계산
+		for (size_t j = a.mInteger.length() - 1; j >= 0; j--)
+		{
+			auto a_byte = ByteTool::ByteToInts(a.mInteger.at(j));
+
+			Byte low_a = std::get<1>(a_byte);
+			Byte high_a = std::get<0>(a_byte);
+
+			Byte low_mul = high * low_a + up;
+			up = 0;
+			if (low_mul > 9)
+			{
+				up = std::stoi(std::to_string(low_mul).substr(0, 1));
+				low_mul = std::stoi(std::to_string(low_mul).substr(1));
+			}
+
+			Byte high_mul = high * high_a + up;
+			up = 0;
+			if (high_mul > 9)
+			{
+				up = std::stoi(std::to_string(high_mul).substr(0, 1));
+				high_mul = std::stoi(std::to_string(high_mul).substr(1));
+			}
+
+			value = std::to_string(high_mul) + std::to_string(low_mul) + value;
+
+			if (j == 0)
+			{
+				value = std::to_string(up) + value;
+
+				break;
+			}
+		}
+
+	Y:
+		value += plus;
+		plus += '0';
+
+		result += value;
+
+		if (i == 0) break; // i--을 연산을 수행한 후 i >= 0을 수행하는데, unsigned라 overflow가 발생하기 때문
+	}
+
+	/*size_t plus = 0;
 	for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
 	{
 		Byte up = 0;
@@ -709,7 +828,7 @@ Decimal Decimal::operator*(const Decimal& d) const
 		plus++;
 
 		if (i == 0) break;
-	}
+	}*/
 
 	if (count_real_size != 0)
 	{
@@ -740,6 +859,132 @@ Decimal& Decimal::operator*=(const Decimal& d)
 
 	mInteger = a.mInteger;
 	mReal = a.mReal;
+
+	return *this;
+}
+
+Decimal Decimal::operator&(const Decimal& d) const
+{
+	Decimal a = *this;
+	Decimal b = d;
+	Decimal result;
+
+	// 패딩 편의를 위한
+
+	a.Clean(); b.Clean();
+
+	// 패딩
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	// & 연산
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+		result.mInteger += a.mInteger.at(i) & b.mInteger.at(i);
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+		result.mReal += a.mReal.at(i) & b.mReal.at(i);
+
+	return result;
+}
+
+Decimal& Decimal::operator&=(const Decimal& d)
+{
+	Decimal temp = this->operator&(d);
+
+	this->operator=(temp);
+
+	return *this;
+}
+
+Decimal Decimal::operator|(const Decimal& d) const
+{
+	Decimal a = *this;
+	Decimal b = d;
+	Decimal result;
+
+	// 패딩 편의를 위한
+
+	a.Clean(); b.Clean();
+
+	// 패딩
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	// | 연산
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+		result.mInteger += a.mInteger.at(i) | b.mInteger.at(i);
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+		result.mReal += a.mReal.at(i) | b.mReal.at(i);
+
+	return result;
+}
+
+Decimal& Decimal::operator|=(const Decimal& d)
+{
+	Decimal temp = this->operator|(d);
+
+	this->operator=(temp);
+
+	return *this;
+}
+
+Decimal Decimal::operator^(const Decimal& d) const
+{
+	Decimal a = *this;
+	Decimal b = d;
+	Decimal result;
+
+	// 패딩 편의를 위한
+
+	a.Clean(); b.Clean();
+
+	// 패딩
+
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	if (a.mReal.length() >= b.mReal.length())
+		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+	else
+		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
+	// ^ 연산
+
+	for (size_t i = 0; i < a.mInteger.length(); i++)
+		result.mInteger += a.mInteger.at(i) ^ b.mInteger.at(i);
+
+	for (size_t i = 0; i < a.mReal.length(); i++)
+		result.mReal += a.mReal.at(i) ^ b.mReal.at(i);
+
+	return result;
+}
+
+Decimal& Decimal::operator^=(const Decimal& d)
+{
+	Decimal temp = this->operator^(d);
+
+	this->operator=(temp);
 
 	return *this;
 }

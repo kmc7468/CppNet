@@ -27,7 +27,7 @@ char Decimal::ByteTool::FromByte(Byte b)
 String Decimal::ToString(size_t realsize) const
 {
 	var a = ToString();
-
+	
 	size_t find = a.find('.');
 
 	if (find == String::npos) return a;
@@ -42,6 +42,9 @@ String Decimal::ToString(size_t realsize) const
 
 	a = a.substr(0, find) + a.substr(find, realsize + 1);
 
+	if (a.back() == '.')
+		a = a.substr(0, a.length() - 1);
+
 	return a;
 }
 
@@ -55,6 +58,11 @@ void Decimal::Clean()
 
 	if (mInteger.length() == 1 && mInteger[0] == 0 && mReal.length() == 1 && mReal[0] == 0 && isN)
 		isN = false;
+}
+
+Decimal Decimal::Parse(UInt64 integer)
+{
+	return Parse(std::to_string(integer));
 }
 
 Decimal Decimal::Parse(Int64 integer)

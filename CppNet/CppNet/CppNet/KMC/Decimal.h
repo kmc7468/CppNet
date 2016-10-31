@@ -52,6 +52,7 @@ namespace CppNet
 			Decimal(const String& str);
 			explicit Decimal(Int64 integer);
 			Decimal(Int64 integer, const String& real);
+			explicit Decimal(UInt64 integer);
 			Decimal(Double real);
 			Decimal(Decimal&& d);
 			Decimal(const Decimal& d);
@@ -63,6 +64,7 @@ namespace CppNet
 
 		public:
 			static Decimal Parse(const String& str);
+			inline static Decimal Parse(UInt64 integer);
 			inline static Decimal Parse(Int64 integer);
 			inline static Decimal Parse(Int64 integer, const String& real);
 			inline static Decimal Parse(Double real);
@@ -93,6 +95,15 @@ namespace CppNet
 
 			Decimal operator*(const Decimal& d) const;
 			Decimal& operator*=(const Decimal& d);
+
+			Decimal operator&(const Decimal& d) const;
+			Decimal& operator&=(const Decimal& d);
+			
+			Decimal operator|(const Decimal& d) const;
+			Decimal& operator|=(const Decimal& d);
+
+			Decimal operator^(const Decimal& d) const;
+			Decimal& operator^=(const Decimal& d);
 
 		private:
 			inline void Clean();
