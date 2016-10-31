@@ -96,6 +96,9 @@ namespace CppNet
 			Decimal operator*(const Decimal& d) const;
 			Decimal& operator*=(const Decimal& d);
 
+			Decimal operator/(const Decimal& d) const;
+			Decimal& operator/=(const Decimal& d);
+
 			Decimal operator&(const Decimal& d) const;
 			Decimal& operator&=(const Decimal& d);
 			

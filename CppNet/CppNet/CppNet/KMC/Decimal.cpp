@@ -988,3 +988,13 @@ Decimal& Decimal::operator^=(const Decimal& d)
 
 	return *this;
 }
+
+Decimal Decimal::operator/(const Decimal& d) const
+{
+	return Decimal();
+}
+
+Decimal& Decimal::operator/=(const Decimal& d)
+{
+	return this->operator=(this->operator/(d));
+}
