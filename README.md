@@ -10,6 +10,10 @@ C++ 표준: C++17 표준
 활용 예제나 자세한 설명 등은 CNWiki(CppNet Wiki)를 참조하십시오.<br>
 https://github.com/kmc7468/CppNet/wiki
 
+## 닷넷 코드
+https://referencesource.microsoft.com/#System,namespaces<br>
+닷넷에 있는 기능의 대부분은 이 사이트를 보고 구현하였습니다.
+
 ## 적용 방법 (Visual Studio)
 - CppNet 프로젝트를 빌드합니다.
 - CppNet의 헤더 파일(.h) 및 인라인 구현 파일(.inl)을 한 폴더에 모아 놓습니다.
