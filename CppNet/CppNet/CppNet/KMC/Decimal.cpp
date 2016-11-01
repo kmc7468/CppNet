@@ -339,6 +339,10 @@ String Decimal::ToString() const
 
 Decimal Decimal::operator+(const Decimal& d) const
 {
+	if (d.ToString() == "0") return *this;
+
+	if (this->isNaN || d.isNaN) return *this;
+
 	Decimal a = *this;
 	Decimal b = Decimal(d);
 	Decimal c = 0;
@@ -468,6 +472,10 @@ Decimal Decimal::operator++(int)
 
 Decimal Decimal::operator-(const Decimal& d) const
 {
+	if (d.ToString() == "0") return *this;
+
+	if (this->isNaN || d.isNaN) return *this;
+
 	if (isN && !d.isN)
 	{
 		Decimal d_t = d;
@@ -599,6 +607,11 @@ Decimal Decimal::operator*(const Decimal& d) const
 	if (d.ToString() == "1") return *this;
 	else if (this->ToString() == "1") return d;
 	else if (d.ToString() == "0" || this->ToString() == "0") return 0.0;
+
+	if (this->isNaN || d.isNaN) return *this;
+
+	// TODO: inf, -inf와의 연산시 처리
+	// TODO: 음수 처리 필요
 
 	// 미리 선언
 	Decimal a = *this;
@@ -923,6 +936,10 @@ Decimal Decimal::operator/(const Decimal& d) const
 		return a;
 	}
 
+	if (this->isNaN || d.isNaN) return *this;
+
+	// TODO: inf, -inf와의 연산시 처리
+
 	Decimal a = *this;
 	Decimal b = d;
 	Decimal result;
@@ -933,4 +950,50 @@ Decimal Decimal::operator/(const Decimal& d) const
 Decimal& Decimal::operator/=(const Decimal& d)
 {
 	return this->operator=(this->operator/(d));
+}
+
+Decimal& Decimal::Pow(Decimal exp)
+{
+	// 도비님 제공. 감사합니다!
+
+	if (this->isNaN || this->isInf) return *this;
+
+	Decimal bin = *this, ret = 1.0;
+
+	while (exp > 0)
+	{
+		if (exp % 2 == Decimal(1LL))
+			ret = ret * bin;
+
+		exp /= 2;
+		bin = bin * bin;
+	}
+
+	return operator=(exp);
+}
+
+Decimal Decimal::operator%(const Decimal& d) const
+{
+	// TODO: nan, inf, -inf와의 연산시 처리
+
+	return Decimal();
+}
+
+Decimal& Decimal::operator%=(const Decimal& d)
+{
+	return this->operator=(this->operator%(d));
+}
+
+Decimal& Decimal::Sqrt()
+{
+	// http://blog.daum.net/_blog/BlogTypeView.do?blogid=0Xrxs&articleno=41
+
+	if (this->isNaN || this->isInf) return *this;
+
+	Decimal x = 1;
+
+	for (Decimal i = 0; i < 10; i++)
+		x = (x + (*this / x)) / 2;
+
+	return this->operator=(x);
 }

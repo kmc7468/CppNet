@@ -81,6 +81,13 @@ namespace CppNet
 			static inline Boolean IsNegative(const Decimal& d);
 			static inline Boolean IsNaN(const Decimal& d);
 
+			static inline Decimal Pow(const Decimal& base, const Decimal& exp);
+			static inline Decimal Sqrt(const Decimal& base);
+
+		public:
+			Decimal& Pow(Decimal exp);
+			Decimal& Sqrt();
+
 		public:
 			Boolean operator==(const Object& obj) const override;
 			Boolean operator!=(const Object& obj) const override;
@@ -110,6 +117,9 @@ namespace CppNet
 
 			Decimal operator/(const Decimal& d) const;
 			Decimal& operator/=(const Decimal& d);
+
+			Decimal operator%(const Decimal& d) const;
+			Decimal& operator%=(const Decimal& d);
 
 			Decimal operator&(const Decimal& d) const;
 			Decimal& operator&=(const Decimal& d);

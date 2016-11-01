@@ -69,6 +69,7 @@ namespace CppNet
 			static inline UInt64 Min(UInt64 integer, UInt64 integer2);
 			static inline Single Min(Single d, Single d2);
 			static inline Double Pow(Double d, Double d2);
+			static inline KMC::Decimal Pow(KMC::Decimal base, KMC::Decimal exp);
 			static inline Double Round(Double d);
 			static inline Double Round(Double d, Int32 digits);
 			static inline Double Sign(Double d);

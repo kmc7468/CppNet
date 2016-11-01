@@ -212,6 +212,11 @@ namespace CppNet
 			return pow(d, d2);
 		}
 
+		KMC::Decimal Math::Pow(KMC::Decimal base, KMC::Decimal exp)
+		{
+			return KMC::Decimal::Pow(base, exp);
+		}
+
 		Double Math::Round(Double d)
 		{
 			return round(d);

@@ -60,6 +60,15 @@ void Decimal::Clean()
 
 	if (mInteger.length() == 1 && mInteger[0] == 0 && mReal.length() == 1 && mReal[0] == 0 && isN)
 		isN = false;
+
+	if (this->isNaN || this->isInf)
+	{
+		mInteger.clear();
+		mReal.clear();
+
+		mInteger += (Byte)0;
+		mReal += (Byte)0;
+	}
 }
 
 Decimal Decimal::Parse(UInt64 integer)
@@ -125,4 +134,20 @@ Boolean Decimal::IsNegative(const Decimal& d)
 Boolean Decimal::IsNaN(const Decimal& d)
 {
 	return d.isNaN;
+}
+
+Decimal Decimal::Pow(const Decimal& base, const Decimal& exp)
+{
+	Decimal a = base;
+
+	return a.Pow(exp);
+}
+
+Decimal Decimal::Sqrt(const Decimal& base)
+{
+	Decimal a = base;
+
+	a.Sqrt();
+
+	return a;
 }
