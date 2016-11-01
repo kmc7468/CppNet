@@ -29,6 +29,10 @@ namespace CppNet
 			static const Decimal Nine;
 			static const Decimal Ten;
 
+			static const Decimal NaN;
+			static const Decimal PositiveInfinity;
+			static const Decimal NegativeInfinity;
+
 		private:
 			class ByteTool final
 			{
@@ -46,9 +50,8 @@ namespace CppNet
 			t mInteger;
 			t mReal;
 			Boolean isN = false; // 음수인지
-			Boolean NaN = false; // NaN 인지
-			Boolean InfP = false; // +inf 인지
-			Boolean InfM = false; // -inf 인지
+			Boolean isNaN = false; // NaN 인지
+			Boolean isInf = false; // +-inf 인지
 
 		public:
 			Decimal();
@@ -71,6 +74,12 @@ namespace CppNet
 			inline static Decimal Parse(Int64 integer);
 			inline static Decimal Parse(Int64 integer, const String& real);
 			inline static Decimal Parse(Double real);
+
+			static inline Boolean IsPositiveInfinity(const Decimal& d);
+			static inline Boolean IsNegativeInfinity(const Decimal& d);
+			static inline Boolean IsPositive(const Decimal& d);
+			static inline Boolean IsNegative(const Decimal& d);
+			static inline Boolean IsNaN(const Decimal& d);
 
 		public:
 			Boolean operator==(const Object& obj) const override;

@@ -101,3 +101,28 @@ Boolean Decimal::operator<=(const Decimal& d) const
 
 	return res ? res : a == b;
 }
+
+Boolean Decimal::IsPositiveInfinity(const Decimal& d)
+{
+	return d.isInf && !d.isN;
+}
+
+Boolean Decimal::IsNegativeInfinity(const Decimal& d)
+{
+	return d.isInf && d.isN;
+}
+
+Boolean Decimal::IsPositive(const Decimal& d)
+{
+	return !d.isNaN && !d.isInf && !d.isN;
+}
+
+Boolean Decimal::IsNegative(const Decimal& d)
+{
+	return !d.isNaN && !d.isInf && d.isN;
+}
+
+Boolean Decimal::IsNaN(const Decimal& d)
+{
+	return d.isNaN;
+}

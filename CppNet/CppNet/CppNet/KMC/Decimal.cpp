@@ -20,6 +20,10 @@ const Decimal Decimal::Eight = Decimal("8");
 const Decimal Decimal::Nine = Decimal("9");
 const Decimal Decimal::Ten = Decimal("10");
 
+const Decimal Decimal::NaN = Decimal("0") / Decimal("0");
+const Decimal Decimal::PositiveInfinity = Decimal("1") / Decimal("0");
+const Decimal Decimal::NegativeInfinity = Decimal("-1") / Decimal("0");
+
 Decimal::Decimal()
 {
 	mInteger.push_back(0);
@@ -260,9 +264,8 @@ Decimal& Decimal::operator=(const Decimal& d)
 	mInteger = d.mInteger;
 	mReal = d.mReal;
 	isN = d.isN;
-	NaN = d.NaN;
-	InfP = d.InfP;
-	InfM = d.InfM;
+	isNaN = d.isNaN;
+	isInf = d.isInf;
 
 	Clean();
 
@@ -273,9 +276,8 @@ Decimal& Decimal::operator=(Decimal&& d)
 	mInteger = std::move(d.mInteger);
 	mReal = std::move(d.mReal);
 	isN = std::move(d.isN);
-	NaN = std::move(d.NaN);
-	InfP = std::move(d.InfP);
-	InfM = std::move(d.InfM);
+	isNaN = std::move(d.isNaN);
+	isInf = std::move(d.isInf);
 
 	Clean();
 
@@ -284,11 +286,11 @@ Decimal& Decimal::operator=(Decimal&& d)
 
 String Decimal::ToString() const
 {
-	if (NaN)
+	if (isNaN)
 		return "nan";
-	else if (InfP)
+	else if (isInf && !isN)
 		return "inf";
-	else if (InfM)
+	else if (isInf && isN)
 		return "-inf";
 
 	String integer = "";
@@ -904,13 +906,19 @@ Decimal Decimal::operator/(const Decimal& d) const
 	if (d.ToString() == "0")
 	{
 		Decimal a;
-		
+
 		if (this->ToString() == "0")
-			a.NaN = true;
+			a.isNaN = true;
 		else if (this->isN)
-			a.InfM = true;
+		{
+			a.isN = true;
+			a.isInf = true;
+		}
 		else
-			a.InfP = true;
+		{
+			a.isN = false;
+			a.isInf = true;
+		}
 
 		return a;
 	}
