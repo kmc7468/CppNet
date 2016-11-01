@@ -4,5 +4,6 @@
 #include "Point.h"
 #include "PointF.h"
 #include "SizeF.h"
+#include "Image.hpp"
 
 #endif

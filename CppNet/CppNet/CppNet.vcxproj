@@ -63,6 +63,7 @@
     <ClInclude Include="CppNet\System\DateTime.h" />
     <ClInclude Include="CppNet\System\Double.h" />
     <ClInclude Include="CppNet\System\DoubleT.h" />
+    <ClInclude Include="CppNet\System\Drawing\Image.hpp" />
     <ClInclude Include="CppNet\System\Drawing\Point.h" />
     <ClInclude Include="CppNet\System\Drawing\PointF.h" />
     <ClInclude Include="CppNet\System\Drawing\SizeF.h" />
@@ -114,6 +115,7 @@
     <ClInclude Include="CppNet\System\Runtime\Serialization\IDeserializationCallback.h" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\ISerializable.h" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\SerializationInfo.h" />
+    <ClInclude Include="CppNet\System\Runtime\Serialization\SerializationInfoEnumerator.hpp" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\StreamingContext.h" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\CppNet.System.Runtime.Serialization.h" />
     <ClInclude Include="CppNet\System\SByte.h" />

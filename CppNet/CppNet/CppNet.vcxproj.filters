@@ -145,6 +145,24 @@
     <Filter Include="소스 파일\CppNet\System\ComponentModel">
       <UniqueIdentifier>{919def75-4594-49bb-a7ff-21119827b006}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일">
+      <UniqueIdentifier>{85f0cd69-e2a1-4760-a11f-08220a9bfdd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet">
+      <UniqueIdentifier>{c72b213b-3b53-4461-be4a-6af6002059fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System">
+      <UniqueIdentifier>{c0a8bce9-c7e6-4287-8d3e-4b8a6df29180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Drawing">
+      <UniqueIdentifier>{15d18239-6717-4b06-b15c-f4e0bdd2bfab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Runtime">
+      <UniqueIdentifier>{cf3bdd22-5b58-4d3d-8660-0d55b544548e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Runtime\Serialization">
+      <UniqueIdentifier>{42c35e8d-ed08-43c1-9295-8075575dd79d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -572,6 +590,12 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\ComponentModel\EventHandlerList.h">
       <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Drawing\Image.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\Serialization\SerializationInfoEnumerator.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Runtime\Serialization</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
