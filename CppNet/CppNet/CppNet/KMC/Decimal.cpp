@@ -48,20 +48,12 @@ Decimal::Decimal(Double real)
 
 Decimal::Decimal(Decimal&& d)
 {
-	mInteger = d.mInteger;
-	mReal = d.mReal;
-	isN = d.isN;
-
-	Clean();
+	operator=(d);
 }
 
 Decimal::Decimal(const Decimal& d)
 {
-	mInteger = d.mInteger;
-	mReal = d.mReal;
-	isN = d.isN;
-
-	Clean();
+	operator=(d);
 }
 
 Decimal Decimal::Parse(const String& str)
@@ -268,6 +260,9 @@ Decimal& Decimal::operator=(const Decimal& d)
 	mInteger = d.mInteger;
 	mReal = d.mReal;
 	isN = d.isN;
+	NaN = d.NaN;
+	InfP = d.InfP;
+	InfM = d.InfM;
 
 	Clean();
 
@@ -278,6 +273,9 @@ Decimal& Decimal::operator=(Decimal&& d)
 	mInteger = std::move(d.mInteger);
 	mReal = std::move(d.mReal);
 	isN = std::move(d.isN);
+	NaN = std::move(d.NaN);
+	InfP = std::move(d.InfP);
+	InfM = std::move(d.InfM);
 
 	Clean();
 
@@ -286,6 +284,13 @@ Decimal& Decimal::operator=(Decimal&& d)
 
 String Decimal::ToString() const
 {
+	if (NaN)
+		return "nan";
+	else if (InfP)
+		return "inf";
+	else if (InfM)
+		return "-inf";
+
 	String integer = "";
 
 	for (var i = mInteger.begin(); i < mInteger.end(); i++)
@@ -735,101 +740,6 @@ Decimal Decimal::operator*(const Decimal& d) const
 		if (i == 0) break; // i--을 연산을 수행한 후 i >= 0을 수행하는데, unsigned라 overflow가 발생하기 때문
 	}
 
-	/*size_t plus = 0;
-	for (size_t i = a.mInteger.length() - 1; i >= 0; i--)
-	{
-		Byte up = 0;
-		String value = "";
-
-		var b_index = ByteTool::ByteToInts(b.mInteger[i]);
-
-		var mul = std::get<1>(b_index);
-
-		for (size_t j = a.mInteger.length() - 1; j >= 0; j--)
-		{
-			var a_index = ByteTool::ByteToInts(a.mInteger[j]);
-
-			var high = std::get<0>(a_index);
-			var low = std::get<1>(a_index);
-
-			Byte low_mul = low * mul + up;
-			up = 0;
-			if (low_mul > 9)
-			{
-				up = std::stoi(std::to_string(low_mul).substr(0, 1));
-				low_mul -= up * 10;
-			}
-
-			Byte high_mul = high * mul + up;
-			up = 0;
-			if (high_mul > 9)
-			{
-				up = std::stoi(std::to_string(high_mul).substr(0, 1));
-				high_mul -= up * 10;
-			}
-
-			value = std::to_string(high_mul) + std::to_string(low_mul) + value;
-
-			if (j == 0) break;
-		}
-
-		if (up != 0)
-			value = std::to_string(up) + value;
-
-		value.insert(value.length(), plus, '0');
-
-		result += Decimal(value);
-
-		value = "";
-
-		plus++;
-
-		mul = std::get<0>(b_index);
-
-		up = 0;
-
-		for (size_t j = a.mInteger.length() - 1; j >= 0; j--)
-		{
-			var a_index = ByteTool::ByteToInts(a.mInteger[j]);
-
-			var high = std::get<0>(a_index);
-			var low = std::get<1>(a_index);
-
-			Byte low_mul = low * mul + up;
-			up = 0;
-			if (low_mul > 9)
-			{
-				up = std::stoi(std::to_string(low_mul).substr(0, 1));
-				low_mul -= up * 10;
-			}
-
-			Byte high_mul = high * mul + up;
-			up = 0;
-			if (high_mul > 9)
-			{
-				up = std::stoi(std::to_string(high_mul).substr(0, 1));
-				high_mul -= up * 10;
-			}
-
-			value = std::to_string(high_mul) + std::to_string(low_mul) + value;
-
-			if (j == 0) break;
-		}
-
-		if (up != 0)
-			value = std::to_string(up) + value;
-
-		value.insert(value.length(), plus, '0');
-
-		result += Decimal(value);
-
-		value = "";
-
-		plus++;
-
-		if (i == 0) break;
-	}*/
-
 	if (count_real_size != 0)
 	{
 		String to = result.ToString();
@@ -991,7 +901,25 @@ Decimal& Decimal::operator^=(const Decimal& d)
 
 Decimal Decimal::operator/(const Decimal& d) const
 {
-	return Decimal();
+	if (d.ToString() == "0")
+	{
+		Decimal a;
+		
+		if (this->ToString() == "0")
+			a.NaN = true;
+		else if (this->isN)
+			a.InfM = true;
+		else
+			a.InfP = true;
+
+		return a;
+	}
+
+	Decimal a = *this;
+	Decimal b = d;
+	Decimal result;
+
+	return result;
 }
 
 Decimal& Decimal::operator/=(const Decimal& d)

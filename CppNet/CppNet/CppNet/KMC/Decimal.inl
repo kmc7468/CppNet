@@ -27,6 +27,8 @@ char Decimal::ByteTool::FromByte(Byte b)
 String Decimal::ToString(size_t realsize) const
 {
 	var a = ToString();
+
+	if (a == "nan" || a == "inf" || a == "-inf") return a;
 	
 	size_t find = a.find('.');
 

@@ -45,7 +45,10 @@ namespace CppNet
 		private:
 			t mInteger;
 			t mReal;
-			Boolean isN = false;
+			Boolean isN = false; // 음수인지
+			Boolean NaN = false; // NaN 인지
+			Boolean InfP = false; // +inf 인지
+			Boolean InfM = false; // -inf 인지
 
 		public:
 			Decimal();

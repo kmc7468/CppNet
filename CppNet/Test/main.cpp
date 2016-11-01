@@ -13,5 +13,9 @@ int main()
 
 	Console::WriteLine((Decimal("5234") * Decimal("352")).ToString());
 
+	Console::WriteLine((Decimal("0") / Decimal("0")).ToString());
+	Console::WriteLine((Decimal("1") / Decimal("0")).ToString());
+	Console::WriteLine((Decimal("-1") / Decimal("0")).ToString());
+
 	MAIN_END
 }
