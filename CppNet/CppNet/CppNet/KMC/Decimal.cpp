@@ -610,13 +610,15 @@ Decimal Decimal::operator*(const Decimal& d) const
 
 	if (this->isNaN || d.isNaN) return *this;
 
-	// TODO: inf, -inf와의 연산시 처리
-	// TODO: 음수 처리 필요
-
 	// 미리 선언
 	Decimal a = *this;
 	Decimal b = d;
 	Decimal result;
+
+	if (a.isN && b.isN)
+		result.isN = false;
+	else if ((a.isN && !b.isN) || (!a.isN && b.isN))
+		result.isN = true;
 
 	size_t count_real_size = 0;
 
@@ -652,6 +654,8 @@ Decimal Decimal::operator*(const Decimal& d) const
 
 	// 연산
 	String plus = "";
+
+	if (a.isInf || b.isInf) goto Z;
 
 	for (size_t i = b.mInteger.length() - 1; i >= 0; i--)
 	{
@@ -755,6 +759,9 @@ Decimal Decimal::operator*(const Decimal& d) const
 		if (i == 0) break; // i--을 연산을 수행한 후 i >= 0을 수행하는데, unsigned라 overflow가 발생하기 때문
 	}
 
+	goto Z;
+
+Z:
 	if (count_real_size != 0)
 	{
 		String to = result.ToString();
