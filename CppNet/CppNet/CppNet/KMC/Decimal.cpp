@@ -355,6 +355,52 @@ Decimal Decimal::operator+(const Decimal& d) const
 	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
 	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
 
+	if (IsPositive(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+	}
+	else if (IsNegative(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+	}
+
+	if (IsPositiveInfinity(*this))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+	}
+	else if (IsNegativeInfinity(d))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+	}
+
 	Decimal a = *this;
 	Decimal b = Decimal(d);
 	Decimal c = 0;
@@ -508,6 +554,52 @@ Decimal Decimal::operator-(const Decimal& d) const
 	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::PositiveInfinity;
 	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::NegativeInfinity;
 
+	if (IsPositive(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+	}
+	else if (IsNegative(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+	}
+
+	if (IsPositiveInfinity(*this))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+	}
+	else if (IsNegativeInfinity(d))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+	}
+
 	if (isN && !d.isN)
 	{
 		Decimal d_t = d;
@@ -646,6 +738,52 @@ Decimal Decimal::operator*(const Decimal& d) const
 	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::PositiveInfinity;
 	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::NegativeInfinity;
 	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::NegativeInfinity;
+
+	if (IsPositive(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+	}
+	else if (IsNegative(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+	}
+
+	if (IsPositiveInfinity(*this))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+	}
+	else if (IsNegativeInfinity(d))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+	}
 
 	// 미리 선언
 	Decimal a = *this;
@@ -957,6 +1095,8 @@ Decimal& Decimal::operator^=(const Decimal& d)
 
 Decimal Decimal::operator/(const Decimal& d) const
 {
+	if (d.ToString() == "1") return *this;
+
 	if (d.ToString() == "0")
 	{
 		Decimal a;
@@ -984,6 +1124,52 @@ Decimal Decimal::operator/(const Decimal& d) const
 	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
 	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
 	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
+
+	if (IsPositive(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			return 0.0;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			return 0.0;
+		}
+	}
+	else if (IsNegative(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			return 0.0;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			return 0.0;
+		}
+	}
+
+	if (IsPositiveInfinity(*this))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+	}
+	else if (IsNegativeInfinity(d))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::NegativeInfinity;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::PositiveInfinity;
+		}
+	}
 
 	Decimal a = *this;
 	Decimal b = d;
@@ -1025,6 +1211,58 @@ Decimal Decimal::operator%(const Decimal& d) const
 	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
 	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
 	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
+
+	if (IsPositive(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			return *this;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			return *this;
+		}
+	}
+	else if (IsNegative(*this))
+	{
+		if (IsPositiveInfinity(d))
+		{
+			Decimal temp = *this;
+			temp.isN = true;
+
+			return temp;
+		}
+		else if (IsNegativeInfinity(d))
+		{
+			Decimal temp = *this;
+			temp.isN = true;
+
+			return temp;
+		}
+	}
+
+	if (IsPositiveInfinity(*this))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::Ind;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::Ind;
+		}
+	}
+	else if (IsNegativeInfinity(d))
+	{
+		if (IsPositive(d))
+		{
+			return Decimal::Ind;
+		}
+		else if (IsNegative(d))
+		{
+			return Decimal::Ind;
+		}
+	}
 
 	return Decimal();
 }
