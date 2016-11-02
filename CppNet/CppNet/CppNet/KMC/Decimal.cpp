@@ -348,6 +348,7 @@ Decimal Decimal::operator+(const Decimal& d) const
 	else if (this->ToString() == "0") return d;
 
 	if (this->isNaN || d.isNaN) return Decimal::NaN;
+	else if (this->isInd || d.isInd) return Decimal::Ind;
 
 	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::PositiveInfinity;
 	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::NegativeInfinity;
@@ -485,10 +486,25 @@ Decimal Decimal::operator-(const Decimal& d) const
 {
 	if (d.ToString() == "0") return *this;
 
-	if (this->isNaN || d.isNaN) return *this;
+	if (this->isNaN || d.isNaN) return Decimal::NaN;
+	else if (this->isInd || d.isInd) return Decimal::Ind;
 
-	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
-	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
+	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d))
+	{
+		Decimal a;
+
+		a.isInd = true;
+
+		return a;
+	}
+	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d))
+	{
+		Decimal a;
+
+		a.isInd = true;
+
+		return a;
+	}
 	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::PositiveInfinity;
 	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::NegativeInfinity;
 
@@ -623,7 +639,8 @@ Decimal Decimal::operator*(const Decimal& d) const
 	else if (this->ToString() == "1") return d;
 	else if (d.ToString() == "0" || this->ToString() == "0") return 0.0;
 
-	if (this->isNaN || d.isNaN) return *this;
+	if (this->isNaN || d.isNaN) return Decimal::NaN;
+	else if (this->isInd || d.isInd) return Decimal::Ind;
 
 	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::PositiveInfinity;
 	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::PositiveInfinity;
@@ -960,7 +977,8 @@ Decimal Decimal::operator/(const Decimal& d) const
 		return a;
 	}
 
-	if (this->isNaN || d.isNaN) return *this;
+	if (this->isNaN || d.isNaN) return Decimal::NaN;
+	else if (this->isInd || d.isInd) return Decimal::Ind;
 
 	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
 	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
@@ -1000,7 +1018,8 @@ Decimal& Decimal::Pow(Decimal exp)
 
 Decimal Decimal::operator%(const Decimal& d) const
 {
-	if (this->isNaN || d.isNaN) return *this;
+	if (this->isNaN || d.isNaN) return Decimal::NaN;
+	else if (this->isInd || d.isInd) return Decimal::Ind;
 
 	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
 	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;

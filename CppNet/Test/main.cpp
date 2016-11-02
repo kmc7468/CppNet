@@ -16,11 +16,19 @@ int main()
 
 	Console::WriteLine(c.count());*/
 
-	Console::WriteLine(N_Inf + P_Inf);
-	Console::WriteLine(N_Inf - P_Inf);
-	Console::WriteLine(N_Inf * P_Inf);
-	Console::WriteLine(N_Inf / P_Inf);
-	Console::WriteLine(fmod(N_Inf, P_Inf));
+	double a = P_Inf - P_Inf;
+	
+	Console::WriteLine(a + 5);
+	Console::WriteLine(5 - a);
+	Console::WriteLine(5 * a);
+	Console::WriteLine(5 / a);
+	Console::WriteLine(fmod(5, a));
+
+	Console::WriteLine(-5 + a);
+	Console::WriteLine(-5 - a);
+	Console::WriteLine(-5 * a);
+	Console::WriteLine(-5 / a);
+	Console::WriteLine(fmod(-5, a));
 
 	MAIN_END
 }
