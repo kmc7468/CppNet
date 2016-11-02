@@ -69,6 +69,9 @@ void Decimal::Clean()
 		mInteger += (Byte)0;
 		mReal += (Byte)0;
 	}
+
+	if (this->isNaN)
+		isN = false;
 }
 
 Decimal Decimal::Parse(UInt64 integer)

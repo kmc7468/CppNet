@@ -32,6 +32,7 @@ namespace CppNet
 			static const Decimal NaN;
 			static const Decimal PositiveInfinity;
 			static const Decimal NegativeInfinity;
+			static const Decimal Ind;
 
 		private:
 			class ByteTool final
@@ -52,6 +53,7 @@ namespace CppNet
 			Boolean isN = false; // 음수인지
 			Boolean isNaN = false; // NaN 인지
 			Boolean isInf = false; // +-inf 인지
+			Boolean isInd = false; // -nan(ind) 인지
 
 		public:
 			Decimal();

@@ -2,6 +2,11 @@
 
 #include <chrono>
 
+#include <cmath>
+
+#define P_Inf std::numeric_limits<double>::infinity()
+#define N_Inf -std::numeric_limits<double>::infinity()
+
 int main()
 {
 	std::wcout.imbue(locale(""));
@@ -11,11 +16,11 @@ int main()
 
 	Console::WriteLine(c.count());*/
 
-	Console::WriteLine((Decimal("5234") * Decimal("352")).ToString());
-
-	Console::WriteLine((Decimal("0") / Decimal("0")).ToString());
-	Console::WriteLine((Decimal("1") / Decimal("0")).ToString());
-	Console::WriteLine((Decimal("-1") / Decimal("0")).ToString());
+	Console::WriteLine(N_Inf + P_Inf);
+	Console::WriteLine(N_Inf - P_Inf);
+	Console::WriteLine(N_Inf * P_Inf);
+	Console::WriteLine(N_Inf / P_Inf);
+	Console::WriteLine(fmod(N_Inf, P_Inf));
 
 	MAIN_END
 }

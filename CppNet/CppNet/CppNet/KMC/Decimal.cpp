@@ -23,6 +23,7 @@ const Decimal Decimal::Ten = Decimal("10");
 const Decimal Decimal::NaN = Decimal("0") / Decimal("0");
 const Decimal Decimal::PositiveInfinity = Decimal("1") / Decimal("0");
 const Decimal Decimal::NegativeInfinity = Decimal("-1") / Decimal("0");
+const Decimal Decimal::Ind = Decimal::NegativeInfinity - Decimal::NegativeInfinity;
 
 Decimal::Decimal()
 {
@@ -266,6 +267,7 @@ Decimal& Decimal::operator=(const Decimal& d)
 	isN = d.isN;
 	isNaN = d.isNaN;
 	isInf = d.isInf;
+	isInd = d.isInd;
 
 	Clean();
 
@@ -278,6 +280,7 @@ Decimal& Decimal::operator=(Decimal&& d)
 	isN = std::move(d.isN);
 	isNaN = std::move(d.isNaN);
 	isInf = std::move(d.isInf);
+	isInd = std::move(d.isInd);
 
 	Clean();
 
@@ -292,6 +295,8 @@ String Decimal::ToString() const
 		return "inf";
 	else if (isInf && isN)
 		return "-inf";
+	else if (isInd)
+		return "-nan(ind)";
 
 	String integer = "";
 
@@ -340,25 +345,31 @@ String Decimal::ToString() const
 Decimal Decimal::operator+(const Decimal& d) const
 {
 	if (d.ToString() == "0") return *this;
+	else if (this->ToString() == "0") return d;
 
-	if (this->isNaN || d.isNaN) return *this;
+	if (this->isNaN || d.isNaN) return Decimal::NaN;
+
+	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::PositiveInfinity;
+	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::NegativeInfinity;
+	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
+	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
 
 	Decimal a = *this;
 	Decimal b = Decimal(d);
 	Decimal c = 0;
-	c.mInteger = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
-	c.mReal = std::basic_string<Byte, std::char_traits<Byte>, std::allocator<Byte>>();
-
-	if (a.mReal.length() >= b.mReal.length())
-		b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
-	else
-		a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+	c.mInteger = (Byte)0;
+	c.mReal = (Byte)0;
 
 	Byte up = 0;
 
 	// 둘다 음수이거나 들다 양수일 때
 	if (!a.isN && !b.isN || a.isN && b.isN)
 	{
+		if (a.mReal.length() >= b.mReal.length())
+			b.mReal.insert(b.mReal.length(), a.mReal.length() - b.mReal.length(), 0);
+		else
+			a.mReal.insert(a.mReal.length(), b.mReal.length() - a.mReal.length(), 0);
+
 		c.isN = a.isN;
 
 		{ // Real
@@ -476,6 +487,11 @@ Decimal Decimal::operator-(const Decimal& d) const
 
 	if (this->isNaN || d.isNaN) return *this;
 
+	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
+	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
+	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::PositiveInfinity;
+	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::NegativeInfinity;
+
 	if (isN && !d.isN)
 	{
 		Decimal d_t = d;
@@ -590,7 +606,6 @@ Decimal Decimal::operator--()
 
 	return *this;
 }
-
 Decimal Decimal::operator--(int)
 {
 	Decimal a = *this - 1;
@@ -609,6 +624,11 @@ Decimal Decimal::operator*(const Decimal& d) const
 	else if (d.ToString() == "0" || this->ToString() == "0") return 0.0;
 
 	if (this->isNaN || d.isNaN) return *this;
+
+	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::PositiveInfinity;
+	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::PositiveInfinity;
+	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::NegativeInfinity;
+	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::NegativeInfinity;
 
 	// 미리 선언
 	Decimal a = *this;
@@ -827,7 +847,6 @@ Decimal Decimal::operator&(const Decimal& d) const
 
 	return result;
 }
-
 Decimal& Decimal::operator&=(const Decimal& d)
 {
 	Decimal temp = this->operator&(d);
@@ -869,7 +888,6 @@ Decimal Decimal::operator|(const Decimal& d) const
 
 	return result;
 }
-
 Decimal& Decimal::operator|=(const Decimal& d)
 {
 	Decimal temp = this->operator|(d);
@@ -911,7 +929,6 @@ Decimal Decimal::operator^(const Decimal& d) const
 
 	return result;
 }
-
 Decimal& Decimal::operator^=(const Decimal& d)
 {
 	Decimal temp = this->operator^(d);
@@ -945,7 +962,10 @@ Decimal Decimal::operator/(const Decimal& d) const
 
 	if (this->isNaN || d.isNaN) return *this;
 
-	// TODO: inf, -inf와의 연산시 처리
+	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
+	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
+	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
+	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
 
 	Decimal a = *this;
 	Decimal b = d;
@@ -953,7 +973,6 @@ Decimal Decimal::operator/(const Decimal& d) const
 
 	return result;
 }
-
 Decimal& Decimal::operator/=(const Decimal& d)
 {
 	return this->operator=(this->operator/(d));
@@ -981,11 +1000,15 @@ Decimal& Decimal::Pow(Decimal exp)
 
 Decimal Decimal::operator%(const Decimal& d) const
 {
-	// TODO: nan, inf, -inf와의 연산시 처리
+	if (this->isNaN || d.isNaN) return *this;
+
+	if (IsPositiveInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
+	else if (IsNegativeInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
+	else if (IsPositiveInfinity(*this) && IsNegativeInfinity(d)) return Decimal::Ind;
+	else if (IsNegativeInfinity(*this) && IsPositiveInfinity(d)) return Decimal::Ind;
 
 	return Decimal();
 }
-
 Decimal& Decimal::operator%=(const Decimal& d)
 {
 	return this->operator=(this->operator%(d));
