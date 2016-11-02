@@ -26,6 +26,8 @@
 #define TXT_IO_FILEALREADY "파일이 이미 존재합니다."
 #define TXT_IO_FILE404 "파일을 찾을 수 없습니다."
 
+#define TXT_INDEX_DEFMSG "인덱스 범위를 벗어났습니다."
+
 
 #elif defined(LANG_ESP)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Nevalidaj argumentoj."
@@ -50,6 +52,8 @@
 #define TXT_IO_FILEALREADY "Dosiero jam ekzistas."
 #define TXT_IO_FILE404 "Dosiero ne trovita."
 
+#define TXT_INDEX_DEFMSG "Indekso ekster atingo."
+
 #else
 #define TXT_INVALID_ARGUMENT_DEFMSG "Invalid argument exception."
 
@@ -72,6 +76,8 @@
 #define TXT_IO_DEFMSG "An I/O error occurred."
 #define TXT_IO_FILEALREADY "This file already exists."
 #define TXT_IO_FILE404 "File not found."
+
+#define TXT_INDEX_DEFMSG "Index out of range."
 
 #endif
 

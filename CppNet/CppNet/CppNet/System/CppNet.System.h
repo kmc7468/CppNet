@@ -13,6 +13,7 @@
 #include "FormatException.h"
 #include "NotImplementedException.h"
 #include "ArgumentException.h"
+#include "IndexOutOfRangeException.hpp"
 
 #include "IntPtr.h"
 

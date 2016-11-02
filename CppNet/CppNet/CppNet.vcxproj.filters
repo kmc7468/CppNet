@@ -163,6 +163,9 @@
     <Filter Include="선언 및 구현 파일\CppNet\System\Runtime\Serialization">
       <UniqueIdentifier>{42c35e8d-ed08-43c1-9295-8075575dd79d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\KMC">
+      <UniqueIdentifier>{64eaa65c-9a30-48ea-a75a-221debba6e7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -596,6 +599,12 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\Runtime\Serialization\SerializationInfoEnumerator.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Runtime\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\KMC\DynamicVariable.hpp">
+      <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\IndexOutOfRangeException.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

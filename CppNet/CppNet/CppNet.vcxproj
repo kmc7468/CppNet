@@ -27,6 +27,7 @@
     <ClInclude Include="CppNet\gc.h" />
     <ClInclude Include="CppNet\gc_ptr.h" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
+    <ClInclude Include="CppNet\KMC\DynamicVariable.hpp" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
     <ClInclude Include="CppNet\KMC\CppNet.KMC.h" />
     <ClInclude Include="CppNet\KMC\Sor.h" />
@@ -85,6 +86,7 @@
     <ClInclude Include="CppNet\System\IEquatable.h" />
     <ClInclude Include="CppNet\System\IFormatProvider.h" />
     <ClInclude Include="CppNet\System\IFormattable.h" />
+    <ClInclude Include="CppNet\System\IndexOutOfRangeException.hpp" />
     <ClInclude Include="CppNet\System\Int16.h" />
     <ClInclude Include="CppNet\System\Int32.h" />
     <ClInclude Include="CppNet\System\Int64.h" />
