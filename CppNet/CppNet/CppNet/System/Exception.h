@@ -12,6 +12,9 @@ namespace CppNet
 	{
 		class Exception : public Object, public std::exception
 		{
+		private:
+			inline const char* what() const override;
+
 		public:
 			class ExceptionData
 			{
@@ -68,5 +71,7 @@ namespace CppNet
 		};
 	}
 }
+
+#include "Exception.inl"
 
 #endif

@@ -224,6 +224,7 @@
     <None Include="CppNet\System\Convert.inl" />
     <None Include="CppNet\System\DoubleT.inl" />
     <None Include="CppNet\System\Drawing\SizeF.inl" />
+    <None Include="CppNet\System\Exception.inl" />
     <None Include="CppNet\System\IO\File.inl" />
     <None Include="CppNet\System\IO\Stream.inl" />
     <None Include="CppNet\System\Math.inl" />

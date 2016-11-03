@@ -805,5 +805,8 @@
     <None Include="CppNet\System\Text\RegularExpressions\RegexRunner.inl">
       <Filter>인라인 구현 파일\CppNet\System\Text\RegularExpressions</Filter>
     </None>
+    <None Include="CppNet\System\Exception.inl">
+      <Filter>인라인 구현 파일\CppNet\System</Filter>
+    </None>
   </ItemGroup>
 </Project>
