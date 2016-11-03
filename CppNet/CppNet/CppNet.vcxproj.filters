@@ -172,6 +172,12 @@
     <Filter Include="선언 및 구현 파일\CppNet\System\Windows\Forms">
       <UniqueIdentifier>{d51fedb7-036b-453e-b5ff-8094e8e479c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Text">
+      <UniqueIdentifier>{fe524a58-bd95-4210-aa3b-5f3380791500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Threading">
+      <UniqueIdentifier>{5fc84286-7a6c-4f77-8a44-17920b7dc415}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -617,6 +623,12 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\Windows\Forms\Control.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Windows\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Text\EncoderFallback.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Threading\Interlocked.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Threading</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

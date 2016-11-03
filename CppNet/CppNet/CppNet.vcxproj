@@ -127,6 +127,7 @@
     <ClInclude Include="CppNet\System\String.h" />
     <ClInclude Include="CppNet\System\CppNet.System.h" />
     <ClInclude Include="CppNet\System\SystemException.h" />
+    <ClInclude Include="CppNet\System\Text\EncoderFallback.hpp" />
     <ClInclude Include="CppNet\System\Text\Encoding.h" />
     <ClInclude Include="CppNet\System\Text\CppNet.System.Text.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\Capture.h" />
@@ -138,6 +139,7 @@
     <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunner.h" />
     <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunnerFactory.h" />
     <ClInclude Include="CppNet\System\Threading\CppNet.System.Threading.h" />
+    <ClInclude Include="CppNet\System\Threading\Interlocked.hpp" />
     <ClInclude Include="CppNet\System\Threading\Thread.h" />
     <ClInclude Include="CppNet\System\Threading\Timeout.h" />
     <ClInclude Include="CppNet\System\Threading\WaitHandle.h" />

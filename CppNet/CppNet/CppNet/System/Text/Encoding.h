@@ -138,6 +138,9 @@ namespace CppNet
 
 			private:
 				Int32 codePage = 0;
+				CodePageDataItem* dataItem = nullptr;
+				Boolean deserializedFromEverett = false;
+				Boolean isReadOnly = true;
 			};
 		}
 	}
