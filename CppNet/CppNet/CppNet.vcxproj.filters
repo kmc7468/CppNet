@@ -606,6 +606,12 @@
     <ClInclude Include="CppNet\System\IndexOutOfRangeException.hpp">
       <Filter>선언 및 구현 파일\CppNet\System</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\ArithmeticException.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\OverflowException.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

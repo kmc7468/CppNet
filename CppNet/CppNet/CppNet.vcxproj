@@ -33,6 +33,7 @@
     <ClInclude Include="CppNet\KMC\Sor.h" />
     <ClInclude Include="CppNet\System\AppDomain.h" />
     <ClInclude Include="CppNet\System\ArgumentException.h" />
+    <ClInclude Include="CppNet\System\ArithmeticException.hpp" />
     <ClInclude Include="CppNet\System\AsyncCallback.h" />
     <ClInclude Include="CppNet\System\BitConverter.h" />
     <ClInclude Include="CppNet\System\Boolean.h" />
@@ -104,6 +105,7 @@
     <ClInclude Include="CppNet\System\NotImplementedException.h" />
     <ClInclude Include="CppNet\System\Nullable.h" />
     <ClInclude Include="CppNet\System\Object.h" />
+    <ClInclude Include="CppNet\System\OverflowException.hpp" />
     <ClInclude Include="CppNet\System\Random.h" />
     <ClInclude Include="CppNet\System\Runtime\InteropServices\CppNet.System.Runtime.InteropServices.h" />
     <ClInclude Include="CppNet\System\Runtime\InteropServices\_Thread.h" />

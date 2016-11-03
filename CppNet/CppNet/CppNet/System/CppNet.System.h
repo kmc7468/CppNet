@@ -14,6 +14,8 @@
 #include "NotImplementedException.h"
 #include "ArgumentException.h"
 #include "IndexOutOfRangeException.hpp"
+#include "ArithmeticException.hpp"
+#include "OverflowException.hpp"
 
 #include "IntPtr.h"
 
