@@ -24,7 +24,7 @@ namespace CppNet::KMC
 		{
 			for (std::map<System::String, T*>::iterator iter = vars.begin(); iter != vars.end(); ++iter)
 			{
-				delete (*iter).second;
+				delete iter->second;
 			}
 		}
 
@@ -118,6 +118,26 @@ namespace CppNet::KMC
 			{
 				throw System::IndexOutOfRangeException();
 			}
+		}
+
+		void Copy(const DynamicVariable<T>& v)
+		{
+			for (auto iter = v.vars.begin(); iter != v.vars.end(); ++iter)
+			{
+				vars.insert(std::pair<System::String, T*>(iter->first, new T(*(iter->second))));
+			}
+		}
+
+		void Move(DynamicVariable<T>& v)
+		{
+			for (std::map<System::String, T*>::iterator iter = v.vars.begin(); iter != v.vars.end(); ++iter)
+			{
+				vars.insert(std::pair<System::String, T*>(iter->first, new T(*(iter->second))));
+
+				delete iter->second;
+			}
+
+			v.vars.clear();
 		}
 	};
 }

@@ -13,9 +13,6 @@ int main()
 	Console::WriteLine(i.At("A"));
 	Console::WriteLine(i.At("B"));
 
-	i.Free("A");
-	i.Free("B");
-
 	try 
 	{
 		Console::WriteLine(i.At("A"));
@@ -33,7 +30,13 @@ int main()
 	{
 		Console::WriteLine("¿À·ù: "s + ex.Message());
 	}
-	
+
+	DynamicVariable<int> i2;
+
+	i2.Copy(i);
+
+	Console::WriteLine(i2.At("A"));
+	Console::WriteLine(i2.At("B"));
 
 	MAIN_END
 }
