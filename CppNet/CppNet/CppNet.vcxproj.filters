@@ -166,6 +166,12 @@
     <Filter Include="선언 및 구현 파일\CppNet\KMC">
       <UniqueIdentifier>{64eaa65c-9a30-48ea-a75a-221debba6e7b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Windows">
+      <UniqueIdentifier>{017c3a6b-8dbf-45b5-a7f2-8ca85747ea7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Windows\Forms">
+      <UniqueIdentifier>{d51fedb7-036b-453e-b5ff-8094e8e479c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -582,9 +588,6 @@
     <ClInclude Include="CppNet\System\Threading\Timeout.h">
       <Filter>헤더 파일\CppNet\System\Threading</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\Windows\Forms\Control.h">
-      <Filter>헤더 파일\CppNet\System\Windows\Forms</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\Windows\Forms\CppNet.System.Windows.Forms.h">
       <Filter>헤더 파일\CppNet\System\Windows\Forms</Filter>
     </ClInclude>
@@ -611,6 +614,9 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\OverflowException.hpp">
       <Filter>선언 및 구현 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Windows\Forms\Control.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Windows\Forms</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
