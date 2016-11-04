@@ -59,3 +59,8 @@ const Int32 Encoding::CodePageUTF7 = 65000;
 const Int32 Encoding::CodePageUTF8 = 65001;
 const Int32 Encoding::CodePageUTF32 = 12000;
 const Int32 Encoding::CodePageUTF32BE = 12001;
+
+Encoding::CodePageDataItem::CodePageDataItem(Int32 dataIndex)
+{
+	m_dataIndex = dataIndex;
+}

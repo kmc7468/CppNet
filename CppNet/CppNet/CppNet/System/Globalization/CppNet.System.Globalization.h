@@ -3,5 +3,6 @@
 
 #include "UnicodeCategory.h"
 #include "CharUnicodeInfo.h"
+#include "EncodingTable.hpp"
 
 #endif

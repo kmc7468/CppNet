@@ -18,6 +18,7 @@ namespace CppNet
 			class Hashtable : public Object/*, public Runtime::Serialization::ISerializable, 
 				public Runtime::Serialization::IDeserializationCallback, public ICloneable*/
 			{
+			private:
 
 			};
 		}

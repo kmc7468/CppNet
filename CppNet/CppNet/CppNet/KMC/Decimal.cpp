@@ -1095,8 +1095,10 @@ Decimal& Decimal::operator^=(const Decimal& d)
 
 Decimal Decimal::operator/(const Decimal& d) const
 {
+	// 불필요한 연산 방지
 	if (d.ToString() == "1") return *this;
 
+	// 특수한 수 처리
 	if (d.ToString() == "0")
 	{
 		Decimal a;
@@ -1171,9 +1173,59 @@ Decimal Decimal::operator/(const Decimal& d) const
 		}
 	}
 
+	// 미리 선언
 	Decimal a = *this;
 	Decimal b = d;
 	Decimal result;
+
+	// 패딩 편의 및 연산 속도 향상을 위함
+	a.Clean(); b.Clean();
+
+	// 부호
+	if (a.isN && b.isN) result.isN = false;
+	else if (a.isN || b.isN) result.isN = true;
+	else if (!a.isN && !b.isN) result.isN = false;
+
+	// 실수점 이하 부분이 0이 아닐경우 자연수 부분에 포함
+	if (a.mReal[0] != 0 || a.mReal.length() > 1)
+		a.mInteger += a.mReal;
+
+	if (b.mReal[0] != 0 || b.mReal.length() > 1)
+		b.mInteger += b.mReal;
+
+	// 실수점 이하 부분이 0이 아닐경우 0으로 만듦
+	if (a.mReal.length() > 1 || a.mReal[0] != 0)
+	{
+		a.mReal = (Byte)0;
+	}
+
+	if (b.mReal.length() > 1 || b.mReal[0] != 0)
+	{
+		b.mReal = (Byte)0;
+	}
+
+	// 패딩
+	if (a.mInteger.length() >= b.mInteger.length())
+		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
+	else
+		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
+
+	size_t count_a = a.mInteger.length() * 2;
+	size_t count_b = b.mInteger.length() * 2;
+
+	if (std::get<0>(ByteTool::ByteToInts(a.mInteger.at(0))) == 0)
+		--count_a;
+
+	if (std::get<0>(ByteTool::ByteToInts(b.mInteger.at(0))) == 0)
+		--count_b;
+
+	while (true)
+	{
+		break; // FIXME 임시조치
+	}
+
+	// 반환
+	result.Clean();
 
 	return result;
 }

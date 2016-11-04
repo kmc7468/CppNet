@@ -178,6 +178,9 @@
     <Filter Include="선언 및 구현 파일\CppNet\System\Threading">
       <UniqueIdentifier>{5fc84286-7a6c-4f77-8a44-17920b7dc415}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Globalization">
+      <UniqueIdentifier>{75ca849b-c5b7-44b8-b216-d59237dae1aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -629,6 +632,9 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\Threading\Interlocked.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Globalization\EncodingTable.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Globalization</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -149,4 +149,6 @@ codes; \
 std::chrono::system_clock::time_point _CalcTime_B = std::chrono::system_clock::now();\
 result result_name = _CalcTime_B - _CalcTime_A;
 
+#define _Default(type) type{}
+
 #endif
