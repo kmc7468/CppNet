@@ -1231,7 +1231,7 @@ Decimal Decimal::operator/(const Decimal& d) const
 
 	while (true)
 	{
-
+		break; // FIXME 임시조치
 	}
 
 	// 반환
