@@ -27,7 +27,7 @@
     <ClInclude Include="CppNet\gc.h" />
     <ClInclude Include="CppNet\gc_ptr.h" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
-    <ClInclude Include="CppNet\KMC\DynamicVariable.hpp" />
+    <ClInclude Include="CppNet\KMC\DynamicVariables.hpp" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
     <ClInclude Include="CppNet\KMC\CppNet.KMC.h" />
     <ClInclude Include="CppNet\KMC\Sor.h" />

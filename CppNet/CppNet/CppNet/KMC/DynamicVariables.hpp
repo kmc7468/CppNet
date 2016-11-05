@@ -11,16 +11,16 @@
 namespace CppNet::KMC
 {
 	template<typename T>
-	class DynamicVariable final : public System::Object
+	class DynamicVariables final : public System::Object
 	{
 	private:
 		std::map<System::String, T*> vars;
 
 	public:
-		DynamicVariable() = default;
-		DynamicVariable(const DynamicVariable<T>&) = delete;
-		DynamicVariable(DynamicVariable<T>&&) = delete;
-		~DynamicVariable()
+		DynamicVariables() = default;
+		DynamicVariables(const DynamicVariables<T>&) = delete;
+		DynamicVariables(DynamicVariables<T>&&) = delete;
+		~DynamicVariables()
 		{
 			for (std::map<System::String, T*>::iterator iter = vars.begin(); iter != vars.end(); ++iter)
 			{
@@ -29,8 +29,8 @@ namespace CppNet::KMC
 		}
 
 	public:
-		DynamicVariable<T>& operator=(const DynamicVariable<T>&) = delete;
-		DynamicVariable<T>& operator=(DynamicVariable<T>&&) = delete;
+		DynamicVariables<T>& operator=(const DynamicVariables<T>&) = delete;
+		DynamicVariables<T>& operator=(DynamicVariables<T>&&) = delete;
 
 		T& operator[](const System::String& name)
 		{
@@ -120,7 +120,7 @@ namespace CppNet::KMC
 			}
 		}
 
-		void Copy(const DynamicVariable<T>& v)
+		void Copy(const DynamicVariables<T>& v)
 		{
 			for (auto iter = v.vars.begin(); iter != v.vars.end(); ++iter)
 			{
@@ -128,7 +128,7 @@ namespace CppNet::KMC
 			}
 		}
 
-		void Move(DynamicVariable<T>& v)
+		void Move(DynamicVariables<T>& v)
 		{
 			for (std::map<System::String, T*>::iterator iter = v.vars.begin(); iter != v.vars.end(); ++iter)
 			{

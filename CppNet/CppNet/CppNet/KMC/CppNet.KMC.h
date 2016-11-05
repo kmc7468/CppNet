@@ -6,6 +6,6 @@
 
 #include "Sor.h"
 
-#include "DynamicVariable.hpp"
+#include "DynamicVariables.hpp"
 
 #endif

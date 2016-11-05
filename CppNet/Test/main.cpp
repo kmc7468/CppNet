@@ -5,7 +5,7 @@ int main()
 	std::wcout.imbue(locale(""));
 	std::wcin.imbue(locale(""));
 
-	DynamicVariable<int> i;
+	DynamicVariables<int> i;
 
 	i.Alloc("A", 5);
 	i.Alloc("B", 10);
@@ -31,7 +31,7 @@ int main()
 		Console::WriteLine("¿À·ù: "s + ex.Message());
 	}
 
-	DynamicVariable<int> i2;
+	DynamicVariables<int> i2;
 
 	i2.Copy(i);
 

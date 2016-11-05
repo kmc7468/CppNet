@@ -1193,6 +1193,22 @@ Decimal Decimal::operator/(const Decimal& d) const
 	if (b.mReal[0] != 0 || b.mReal.length() > 1)
 		b.mInteger += b.mReal;
 
+	// 패딩
+	if (a.mReal.length() > b.mReal.length())
+	{
+		b.mInteger.insert(b.mInteger.length(), (Byte)0);
+
+		a.mReal = (Byte)0;
+		b.mReal = (Byte)0;
+	}
+	else if (a.mReal.length() < b.mReal.length())
+	{
+		a.mInteger.insert(a.mInteger.length(), (Byte)0);
+
+		a.mReal = (Byte)0;
+		b.mReal = (Byte)0;
+	}
+
 	// 실수점 이하 부분이 0이 아닐경우 0으로 만듦
 	if (a.mReal.length() > 1 || a.mReal[0] != 0)
 	{
@@ -1203,12 +1219,6 @@ Decimal Decimal::operator/(const Decimal& d) const
 	{
 		b.mReal = (Byte)0;
 	}
-
-	// 패딩
-	if (a.mInteger.length() >= b.mInteger.length())
-		b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
-	else
-		a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
 
 	size_t count_a = a.mInteger.length() * 2;
 	size_t count_b = b.mInteger.length() * 2;

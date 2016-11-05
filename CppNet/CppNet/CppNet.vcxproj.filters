@@ -612,9 +612,6 @@
     <ClInclude Include="CppNet\System\Runtime\Serialization\SerializationInfoEnumerator.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Runtime\Serialization</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\KMC\DynamicVariable.hpp">
-      <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\IndexOutOfRangeException.hpp">
       <Filter>선언 및 구현 파일\CppNet\System</Filter>
     </ClInclude>
@@ -635,6 +632,9 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\Globalization\EncodingTable.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Globalization</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\KMC\DynamicVariables.hpp">
+      <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
