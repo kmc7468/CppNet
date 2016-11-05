@@ -139,6 +139,11 @@ namespace CppNet::KMC
 
 			v.vars.clear();
 		}
+
+		void IsAlloc(const System::String& name)
+		{
+			return vars.find(name) != System::String::npos ? true : false;
+		}
 	};
 }
 

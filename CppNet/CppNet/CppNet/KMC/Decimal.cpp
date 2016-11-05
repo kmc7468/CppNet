@@ -1196,14 +1196,14 @@ Decimal Decimal::operator/(const Decimal& d) const
 	// 패딩
 	if (a.mReal.length() > b.mReal.length())
 	{
-		b.mInteger.insert(b.mInteger.length(), (Byte)0);
+		b.mInteger.insert(b.mInteger.length(), a.mReal.length() - b.mReal.length(), (Byte)0);
 
 		a.mReal = (Byte)0;
 		b.mReal = (Byte)0;
 	}
 	else if (a.mReal.length() < b.mReal.length())
 	{
-		a.mInteger.insert(a.mInteger.length(), (Byte)0);
+		a.mInteger.insert(a.mInteger.length(), b.mReal.length() - a.mReal.length(), (Byte)0);
 
 		a.mReal = (Byte)0;
 		b.mReal = (Byte)0;
@@ -1231,7 +1231,7 @@ Decimal Decimal::operator/(const Decimal& d) const
 
 	while (true)
 	{
-		break; // FIXME 임시조치
+
 	}
 
 	// 반환
