@@ -1,6 +1,8 @@
 #ifndef CPPNET_SYSTEM_DRAWING_IMAGE_HPP
 #define CPPNET_SYSTEM_DRAWING_IMAGE_HPP
 
+#include "../../../Defines.h"
+
 #include "../Object.h"
 #include "../ICloneable.h"
 #include "../IDisposable.h"

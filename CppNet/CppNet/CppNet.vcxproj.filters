@@ -225,9 +225,6 @@
     <ClInclude Include="CppNet\event.h">
       <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
-    <ClInclude Include="Includes.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\ICrypto.h">
       <Filter>헤더 파일\CppNet</Filter>
     </ClInclude>
@@ -751,6 +748,12 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\ComponentModel\EventHandlerList.cpp">
       <Filter>소스 파일\CppNet\System\ComponentModel</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Text\EncoderFallback.cpp">
+      <Filter>소스 파일\CppNet\System\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Globalization\EncodingTable.cpp">
+      <Filter>소스 파일\CppNet\System\Globalization</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

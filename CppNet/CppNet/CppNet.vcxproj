@@ -166,7 +166,6 @@
     <ClInclude Include="CppNet\Unicode.h" />
     <ClInclude Include="CppNet\Unicode9_0.h" />
     <ClInclude Include="Defines.h" />
-    <ClInclude Include="Includes.h" />
     <ClInclude Include="Language.h" />
     <ClInclude Include="SystemTypes.h" />
     <ClInclude Include="Utility.h" />
@@ -188,6 +187,7 @@
     <ClCompile Include="CppNet\System\Exception.cpp" />
     <ClCompile Include="CppNet\System\FormatException.cpp" />
     <ClCompile Include="CppNet\System\Globalization\CharUnicodeInfo.cpp" />
+    <ClCompile Include="CppNet\System\Globalization\EncodingTable.cpp" />
     <ClCompile Include="CppNet\System\IntPtr.cpp" />
     <ClCompile Include="CppNet\System\InvalidCastException.cpp" />
     <ClCompile Include="CppNet\System\InvalidOperationException.cpp" />
@@ -200,6 +200,7 @@
     <ClCompile Include="CppNet\System\Random.cpp" />
     <ClCompile Include="CppNet\System\Runtime\Remoting\Contexts\Context.cpp" />
     <ClCompile Include="CppNet\System\SystemException.cpp" />
+    <ClCompile Include="CppNet\System\Text\EncoderFallback.cpp" />
     <ClCompile Include="CppNet\System\Text\Encoding.cpp" />
     <ClCompile Include="CppNet\System\Text\RegularExpressions\RegexRunner.cpp" />
     <ClCompile Include="CppNet\System\Text\RegularExpressions\Regex.cpp" />

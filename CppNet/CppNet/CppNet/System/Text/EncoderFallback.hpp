@@ -1,6 +1,8 @@
 #ifndef CPPNET_SYSTEM_TEXT_ENCODERFALLBACK_HPP
 #define CPPNET_SYSTEM_TEXT_ENCODERFALLBACK_HPP
 
+#include "../../../Defines.h"
+
 #include "../Object.h"
 
 namespace CppNet::System::Text
@@ -24,8 +26,6 @@ namespace CppNet::System::Text
 			return s_InternalSyncObject;
 		}
 	};
-
-	Object* EncoderFallback::s_InternalSyncObject = nullptr;
 }
 
 #endif

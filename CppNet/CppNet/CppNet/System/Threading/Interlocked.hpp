@@ -1,6 +1,8 @@
 #ifndef CPPNET_SYSTEM_THREADING_INTERLOCKED_HPP
 #define CPPNET_SYSTEM_THREADING_INTERLOCKED_HPP
 
+#include "../../../Defines.h"
+
 #include "../Object.h"
 
 namespace CppNet::System::Threading

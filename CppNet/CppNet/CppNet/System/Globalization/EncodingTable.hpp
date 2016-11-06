@@ -1,6 +1,8 @@
 #ifndef CPPNET_SYSTEM_GLOBALIZATION_ENCODINGTABLE_HPP
 #define CPPNET_SYSTEM_GLOBALIZATION_ENCODINGTABLE_HPP
 
+#include "../../../Defines.h"
+
 #include "../Object.h"
 
 namespace CppNet::System::Text
@@ -32,8 +34,7 @@ namespace CppNet::System::Globalization
 		static volatile Int32 lastCodePageItem;
 	};
 
-	Int32 EncodingTable::lastEncodingItem = 0; // FIXME
-	volatile Int32 EncodingTable::lastCodePageItem = 0;
+	
 }
 
 #endif

@@ -1,6 +1,8 @@
 #ifndef CPPNET_SYSTEM_RUNTIME_SERIALIZATION_SERIALIZATIONINFOENUMERATOR_HPP
 #define CPPNET_SYSTEM_RUNTIME_SERIALIZATION_SERIALIZATIONINFOENUMERATOR_HPP
 
+#include "../../../../Defines.h"
+
 #include "../../Object.h"
 
 #include "../../Collections/IEnumerator.h"
