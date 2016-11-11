@@ -642,6 +642,21 @@
     <ClInclude Include="CppNet\CTR\Fibonacci.hpp">
       <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\CTR\Sum.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\CTR\Sub.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\CTR\Mul.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\CTR\Div.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\CTR\Mod.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

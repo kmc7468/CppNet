@@ -22,8 +22,13 @@
     <ClInclude Include="CppNet.h" />
     <ClInclude Include="CppNet\CppNet.h" />
     <ClInclude Include="CppNet\CTR\CppNet.CTR.h" />
+    <ClInclude Include="CppNet\CTR\Div.hpp" />
     <ClInclude Include="CppNet\CTR\Factorial.hpp" />
     <ClInclude Include="CppNet\CTR\Fibonacci.hpp" />
+    <ClInclude Include="CppNet\CTR\Mod.hpp" />
+    <ClInclude Include="CppNet\CTR\Mul.hpp" />
+    <ClInclude Include="CppNet\CTR\Sub.hpp" />
+    <ClInclude Include="CppNet\CTR\Sum.hpp" />
     <ClInclude Include="CppNet\ICopy.h" />
     <ClInclude Include="CppNet\ICrypto.h" />
     <ClInclude Include="CppNet\event.h" />

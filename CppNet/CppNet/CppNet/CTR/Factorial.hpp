@@ -8,13 +8,13 @@ namespace CppNet::CTR
 	template<System::UInt64 n>
 	struct Factorial final
 	{
-		enum { Value = n * Factorial<n - 1>::Value };
+		enum : System::UInt64 { Value = n * Factorial<n - 1>::Value };
 	};
 
 	template<>
 	struct Factorial<0> final
 	{
-		enum { Value = 1 };
+		enum : System::UInt64 { Value = 1 };
 	};
 }
 
