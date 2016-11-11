@@ -3,8 +3,6 @@
 
 #include "event.h"
 #include "Unicode.h"
-#include "gc_ptr.h"
-#include "gc.h"
 #include "ICrypto.h"
 #include "ICopy.h"
 

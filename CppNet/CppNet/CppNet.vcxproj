@@ -27,8 +27,6 @@
     <ClInclude Include="CppNet\ICopy.h" />
     <ClInclude Include="CppNet\ICrypto.h" />
     <ClInclude Include="CppNet\event.h" />
-    <ClInclude Include="CppNet\gc.h" />
-    <ClInclude Include="CppNet\gc_ptr.h" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\DynamicVariables.hpp" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
@@ -174,7 +172,6 @@
     <ClInclude Include="Utility.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CppNet\gc.cpp" />
     <ClCompile Include="CppNet\KMC\Decimal.cpp" />
     <ClCompile Include="CppNet\System\ArgumentException.cpp" />
     <ClCompile Include="CppNet\System\BitConverter.cpp" />
@@ -218,7 +215,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CppNet\event.inl" />
-    <None Include="CppNet\gc.inl" />
     <None Include="CppNet\gc_ptr.inl" />
     <None Include="CppNet\KMC\Decimal.inl" />
     <None Include="CppNet\KMC\Fraction.inl" />
