@@ -6,6 +6,10 @@
 #include "../Object.h"
 #include "../IDisposable.h"
 
+#include "../Int32.h"
+#include "../Int64.h"
+#include "../Boolean.h"
+
 namespace CppNet
 {
 	namespace System
@@ -14,6 +18,9 @@ namespace CppNet
 		{
 			class Stream : public Object, public IDisposable
 			{
+			private:
+				static const Int32 _DefaultCopyBufferSize;
+
 			public:
 				virtual ~Stream() = default;
 

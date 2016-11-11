@@ -21,6 +21,9 @@
   <ItemGroup>
     <ClInclude Include="CppNet.h" />
     <ClInclude Include="CppNet\CppNet.h" />
+    <ClInclude Include="CppNet\CTR\CppNet.CTR.h" />
+    <ClInclude Include="CppNet\CTR\Factorial.hpp" />
+    <ClInclude Include="CppNet\CTR\Fibonacci.hpp" />
     <ClInclude Include="CppNet\ICopy.h" />
     <ClInclude Include="CppNet\ICrypto.h" />
     <ClInclude Include="CppNet\event.h" />
@@ -194,6 +197,7 @@
     <ClCompile Include="CppNet\System\IO\File.cpp" />
     <ClCompile Include="CppNet\System\IO\FileNotFoundException.cpp" />
     <ClCompile Include="CppNet\System\IO\IOException.cpp" />
+    <ClCompile Include="CppNet\System\IO\Stream.cpp" />
     <ClCompile Include="CppNet\System\Math.cpp" />
     <ClCompile Include="CppNet\System\NotImplementedException.cpp" />
     <ClCompile Include="CppNet\System\Object.cpp" />

@@ -286,6 +286,14 @@ namespace CppNet
 			return v;
 		}
 
+		UInt64 Math::Fibonacci(UInt64 i)
+		{
+			if (i < 2)
+				return i;
+			else
+				return Fibonacci(i - 1) + Fibonacci(i - 2);
+		}
+
 		KMC::Decimal Math::Energy(KMC::Decimal m)
 		{
 			return m * "18446744072314778980"s;

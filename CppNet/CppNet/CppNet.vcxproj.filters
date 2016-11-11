@@ -181,6 +181,12 @@
     <Filter Include="선언 및 구현 파일\CppNet\System\Globalization">
       <UniqueIdentifier>{75ca849b-c5b7-44b8-b216-d59237dae1aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\CTR">
+      <UniqueIdentifier>{ae2a744d-06e7-4b19-9066-5706dcb08e82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\CppNet\CTR">
+      <UniqueIdentifier>{d7f1fc8d-3bb5-4547-94f6-6eec686c987c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -633,6 +639,15 @@
     <ClInclude Include="CppNet\KMC\DynamicVariables.hpp">
       <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\CTR\Factorial.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\CTR\CppNet.CTR.h">
+      <Filter>헤더 파일\CppNet\CTR</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\CTR\Fibonacci.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -754,6 +769,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Globalization\EncodingTable.cpp">
       <Filter>소스 파일\CppNet\System\Globalization</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\IO\Stream.cpp">
+      <Filter>소스 파일\CppNet\System\IO</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

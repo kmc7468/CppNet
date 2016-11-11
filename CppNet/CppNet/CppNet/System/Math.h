@@ -82,6 +82,7 @@ namespace CppNet
 			static inline Double Truncaste(Double d);
 
 			static inline UInt64 Factorial(UInt64 i);
+			static inline UInt64 Fibonacci(UInt64 i);
 
 			static inline KMC::Decimal Energy(KMC::Decimal m);
 		};

@@ -1,4 +1,5 @@
 #include "Stream.h"
+#include "../InvalidOperationException.h"
 using namespace CppNet::System;
 using namespace CppNet::System::IO;
 

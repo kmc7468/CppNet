@@ -27,5 +27,6 @@
 
 #include "CppNet/CppNet.h"
 #include "CppNet/KMC/CppNet.KMC.h"
+#include "CppNet/CTR/CppNet.CTR.h"
 
 #endif
