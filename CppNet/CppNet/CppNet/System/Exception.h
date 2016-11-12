@@ -13,7 +13,7 @@ namespace CppNet
 		class Exception : public Object, public std::exception
 		{
 		private:
-			inline const char* what() const override;
+			inline const char* what() const noexcept override;
 
 		public:
 			class ExceptionData
@@ -49,7 +49,7 @@ namespace CppNet
 			Exception(const ExceptionData& data);
 			Exception(Exception &&sNewException);
 			Exception(const Exception& sNewException);
-			virtual ~Exception() = default;
+			virtual ~Exception() noexcept = default;
 
 		protected:
 			String message;

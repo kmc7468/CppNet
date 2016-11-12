@@ -2,7 +2,7 @@
 
 namespace CppNet::System
 {
-	const char* Exception::what() const
+	const char* Exception::what() const noexcept
 	{
 #ifndef CppNet_Unsafe
 		return "";

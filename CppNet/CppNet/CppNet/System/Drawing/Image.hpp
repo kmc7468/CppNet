@@ -14,7 +14,7 @@ namespace CppNet::System::Drawing
 {
 	using namespace Runtime::Serialization;
 
-	class Image abstract : public Object, public ICloneable, public IDisposable, public ISerializable
+	class Image : public Object, public ICloneable, public IDisposable, public ISerializable
 	{
 	public:
 		using GetThumbnailImageAbort = std::function<Boolean(void)>;

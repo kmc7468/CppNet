@@ -7,7 +7,7 @@
 
 namespace CppNet::System::Text
 {
-	class EncoderFallback abstract : public Object
+	class EncoderFallback : public Object
 	{
 	private:
 		Boolean bIsMicrosoftBestFitFallback = false;

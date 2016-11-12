@@ -30,11 +30,11 @@
 #endif
 
 #ifndef dref
-#define dref(t) std::remove_reference<##t>::type
+#define dref(t) std::remove_reference<t>::type
 #endif
 
 #ifndef dcst
-#define dcst(from, to_type) (*const_cast<to_type##*>(&##from))
+#define dcst(from, to_type) (*const_cast<to_type*>(&from))
 #endif
 
 #ifndef _is
@@ -72,7 +72,7 @@ operator type() const {\
 getter\
 ;\
 }\
-type##& operator=(const type##&value){\
+type& operator=(const type&value){\
 setter\
 ;return this->value;\
 }\
@@ -90,7 +90,7 @@ operator type() const {\
 getter\
 ;\
 }\
-type##& operator=(const type##&value){\
+type& operator=(const type&value){\
 setter\
 ;return this->value;\
 }\
@@ -106,7 +106,7 @@ operator type() const {\
 getter\
 ;\
 }\
-type##& operator=(const type##&value){\
+type& operator=(const type&value){\
 setter\
 ;return this->value;\
 }\

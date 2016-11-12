@@ -22,7 +22,7 @@ namespace CppNet::KMC
 		DynamicVariables(DynamicVariables<T>&&) = delete;
 		~DynamicVariables()
 		{
-			for (std::map<System::String, T*>::iterator iter = vars.begin(); iter != vars.end(); ++iter)
+			for (typename std::map<System::String, T*>::iterator iter = vars.begin(); iter != vars.end(); ++iter)
 			{
 				delete iter->second;
 			}
@@ -122,7 +122,7 @@ namespace CppNet::KMC
 
 		void Copy(const DynamicVariables<T>& v)
 		{
-			for (auto iter = v.vars.begin(); iter != v.vars.end(); ++iter)
+			for (typename std::map<System::String, T*>::iterator iter = v.vars.begin(); iter != v.vars.end(); ++iter)
 			{
 				vars.insert(std::pair<System::String, T*>(iter->first, new T(*(iter->second))));
 			}
@@ -130,7 +130,7 @@ namespace CppNet::KMC
 
 		void Move(DynamicVariables<T>& v)
 		{
-			for (std::map<System::String, T*>::iterator iter = v.vars.begin(); iter != v.vars.end(); ++iter)
+			for (typename std::map<System::String, T*>::iterator iter = v.vars.begin(); iter != v.vars.end(); ++iter)
 			{
 				vars.insert(std::pair<System::String, T*>(iter->first, new T(*(iter->second))));
 
@@ -142,7 +142,7 @@ namespace CppNet::KMC
 
 		void IsAlloc(const System::String& name)
 		{
-			return vars.find(name) != System::String::npos ? true : false;
+			return vars.find(name) != vars.end();
 		}
 	};
 }

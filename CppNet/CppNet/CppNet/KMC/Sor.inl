@@ -28,7 +28,7 @@ namespace CppNet
 
 			for (Byte i = 0; i < 4; i++)
 			{
-				Key::value_type c = key.back();
+				typename Key::value_type c = key.back();
 
 				c += 100;
 

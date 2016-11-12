@@ -22,7 +22,7 @@ namespace CppNet::System::Globalization
 
 namespace CppNet::System::Text
 {
-	class Encoding abstract : public Object, public ICloneable
+	class Encoding : public Object, public ICloneable
 	{
 		friend class Globalization::EncodingTable;
 

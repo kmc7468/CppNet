@@ -107,11 +107,6 @@ namespace CppNet
 				}
 
 				template<typename T>
-				void Queue<T>::Enumerator::Dispose()
-				{
-					//NOTE: nothing
-				}
-				template<typename T>
 				Boolean Queue<T>::Enumerator::MoveNext()
 				{
 					if (first)

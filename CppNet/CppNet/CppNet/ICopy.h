@@ -8,7 +8,7 @@
 namespace CppNet
 {
 	template<typename T>
-	interface ICopy abstract
+	interface ICopy
 	{
 		virtual T DeepCopy() const = 0;
 		virtual T ShallowCopy() const = 0;

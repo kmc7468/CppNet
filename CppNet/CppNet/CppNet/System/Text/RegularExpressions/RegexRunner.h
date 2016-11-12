@@ -18,7 +18,7 @@ namespace CppNet
 			{
 				class Regex;
 
-				class RegexRunner abstract : public Object
+				class RegexRunner : public Object
 				{
 				protected:
 					Int32 runtextbeg;
