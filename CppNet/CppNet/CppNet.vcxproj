@@ -147,7 +147,11 @@
     <ClInclude Include="CppNet\System\Text\RegularExpressions\RegexRunnerFactory.h" />
     <ClInclude Include="CppNet\System\Threading\CppNet.System.Threading.h" />
     <ClInclude Include="CppNet\System\Threading\Interlocked.hpp" />
+    <ClInclude Include="CppNet\System\Threading\IThreadPoolWorkItem.hpp" />
+    <ClInclude Include="CppNet\System\Threading\Tasks\CppNet.System.Threading.Tasks.h" />
+    <ClInclude Include="CppNet\System\Threading\Tasks\Task.hpp" />
     <ClInclude Include="CppNet\System\Threading\Thread.h" />
+    <ClInclude Include="CppNet\System\Threading\ThreadAbortException.hpp" />
     <ClInclude Include="CppNet\System\Threading\Timeout.h" />
     <ClInclude Include="CppNet\System\Threading\WaitHandle.h" />
     <ClInclude Include="CppNet\System\TimeSpan.h" />

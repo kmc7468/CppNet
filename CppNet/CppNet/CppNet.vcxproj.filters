@@ -187,6 +187,12 @@
     <Filter Include="헤더 파일\CppNet\CTR">
       <UniqueIdentifier>{d7f1fc8d-3bb5-4547-94f6-6eec686c987c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Threading\Tasks">
+      <UniqueIdentifier>{202f6cbc-1a9c-44d1-baa6-c034196dc6cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\CppNet\System\Threading\Tasks">
+      <UniqueIdentifier>{25750aac-35c8-4eb7-91ef-612ada4a1512}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -656,6 +662,18 @@
     </ClInclude>
     <ClInclude Include="CppNet\CTR\Mod.hpp">
       <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Threading\Tasks\Task.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Threading\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Threading\Tasks\CppNet.System.Threading.Tasks.h">
+      <Filter>헤더 파일\CppNet\System\Threading\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Threading\IThreadPoolWorkItem.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Threading\ThreadAbortException.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Threading</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

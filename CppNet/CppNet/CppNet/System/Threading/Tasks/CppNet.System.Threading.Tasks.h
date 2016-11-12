@@ -1,0 +1,6 @@
+#ifndef N_CPPNET_SYSTEM_THREADING_TASKS_H
+#define N_CPPNET_SYSTEM_THREADING_TASKS_H
+
+#include "Task.hpp"
+
+#endif

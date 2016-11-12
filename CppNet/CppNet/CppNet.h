@@ -21,6 +21,7 @@
 #include "CppNet/System/Text/CppNet.System.Text.h"
 #include "CppNet/System/Text/RegularExpressions/CppNet.System.Text.RegularExpressions.h"
 #include "CppNet/System/Threading/CppNet.System.Threading.h"
+#include "CppNet/System/Threading/Tasks/CppNet.System.Threading.Tasks.h"
 #include "CppNet/System/Xml/CppNet.System.Xml.h"
 #include "CppNet/System/Xml/XPath/CppNet.System.Xml.XPath.h"
 #include "CppNet/System/Windows/Forms/CppNet.System.Windows.Forms.h"

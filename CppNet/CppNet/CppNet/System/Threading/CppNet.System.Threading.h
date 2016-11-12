@@ -8,4 +8,7 @@
 #include "WaitHandle.h"
 #include "Thread.h"
 
+#include "IThreadPoolWorkItem.hpp"
+#include "ThreadAbortException.hpp"
+
 #endif
