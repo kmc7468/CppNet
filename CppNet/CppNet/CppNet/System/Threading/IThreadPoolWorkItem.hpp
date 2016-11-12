@@ -9,6 +9,11 @@
 
 namespace CppNet::System::Threading
 {
+	namespace Tasks
+	{
+		class Task;
+	}
+
 	interface IThreadPoolWorkItem
 	{
 		friend class Tasks::Task;

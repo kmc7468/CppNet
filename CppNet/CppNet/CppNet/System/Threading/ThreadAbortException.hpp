@@ -1,6 +1,9 @@
 #ifndef CPPNET_SYSTEM_THREADING_THREADABORTEXCEPTION_HPP
 #define CPPNET_SYSTEM_THREADING_THREADABORTEXCEPTION_HPP
 
+#include "../../../Defines.h"
+#include "../../../Language.h"
+
 #include "../SystemException.h"
 
 namespace CppNet::System::Threading
@@ -59,7 +62,7 @@ namespace CppNet::System::Threading
 	public:
 		String Message() const override
 		{
-			String msg = TXT_OVERFLOW_DEFMSG;
+			String msg = TXT_THREAD_ABORT_DEFMSG;
 			if (message != "")
 			{
 				msg.append(" ");

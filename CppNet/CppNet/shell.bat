@@ -1,0 +1,2 @@
+g++ -std=c++17 main.cpp CppNet/*.cpp CppNet/KMC/*.cpp CppNet/System/*.cpp CppNet/System/Collections/*.cpp CppNet/System/ComponentModel/*.cpp CppNet/System/Drawing/*.cpp CppNet/System/Globalization/*.cpp CppNet/System/IO/*.cpp CppNet/System/Runtime/Remoting/Contexts/*.cpp CppNet/System/Text/*.cpp CppNet/System/Text/RegularExpressions/*.cpp CppNet/System/Threading/*.cpp -o test.exe
+pause

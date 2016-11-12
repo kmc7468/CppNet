@@ -214,6 +214,7 @@
     <ClCompile Include="CppNet\System\Text\Encoding.cpp" />
     <ClCompile Include="CppNet\System\Text\RegularExpressions\RegexRunner.cpp" />
     <ClCompile Include="CppNet\System\Text\RegularExpressions\Regex.cpp" />
+    <ClCompile Include="CppNet\System\Threading\Tasks\Task.cpp" />
     <ClCompile Include="CppNet\System\Threading\Timeout.cpp" />
     <ClCompile Include="CppNet\System\Threading\WaitHandle.cpp" />
     <ClCompile Include="CppNet\System\TimeSpan.cpp" />

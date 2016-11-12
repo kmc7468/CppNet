@@ -193,6 +193,9 @@
     <Filter Include="헤더 파일\CppNet\System\Threading\Tasks">
       <UniqueIdentifier>{25750aac-35c8-4eb7-91ef-612ada4a1512}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\CppNet\System\Threading\Tasks">
+      <UniqueIdentifier>{7fadc429-5ab3-46e6-8c1d-0ecd87abc3b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -796,6 +799,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\IO\Stream.cpp">
       <Filter>소스 파일\CppNet\System\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Threading\Tasks\Task.cpp">
+      <Filter>소스 파일\CppNet\System\Threading\Tasks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
