@@ -114,6 +114,8 @@
     <ClInclude Include="CppNet\System\Object.h" />
     <ClInclude Include="CppNet\System\OverflowException.hpp" />
     <ClInclude Include="CppNet\System\Random.h" />
+    <ClInclude Include="CppNet\System\Runtime\CompilerServices\ConditionalWeakTable.hpp" />
+    <ClInclude Include="CppNet\System\Runtime\CompilerServices\CppNet.System.Runtime.CompilerServices.h" />
     <ClInclude Include="CppNet\System\Runtime\InteropServices\CppNet.System.Runtime.InteropServices.h" />
     <ClInclude Include="CppNet\System\Runtime\InteropServices\_Thread.h" />
     <ClInclude Include="CppNet\System\Runtime\Remoting\Contexts\Context.h" />
@@ -150,6 +152,7 @@
     <ClInclude Include="CppNet\System\Threading\IThreadPoolWorkItem.hpp" />
     <ClInclude Include="CppNet\System\Threading\Tasks\CppNet.System.Threading.Tasks.h" />
     <ClInclude Include="CppNet\System\Threading\Tasks\Task.hpp" />
+    <ClInclude Include="CppNet\System\Threading\Tasks\TaskScheduler.hpp" />
     <ClInclude Include="CppNet\System\Threading\Thread.h" />
     <ClInclude Include="CppNet\System\Threading\ThreadAbortException.hpp" />
     <ClInclude Include="CppNet\System\Threading\Timeout.h" />

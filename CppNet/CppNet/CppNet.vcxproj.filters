@@ -196,6 +196,12 @@
     <Filter Include="소스 파일\CppNet\System\Threading\Tasks">
       <UniqueIdentifier>{7fadc429-5ab3-46e6-8c1d-0ecd87abc3b7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Runtime\CompilerServices">
+      <UniqueIdentifier>{6140dd90-55c9-488a-be51-a691f50b8660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\CppNet\System\Runtime\CompilerServices">
+      <UniqueIdentifier>{0afbb923-91dc-47ee-b085-eb0d47bfe2f2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -677,6 +683,15 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\Threading\ThreadAbortException.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Threading\Tasks\TaskScheduler.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Threading\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\CompilerServices\ConditionalWeakTable.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Runtime\CompilerServices</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\CompilerServices\CppNet.System.Runtime.CompilerServices.h">
+      <Filter>헤더 파일\CppNet\System\Runtime\CompilerServices</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

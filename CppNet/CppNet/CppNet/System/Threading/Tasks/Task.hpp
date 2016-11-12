@@ -61,6 +61,7 @@ namespace CppNet::System::Threading::Tasks
 	private:
 		volatile Int32 m_taskId = 0;
 		Object* m_action = nullptr;
+		Object* m_stateObject = nullptr;
 	};
 }
 

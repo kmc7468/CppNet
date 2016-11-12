@@ -206,4 +206,8 @@ result result_name = _CalcTime_B - _CalcTime_A;
 #define _Default(type) type{}
 #endif
 
+#ifndef _internal
+#define _internal private
+#endif
+
 #endif

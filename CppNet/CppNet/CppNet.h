@@ -18,6 +18,7 @@
 #include "CppNet/System/Runtime/Remoting/Contexts/CppNet.System.Runtime.Remoting.Contexts.h"
 #include "CppNet/System/Runtime/Remoting/Messaging/CppNet.System.Runtime.Remoting.Messaging.h"
 #include "CppNet/System/Runtime/Serialization/CppNet.System.Runtime.Serialization.h"
+#include "CppNet/System/Runtime/CompilerServices/CppNet.System.Runtime.CompilerServices.h"
 #include "CppNet/System/Text/CppNet.System.Text.h"
 #include "CppNet/System/Text/RegularExpressions/CppNet.System.Text.RegularExpressions.h"
 #include "CppNet/System/Threading/CppNet.System.Threading.h"
