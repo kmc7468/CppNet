@@ -7,11 +7,11 @@
 
 namespace CppNet
 {
-	template<typename T>
+	template<typename T, typename DeepResult = T, typename ShallowResult = T>
 	interface ICopy
 	{
-		virtual T DeepCopy() const = 0;
-		virtual T ShallowCopy() const = 0;
+		virtual DeepResult DeepCopy() const = 0;
+		virtual ShallowResult ShallowCopy() const = 0;
 	};
 }
 
