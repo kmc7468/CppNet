@@ -7,11 +7,10 @@
 C++ 표준: C++17 표준
 
 ## 레퍼런스 페이지
-활용 예제나 자세한 설명 등은 CNWiki(CppNet Wiki)를 참조하십시오.<br>
-https://github.com/kmc7468/CppNet/wiki
+활용 예제나 자세한 설명 등은 [CNWiki(CppNet Wiki)](https://github.com/kmc7468/CppNet/wiki)를 참조하십시오.
 
 ## 닷넷 코드
-https://referencesource.microsoft.com/#System,namespaces<br>
+https://referencesource.microsoft.com/<br>
 닷넷에 있는 기능의 대부분은 이 사이트를 보고 구현하였습니다.
 
 ## 적용 방법 (Visual Studio)
@@ -23,8 +22,7 @@ https://referencesource.microsoft.com/#System,namespaces<br>
 - 프로젝트 속성~링커~입력에 들어간 뒤 '추가 종속성' 옵션에 CppNet.lib를 추가합니다.
 
 ## 사용 방법
-- `#include <System.h>` 이런식으로 CppNet 의 헤더 파일을 include해서 사용합니다.
-- 취향에 따라 `using namespace`를 사용할 수도 있습니다.
+CppNet의 헤더 파일(.h) 및 선언 및 구현 파일(.hpp)을 include 하여 사용합니다.
 
 ## 개발진
 총 담당/기획자: static
@@ -40,7 +38,7 @@ https://referencesource.microsoft.com/#System,namespaces<br>
 - .Net framework 자문: 맛난호빵
 
 ## 라이센스
-요약: 출처만 제대로 남겨주시면 뭔짓을 하던 뭐라고 하지 않습니다.
+요약: 출처만 제대로 남겨주시면 뭔짓을 하던 뭐라고 하지 않겠습니다.
 ```
 MIT License
 
