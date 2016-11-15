@@ -5,6 +5,7 @@
 #include "InvalidCastException.h"
 #include "FormatException.h"
 #include "NotImplementedException.h"
+#include "OverflowException.hpp"
 
 #include "../../Language.h"
 
@@ -129,7 +130,7 @@ namespace CppNet
 		{
 			if ((Int32)c > 255 || (Int32)c < 0)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)c;
@@ -149,7 +150,7 @@ namespace CppNet
 		{
 			if (b < 0)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)b;
@@ -161,7 +162,7 @@ namespace CppNet
 
 			if (d > 255 || d < 0)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)d;
@@ -173,7 +174,7 @@ namespace CppNet
 
 			if (d > 255 || d < 0)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)d;
@@ -183,7 +184,7 @@ namespace CppNet
 		{
 			if (i > 255 || i < 0)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)i;
@@ -193,7 +194,7 @@ namespace CppNet
 		{
 			if (i > 255 || i < 0)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)i;
@@ -203,7 +204,7 @@ namespace CppNet
 		{
 			if (i > 255 || i < 0)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)i;
@@ -213,7 +214,7 @@ namespace CppNet
 		{
 			if (i > 255)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)i;
@@ -223,7 +224,7 @@ namespace CppNet
 		{
 			if (i > 255)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)i;
@@ -233,7 +234,7 @@ namespace CppNet
 		{
 			if (i > 255)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)i;
@@ -248,7 +249,7 @@ namespace CppNet
 
 			if (i > 255 || i < 0)
 			{
-				throw Exception("오버플로"); // FIXME: Overflow Exception
+				throw OverflowException();
 			}
 
 			return (Byte)i;
