@@ -24,12 +24,12 @@ namespace CppNet
 		}
 
 		Box(std::nullptr_t null)
-		{
-			ref_count = new size_t(1);
-		}
+		{}
 
 		Box(const Box<T>& box)
 		{
+			if (box == nullptr) return;
+
 			data = box.data;
 			ref_count = box.ref_count;
 			++(*ref_count);
@@ -37,6 +37,8 @@ namespace CppNet
 
 		Box(Box<T>&& box)
 		{
+			if (box == nullptr) return;
+
 			data = box.data;
 			ref_count = box.ref_count;
 
@@ -58,16 +60,18 @@ namespace CppNet
 
 		~Box()
 		{
-			if (*ref_count == 1)
+			if (data)
 			{
-				if (data)
+				if (*ref_count == 1)
+				{
 					delete data;
-				delete ref_count;
-			}
-			else
-			{
-				--(*ref_count);
-				data = nullptr;
+					delete ref_count;
+				}
+				else
+				{
+					data = nullptr;
+					--(*ref_count);
+				}
 			}
 		}
 
@@ -139,9 +143,31 @@ namespace CppNet
 			if (data)
 			{
 				data = nullptr;
+				delete ref_count;
+				ref_count = nullptr;
 			}
 
 			return *this;
+		}
+
+		bool operator==(const Box<T>& box)
+		{
+			return *box == **this;
+		}
+
+		bool operator==(std::nullptr_t null)
+		{
+			return data == nullptr;
+		}
+
+		inline bool operator!=(const Box<T>& box)
+		{
+			return !this->operator==(box);
+		}
+
+		inline bool operator!=(std::nullptr_t null)
+		{
+			return !this->operator==(null);
 		}
 
 	public:
@@ -182,6 +208,7 @@ namespace CppNet
 			if (!data)
 			{
 				data = new T(value);
+				ref_count = new size_t(1);
 			}
 			else
 			{
@@ -196,6 +223,7 @@ namespace CppNet
 			if (!data)
 			{
 				data = new T(value);
+				ref_count = new size_t(1);
 			}
 			else
 			{
@@ -210,6 +238,8 @@ namespace CppNet
 			if (data)
 			{
 				data = nullptr;
+				delete ref_count;
+				ref_count = nullptr;
 			}
 
 			return *this;
