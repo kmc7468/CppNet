@@ -34,6 +34,8 @@
 
 #define TXT_THREAD_ABORT_DEFMSG "스레드가 중단되었습니다."
 
+#define TXT_NULLREF_DEFMSG "nullptr인 객체를 역참조할 수 없습니다."
+
 
 #elif defined(LANG_ESP)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Nevalidaj argumentoj."
@@ -66,6 +68,8 @@
 
 #define TXT_THREAD_ABORT_DEFMSG "Fadeno estis abortita."
 
+#define TXT_NULLREF_DEFMSG "Objekto kiu estas nullptr ne povas referencita."
+
 #elif defined(LANG_CHI)
 #define TXT_INVALID_ARGUMENT_DEFMSG "参数异常无效。"
 
@@ -97,6 +101,8 @@
 
 #define TXT_THREAD_ABORT_DEFMSG "线程正在中止。"
 
+#define TXT_NULLREF_DEFMSG "无法引用为nullptr的对象。"
+
 #elif defined(LANG_JSP)
 #define TXT_INVALID_ARGUMENT_DEFMSG "引数の例外が無効です。"
 
@@ -127,6 +133,8 @@
 #define TXT_OVERFLOW_DEFMSG "算術オーバーフローが発生しました。"
 
 #define TXT_THREAD_ABORT_DEFMSG "スレッドが中止されました。"
+
+#define TXT_NULLREF_DEFMSG "nullptrのオブジェクトは参照できません。"
 
 
 #elif defined(LANG_RUS)
@@ -160,6 +168,8 @@
 
 #define TXT_THREAD_ABORT_DEFMSG "Тема была прервана время."
 
+#define TXT_NULLREF_DEFMSG "Объект, который является nullptr нельзя ссылаться."
+
 #elif defined(LANG_SPA)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Excepción de argumento no válido."
 
@@ -191,6 +201,8 @@
 
 #define TXT_THREAD_ABORT_DEFMSG "El hilo estaba siendo abortado."
 
+#define TXT_NULLREF_DEFMSG "No se puede hacer referencia a un objeto que es nullptr."
+
 #else
 #define TXT_INVALID_ARGUMENT_DEFMSG "Invalid argument exception."
 
@@ -221,6 +233,8 @@
 #define TXT_OVERFLOW_DEFMSG "An arithmetic overflow has occurred."
 
 #define TXT_THREAD_ABORT_DEFMSG "Thread was being aborted."
+
+#define TXT_NULLREF_DEFMSG "An object that is nullptr cannot be referenced."
 
 
 #endif

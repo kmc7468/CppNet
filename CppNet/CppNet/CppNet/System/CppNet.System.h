@@ -16,6 +16,7 @@
 #include "IndexOutOfRangeException.hpp"
 #include "ArithmeticException.hpp"
 #include "OverflowException.hpp"
+#include "NullReferenceException.hpp"
 
 #include "IntPtr.h"
 

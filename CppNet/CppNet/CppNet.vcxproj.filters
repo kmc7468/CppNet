@@ -699,6 +699,12 @@
     <ClInclude Include="CppNet\CTR\IsOdd.hpp">
       <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\Box.hpp">
+      <Filter>선언 및 구현 파일\CppNet</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\NullReferenceException.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

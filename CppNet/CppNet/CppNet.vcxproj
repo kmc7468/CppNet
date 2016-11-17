@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet.h" />
+    <ClInclude Include="CppNet\Box.hpp" />
     <ClInclude Include="CppNet\CppNet.h" />
     <ClInclude Include="CppNet\CTR\CppNet.CTR.h" />
     <ClInclude Include="CppNet\CTR\Div.hpp" />
@@ -113,6 +114,7 @@
     <ClInclude Include="CppNet\System\Math.h" />
     <ClInclude Include="CppNet\System\NotImplementedException.h" />
     <ClInclude Include="CppNet\System\Nullable.h" />
+    <ClInclude Include="CppNet\System\NullReferenceException.hpp" />
     <ClInclude Include="CppNet\System\Object.h" />
     <ClInclude Include="CppNet\System\OverflowException.hpp" />
     <ClInclude Include="CppNet\System\Random.h" />
