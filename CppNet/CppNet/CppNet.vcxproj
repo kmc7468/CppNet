@@ -25,8 +25,10 @@
     <ClInclude Include="CppNet\CTR\Div.hpp" />
     <ClInclude Include="CppNet\CTR\Factorial.hpp" />
     <ClInclude Include="CppNet\CTR\Fibonacci.hpp" />
+    <ClInclude Include="CppNet\CTR\IsOdd.hpp" />
     <ClInclude Include="CppNet\CTR\Mod.hpp" />
     <ClInclude Include="CppNet\CTR\Mul.hpp" />
+    <ClInclude Include="CppNet\CTR\IsEven.hpp" />
     <ClInclude Include="CppNet\CTR\Sub.hpp" />
     <ClInclude Include="CppNet\CTR\Sum.hpp" />
     <ClInclude Include="CppNet\ICopy.h" />

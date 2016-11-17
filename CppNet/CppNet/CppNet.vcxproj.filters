@@ -693,6 +693,12 @@
     <ClInclude Include="CppNet\System\Runtime\CompilerServices\CppNet.System.Runtime.CompilerServices.h">
       <Filter>헤더 파일\CppNet\System\Runtime\CompilerServices</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\CTR\IsEven.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\CTR\IsOdd.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

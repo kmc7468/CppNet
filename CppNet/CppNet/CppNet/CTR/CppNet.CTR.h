@@ -8,5 +8,7 @@
 #include "Mul.hpp"
 #include "Div.hpp"
 #include "Mod.hpp"
+#include "IsEven.hpp"
+#include "IsOdd.hpp"
 
 #endif
