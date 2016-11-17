@@ -21,5 +21,8 @@ int main()
 	std::cout << i_b->Data() << std::endl;
 	std::cout << i_c->Data() << std::endl;
 
+	std::cout << i_a.ReferenceCount() << std::endl;
+	std::cout << i_d.ReferenceCount() << std::endl;
+
 	MAIN_END
 }

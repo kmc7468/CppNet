@@ -150,22 +150,22 @@ namespace CppNet
 			return *this;
 		}
 
-		bool operator==(const Box<T>& box)
+		bool operator==(const Box<T>& box) const
 		{
 			return *box == **this;
 		}
 
-		bool operator==(std::nullptr_t null)
+		bool operator==(std::nullptr_t null) const
 		{
 			return data == nullptr;
 		}
 
-		inline bool operator!=(const Box<T>& box)
+		inline bool operator!=(const Box<T>& box) const
 		{
 			return !this->operator==(box);
 		}
 
-		inline bool operator!=(std::nullptr_t null)
+		inline bool operator!=(std::nullptr_t null) const
 		{
 			return !this->operator==(null);
 		}
@@ -243,6 +243,15 @@ namespace CppNet
 			}
 
 			return *this;
+		}
+
+	public:
+		size_t ReferenceCount() const
+		{
+			if (!data)
+				throw NullReferenceException();
+
+			return *ref_count;
 		}
 	};
 }
