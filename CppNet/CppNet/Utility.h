@@ -2,10 +2,7 @@
 #define UTILITY_H
 
 #include "Defines.h"
-
-#include "CppNet/System/Boolean.h"
 #include "CppNet/event.h"
-
 #include <type_traits>
 #include <chrono>
 
@@ -153,34 +150,8 @@ getter\
 } name;
 #endif
 
-namespace CppNet
-{
-	template <typename T, typename U>
-	inline System::Boolean is(U& u)
-	{
-		if (T* p = dynamic_cast<T*>(&u))
-			return true;
-		else
-			return false;
-	}
-
-	template <typename T, typename U>
-	inline T as(U& u)
-	{
-		return dynamic_cast<T>(u);
-	}
-}
-
 #ifndef evnt
 #define evnt(del, name) CppNet::event<del> name
-#endif
-
-#ifndef _MaxValue
-#define _MaxValue(type) std::numeric_limits<type>::max()
-#endif
-
-#ifndef _MinValue
-#define _MinValue(type) std::numeric_limits<type>::min()
 #endif
 
 #ifndef _CalcTime
@@ -197,5 +168,10 @@ result result_name = _CalcTime_B - _CalcTime_A;
 #ifndef _internal
 #define _internal private
 #endif
+
+#include "CppNet/as.hpp"
+#include "CppNet/is.hpp"
+#include "CppNet/MinValue.hpp"
+#include "CppNet/MaxValue.hpp"
 
 #endif

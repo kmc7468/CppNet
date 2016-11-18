@@ -10,7 +10,7 @@ namespace CppNet
 		{
 			namespace RegularExpressions
 			{
-				const TimeSpan Regex::MaximumMatchTimeout = TimeSpan(_MaxValue(Int32) - 1);
+				const TimeSpan Regex::MaximumMatchTimeout = TimeSpan(MaxValue<Int32>() - 1);
 				const TimeSpan Regex::InfiniteMatchTimeout = Threading::Timeout::InfiniteTimeSpan;
 			}
 		}

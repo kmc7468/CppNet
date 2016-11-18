@@ -705,6 +705,18 @@
     <ClInclude Include="CppNet\System\NullReferenceException.hpp">
       <Filter>선언 및 구현 파일\CppNet\System</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\is.hpp">
+      <Filter>선언 및 구현 파일\CppNet</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\as.hpp">
+      <Filter>선언 및 구현 파일\CppNet</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\MaxValue.hpp">
+      <Filter>선언 및 구현 파일\CppNet</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\MinValue.hpp">
+      <Filter>선언 및 구현 파일\CppNet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

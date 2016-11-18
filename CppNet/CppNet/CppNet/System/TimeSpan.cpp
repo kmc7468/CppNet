@@ -2,7 +2,6 @@
 
 #include "DoubleT.h"
 #include "ArgumentException.h"
-
 namespace CppNet
 {
 	namespace System
@@ -14,8 +13,8 @@ namespace CppNet
 		const Int64 TimeSpan::TicksPerSecond = 10000000;
 
 		const TimeSpan TimeSpan::Zero = TimeSpan(0);
-		const TimeSpan TimeSpan::MaxValue = TimeSpan(_MaxValue(Int64));
-		const TimeSpan TimeSpan::MinValue = TimeSpan(_MinValue(Int64));
+		const TimeSpan TimeSpan::MaxValue = TimeSpan(CppNet::MaxValue<Int64>());
+		const TimeSpan TimeSpan::MinValue = TimeSpan(CppNet::MinValue<Int64>());
 
 		const Double TimeSpan::DaysPerTick = 1.0 / TimeSpan::TicksPerDay;
 		const Double TimeSpan::HoursPerTick = 1.0 / TimeSpan::TicksPerHour;

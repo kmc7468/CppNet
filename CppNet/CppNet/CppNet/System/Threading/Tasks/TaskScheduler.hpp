@@ -21,7 +21,7 @@ namespace CppNet::System::Threading::Tasks
 	public:
 		virtual Int32 MaximumConcurrencyLevel() const
 		{
-			return _MaxValue(Int32);
+			return MaxValue<Int32>();
 		}
 
 	_internal:
