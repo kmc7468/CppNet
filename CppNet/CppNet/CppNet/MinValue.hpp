@@ -10,6 +10,12 @@ namespace CppNet
 	{
 		return std::numeric_limits<T>::min();
 	}
+
+	template<typename T>
+	inline static T MinValueR()
+	{
+		return std::numeric_limits<T>::min();
+	}
 }
 
 #endif

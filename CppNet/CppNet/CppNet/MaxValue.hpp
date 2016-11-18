@@ -10,6 +10,12 @@ namespace CppNet
 	{
 		return std::numeric_limits<T>::max();
 	}
+
+	template<typename T>
+	inline static T MaxValueR()
+	{
+		return std::numeric_limits<T>::max();
+	}
 }
 
 #endif
