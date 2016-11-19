@@ -1,8 +1,9 @@
 #include "File.h"
-using namespace CppNet::System;
-using namespace CppNet::System::IO;
 
-void File::Copy(const String& source, const String& to)
+namespace CppNet::System::IO
 {
-	File::Copy(source, to, false);
+	void File::Copy(const String& source, const String& to)
+	{
+		File::Copy(source, to, false);
+	}
 }

@@ -13,8 +13,6 @@
 
 #include "../Globalization/EncodingTable.hpp"
 
-using namespace CppNet::System::Collections;
-
 namespace CppNet::System::Globalization
 {
 	class EncodingTable;
@@ -22,6 +20,8 @@ namespace CppNet::System::Globalization
 
 namespace CppNet::System::Text
 {
+	using namespace CppNet::System::Collections;
+
 	class Encoding : public Object, public ICloneable
 	{
 		friend class Globalization::EncodingTable;

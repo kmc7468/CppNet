@@ -1,16 +1,20 @@
 #include "Unicode.h"
-using namespace CppNet;
 
+#include "../Defines.h"
 #include "../Utility.h"
 
-const Unicode* const Unicode::GetUnicode()
+namespace CppNet
 {
-	return unicode;
-}
+	const Unicode* const Unicode::GetUnicode()
+	{
+		return unicode;
+	}
 
 #ifdef UNICODE_CUSTOM
-void Unicode::SetUnicode(Unicode* uni)
-{
-	*unicode = *uni;
-}
+	void Unicode::SetUnicode(Unicode* uni)
+	{
+		*unicode = *uni;
+	}
 #endif
+
+}

@@ -1,51 +1,51 @@
 #include "FileNotFoundException.h"
-using namespace CppNet::System;
-using namespace CppNet::System::IO;
-
 #include "../../../Language.h"
 
-FileNotFoundException::FileNotFoundException(const String& message)
-	: IOException(message)
-{ }
-
-FileNotFoundException::FileNotFoundException(const String& message, Exception* innerException)
-	: IOException(message, innerException)
-{ }
-
-FileNotFoundException::FileNotFoundException(const Exception::ExceptionData& data)
-	: IOException(data)
-{ }
-
-FileNotFoundException::FileNotFoundException(const FileNotFoundException& ex)
-	: IOException(ex)
-{ }
-
-FileNotFoundException::FileNotFoundException(FileNotFoundException&& ex)
-	: IOException(ex)
-{ }
-
-FileNotFoundException& FileNotFoundException::operator=(const FileNotFoundException& ex)
+namespace CppNet::System::IO
 {
-	IOException::operator=(ex);
+	FileNotFoundException::FileNotFoundException(const String& message)
+		: IOException(message)
+	{ }
 
-	return *this;
-}
+	FileNotFoundException::FileNotFoundException(const String& message, Exception* innerException)
+		: IOException(message, innerException)
+	{ }
 
-FileNotFoundException& FileNotFoundException::operator=(FileNotFoundException&& ex)
-{
-	IOException::operator=(ex);
+	FileNotFoundException::FileNotFoundException(const Exception::ExceptionData& data)
+		: IOException(data)
+	{ }
 
-	return *this;
-}
+	FileNotFoundException::FileNotFoundException(const FileNotFoundException& ex)
+		: IOException(ex)
+	{ }
 
-String FileNotFoundException::Message() const
-{
-	String msg = TXT_IO_FILE404;
-	if (message != "")
+	FileNotFoundException::FileNotFoundException(FileNotFoundException&& ex)
+		: IOException(ex)
+	{ }
+
+	FileNotFoundException& FileNotFoundException::operator=(const FileNotFoundException& ex)
 	{
-		msg.append(" ");
-		msg.append(message);
+		IOException::operator=(ex);
+
+		return *this;
 	}
 
-	return msg;
+	FileNotFoundException& FileNotFoundException::operator=(FileNotFoundException&& ex)
+	{
+		IOException::operator=(ex);
+
+		return *this;
+	}
+
+	String FileNotFoundException::Message() const
+	{
+		String msg = TXT_IO_FILE404;
+		if (message != "")
+		{
+			msg.append(" ");
+			msg.append(message);
+		}
+
+		return msg;
+	}
 }

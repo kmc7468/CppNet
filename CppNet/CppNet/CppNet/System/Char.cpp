@@ -6,12 +6,12 @@
 
 #include <string>
 #include <algorithm>
-using namespace std;
-
 namespace CppNet
 {
 	namespace System
 	{
+		using namespace std;
+
 		const Char Char::MaxValue = Char(std::numeric_limits<char32_t>::max());
 		const Char Char::MinValue = Char(std::numeric_limits<char32_t>::min());
 

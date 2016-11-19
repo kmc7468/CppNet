@@ -8,12 +8,12 @@
 #include "../System/String.h"
 #include "../System/Double.h"
 
-using namespace CppNet::System;
-
 namespace CppNet
 {
 	namespace KMC
 	{
+		using namespace CppNet::System;
+
 		template<typename Crypto, typename Key>
 		class Sor : public Object, public ICrypto<Crypto>
 		{

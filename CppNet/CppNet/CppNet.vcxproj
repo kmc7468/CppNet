@@ -47,6 +47,7 @@
     <ClInclude Include="CppNet\System\AppDomain.h" />
     <ClInclude Include="CppNet\System\ArgumentException.h" />
     <ClInclude Include="CppNet\System\ArithmeticException.hpp" />
+    <ClInclude Include="CppNet\System\Array.hpp" />
     <ClInclude Include="CppNet\System\AsyncCallback.h" />
     <ClInclude Include="CppNet\System\BitConverter.h" />
     <ClInclude Include="CppNet\System\Boolean.h" />
@@ -68,6 +69,7 @@
     <ClInclude Include="CppNet\System\Collections\IEnumerable.h" />
     <ClInclude Include="CppNet\System\Collections\IEnumerator.h" />
     <ClInclude Include="CppNet\System\Collections\CppNet.System.Collections.h" />
+    <ClInclude Include="CppNet\System\Collections\IList.hpp" />
     <ClInclude Include="CppNet\System\ComponentModel\Component.h" />
     <ClInclude Include="CppNet\System\ComponentModel\EventHandlerList.h" />
     <ClInclude Include="CppNet\System\ComponentModel\IComponent.h" />
@@ -236,7 +238,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CppNet\event.inl" />
-    <None Include="CppNet\gc_ptr.inl" />
     <None Include="CppNet\KMC\Decimal.inl" />
     <None Include="CppNet\KMC\Fraction.inl" />
     <None Include="CppNet\KMC\Sor.inl" />

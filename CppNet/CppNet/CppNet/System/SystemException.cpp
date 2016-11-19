@@ -1,36 +1,38 @@
 #include "SystemException.h"
-using namespace CppNet::System;
 
-SystemException::SystemException(const String& message)
-	: Exception(message)
-{ }
-
-SystemException::SystemException(const String& message, Exception* innerException)
-	: Exception(message, innerException)
-{ }
-
-SystemException::SystemException(const Exception::ExceptionData& exd)
-	: Exception(exd)
-{ }
-
-SystemException::SystemException(const SystemException& ex)
-	: Exception(ex)
-{ }
-
-SystemException::SystemException(SystemException&& ex)
-	: Exception(ex)
-{ }
-
-SystemException& SystemException::operator=(const SystemException& ex)
+namespace CppNet::System
 {
-	Exception::operator=(ex);
+	SystemException::SystemException(const String& message)
+		: Exception(message)
+	{ }
 
-	return *this;
-}
+	SystemException::SystemException(const String& message, Exception* innerException)
+		: Exception(message, innerException)
+	{ }
 
-SystemException& SystemException::operator=(SystemException&& ex)
-{
-	Exception::operator=(ex);
+	SystemException::SystemException(const Exception::ExceptionData& exd)
+		: Exception(exd)
+	{ }
 
-	return *this;
+	SystemException::SystemException(const SystemException& ex)
+		: Exception(ex)
+	{ }
+
+	SystemException::SystemException(SystemException&& ex)
+		: Exception(ex)
+	{ }
+
+	SystemException& SystemException::operator=(const SystemException& ex)
+	{
+		Exception::operator=(ex);
+
+		return *this;
+	}
+
+	SystemException& SystemException::operator=(SystemException&& ex)
+	{
+		Exception::operator=(ex);
+
+		return *this;
+	}
 }

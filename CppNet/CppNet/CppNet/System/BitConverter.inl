@@ -7,12 +7,13 @@
 #include <sstream>
 #include "ArgumentException.h"
 #include "Math.h"
-using namespace std;
 
 namespace CppNet
 {
 	namespace System
 	{
+		using namespace std;
+
 		template<Int32 size, typename T>
 		std::array<Byte, size> BitConverter::GetBytesLitile(T t)
 		{

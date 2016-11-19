@@ -1,11 +1,11 @@
 #include "Sor.h"
 
-using namespace CppNet::System;
-
 namespace CppNet
 {
 	namespace KMC
 	{
+		using namespace CppNet::System;
+
 		template<typename Crypto, typename Key>
 		const Double Sor<Crypto, Key>::Version = 2.1;
 

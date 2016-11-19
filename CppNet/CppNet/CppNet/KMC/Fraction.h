@@ -6,7 +6,6 @@
 #include <tuple>
 
 #include "../../SystemTypes.h"
-using namespace CppNet::System;
 
 #include "Decimal.h"
 
@@ -14,6 +13,8 @@ namespace CppNet
 {
 	namespace KMC
 	{
+		using namespace CppNet::System;
+
 		template<typename integer = UInt32>
 		class Fraction final : public Object, public ICloneable
 		{

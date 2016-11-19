@@ -18,6 +18,7 @@
 #include "OverflowException.hpp"
 #include "NullReferenceException.hpp"
 
+#include "Array.hpp"
 #include "IntPtr.h"
 
 #include "TimeSpan.h"

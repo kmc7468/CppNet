@@ -5,12 +5,13 @@
 
 #include "../../SystemTypes.h"
 #include <vector>
-using namespace::System;
 
 namespace CppNet
 {
 	namespace KMC
 	{
+		using namespace CppNet::System;
+
 		class Decimal final : public Object
 		{
 		public:

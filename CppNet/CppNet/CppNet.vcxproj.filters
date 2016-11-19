@@ -202,6 +202,9 @@
     <Filter Include="헤더 파일\CppNet\System\Runtime\CompilerServices">
       <UniqueIdentifier>{0afbb923-91dc-47ee-b085-eb0d47bfe2f2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Collections">
+      <UniqueIdentifier>{1bb3e286-a0a3-462a-bc1f-5ac81fa8e3b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -717,6 +720,12 @@
     <ClInclude Include="CppNet\MinValue.hpp">
       <Filter>선언 및 구현 파일\CppNet</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Array.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\IList.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -852,9 +861,6 @@
     </None>
     <None Include="CppNet\KMC\Fraction.inl">
       <Filter>인라인 구현 파일\CppNet\KMC</Filter>
-    </None>
-    <None Include="CppNet\gc_ptr.inl">
-      <Filter>인라인 구현 파일\CppNet</Filter>
     </None>
     <None Include="CppNet\event.inl">
       <Filter>인라인 구현 파일\CppNet</Filter>
