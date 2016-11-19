@@ -1,0 +1,6 @@
+#ifndef N_CPPNET_SYSTEM_COLLECTIONS_OBJECTMODEL_H
+#define N_CPPNET_SYSTEM_COLLECTIONS_OBJECTMODEL_H
+
+#include "ReadOnlyCollection.hpp"
+
+#endif

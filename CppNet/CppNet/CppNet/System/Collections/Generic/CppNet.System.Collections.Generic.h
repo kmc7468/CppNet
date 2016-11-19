@@ -7,6 +7,8 @@
 #include "IList.h"
 #include "Queue.h"
 #include "IDictionary.h"
+#include "IReadOnlyCollection.hpp"
+#include "IReadOnlyList.hpp"
 
 #include <vector>
 #include <map>

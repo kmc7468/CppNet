@@ -17,6 +17,7 @@
 #include "ArithmeticException.hpp"
 #include "OverflowException.hpp"
 #include "NullReferenceException.hpp"
+#include "ArgumentNullException.hpp"
 
 #include "Array.hpp"
 #include "IntPtr.h"

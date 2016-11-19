@@ -205,6 +205,15 @@
     <Filter Include="선언 및 구현 파일\CppNet\System\Collections">
       <UniqueIdentifier>{1bb3e286-a0a3-462a-bc1f-5ac81fa8e3b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Collections\ObjectModel">
+      <UniqueIdentifier>{dfe013b5-f56b-464f-827b-91df258305bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\System\Collections\Generic">
+      <UniqueIdentifier>{46615b97-c3e4-4426-a1df-e868a2aa0a2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\CppNet\System\Collections\ObjectModel">
+      <UniqueIdentifier>{6abc1652-2448-4358-a4c7-368f872ca050}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -743,6 +752,21 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\UInt32_64.h">
       <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\ObjectModel\ReadOnlyCollection.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections\ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\Generic\IReadOnlyList.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\Generic\IReadOnlyCollection.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\ObjectModel\CppNet.System.Collections.ObjectModel.h">
+      <Filter>헤더 파일\CppNet\System\Collections\ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\ArgumentNullException.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

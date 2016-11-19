@@ -6,6 +6,7 @@
 #include "../../Boolean.h"
 
 #include "IEnumerable.h"
+#include "IReadOnlyCollection.hpp"
 
 #include <array>
 
@@ -17,12 +18,6 @@ namespace CppNet
 		{
 			namespace Generic
 			{
-				template <typename T>
-				interface IReadOnlyCollection : virtual public IEnumerable<T>
-				{
-					virtual Int32 Count() const = 0;
-				};
-
 				template <typename T>
 				interface ICollection : public IReadOnlyCollection<T>
 				{

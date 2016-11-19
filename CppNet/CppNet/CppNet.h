@@ -10,6 +10,7 @@
 #include "CppNet/System/CppNet.System.h"
 #include "CppNet/System/Collections/CppNet.System.Collections.h"
 #include "CppNet/System/Collections/Generic/CppNet.System.Collections.Generic.h"
+#include "CppNet/System/Collections/ObjectModel/CppNet.System.Collections.ObjectModel.h"
 #include "CppNet/System/ComponentModel/CppNet.System.ComponentModel.h"
 #include "CppNet/System/Drawing/CppNet.System.Drawing.h"
 #include "CppNet/System/Globalization/CppNet.System.Globalization.h"
