@@ -3,7 +3,8 @@
 
 #include "../../../Defines.h"
 
-#include "../CppNet.System.h"
+#include "../Object.h"
+#include "../Boolean.h"
 
 namespace CppNet
 {
