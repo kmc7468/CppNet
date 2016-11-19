@@ -9,5 +9,9 @@
 #include "IDictionaryEnumerator.h"
 #include "IDictionary.h"
 #include "Hashtable.h"
+#include "IComparer.hpp"
+#include "IStructuralComparable.hpp"
+#include "IStructuralEquatable.hpp"
+#include "IEqualityComparer.hpp"
 
 #endif

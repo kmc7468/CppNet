@@ -726,6 +726,18 @@
     <ClInclude Include="CppNet\System\Collections\IList.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\IComparer.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\IStructuralComparable.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\IStructuralEquatable.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\IEqualityComparer.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

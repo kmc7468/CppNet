@@ -64,12 +64,16 @@
     <ClInclude Include="CppNet\System\Collections\Generic\CppNet.System.Collections.Generic.h" />
     <ClInclude Include="CppNet\System\Collections\Hashtable.h" />
     <ClInclude Include="CppNet\System\Collections\ICollection.h" />
+    <ClInclude Include="CppNet\System\Collections\IComparer.hpp" />
     <ClInclude Include="CppNet\System\Collections\IDictionary.h" />
     <ClInclude Include="CppNet\System\Collections\IDictionaryEnumerator.h" />
     <ClInclude Include="CppNet\System\Collections\IEnumerable.h" />
     <ClInclude Include="CppNet\System\Collections\IEnumerator.h" />
     <ClInclude Include="CppNet\System\Collections\CppNet.System.Collections.h" />
+    <ClInclude Include="CppNet\System\Collections\IEqualityComparer.hpp" />
     <ClInclude Include="CppNet\System\Collections\IList.hpp" />
+    <ClInclude Include="CppNet\System\Collections\IStructuralComparable.hpp" />
+    <ClInclude Include="CppNet\System\Collections\IStructuralEquatable.hpp" />
     <ClInclude Include="CppNet\System\ComponentModel\Component.h" />
     <ClInclude Include="CppNet\System\ComponentModel\EventHandlerList.h" />
     <ClInclude Include="CppNet\System\ComponentModel\IComponent.h" />
