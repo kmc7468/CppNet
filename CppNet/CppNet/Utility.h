@@ -169,6 +169,10 @@ result result_name = _CalcTime_B - _CalcTime_A;
 #define _internal private
 #endif
 
+#ifndef ABSTRACT_CLASS
+#define ABSTRACT_CLASS protected:virtual void to_abstract() const final = 0;private:
+#endif
+
 #include "CppNet/as.hpp"
 #include "CppNet/is.hpp"
 #include "CppNet/MinValue.hpp"

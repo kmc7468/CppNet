@@ -10,15 +10,25 @@
 #include "Collections/IStructuralComparable.hpp"
 #include "Collections/IStructuralEquatable.hpp"
 
+#include "Int32.h"
+
 namespace CppNet::System
 {
-	class Array final : public Object, public ICloneable, public Collections::IList, public Collections::IStructuralComparable, public Collections::IStructuralEquatable
+	class Array : public Object, public ICloneable, public Collections::IList, public Collections::IStructuralComparable, public Collections::IStructuralEquatable
 	{
+		ABSTRACT_CLASS
+
 	_internal:
 		Array() = default;
 
 	public:
 		// TODO AsReadOnly
+
+		template<typename T>
+		static void Resize(Array& arr, Int32 newsize)
+		{
+
+		}
 	};
 }
 
