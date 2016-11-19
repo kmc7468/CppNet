@@ -110,6 +110,7 @@
     <ClInclude Include="CppNet\System\IndexOutOfRangeException.hpp" />
     <ClInclude Include="CppNet\System\Int16.h" />
     <ClInclude Include="CppNet\System\Int32.h" />
+    <ClInclude Include="CppNet\System\Int32_64.h" />
     <ClInclude Include="CppNet\System\Int64.h" />
     <ClInclude Include="CppNet\System\IntPtr.h" />
     <ClInclude Include="CppNet\System\InvalidCastException.h" />
@@ -176,6 +177,7 @@
     <ClInclude Include="CppNet\System\Type.h" />
     <ClInclude Include="CppNet\System\UInt16.h" />
     <ClInclude Include="CppNet\System\UInt32.h" />
+    <ClInclude Include="CppNet\System\UInt32_64.h" />
     <ClInclude Include="CppNet\System\UInt64.h" />
     <ClInclude Include="CppNet\System\Version.h" />
     <ClInclude Include="CppNet\System\Windows\Forms\Control.hpp" />

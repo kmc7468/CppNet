@@ -13,10 +13,12 @@
 #include "CppNet/System/Int16.h"
 #include "CppNet/System/Int32.h"
 #include "CppNet/System/Int64.h"
+#include "CppNet/System/Int32_64.h"
 
 #include "CppNet/System/UInt16.h"
 #include "CppNet/System/UInt32.h"
 #include "CppNet/System/UInt64.h"
+#include "CppNet/System/UInt32_64.h"
 
 #include "CppNet/System/Single.h"
 #include "CppNet/System/Double.h"

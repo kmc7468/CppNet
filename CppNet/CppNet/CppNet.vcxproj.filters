@@ -738,6 +738,12 @@
     <ClInclude Include="CppNet\System\Collections\IEqualityComparer.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Int32_64.h">
+      <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\UInt32_64.h">
+      <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

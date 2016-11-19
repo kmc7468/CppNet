@@ -20,15 +20,6 @@ namespace CppNet::System
 
 	_internal:
 		Array() = default;
-
-	public:
-		// TODO AsReadOnly
-
-		template<typename T>
-		static void Resize(Array& arr, Int32 newsize)
-		{
-
-		}
 	};
 }
 
