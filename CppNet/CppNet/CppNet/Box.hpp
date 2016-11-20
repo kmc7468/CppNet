@@ -19,10 +19,7 @@ namespace CppNet
 
 	public:
 		Box()
-		{
-			data = new T{};
-			ref_count = new size_t(1);
-		}
+		{}
 
 		Box(std::nullptr_t)
 		{}
@@ -59,6 +56,18 @@ namespace CppNet
 			ref_count = new size_t(1);
 		}
 
+		Box(T* ptr)
+		{
+			data = ptr;
+			ref_count = new size_t(1);
+		}
+
+		Box(T* ptr, size_t refcount)
+		{
+			data = ptr;
+			ref_count = new size_t(refcount);
+		}
+
 		~Box()
 		{
 			if (data)
@@ -80,7 +89,7 @@ namespace CppNet
 		const T& operator*() const
 		{
 			if (!data)
-				throw NullReferenceException();
+				throw System::NullReferenceException();
 
 			return *data;
 		}
@@ -88,7 +97,7 @@ namespace CppNet
 		T& operator*()
 		{
 			if (!data)
-				throw NullReferenceException();
+				throw System::NullReferenceException();
 
 			return *data;
 		}
@@ -96,7 +105,7 @@ namespace CppNet
 		const T* const operator->() const
 		{
 			if (!data)
-				throw NullReferenceException();
+				throw System::NullReferenceException();
 
 			return data;
 		}
@@ -104,7 +113,7 @@ namespace CppNet
 		T* operator->()
 		{
 			if (!data)
-				throw NullReferenceException();
+				throw System::NullReferenceException();
 
 			return data;
 		}
@@ -160,6 +169,15 @@ namespace CppNet
 			return *this;
 		}
 
+		Box<T>& operator=(const Box<T>& box)
+		{
+			data = box.data;
+			ref_count = box.ref_count;
+			++(*ref_count);
+
+			return *this;
+		}
+
 		bool operator==(const Box<T>& box) const
 		{
 			return *box == **this;
@@ -189,7 +207,7 @@ namespace CppNet
 		const T& Get() const
 		{
 			if (!data)
-				throw NullReferenceException();
+				throw System::NullReferenceException();
 
 			return *data;
 		}
@@ -197,7 +215,7 @@ namespace CppNet
 		T& Get()
 		{
 			if (!data)
-				throw NullReferenceException();
+				throw System::NullReferenceException();
 
 			return *data;
 		}
@@ -205,7 +223,7 @@ namespace CppNet
 		const T* const Data() const
 		{
 			if (!data)
-				throw NullReferenceException();
+				throw System::NullReferenceException();
 
 			return data;
 		}
@@ -213,7 +231,7 @@ namespace CppNet
 		T* Data()
 		{
 			if (!data)
-				throw NullReferenceException();
+				throw System::NullReferenceException();
 
 			return data;
 		}
@@ -269,6 +287,15 @@ namespace CppNet
 			return *this;
 		}
 
+		Box<T>& Set(const Box<T>& box)
+		{
+			data = box.data;
+			ref_count = box.ref_count;
+			++(*ref_count);
+
+			return *this;
+		}
+
 		System::Boolean HasValue() const
 		{
 			return data;
@@ -278,7 +305,7 @@ namespace CppNet
 		size_t ReferenceCount() const
 		{
 			if (!data)
-				throw NullReferenceException();
+				throw System::NullReferenceException();
 
 			return *ref_count;
 		}

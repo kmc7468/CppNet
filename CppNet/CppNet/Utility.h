@@ -170,7 +170,11 @@ result result_name = _CalcTime_B - _CalcTime_A;
 #endif
 
 #ifndef ABSTRACT_CLASS
-#define ABSTRACT_CLASS protected:virtual void to_abstract() const final = 0;private:
+#define ABSTRACT_CLASS protected:virtual void to_abstract() const = 0;private:
+#endif
+
+#ifndef UN_ABSTRACT_CLASS
+#define UN_ABSTRACT_CLASS protected:virtual void to_abstract() const {}private:
 #endif
 
 #include "CppNet/as.hpp"

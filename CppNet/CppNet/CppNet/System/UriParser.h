@@ -50,12 +50,15 @@ namespace CppNet::System
 		AllowIriParsing = 0x10000000,
 	};
 
+	class BuiltInUriParser;
+
 	class UriParser : public Object
 	{
 		ABSTRACT_CLASS
+		friend class BuiltInUriParser;
 
 	private:
-		static const Collections::Generic::Dictionary<String, Box<UriParser>>* m_Table;
+		static Collections::Generic::Dictionary<String, Box<UriParser>>* m_Table;
 		static Collections::Generic::Dictionary<String, Box<UriParser>>* m_TempTable;
 		static const UriSyntaxFlags c_UpdatableFlags;
 
@@ -89,6 +92,43 @@ namespace CppNet::System
 		static Box<UriParser> NetTcpUri;
 		static Box<UriParser> NetPipeUri;
 		static Box<UriParser> VsMacrosUri;
+
+		static const UriSyntaxFlags UnknownV1SyntaxFlags;
+		static const UriSyntaxFlags HttpSyntaxFlags;
+		static const UriSyntaxFlags FtpSyntaxFlags;
+		static const UriSyntaxFlags FileSyntaxFlags;
+		static const UriSyntaxFlags VsmacrosSyntaxFlags;
+		static const UriSyntaxFlags GopherSyntaxFlags;
+		static const UriSyntaxFlags NewsSyntaxFlags;
+		static const UriSyntaxFlags NntpSyntaxFlags;
+		static const UriSyntaxFlags TelnetSyntaxFlags;
+		static const UriSyntaxFlags LdapSyntaxFlags;
+		static const UriSyntaxFlags MailtoSyntaxFlags;
+		static const UriSyntaxFlags NetPipeSyntaxFlags;
+		static const UriSyntaxFlags NetTcpSyntaxFlags;
+
+	private:
+		enum class UriQuirksVersion
+		{
+			V2 = 2,
+			V3 = 3,
+		};
+
+		static const UriQuirksVersion s_QuirksVersion;
+
+	_internal:
+		static Boolean ShouldUseLegacyV2Quirks();
+
+		UriParser();
+	};
+
+	class BuiltInUriParser : public UriParser
+	{
+		UN_ABSTRACT_CLASS
+		friend class UriParser;
+
+	_internal:
+		BuiltInUriParser(const String& lwrCaseScheme, Int32 defaultPort, UriSyntaxFlags flags);
 	};
 }
 
