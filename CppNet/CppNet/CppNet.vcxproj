@@ -128,6 +128,8 @@
     <ClInclude Include="CppNet\System\IServiceProvider.h" />
     <ClInclude Include="CppNet\System\KeyValuePair.h" />
     <ClInclude Include="CppNet\System\Math.h" />
+    <ClInclude Include="CppNet\System\Media\CppNet.System.Media.h" />
+    <ClInclude Include="CppNet\System\Media\SoundPlayer.h" />
     <ClInclude Include="CppNet\System\NotImplementedException.h" />
     <ClInclude Include="CppNet\System\Nullable.h" />
     <ClInclude Include="CppNet\System\NullReferenceException.hpp" />
@@ -229,6 +231,7 @@
     <ClCompile Include="CppNet\System\IO\IOException.cpp" />
     <ClCompile Include="CppNet\System\IO\Stream.cpp" />
     <ClCompile Include="CppNet\System\Math.cpp" />
+    <ClCompile Include="CppNet\System\Media\SoundPlayer.cpp" />
     <ClCompile Include="CppNet\System\NotImplementedException.cpp" />
     <ClCompile Include="CppNet\System\Object.cpp" />
     <ClCompile Include="CppNet\System\Random.cpp" />

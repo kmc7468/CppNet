@@ -214,6 +214,12 @@
     <Filter Include="헤더 파일\CppNet\System\Collections\ObjectModel">
       <UniqueIdentifier>{6abc1652-2448-4358-a4c7-368f872ca050}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\CppNet\System\Media">
+      <UniqueIdentifier>{30315353-9ade-4894-8162-6828c7dc0ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CppNet\System\Media">
+      <UniqueIdentifier>{726755d8-2be1-478a-a686-6ce4a4da2536}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -768,6 +774,12 @@
     <ClInclude Include="CppNet\System\ArgumentNullException.hpp">
       <Filter>선언 및 구현 파일\CppNet\System</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Media\SoundPlayer.h">
+      <Filter>헤더 파일\CppNet\System\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Media\CppNet.System.Media.h">
+      <Filter>헤더 파일\CppNet\System\Media</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -892,6 +904,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Threading\Tasks\Task.cpp">
       <Filter>소스 파일\CppNet\System\Threading\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Media\SoundPlayer.cpp">
+      <Filter>소스 파일\CppNet\System\Media</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
