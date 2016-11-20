@@ -263,8 +263,51 @@ namespace CppNet::System
 		table[VsMacrosUri->m_Scheme] = VsMacrosUri;
 	}
 
+	UriParser::UriParser(UriSyntaxFlags flags)
+	{
+		m_Flags = flags;
+		m_Scheme = "";
+	}
+
+	UriSyntaxFlags UriParser::Flags() const
+	{
+		return m_Flags;
+	}
+
+	Boolean UriParser::NotAny(UriSyntaxFlags flags) const
+	{
+		return IsFullMatch(flags, UriSyntaxFlags::None);
+	}
+
+	Boolean UriParser::IsFact(UriSyntaxFlags flags) const
+	{
+		return !IsFullMatch(flags, UriSyntaxFlags::None);
+	}
+
+	Boolean UriParser::IsAllSet(UriSyntaxFlags flags) const
+	{
+		return IsFullMatch(flags, flags);
+	}
+
+	Boolean UriParser::IsFullMatch(UriSyntaxFlags flags, UriSyntaxFlags expected) const
+	{
+		UriSyntaxFlags mergedFlags;
+
+		if ((((Int32)flags & (Int32)c_UpdatableFlags) == 0) || !m_UpdatableFlagsUsed)
+		{
+			mergedFlags = m_Flags;
+		}
+		else
+		{
+			// mask m_Flags to only use the flags not in c_UpdatableFlags
+			mergedFlags = (UriSyntaxFlags)(((Int32)m_Flags & (~((Int32)c_UpdatableFlags))) | (Int32)m_UpdatableFlags);
+		}
+
+		return (UriSyntaxFlags)((Int32)mergedFlags & (Int32)flags) == expected;
+	}
+
 	BuiltInUriParser::BuiltInUriParser(const String& lwrCaseScheme, Int32 defaultPort, UriSyntaxFlags flags)
-		/*: UriParser(((Int32)flags | (Int32)UriSyntaxFlags::SimpleUserSyntax | (Int32)UriSyntaxFlags::BuiltInSyntax))*/
+		: UriParser((UriSyntaxFlags)(((Int32)flags | (Int32)UriSyntaxFlags::SimpleUserSyntax | (Int32)UriSyntaxFlags::BuiltInSyntax)))
 	{
 		m_Scheme = lwrCaseScheme;
 		m_Port = defaultPort;

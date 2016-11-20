@@ -120,6 +120,17 @@ namespace CppNet::System
 		static Boolean ShouldUseLegacyV2Quirks();
 
 		UriParser();
+		UriParser(UriSyntaxFlags flags);
+
+		inline UriSyntaxFlags Flags() const;
+		inline Boolean NotAny(UriSyntaxFlags flags) const;
+		inline Boolean IsFact(UriSyntaxFlags flags) const;
+		inline Boolean IsAllSet(UriSyntaxFlags flags) const;
+
+	private:
+		Boolean IsFullMatch(UriSyntaxFlags flags, UriSyntaxFlags expected) const;
+
+		// TODO
 	};
 
 	class BuiltInUriParser : public UriParser
