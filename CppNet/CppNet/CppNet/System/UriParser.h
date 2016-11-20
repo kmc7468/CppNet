@@ -72,7 +72,7 @@ namespace CppNet::System
 	private:
 		static const Int32 c_InitialTableSize;
 
-	/*_internal:
+	_internal:
 		static Box<UriParser> HttpUri;
 		static Box<UriParser> HttpsUri;
 		static Box<UriParser> WsUri;
@@ -88,7 +88,7 @@ namespace CppNet::System
 		static Box<UriParser> LdapUri;
 		static Box<UriParser> NetTcpUri;
 		static Box<UriParser> NetPipeUri;
-		static Box<UriParser> VsMacrosUri;*/
+		static Box<UriParser> VsMacrosUri;
 	};
 }
 

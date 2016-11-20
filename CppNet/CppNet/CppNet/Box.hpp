@@ -2,6 +2,7 @@
 #define CPPNET_BOX_HPP
 
 #include "System/NullReferenceException.hpp"
+#include "System/Boolean.h"
 
 namespace CppNet
 {
@@ -23,7 +24,7 @@ namespace CppNet
 			ref_count = new size_t(1);
 		}
 
-		Box(std::nullptr_t null)
+		Box(std::nullptr_t)
 		{}
 
 		Box(const Box<T>& box)
@@ -179,6 +180,11 @@ namespace CppNet
 			return !this->operator==(null);
 		}
 
+		inline operator System::Boolean() const
+		{
+			return data;
+		}
+
 	public:
 		const T& Get() const
 		{
@@ -261,6 +267,11 @@ namespace CppNet
 			}
 
 			return *this;
+		}
+
+		System::Boolean HasValue() const
+		{
+			return data;
 		}
 
 	public:
