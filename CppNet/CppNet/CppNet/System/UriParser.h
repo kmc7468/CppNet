@@ -6,7 +6,10 @@
 
 #include "Object.h"
 #include "String.h"
+#include "Boolean.h"
+#include "Int32.h"
 
+#include "../Box.hpp"
 #include "Collections/Generic/Dictionary.h"
 
 #include <memory>
@@ -52,11 +55,40 @@ namespace CppNet::System
 		ABSTRACT_CLASS
 
 	private:
-		static const Collections::Generic::Dictionary<String, std::unique_ptr<UriParser>>* m_Table;
-		static Collections::Generic::Dictionary<String, std::unique_ptr<UriParser>>* m_TempTable;
+		static const Collections::Generic::Dictionary<String, Box<UriParser>>* m_Table;
+		static Collections::Generic::Dictionary<String, Box<UriParser>>* m_TempTable;
+		static const UriSyntaxFlags c_UpdatableFlags;
 
 	private:
 		UriSyntaxFlags m_Flags;
+		volatile UriSyntaxFlags m_UpdatableFlags;
+		volatile Boolean m_UpdatableFlagsUsed;
+		Int32 m_Port = 0;
+		String m_Scheme;
+
+	_internal:
+		static const Int32 NoDefaultPort;
+
+	private:
+		static const Int32 c_InitialTableSize;
+
+	/*_internal:
+		static Box<UriParser> HttpUri;
+		static Box<UriParser> HttpsUri;
+		static Box<UriParser> WsUri;
+		static Box<UriParser> WssUri;
+		static Box<UriParser> FtpUri;
+		static Box<UriParser> FileUri;
+		static Box<UriParser> GopherUri;
+		static Box<UriParser> NntpUri;
+		static Box<UriParser> NewsUri;
+		static Box<UriParser> MailToUri;
+		static Box<UriParser> UuidUri;
+		static Box<UriParser> TelentUri;
+		static Box<UriParser> LdapUri;
+		static Box<UriParser> NetTcpUri;
+		static Box<UriParser> NetPipeUri;
+		static Box<UriParser> VsMacrosUri;*/
 	};
 }
 

@@ -142,9 +142,18 @@ namespace CppNet
 		{
 			if (data)
 			{
-				data = nullptr;
-				delete ref_count;
-				ref_count = nullptr;
+				if (*ref_count == 1)
+				{
+					data = nullptr;
+					delete ref_count;
+					ref_count = nullptr;
+				}
+				else
+				{
+					data = nullptr;
+					--(*ref_count);
+					ref_count = nullptr;
+				}
 			}
 
 			return *this;
@@ -237,9 +246,18 @@ namespace CppNet
 		{
 			if (data)
 			{
-				data = nullptr;
-				delete ref_count;
-				ref_count = nullptr;
+				if (*ref_count == 1)
+				{
+					data = nullptr;
+					delete ref_count;
+					ref_count = nullptr;
+				}
+				else
+				{
+					data = nullptr;
+					--(*ref_count);
+					ref_count = nullptr;
+				}
 			}
 
 			return *this;
