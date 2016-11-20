@@ -780,6 +780,18 @@
     <ClInclude Include="CppNet\System\Media\CppNet.System.Media.h">
       <Filter>헤더 파일\CppNet\System\Media</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Uri.h">
+      <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\UriParser.h">
+      <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\Generic\List.h">
+      <Filter>헤더 파일\CppNet\System\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\Generic\Dictionary.h">
+      <Filter>헤더 파일\CppNet\System\Collections\Generic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -907,6 +919,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Media\SoundPlayer.cpp">
       <Filter>소스 파일\CppNet\System\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\UriParser.cpp">
+      <Filter>소스 파일\CppNet\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -54,5 +54,7 @@
 #include "EventHandler.h"
 
 #include "Nullable.h"
+#include "UriParser.h"
+#include "Uri.h"
 
 #endif

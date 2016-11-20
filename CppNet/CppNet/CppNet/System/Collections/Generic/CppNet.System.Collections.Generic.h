@@ -9,26 +9,7 @@
 #include "IDictionary.h"
 #include "IReadOnlyCollection.hpp"
 #include "IReadOnlyList.hpp"
-
-#include <vector>
-#include <map>
-
-namespace CppNet
-{
-	namespace System
-	{
-		namespace Collections
-		{
-			namespace Generic
-			{
-				template<class T>
-				using List = std::vector<T>;
-
-				template<class TKey, class TValue>
-				using Dictionary = std::map<TKey, TValue>;
-			}
-		}
-	}
-}
+#include "List.h"
+#include "Dictionary.h"
 
 #endif

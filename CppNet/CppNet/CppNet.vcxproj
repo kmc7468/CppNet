@@ -55,6 +55,7 @@
     <ClInclude Include="CppNet\System\Byte.h" />
     <ClInclude Include="CppNet\System\Char.h" />
     <ClInclude Include="CppNet\System\Collections\DictionaryEntry.h" />
+    <ClInclude Include="CppNet\System\Collections\Generic\Dictionary.h" />
     <ClInclude Include="CppNet\System\Collections\Generic\ICollection.h" />
     <ClInclude Include="CppNet\System\Collections\Generic\IDictionary.h" />
     <ClInclude Include="CppNet\System\Collections\Generic\IEnumerable.h" />
@@ -62,6 +63,7 @@
     <ClInclude Include="CppNet\System\Collections\Generic\IList.h" />
     <ClInclude Include="CppNet\System\Collections\Generic\IReadOnlyCollection.hpp" />
     <ClInclude Include="CppNet\System\Collections\Generic\IReadOnlyList.hpp" />
+    <ClInclude Include="CppNet\System\Collections\Generic\List.h" />
     <ClInclude Include="CppNet\System\Collections\Generic\Queue.h" />
     <ClInclude Include="CppNet\System\Collections\Generic\Stack.h" />
     <ClInclude Include="CppNet\System\Collections\Generic\CppNet.System.Collections.Generic.h" />
@@ -186,6 +188,8 @@
     <ClInclude Include="CppNet\System\UInt32.h" />
     <ClInclude Include="CppNet\System\UInt32_64.h" />
     <ClInclude Include="CppNet\System\UInt64.h" />
+    <ClInclude Include="CppNet\System\Uri.h" />
+    <ClInclude Include="CppNet\System\UriParser.h" />
     <ClInclude Include="CppNet\System\Version.h" />
     <ClInclude Include="CppNet\System\Windows\Forms\Control.hpp" />
     <ClInclude Include="CppNet\System\Windows\Forms\CppNet.System.Windows.Forms.h" />
@@ -245,6 +249,7 @@
     <ClCompile Include="CppNet\System\Threading\Timeout.cpp" />
     <ClCompile Include="CppNet\System\Threading\WaitHandle.cpp" />
     <ClCompile Include="CppNet\System\TimeSpan.cpp" />
+    <ClCompile Include="CppNet\System\UriParser.cpp" />
     <ClCompile Include="CppNet\System\Version.cpp" />
     <ClCompile Include="CppNet\System\_String.cpp" />
     <ClCompile Include="CppNet\Unicode.cpp" />
