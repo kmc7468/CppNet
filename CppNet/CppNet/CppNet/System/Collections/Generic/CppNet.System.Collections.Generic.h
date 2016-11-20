@@ -13,17 +13,20 @@
 #include <vector>
 #include <map>
 
-namespace System
+namespace CppNet
 {
-	namespace Collections
+	namespace System
 	{
-		namespace Generic
+		namespace Collections
 		{
-			template<class T>
-			using List = std::vector<T>;
+			namespace Generic
+			{
+				template<class T>
+				using List = std::vector<T>;
 
-			template<class TKey, class TValue>
-			using Dictionary = std::map<TKey, TValue>;
+				template<class TKey, class TValue>
+				using Dictionary = std::map<TKey, TValue>;
+			}
 		}
 	}
 }

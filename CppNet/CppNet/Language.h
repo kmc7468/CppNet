@@ -5,6 +5,9 @@
 
 #ifdef LANG_KOR
 #define TXT_INVALID_ARGUMENT_DEFMSG "인자가 유효하지 않습니다."
+#define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%' 인자가 유효하지 않습니다."
+#define TXT_INVALID_ARGUMENT_NULL_DEFMSG "인자가 nullptr입니다."
+#define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' 인자가 nullptr입니다."
 
 #define TXT_INVALID_CAST_DEFMSG "잘못된 변환 오류가 발생하였습니다."
 #define TXT_INVAILD_CAST_CHAR2BOOL "Char를 Boolean으로 변환할 수 없습니다."
@@ -39,6 +42,9 @@
 
 #elif defined(LANG_ESP)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Nevalidaj argumentoj."
+#define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento ne validas."
+#define TXT_INVALID_ARGUMENT_NULL_DEFMSG "La argumento estas nullptr."
+#define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento estas nullptr."
 
 #define TXT_INVALID_CAST_DEFMSG "Nevalida rolantaro escepto."
 #define TXT_INVAILD_CAST_CHAR2BOOL "Vi ne povas konverti Char al Boolean."
@@ -72,6 +78,9 @@
 
 #elif defined(LANG_CHI)
 #define TXT_INVALID_ARGUMENT_DEFMSG "参数异常无效。"
+#define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%'的说法是无效的。"
+#define TXT_INVALID_ARGUMENT_NULL_DEFMSG "的说法是nullptr。"
+#define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%'的说法是nullptr。"
 
 #define TXT_INVALID_CAST_DEFMSG "类型转换异常无效。"
 #define TXT_INVAILD_CAST_CHAR2BOOL "无法将Char转换为Boolean。"
@@ -105,6 +114,9 @@
 
 #elif defined(LANG_JSP)
 #define TXT_INVALID_ARGUMENT_DEFMSG "引数の例外が無効です。"
+#define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%'引数が有効ではありません。"
+#define TXT_INVALID_ARGUMENT_NULL_DEFMSG "引数がnullptrです。"
+#define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%'引数がnullptrです。"
 
 #define TXT_INVALID_CAST_DEFMSG "キャスト例外が無効です。"
 #define TXT_INVAILD_CAST_CHAR2BOOL "CharをBooleanにキャストできません。"
@@ -139,6 +151,9 @@
 
 #elif defined(LANG_RUS)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Неверный аргумент исключени."
+#define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%' аргумент не является допустимым."
+#define TXT_INVALID_ARGUMENT_NULL_DEFMSG "Аргумент nullptr."
+#define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' аргумент nullptr."
 
 #define TXT_INVALID_CAST_DEFMSG "Invalid литая исключение."
 #define TXT_INVAILD_CAST_CHAR2BOOL "не может бросить из Чаре в логическое значение."
@@ -172,6 +187,9 @@
 
 #elif defined(LANG_SPA)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Excepción de argumento no válido."
+#define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento no es válido."
+#define TXT_INVALID_ARGUMENT_NULL_DEFMSG "El argumento es nullptr."
+#define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento es nullptr."
 
 #define TXT_INVALID_CAST_DEFMSG "Excepción de conversión no válida."
 #define TXT_INVAILD_CAST_CHAR2BOOL "No se puede emitir desde Char a Boolean."
@@ -205,6 +223,9 @@
 
 #else
 #define TXT_INVALID_ARGUMENT_DEFMSG "Invalid argument exception."
+#define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "The argument '%PARAM_NAME%' is not valid."
+#define TXT_INVALID_ARGUMENT_NULL_DEFMSG "The argument is nullptr."
+#define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "The argument '%PARAM_NAME%' is nullptr."
 
 #define TXT_INVALID_CAST_DEFMSG "Invalid cast exception."
 #define TXT_INVAILD_CAST_CHAR2BOOL "Can't cast a from Char to Boolean."

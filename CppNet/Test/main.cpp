@@ -2,8 +2,8 @@
 
 int main()
 {
-	std::wcout.imbue(locale(""));
-	std::wcin.imbue(locale(""));
+	std::wcout.imbue(std::locale(""));
+	std::wcin.imbue(std::locale(""));
 
 	MAIN_END
 }

@@ -2,6 +2,8 @@
 
 #include "../../Language.h"
 
+#include <algorithm>
+
 namespace CppNet
 {
 	namespace System
@@ -71,14 +73,32 @@ namespace CppNet
 
 		String ArgumentException::Message() const
 		{
-			String msg = TXT_INVALID_ARGUMENT_DEFMSG;
-			if (message != "")
+			if (paramName == "")
 			{
-				msg.append(" ");
-				msg.append(message);
-			}
+				String msg = TXT_INVALID_ARGUMENT_DEFMSG;
+				if (message != "")
+				{
+					msg.append(" ");
+					msg.append(message);
+				}
 
-			return msg;
+				return msg;
+			}
+			else
+			{
+				String msg = TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG;
+				while (msg.find("%PARAM_NAME%") != String::npos)
+				{
+					msg = msg.replace(msg.find("%PARAM_NAME%"), 12, paramName);
+				}
+				if (message != "")
+				{
+					msg.append(" ");
+					msg.append(message);
+				}
+
+				return msg;
+			}
 		}
 
 		String ArgumentException::ParamName() const

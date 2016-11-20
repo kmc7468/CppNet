@@ -1,12 +1,13 @@
 #include "Math.h"
 
 #include <string>
-using namespace std;
 
 namespace CppNet
 {
 	namespace System
 	{
+		using namespace std;
+
 		Double Math::Abs(Double d)
 		{
 			return abs(d);

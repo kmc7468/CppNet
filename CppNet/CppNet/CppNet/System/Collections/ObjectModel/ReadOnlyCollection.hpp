@@ -7,6 +7,7 @@
 #include "../Generic/IList.h"
 #include "../Generic/IReadOnlyList.hpp"
 #include "../../Object.h"
+#include "../../ArgumentNullException.hpp"
 
 namespace CppNet::System::Collections::ObjectModel
 {
@@ -22,7 +23,7 @@ namespace CppNet::System::Collections::ObjectModel
 		{
 			if (list == nullptr)
 			{
-
+				throw ArgumentNullException(nameof(list));
 			}
 
 			this->list = std::move(list);
