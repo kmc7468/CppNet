@@ -82,7 +82,6 @@
     <ClInclude Include="CppNet\System\Collections\ObjectModel\CppNet.System.Collections.ObjectModel.h" />
     <ClInclude Include="CppNet\System\Collections\ObjectModel\ReadOnlyCollection.hpp" />
     <ClInclude Include="CppNet\System\ComponentModel\Component.h" />
-    <ClInclude Include="CppNet\System\ComponentModel\EventHandlerList.h" />
     <ClInclude Include="CppNet\System\ComponentModel\IComponent.h" />
     <ClInclude Include="CppNet\System\ComponentModel\ISite.h" />
     <ClInclude Include="CppNet\System\ComponentModel\CppNet.System.ComponentModel.h" />
@@ -218,7 +217,6 @@
     <ClCompile Include="CppNet\System\Char.cpp" />
     <ClCompile Include="CppNet\System\Collections\DictionaryEntry.cpp" />
     <ClCompile Include="CppNet\System\ComponentModel\Component.cpp" />
-    <ClCompile Include="CppNet\System\ComponentModel\EventHandlerList.cpp" />
     <ClCompile Include="CppNet\System\DoubleT.cpp" />
     <ClCompile Include="CppNet\System\Drawing\Point.cpp" />
     <ClCompile Include="CppNet\System\Drawing\PointF.cpp" />

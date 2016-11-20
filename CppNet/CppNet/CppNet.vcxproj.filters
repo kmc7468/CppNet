@@ -633,9 +633,6 @@
     <ClInclude Include="CppNet\System\ComponentModel\Component.h">
       <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\ComponentModel\EventHandlerList.h">
-      <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
-    </ClInclude>
     <ClInclude Include="CppNet\System\Drawing\Image.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Drawing</Filter>
     </ClInclude>
@@ -903,9 +900,6 @@
       <Filter>소스 파일\CppNet\System\Threading</Filter>
     </ClCompile>
     <ClCompile Include="CppNet\System\ComponentModel\Component.cpp">
-      <Filter>소스 파일\CppNet\System\ComponentModel</Filter>
-    </ClCompile>
-    <ClCompile Include="CppNet\System\ComponentModel\EventHandlerList.cpp">
       <Filter>소스 파일\CppNet\System\ComponentModel</Filter>
     </ClCompile>
     <ClCompile Include="CppNet\System\Text\EncoderFallback.cpp">
