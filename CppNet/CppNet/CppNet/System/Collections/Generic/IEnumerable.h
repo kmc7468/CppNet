@@ -3,9 +3,7 @@
 
 #include "../../../../Defines.h"
 
-#include <memory>
-
-#include "../../CppNet.System.h"
+#include "../../../Box.hpp"
 #include "IEnumerator.h"
 
 namespace CppNet
@@ -22,7 +20,7 @@ namespace CppNet
 				template <typename T>
 				interface IEnumerable
 				{
-					virtual std::unique_ptr<IEnumerator<T>> GetEnumerator() = 0;
+					virtual Box<IEnumerator<T>> GetEnumerator() = 0;
 				};
 			}
 		}

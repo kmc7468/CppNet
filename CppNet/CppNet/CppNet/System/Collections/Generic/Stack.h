@@ -31,7 +31,7 @@ namespace CppNet
 
 				public:
 					virtual void Clear() override;
-					virtual std::unique_ptr<IEnumerator<T>> GetEnumerator() override;
+					virtual Box<IEnumerator<T>> GetEnumerator() override;
 					virtual T& Peek();
 					virtual T& Pop();
 					virtual void Push(const T& item);

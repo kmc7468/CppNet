@@ -137,6 +137,7 @@
     <ClInclude Include="CppNet\System\NullReferenceException.hpp" />
     <ClInclude Include="CppNet\System\Object.h" />
     <ClInclude Include="CppNet\System\OverflowException.hpp" />
+    <ClInclude Include="CppNet\System\Predicate.hpp" />
     <ClInclude Include="CppNet\System\Random.h" />
     <ClInclude Include="CppNet\System\Runtime\CompilerServices\ConditionalWeakTable.hpp" />
     <ClInclude Include="CppNet\System\Runtime\CompilerServices\CppNet.System.Runtime.CompilerServices.h" />

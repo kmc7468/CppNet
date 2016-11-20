@@ -32,7 +32,7 @@ namespace CppNet
 					virtual void Clear() override;
 					virtual T& Dequeue();
 					virtual void Enqueue(const T& item);
-					virtual std::unique_ptr<IEnumerator<T>> GetEnumerator() override;
+					virtual Box<IEnumerator<T>> GetEnumerator() override;
 					virtual T& Peek();
 					//TODO: ToString();
 					virtual void TrimExcess();
@@ -50,7 +50,7 @@ namespace CppNet
 					std::deque<T> queue;
 
 				private:
-					struct Enumerator : public IEnumerator<T>
+					class Enumerator : public IEnumerator<T>
 					{
 					public:
 						virtual T& Current() override;

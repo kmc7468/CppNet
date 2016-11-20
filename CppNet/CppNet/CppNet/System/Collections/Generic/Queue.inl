@@ -52,9 +52,9 @@ namespace CppNet
 					queue.push_back(item);
 				}
 				template<typename T>
-				inline std::unique_ptr<IEnumerator<T>> Queue<T>::GetEnumerator()
+				inline Box<IEnumerator<T>> Queue<T>::GetEnumerator()
 				{
-					return std::make_unique<Enumerator>(*this);
+					return Box<IEnumerator<T>>(new Queue<T>::Enumerator(*this));
 				}
 				template<typename T>
 				T& Queue<T>::Peek()

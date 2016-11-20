@@ -41,9 +41,9 @@ namespace CppNet
 				}
 
 				template<typename T>
-				std::unique_ptr<IEnumerator<T>> Stack<T>::GetEnumerator()
+				Box<IEnumerator<T>> Stack<T>::GetEnumerator()
 				{
-					return std::make_unique<Enumerator>(*this);
+					return Box<IEnumerator<T>>(new Stack<T>::Enumerator(*this));
 				}
 
 				template<typename T>

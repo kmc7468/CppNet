@@ -786,10 +786,13 @@
     <ClInclude Include="CppNet\System\UriParser.h">
       <Filter>헤더 파일\CppNet\System</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\Collections\Generic\List.h">
+    <ClInclude Include="CppNet\System\Collections\Generic\Dictionary.h">
       <Filter>헤더 파일\CppNet\System\Collections\Generic</Filter>
     </ClInclude>
-    <ClInclude Include="CppNet\System\Collections\Generic\Dictionary.h">
+    <ClInclude Include="CppNet\System\Predicate.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\Generic\List.h">
       <Filter>헤더 파일\CppNet\System\Collections\Generic</Filter>
     </ClInclude>
   </ItemGroup>
