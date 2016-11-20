@@ -310,6 +310,54 @@ namespace CppNet
 			return *ref_count;
 		}
 	};
+
+	template<typename T>
+	Box<T> make_box()
+	{
+		return Box<T>();
+	}
+
+	template<typename T>
+	Box<T> make_box(std::nullptr_t null)
+	{
+		return Box<T>();
+	}
+
+	template<typename T>
+	Box<T> make_box(const Box<T>& box)
+	{
+		return Box<T>(box);
+	}
+
+	template<typename T>
+	Box<T> make_box(Box<T>&& box)
+	{
+		return Box<T>(box);
+	}
+
+	template<typename T>
+	Box<T> make_box(const T& value)
+	{
+		return Box<T>(value);
+	}
+
+	template<typename T>
+	Box<T> make_box(T&& value)
+	{
+		return Box<T>(value);
+	}
+
+	template<typename T>
+	Box<T> make_box(T* ptr)
+	{
+		return Box<T>(ptr);
+	}
+
+	template<typename T>
+	Box<T> make_box(T* ptr, size_t refcount)
+	{
+		return Box<T>(ptr, refcount);
+	}
 }
 
 #endif
