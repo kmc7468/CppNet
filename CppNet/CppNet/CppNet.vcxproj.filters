@@ -792,6 +792,15 @@
     <ClInclude Include="CppNet\System\Collections\Generic\List.h">
       <Filter>헤더 파일\CppNet\System\Collections\Generic</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Windows\Forms\IDropTarget.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Windows\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Windows\Forms\DragEventArgs.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Windows\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Windows\Forms\IDataObject.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Windows\Forms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

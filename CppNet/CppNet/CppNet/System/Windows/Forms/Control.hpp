@@ -4,10 +4,13 @@
 #include "../../../../Defines.h"
 
 #include "../../Object.h"
+#include "../../ComponentModel/Component.h"
+
+#include "IDropTarget.hpp"
 
 namespace CppNet::System::Windows::Forms
 {
-	class Control
+	class Control : public ComponentModel::Component, public IDropTarget
 	{
 
 	};

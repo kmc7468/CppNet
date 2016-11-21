@@ -26,4 +26,14 @@ namespace CppNet::System::ComponentModel
 			// TODO
 		}
 	}
+
+	const ISite& Component::Site() const
+	{
+		return *site;
+	}
+
+	ISite& Component::Site()
+	{
+		return *site;
+	}
 }

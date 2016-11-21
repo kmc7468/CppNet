@@ -193,6 +193,9 @@
     <ClInclude Include="CppNet\System\Version.h" />
     <ClInclude Include="CppNet\System\Windows\Forms\Control.hpp" />
     <ClInclude Include="CppNet\System\Windows\Forms\CppNet.System.Windows.Forms.h" />
+    <ClInclude Include="CppNet\System\Windows\Forms\DragEventArgs.hpp" />
+    <ClInclude Include="CppNet\System\Windows\Forms\IDataObject.hpp" />
+    <ClInclude Include="CppNet\System\Windows\Forms\IDropTarget.hpp" />
     <ClInclude Include="CppNet\System\Xml\IXmlNamespaceResolver.h" />
     <ClInclude Include="CppNet\System\Xml\CppNet.System.Xml.h" />
     <ClInclude Include="CppNet\System\Xml\XmlDocument.h" />

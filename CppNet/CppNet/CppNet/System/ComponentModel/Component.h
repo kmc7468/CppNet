@@ -22,11 +22,11 @@ namespace CppNet::System::ComponentModel
 	public:
 		~Component();
 
+		const ISite& Site() const override;
+		ISite& Site() override;
+
 	protected:
 		virtual Boolean CanRaiseEvents() const;
-		
-	public:
-		evnt(EventHandler<>, Disposed);
 		
 		void Dispose() override;
 
