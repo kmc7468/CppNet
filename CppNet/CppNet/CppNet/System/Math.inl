@@ -297,7 +297,7 @@ namespace CppNet
 
 		KMC::Decimal Math::Energy(KMC::Decimal m)
 		{
-			return m * "18446744072314778980"s;
+			return m * "89875517873681764"s;
 		}
 	}
 }

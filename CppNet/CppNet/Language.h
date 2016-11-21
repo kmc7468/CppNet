@@ -6,6 +6,7 @@
 #ifdef LANG_KOR
 #define TXT_INVALID_ARGUMENT_DEFMSG "인자가 유효하지 않습니다."
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%' 인자가 유효하지 않습니다."
+#define TXT_INVALID_ARGUMENT_INT_MINUS "음수일 수 없습니다."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "인자가 nullptr입니다."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' 인자가 nullptr입니다."
 
@@ -43,6 +44,7 @@
 #elif defined(LANG_ESP)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Nevalidaj argumentoj."
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento ne validas."
+#define TXT_INVALID_ARGUMENT_INT_MINUS "Ĝi ne povas esti negativa."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "La argumento estas nullptr."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento estas nullptr."
 
@@ -79,6 +81,7 @@
 #elif defined(LANG_CHI)
 #define TXT_INVALID_ARGUMENT_DEFMSG "参数异常无效。"
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%'的说法是无效的。"
+#define TXT_INVALID_ARGUMENT_INT_MINUS "它不能为负。"
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "的说法是nullptr。"
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%'的说法是nullptr。"
 
@@ -115,6 +118,7 @@
 #elif defined(LANG_JSP)
 #define TXT_INVALID_ARGUMENT_DEFMSG "引数の例外が無効です。"
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%'引数が有効ではありません。"
+#define TXT_INVALID_ARGUMENT_INT_MINUS "負の値であることができません。"
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "引数がnullptrです。"
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%'引数がnullptrです。"
 
@@ -152,6 +156,7 @@
 #elif defined(LANG_RUS)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Неверный аргумент исключени."
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%' аргумент не является допустимым."
+#define TXT_INVALID_ARGUMENT_INT_MINUS "Это не может быть отрицательным."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "Аргумент nullptr."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' аргумент nullptr."
 
@@ -188,6 +193,7 @@
 #elif defined(LANG_SPA)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Excepción de argumento no válido."
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento no es válido."
+#define TXT_INVALID_ARGUMENT_INT_MINUS "No puede ser negativo."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "El argumento es nullptr."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento es nullptr."
 
@@ -224,6 +230,7 @@
 #else
 #define TXT_INVALID_ARGUMENT_DEFMSG "Invalid argument exception."
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "The argument '%PARAM_NAME%' is not valid."
+#define TXT_INVALID_ARGUMENT_INT_MINUS "Can not be negative."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "The argument is nullptr."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "The argument '%PARAM_NAME%' is nullptr."
 

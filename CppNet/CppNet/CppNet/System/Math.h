@@ -85,6 +85,9 @@ namespace CppNet
 			static inline UInt64 Fibonacci(UInt64 i);
 
 			static inline KMC::Decimal Energy(KMC::Decimal m);
+
+			static std::vector<Int64> PrimeNumbers(Int64 min, Int64 max);
+			static std::vector<UInt64> PrimeNumbers(UInt64 min, UInt64 max);
 		};
 	}
 }
