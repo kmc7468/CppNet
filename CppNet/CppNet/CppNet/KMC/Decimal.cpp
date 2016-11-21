@@ -406,8 +406,8 @@ namespace CppNet::KMC
 		Decimal a = *this;
 		Decimal b = Decimal(d);
 		Decimal c = 0;
-		c.mInteger = (Byte)0;
-		c.mReal = (Byte)0;
+		c.mInteger = (Byte*)"";
+		c.mReal = (Byte*)"";
 
 		Byte up = 0;
 
@@ -733,6 +733,7 @@ namespace CppNet::KMC
 		else if (this->ToString() == "1") return d;
 		else if (d.ToString() == "0" || this->ToString() == "0") return 0.0;
 
+#pragma region nan,ind,inf 등 점검
 		if (this->isNaN || d.isNaN) return Decimal::NaN;
 		else if (this->isInd || d.isInd) return Decimal::Ind;
 
@@ -786,180 +787,141 @@ namespace CppNet::KMC
 				return Decimal::PositiveInfinity;
 			}
 		}
+#pragma endregion
 
-		// 미리 선언
-		Decimal a = *this;
-		Decimal b = d;
-		Decimal result;
+		Decimal _this = *this;
+		Decimal _d = d;
+		Decimal Result;
 
-		if (a.isN && b.isN)
-			result.isN = false;
-		else if ((a.isN && !b.isN) || (!a.isN && b.isN))
-			result.isN = true;
+		size_t move_count_real = 0;
 
-		size_t count_real_size = 0;
-
-		// 패딩 편의 및 연산 속도 향상을 위해
-		a.Clean();
-		b.Clean();
-
-		// 실수점 이하 부분이 0이 아닐경우 자연수 부분에 포함
-		if (a.mReal[0] != 0 || a.mReal.length() > 1)
-			a.mInteger += a.mReal;
-
-		if (b.mReal[0] != 0 || b.mReal.length() > 1)
-			b.mInteger += b.mReal;
-
-		// 실수점 이하 부분이 0이 아닐경우 0으로 만들고 실수점 위치 저장
-		if (a.mReal.length() > 1 || a.mReal[0] != 0)
+		if (!(_this.mReal.length() == 1 && _this.mReal[0] == 0))
 		{
-			count_real_size = a.mReal.length() * 2;
-			a.mReal = (Byte)0;
+			move_count_real += _this.mReal.length();
+			_this.mInteger += _this.mReal;
+			_this.mReal = (Byte)0;
 		}
 
-		if (b.mReal.length() > 1 || b.mReal[0] != 0)
+		if (!(_d.mReal.length() == 1 && _d.mReal[0] == 0))
 		{
-			count_real_size += b.mReal.length() * 2;
-			b.mReal = (Byte)0;
+			move_count_real += _this.mReal.length();
+			_d.mInteger += _d.mReal;
+			_d.mReal = (Byte)0;
 		}
 
-		// 패딩
-		if (a.mInteger.length() >= b.mInteger.length())
-			b.mInteger.insert(0, a.mInteger.length() - b.mInteger.length(), 0);
-		else
-			a.mInteger.insert(0, b.mInteger.length() - a.mInteger.length(), 0);
-
-		// 연산
 		String plus = "";
-
-		if (a.isInf || b.isInf) goto Z;
-
-		for (size_t i = b.mInteger.length() - 1; i >= 0; i--)
+		Byte up = 0;
+		String plus_temp = "";
+		for (size_t i = _d.mInteger.length() - 1; i >= 0; --i)
 		{
-			Byte up = 0;
-			String value = "";
+			Byte a, b;
 
-			auto b_byte = ByteTool::ByteToInts(b.mInteger.at(i));
-
-			Byte low = std::get<1>(b_byte); // 12에서 2에 해당됨
-			Byte high = std::get<0>(b_byte); // 12에서 1에 해당됨
-
-			if (low == 0)
-				goto X;
-
-			// low 먼저 계산
-			for (size_t j = a.mInteger.length() - 1; j >= 0; j--)
 			{
-				auto a_byte = ByteTool::ByteToInts(a.mInteger.at(j));
-
-				Byte low_a = std::get<1>(a_byte);
-				Byte high_a = std::get<0>(a_byte);
-
-				Byte low_mul = low * low_a + up;
-				up = 0;
-				if (low_mul > 9)
-				{
-					up = std::stoi(std::to_string(low_mul).substr(0, 1));
-					low_mul = std::stoi(std::to_string(low_mul).substr(1));
-				}
-
-				Byte high_mul = low * high_a + up;
-				up = 0;
-				if (high_mul > 9)
-				{
-					up = std::stoi(std::to_string(high_mul).substr(0, 1));
-					high_mul = std::stoi(std::to_string(high_mul).substr(1));
-				}
-
-				value = std::to_string(high_mul) + std::to_string(low_mul) + value;
-
-				if (j == 0)
-				{
-					value = std::to_string(up) + value;
-
-					break;
-				}
+				var temp = ByteTool::ByteToInts(_d.mInteger[i]);
+				a = std::get<0>(temp);
+				b = std::get<1>(temp);
 			}
 
-		X:
-			value += plus;
-			plus += '0';
-
-			result += value;
-
-			// 초기화
-			value = ""; up = 0;
-
-			if (high == 0)
-				goto Y;
-
-			// high 계산
-			for (size_t j = a.mInteger.length() - 1; j >= 0; j--)
+			for (size_t j = _this.mInteger.length() - 1; j >= 0; --j)
 			{
-				auto a_byte = ByteTool::ByteToInts(a.mInteger.at(j));
+				Byte c, d_;
 
-				Byte low_a = std::get<1>(a_byte);
-				Byte high_a = std::get<0>(a_byte);
+				{
+					var temp = ByteTool::ByteToInts(_this.mInteger[j]);
+					c = std::get<0>(temp);
+					d_ = std::get<1>(temp);
+				}
 
-				Byte low_mul = high * low_a + up;
+				Byte e, f;
+				f = d_ * b + up;
 				up = 0;
-				if (low_mul > 9)
+				if (f >= 10)
 				{
-					up = std::stoi(std::to_string(low_mul).substr(0, 1));
-					low_mul = std::stoi(std::to_string(low_mul).substr(1));
+					up = std::stoi(std::to_string(f).substr(0, 1));
+					f = std::stoi(std::to_string(f).substr(1, 1));
 				}
-
-				Byte high_mul = high * high_a + up;
+				e = c * b + up;
 				up = 0;
-				if (high_mul > 9)
+				if (e >= 10)
 				{
-					up = std::stoi(std::to_string(high_mul).substr(0, 1));
-					high_mul = std::stoi(std::to_string(high_mul).substr(1));
+					up = std::stoi(std::to_string(e).substr(0, 1));
+					e = std::stoi(std::to_string(e).substr(1, 1));
 				}
 
-				value = std::to_string(high_mul) + std::to_string(low_mul) + value;
+				plus_temp = std::to_string(e) + std::to_string(f) + plus_temp;
 
-				if (j == 0)
-				{
-					value = std::to_string(up) + value;
-
-					break;
-				}
+				if (j == 0) break;
 			}
 
-		Y:
-			value += plus;
+			plus_temp.insert(0, std::to_string(up));
+			plus_temp += plus;
 			plus += '0';
+			Result += plus_temp;
+			plus_temp = "";
+			up = 0;
 
-			result += value;
+			for (size_t j = _this.mInteger.length() - 1; j >= 0; --j)
+			{
+				Byte c, d_;
 
-			if (i == 0) break; // i--을 연산을 수행한 후 i >= 0을 수행하는데, unsigned라 overflow가 발생하기 때문
+				{
+					var temp = ByteTool::ByteToInts(_this.mInteger[j]);
+					c = std::get<0>(temp);
+					d_ = std::get<1>(temp);
+				}
+
+				Byte e, f;
+				f = d_ * a + up;
+				up = 0;
+				if (f >= 10)
+				{
+					up = std::stoi(std::to_string(f).substr(0, 1));
+					f = std::stoi(std::to_string(f).substr(1, 1));
+				}
+				e = c * a + up;
+				up = 0;
+				if (e >= 10)
+				{
+					up = std::stoi(std::to_string(e).substr(0, 1));
+					e = std::stoi(std::to_string(e).substr(1, 1));
+				}
+
+				plus_temp = std::to_string(e) + std::to_string(f) + plus_temp;
+
+				if (j == 0) break;
+			}
+			
+			plus_temp.insert(0, std::to_string(up));
+			plus_temp += plus;
+			plus += '0';
+			Result += plus_temp;
+			plus_temp = "";
+			up = 0;
+
+			if (i == 0) break;
 		}
 
-		goto Z;
-
-	Z:
-		if (count_real_size != 0)
+		if (move_count_real != 0)
 		{
-			String to = result.ToString();
-
-			if (count_real_size >= to.length())
-				to.insert(0, count_real_size - to.length(), '0');
-
-			String integer = to.substr(0, to.length() - count_real_size);
-			String real = to.substr(to.length() - count_real_size);
-
-			result = Decimal(integer + "." + real);
+			if (move_count_real < Result.mInteger.length())
+			{
+				Result.mReal = Result.mInteger.substr(Result.mInteger.length() - 1 - move_count_real, move_count_real);
+				Result.mInteger = Result.mInteger.substr(0, Result.mInteger.length() - 1 - move_count_real);
+			}
+			else if (move_count_real > Result.mInteger.length())
+			{
+				Result.mInteger.insert(0, Result.mInteger.length() - move_count_real, (Byte)'0');
+				Result.mReal = Result.mInteger;
+				Result.mInteger = (Byte)0;
+			}
+			else
+			{
+				Result.mReal = Result.mInteger;
+				Result.mInteger = (Byte)0;
+			}
 		}
 
-		if (a.isN && b.isN)
-			result.isN = false;
-		else if ((a.isN && !b.isN) || (!a.isN && b.isN))
-			result.isN = true;
-
-		result.Clean();
-
-		return result;
+		return Result;
 	}
 
 	Decimal& Decimal::operator*=(const Decimal& d)

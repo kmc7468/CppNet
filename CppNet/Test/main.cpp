@@ -5,13 +5,15 @@ int main()
 	std::wcout.imbue(std::locale(""));
 	std::wcin.imbue(std::locale(""));
 
-	auto data = CppNet::System::Math::PrimeNumbers(1LL, 10000);
+	using namespace CppNet::System;
+	using namespace CppNet::KMC;
 
-	CppNet::System::Console::WriteLine(data.size());
-
-	for (auto i : data)
+	while (true)
 	{
-		CppNet::System::Console::WriteLine(i);
+		Decimal a = Console::ReadLine();
+		Decimal b = Console::ReadLine();
+
+		Console::WriteLine((a * b).ToString());
 	}
 
 	MAIN_END
