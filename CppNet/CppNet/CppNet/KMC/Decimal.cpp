@@ -793,18 +793,22 @@ namespace CppNet::KMC
 		Decimal _d = d;
 		Decimal Result;
 
+		if (_this.isN && _d.isN) Result.isN = false;
+		else if (!_this.isN && !_d.isN) Result.isN = false;
+		else Result.isN = true;
+
 		size_t move_count_real = 0;
 
 		if (!(_this.mReal.length() == 1 && _this.mReal[0] == 0))
 		{
-			move_count_real += _this.mReal.length();
+			move_count_real += _this.mReal.length() * 2;
 			_this.mInteger += _this.mReal;
 			_this.mReal = (Byte)0;
 		}
 
 		if (!(_d.mReal.length() == 1 && _d.mReal[0] == 0))
 		{
-			move_count_real += _this.mReal.length();
+			move_count_real += _d.mReal.length() * 2;
 			_d.mInteger += _d.mReal;
 			_d.mReal = (Byte)0;
 		}
@@ -903,22 +907,15 @@ namespace CppNet::KMC
 
 		if (move_count_real != 0)
 		{
-			if (move_count_real < Result.mInteger.length())
-			{
-				Result.mReal = Result.mInteger.substr(Result.mInteger.length() - 1 - move_count_real, move_count_real);
-				Result.mInteger = Result.mInteger.substr(0, Result.mInteger.length() - 1 - move_count_real);
-			}
-			else if (move_count_real > Result.mInteger.length())
-			{
-				Result.mInteger.insert(0, Result.mInteger.length() - move_count_real, (Byte)'0');
-				Result.mReal = Result.mInteger;
-				Result.mInteger = (Byte)0;
-			}
-			else
-			{
-				Result.mReal = Result.mInteger;
-				Result.mInteger = (Byte)0;
-			}
+			String to = Result.ToString();
+
+			if (move_count_real >= to.length())
+				to.insert(0, move_count_real - to.length(), '0');
+
+			String integer = to.substr(0, to.length() - move_count_real);
+			String real = to.substr(to.length() - move_count_real);
+
+			Result = Decimal(integer + "." + real);
 		}
 
 		return Result;
