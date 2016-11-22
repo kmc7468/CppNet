@@ -76,6 +76,7 @@
     <ClInclude Include="CppNet\System\Collections\IEnumerator.h" />
     <ClInclude Include="CppNet\System\Collections\CppNet.System.Collections.h" />
     <ClInclude Include="CppNet\System\Collections\IEqualityComparer.hpp" />
+    <ClInclude Include="CppNet\System\Collections\IHashCodeProvider.hpp" />
     <ClInclude Include="CppNet\System\Collections\IList.hpp" />
     <ClInclude Include="CppNet\System\Collections\IStructuralComparable.hpp" />
     <ClInclude Include="CppNet\System\Collections\IStructuralEquatable.hpp" />
@@ -219,6 +220,7 @@
     <ClCompile Include="CppNet\System\BitConverter.cpp" />
     <ClCompile Include="CppNet\System\Char.cpp" />
     <ClCompile Include="CppNet\System\Collections\DictionaryEntry.cpp" />
+    <ClCompile Include="CppNet\System\Collections\Hashtable.cpp" />
     <ClCompile Include="CppNet\System\ComponentModel\Component.cpp" />
     <ClCompile Include="CppNet\System\DoubleT.cpp" />
     <ClCompile Include="CppNet\System\Drawing\Point.cpp" />

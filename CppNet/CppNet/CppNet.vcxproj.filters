@@ -801,6 +801,9 @@
     <ClInclude Include="CppNet\System\Windows\Forms\IDataObject.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Windows\Forms</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\IHashCodeProvider.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -928,6 +931,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\UriParser.cpp">
       <Filter>소스 파일\CppNet\System</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Collections\Hashtable.cpp">
+      <Filter>소스 파일\CppNet\System\Collections</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
