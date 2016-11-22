@@ -8,10 +8,17 @@ namespace CppNet
 	template<typename T, typename U>
 	inline static System::Boolean is(U& u)
 	{
-		if (T* p = dynamic_cast<T*>(&u))
-			return true;
-		else
-			return false;
+		T* p = dynamic_cast<T*>(&u);
+		if (p) return true;
+		else return false;
+	}
+
+	template<typename T, typename U>
+	inline static System::Boolean is_c(U u)
+	{
+		T* p = dynamic_cast<T*>(&u);
+		if (p) return true;
+		else return false;
 	}
 }
 

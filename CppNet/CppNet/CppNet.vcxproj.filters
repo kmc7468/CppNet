@@ -1009,5 +1009,8 @@
     <None Include="CppNet\System\Exception.inl">
       <Filter>인라인 구현 파일\CppNet\System</Filter>
     </None>
+    <None Include="CppNet\System\Collections\CompatibleComparer.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
+    </None>
   </ItemGroup>
 </Project>

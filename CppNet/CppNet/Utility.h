@@ -42,6 +42,10 @@
 #define _as(from, to_type) as<to_type>(from)
 #endif
 
+#ifndef __as
+#define __as(from, from_type, to_type) as<to_type, from_type>(from)
+#endif
+
 #ifndef GET
 #define GET
 #endif

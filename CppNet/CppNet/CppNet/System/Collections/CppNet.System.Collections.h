@@ -14,5 +14,6 @@
 #include "IStructuralEquatable.hpp"
 #include "IEqualityComparer.hpp"
 #include "IHashCodeProvider.hpp"
+#include "CompatibleComparer.hpp"
 
 #endif

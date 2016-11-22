@@ -266,6 +266,7 @@
     <None Include="CppNet\KMC\Sor.inl" />
     <None Include="CppNet\System\BitConverter.inl" />
     <None Include="CppNet\System\Char.inl" />
+    <None Include="CppNet\System\Collections\CompatibleComparer.hpp" />
     <None Include="CppNet\System\Collections\DictionaryEntry.inl" />
     <None Include="CppNet\System\Collections\Generic\Queue.inl" />
     <None Include="CppNet\System\Collections\Generic\Stack.inl" />

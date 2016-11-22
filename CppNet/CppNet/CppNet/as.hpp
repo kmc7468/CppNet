@@ -8,6 +8,12 @@ namespace CppNet
 	{
 		return dynamic_cast<T>(u);
 	}
+
+	template<typename T, typename U>
+	inline static T as_c(U u)
+	{
+		return dynamic_cast<T>(u);
+	}
 }
 
 #endif
