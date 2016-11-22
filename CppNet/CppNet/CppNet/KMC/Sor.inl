@@ -4,10 +4,10 @@ namespace CppNet
 {
 	namespace KMC
 	{
-		using namespace CppNet::System;
+		using namespace CppNet::System;		
 
 		template<typename Crypto, typename Key>
-		const Double Sor<Crypto, Key>::Version = 2.1;
+		const Double Sor<Crypto, Key>::Version = 2.2;
 
 		template<typename Crypto, typename Key>
 		Sor<Crypto, Key>::Sor(const Key& k)
@@ -28,9 +28,9 @@ namespace CppNet
 
 			for (Byte i = 0; i < 4; i++)
 			{
-				typename Key::value_type c = key.back();
+				auto c = key.back();
 
-				c += 100;
+				c += sizeof(c) * 255;
 
 				key += c;
 			}
@@ -54,7 +54,7 @@ namespace CppNet
 
 				for (size_t j = key.length() - 1; j >= 0; j--)
 				{
-					b = b ^ key.at(j);
+					b = b ^ key.at(j) ^ ((j + 5) * 5);
 					if (j == 0) break;
 				}
 
@@ -74,7 +74,7 @@ namespace CppNet
 				Crypto b = bytes[i];
 
 				for (size_t j = 0; j < key.length(); j++)
-					b = b ^ key.at(j);
+					b = b ^ key.at(j) ^ ((j + 5) * 5);
 
 				b -= 30;
 
