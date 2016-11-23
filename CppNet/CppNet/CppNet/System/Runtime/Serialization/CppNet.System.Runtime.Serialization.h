@@ -6,5 +6,6 @@
 #include "ISerializable.h"
 #include "IDeserializationCallback.h"
 #include "SerializationInfoEnumerator.hpp"
+#include "IFormatterConverter.hpp"
 
 #endif

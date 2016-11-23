@@ -152,6 +152,7 @@
     <ClInclude Include="CppNet\System\Runtime\Remoting\Messaging\IMessageSink.h" />
     <ClInclude Include="CppNet\System\Runtime\Remoting\Messaging\CppNet.System.Runtime.Remoting.Messaging.h" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\IDeserializationCallback.h" />
+    <ClInclude Include="CppNet\System\Runtime\Serialization\IFormatterConverter.hpp" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\ISerializable.h" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\SerializationInfo.h" />
     <ClInclude Include="CppNet\System\Runtime\Serialization\SerializationInfoEnumerator.hpp" />
@@ -245,6 +246,7 @@
     <ClCompile Include="CppNet\System\Object.cpp" />
     <ClCompile Include="CppNet\System\Random.cpp" />
     <ClCompile Include="CppNet\System\Runtime\Remoting\Contexts\Context.cpp" />
+    <ClCompile Include="CppNet\System\Runtime\Serialization\SerializationInfo.cpp" />
     <ClCompile Include="CppNet\System\SystemException.cpp" />
     <ClCompile Include="CppNet\System\Text\EncoderFallback.cpp" />
     <ClCompile Include="CppNet\System\Text\Encoding.cpp" />

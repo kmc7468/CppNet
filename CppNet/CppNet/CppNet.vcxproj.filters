@@ -220,6 +220,9 @@
     <Filter Include="소스 파일\CppNet\System\Media">
       <UniqueIdentifier>{726755d8-2be1-478a-a686-6ce4a4da2536}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\CppNet\System\Runtime\Serialization">
+      <UniqueIdentifier>{2838c1e1-ef44-4f9d-8b93-f7260f5ce734}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -807,6 +810,9 @@
     <ClInclude Include="CppNet\System\ArgumentOutOfRangeException.hpp">
       <Filter>선언 및 구현 파일\CppNet\System</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\Serialization\IFormatterConverter.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System\Runtime\Serialization</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -937,6 +943,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Collections\Hashtable.cpp">
       <Filter>소스 파일\CppNet\System\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Runtime\Serialization\SerializationInfo.cpp">
+      <Filter>소스 파일\CppNet\System\Runtime\Serialization</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
