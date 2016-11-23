@@ -18,6 +18,11 @@ namespace CppNet::System::Globalization
 	class EncodingTable;
 }
 
+namespace CppNet::System::Collections
+{
+	class Hashtable;
+}
+
 namespace CppNet::System::Text
 {
 	using namespace CppNet::System::Collections;

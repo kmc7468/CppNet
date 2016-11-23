@@ -16,6 +16,9 @@ namespace CppNet
 		{
 			namespace Serialization
 			{
+				class SerializationInfo;
+				class StreamingContext;
+
 				interface ISerializable
 				{
 					virtual void GetObjectData(const SerializationInfo& info, const StreamingContext& context) const = 0;
