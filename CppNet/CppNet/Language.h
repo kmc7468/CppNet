@@ -9,6 +9,7 @@
 #define TXT_INVALID_ARGUMENT_INT_MINUS "음수일 수 없습니다."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "인자가 nullptr입니다."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' 인자가 nullptr입니다."
+#define TXT_INVALID_ARGUMENT_OUTOFRANGE_DEFMSG "인자가 범위를 벗어났습니다."
 
 #define TXT_INVALID_CAST_DEFMSG "잘못된 변환 오류가 발생하였습니다."
 #define TXT_INVAILD_CAST_CHAR2BOOL "Char를 Boolean으로 변환할 수 없습니다."
@@ -47,6 +48,7 @@
 #define TXT_INVALID_ARGUMENT_INT_MINUS "Ĝi ne povas esti negativa."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "La argumento estas nullptr."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento estas nullptr."
+#define TXT_INVALID_ARGUMENT_OUTOFRANGE_DEFMSG "La argumento estas ekster atingo."
 
 #define TXT_INVALID_CAST_DEFMSG "Nevalida rolantaro escepto."
 #define TXT_INVAILD_CAST_CHAR2BOOL "Vi ne povas konverti Char al Boolean."
@@ -84,6 +86,7 @@
 #define TXT_INVALID_ARGUMENT_INT_MINUS "它不能为负。"
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "的说法是nullptr。"
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%'的说法是nullptr。"
+#define TXT_INVALID_ARGUMENT_OUTOFRANGE_DEFMSG "参数超出范围。"
 
 #define TXT_INVALID_CAST_DEFMSG "类型转换异常无效。"
 #define TXT_INVAILD_CAST_CHAR2BOOL "无法将Char转换为Boolean。"
@@ -121,6 +124,7 @@
 #define TXT_INVALID_ARGUMENT_INT_MINUS "負の値であることができません。"
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "引数がnullptrです。"
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%'引数がnullptrです。"
+#define TXT_INVALID_ARGUMENT_OUTOFRANGE_DEFMSG "引数が範囲外。"
 
 #define TXT_INVALID_CAST_DEFMSG "キャスト例外が無効です。"
 #define TXT_INVAILD_CAST_CHAR2BOOL "CharをBooleanにキャストできません。"
@@ -159,6 +163,7 @@
 #define TXT_INVALID_ARGUMENT_INT_MINUS "Это не может быть отрицательным."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "Аргумент nullptr."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' аргумент nullptr."
+#define TXT_INVALID_ARGUMENT_OUTOFRANGE_DEFMSG "Аргумент находится вне диапазона."
 
 #define TXT_INVALID_CAST_DEFMSG "Invalid литая исключение."
 #define TXT_INVAILD_CAST_CHAR2BOOL "не может бросить из Чаре в логическое значение."
@@ -196,6 +201,7 @@
 #define TXT_INVALID_ARGUMENT_INT_MINUS "No puede ser negativo."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "El argumento es nullptr."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento es nullptr."
+#define TXT_INVALID_ARGUMENT_OUTOFRANGE_DEFMSG "El argumento está fuera de rango."
 
 #define TXT_INVALID_CAST_DEFMSG "Excepción de conversión no válida."
 #define TXT_INVAILD_CAST_CHAR2BOOL "No se puede emitir desde Char a Boolean."
@@ -233,6 +239,7 @@
 #define TXT_INVALID_ARGUMENT_INT_MINUS "Can not be negative."
 #define TXT_INVALID_ARGUMENT_NULL_DEFMSG "The argument is nullptr."
 #define TXT_INVALID_ARGUMENT_NULL_HASPARAM_DEFMSG "The argument '%PARAM_NAME%' is nullptr."
+#define TXT_INVALID_ARGUMENT_OUTOFRANGE_DEFMSG "The argument is out of range."
 
 #define TXT_INVALID_CAST_DEFMSG "Invalid cast exception."
 #define TXT_INVAILD_CAST_CHAR2BOOL "Can't cast a from Char to Boolean."

@@ -47,6 +47,7 @@
     <ClInclude Include="CppNet\System\AppDomain.h" />
     <ClInclude Include="CppNet\System\ArgumentException.h" />
     <ClInclude Include="CppNet\System\ArgumentNullException.hpp" />
+    <ClInclude Include="CppNet\System\ArgumentOutOfRangeException.hpp" />
     <ClInclude Include="CppNet\System\ArithmeticException.hpp" />
     <ClInclude Include="CppNet\System\Array.hpp" />
     <ClInclude Include="CppNet\System\AsyncCallback.h" />

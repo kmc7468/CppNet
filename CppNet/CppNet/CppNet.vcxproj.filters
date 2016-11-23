@@ -804,6 +804,9 @@
     <ClInclude Include="CppNet\System\Collections\IHashCodeProvider.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Collections</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\ArgumentOutOfRangeException.hpp">
+      <Filter>선언 및 구현 파일\CppNet\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
