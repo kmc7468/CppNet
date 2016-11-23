@@ -47,47 +47,13 @@ namespace CppNet
 
 
 				public:
-					SerializationInfo(Type* type, IFormatterConverter* converter)
-						: SerializationInfo(type, converter, false)
-					{}
+					SerializationInfo(Type* type, IFormatterConverter* converter);
+					SerializationInfo(Type* type, IFormatterConverter* converter, Boolean requireSameTokenInPartialTrust);
 
-					SerializationInfo(Type* type, IFormatterConverter* converter, Boolean requireSameTokenInPartialTrust)
-					{
-						if (type == nullptr)
-							throw ArgumentNullException(nameof(type));
-						if (converter == nullptr)
-							throw ArgumentNullException(nameof(converter));
+					String GetFullTypeName() const;
+					void SetFullTypeName(const String& value);
 
-						objectType = type;
-						m_fullTypeName = type->name();
-
-						m_members = new String[defaultSize];
-						m_data = new Object[defaultSize];
-						m_types = (Type*)(new Byte[defaultSize * sizeof(Type)]);
-
-						m_converter = converter;
-
-						this->requireSameTokenInPartialTrust = requireSameTokenInPartialTrust;
-					}
-
-					String GetFullTypeName() const
-					{
-						return m_fullTypeName;
-					}
-
-					void SetFullTypeName(const String& value)
-					{
-						m_fullTypeName = value;
-						isFullTypeNameSetExplicit = true;
-					}
-
-					void SetType(Type* type)
-					{
-						if (type == nullptr)
-							throw ArgumentNullException(nameof(type));
-
-						// TODO
-					}
+					void SetType(Type* type);
 					
 					// TODO
 				};
