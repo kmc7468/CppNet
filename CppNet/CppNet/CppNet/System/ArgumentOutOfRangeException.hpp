@@ -9,7 +9,7 @@
 
 namespace CppNet::System
 {
-	class ArgumentOutOfRangeException : public ArgumentException, public Runtime::Serialization::ISerializable
+	class ArgumentOutOfRangeException : public ArgumentException/*, public Runtime::Serialization::ISerializable*/
 	{
 	private:
 		Object* m_actualValue = nullptr;
@@ -94,6 +94,8 @@ namespace CppNet::System
 		{
 			return m_actualValue;
 		}
+
+		// TODO GetObjectData
 	};
 }
 

@@ -19,12 +19,26 @@
 #include "IEqualityComparer.hpp"
 #include "CompatibleComparer.hpp"
 
+#include <array>
+
 namespace CppNet
 {
 	namespace System
 	{
 		namespace Collections
 		{
+			class Hashtable;
+
+			class HashHelpers
+			{
+				friend class Hashtable;
+
+			_internal:
+				static const Int32 HashCollisionThreshold;
+				static Boolean s_UseRandomizedStringHashing;
+				static const std::array<Int32, 72> primes;
+			};
+
 			class Hashtable : public Object/*, public Runtime::Serialization::ISerializable, 
 				public Runtime::Serialization::IDeserializationCallback, public ICloneable*/
 			{
@@ -79,6 +93,8 @@ namespace CppNet
 				Hashtable();
 				Hashtable(Int32 capacity);
 				Hashtable(Int32 capacity, Single loadFactor);
+				Hashtable(Int32 capacity, Single loadFactor, IHashCodeProvider* hcp, IComparer* comparer);
+				Hashtable(Int32 capacity, Single loadFactor, IEqualityComparer* equalityComparer);
 			};
 		}
 	}
