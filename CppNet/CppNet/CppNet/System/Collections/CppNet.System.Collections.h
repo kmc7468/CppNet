@@ -16,5 +16,6 @@
 #include "IHashCodeProvider.hpp"
 #include "CompatibleComparer.hpp"
 #include "ReadOnlyCollectionBase.h"
+#include "ArrayList.h"
 
 #endif

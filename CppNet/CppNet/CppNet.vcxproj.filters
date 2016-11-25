@@ -822,6 +822,9 @@
     <ClInclude Include="CppNet\System\Collections\ReadOnlyCollectionBase.h">
       <Filter>헤더 파일\CppNet\System\Collections</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\ArrayList.h">
+      <Filter>헤더 파일\CppNet\System\Collections</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -955,6 +958,12 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Runtime\Serialization\SerializationInfo.cpp">
       <Filter>소스 파일\CppNet\System\Runtime\Serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Collections\ReadOnlyCollectionBase.cpp">
+      <Filter>소스 파일\CppNet\System\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Collections\ArrayList.cpp">
+      <Filter>소스 파일\CppNet\System\Collections</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

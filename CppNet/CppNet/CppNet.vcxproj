@@ -55,6 +55,7 @@
     <ClInclude Include="CppNet\System\Boolean.h" />
     <ClInclude Include="CppNet\System\Byte.h" />
     <ClInclude Include="CppNet\System\Char.h" />
+    <ClInclude Include="CppNet\System\Collections\ArrayList.h" />
     <ClInclude Include="CppNet\System\Collections\DictionaryEntry.h" />
     <ClInclude Include="CppNet\System\Collections\Generic\Dictionary.h" />
     <ClInclude Include="CppNet\System\Collections\Generic\ICollection.h" />
@@ -224,8 +225,10 @@
     <ClCompile Include="CppNet\System\ArgumentException.cpp" />
     <ClCompile Include="CppNet\System\BitConverter.cpp" />
     <ClCompile Include="CppNet\System\Char.cpp" />
+    <ClCompile Include="CppNet\System\Collections\ArrayList.cpp" />
     <ClCompile Include="CppNet\System\Collections\DictionaryEntry.cpp" />
     <ClCompile Include="CppNet\System\Collections\Hashtable.cpp" />
+    <ClCompile Include="CppNet\System\Collections\ReadOnlyCollectionBase.cpp" />
     <ClCompile Include="CppNet\System\ComponentModel\Component.cpp" />
     <ClCompile Include="CppNet\System\DoubleT.cpp" />
     <ClCompile Include="CppNet\System\Drawing\Point.cpp" />
