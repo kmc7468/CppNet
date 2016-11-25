@@ -813,6 +813,15 @@
     <ClInclude Include="CppNet\System\Runtime\Serialization\IFormatterConverter.hpp">
       <Filter>선언 및 구현 파일\CppNet\System\Runtime\Serialization</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\ComponentModel\IContainer.h">
+      <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\ComponentModel\ComponentCollection.h">
+      <Filter>헤더 파일\CppNet\System\ComponentModel</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Collections\ReadOnlyCollectionBase.h">
+      <Filter>헤더 파일\CppNet\System\Collections</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

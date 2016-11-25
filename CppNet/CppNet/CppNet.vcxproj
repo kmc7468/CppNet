@@ -83,8 +83,11 @@
     <ClInclude Include="CppNet\System\Collections\IStructuralEquatable.hpp" />
     <ClInclude Include="CppNet\System\Collections\ObjectModel\CppNet.System.Collections.ObjectModel.h" />
     <ClInclude Include="CppNet\System\Collections\ObjectModel\ReadOnlyCollection.hpp" />
+    <ClInclude Include="CppNet\System\Collections\ReadOnlyCollectionBase.h" />
     <ClInclude Include="CppNet\System\ComponentModel\Component.h" />
+    <ClInclude Include="CppNet\System\ComponentModel\ComponentCollection.h" />
     <ClInclude Include="CppNet\System\ComponentModel\IComponent.h" />
+    <ClInclude Include="CppNet\System\ComponentModel\IContainer.h" />
     <ClInclude Include="CppNet\System\ComponentModel\ISite.h" />
     <ClInclude Include="CppNet\System\ComponentModel\CppNet.System.ComponentModel.h" />
     <ClInclude Include="CppNet\System\Console.h" />

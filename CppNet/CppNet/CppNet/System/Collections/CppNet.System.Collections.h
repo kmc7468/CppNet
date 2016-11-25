@@ -15,5 +15,6 @@
 #include "IEqualityComparer.hpp"
 #include "IHashCodeProvider.hpp"
 #include "CompatibleComparer.hpp"
+#include "ReadOnlyCollectionBase.h"
 
 #endif
