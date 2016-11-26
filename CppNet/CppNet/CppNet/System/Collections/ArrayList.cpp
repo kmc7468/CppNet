@@ -94,4 +94,87 @@ namespace CppNet::System::Collections
 	{
 		return false;
 	}
+
+	const Object& ArrayList::SyncRoot() const
+	{
+		if (_syncRoot == nullptr)
+		{
+			_syncRoot = new Object;
+		}
+
+		return *_syncRoot;
+	}
+
+	const Object& ArrayList::operator[](Int32 index) const
+	{
+		if (index < 0 || index >= _size)
+			throw ArgumentOutOfRangeException(nameof(index));
+
+		return _items[index];
+	}
+
+	Object& ArrayList::operator[](Int32 index)
+	{
+		if (index < 0 || index >= _size)
+			throw ArgumentOutOfRangeException(nameof(index));
+
+		return _items[index];
+	}
+
+	Int32 ArrayList::Add(Object& object)
+	{
+		if (_size == _items_len) EnsureCapacity(_size + 1);
+		_items[_size] = object;
+
+		return _size++;
+	}
+
+	void ArrayList::InsertRange(Int32 index, Box<ICollection> col)
+	{
+		if (col == nullptr)
+			throw ArgumentNullException(nameof(col));
+		if (index < 0 || index > _size)
+			throw ArgumentOutOfRangeException(nameof(index));
+	
+		Int32 count = col->Count();
+
+		if (count > 0) 
+		{
+			EnsureCapacity(_size + count);
+			
+			if (index < _size) {
+				//Array.Copy(_items, index, _items, index + count, _size - index); FIXME
+			}
+
+			Object* itemsToInsert = new Object[count];
+			//c.CopyTo(itemsToInsert, 0); FIXME
+			//itemsToInsert.CopyTo(_items, index);
+			_size += count;
+		}
+	}
+
+	void ArrayList::AddRange(Box<ICollection> c)
+	{
+		InsertRange(_size, c);
+	}
+
+	Int32 ArrayList::BinarySearch(Int32 index, Int32 count, Object& value, Box<IComparer> comparer)
+	{
+		// TODO
+
+		return Int32();
+	}
+
+#pragma region Private
+	void ArrayList::EnsureCapacity(Int32 min)
+	{
+		if (_items_len < min) {
+			Int32 newCapacity = _items_len == 0 ? _defaultCapacity : _items_len * 2;
+
+			if (newCapacity > 0X7FEFFFFF) newCapacity = 0X7FEFFFFF;
+			if (newCapacity < min) newCapacity = min;
+			SetCapacity(newCapacity);
+		}
+	}
+#pragma endregion
 }

@@ -6,6 +6,7 @@
 #include "../Object.h"
 #include "../Int32.h"
 #include "../../Box.hpp"
+#include "IComparer.hpp"
 
 namespace CppNet::System::Collections
 {
@@ -14,8 +15,7 @@ namespace CppNet::System::Collections
 	private:
 		Object* _items = nullptr;
 		Int32 _size;
-		Int32 _version;
-		Object* _syncRoot = nullptr;
+		mutable Object* _syncRoot = nullptr;
 		Int32 _items_len;
 
 	private:
@@ -36,8 +36,21 @@ namespace CppNet::System::Collections
 		Boolean IsFixedSize() const override;
 		Boolean IsReadOnly() const override;
 		Boolean IsSynchronized() const override;
+		const Object& SyncRoot() const override;
+		const Object& operator[](Int32 index) const override;
+		Object& operator[](Int32 index) override;
+		virtual void InsertRange(Int32 index, Box<ICollection> col);
 
-		// TODO
+	public:
+		//static ArrayList Adapter(Box<IList> list);
+	
+	public:
+		virtual void AddRange(Box<ICollection> c);
+		Int32 Add(Object& object) override;
+		virtual Int32 BinarySearch(Int32 index, Int32 count, Object& value, Box<IComparer> comparer);
+		
+	private:
+		void EnsureCapacity(Int32 min);
 	};
 }
 

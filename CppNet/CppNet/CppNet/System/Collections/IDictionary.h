@@ -36,7 +36,7 @@ namespace CppNet
 
 				virtual Int32 Count() const = 0;
 				virtual Boolean IsSynchronized() const = 0;
-				virtual Object SyncRoot() const = 0;
+				virtual const Object& SyncRoot() const = 0;
 			};
 		}
 	}
