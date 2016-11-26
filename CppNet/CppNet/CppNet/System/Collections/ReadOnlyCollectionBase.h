@@ -10,7 +10,8 @@ namespace CppNet::System::Collections
 {
 	class ReadOnlyCollectionBase : public ICollection
 	{
-		// TODO InnerList
+	/*protected:
+		ArrayList list;*/
 
 	public:
 		virtual Int32 Count() const;

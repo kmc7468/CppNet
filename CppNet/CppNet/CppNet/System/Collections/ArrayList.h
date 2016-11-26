@@ -48,7 +48,10 @@ namespace CppNet::System::Collections
 		virtual void AddRange(Box<ICollection> c);
 		Int32 Add(Object& object) override;
 		virtual Int32 BinarySearch(Int32 index, Int32 count, Object& value, Box<IComparer> comparer);
-		
+		virtual Int32 LastIndexOf(Object& value) const;
+		virtual Int32 LastIndexOf(Object value, Int32 startIndex) const;
+		virtual Int32 LastIndexOf(Object value, Int32 startIndex, Int32 count) const;
+
 	private:
 		void EnsureCapacity(Int32 min);
 	};

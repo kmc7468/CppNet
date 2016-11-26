@@ -165,6 +165,33 @@ namespace CppNet::System::Collections
 		return Int32();
 	}
 
+	Int32 ArrayList::LastIndexOf(Object& value) const
+	{
+		return LastIndexOf(value, _size - 1, _size);
+	}
+
+	Int32 ArrayList::LastIndexOf(Object value, Int32 startIndex) const
+	{
+		if (startIndex >= _size)
+			throw ArgumentOutOfRangeException(nameof(startIndex));
+
+		return LastIndexOf(value, startIndex, startIndex + 1);
+	}
+
+	Int32 ArrayList::LastIndexOf(Object value, Int32 startIndex, Int32 count) const
+	{
+		if (Count() != 0 && (startIndex < 0 || count < 0))
+			throw ArgumentOutOfRangeException((startIndex < 0 ? nameof(startIndex) : nameof(count)));
+	
+		if (_size == 0)
+			return -1;
+
+		if (startIndex >= _size || count > startIndex + 1)
+			throw ArgumentOutOfRangeException(startIndex >= _size ? nameof(startIndex) : nameof(count));
+	
+		return Int32(); // TODO
+	}
+
 #pragma region Private
 	void ArrayList::EnsureCapacity(Int32 min)
 	{

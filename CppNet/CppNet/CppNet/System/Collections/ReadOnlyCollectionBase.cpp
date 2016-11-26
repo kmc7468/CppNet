@@ -2,23 +2,29 @@
 
 namespace CppNet::System::Collections
 {
+	// FIXME
+
 	Int32 ReadOnlyCollectionBase::Count() const
 	{
-		return 0; // FIXME
+		/*return list.Count();*/
+		return 0;
 	}
 
 	Boolean ReadOnlyCollectionBase::IsSynchronized() const
 	{
-		return true; // FIXME
+		/*return list.IsSynchronized();*/
+		return false;
 	}
 
 	const Object& ReadOnlyCollectionBase::SyncRoot() const
 	{
-		return Object(); // FIXME
+		/*return list.SyncRoot();*/
+		return *(new Object);
 	}
 
 	std::unique_ptr<IEnumerator> ReadOnlyCollectionBase::GetEnumerator()
 	{
-		return nullptr; // FIXME
+		/*return list.GetEnumerator();*/
+		return nullptr;
 	}
 }
