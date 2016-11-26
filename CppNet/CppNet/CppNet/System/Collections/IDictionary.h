@@ -14,12 +14,7 @@ namespace CppNet
 	{
 		namespace Collections
 		{
-			interface _IDictionary
-			{
-				virtual std::unique_ptr<IDictionaryEnumerator> GetEnumerator() = 0;
-			};
-
-			interface IDictionary : private ICollection, public _IDictionary
+			interface IDictionary : public ICollection
 			{
 				virtual const Object& operator[](const Object& key) const = 0;
 				virtual Object& operator[](const Object& key) = 0;
@@ -33,10 +28,6 @@ namespace CppNet
 
 				virtual Boolean IsReadOnly() const = 0;
 				virtual Boolean IsFixedSize() const = 0;
-
-				virtual Int32 Count() const = 0;
-				virtual Boolean IsSynchronized() const = 0;
-				virtual const Object& SyncRoot() const = 0;
 			};
 		}
 	}
