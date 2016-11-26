@@ -825,6 +825,12 @@
     <ClInclude Include="CppNet\System\Collections\ArrayList.h">
       <Filter>헤더 파일\CppNet\System\Collections</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\TypedReference.h">
+      <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\NotSupportedException.h">
+      <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -964,6 +970,12 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Collections\ArrayList.cpp">
       <Filter>소스 파일\CppNet\System\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\NotSupportedException.cpp">
+      <Filter>소스 파일\CppNet\System</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\TypedReference.cpp">
+      <Filter>소스 파일\CppNet\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

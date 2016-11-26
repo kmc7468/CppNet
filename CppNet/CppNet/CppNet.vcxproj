@@ -138,6 +138,7 @@
     <ClInclude Include="CppNet\System\Media\CppNet.System.Media.h" />
     <ClInclude Include="CppNet\System\Media\SoundPlayer.h" />
     <ClInclude Include="CppNet\System\NotImplementedException.h" />
+    <ClInclude Include="CppNet\System\NotSupportedException.h" />
     <ClInclude Include="CppNet\System\Nullable.h" />
     <ClInclude Include="CppNet\System\NullReferenceException.hpp" />
     <ClInclude Include="CppNet\System\Object.h" />
@@ -191,6 +192,7 @@
     <ClInclude Include="CppNet\System\TimeSpan.h" />
     <ClInclude Include="CppNet\System\Tuple.h" />
     <ClInclude Include="CppNet\System\Type.h" />
+    <ClInclude Include="CppNet\System\TypedReference.h" />
     <ClInclude Include="CppNet\System\UInt16.h" />
     <ClInclude Include="CppNet\System\UInt32.h" />
     <ClInclude Include="CppNet\System\UInt32_64.h" />
@@ -249,6 +251,7 @@
     <ClCompile Include="CppNet\System\Math.cpp" />
     <ClCompile Include="CppNet\System\Media\SoundPlayer.cpp" />
     <ClCompile Include="CppNet\System\NotImplementedException.cpp" />
+    <ClCompile Include="CppNet\System\NotSupportedException.cpp" />
     <ClCompile Include="CppNet\System\Object.cpp" />
     <ClCompile Include="CppNet\System\Random.cpp" />
     <ClCompile Include="CppNet\System\Runtime\Remoting\Contexts\Context.cpp" />
@@ -262,6 +265,7 @@
     <ClCompile Include="CppNet\System\Threading\Timeout.cpp" />
     <ClCompile Include="CppNet\System\Threading\WaitHandle.cpp" />
     <ClCompile Include="CppNet\System\TimeSpan.cpp" />
+    <ClCompile Include="CppNet\System\TypedReference.cpp" />
     <ClCompile Include="CppNet\System\UriParser.cpp" />
     <ClCompile Include="CppNet\System\Version.cpp" />
     <ClCompile Include="CppNet\System\_String.cpp" />

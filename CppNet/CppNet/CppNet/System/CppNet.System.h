@@ -18,6 +18,7 @@
 #include "OverflowException.hpp"
 #include "NullReferenceException.hpp"
 #include "ArgumentNullException.hpp"
+#include "NotSupportedException.h"
 
 #include "Array.hpp"
 #include "IntPtr.h"
@@ -56,5 +57,6 @@
 #include "Nullable.h"
 #include "UriParser.h"
 #include "Uri.h"
+#include "TypedReference.h"
 
 #endif

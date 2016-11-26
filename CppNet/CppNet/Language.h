@@ -41,6 +41,8 @@
 
 #define TXT_NULLREF_DEFMSG "nullptr인 객체를 역참조할 수 없습니다."
 
+#define TXT_NOTSUPPORT_DEFMSG "지원하지 않습니다."
+
 
 #elif defined(LANG_ESP)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Nevalidaj argumentoj."
@@ -80,6 +82,8 @@
 
 #define TXT_NULLREF_DEFMSG "Objekto kiu estas nullptr ne povas referencita."
 
+#define TXT_NOTSUPPORT_DEFMSG "Ne subtenita."
+
 #elif defined(LANG_CHI)
 #define TXT_INVALID_ARGUMENT_DEFMSG "参数异常无效。"
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%'的说法是无效的。"
@@ -118,6 +122,8 @@
 
 #define TXT_NULLREF_DEFMSG "无法引用为nullptr的对象。"
 
+#define TXT_NOTSUPPORT_DEFMSG "不支持。"
+
 #elif defined(LANG_JSP)
 #define TXT_INVALID_ARGUMENT_DEFMSG "引数の例外が無効です。"
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%'引数が有効ではありません。"
@@ -155,6 +161,8 @@
 #define TXT_THREAD_ABORT_DEFMSG "スレッドが中止されました。"
 
 #define TXT_NULLREF_DEFMSG "nullptrのオブジェクトは参照できません。"
+
+#define TXT_NOTSUPPORT_DEFMSG "サポートしていません。"
 
 
 #elif defined(LANG_RUS)
@@ -195,6 +203,8 @@
 
 #define TXT_NULLREF_DEFMSG "Объект, который является nullptr нельзя ссылаться."
 
+#define TXT_NOTSUPPORT_DEFMSG "Не поддерживается."
+
 #elif defined(LANG_SPA)
 #define TXT_INVALID_ARGUMENT_DEFMSG "Excepción de argumento no válido."
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "'%PARAM_NAME%' argumento no es válido."
@@ -233,6 +243,8 @@
 
 #define TXT_NULLREF_DEFMSG "No se puede hacer referencia a un objeto que es nullptr."
 
+#define TXT_NOTSUPPORT_DEFMSG "No soportado."
+
 #else
 #define TXT_INVALID_ARGUMENT_DEFMSG "Invalid argument exception."
 #define TXT_INVALID_ARGUMENT_HASPARAM_DEFMSG "The argument '%PARAM_NAME%' is not valid."
@@ -270,6 +282,8 @@
 #define TXT_THREAD_ABORT_DEFMSG "Thread was being aborted."
 
 #define TXT_NULLREF_DEFMSG "An object that is nullptr cannot be referenced."
+
+#define TXT_NOTSUPPORT_DEFMSG "Not supported."
 
 
 #endif
