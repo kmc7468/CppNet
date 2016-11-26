@@ -5,7 +5,7 @@
 
 #include "../../Int32.h"
 
-#include "ICollection.h"
+#include "IReadOnlyList.hpp"
 
 namespace CppNet
 {
@@ -16,7 +16,7 @@ namespace CppNet
 			namespace Generic
 			{
 				template <typename T>
-				interface IList : public ICollection<T>
+				interface IList : public IReadOnlyList<T>
 				{
 					virtual const T& operator[](Int32 index) const = 0;
 					virtual T& operator[](Int32 index) = 0;

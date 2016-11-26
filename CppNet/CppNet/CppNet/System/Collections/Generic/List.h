@@ -8,7 +8,7 @@
 namespace CppNet::System::Collections::Generic
 {
 	template <typename T>
-	class List : public IList<T>, public IReadOnlyList<T>
+	class List : public IList<T>
 	{
 	public:
 		List();
@@ -20,6 +20,7 @@ namespace CppNet::System::Collections::Generic
 		virtual Boolean Contains(const T& item) const override;
 		
 	public:
+		virtual const T& operator[](Int32 index) const override;
 		virtual T& operator[](Int32 index) override;
 
 	public:
@@ -59,5 +60,7 @@ namespace CppNet::System::Collections::Generic
 		};
 	};
 }
+
+#include "List.inl"
 
 #endif

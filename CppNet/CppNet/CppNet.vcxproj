@@ -281,6 +281,7 @@
     <None Include="CppNet\System\Char.inl" />
     <None Include="CppNet\System\Collections\CompatibleComparer.hpp" />
     <None Include="CppNet\System\Collections\DictionaryEntry.inl" />
+    <None Include="CppNet\System\Collections\Generic\List.inl" />
     <None Include="CppNet\System\Collections\Generic\Queue.inl" />
     <None Include="CppNet\System\Collections\Generic\Stack.inl" />
     <None Include="CppNet\System\Console.inl" />
