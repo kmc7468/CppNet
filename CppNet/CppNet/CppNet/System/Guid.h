@@ -11,7 +11,7 @@ namespace CppNet
 	{
 		class Guid : public Object
 		{
-
+			// TODO
 		};
 	}
 }

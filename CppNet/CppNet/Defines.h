@@ -23,6 +23,8 @@ https://github.com/kmc7468/CppNet/wiki/%EC%A0%84%EC%B2%98%EB%A6%AC%EA%B8%B0 */
 #include <Windows.h>
 #undef max
 #undef min
+#undef LMEM_FIXED
+#undef LMEM_MOVEABLE
 #endif
 
 #endif

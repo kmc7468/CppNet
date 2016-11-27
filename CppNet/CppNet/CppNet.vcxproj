@@ -296,6 +296,7 @@
     <None Include="CppNet\System\Math.inl" />
     <None Include="CppNet\System\Nullable.inl" />
     <None Include="CppNet\System\Object.inl" />
+    <None Include="CppNet\System\Runtime\InteropServices\Marshal.inl" />
     <None Include="CppNet\System\Text\RegularExpressions\RegexRunner.inl" />
     <None Include="CppNet\System\TimeSpan.inl" />
     <None Include="CppNet\System\Version.inl" />

@@ -226,6 +226,12 @@
     <Filter Include="소스 파일\CppNet\System\Runtime\InteropServices">
       <UniqueIdentifier>{4f4be774-6e94-40e9-b3e8-97493c02f60d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="인라인 구현 파일\CppNet\System\Runtime">
+      <UniqueIdentifier>{4dc16293-c745-4463-8c3f-e6c66eba58f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="인라인 구현 파일\CppNet\System\Runtime\InteropServices">
+      <UniqueIdentifier>{d4e010a5-bcd2-45f7-9974-ec40e986a369}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -1065,6 +1071,9 @@
     </None>
     <None Include="CppNet\System\Collections\Generic\List.inl">
       <Filter>인라인 구현 파일\CppNet\System\Collections\Generic</Filter>
+    </None>
+    <None Include="CppNet\System\Runtime\InteropServices\Marshal.inl">
+      <Filter>인라인 구현 파일\CppNet\System\Runtime\InteropServices</Filter>
     </None>
   </ItemGroup>
 </Project>
