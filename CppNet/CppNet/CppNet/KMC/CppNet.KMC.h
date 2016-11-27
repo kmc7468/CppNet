@@ -9,5 +9,7 @@
 #include "Array3D.hpp"
 #include "Array4D.hpp"
 #include "Array5D.hpp"
+#include "Array1D.hpp"
+#include "ArrayND.hpp"
 
 #endif

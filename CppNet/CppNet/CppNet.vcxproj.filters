@@ -858,6 +858,12 @@
     <ClInclude Include="CppNet\KMC\Array5D.hpp">
       <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\KMC\Array1D.hpp">
+      <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\KMC\ArrayND.hpp">
+      <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

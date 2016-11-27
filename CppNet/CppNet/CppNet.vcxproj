@@ -37,10 +37,12 @@
     <ClInclude Include="CppNet\ICrypto.h" />
     <ClInclude Include="CppNet\event.h" />
     <ClInclude Include="CppNet\is.hpp" />
+    <ClInclude Include="CppNet\KMC\Array1D.hpp" />
     <ClInclude Include="CppNet\KMC\Array2D.hpp" />
     <ClInclude Include="CppNet\KMC\Array3D.hpp" />
     <ClInclude Include="CppNet\KMC\Array4D.hpp" />
     <ClInclude Include="CppNet\KMC\Array5D.hpp" />
+    <ClInclude Include="CppNet\KMC\ArrayND.hpp" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\DynamicVariables.hpp" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
