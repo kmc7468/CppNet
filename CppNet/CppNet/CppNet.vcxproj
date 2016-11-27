@@ -148,6 +148,7 @@
     <ClInclude Include="CppNet\System\Runtime\CompilerServices\ConditionalWeakTable.hpp" />
     <ClInclude Include="CppNet\System\Runtime\CompilerServices\CppNet.System.Runtime.CompilerServices.h" />
     <ClInclude Include="CppNet\System\Runtime\InteropServices\CppNet.System.Runtime.InteropServices.h" />
+    <ClInclude Include="CppNet\System\Runtime\InteropServices\Marshal.h" />
     <ClInclude Include="CppNet\System\Runtime\InteropServices\_Thread.h" />
     <ClInclude Include="CppNet\System\Runtime\Remoting\Contexts\Context.h" />
     <ClInclude Include="CppNet\System\Runtime\Remoting\Contexts\IContextProperty.h" />
@@ -254,6 +255,7 @@
     <ClCompile Include="CppNet\System\NotSupportedException.cpp" />
     <ClCompile Include="CppNet\System\Object.cpp" />
     <ClCompile Include="CppNet\System\Random.cpp" />
+    <ClCompile Include="CppNet\System\Runtime\InteropServices\Marshal.cpp" />
     <ClCompile Include="CppNet\System\Runtime\Remoting\Contexts\Context.cpp" />
     <ClCompile Include="CppNet\System\Runtime\Serialization\SerializationInfo.cpp" />
     <ClCompile Include="CppNet\System\SystemException.cpp" />

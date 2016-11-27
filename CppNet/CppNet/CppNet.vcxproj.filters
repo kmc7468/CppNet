@@ -223,6 +223,9 @@
     <Filter Include="소스 파일\CppNet\System\Runtime\Serialization">
       <UniqueIdentifier>{2838c1e1-ef44-4f9d-8b93-f7260f5ce734}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\CppNet\System\Runtime\InteropServices">
+      <UniqueIdentifier>{4f4be774-6e94-40e9-b3e8-97493c02f60d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -831,6 +834,9 @@
     <ClInclude Include="CppNet\System\NotSupportedException.h">
       <Filter>헤더 파일\CppNet\System</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Runtime\InteropServices\Marshal.h">
+      <Filter>헤더 파일\CppNet\System\Runtime\InteropServices</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -976,6 +982,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\TypedReference.cpp">
       <Filter>소스 파일\CppNet\System</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Runtime\InteropServices\Marshal.cpp">
+      <Filter>소스 파일\CppNet\System\Runtime\InteropServices</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
