@@ -3,10 +3,9 @@
 
 #include "Decimal.h"
 #include "Fraction.h"
-
 #include "Sor.h"
-
 #include "DynamicVariables.hpp"
 #include "Array2D.hpp"
+#include "Array3D.hpp"
 
 #endif

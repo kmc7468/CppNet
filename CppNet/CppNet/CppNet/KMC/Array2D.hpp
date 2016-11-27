@@ -2,12 +2,14 @@
 #define CPPNET_KMC_ARRAY2D_HPP
 
 #include "../../Defines.h"
+#include "../../Utility.h"
 
 #include "../System/Object.h"
 #include "../System/UInt64.h"
 #include "../System/UInt32.h"
 #include "../System/NullReferenceException.hpp"
 #include "../System/IndexOutOfRangeException.hpp"
+#include "../System/ArgumentNullException.hpp"
 
 #include <memory.h>
 
@@ -62,7 +64,12 @@ namespace CppNet::KMC
 
 			Node& operator=(T* data)
 			{
+				if (data == nullptr)
+					throw System::ArgumentNullException(nameof(data));
+
 				memcpy(value, data, sizeof(T) * secondSize);
+
+				return *this;
 			}
 		};
 
@@ -107,7 +114,7 @@ namespace CppNet::KMC
 		~Array2D()
 		{
 			if (data)
-				free(data);
+				delete[] data;
 		}
 
 	public:
