@@ -846,6 +846,9 @@
     <ClInclude Include="CppNet\System\AccessViolationException.h">
       <Filter>헤더 파일\CppNet\System</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\KMC\Array2D.hpp">
+      <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

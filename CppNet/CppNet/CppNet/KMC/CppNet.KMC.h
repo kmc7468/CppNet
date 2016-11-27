@@ -7,5 +7,6 @@
 #include "Sor.h"
 
 #include "DynamicVariables.hpp"
+#include "Array2D.hpp"
 
 #endif
