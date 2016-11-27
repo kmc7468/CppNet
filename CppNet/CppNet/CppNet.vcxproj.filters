@@ -852,6 +852,9 @@
     <ClInclude Include="CppNet\KMC\Array3D.hpp">
       <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\KMC\Array4D.hpp">
+      <Filter>선언 및 구현 파일\CppNet\KMC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">

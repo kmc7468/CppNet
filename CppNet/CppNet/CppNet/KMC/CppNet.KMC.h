@@ -7,5 +7,6 @@
 #include "DynamicVariables.hpp"
 #include "Array2D.hpp"
 #include "Array3D.hpp"
+#include "Array4D.hpp"
 
 #endif

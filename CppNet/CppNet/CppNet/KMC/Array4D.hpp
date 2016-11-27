@@ -1,5 +1,5 @@
-#ifndef CPPNET_KMC_ARRAY3D_HPP
-#define CPPNET_KMC_ARRAY3D_HPP
+#ifndef CPPNET_KMC_ARRAY4D_HPP
+#define CPPNET_KMC_ARRAY4D_HPP
 
 #include "../../Defines.h"
 #include "../../Utility.h"
@@ -15,14 +15,15 @@
 
 namespace CppNet::KMC
 {
-	template<typename T, size_t firstSize, size_t secondSize, size_t thirdSize>
-	class Array3D final : public System::Object
+	template<typename T, size_t firstSize, size_t secondSize, size_t thirdSize, size_t fourthSize>
+	class Array4D final : public System::Object
 	{
 	public:
 		class NodeB;
+		class NodeC;
 		class NodeA final
 		{
-			friend class Array3D<T, firstSize, secondSize, thirdSize>;
+			friend class Array4D<T, firstSize, secondSize, thirdSize, fourthSize>;
 
 		private:
 			T* value = nullptr;
@@ -33,14 +34,14 @@ namespace CppNet::KMC
 			}
 
 		public:
-			NodeA(NodeA&& n)
-			{
-				value = n.value;
-			}
-
 			NodeA(const NodeA& n)
 			{
-				value = n.value;
+				this->value = n.value;
+			}
+
+			NodeA(NodeA&& n)
+			{
+				this->value = n.value;
 			}
 
 		public:
@@ -55,7 +56,7 @@ namespace CppNet::KMC
 				System::UInt32 addr = (System::UInt32)value;
 #endif
 
-				return NodeB((T*)(addr + (sizeof(T) * thirdSize * index)));
+				return NodeB((T*)(addr + (sizeof(T) * fourthSize * thirdSize * index)));
 			}
 
 			NodeB operator[](size_t index)
@@ -69,19 +70,20 @@ namespace CppNet::KMC
 				System::UInt32 addr = (System::UInt32)value;
 #endif
 
-				return NodeB((T*)(addr + (sizeof(T) * thirdSize * index)));
+				return NodeB((T*)(addr + (sizeof(T) * fourthSize * thirdSize * index)));
 			}
 
 			NodeA& operator=(const NodeA&) = delete;
 			NodeA& operator=(NodeA&&) = delete;
 
-			NodeA& operator=(T** data)
+			NodeA& operator=(T*** data)
 			{
 				if (data == nullptr)
 					throw System::ArgumentNullException(nameof(data));
 
 				for (size_t i = 0; i < secondSize; ++i)
-					(*this)[i] = data[i];
+					for (size_t j = 0; j < thirdSize; ++j)
+						(*this)[i][j] = data[i][j];
 
 				return *this;
 			}
@@ -110,9 +112,75 @@ namespace CppNet::KMC
 			}
 
 		public:
-			const T& operator[](size_t index) const
+			const NodeC operator[](size_t index) const
 			{
 				if (index >= thirdSize)
+					throw System::IndexOutOfRangeException();
+
+#ifdef BIT_64
+				System::UInt64 addr = (System::UInt64)value;
+#else
+				System::UInt32 addr = (System::UInt32)value;
+#endif
+
+				return NodeC((T*)(addr + (sizeof(T) * fourthSize * index)));
+			}
+
+			NodeC operator[](size_t index)
+			{
+				if (index >= thirdSize)
+					throw System::IndexOutOfRangeException();
+
+#ifdef BIT_64
+				System::UInt64 addr = (System::UInt64)value;
+#else
+				System::UInt32 addr = (System::UInt32)value;
+#endif
+
+				return NodeC((T*)(addr + (sizeof(T) * fourthSize * index)));
+			}
+
+			NodeB& operator=(const NodeB&) = delete;
+			NodeB& operator=(NodeB&&) = delete;
+
+			NodeB& operator=(T** data)
+			{
+				if (data == nullptr)
+					throw System::ArgumentNullException(nameof(data));
+
+				for (size_t i = 0; i < thirdSize; ++i)
+					memcpy((T*)((UInt64)value + (i * fourthSize * sizeof(T))), data[i], sizeof(T) * fourthSize);
+
+				return *this;
+			}
+		};
+		class NodeC final
+		{
+			friend class NodeB;
+
+		private:
+			T* value = nullptr;
+
+			NodeC(T* value)
+			{
+				this->value = value;
+			}
+
+		public:
+			NodeC(const NodeC& n)
+			{
+				value = n.value;
+			}
+
+			NodeC(NodeC&& n)
+			{
+				value = n.value;
+			}
+
+		public:
+			const T& operator[](size_t index) const
+			{
+				if (index >= fourthSize)
 					throw System::IndexOutOfRangeException();
 
 				return value[index];
@@ -120,21 +188,21 @@ namespace CppNet::KMC
 
 			T& operator[](size_t index)
 			{
-				if (index >= thirdSize)
+				if (index >= fourthSize)
 					throw System::IndexOutOfRangeException();
 
 				return value[index];
 			}
 
-			NodeB& operator=(const NodeB&) = delete;
-			NodeB& operator=(NodeB&&) = delete;
+			NodeC& operator=(const NodeC&) = delete;
+			NodeC& operator=(NodeC&&) = delete;
 
-			NodeB& operator=(T* data)
+			NodeC& operator=(T* data)
 			{
 				if (data == nullptr)
 					throw System::ArgumentNullException(nameof(data));
 
-				memcpy(value, data, sizeof(T) * thirdSize);
+				memcpy(value, data, sizeof(T) * fourthSize);
 
 				return *this;
 			}
@@ -144,44 +212,45 @@ namespace CppNet::KMC
 		T* data = nullptr;
 
 	public:
-		Array3D()
+		Array4D()
 		{
-			data = new T[firstSize * secondSize * thirdSize];
+			data = new T[firstSize * secondSize * thirdSize * fourthSize];
 		}
 
-		Array3D(T& third_initValue)
-			: Array3D()
-		{
-			for (size_t i = 0; i < firstSize; ++i)
-				for (size_t j = 0; j < secondSize; ++j)
-					for (size_t n = 0; n < thirdSize; ++n)
-						(*this)[i][j][n] = third_initValue;
-		}
-
-		Array3D(T&& third_initValue)
-			: Array3D()
+		Array4D(T& fourth_initValue)
+			: Array4D()
 		{
 			for (size_t i = 0; i < firstSize; ++i)
 				for (size_t j = 0; j < secondSize; ++j)
 					for (size_t n = 0; n < thirdSize; ++n)
-						(*this)[i][j][n] = third_initValue;
+						for (size_t a = 0; a < fourthSize; ++a)
+							(*this)[i][j][n][a] = fourth_initValue;
 		}
 
-		Array3D(const Array3D<T, firstSize, secondSize, thirdSize>& arr)
-			: Array3D()
+		Array4D(T&& fourth_initValue)
+			: Array4D()
 		{
-			memcpy(data, arr.data, firstSize * secondSize * thirdSize * sizeof(T));
+			for (size_t i = 0; i < firstSize; ++i)
+				for (size_t j = 0; j < secondSize; ++j)
+					for (size_t n = 0; n < thirdSize; ++n)
+						for (size_t a = 0; a < fourthSize; ++a)
+							(*this)[i][j][n][a] = fourth_initValue;
 		}
 
-		Array3D(Array3D<T, firstSize, secondSize, thirdSize>&& arr)
-			: Array3D()
+		Array4D(const Array4D<T, firstSize, secondSize, thirdSize, fourthSize>& arr)
+			: Array4D()
+		{
+			memcpy(data, arr.data, firstSize * secondSize * thirdSize * fourthSize * sizeof(T));
+		}
+
+		Array4D(Array4D<T, firstSize, secondSize, thirdSize, fourthSize>&& arr)
 		{
 			data = arr.data;
 
 			arr.data = nullptr;
 		}
 
-		~Array3D()
+		~Array4D()
 		{
 			if (data)
 				delete[] data;
@@ -202,7 +271,7 @@ namespace CppNet::KMC
 			System::UInt32 addr = (System::UInt32)data;
 #endif
 
-			return NodeA((T*)(addr + (sizeof(T) * thirdSize * secondSize * index)));
+			return NodeA((T*)(addr + (sizeof(T) * fourthSize * thirdSize * secondSize * index)));
 		}
 
 		NodeA operator[](size_t index)
@@ -219,7 +288,7 @@ namespace CppNet::KMC
 			System::UInt32 addr = (System::UInt32)data;
 #endif
 
-			return NodeA((T*)(addr + (sizeof(T) * thirdSize * secondSize * index)));
+			return NodeA((T*)(addr + (sizeof(T) * fourthSize * thirdSize * secondSize * index)));
 		}
 	};
 }

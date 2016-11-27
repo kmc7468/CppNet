@@ -39,6 +39,7 @@
     <ClInclude Include="CppNet\is.hpp" />
     <ClInclude Include="CppNet\KMC\Array2D.hpp" />
     <ClInclude Include="CppNet\KMC\Array3D.hpp" />
+    <ClInclude Include="CppNet\KMC\Array4D.hpp" />
     <ClInclude Include="CppNet\KMC\Decimal.h" />
     <ClInclude Include="CppNet\KMC\DynamicVariables.hpp" />
     <ClInclude Include="CppNet\KMC\Fraction.h" />
