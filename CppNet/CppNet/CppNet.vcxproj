@@ -44,6 +44,7 @@
     <ClInclude Include="CppNet\KMC\Sor.h" />
     <ClInclude Include="CppNet\MaxValue.hpp" />
     <ClInclude Include="CppNet\MinValue.hpp" />
+    <ClInclude Include="CppNet\System\AccessViolationException.h" />
     <ClInclude Include="CppNet\System\AppDomain.h" />
     <ClInclude Include="CppNet\System\ArgumentException.h" />
     <ClInclude Include="CppNet\System\ArgumentNullException.hpp" />
@@ -225,6 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp" />
+    <ClCompile Include="CppNet\System\AccessViolationException.cpp" />
     <ClCompile Include="CppNet\System\ArgumentException.cpp" />
     <ClCompile Include="CppNet\System\BitConverter.cpp" />
     <ClCompile Include="CppNet\System\Char.cpp" />

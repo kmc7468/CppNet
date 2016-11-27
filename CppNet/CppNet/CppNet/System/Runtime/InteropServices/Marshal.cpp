@@ -2,6 +2,7 @@
 
 #include "../../UInt32.h"
 #include "../../UInt64.h"
+#include "../../AccessViolationException.h"
 
 namespace CppNet::System::Runtime::InteropServices
 {
@@ -31,5 +32,18 @@ namespace CppNet::System::Runtime::InteropServices
 #endif
 
 		return (lPtr & HIWORDMASK) != 0;
+	}
+
+	Byte Marshal::ReadByte(IntPtr ptr, Int32 offset)
+	{
+		if (ptr.ToPointer() == nullptr)
+		{
+			throw AccessViolationException();
+		}
+		else
+		{
+			Byte* addr = ((Byte*)ptr.ToPointer()) + offset;
+			return *addr;
+		}
 	}
 }

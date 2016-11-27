@@ -843,6 +843,9 @@
     <ClInclude Include="CppNet\System\Runtime\InteropServices\Marshal.h">
       <Filter>헤더 파일\CppNet\System\Runtime\InteropServices</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\AccessViolationException.h">
+      <Filter>헤더 파일\CppNet\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -991,6 +994,9 @@
     </ClCompile>
     <ClCompile Include="CppNet\System\Runtime\InteropServices\Marshal.cpp">
       <Filter>소스 파일\CppNet\System\Runtime\InteropServices</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\AccessViolationException.cpp">
+      <Filter>소스 파일\CppNet\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

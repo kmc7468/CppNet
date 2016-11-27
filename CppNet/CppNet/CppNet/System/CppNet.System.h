@@ -19,6 +19,7 @@
 #include "NullReferenceException.hpp"
 #include "ArgumentNullException.hpp"
 #include "NotSupportedException.h"
+#include "AccessViolationException.h"
 
 #include "Array.hpp"
 #include "IntPtr.h"
