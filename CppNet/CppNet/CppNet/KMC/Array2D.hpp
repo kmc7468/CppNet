@@ -56,6 +56,14 @@ namespace CppNet::KMC
 
 				return value[index];
 			}
+
+			Node& operator=(const Node&) = delete;
+			Node& operator=(Node&&) = delete;
+
+			Node& operator=(T* data)
+			{
+				memcpy(value, data, sizeof(T) * secondSize);
+			}
 		};
 
 	private:
