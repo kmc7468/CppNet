@@ -10,5 +10,6 @@
 #include "Mod.hpp"
 #include "IsEven.hpp"
 #include "IsOdd.hpp"
+#include "MultiPointer.hpp"
 
 #endif
