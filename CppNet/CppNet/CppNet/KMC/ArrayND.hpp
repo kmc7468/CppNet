@@ -146,13 +146,6 @@ namespace CppNet::KMC
 
 			Node<index>& operator=(const Node<index>&) = delete;
 			Node<index>& operator=(Node<index>&&) = delete;
-
-			//Node<index>& operator=(typename CTR::MultiPointer<T, ND - index - 1>::Type dat)
-			//{
-			//	// TODO
-
-			//	return *this;
-			//}
 		};
 
 		template<>
@@ -207,6 +200,28 @@ namespace CppNet::KMC
 		ArrayND()
 		{
 			data = new T[TotalSize];
+		}
+
+		ArrayND(T& initData)
+			: ArrayND()
+		{
+			T* ptr = data;
+			for (size_t i = 0; i < TotalSize; ++i)
+			{
+				*ptr = initData;
+				ptr++;
+			}
+		}
+
+		ArrayND(T&& initData)
+			: ArrayND()
+		{
+			T* ptr = data;
+			for (size_t i = 0; i < TotalSize; ++i)
+			{
+				*ptr = initData;
+				ptr++;
+			}
 		}
 
 		ArrayND(const ArrayND<T, sizes...>& arr)
