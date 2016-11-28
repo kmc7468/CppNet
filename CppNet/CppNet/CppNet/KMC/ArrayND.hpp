@@ -146,6 +146,13 @@ namespace CppNet::KMC
 
 			Node<index>& operator=(const Node<index>&) = delete;
 			Node<index>& operator=(Node<index>&&) = delete;
+
+			Node<index>& operator=(typename CTR::MultiPointer<T, sizeof...(sizes)-index - 1>::Type dat)
+			{
+				// TODO
+
+				return *this;
+			}
 		};
 
 		template<>
@@ -187,7 +194,7 @@ namespace CppNet::KMC
 			Node<ND - 2>& operator=(const Node<ND - 2>&) = delete;
 			Node<ND - 2>& operator=(Node<ND - 2>&&) = delete;
 
-			Node<ND - 2>& operator=(T* dat)
+			Node<ND - 2>& operator=(typename CTR::MultiPointer<T, sizeof...(sizes)-(ND - 2) - 1>::Type dat)
 			{
 				memcpy(val, dat, NthSize<ND - 1>::value * sizeof(T));
 

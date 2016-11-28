@@ -10,9 +10,9 @@ int main()
 
 	// TEST CODE INPUT
 
-	ArrayND<Byte, 2, 2, 2> arr(5);
+	ArrayND<int, 2, 3, 4> arr;
 
-	CppNet::CTR::MultiPointer<int, 2>::Type t;
+	
 
 	MAIN_END
 }
