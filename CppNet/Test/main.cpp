@@ -8,11 +8,7 @@ int main()
 	using namespace CppNet::System;
 	using namespace CppNet::KMC;
 
-	// TEST CODE INPUT
-
-	ArrayND<int, 2, 3, 4> arr;
-
-	
+	// TEST CODE INPUT 
 
 	MAIN_END
 }

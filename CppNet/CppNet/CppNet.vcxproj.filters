@@ -1102,5 +1102,8 @@
     <None Include="CppNet\System\Runtime\InteropServices\Marshal.inl">
       <Filter>인라인 구현 파일\CppNet\System\Runtime\InteropServices</Filter>
     </None>
+    <None Include="CppNet\KMC\ArrayND.inl">
+      <Filter>인라인 구현 파일\CppNet\KMC</Filter>
+    </None>
   </ItemGroup>
 </Project>

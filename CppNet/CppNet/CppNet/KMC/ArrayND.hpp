@@ -7,8 +7,12 @@
 #include "../System/Object.h"
 #include "../System/UInt64.h"
 #include "../System/UInt32.h"
+#include "../System/NullReferenceException.hpp"
+#include "../System/IndexOutOfRangeException.hpp"
 
 #include "../CTR/MultiPointer.hpp"
+
+#include <vector>
 
 namespace CppNet::KMC
 {
@@ -65,6 +69,7 @@ namespace CppNet::KMC
 		static constexpr size_t TotalSize = _AllocSize<sizes...>::value;
 		static constexpr size_t AllocSize = TotalSize * sizeof(T);
 		static constexpr size_t ND = sizeof...(sizes);
+		static const std::vector<size_t> Arguments;
 
 	private:
 #pragma region Mul
@@ -120,6 +125,9 @@ namespace CppNet::KMC
 		public:
 			const Node<index + 1> operator[](size_t inx) const
 			{
+				if (inx >= NthSize<index>::value)
+					throw System::IndexOutOfRangeException();
+
 #ifdef BIT_64
 				System::UInt64 address = (System::UInt64)val;
 #else
@@ -133,6 +141,9 @@ namespace CppNet::KMC
 
 			Node<index + 1> operator[](size_t inx)
 			{
+				if (inx >= NthSize<index>::value)
+					throw System::IndexOutOfRangeException();
+
 #ifdef BIT_64
 				System::UInt64 address = (System::UInt64)val;
 #else
@@ -149,7 +160,12 @@ namespace CppNet::KMC
 
 			Node<index>& operator=(typename CTR::MultiPointer<T, sizeof...(sizes)-index - 1>::Type dat)
 			{
-				// TODO
+				const size_t temp = Arguments[index + 1];
+
+				for (size_t i = 0; i < temp; ++i)
+				{
+					(*this)[i] = dat[i];
+				}
 
 				return *this;
 			}
@@ -183,11 +199,17 @@ namespace CppNet::KMC
 		public:
 			inline const T& operator[](size_t index) const
 			{
+				if (index >= NthSize<ND - 2>::value)
+					throw System::IndexOutOfRangeException();
+
 				return val[index];
 			}
 
 			inline T& operator[](size_t index)
 			{
+				if (index >= NthSize<ND - 2>::value)
+					throw System::IndexOutOfRangeException();
+
 				return val[index];
 			}
 
@@ -234,7 +256,7 @@ namespace CppNet::KMC
 		ArrayND(const ArrayND<T, sizes...>& arr)
 			: ArrayND()
 		{
-			memcpy(data, arr.data, TotalSize);
+			memcpy(data, arr.data, AllocSize);
 		}
 
 		ArrayND(ArrayND<T, sizes...>&& arr)
@@ -252,6 +274,11 @@ namespace CppNet::KMC
 	public:
 		const Node<0> operator[](size_t index) const
 		{
+			if (data == nullptr)
+				throw System::NullReferenceException();
+			else if (index >= Arguments[0])
+				throw System::IndexOutOfRangeException();
+
 #ifdef BIT_64
 			System::UInt64 address = (System::UInt64)data;
 #else
@@ -265,6 +292,11 @@ namespace CppNet::KMC
 
 		Node<0> operator[](size_t index)
 		{
+			if (data == nullptr)
+				throw System::NullReferenceException();
+			else if (index >= Arguments[0])
+				throw System::IndexOutOfRangeException();
+
 #ifdef BIT_64
 			System::UInt64 address = (System::UInt64)data;
 #else
@@ -275,7 +307,42 @@ namespace CppNet::KMC
 
 			return Node<0>((T*)address);
 		}
+
+		ArrayND<T, sizes...>& operator=(const ArrayND<T, sizes...>& arr)
+		{
+			if (data == nullptr)
+				data = new T[TotalSize];
+
+			memcpy(data, arr.data, AllocSize);
+
+			return *this;
+		}
+
+		ArrayND<T, sizes...>& operator=(ArrayND<T, sizes...>&& arr)
+		{
+			data = arr.data;
+			arr.data = nullptr;
+
+			return *this;
+		}
+
+		ArrayND<T, sizes...>& operator=(typename CTR::MultiPointer<T, sizeof...(sizes)>::Type dat)
+		{
+			if (data == nullptr)
+				data = new T[TotalSize];
+
+			const size_t temp = Arguments[0];
+
+			for (size_t i = 0; i < temp; ++i)
+			{
+				(*this)[i] = dat[i];
+			}
+
+			return *this;
+		}
 	};
 }
+
+#include "ArrayND.inl"
 
 #endif
