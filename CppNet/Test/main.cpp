@@ -8,7 +8,7 @@ int main()
 	using namespace CppNet::System;
 	using namespace CppNet::KMC;
 
-	// TEST CODE INPUT 
+	// TEST CODE INPUT
 
 	MAIN_END
 }

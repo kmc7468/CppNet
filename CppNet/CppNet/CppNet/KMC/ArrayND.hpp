@@ -169,6 +169,52 @@ namespace CppNet::KMC
 
 				return *this;
 			}
+
+#pragma region Function
+			const Node<index + 1> At(size_t inx) const
+			{
+				if (inx >= NthSize<index>::value)
+					throw System::IndexOutOfRangeException();
+
+#ifdef BIT_64
+				System::UInt64 address = (System::UInt64)val;
+#else
+				System::UInt32 address = (System::UInt32)val;
+#endif
+
+				address += (inx * Mul<index + 2>::value);
+
+				return Node<index + 1>((T*)address);
+			}
+
+			Node<index + 1> At(size_t inx)
+			{
+				if (inx >= NthSize<index>::value)
+					throw System::IndexOutOfRangeException();
+
+#ifdef BIT_64
+				System::UInt64 address = (System::UInt64)val;
+#else
+				System::UInt32 address = (System::UInt32)val;
+#endif
+
+				address += (inx * Mul<index + 2>::value);
+
+				return Node<index + 1>((T*)address);
+			}
+
+			Node<index>& Set(typename CTR::MultiPointer<T, sizeof...(sizes)-index - 1>::Type dat)
+			{
+				const size_t temp = Arguments[index + 1];
+
+				for (size_t i = 0; i < temp; ++i)
+				{
+					(*this)[i] = dat[i];
+				}
+
+				return *this;
+			}
+#pragma endregion
 		};
 
 		template<>
@@ -197,7 +243,7 @@ namespace CppNet::KMC
 			}
 
 		public:
-			inline const T& operator[](size_t index) const
+			const T& operator[](size_t index) const
 			{
 				if (index >= NthSize<ND - 2>::value)
 					throw System::IndexOutOfRangeException();
@@ -205,7 +251,7 @@ namespace CppNet::KMC
 				return val[index];
 			}
 
-			inline T& operator[](size_t index)
+			T& operator[](size_t index)
 			{
 				if (index >= NthSize<ND - 2>::value)
 					throw System::IndexOutOfRangeException();
@@ -217,6 +263,29 @@ namespace CppNet::KMC
 			Node<ND - 2>& operator=(Node<ND - 2>&&) = delete;
 
 			Node<ND - 2>& operator=(typename CTR::MultiPointer<T, sizeof...(sizes)-(ND - 2) - 1>::Type dat)
+			{
+				memcpy(val, dat, NthSize<ND - 1>::value * sizeof(T));
+
+				return *this;
+			}
+
+			const T& At(size_t index) const
+			{
+				if (index >= NthSize<ND - 2>::value)
+					throw System::IndexOutOfRangeException();
+
+				return val[index];
+			}
+
+			T& At(size_t index)
+			{
+				if (index >= NthSize<ND - 2>::value)
+					throw System::IndexOutOfRangeException();
+
+				return val[index];
+			}
+
+			Node<ND - 2>& Set(typename CTR::MultiPointer<T, sizeof...(sizes)-(ND - 2) - 1>::Type dat)
 			{
 				memcpy(val, dat, NthSize<ND - 1>::value * sizeof(T));
 
@@ -339,6 +408,66 @@ namespace CppNet::KMC
 			}
 
 			return *this;
+		}
+
+	public:
+#pragma region Function
+		const Node<0> At(size_t index) const
+		{
+			if (data == nullptr)
+				throw System::NullReferenceException();
+			else if (index >= Arguments[0])
+				throw System::IndexOutOfRangeException();
+
+#ifdef BIT_64
+			System::UInt64 address = (System::UInt64)data;
+#else
+			System::UInt32 address = (System::UInt32)data;
+#endif
+
+			address += (index * Mul<1>::value);
+
+			return Node<0>((T*)address);
+		}
+
+		Node<0> At(size_t index)
+		{
+			if (data == nullptr)
+				throw System::NullReferenceException();
+			else if (index >= Arguments[0])
+				throw System::IndexOutOfRangeException();
+
+#ifdef BIT_64
+			System::UInt64 address = (System::UInt64)data;
+#else
+			System::UInt32 address = (System::UInt32)data;
+#endif
+
+			address += (index * Mul<1>::value);
+
+			return Node<0>((T*)address);
+		}
+
+		ArrayND<T, sizes...>& Set(typename CTR::MultiPointer<T, sizeof...(sizes)>::Type dat)
+		{
+			if (data == nullptr)
+				data = new T[TotalSize];
+
+			const size_t temp = Arguments[0];
+
+			for (size_t i = 0; i < temp; ++i)
+			{
+				(*this)[i] = dat[i];
+			}
+
+			return *this;
+		}
+#pragma endregion
+
+	public:
+		const T* const Data()
+		{
+			return data;
 		}
 	};
 }
