@@ -4,6 +4,7 @@
 #include "Int64.h"
 #include "Exception.h"
 #include "Int32.h"
+#include "ArgumentException.h"
 
 #include "../../Utility.h"
 
@@ -32,7 +33,7 @@ namespace CppNet
 					return 1;
 			}
 
-			throw Exception("파라미터 오류"); // FIXME ArgumentException
+			throw ArgumentException();
 		}
 
 		Int32 DoubleT::CompareTo(const DoubleT& obj) const
