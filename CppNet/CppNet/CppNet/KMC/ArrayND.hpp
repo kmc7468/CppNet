@@ -19,7 +19,7 @@ namespace CppNet::KMC
 	template<typename T, size_t... sizes>
 	class ArrayND final : public System::Object
 	{
-	public:
+	private:
 #pragma region GetAllocSize
 		// http://blog.naver.com/neurowhai/220872262256 를 참고하였습니다.
 		// 감사합니다!
