@@ -11,5 +11,6 @@
 #include "IsEven.hpp"
 #include "IsOdd.hpp"
 #include "MultiPointer.hpp"
+#include "Power.hpp"
 
 #endif

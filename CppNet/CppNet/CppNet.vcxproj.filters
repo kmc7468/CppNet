@@ -867,6 +867,9 @@
     <ClInclude Include="CppNet\CTR\MultiPointer.hpp">
       <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\CTR\Power.hpp">
+      <Filter>선언 및 구현 파일\CppNet\CTR</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
