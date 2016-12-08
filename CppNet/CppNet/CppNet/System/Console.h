@@ -216,6 +216,7 @@ namespace CppNet
 			static inline void Write(UInt64 integer);
 			static inline void Write(Single single);
 			static inline void Write(Single single, Int32 real_size);
+			static inline void Write(const char* str);
 
 			static inline void WriteLine();
 			static inline void WriteLine(Boolean boolean);
@@ -232,6 +233,7 @@ namespace CppNet
 			static inline void WriteLine(UInt64 integer);
 			static inline void WriteLine(Single single);
 			static inline void WriteLine(Single single, Int32 real_size);
+			static inline void WriteLine(const char* str);
 
 			static inline String ReadLine();
 

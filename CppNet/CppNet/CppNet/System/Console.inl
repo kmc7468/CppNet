@@ -79,6 +79,11 @@ namespace CppNet
 			std::cout << std::setprecision(real_size) << single;
 		}
 
+		void Console::Write(const char* str)
+		{
+			std::cout << str << std::endl;
+		}
+
 		void Console::WriteLine()
 		{
 			std::cout << std::endl;
@@ -169,6 +174,11 @@ namespace CppNet
 			Int32 i = std::cin.get();
 
 			return i;
+		}
+
+		void Console::WriteLine(const char* str)
+		{
+			std::cout << str << std::endl;
 		}
 	}
 }
