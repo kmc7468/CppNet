@@ -105,10 +105,12 @@
     <ClInclude Include="CppNet\System\DateTime.h" />
     <ClInclude Include="CppNet\System\Double.h" />
     <ClInclude Include="CppNet\System\DoubleT.h" />
+    <ClInclude Include="CppNet\System\Drawing\Color.h" />
     <ClInclude Include="CppNet\System\Drawing\Font.h" />
     <ClInclude Include="CppNet\System\Drawing\FontFamily.h" />
     <ClInclude Include="CppNet\System\Drawing\FontStyle.h" />
     <ClInclude Include="CppNet\System\Drawing\Image.hpp" />
+    <ClInclude Include="CppNet\System\Drawing\KnownColor.h" />
     <ClInclude Include="CppNet\System\Drawing\Point.h" />
     <ClInclude Include="CppNet\System\Drawing\PointF.h" />
     <ClInclude Include="CppNet\System\Drawing\SizeF.h" />
@@ -247,6 +249,7 @@
     <ClCompile Include="CppNet\System\Collections\ReadOnlyCollectionBase.cpp" />
     <ClCompile Include="CppNet\System\ComponentModel\Component.cpp" />
     <ClCompile Include="CppNet\System\DoubleT.cpp" />
+    <ClCompile Include="CppNet\System\Drawing\Color.cpp" />
     <ClCompile Include="CppNet\System\Drawing\Font.cpp" />
     <ClCompile Include="CppNet\System\Drawing\FontFamily.cpp" />
     <ClCompile Include="CppNet\System\Drawing\Point.cpp" />

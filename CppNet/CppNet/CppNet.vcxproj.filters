@@ -879,6 +879,12 @@
     <ClInclude Include="CppNet\System\Drawing\FontFamily.h">
       <Filter>헤더 파일\CppNet\System\Drawing</Filter>
     </ClInclude>
+    <ClInclude Include="CppNet\System\Drawing\Color.h">
+      <Filter>헤더 파일\CppNet\System\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\System\Drawing\KnownColor.h">
+      <Filter>헤더 파일\CppNet\System\Drawing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNet\KMC\Decimal.cpp">
@@ -1035,6 +1041,9 @@
       <Filter>소스 파일\CppNet\System\Drawing</Filter>
     </ClCompile>
     <ClCompile Include="CppNet\System\Drawing\FontFamily.cpp">
+      <Filter>소스 파일\CppNet\System\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="CppNet\System\Drawing\Color.cpp">
       <Filter>소스 파일\CppNet\System\Drawing</Filter>
     </ClCompile>
   </ItemGroup>

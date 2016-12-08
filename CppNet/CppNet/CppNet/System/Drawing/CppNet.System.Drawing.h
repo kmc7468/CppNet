@@ -9,5 +9,7 @@
 #include "Image.hpp"
 #include "FontFamily.h"
 #include "Font.h"
+#include "Color.h"
+#include "KnownColor.h"
 
 #endif
