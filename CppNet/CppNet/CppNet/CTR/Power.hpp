@@ -7,22 +7,22 @@
 
 namespace CppNet::CTR
 {
-	template<size_t root, size_t exp>
+	template<CppNet::System::UInt64 root, CppNet::System::UInt64 exp>
 	struct Power final
 	{
-		enum : size_t { Value = root * Power<root, exp - 1>::Value };
+		enum : CppNet::System::UInt64 { Value = root * Power<root, exp - 1>::Value };
 	};
 
-	template<size_t root>
+	template<CppNet::System::UInt64 root>
 	struct Power<root, 64> final
 	{
-		enum : size_t { Value = std::numeric_limits<CppNet::System::UInt64>::max() };
+		enum : CppNet::System::UInt64 { Value = std::numeric_limits<CppNet::System::UInt64>::max() };
 	};
 
-	template<size_t root>
+	template<CppNet::System::UInt64 root>
 	struct Power<root, 0> final
 	{
-		enum : size_t { Value = 1 };
+		enum : CppNet::System::UInt64 { Value = 1 };
 	};
 }
 

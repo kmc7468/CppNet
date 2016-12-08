@@ -3,6 +3,8 @@
 #include "../../Defines.h"
 #include "../../Language.h"
 
+#include "ArgumentException.h"
+
 #include <algorithm>
 
 namespace CppNet
@@ -58,7 +60,7 @@ namespace CppNet
 			return v;
 		}
 
-		std::vector<UInt64> CppNet::System::Math::PrimeNumbers(UInt64 min, UInt64 max)
+		std::vector<UInt64> Math::PrimeNumbers(UInt64 min, UInt64 max)
 		{
 			if (min > max)
 				throw ArgumentException();
