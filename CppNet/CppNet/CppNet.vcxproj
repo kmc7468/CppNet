@@ -105,6 +105,9 @@
     <ClInclude Include="CppNet\System\DateTime.h" />
     <ClInclude Include="CppNet\System\Double.h" />
     <ClInclude Include="CppNet\System\DoubleT.h" />
+    <ClInclude Include="CppNet\System\Drawing\Font.h" />
+    <ClInclude Include="CppNet\System\Drawing\FontFamily.h" />
+    <ClInclude Include="CppNet\System\Drawing\FontStyle.h" />
     <ClInclude Include="CppNet\System\Drawing\Image.hpp" />
     <ClInclude Include="CppNet\System\Drawing\Point.h" />
     <ClInclude Include="CppNet\System\Drawing\PointF.h" />
@@ -244,6 +247,8 @@
     <ClCompile Include="CppNet\System\Collections\ReadOnlyCollectionBase.cpp" />
     <ClCompile Include="CppNet\System\ComponentModel\Component.cpp" />
     <ClCompile Include="CppNet\System\DoubleT.cpp" />
+    <ClCompile Include="CppNet\System\Drawing\Font.cpp" />
+    <ClCompile Include="CppNet\System\Drawing\FontFamily.cpp" />
     <ClCompile Include="CppNet\System\Drawing\Point.cpp" />
     <ClCompile Include="CppNet\System\Drawing\PointF.cpp" />
     <ClCompile Include="CppNet\System\Drawing\SizeF.cpp" />
@@ -382,10 +387,11 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -411,7 +417,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
@@ -419,6 +425,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <AdditionalOptions>/std:c++latest %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

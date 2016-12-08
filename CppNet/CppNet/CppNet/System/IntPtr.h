@@ -34,6 +34,9 @@ namespace CppNet
 			Boolean operator==(const Object& obj) const override;
 			Boolean operator!=(const Object& obj) const override;
 
+			IntPtr& operator=(const IntPtr& ptr);
+			IntPtr& operator=(IntPtr&& ptr);
+
 #ifdef BIT_64
 			Int64 ToInt64() const;
 #else

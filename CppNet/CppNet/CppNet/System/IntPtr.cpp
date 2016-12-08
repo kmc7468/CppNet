@@ -145,4 +145,18 @@ namespace CppNet::System
 	{
 		return value;
 	}
+
+	IntPtr& IntPtr::operator=(const IntPtr& ptr)
+	{
+		value = ptr.value;
+
+		return *this;
+	}
+
+	IntPtr& IntPtr::operator=(IntPtr&& ptr)
+	{
+		value = ptr.value;
+
+		return *this;
+	}
 }
