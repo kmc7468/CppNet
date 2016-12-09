@@ -35,6 +35,7 @@
     <ClInclude Include="CppNet\CTR\Power.hpp" />
     <ClInclude Include="CppNet\CTR\Sub.hpp" />
     <ClInclude Include="CppNet\CTR\Sum.hpp" />
+    <ClInclude Include="CppNet\Expansions\CppNet.Expansions.h" />
     <ClInclude Include="CppNet\ICopy.h" />
     <ClInclude Include="CppNet\ICrypto.h" />
     <ClInclude Include="CppNet\event.h" />

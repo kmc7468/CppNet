@@ -232,6 +232,12 @@
     <Filter Include="인라인 구현 파일\CppNet\System\Runtime\InteropServices">
       <UniqueIdentifier>{d4e010a5-bcd2-45f7-9974-ec40e986a369}</UniqueIdentifier>
     </Filter>
+    <Filter Include="선언 및 구현 파일\CppNet\Expansions">
+      <UniqueIdentifier>{23752053-3683-4a61-b1eb-bb7678d94eda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\CppNet\Expansions">
+      <UniqueIdentifier>{9415eaad-c0b6-4226-aeae-d58f19ba95fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CppNet\KMC\Decimal.h">
@@ -884,6 +890,9 @@
     </ClInclude>
     <ClInclude Include="CppNet\System\Drawing\KnownColor.h">
       <Filter>헤더 파일\CppNet\System\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="CppNet\Expansions\CppNet.Expansions.h">
+      <Filter>헤더 파일\CppNet\Expansions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
