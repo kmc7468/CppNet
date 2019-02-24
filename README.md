@@ -1,5 +1,6 @@
 # CppNet
-.Net framework Classes for C++
+.Net framework Classes for C++<br>
+**중요: 이 프로젝트는 중단되었습니다. 구조상 여러 문제가 있으므로 사용하지 마세요. 대신 더 모던해진 [CppNet2](https://github.com/kmc7468/CppNet2)를 이용해 주시기 바랍니다.**
 
 ## 설명
 .Net framework에 있는 기능들을 C++에 있는 기능들을 이용해 구현했습니다. 최대한 비슷하게 구현하게 노력하고 있으나 일부 기능이 누락되거나 .Net framework 와 100% 똑같게 작동하지 않을 수 있습니다.<br>
